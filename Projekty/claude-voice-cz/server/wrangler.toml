@@ -1,0 +1,23 @@
+name = "claude-voice-cz"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Nastavení, která lze měnit bez přeinstalace aplikace (po změně: npm run deploy).
+[vars]
+MODEL = "claude-opus-5-5"        # alternativy: claude-sonnet-5-5, claude-haiku-5-5
+EFFORT = "low"                    # low | medium | high
+MAX_TOKENS = "1500"               # strop délky jedné odpovědi
+DAILY_TOKEN_LIMIT = "2000000"     # denní strop tokenů (vstup + výstup), poté server odmítá
+GITHUB_REPO = "szkandera79/thermavera-web"  # repozitář projektů (po přejmenování na GitHubu: szkandera79/Projekty)
+
+# Úložiště pro počítání denní spotřeby. ID doplní instalační skript
+# (npx wrangler kv namespace create USAGE).
+[[kv_namespaces]]
+binding = "USAGE"
+id = "e314f1a278e9466ca312f015744f1d77"
+
+# Tajné hodnoty se NEPÍŠÍ sem, ale příkazem `npx wrangler secret put <NAZEV>`:
+#   ANTHROPIC_API_KEY  – klíč z console.anthropic.com
+#   APP_TOKEN          – přístupový token aplikace (vygeneruje instalační skript)
+#   GITHUB_TOKEN       – token GitHubu jen pro čtení repozitáře projektů (scripts/set-github-token.sh)

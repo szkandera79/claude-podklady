@@ -1,0 +1,117 @@
+{
+ "3_15": {
+  "en": "The DC Inverter Air Source Heat Pumps are designed and manufactured to provide years of safe and reliable service when installed, operated and maintained according to the information in this manual and the installation codes referred to in later sections. Throughout the manual, safety warnings and cautions are identified by the “{I1}“symbol. Be sure to read and comply with all of the warnings and cautions.",
+  "icons": [
+   {
+    "xref": 53,
+    "bbox": [
+     212.63998413085938,
+     716.1599731445312,
+     231.3599853515625,
+     732.0
+    ],
+    "line": [
+     56.64258575439453,
+     722.005126953125,
+     538.5452880859375,
+     734.3370361328125
+    ]
+   }
+  ]
+ },
+ "25_3": {
+  "en": "◎Click “{I1}” in the “SET TIME” Interface to enter Timing silent interface, The unit will runs as Silent Mode during the scheduled mute time.",
+  "icons": [
+   {
+    "xref": 439,
+    "bbox": [
+     130.44000244140625,
+     671.1600341796875,
+     154.32000732421875,
+     702.7200317382812
+    ],
+    "line": [
+     88.18429565429688,
+     692.7274169921875,
+     538.6849365234375,
+     705.059326171875
+    ]
+   }
+  ]
+ },
+ "40_5": {
+  "en": "◎By default, it can be connected within 10s after the first power-on, and it needs to be connected by pressing buttons after 10 seconds. (10s is the delay for wifi to enter low power consumption) ◎Manually enter the smart distribution mode: select \"SMART MODE\"or \"AP MODE\" on the WIFI interface of the wired controller, click \"Add Device\" to enter the smart distribution mode, the \"{I1}\" icon on the main interface flashes, and the mobile phone can start to configure the network.",
+  "icons": [
+   {
+    "xref": 516,
+    "bbox": [
+     168.0,
+     530.1599731445312,
+     189.0,
+     547.5599975585938
+    ],
+    "line": [
+     110.16114044189453,
+     537.561279296875,
+     538.7529907226562,
+     549.8931884765625
+    ]
+   }
+  ]
+ },
+ "41_0": {
+  "en": "◎Exit the network configuration status after 3 minutes, the \"{I1}\" icon stops flashing, and the WIFI module is no longer networked. If you want to configure the network again, you need to click the \"Add Device\" button on the WIFI interface again. The 2nd step:",
+  "icons": [
+   {
+    "xref": 516,
+    "bbox": [
+     378.3600158691406,
+     54.959999084472656,
+     399.3600158691406,
+     72.36000061035156
+    ],
+    "line": [
+     88.18429565429688,
+     62.35950469970703,
+     538.6528930664062,
+     74.69142150878906
+    ]
+   }
+  ]
+ },
+ "49_2": {
+  "en": "◎APP removal Click{I1}in the upper right corner of device operation main interface to enter device details interface, and click ”Remove Device” interface to enter the intelligent network configuration mode. \"{I2}\" Corresponding indicator light does not flash, and the network can be reconfigured within 3 minutes. If it exceeds 3mins, it will exit the distribution network.",
+  "icons": [
+   {
+    "xref": 573,
+    "bbox": [
+     117.72000122070312,
+     437.1600036621094,
+     134.27999877929688,
+     451.32000732421875
+    ],
+    "line": [
+     88.20121765136719,
+     441.2033386230469,
+     538.4147338867188,
+     453.5352478027344
+    ]
+   },
+   {
+    "xref": 574,
+    "bbox": [
+     142.6800079345703,
+     473.7599792480469,
+     163.6800079345703,
+     491.27996826171875
+    ],
+    "line": [
+     99.12183380126953,
+     481.28558349609375,
+     538.5823364257812,
+     493.61749267578125
+    ]
+   }
+  ]
+ }
+}

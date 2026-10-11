@@ -1,0 +1,118 @@
+[Text vytažený z 2TV-BDM-05_BD-Michal_rezimy-TC2-TC3.pdf]
+
+--- strana 1 ---
+T H E R M AV E R A E N E R G Y — P Ř E D B Ě Ž N Ý N Á V R H
+Režimy přepínatelných jednotek TČ2 a TČ3 — kotelna BD Michal
+TČ1 MASTER pouze vytápění · TČ2 SLAVE vytápění + TUV · TČ3 záloha: připojí se k ÚT nebo k TUV jen při poruše nebo nedostatku výkonu · navazuje na TV-BDM-04
+Zjednodušeně jednočarově (přívod + zpátečka = jedna čára) · silná červená = tok do vytápění · silná fialová = tok k VT/TUV · šedá čárkovaná = bez průtoku · port ventilu: bílý = otevřeno, černý = zavřeno
+A · NORMÁLNÍ PROVOZ — VYTÁPĚNÍ TČ1 + TČ2 → ÚT · TČ3 v záloze
+TČ1
+→ vytápění
+TČ2
+→ vytápění
+TČ3
+záloha — stojí
+B
+B
+M M V2
+V3
+A
+A
+PRIMÁR ÚT
+sběrač → AKU
+2× 1 000 l
+VT → TUV
+3× 1 000 l
+V2: B otevřeno (ÚT) · V3: klidová poloha B · P3 a P5 stojí
+C · ZÁLOHA ÚT — TČ3 DO VYTÁPĚNÍ nedostatek výkonu ÚT nebo porucha TČ1/TČ2
+TČ1
+→ vytápění
+TČ2
+→ vytápění
+TČ3
+→ vytápění
+B
+B
+M M V2
+V3
+A
+A
+PRIMÁR ÚT
+sběrač → AKU
+2× 1 000 l
+VT → TUV
+3× 1 000 l
+V2 a V3: B otevřeno (ÚT) · 3 TČ = 26,0 m³/h do sběrače · patrony AKU až po TČ3
+MATICE REŽIMŮ A PODMÍNEK
+TČ1 TČ2 · V2 TČ3 · V3 Spouštěč (vše s potvrzením v čase)
+A ÚT ÚT · B stojí · B výchozí stav, TUV nabitá (TS7 ≥ 45 °C)
+B ÚT TUV · A stojí · B TS7 < 45 °C → nabíjet do TS8 ≥ 52 °C, max. 60 min
+mezitím topí TČ1 sám
+C ÚT ÚT / TUV ÚT · B deficit ÚT: dostupná TČ ≥ 95 % po 15 min a AKU pod žádanou −3 K,
+nebo porucha TČ1, nebo porucha TČ2 v době topení
+D ÚT TUV / porucha TUV · A porucha TČ2 při požadavku TUV, nebo nabíjení > 60 min
+a TS7 < 42 °C, nebo TČ2 nutně potřeba ve vytápění
+TČ3 vždy jen k jednomu okruhu. Chybějící výkon po vyčerpání všech TČ kryjí patrony (TV-BDM-03).
+!
+POŽADAVKY NA PŘEPÍNACÍ VENTILY
+V2.1/V2.2 a V3.1/V3.2: těsné 3cestné kulové ventily (L-port) DN50 s pohonem a koncovými spínači, bez polohy „vše zavřeno“
+.
+Klidová poloha B (ÚT): stojící jednotka zůstává napojená na primár s expanzní nádobou EN1. Hlídání průtoku každé přepínatelné
+jednotky. Okruh k VT má vlastní EN3 a PV3. Při přepnutí ÚT → TUV roste výstupní teplota o 10–25 K, proto zastavení kompresoru.
+Prahy a časy jsou výchozí hodnoty k seřízení při uvádění do provozu.
+B · NORMÁLNÍ PROVOZ — TČ2 NABÍJÍ TUV TČ1
+→ vytápění
+TČ2
+→ TUV
+B
+A
+PRIMÁR ÚT
+sběrač → AKU
+2× 1 000 l
+V2: A otevřeno (TUV) · V3: klidová poloha B · P5 běží · TČ1 topí sám
+D · ZÁLOHA TUV — TČ3 DO TUV TČ1
+→ vytápění
+TČ2
+PORUCHA
+B
+TČ1 → ÚT · TČ2 → TUV · TČ3 v záloze
+TČ3
+záloha — stojí
+B
+M M
+V2
+V3
+A
+VT → TUV
+3× 1 000 l
+VT → TUV
+3× 1 000 l
+porucha TČ2 nebo nedostatek výkonu TUV
+TČ3
+→ TUV
+B
+M M
+V2
+V3
+A
+A
+PRIMÁR ÚT
+sběrač → AKU
+2× 1 000 l
+V3: A otevřeno (TUV) · V2: klidová poloha B, TČ2 blokováno · P5 běží
+LOGIKA ŘÍZENÍ — STRUČNĚ
+Priorita požadavků: bezpečnost a protizámraz > TUV pod 40 °C > vytápění > komfort TUV > patrony.
+TČ2 přepíná do TUV sám (režim B). TČ3 se připojí jen při poruše nebo potvrzeném deficitu.
+Žádá-li TČ3 současně ÚT i TUV: TUV pod 40 °C má přednost, jinak vytápění. Zbytek patrony.
+TČ3 zpět do zálohy: požadavek zanikl na 20 min nebo porucha odstraněna. Min. doba v režimu 30 min.
+Role jsou pevné. TČ2 nese nejvíc práce — zvážit střídání rolí TČ2/TČ3 po 500 h.
+Záloha musí fungovat: TČ3 zkušební běh 1× týdně 30 min, střídavě do ÚT a do TUV.
+Sekvence přepnutí (TČ2 i TČ3): 1. stop kompresoru, doběh čerpadla 2 min · 2. oba ventily páru
+přestaví současně · 3. kontrola koncových spínačů · 4. změna režimu a žádané teploty přes Modbus ·
+5. start po min. době klidu. TČ2 a TČ3 se nikdy nepřepínají současně. Nesoulad spínačů → alarm.
+Žádané teploty: ÚT dle ekvitermy AKU 30–45 °C · TUV výstup TČ 55–58 °C, VT drží 52–55 °C.
+Stavba: BD Michal — kotelna (Ostrava-Michálkovice)
+Zpracoval: ThermaVera Energy
+Výkres: TV-BDM-05 · Stupeň: předběžný návrh · Rev.: 1
+Rev. 1: čtyři režimy, TČ2 ÚT + TUV, TČ3 záloha
+Souvisí: TV-BDM-04 hydraulika, TV-BDM-03 řízení

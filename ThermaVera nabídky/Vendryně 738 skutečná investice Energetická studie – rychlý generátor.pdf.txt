@@ -1,0 +1,144 @@
+[Text vytažený z Vendryně 738 skutečná investice Energetická studie – rychlý generátor.pdf]
+
+--- strana 1 ---
+Energetická studie – rychlý generátor
+01.06.2026 23:21
+Návrh podle zadaných hodnot vychází ekonomicky výhodně. Roční úspora je kladná.
+VÝROBNÍ CENA TEPLA
+938 Kč/MWh
+≈ 260 Kč/GJ
+ROČNÍ ÚSPORA
+41 563 Kč
+oproti současnému stavu
+PROSTÁ NÁVRATNOST
+1,4 roku
+prostá návratnost investice
+E N E R G E T I C K Á S T U D I E
+Vendryně 738
+rodinný dům · zpracováno 1. června 2026
+1 · Účel studie
+Tato studie posuzuje možnost náhrady stávajícího zdroje tepla objektu Vendryně 738
+novým, úspornějším řešením. Cílem je vyčíslit současnou ekonomiku vytápění, navrhnout
+technologii RH050 a transparentně porovnat provozní náklady, výrobní cenu tepla a prostou
+návratnost investice. Studie slouží jako podklad pro rozhodování výboru SVJ, správce
+objektu nebo investora a nenahrazuje projektovou dokumentaci.
+2 · Identifikace objektu
+Klient / SVJ Vendryně 738
+Typ objektu rodinný dům
+Energeticky vztažná plocha 140,0 m²
+Tepelná ztráta objektu 13,0 kW
+Návrhová venkovní teplota -15,0 °C
+3 · Výchozí stav
+Objekt je v současnosti zásobován teplem ze zdroje typu zemní plyn. Roční spotřeba tepla činí
+68,4 GJ, tj. přibližně 25,0 MWh. Současný roční náklad na teplo představuje 65 000 Kč bez
+DPH.
+file:///Users/jindrichszkandera/Downloads/energeticka-studie_
+2.html
+Stránka 1 z 5
+--- strana 2 ---
+Energetická studie – rychlý generátor
+01.06.2026 23:21
+SOUČASNÝ STAV
+Zdroj tepla zemní plyn
+Roční spotřeba tepla 68,4 GJ
+Roční spotřeba tepla 25,0 MWh
+Roční náklad na teplo (bez DPH) 65 000 Kč
+Roční náklad celkem 65 000 Kč
+4 · Aktuální cena dodaného tepla
+Z poměru ročního nákladu a spotřeby vychází jednotková cena současně dodávaného tepla na
+950 Kč/GJ, což odpovídá 2 600 Kč/MWh. Tato hodnota je referenční úrovní, vůči které
+posuzujeme výrobní cenu tepla z navrženého zdroje.
+Cena tepla 950 Kč/GJ
+Cena tepla 2 600 Kč/MWh
+5 · Návrh nového zdroje tepla
+Pro pokrytí tepelné potřeby objektu je navržena technologie RH050 (tepelné čerpadlo
+vzduch/voda). Sestava je tvořena 1 jednotkami o výkonu 18,0 kW s celkovým instalovaným
+výkonem 15,0 kW. Komerční tepelná čerpadla mohou být pro větší bytové domy vhodná
+zejména díky vyššímu výkonu, možnosti kaskádového provozu, plynulé modulaci výkonu a
+vysoké účinnosti (COP). Konkrétní vhodnost je vždy nutné ověřit projektem.
+6 · Parametry navržené technologie
+file:///Users/jindrichszkandera/Downloads/energeticka-studie_
+2.html
+Stránka 2 z 5
+--- strana 3 ---
+Energetická studie – rychlý generátor
+01.06.2026 23:21
+NAVRŽENÝ STAV
+Technologie RH050
+Typ tepelné čerpadlo vzduch/voda
+Počet jednotek 1
+Výkon jedné jednotky 18,0 kW
+Celkový instalovaný výkon 15,0 kW
+Využitelný výkon při návrhové teplotě 12,0 kW
+SCOP / sezónní účinnost 3,20
+Cena elektřiny / paliva 3 000 Kč/MWh
+Roční servisní náklady 0 Kč
+Ostatní provozní náklady 0 Kč
+Investiční náklad (bez DPH) 60 000 Kč
+7 · Výkonové posouzení
+Tepelná ztráta objektu při návrhové teplotě činí 13,0 kW. Navržená technologie poskytuje
+využitelný výkon 12,0 kW, výkonová rezerva tedy činí -1,0 kW (-8 %). Upozornění: využitelný
+výkon je nižší než tepelná ztráta objektu — návrh by bylo vhodné posílit nebo doplnit
+bivalentním zdrojem.
+Pro posouzení záměrně vycházíme z výkonu při návrhové venkovní teplotě, nikoli z katalogového
+maxima (např. 130 kW při A20/W55) — to platí jen při teplém vzduchu a v zimě ho nelze plně využít.
+Tepelná ztráta objektu 13,0 kW
+Využitelný výkon při návrhové teplotě 12,0 kW
+Výkonová rezerva -1,0 kW · -8 %
+8 · Provozní ekonomika
+Při sezónní účinnosti SCOP 3,20 a roční potřebě tepla 25,0 MWh činí předpokládaná spotřeba
+elektřiny 7,8 MWh. Při ceně 3 000 Kč/MWh to představuje roční náklad na elektřinu 23 438 Kč.
+file:///Users/jindrichszkandera/Downloads/energeticka-studie_
+2.html
+Stránka 3 z 5
+--- strana 4 ---
+Energetická studie – rychlý generátor
+01.06.2026 23:21
+POROVNÁNÍ NÁKLADŮ
+Položka Současný stav Navržený stav
+Energie (teplo / elektřina) 65 000 Kč 23 438 Kč
+Servis — 0 Kč
+Ostatní provozní náklady 0 Kč 0 Kč
+Roční náklady celkem 65 000 Kč 23 438 Kč
+9 · Výrobní cena tepla
+Z celkových provozních nákladů navržené technologie a roční potřeby tepla vychází výrobní
+cena tepla 938 Kč/MWh (260 Kč/GJ). To je méně než současná cena 950 Kč/GJ — výroba
+tepla z navrženého zdroje je levnější.
+Výrobní cena tepla 938 Kč/MWh
+Výrobní cena tepla 260 Kč/GJ
+Pro srovnání – současná cena 950 Kč/GJ
+10 · Roční úspora
+Porovnáním celkových ročních nákladů vychází roční úspora provozní náklady objektu.
+41 563 Kč. Návrh tedy snižuje
+11 · Návratnost investice
+Při investici 60 000 Kč a roční úspoře 41 563 Kč vychází prostá návratnost 1,4 roku. Jde o
+zjednodušený ukazatel bez zohlednění inflace, vývoje cen energií a financování.
+NÁVRATNOST
+Investiční náklad (bez DPH) 60 000 Kč
+Roční úspora 41 563 Kč
+Prostá návratnost 1,4 roku
+12 · Doporučení před realizací
+Ověřit skutečnou tepelnou ztrátu a otopovou soustavu měřením a projektem (teplotní
+spády, otopná tělesa).
+file:///Users/jindrichszkandera/Downloads/energeticka-studie_
+2.html
+Stránka 4 z 5
+--- strana 5 ---
+Energetická studie – rychlý generátor
+01.06.2026 23:21
+Posoudit umístění a akustiku venkovních jednotek vzhledem k okolní zástavbě a
+hygienickým limitům.
+Prověřit dostatečnost elektrické přípojky a případné posílení jističe / trafostanice.
+Zvážit dotační podporu a možnosti financování (vlastní investice vs. pronájem).
+Hodnoty ve studii jsou orientační a vycházejí ze zadaných vstupů; finální čísla potvrdí
+prováděcí projekt.
+13 · Závěr
+Navržená technologie RH050 podle zadaných vstupů snižuje roční náklady na teplo o
+41 563 Kč a výrobní cenu tepla na 260 Kč/GJ, s prostou návratností 1,4 roku. Řešení
+doporučujeme k dalšímu posouzení a zpracování prováděcího projektu.
+Studie byla vygenerována automaticky z údajů zadaných uživatelem a slouží jako orientační podklad. Neobsahuje
+DPH, nezohledňuje inflaci ani vývoj cen energií a nenahrazuje projektovou dokumentaci. Přepočet jednotek: 1 GJ =
+0,27778 MWh, 1 MWh = 3,6 GJ.
+file:///Users/jindrichszkandera/Downloads/energeticka-studie_
+2.html
+Stránka 5 z 5

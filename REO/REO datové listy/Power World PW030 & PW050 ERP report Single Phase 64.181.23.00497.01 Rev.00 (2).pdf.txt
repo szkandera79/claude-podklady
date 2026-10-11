@@ -1,0 +1,1460 @@
+[Text vytažený z Power World PW030 & PW050 ERP report Single Phase 64.181.23.00497.01 Rev.00 (2).pdf]
+
+--- strana 1 ---
+Technical Report
+Technical Report No.: 64.181.23.00497.01 Rev.00
+Date: 2023-05-09
+POWER WORLD MACHINERY EQUIPMENT CO., LTD
+Client: Report holder’s name:
+Report holder’s
+Address:
+Contact person of
+applicant:
+Manufacturer’s name:
+Manufacturer’s
+address:
+Factory: Factory’s name:
+Factory’s address:
+No.24, the fourth industrial zone, HouTing Street, ShaJing
+Town, BaoAn District, Shenzhen China.
+Lydia Xie
+POWER WORLD MACHINERY EQUIPMENT CO., LTD
+No.24, the fourth industrial zone, HouTing Street, ShaJing
+Town, BaoAn District, Shenzhen China.
+POWER WORLD MACHINERY EQUIPMENT CO., LTD
+No. 32, Luxi 2nd Road, Liaobu Town, Dongguan, China
+Test object: Product:
+Model:
+DC Inverter Heat Pump
+PW030-DKZLRS-E/S, PW050-DKZLRS-E/S
+Trade name:
+Test specification:
+EN 14825:2022
+EN 12102-1:2022
+EN 14511-3:2022
+Purpose of
+examination:
+Test according to the test specification
+(EU) No 813/2013
+EU 2016/2282:2016-11-30
+Doc No.: ITC-TTW0902.02E – Rev.11
+Test result:
+The test results show that the presented product is in compliance with the above
+listed test specifications.
+Any use for advertising purposes must be granted in writing. This technical report may only be quoted in full. This report is the
+result of a single examination of the object in question. It does not imply a general statement regarding the quality of products
+from regular production. For further details please see testing and certification regulation, chapter A-3.4.
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 1 of 30
+--- strana 2 ---
+Technical Report
+1
+1.1
+1.2
+1.3
+Description of the test object
+Function
+Manufacturer’s specification for intended use:
+The appliance is air to water heat pump.
+Manufacturer’s specification for predictive use:
+According to user manual
+Consideration of the foreseeable use
+Not applicable
+Covered through the applied standard
+Covered by the following comment
+Covered by attached risk analysis
+Technical Data
+Model :
+Rated Voltage (V) :
+Rated Frequency (Hz) :
+Rated Power (W) :
+Rated Current (A) :
+Protection Class :
+Protection Against Moisture :
+Construction :
+Supply connection :
+Operation mode:
+Refrigerant/charge (kg) :
+PW030-DKZLRS-E/S, PW050-DKZLRS-E/S
+220-240V~
+50
+990W for PW030-DKZLRS-E/S,
+1810W for PW050-DKZLRS-E/S
+4.53A for PW030-DKZLRS-E/S,
+8.28A for PW050-DKZLRS-E/S
+Class I
+IP X4
+Stationary
+##
+Non detachable cord
+##
+Permanent connection to fixed wiring
+##
+Continuous operation;
+##
+Intermittent operation;
+##
+Short time operation;
+R290 / 0.80kg for PW030-DKZLRS-E/S,
+1.15kg for PW050-DKZLRS-E/S
+Average
+Warmer
+Colder
+Declared parameters :
+Sound power level dB(A) : Series No :
+N/A
+PPAL03022121408 for PW030-DKZLRS-E/S,
+PPAL05023041330 for PW050-DKZLRS-E/S
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 2 of 30
+--- strana 3 ---
+Technical Report
+2
+2.1
+2.2
+2.3
+2.4
+2.5
+3
+3.1
+4
+4.1
+4.2
+5
+Order
+Date of Purchase Order, Customer’s Reference
+2023-01-09
+POWER WORLD MACHINERY EQUIPMENT CO., LTD
+Test Sample(s)
+• Reception date(s): 2023-04-07
+• Location(s) of reception:
+For Energy test:
+Guangzhou Customs District Technology Center
+Address: No.3, Desheng East Road, Daliang, Shunde District, Foshan, Guangdong,
+China
+For Noise tests:
+CVC Testing Technology Co., Ltd.
+Address: No.3, Tiantaiyi Road, Kaitai Avenue, Science City, Guangzhou, Guangdong,
+510663, P.R.China
+• Condition of test sample(s): completed and can be normal operation
+Date(s) of Testing
+2023-04-07 2023-05-08
+to
+Location(s) of Testing
+Same as 2.2
+Points of Non-compliance or Exceptions of the Test Procedure
+N/A
+Test Results
+Positive Test Results
+See Appendix I
+Remark
+N/A
+The user manual has been examined according to the minimum requirements
+described in the product standard. The manufacturer is responsible for the accuracy of
+further par-ticulars as well as of the composition and layout.
+When the product is placed on the market, it must be accompanied with safety Instruc-
+tions written in official language of the country. The instructions shall give information
+re-garding safe operation, installation and maintenance.
+Documentation
+• Appendix I Test results
+• Appendix II Marking plate
+• Appendix III photo documentation
+• Appendix IV Construction data form
+• Appendix V Test equipment list
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 3 of 30
+--- strana 4 ---
+Technical Report
+6
+1)
+2)
+3)
+4)
+Summary
+These appliances are Air To Water Heat Pump Unit, each one including a whole
+compression type refrigerant circuit to heat water in another circuit. These appliances
+were for cooling and heating water function, this report only for heating capacity test.
+The main power is supplied by a 3-pole supply cord connecting to fixed wiring.
+Water enthalpy method was adopted in this report.
+Standby mode power, off mode power and thermostat-off mode power were tested
+according to clause 12 of standard EN 14825:2022.
+TÜV SÜD Certification and Testing (China) Co., Ltd. Guangzhou Branch
+TÜV SÜD Group
+Tested by:
+William Liang, Project Handler
+Approved by:
+printed name, function & signature
+Plum Li, Designated Reviewer
+printed name, function & signature
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 4 of 30
+--- strana 5 ---
+Technical Report
+Appendix I Test results
+Table 1.
+Heating mode(Low temperature application): P
+Model PW030-DKZLRS-E/S
+Product
+type
+Air to Water Heating
+season
+Averag
+e
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor heat
+exchanger
+Indoor heat
+exchanger
+Condition
+Formula A W
+Inlet dry (wet)
+bulb
+temperature
+°C
+Inlet/outlet water
+temperatures (°C)
+A 88 (-7-16)/(Tdesignh-16) N/A N/A
+-7(-8) a / 34
+B 54 (+2-16)/ (Tdesignh-16) N/A N/A
+2(1) a / 30
+C 35 (+7-16)/(Tdesignh-16) N/A N/A
+7(6) a / 27
+D 15 (+12-16)/(Tdesignh-16) N/A N/A
+12(11) a / 24
+E
+(TOL-16)/ (Tdesignh-16)
+TOL a / 35.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 34
+G N/A (-15-16)/(Tdesignh-16) N/A N/A
+-15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-
+2 at 30/35 conditions, the capacity is 4.988kW, the power is 0.981kW, the COP is 5.08kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W34
+(88%)
+A2/W30
+(54%)
+A7/W27
+(35%)
+A12/W24
+(15%)
+A(-
+10)/W35.
+3
+(100%)
+A(-7)/
+W34
+(88%)
+-- A B C D
+E F
+Data
+collection
+period
+hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat
+pump
+defrosts
+-- No No No No
+No No
+Complete
+Cycles
+-- 0 0 0 0
+0 0
+Barometric
+pressure
+kPa 101.02 101.01 101.01 101.02
+101.01 101.02
+Voltage 230.6 230.7 230.3 230.2
+V 230.0 230.6
+Current input
+of the unit
+A 9.12 6.76 3.20 2.44 2.18
+6.76
+Doc No.: ITC-TTW0902.02E – Rev.11
+Power input
+of the unit
+kW 1.554 0.715 0.547 0.487
+2.067 1.554
+Test conditions indoor unit
+Inlet Water
+temperature,
+DB
+°C 28.80 26.80 24.99 23.10
+29.51 28.80
+Outlet Water
+temperature,
+DB
+°C 33.96 30.02 28.29 26.88
+35.36 33.96
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 5 of 30
+--- strana 6 ---
+Technical Report
+Appendix I Test results
+Test conditions outdoor unit
+Air inlet
+temperature,
+DB
+°C -6.99 2.02 Air inlet
+temperature,
+WB
+°C -8.06 1.06 Summary of the results
+Total heating
+capacity
+kW 5.150 3.213 Effective
+power input
+kW 1.546 0.706 Coefficient of
+performance
+(COP)
+-- 3.33 4.55 Compressor
+frequency
+Hz 70 35 Water flow m³/h 0.86 0.86 Remark: -
+3.Calculation/conclusion for SCOP(Average):
+Tdesignh(°C)
+-10 Tbiv(°C) Pdesignh(kW
+)
+5.821 TOL(°C) Test result A, B, C, D, E, F conditions:
+Condition
+Part load
+Measured
+capacity
+COP at
+measured
+capacity
+E 5.821
+5.841 2.84 Doc No.: ITC-TTW0902.02E – Rev.11
+F 5.150
+5.150 3.33 A 5.150
+5.150 3.33 B 3.135
+3.213 4.55 C 2.015
+3.290 6.11 D 0.896
+3.770 7.88 CR: part load divided by capacity;
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 6 of 30
+7.01 6.00 3.290 0.539 6.11 30 0.86 -7
+-10
+Cdh 0.90 0.90 0.90 0.90 0.90 0.90 12.03
+11.03
+3.770
+0.478
+7.88
+30
+0.86
+CR 1.00 1.00 1.00 0.98 0.61 0.24 -10.00 -6.99
+-11.07 -8.06
+5.841 5.150
+2.058 1.546
+2.84 3.33
+90 70
+0.86 0.86
+COP at part load
+2.84
+3.33
+3.33
+4.55
+5.74
+5.97
+--- strana 7 ---
+Technical Report
+Appendix I Test results
+Electric power consumptions Unit Value
+Thermostat-off mode [PTO] kW 0.020
+Standby mode [PSB] kW 0.006
+Crankcase heater [PCK] kW 0.042
+Off mode [POFF] kW 0.006
+Conclusions: Unit Value
+SCOPon: kWh/kWh
+4.66
+SCOP: kWh/kWh 4.64
+QH: kWh/year 12027
+QHE: kWh/year 2590
+ηs,h % 182.7
+Seasonal space heating energy
+efficiency classes: (According
+(EU) No 811/2013 Table 2)
+-- A+++
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 7 of 30
+--- strana 8 ---
+Technical Report
+Appendix I Test results
+Table 2.
+Heating mode(Medium temperature application): P
+Model PW030-DKZLRS-E/S
+Product
+type
+Air to Water Heating
+season
+Averag
+e
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor heat
+exchanger
+Indoor heat
+exchanger
+Condition
+Formula A W C
+Inlet dry (wet)
+bulb
+temperature
+°C
+Inlet/outlet water
+temperatures (°C)
+A 88 (-7-16)/(Tdesignh-16) N/A N/A
+-7(-8) a / 52
+B 54 (+2-16)/ (Tdesignh-16) N/A N/A
+2(1) a / 42
+C 35 (+7-16)/(Tdesignh-16) N/A N/A
+7(6) a / 36
+D 15 (+12-16)/(Tdesignh-16) N/A N/A
+12(11) a / 30
+E
+(TOL-16)/ (Tdesignh-16)
+TOL a / 55.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 52
+G N/A (-15-16)/(Tdesignh-16) N/A N/A
+-15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-
+2 at 47/55 conditions, the capacity is 4.984kW, the power is 1.539kW, the COP is 3.24kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W52
+(88%)
+A2/W42
+(54%)
+A7/W36
+(35%)
+A12/W30
+(15%)
+A(-
+10)/W55.
+3
+(100%)
+A(-
+7)/W52
+(88%)
+-- A B C D
+E F
+Data
+collection
+period
+hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat
+pump
+defrosts
+-- No No No No
+No No
+Complete
+Cycles
+-- 0 0 0 0
+0 0
+Barometric
+pressure
+kPa 99.85 99.85 99.85 99.80
+99.75 99.85
+Voltage 229.9 230.2 230.3 230.2
+V 229.8 229.9
+Current input
+of the unit
+9.09 4.05 2.90 2.59
+A 11.80 9.09
+Doc No.: ITC-TTW0902.02E – Rev.11
+Power input
+of the unit
+kW 2.086 0.913 0.632 0.552
+2.708 2.086
+Test conditions indoor unit
+Inlet Water
+temperature,
+DB
+°C 44.12 37.17 32.89 28.64
+46.13 44.12
+Outlet Water
+temperature,
+DB
+°C 52.01 42.00 37.57 34.47
+55.03 52.01
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 8 of 30
+--- strana 9 ---
+Technical Report
+Appendix I Test results
+Test conditions outdoor unit
+Air inlet
+temperature,
+DB
+°C -7.00 2.01 Air inlet
+temperature,
+WB
+°C -8.10 1.02 Summary of the results
+Total heating
+capacity
+kW 4.948 3.030 Effective
+power input
+kW 2.080 0.908 Coefficient of
+performance
+(COP)
+-- 2.38 3.34 Compressor
+frequency
+Hz 73 35 Water flow m³/h 0.54 0.54 Remark: -
+3.Calculation/conclusion for SCOP(Average):
+Tdesignh(°C)
+-10 Tbiv(°C) Pdesignh(kW
+)
+5.593 TOL(°C) Test result A, B, C, D, E, F conditions:
+Condition
+Part load
+Measured
+capacity
+COP at
+measured
+capacity
+E 5.593
+5.584 2.07 Doc No.: ITC-TTW0902.02E – Rev.11
+F 4.948
+4.948 2.38 A 4.948
+4.948 2.38 B 3.012
+3.030 3.34 C 1.936
+2.934 4.69 D 0.861
+3.658 6.69 CR: part load divided by capacity;
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 9 of 30
+7.05 6.01 2.934 0.626 4.69 30 0.54 -7
+-10
+Cdh 0.90 0.90 0.90 0.90 0.90 0.90 12.04
+11.03
+3.658
+0.547
+6.69
+30
+0.54
+CR 1.00 1.00 1.00 0.99 0.66 0.24 -10.00 -7.00
+-11.04 -8.10
+5.584 4.948
+2.703 2.080
+2.07 2.38
+90 73
+0.54 0.54
+COP at part load
+2.07
+2.38
+2.38
+3.34
+4.46
+5.05
+--- strana 10 ---
+Technical Report
+Appendix I Test results
+Electric power consumptions Unit Value
+Thermostat-off mode [PTO] kW 0.020
+Standby mode [PSB] kW 0.006
+Crankcase heater [PCK] kW 0.042
+Off mode [POFF] kW 0.006
+Conclusions: Unit
+Value
+SCOPon: kWh/kWh 3.49
+SCOP: kWh/kWh 3.48
+QH: kWh/year 11556
+QHE: kWh/year 3325
+ηs,h % 136.0
+Seasonal space heating energy
+efficiency classes: (According
+(EU) No 811/2013 Table 1)
+-- A++
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 10 of 30
+--- strana 11 ---
+Technical Report
+Appendix I Test results
+Table 3.
+Heating mode(Low temperature application): P
+Model PW050-DKZLRS-E/S
+Product
+type
+Air to Water Heating
+season
+Averag
+e
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor heat
+exchanger
+Indoor heat
+exchanger
+Condition
+Formula A W
+Inlet dry (wet)
+bulb
+temperature
+°C
+Inlet/outlet water
+temperatures (°C)
+A 88 (-7-16)/(Tdesignh-16) N/A N/A
+-7(-8) a / 34
+B 54 (+2-16)/ (Tdesignh-16) N/A N/A
+2(1) a / 30
+C 35 (+7-16)/(Tdesignh-16) N/A N/A
+7(6) a / 27
+D 15 (+12-16)/(Tdesignh-16) N/A N/A
+12(11) a / 24
+E
+(TOL-16)/ (Tdesignh-16)
+TOL a / 35.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 34
+G N/A (-15-16)/(Tdesignh-16) N/A N/A
+-15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-
+2 at 30/35 conditions, the capacity is 8.932kW, the power is 1.772kW, the COP is 5.04kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W34
+(88%)
+A2/W30
+(54%)
+A7/W27
+(35%)
+A12/W24
+(15%)
+A(-
+10)/W35.
+3
+(100%)
+A(-7)/
+W34
+(88%)
+-- A B C D
+E F
+Data
+collection
+period
+hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat
+pump
+defrosts
+-- No No No No
+No No
+Complete
+Cycles
+-- 0 0 0 0
+0 0
+Barometric
+pressure
+kPa 101.02 101.01 101.01 101.02
+101.01 101.02
+Voltage 230.4 230.6 230.7 230.7
+V 229.6 230.4
+Current input
+of the unit
+A 17.02 12.35 6.12 5.34 4.74
+12.35
+Doc No.: ITC-TTW0902.02E – Rev.11
+Power input
+of the unit
+kW 2.647 1.218 0.921 0.778
+3.622 2.647
+Test conditions indoor unit
+Inlet Water
+temperature,
+DB
+°C 29.09 27.00 25.26 23.14
+29.75 29.09
+Outlet Water
+temperature,
+DB
+°C 33.99 30.03 28.13 26.45
+35.28 33.99
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 11 of 30
+--- strana 12 ---
+Technical Report
+Appendix I Test results
+Test conditions outdoor unit
+Air inlet
+temperature,
+DB
+°C -7.07 2.00 Air inlet
+temperature,
+WB
+°C -8.06 1.05 Summary of the results
+Total heating
+capacity
+kW 8.799 5.440 Effective
+power input
+kW 2.614 1.185 Coefficient of
+performance
+(COP)
+-- 3.37 4.59 Compressor
+frequency
+Hz 70 35 Water flow m³/h 1.55 1.55 Remark: -
+3.Calculation/conclusion for SCOP(Average):
+Tdesignh(°C)
+-10 Tbiv(°C) Pdesignh(kW
+)
+9.946 TOL(°C) Test result A, B, C, D, E, F conditions:
+Condition
+Part load
+Measured
+capacity
+COP at
+measured
+capacity
+E 9.946
+9.934 2.77 Doc No.: ITC-TTW0902.02E – Rev.11
+F 8.799
+8.799 3.37 A 8.799
+8.799 3.37 B 5.356
+5.440 4.59 C 3.443
+5.152 5.80 D 1.530
+5.939 7.97 CR: part load divided by capacity;
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 12 of 30
+7.02 6.01 5.152 0.888 5.80 30 1.55 -7
+-10
+Cdh 0.90 0.90 0.90 0.90 0.90 0.90 12.03
+11.04
+5.939
+0.745
+7.97
+30
+1.55
+CR 1.00 1.00 1.00 0.98 0.67 0.26 -10.00 -7.07
+-11.04 -8.06
+9.934 8.799
+3.589 2.614
+2.77 3.37
+90 70
+1.55 1.55
+COP at part load
+2.77
+3.37
+3.37
+4.59
+5.53
+6.19
+--- strana 13 ---
+Technical Report
+Appendix I Test results
+Electric power consumptions Unit Value
+Thermostat-off mode [PTO] kW 0.024
+Standby mode [PSB] kW 0.007
+Crankcase heater [PCK] kW 0.042
+Off mode [POFF] kW 0.007
+Conclusions:
+Unit Value
+SCOPon: kWh/kWh 4.66
+SCOP: kWh/kWh 4.65
+QH: kWh/year 20549
+QHE: kWh/year 4421
+ηs,h % 182.9
+Seasonal space heating energy
+efficiency classes: (According
+(EU) No 811/2013 Table 2)
+-- A+++
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 13 of 30
+--- strana 14 ---
+Technical Report
+Appendix I Test results
+Table 4.
+Heating mode(Medium temperature application): P
+Model PW050-DKZLRS-E/S
+Product
+type
+Air to Water Heating
+season
+Averag
+e
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor heat
+exchanger
+Indoor heat
+exchanger
+Condition
+Formula A W C
+Inlet dry (wet)
+bulb
+temperature
+°C
+Inlet/outlet water
+temperatures (°C)
+A 88 (-7-16)/(Tdesignh-16) N/A N/A
+-7(-8) a / 52
+B 54 (+2-16)/ (Tdesignh-16) N/A N/A
+2(1) a / 42
+C 35 (+7-16)/(Tdesignh-16) N/A N/A
+7(6) a / 36
+D 15 (+12-16)/(Tdesignh-16) N/A N/A
+12(11) a / 30
+E
+(TOL-16)/ (Tdesignh-16)
+TOL a / 55.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 52
+G N/A (-15-16)/(Tdesignh-16) N/A N/A
+-15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-
+2 at 47/55 conditions, the capacity is 9.041kW, the power is 3.017kW, the COP is 3.00kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W52
+(88%)
+A2/W42
+(54%)
+A7/W36
+(35%)
+A12/W30
+(15%)
+A(-
+10)/W55.
+3
+(100%)
+A(-
+7)/W52
+(88%)
+-- A B C D
+E F
+Data
+collection
+period
+hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat
+pump
+defrosts
+-- No No No No
+No No
+Complete
+Cycles
+-- 0 0 0 0
+0 0
+Barometric
+pressure
+kPa 99.85 99.85 99.85 99.80
+99.75 99.85
+Voltage 230.2 230.6 230.1 230.2
+V 229.5 230.2
+Current input
+of the unit
+17.32 7.41 5.95 5.21
+A 21.42 17.32
+Doc No.: ITC-TTW0902.02E – Rev.11
+Power input
+of the unit
+kW 3.699 1.554 1.171 1.003
+4.684 3.699
+Test conditions indoor unit
+Inlet Water
+temperature,
+DB
+°C 44.84 37.50 33.14 28.73
+46.66 44.84
+Outlet Water
+temperature,
+DB
+°C 52.09 41.93 38.09 34.44
+55.00 52.09
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 14 of 30
+--- strana 15 ---
+Technical Report
+Appendix I Test results
+Test conditions outdoor unit
+Air inlet
+temperature,
+DB
+°C -6.98
+2.01
+Air inlet
+temperature,
+WB
+°C -8.11
+1.06
+Summary of the results
+Total heating
+capacity
+kW 8.164 4.990 Effective
+power input
+kW 3.688 1.543 Coefficient of
+performance
+(COP)
+-- 2.21 3.24 Compressor
+frequency
+Hz 74 35 Water flow m³/h 0.97 0.97 Remark: -
+3.Calculation/conclusion for SCOP(Average):
+Tdesignh(°C)
+-10 Tbiv(°C) Pdesignh(kW
+)
+9.229 TOL(°C) Test result A, B, C, D, E, F conditions:
+Condition
+Part load
+Measured
+capacity
+COP at
+measured
+capacity
+E 9.229
+9.389 2.01 Doc No.: ITC-TTW0902.02E – Rev.11
+F 8.164
+8.164 2.21 A 8.164
+8.164 2.21 B 4.970
+4.990 3.24 C 3.195
+5.576 4.81 D 1.420
+6.438 6.49 CR: part load divided by capacity;
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 15 of 30
+7.01
+6.00
+5.576 1.160 4.81 30 0.97 -7
+-10
+Cdh 0.90 0.90 0.90 0.90 0.90 0.90 12.03
+11.03
+6.438
+0.992
+6.49
+30
+0.97
+CR 0.98 1.00 1.00 1.00 0.57 0.22 -10.01 -6.98
+-11.07 -8.11
+9.389 8.164
+4.673 3.688
+2.01 2.21
+90 74
+0.97 0.97
+COP at part load
+2.01
+2.21
+2.21
+3.24
+4.47
+4.80
+--- strana 16 ---
+Technical Report
+Appendix I Test results
+Electric power consumptions Unit Value
+Thermostat-off mode [PTO] kW 0.024
+Standby mode [PSB] kW 0.007
+Crankcase heater [PCK] kW 0.042
+Off mode [POFF] kW 0.007
+Conclusions:
+Unit Value
+SCOPon: kWh/kWh 3.38
+SCOP: kWh/kWh 3.37
+QH: kWh/year 19068
+QHE: kWh/year 5655
+ηs,h % 131.9
+Seasonal space heating energy
+efficiency classes: (According
+(EU) No 811/2013 Table 1)
+-- A++
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 16 of 30
+--- strana 17 ---
+Technical Report
+Appendix I Test results
+Table 5a.
+Sound power level measurement(Low temperature application) P
+Model
+PW030-DKZLRS-E/S
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C):
+7.0 /6.0
+Indoor heat exchanger, Water inlet/outlet temperature (°C):
+30.0 /35.0
+Voltage (V):
+230
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment : Hemi-anechoic
+room
+Windshield type : Sponge
+Measured position amount : 14
+Water flow (m³/h): 0.86
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `
+Lp(ST)
+****
+-- 44 --
+Measurement distance d *
+-- 1.0m --
+Sound power level LwA
+****
+-- 58 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Fan speed: 400 r/min, compressor speed: 48Hz.
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 17 of 30
+--- strana 18 ---
+Technical Report
+Appendix I Test results
+Table 5b.
+Sound power level measurement(Medium temperature
+application)
+P
+Model
+PW030-DKZLRS-E/S
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C):
+7.0 /6.0
+Indoor heat exchanger, Water inlet/outlet temperature (°C):
+47.0 /55.0
+Voltage (V):
+230
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment : Hemi-anechoic
+room
+Windshield type : Sponge
+Measured position amount : 14
+Water flow (m³/h): 0.54
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `
+Lp(ST)
+****
+-- 44 --
+Measurement distance d *
+-- 1.0m --
+Sound power level LwA
+****
+-- 58 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Fan speed: 400 r/min, compressor speed: 52Hz.
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 18 of 30
+--- strana 19 ---
+Technical Report
+Appendix I Test results
+Table 6a.
+Sound power level measurement(Low temperature application) P
+Model
+PW050-DKZLRS-E/S
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C):
+7.0 /6.0
+Indoor heat exchanger, Water inlet/outlet temperature (°C):
+30.0 /35.0
+Voltage (V): 230
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment : Hemi-anechoic
+room
+Windshield type : Sponge
+Measured position amount : 14
+Water flow (m³/h): 1.55
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `
+Lp(ST)
+****
+-- 45 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 60 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Fan speed: 400 r/min, compressor speed: 50Hz.
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 19 of 30
+--- strana 20 ---
+Technical Report
+Appendix I Test results
+Table 6b.
+Sound power level measurement(Medium temperature
+application)
+P
+Model
+PW050-DKZLRS-E/S
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C):
+7.0 /6.0
+Indoor heat exchanger, Water inlet/outlet temperature (°C):
+47.0 /55.0
+Voltage (V): 230
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment : Hemi-anechoic
+room
+Windshield type : Sponge
+Measured position amount : 14
+Water flow (m³/h): 0.97
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `
+Lp(ST)
+****
+-- 46 --
+Measurement distance d * --
+1.0m --
+Sound power level LwA
+****
+-- 60 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Fan speed: 400 r/min, compressor speed: 56Hz.
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 20 of 30
+--- strana 21 ---
+Technical Report
+Appendix II Marking plate
+Nameplate
+Model: PW030-DKZLRS-E/S
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 21 of 30
+--- strana 22 ---
+Technical Report
+Appendix II Marking plate
+Nameplate
+Model: PW050-DKZLRS-E/S
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 22 of 30
+--- strana 23 ---
+Technical Report
+Appendix III photo documentaiton
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Doc No.: ITC-TTW0902.02E – Rev.11
+Left
+Top
+Bottom
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 23 of 30
+Overall view for PW030-DKZLRS-E/S
+Compressor for PW030-DKZLRS-E/S
+--- strana 24 ---
+Technical Report
+Appendix III photo documentaiton
+Details of: Fan Motor for PW030-DKZLRS-E/S
+View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: Main Control Board for PW030-DKZLRS-E/S
+View:
+General
+Front
+Rear
+Right
+Doc No.: ITC-TTW0902.02E – Rev.11
+Left
+Top
+Bottom
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 24 of 30
+--- strana 25 ---
+Technical Report
+Appendix III photo documentaiton
+Details of: Water Pump for PW030-DKZLRS-E/S
+View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: Overall view for PW050-DKZLRS-E/S
+View:
+General
+Front
+Rear
+Right
+Doc No.: ITC-TTW0902.02E – Rev.11
+Left
+Top
+Bottom
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 25 of 30
+--- strana 26 ---
+Technical Report
+Appendix III photo documentaiton
+Details of: Compressor for PW050-DKZLRS-E/S
+View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of:
+Fan Motor for PW050-DKZLRS-E/S
+View:
+General
+Front
+Rear
+Right
+Doc No: ITC-TTW0902.02E – Rev.11
+Left
+Top
+Bottom
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 26 of 30
+--- strana 27 ---
+Technical Report
+Appendix III photo documentaiton
+Details of: Main Control Board for PW050-DKZLRS-E/S
+View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: Water Pump for PW050-DKZLRS-E/S
+View:
+General
+Front
+Rear
+Right
+Doc No: ITC-TTW0902.02E – Rev.11
+Left
+Top
+Bottom
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 27 of 30
+--- strana 28 ---
+Technical Report
+Appendix IV Construction data form
+Model: PW030-DKZLRS-E/S
+Part 1. Compressor
+Manufacture:
+Type: Rated capacity: Serial-number: Specification: 2. Condenser
+Manufacture:
+Type: Heat exchanger: Dimension(mm):
+3. Evaporator
+Manufacture:
+Type:
+Heat exchanger:
+Dimension(mm):
+4. Fan motor
+Manufacture:
+Type:
+Fan type:
+Specification: 5. Main control board
+Manufacture:
+Type: Specification:
+Doc No.: ITC-TTW0902.02E – Rev.11
+6. Water pump
+Manufacture:
+Type: Specification:
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 28 of 30
+Technical data
+Shanghai Highly Electrical Appliance Co., Ltd.
+WHP07600PSDPC9KQ
+1580W
+W5WN5H066UW2
+DC143.5V; 900-7200r/min; R290
+Ningbo Hrale Plate Heat Exchanger Co., Ltd.
+B3-68-24-4.5
+Plate heat exchanger
+119(L)mmX526(H)mmX66.4(D)mm
+Guangzhou AOTAI Refrigeration Equipment
+Co.,LTD
+801002-0851
+Finned heat exchanger
+640*355*748*Φ7.94*2.5
+Jiangmen LT Motor Co., Ltd
+RD80HB
+3 blade
+DC310V; 80W
+Guangdong Chico Electronic Inc.
+PW58383
+380V; 50Hz
+SHIMGE PUMP INDUSTRY(JIANGSU)CO.,LTD.
+APM25-9-130 PWM1
+230V; 50/60Hz; 4-95W
+--- strana 29 ---
+Technical Report
+Appendix IV Construction data form
+Model: PW050-DKZLRS-E/S
+Part 1. Compressor
+Manufacture: Type: Rated capacity:
+Serial-number: Specification: 2. Condenser
+Manufacture: Type: Heat exchanger: Dimension(mm): 3. Evaporator
+Manufacture: Type: Heat exchanger: Dimension(mm): 4. Fan motor
+Manufacture: Type: Fan type: Specification: 5. Main control board
+Manufacture: Type: Specification: Doc No.: ITC-TTW0902.02E – Rev.11
+6. Water pump
+Manufacture: Type: Specification: Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 29 of 30
+Technical data
+Shanghai Highly Electrical Appliance Co., Ltd.
+WHP13300PSDPC8FQ
+2860W
+W6PN5H06376X
+DC143.5V; 900-6600r/min; R290
+Ningbo Hrale Plate Heat Exchanger Co., Ltd.
+B3-68-34-4.5
+Plate heat exchanger
+119(L)mmX526(H)mmX89.5(D)mm
+Guangzhou AOTAI Refrigeration Equipment
+Co.,LTD
+801002-1154
+Finned heat exchanger
+764*345*990*Φ7.94*3
+Jiangmen LT Motor Co., Ltd
+RD200HC
+3 blade
+DC310V; 200W
+Guangdong Chico Electronic Inc.
+PW58342
+380V; 50Hz
+SHIMGE PUMP INDUSTRY(JIANGSU)CO.,LTD.
+APM25-9-130 PWM1
+230V; 50/60Hz; 4-95W
+--- strana 30 ---
+Technical Report
+Appendix V Equipment List
+No. Type Manufacture Model Equipment ID Calibration
+Due Date
+1 Heat pump energy
+efficiency testing
+system
+PINXIN 10HP 2017J00001 2023-11-24
+2 Electromagnetic
+flowmeter
+KROHNE OPTIFLUX4100
+C
+H17221264 2023-12-21
+3 Anechoic rooms
+(hemi-anechoic rooms)
+Guangzhou Kinte - NC-036-2 2023-10-07
+4 AC source Supply YANGHONG YF-3600 VGDS-0637 2023-11-07
+5 6 channel data logger — PXI-1033 VGDY-0257 2023-05-20
+6 PULSE system B & K 3660C VGDY-0184 2024-04-12
+7 Calibrator B & K 4231 HJ-000095 2023-06-30
+8 Long steel tape — 5m HJ-000150 2024-01-01
+9 Temperature
+measurement system
+— — NC-036-1 2023-06-07
+10 Atmospheric pressure
+meter
+— — HJ-000165 2023-11-22
+11 Constant temperature
+water system
+B & K— VGDS-0448 2024-04-18
+12 Windscreen B & K WS002-5 — —
+-- End of Report --
+Doc No.: ITC-TTW0902.02E – Rev.11
+Project No: 64.181.23.00497.01
+Rev.: 00
+Date: 2023-05-09
+Page: 30 of 30

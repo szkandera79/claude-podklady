@@ -1,0 +1,347 @@
+[Text vytažený z OBCHODNÍ NABÍDKA BD Kostomlaty nad Labem.docx]
+
+OBCHODNÍ NABÍDKA
+Centrální kotelna s tepelnými čerpadly pro bytový dům
+
+
+Klient
+Bytový dům Kostomlaty nad Labem
+Adresa objektu
+Nádražní 352, Kostomlaty nad Labem
+Kontaktní osoba
+pan Kořínek
+Dodavatel / technické řešení
+REO HEATING
+Zastoupeno společností
+Riva Trade, s.r.o.
+Web
+www.reoheating.cz
+Předmět nabídky
+Centrální kotelna s tepelnými čerpadly
+Datum
+27. 5. 2026
+
+1. Úvod
+Vážený pane Kořínku,
+na základě požadavku na modernizaci vytápění bytového domu v Kostomlatech nad Labem Vám předkládáme nabídku centrální kotelny s tepelnými čerpadly.
+Navržené řešení nahrazuje současné vytápění uhlím moderním centrálním systémem s možností samostatného měření spotřeby tepla pro jednotlivé bytové jednotky.
+Cílem návrhu je snížit provozní náklady, zvýšit komfort obyvatel domu, odstranit každodenní obsluhu kotlů na uhlí a umožnit spravedlivé rozúčtování nákladů podle skutečné spotřeby jednotlivých bytů.
+Nabídka je připravena ve více výkonových variantách podle budoucí tepelné ztráty domu v rozsahu přibližně 20–28 kW.
+
+2. Základní princip navrženého řešení
+Navržená kotelna bude sloužit jako centrální zdroj tepla pro celý bytový dům.
+Princip systému:
+tepelná čerpadla → akumulační nádrže → samostatné bytové větve → kalorimetry → jednotlivé byty
+Doporučené řešení obsahuje:
+	•	tepelná čerpadla podle zvolené výkonové varianty,
+	•	akumulační nádrže v nerezovém provedení o celkovém objemu 800 l,
+	•	podružný rozvaděč pro tepelná čerpadla a bivalenci,
+	•	kalorimetry pro měření spotřeby tepla jednotlivých bytů,
+	•	možnost napojení stávajícího kotle na tuhá paliva jako záložního zdroje,
+	•	přípravu pro moderní regulaci a komfortní provoz.
+
+3. Nabídkové varianty
+Varianta A — sestava pro tepelnou ztrátu 20 kW
+Položka
+Cena bez DPH
+RH050 15 kW Highly / Hitachi
+159 000 Kč
+RH050 15 kW Highly / Hitachi
+159 000 Kč
+Instalace / práce
+49 000 Kč
+Materiál a napojovací komponenty
+79 000 Kč
+Propoj mezi kotelnami
+12 000 Kč
+Doprava
+15 000 Kč
+Cena základní sestavy bez DPH
+473 000 Kč
+Volitelné rozšíření:
+Položka
+Cena bez DPH
+3× AKU nerez 800 l — 300 + 300 + 200 l
+59 000 Kč
+Podružný rozvaděč pro TČ a bivalenci
+12 000 Kč
+4× kalorimetr k odečítání spotřeby tepla
+27 000 Kč
+Napojení kotle na tuhá paliva do AKU systému pro zálohu
+9 600 Kč
+Cena volitelného rozšíření bez DPH
+107 600 Kč
+Cena celkem bez DPH: 580 600 Kč
+
+Varianta B — sestava pro tepelnou ztrátu 24 kW
+Položka
+Cena bez DPH
+RH050 22 kW Highly / Hitachi
+189 000 Kč
+RH050 15 kW Highly / Hitachi
+159 000 Kč
+Instalace / práce
+49 000 Kč
+Materiál a napojovací komponenty
+79 000 Kč
+Propoj mezi kotelnami
+12 000 Kč
+Doprava
+15 000 Kč
+Cena základní sestavy bez DPH
+503 000 Kč
+Volitelné rozšíření:
+Položka
+Cena bez DPH
+3× AKU nerez 800 l — 300 + 300 + 200 l
+59 000 Kč
+Podružný rozvaděč pro TČ a bivalenci
+12 000 Kč
+4× kalorimetr k odečítání spotřeby tepla
+27 000 Kč
+Napojení kotle na tuhá paliva do AKU systému pro zálohu
+9 600 Kč
+Cena volitelného rozšíření bez DPH
+107 600 Kč
+Cena celkem bez DPH: 610 600 Kč
+
+Varianta C — sestava pro tepelnou ztrátu 28 kW
+Položka
+Cena bez DPH
+RH050 22 kW Highly / Hitachi
+189 000 Kč
+RH050 15 kW Highly / Hitachi
+189 000 Kč
+Instalace / práce
+49 000 Kč
+Materiál a napojovací komponenty
+79 000 Kč
+Propoj mezi kotelnami
+12 000 Kč
+Doprava
+15 000 Kč
+Cena základní sestavy bez DPH
+533 000 Kč
+Volitelné rozšíření:
+Položka
+Cena bez DPH
+3× AKU nerez 800 l — 300 + 300 + 200 l
+59 000 Kč
+Podružný rozvaděč pro TČ a bivalenci
+12 000 Kč
+4× kalorimetr k odečítání spotřeby tepla
+27 000 Kč
+Napojení kotle na tuhá paliva do AKU systému pro zálohu
+9 600 Kč
+Cena volitelného rozšíření bez DPH
+107 600 Kč
+Cena celkem bez DPH: 640 600 Kč
+
+Varianta D — sestava s jednotkou 35 kW R32 pro tepelnou ztrátu 22 kW
+Položka
+Cena bez DPH
+35 kW R32
+260 000 Kč
+Instalace / práce
+49 000 Kč
+Materiál a napojovací komponenty
+79 000 Kč
+Propoj mezi kotelnami
+12 000 Kč
+Doprava
+15 000 Kč
+Cena základní sestavy bez DPH
+415 000 Kč
+Volitelné rozšíření:
+Položka
+Cena bez DPH
+3× AKU nerez 800 l — 300 + 300 + 200 l
+59 000 Kč
+Podružný rozvaděč pro TČ a bivalenci
+12 000 Kč
+4× kalorimetr k odečítání spotřeby tepla
+27 000 Kč
+Napojení kotle na tuhá paliva do AKU systému pro zálohu
+9 600 Kč
+Cena volitelného rozšíření bez DPH
+107 600 Kč
+Cena celkem bez DPH: 522 600 Kč
+
+4. Přehled cenových variant
+Varianta
+Určeno pro tepelnou ztrátu
+Technologie
+Cena základ bez DPH
+Cena celkem bez DPH
+A
+20 kW
+2× RH050 15 kW Highly / Hitachi
+473 000 Kč
+580 600 Kč
+B
+24 kW
+RH050 22 kW + RH050 15 kW Highly / Hitachi
+503 000 Kč
+610 600 Kč
+C
+28 kW
+RH050 22 kW + RH050 15 kW Highly / Hitachi
+533 000 Kč
+640 600 Kč
+D
+22 kW
+35 kW R32
+415 000 Kč
+522 600 Kč
+Ceny jsou uvedeny bez DPH.
+
+5. Doporučení technického řešení
+Pro bytový dům doporučujeme prioritně řešení se dvěma tepelnými čerpadly v kaskádě, tedy varianty A, B nebo C podle finálně potvrzené tepelné ztráty domu.
+Kaskádové řešení se dvěma jednotkami má oproti jedné velké jednotce několik zásadních výhod:
+	•	vyšší provozní bezpečnost,
+	•	možnost provozu pouze jedné jednotky při nižší potřebě tepla,
+	•	lepší přizpůsobení výkonu aktuální spotřebě domu,
+	•	částečná záloha při poruše nebo servisu jedné jednotky,
+	•	vhodnější provozní režim pro bytový dům,
+	•	stabilnější a komfortnější dodávka tepla.
+Varianta 35 kW R32 je investičně nejlevnější, ale oproti kaskádě dvou jednotek má nevýhody:
+	•	nižší COP, tedy nižší efektivitu vytápění,
+	•	absence záložní jednotky při výpadku,
+	•	nižší provozní jistotu,
+	•	nižší pracovní rozsah ve srovnání se dvěma jednotkami v kaskádě,
+	•	horší přizpůsobení výkonu aktuální potřebě domu.
+Z těchto důvodů doporučujeme pro bytový dům zvolit kaskádové řešení RH050 Highly / Hitachi.
+
+6. Doporučená volba podle tepelné ztráty domu
+Budoucí tepelná ztráta domu
+Doporučená varianta
+cca 20 kW
+Varianta A — 2× RH050 15 kW
+cca 24 kW
+Varianta B — RH050 22 kW + RH050 15 kW
+cca 28 kW
+Varianta C — RH050 22 kW + RH050 15 kW
+Finální volbu výkonové varianty doporučujeme potvrdit podle skutečné nebo projektované tepelné ztráty domu.
+
+7. Doporučené rozšíření systému
+Pro bytový dům doporučujeme realizovat kotelnu včetně volitelného rozšíření:
+	•	3× AKU nerez 800 l — 300 + 300 + 200 l,
+	•	podružný rozvaděč pro TČ a bivalenci,
+	•	4× kalorimetr k odečítání spotřeby tepla,
+	•	napojení kotle na tuhá paliva do AKU systému pro zálohu.
+Toto rozšíření zvyšuje stabilitu provozu, umožňuje přesné měření spotřeby jednotlivých bytů a zároveň zachovává možnost využití stávajícího kotle jako záložního zdroje.
+
+8. Orientační ekonomika provozu
+Současné vytápění uhlím vychází podle dodaných údajů přibližně na:
+Položka
+Hodnota
+Počet bytových jednotek
+4
+Náklad na uhlí / 1 byt
+cca 30 000 Kč/rok
+Náklad na uhlí / celý dům
+cca 120 000 Kč/rok
+Pro orientační porovnání provozních nákladů tepelných čerpadel je použit konzervativní výpočet:
+Položka
+Hodnota
+Odhadovaná roční potřeba tepla domu
+cca 42 100 kWh/rok
+Použitý sezonní topný faktor
+SCOP 3,0 pro W55
+Základní spotřeba elektřiny
+cca 14 030 kWh/rok
+Konzervativní koeficient navýšení
+1,5
+Konzervativní spotřeba elektřiny
+cca 21 050 kWh/rok
+Cena elektřiny
+3 Kč/kWh
+Orientační náklad TČ / celý dům
+cca 63 150 Kč/rok
+Orientační náklad TČ / 1 byt
+cca 15 800 Kč/rok
+Orientační měsíční náklad / 1 byt
+cca 1 315 Kč/měsíc
+
+9. Srovnání provozních nákladů
+Varianta vytápění
+Náklad na 1 byt / rok
+Náklad celý dům / rok
+Tepelná čerpadla — konzervativní scénář
+cca 15 800 Kč
+cca 63 150 Kč
+Současné vytápění uhlím
+cca 30 000 Kč
+cca 120 000 Kč
+Orientační úspora oproti současnému vytápění uhlím:
+Srovnání
+Úspora
+Úspora za celý dům
+cca 56 850 Kč/rok
+Úspora na 1 byt
+cca 14 200 Kč/rok
+Uvedená ekonomika je orientační. Skutečné provozní náklady se mohou lišit podle reálné tepelné ztráty domu, nastavení topné vody, venkovních teplot, chování uživatelů, ceny elektřiny a délky topné sezóny.
+
+10. Hlavní přínosy pro bytový dům
+Finanční přínosy
+	•	nižší provozní náklady oproti uhlí,
+	•	orientační úspora cca 56 850 Kč ročně pro celý dům,
+	•	nižší náklad na vytápění na jednu bytovou jednotku,
+	•	možnost spravedlivého rozúčtování podle skutečné spotřeby.
+Komfortní přínosy
+	•	bez pravidelného přikládání,
+	•	bez skladování uhlí,
+	•	bez manipulace s popelem,
+	•	čistší provoz,
+	•	vyšší komfort obyvatel,
+	•	stabilnější teplota v bytech.
+Technické přínosy
+	•	centrální zdroj tepla pro celý bytový dům,
+	•	možnost kaskádového zapojení dvou tepelných čerpadel,
+	•	nerezová akumulace o celkovém objemu 800 l,
+	•	kalorimetry pro jednotlivé byty,
+	•	možnost využití stávajícího kotle na tuhá paliva jako zálohy,
+	•	vyšší provozní jistota oproti samostatným kotlům na uhlí.
+
+11. Závěr a doporučení
+Navržená centrální kotelna s tepelnými čerpadly představuje moderní a komfortní náhradu současného vytápění uhlím.
+Pro bytový dům doporučujeme zvolit některou z kaskádových variant RH050 Highly / Hitachi podle skutečné tepelné ztráty domu.
+Doporučené varianty:
+	•	pro tepelnou ztrátu cca 20 kW: Varianta A — 580 600 Kč bez DPH,
+	•	pro tepelnou ztrátu cca 24 kW: Varianta B — 610 600 Kč bez DPH,
+	•	pro tepelnou ztrátu cca 28 kW: Varianta C — 640 600 Kč bez DPH.
+Varianta 35 kW R32 je investičně levnější, celkem 522 600 Kč bez DPH, ale z provozního hlediska je méně výhodná než dvě jednotky v kaskádě. Má nižší efektivitu, neposkytuje zálohu při výpadku jednotky a má nižší pracovní rozsah.
+Doporučujeme realizovat řešení včetně akumulačních nádrží, kalorimetrů, podružného rozvaděče a napojení stávajícího kotle na tuhá paliva jako záložního zdroje.
+Tato sestava přináší bytovému domu nižší provozní náklady, vyšší komfort, čistší provoz a spravedlivé měření spotřeby tepla pro jednotlivé byty.
+
+12. Platnost a poznámka k cenám
+Všechny ceny jsou uvedeny bez DPH.
+Finální cena může být upřesněna po potvrzení skutečné tepelné ztráty domu, kontrole technického stavu stávající kotelny, způsobu napojení rozvodů a případných dalších požadavků objednatele.
+
+Shrnutí nabídky
+Varianta
+Technologie
+Cena celkem bez DPH
+Doporučení
+A
+2× RH050 15 kW Highly / Hitachi
+580 600 Kč
+Pro tepelnou ztrátu cca 20 kW
+B
+RH050 22 kW + RH050 15 kW Highly / Hitachi
+610 600 Kč
+Pro tepelnou ztrátu cca 24 kW
+C
+RH050 22 kW + RH050 15 kW Highly / Hitachi
+640 600 Kč
+Pro tepelnou ztrátu cca 28 kW
+D
+35 kW R32
+522 600 Kč
+Levnější, ale provozně méně vhodná varianta
+Doporučené řešení: kaskáda tepelných čerpadel RH050 Highly / Hitachi včetně nerezové akumulace, kalorimetrů, rozvaděče a napojení záložního kotle.
+
+S pozdravem
+REO HEATING Riva Trade, s.r.o. www.reoheating.cz
+
+

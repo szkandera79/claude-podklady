@@ -1,0 +1,121 @@
+[Text vytažený z Prezentační dokument Zámeček pod Hradem.docx]
+
+Prezentační dokument – návrh energetického řešení
+Hotel Zámeček Pod Hradem
+
+1. Navržené řešení
+Pro objekt Hotel Zámeček Pod Hradem navrhujeme modernizaci energetiky formou nové kotelny na klíč.
+Součástí řešení je:
+	•	tepelné čerpadlo REO X50 jako hlavní zdroj tepla,
+	•	fotovoltaická elektrárna 20 kWp,
+	•	bateriové úložiště,
+	•	akumulace tepla do vody,
+	•	ponechání stávajícího plynového kotle pouze jako záložního zdroje.
+Cílem návrhu je snížit závislost hotelu na plynu, využít vlastní výrobu elektřiny z fotovoltaiky a dlouhodobě snížit provozní náklady objektu.
+
+2. Schéma navrženého řešení kotelny
+Součástí návrhu je také orientační schéma zapojení nové kotelny. Schéma znázorňuje základní vazby mezi hlavními technologickými prvky systému, tedy tepelným čerpadlem, fotovoltaickou elektrárnou, bateriovým úložištěm, akumulací tepla, stávajícím plynovým kotlem a otopnou soustavou objektu.
+Navržené řešení je koncipováno tak, aby bylo tepelné čerpadlo REO X50 hlavním zdrojem tepla pro vytápění a přípravu teplé vody. Fotovoltaická elektrárna o výkonu 20 kWp bude vyrábět elektřinu pro vlastní spotřebu hotelu, provoz tepelného čerpadla a případné ukládání přebytků do bateriového úložiště nebo akumulace tepla.
+Stávající plynový kotel zůstává v systému zachován jako záložní zdroj. Díky tomu je zachována provozní jistota i v období zvýšené potřeby tepla nebo při mimořádných provozních stavech.
+
+
+
+Popisek pod obrázek:
+Obrázek: Orientační schéma navrženého řešení kotelny – tepelné čerpadlo REO X50, FVE 20 kWp, bateriové úložiště, akumulace tepla a záložní plynový kotel.
+3. Současný stav a vstupní údaje
+Dle předaných údajů je současná spotřeba plynu přibližně:
+86 MWh/rok
+Roční náklad na plyn činí cca:
+166 000 Kč/rok
+To odpovídá ceně přibližně:
+1,93 Kč/kWh včetně distribuce a souvisejících poplatků
+Současně platíte za elektřinu přibližně:
+7 000 Kč/měsíc, tedy cca 84 000 Kč/rok
+Celkové současné náklady na energie tak vycházejí přibližně na:
+250 000 Kč ročně
+
+4. Proč ne pouze nový plynový kotel
+Samotná výměna za nový plynový kotel je z dlouhodobého pohledu méně výhodná.
+Důvodem je zejména:
+	•	obtížně předvídatelný vývoj ceny plynu,
+	•	zkušenost z energetické krize,
+	•	rostoucí tlak na omezování fosilních paliv,
+	•	očekávaný dopad emisních povolenek od roku 2027,
+	•	nulová možnost využití vlastní elektřiny z fotovoltaiky pro výrobu tepla.
+Z tohoto důvodu doporučujeme přesunout hlavní výrobu tepla na tepelné čerpadlo REO X50 a stávající plynový kotel ponechat pouze jako zálohu pro špičkové nebo mimořádné provozní stavy.
+
+5. Výhoda sezónního provozu hotelu
+Velkou výhodou Vašeho objektu je hlavní sezóna v období:
+březen až listopad
+Právě v tomto období:
+	•	má fotovoltaika nejvyšší výrobu,
+	•	tepelné čerpadlo pracuje s vyšší účinností,
+	•	hotel má zároveň reálnou denní spotřebu elektřiny a tepla,
+	•	přebytky z FVE lze efektivně ukládat do akumulace.
+Díky tomu může být skutečná úspora vyšší než konzervativní výpočet návratnosti.
+
+6. Použitá technologie – REO X50
+Jako hlavní zdroj tepla je navrženo tepelné čerpadlo:
+REO X50
+Tato technologie je vhodná pro větší objekty s vyšší potřebou tepla, například hotely, penziony, provozní budovy nebo menší průmyslové objekty.
+Hlavní vlastnosti REO X50
+	•	výkon až cca 65 kW,
+	•	výstupní teplota vody až 85 °C,
+	•	vhodné pro vytápění i přípravu teplé vody,
+	•	technologie EVI pro efektivnější provoz,
+	•	podpora Smart Grid pro spolupráci s fotovoltaikou,
+	•	možnost vzdáleného ovládání,
+	•	možnost kaskádového rozšíření,
+	•	vhodné pro provoz s akumulačními nádobami.
+Díky vyšší výstupní teplotě je REO X50 vhodné i pro objekty, kde je nutné zachovat vyšší teplotní spád, například u stávajících radiátorových systémů nebo při přípravě TUV.
+
+7. Ekonomika a návratnost
+Výpočet vychází ze současných vstupních údajů, tedy z ceny plynu cca 1,93 Kč/kWh a současných plateb za elektřinu cca 84 000 Kč ročně.
+V případě růstu ceny plynu nebo elektřiny se ekonomika navrženého řešení dále zlepšuje a návratnost se může zkracovat.
+Dopad fotovoltaiky
+Fotovoltaická elektrárna o výkonu 20 kWp může významně snížit spotřebu elektřiny ze sítě.
+Protože přesná roční spotřeba elektřiny v kWh zatím není známa, počítáme konzervativně s dodatečnou úsporou přibližně:
+60 000 Kč ročně
+Tato úspora je zahrnuta v ekonomice varianty TČ + FVE 20 kWp.
+V praxi může být výsledek ještě příznivější, pokud bude hotel většinu vyrobené elektřiny spotřebovávat přímo v objektu nebo ji ukládat do tepla přes akumulační nádoby.
+
+8. Cena navrženého řešení
+Celková cena řešení činí:
+1 305 000 Kč bez DPH
+Doporučená varianta zahrnuje:
+	•	tepelné čerpadlo REO X50,
+	•	fotovoltaickou elektrárnu 20 kWp,
+	•	bateriové úložiště,
+	•	akumulaci tepla,
+	•	úpravu kotelny a napojení systému,
+	•	ponechání stávajícího plynového kotle jako záložního zdroje.
+
+9. Poznámka k optimalizaci ceny
+Řešení je možné upravit i do levnější varianty. Je však důležité zmínit, že levnější řešení obvykle znamená zejména menší investici do akumulace.
+To může snížit pořizovací cenu, ale zároveň prodloužit návratnost, protože objekt nebude schopný tak efektivně využívat přebytky z fotovoltaiky.
+Jinými slovy:
+Menší akumulace = nižší vstupní investice, ale horší využití vlastní energie a delší návratnost.
+Z ekonomického pohledu proto dává smysl navrhovat systém tak, aby co největší část vyrobené elektřiny zůstala využita přímo v hotelu.
+
+10. Orientační návratnost investice
+Současné náklady na energie činí přibližně:
+250 000 Kč/rok
+Doporučená varianta:
+Tepelné čerpadlo REO X50 + FVE 20 kWp + bateriové úložiště + akumulace tepla
+Tato varianta nejlépe využívá sezónní provoz hotelu v období březen až listopad, kdy je nejvyšší výroba fotovoltaiky a zároveň velmi efektivní provoz tepelného čerpadla.
+Orientační návratnost investice vychází přibližně na:
+cca 6,2 roku
+
+11. Závěr
+Navržené řešení je technicky i ekonomicky vhodnou cestou, jak snížit provozní náklady Hotelu Zámeček Pod Hradem a omezit jeho závislost na plynu.
+Kombinace tepelného čerpadla, fotovoltaiky, bateriového úložiště a akumulace tepla umožňuje využít vlastní vyrobenou energii přímo v objektu. Stávající plynový kotel přitom zůstává zachován jako záložní zdroj, což zvyšuje provozní jistotu celého systému.
+
+
+Doporučená varianta
+REO X50 + FVE 20 kWp + bateriové úložiště + akumulace tepla
+Celková cena
+1 305 000 Kč bez DPH
+Orientační návratnost
+cca 6,2 roku
+
+

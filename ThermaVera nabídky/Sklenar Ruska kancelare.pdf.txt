@@ -1,0 +1,241 @@
+[Text vytažený z Sklenar Ruska kancelare.pdf]
+
+--- strana 1 ---
+Generátor energetické studie | ThermaVera Energy
+23.06.2026 15:53
+Návrh podle zadaných hodnot vychází ekonomicky výhodně. Roční úspora je kladná.
+VÝROBNÍ CENA TEPLA
+857 Kč/MWh
+≈ 238 Kč/GJ
+ROČNÍ ÚSPORA
+554 774 Kč
+oproti současnému stavu
+PROSTÁ NÁVRATNOST
+2,0 roku
+prostá návratnost investice
+E N E R G E T I C K Á S T U D I E
+Kanceláře - pan Sklenář
+Ruská 87 · bytový dům · zpracováno 23. června 2026
+1 · Účel studie
+Tato studie posuzuje možnost náhrady stávajícího zdroje tepla objektu Kanceláře - pan Sklenář na
+adrese Ruská 87 novým, úspornějším řešením. Cílem je vyčíslit současnou ekonomiku vytápění,
+navrhnout technologii 2x RH X50 a transparentně porovnat provozní náklady, výrobní cenu tepla a
+prostou návratnost investice. Studie slouží jako podklad pro rozhodování výboru SVJ, správce objektu
+nebo investora a nenahrazuje projektovou dokumentaci.
+2 · Identifikace objektu
+Klient / SVJ Kanceláře - pan Sklenář
+Adresa Ruská 87
+Typ objektu bytový dům
+Energeticky vztažná plocha 1 200,0 m²
+Tepelná ztráta objektu 60,0 kW
+Návrhová venkovní teplota -15,0 °C
+Odhadovaná tepelná ztráta - nutno ověřit a zadat přesně
+3 · Výchozí stav
+Objekt je v současnosti zásobován teplem ze zdroje typu externí teplovod. Roční spotřeba tepla činí 430,0
+GJ, tj. přibližně 119,4 MWh. Při účinnosti stávajícího zdroje 95 % to odpovídá užitečnému teplu cca 408,5 GJ
+(113,4 MWh), které musí pokrýt nový zdroj. Současný roční náklad na teplo představuje 652 000 Kč bez
+DPH.
+file:///Users/jindrichszkandera/Claude/thermavera-web/studie.html
+Stránka 1 z 7
+--- strana 2 ---
+Generátor energetické studie | ThermaVera Energy
+23.06.2026 15:53
+SOUČASNÝ STAV
+Zdroj tepla externí teplovod
+Roční spotřeba tepla 430,0 GJ
+Roční spotřeba tepla 119,4 MWh
+Účinnost zdroje 95 %
+Užitečné teplo 408,5 GJ · 113,4 MWh
+Roční náklad na teplo (bez DPH) 652 000 Kč
+Roční náklad celkem 652 000 Kč
+Dle deklarované ceny 1600kč/GJ - nutno doplnit přesně
+4 · Aktuální cena dodaného tepla
+Z poměru ročního nákladu a užitečného (dodaného) tepla vychází jednotková cena současně dodávaného
+tepla na 1 596 Kč/GJ, což odpovídá 5 748 Kč/MWh. Cena je vztažena na skutečně dodané teplo, tedy po
+zohlednění účinnosti zdroje. Tato hodnota je referenční úrovní, vůči které posuzujeme výrobní cenu tepla z
+navrženého zdroje.
+Cena tepla 1 596 Kč/GJ
+Cena tepla 5 748 Kč/MWh
+5 · Návrh nového zdroje tepla
+Pro pokrytí tepelné potřeby objektu je navržena technologie 2x RH X50 (tepelné čerpadlo vzduch/voda).
+Sestava je tvořena 2 jednotkami o výkonu 50,0 kW s celkovým instalovaným výkonem 100,0 kW. Komerční
+tepelná čerpadla mohou být pro větší bytové domy vhodná zejména díky vyššímu výkonu, možnosti
+kaskádového provozu, plynulé modulaci výkonu a vysoké účinnosti (COP). Konkrétní vhodnost je vždy nutné
+ověřit projektem.
+6 · Parametry navržené technologie
+file:///Users/jindrichszkandera/Claude/thermavera-web/studie.html
+Stránka 2 z 7
+--- strana 3 ---
+Generátor energetické studie | ThermaVera Energy
+23.06.2026 15:53
+NAVRŽENÝ STAV
+Technologie 2x RH X50
+Typ tepelné čerpadlo vzduch/voda
+Počet jednotek 2
+Výkon jedné jednotky 50,0 kW
+Celkový instalovaný výkon 100,0 kW
+Využitelný výkon při návrhové teplotě 60,0 kW
+SCOP / sezónní účinnost 3,50
+Cena elektřiny / paliva 3 000 Kč/MWh
+Roční servisní náklady 0 Kč
+Ostatní provozní náklady 0 Kč
+Investiční náklad (bez DPH) 1 100 000 Kč
+Katalogové parametry
+COP při A7/W35 3,8–5,1
+Výkon při A7/W35 18,4–49,25 kW (A7/W35)
+COP při A7/W55 4,46–5,62 (vyšší teplotní spád)
+Max. teplota topné vody 78 °C
+Chladivo R290 / 4,0 kg
+Kompresor HIGHLY/HITACHI (DC invertor)
+Energetická třída (35 °C) A+++
+Energetická třída (55 °C) A++
+Hladina akustického tlaku ≤ 77 dB(A) (ak. výkon)
+Hmotnost jednotky 500 kg
+Rozměry 1195 × 980 × 1900 mm
+Vysvětlení značení: A je teplota venkovního vzduchu, W teplota výstupní (topné) vody. Oba body jsou uvedeny při
+stejné teplotě vzduchu 7 °C, liší se teplotou topné vody: A7/W35 při vodě 35 °C, A7/W55 při vodě 55 °C. Při vyšší
+teplotě vody (W55) výkon i účinnost (COP) oproti W35 klesají — provoz na vyšší teplotní spád je náročnější. Vyšší
+teplota vody tedy parametry nezlepšuje. Pro dimenzování objektu je rozhodující výkon při návrhové venkovní teplotě
+(viz následující kapitola), který je za mrazu nižší než katalogové hodnoty při A7.
+file:///Users/jindrichszkandera/Claude/thermavera-web/studie.html
+Stránka 3 z 7
+--- strana 4 ---
+Generátor energetické studie | ThermaVera Energy
+23.06.2026 15:53
+7 · Výkonové posouzení
+Tepelná ztráta objektu při návrhové teplotě činí 60,0 kW. Navržená technologie poskytuje využitelný výkon
+60,0 kW, výkonová rezerva tedy činí 0,0 kW (0 %). Navržený zdroj je z hlediska výkonu dimenzován s
+rezervou a měl by spolehlivě pokrýt tepelnou potřebu objektu i za nejchladnějších dnů.
+Pro posouzení vycházíme z výkonu při návrhové venkovní teplotě, nikoli z katalogových hodnot při A7 — výkon
+tepelného čerpadla za mrazu klesá a v zimě ho nelze plně využít.
+Tepelná ztráta objektu 60,0 kW
+Využitelný výkon při návrhové teplotě 60,0 kW
+Výkonová rezerva 0,0 kW · 0 %
+8 · Provozní ekonomika
+Při sezónní účinnosti SCOP 3,50 a roční potřebě tepla 113,4 MWh činí předpokládaná spotřeba elektřiny 32,4
+MWh. Při ceně 3 000 Kč/MWh to představuje roční náklad na elektřinu 97 226 Kč.
+POROVNÁNÍ NÁKLADŮ
+Položka Současný stav Navržený stav
+Energie (teplo / elektřina) 652 000 Kč 97 226 Kč
+Servis — 0 Kč
+Ostatní provozní náklady 0 Kč 0 Kč
+Roční náklady celkem 652 000 Kč 97 226 Kč
+9 · Výrobní cena tepla
+Z celkových provozních nákladů navržené technologie a roční potřeby tepla vychází výrobní cena tepla 857
+Kč/MWh (238 Kč/GJ). To je méně než současná cena 1 596 Kč/GJ — výroba tepla z navrženého zdroje je
+levnější.
+Výrobní cena tepla 857 Kč/MWh
+Výrobní cena tepla 238 Kč/GJ
+Pro srovnání – současná cena 1 596 Kč/GJ
+10 · Roční úspora
+Porovnáním celkových ročních nákladů vychází roční úspora náklady objektu.
+554 774 Kč. Návrh tedy snižuje provozní
+11 · Návratnost investice
+Při investici 1 100 000 Kč a roční úspoře 554 774 Kč vychází prostá návratnost 2,0 roku. Jde o
+zjednodušený ukazatel bez zohlednění inflace, vývoje cen energií a financování.
+file:///Users/jindrichszkandera/Claude/thermavera-web/studie.html
+Stránka 4 z 7
+--- strana 5 ---
+Generátor energetické studie | ThermaVera Energy
+23.06.2026 15:53
+NÁVRATNOST
+Investiční náklad (bez DPH) 1 100 000 Kč
+Roční úspora 554 774 Kč
+Prostá návratnost 2,0 roku
+12 · Varianta pronájmu technologie
+Kotelna je umístěna ve vlastních prostorách investora. Investor v tomto případě hradí instalaci a vybavení
+kotelny (stavební připravenost, rozvody, elektroinstalaci, akumulaci apod.). Samotná tepelná čerpadla jsou
+pak pronajímána formou pravidelných měsíčních splátek dle zvoleného splátkového kalendáře.
+Pronájem tepelných čerpadel představuje další měsíční splátky dle zvoleného splátkového kalendáře
+(viz příloha) s možností odkupu úhradou jistiny / odkupní ceny po skončení sjednané doby. Tato varianta
+výrazně snižuje vstupní investici a převádí část nákladů do pravidelné měsíční platby; místo klasické
+návratnosti investice proto sledujeme roční a měsíční rozdíl proti současnému stavu. Sjednané podmínky:
+odkupní cena 25 % po 36 měsících. Servis a údržba jsou po dobu pronájmu zahrnuty v ceně.
+PRONÁJEM TECHNOLOGIE
+Vstupní investice (kotelna + instalace) 280 000 Kč
+Měsíční nájem (2 jednotky) 27 800 Kč
+Roční nájem 333 600 Kč
+Provozní náklady (energie, ostatní) 97 226 Kč
+Roční náklady celkem (s pronájmem) 430 826 Kč
+Roční cash-flow rozdíl proti současnosti 221 174 Kč
+Měsíční rozdíl proti současnosti 18 431 Kč
+I při pronájmu je provoz objektu levnější než dnes, a to bez nutnosti jednorázové investice.
+Splátkový kalendář (příloha)
+Orientační měsíční ceny pronájmu samotných tepelných čerpadel dle nabídky ThermaVera (bez DPH).
+Měsíční nájem je uveden v Kč/měs, ceny zařízení v Kč. Vstupní investice (komponenty zůstávající v kotelně
+investora + instalace) se řeší zvlášť podle konkrétního projektu a není součástí tohoto ceníku. Po uplynutí
+smlouvy lze zařízení odkoupit úhradou odkupní ceny, případně přejít na novější typ s vyšším technologickým
+standardem.
+file:///Users/jindrichszkandera/Claude/thermavera-web/studie.html
+Stránka 5 z 7
+--- strana 6 ---
+Generátor energetické studie | ThermaVera Energy
+23.06.2026 15:53
+Zařízení Topný výkon (A7/W35) Cena 36 měs
+odkup 25 %
+60 měs
+odkup 15 %
+120 měs
+odkup 1 Kč
+Bez závazků
+RH030
+(8 kW)
+3,2–9,0 kW 129 000 4 500 3 500 2 900 4 000
+RH040
+(12 kW)
+4,2–11,8 kW 139 000 4 800 3 800 3 100 4 300
+RH050
+(15 kW)
+5,6–16,0 kW 159 000 5 500 4 300 3 500 5 000
+RH060
+(22 kW)
+7,7–22,0 kW 189 000 6 600 5 200 4 200 5 900
+RH X50
+(65 kW)
+— 399 000 13 900 10 900 8 900 17 900 / 12 500
+RH
+X100
+(130
+kW)
+— 799 900 27 800 21 800 17 800 25 000
+Topný výkon rezidenční řady REO R290 (R290, energetická třída A+++, provoz až do −25 °C, teplota topné vody až 75 °C) dle
+technického listu výrobce. U varianty „bez závazků" je u RH X50 uvedena sazba pro první rok / další roky; u rezidenčních
+jednotek je uvedena běžná sazba, první rok může být dle individuální nabídky vyšší.
+13 · Dopad emisních povolenek (ETS2)
+Podle aktuálně uváděných informací má být systém ETS2 (emisní povolenky pro budovy a dopravu) spuštěn
+od roku 2028 (původně se uváděl 2027). Povolenky nakupují dodavatelé paliv a jejich cena se může
+promítnout do koncové ceny stávajícího fosilního paliva. Při ceně povolenky 45,0 EUR/t CO₂, kurzu 25,0 Kč/
+EUR a emisním faktoru 0,056 t CO₂/GJ představuje orientační dopad přibližně 63 Kč/GJ paliva, tj. zhruba
+27 138 Kč ročně navíc (≈ +4 % současného nákladu na palivo).
+ETS2 / EMISNÍ POVOLENKY
+Dopad povolenky 63 Kč/GJ paliva
+Roční dopad povolenek 27 138 Kč
+Orientační navýšení nákladu na palivo +4 %
+Navýšená cena původního tepla 1 663 Kč/GJ
+Nový roční náklad původního řešení 679 138 Kč
+Nová roční úspora 581 913 Kč
+Nová návratnost 1,9 roku
+Po zohlednění povolenek se ekonomika navržené technologie zpravidla dále zlepšuje, protože rostou
+náklady na provoz původního fosilního zdroje. Jde o orientační odhad podle aktuálně uváděných informací;
+ETS2 může náklady zvýšit, výsledná cena povolenky není předem zaručena.
+file:///Users/jindrichszkandera/Claude/thermavera-web/studie.html
+Stránka 6 z 7
+--- strana 7 ---
+Generátor energetické studie | ThermaVera Energy
+23.06.2026 15:53
+14 · Doporučení před realizací
+Ověřit skutečnou tepelnou ztrátu a otopovou soustavu měřením a projektem (teplotní spády, otopná
+tělesa).
+Posoudit umístění a akustiku venkovních jednotek vzhledem k okolní zástavbě a hygienickým limitům.
+Prověřit dostatečnost elektrické přípojky a případné posílení jističe / trafostanice.
+Zvážit dotační podporu a možnosti financování (vlastní investice vs. pronájem).
+Hodnoty ve studii jsou orientační a vycházejí ze zadaných vstupů; finální čísla potvrdí prováděcí projekt.
+15 · Závěr
+Navržená technologie 2x RH X50 podle zadaných vstupů snižuje roční náklady na teplo o 554 774 Kč a
+výrobní cenu tepla na 238 Kč/GJ, s prostou návratností 2,0 roku. Řešení doporučujeme k dalšímu
+posouzení a zpracování prováděcího projektu.
+Studie byla vygenerována automaticky z údajů zadaných uživatelem a slouží jako orientační podklad. Neobsahuje DPH,
+nezohledňuje inflaci ani vývoj cen energií a nenahrazuje projektovou dokumentaci. Přepočet jednotek: 1 GJ = 0,27778 MWh, 1 MWh
+= 3,6 GJ.
+file:///Users/jindrichszkandera/Claude/thermavera-web/studie.html
+Stránka 7 z 7
