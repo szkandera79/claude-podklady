@@ -7,6 +7,7 @@ CLAUDE.md** a drž se pravidel tam uvedených.
 
 ## Kde to leží
 - Lokální cesta: `~/Claude/Projekty` (odkaz na iCloud Drive `Claude/Projekty`) — stejná na iMacu i MacBooku.
+- Původní cesty `~/Claude/REO`, `~/Claude/banner-generator` atd. jsou odkazy na složky v Projektech (fungují dál).
 - GitHub: `szkandera79/Projekty` (soukromý). Před prací `git pull`, po práci `git commit` + `git push`.
 - Skripty projektů počítají cesty relativně ke svému souboru; příkazy v README se spouštějí
   z kořene repozitáře (např. `python3 bd-jandova/src/gen_schema.py`).
@@ -27,6 +28,13 @@ CLAUDE.md** a drž se pravidel tam uvedených.
 | `mobilni-kotelna-tc/` | podnikatelský a technický model pronájmu mobilních kotelen s TČ v kontejneru |
 | `marketing/` | oslovení SVJ (e‑maily, leady CZT, tracker), Google Ads / PPC, grafika |
 | `claude-voice-cz/` | **kopie** projektu hlasového asistenta pro iPhone; hlavní verze je v `~/Developer/ClaudeVoiceCZ` |
+| `REO/` | značka REO HEATING — návody, datové listy, katalogy, letáky, prezentace, web `reoheating-web/` |
+| `banner-generator/` | generátor reklamních bannerů (ThermaVera / REO HEATING / SuperHeating), Gemini API — klíč jen v `.env.local` (není v gitu) |
+| `BD Michal Claude/` | podklady k bytovému domu Michal (PDF, smlouvy) |
+| `ThermaVera nabídky/` | nabídky ThermaVera (PDF, Word) |
+| `Reference zelena kotelna/` | fotky realizací (zdroj pro reference a katalogy) |
+| `PW Obchodní/` | obchodní podklady PW |
+| `Voyah reklamace/`, `Wok/`, `Bazen chemie/`, `Adria/` | osobní složky |
 
 ## Společná pravidla
 - Komunikace a texty česky; tón seriózní B2B energetik (viz `thermavera-web/CLAUDE.md`).

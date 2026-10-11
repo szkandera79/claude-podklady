@@ -21,10 +21,21 @@ final class VoiceSession: ObservableObject {
     @Published private(set) var routeDescription = ""
     /// Diagnostika: co mikrofon zachytil, zatímco Claude mluví.
     @Published private(set) var heardWhileSpeaking = ""
+    /// Probíhá odpověď na napsanou zprávu mimo hlasový rozhovor (odpověď jen textem).
+    @Published private(set) var isTextBusy = false
+    /// Fotky připravené k odeslání s další zprávou (mluvenou i psanou).
+    @Published private(set) var pendingImages: [String] = []
 
     let store: ConversationStore
     private let audio = AudioController()
     private let recognizer = SpeechRecognizerService()
+    private let deviceTools = DeviceTools()
+    private let recorder = UtteranceRecorder()
+    /// Pozice v nahrávce, kde začala aktuální promluva (pro přesný přepis přes ElevenLabs).
+    private var utteranceStart: Int?
+    private var lastUtteranceStart: Int?
+    private var sttTask: Task<Void, Never>?
+    private var cloudSTT: Bool { defaults.object(forKey: SettingsKey.cloudSTT) as? Bool ?? true }
     private lazy var speech = SpeechOutput(audio: audio)
     private var splitter = SentenceSplitter()
 
@@ -59,6 +70,8 @@ final class VoiceSession: ObservableObject {
     private var assistantEntryID: UUID?
     private var assistantText = ""
     private var isNotice = false
+    /// Aktuální odpověď se nepředčítá (psaní mimo hlasový rozhovor).
+    private var textOnly = false
     private var noticeCompletion: (() -> Void)?
     private var resumeAfterInterruption = false
     private var needsResend = false
@@ -70,7 +83,10 @@ final class VoiceSession: ObservableObject {
         self.store = store
         recognizer.onResult = { [weak self] text, isFinal in self?.handleRecognition(text, isFinal: isFinal) }
         recognizer.onTaskEnded = { [weak self] error in self?.handleRecognitionEnded(error) }
-        audio.onInputBuffer = { [weak recognizer = self.recognizer] buffer in recognizer?.append(buffer) }
+        audio.onInputBuffer = { [weak recognizer = self.recognizer, weak recorder = self.recorder] buffer in
+            recognizer?.append(buffer)
+            recorder?.append(buffer)
+        }
         audio.onConfigurationChange = { [weak self] in self?.handleEngineConfigurationChange() }
         observeSystemNotifications()
     }
@@ -122,6 +138,8 @@ final class VoiceSession: ObservableObject {
         idleTimer?.invalidate()
         utterancePrefix = ""
         liveTranscript = ""
+        utteranceStart = nil
+        recorder.reset()
         isNotice = false
         noticeCompletion = nil
         stopAudio()
@@ -133,7 +151,36 @@ final class VoiceSession: ObservableObject {
 
     func newConversation() {
         stop()
-        store.clear()
+        stopTextResponse()
+        pendingImages = []
+        store.newConversation()
+    }
+
+    func openConversation(_ id: UUID) {
+        stop()
+        stopTextResponse()
+        pendingImages = []
+        store.open(id)
+    }
+
+    // MARK: - Fotky
+
+    /// Přiloží fotku (JPEG) k další zprávě.
+    func attachImage(_ jpeg: Data) {
+        guard pendingImages.count < 4, let name = store.saveImage(jpeg) else { return }
+        pendingImages.append(name)
+    }
+
+    func removePendingImage(_ name: String) {
+        pendingImages.removeAll { $0 == name }
+        if let url = store.imageURL(name) { try? FileManager.default.removeItem(at: url) }
+    }
+
+    /// Vezme přiložené fotky pro odesílanou zprávu.
+    private func takePendingImages() -> [String]? {
+        let images = pendingImages
+        pendingImages = []
+        return images.isEmpty ? nil : images
     }
 
     private func startAudio() throws {
@@ -150,13 +197,20 @@ final class VoiceSession: ObservableObject {
     private func applySpeechSettings() {
         speech.voiceIdentifier = defaults.string(forKey: SettingsKey.voiceID)
         if let rate = defaults.object(forKey: SettingsKey.speechRate) as? Double { speech.rate = Float(rate) }
-        recognizer.preferOnDevice = defaults.object(forKey: SettingsKey.preferOnDevice) as? Bool ?? true
+        recognizer.preferOnDevice = defaults.object(forKey: SettingsKey.preferOnDevice) as? Bool ?? false
         speech.onStartedSpeaking = { [weak self] in
             guard let self, !self.isNotice, self.state == .thinking else { return }
             self.state = .speaking
             self.updateNowPlaying()
         }
         speech.onFinished = { [weak self] in self?.handleSpeechFinished() }
+        speech.useCloud = defaults.object(forKey: SettingsKey.cloudVoice) as? Bool ?? true
+        speech.onCloudExhausted = { [weak self] in
+            self?.store.append(.notice, "Kredit přirozeného hlasu je vyčerpán — dočasně mluví hlas iPhonu, za 30 minut to zkusím znovu.")
+        }
+        speech.onCloudRestored = { [weak self] in
+            self?.store.append(.notice, "Přirozený hlas je opět k dispozici.")
+        }
     }
 
     // MARK: - Rozpoznávání řeči
@@ -171,6 +225,7 @@ final class VoiceSession: ObservableObject {
                 speech.stop()
                 finishNotice()
             }
+            if utteranceStart == nil, !text.isEmpty { markUtteranceStart() }
             liveTranscript = composeUtterance(text)
             lastActivity = Date()
             if isFinal {
@@ -188,6 +243,7 @@ final class VoiceSession: ObservableObject {
             heardWhileSpeaking = text
             guard bargeInEnabled, isBargeIn(text) else { return }
             interruptAssistant()
+            markUtteranceStart(preRoll: 2.5)
             liveTranscript = composeUtterance(text)
             restartEndpointTimer()
         case .idle, .suspended:
@@ -222,6 +278,7 @@ final class VoiceSession: ObservableObject {
             }
         }
         // Úloha skončila (časový limit, ticho) → plynule navážeme novou.
+        if liveTranscript.isEmpty { utteranceStart = nil }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
             guard let self, self.state != .idle, self.state != .suspended else { return }
             self.recognizer.startTask()
@@ -244,42 +301,102 @@ final class VoiceSession: ObservableObject {
         utterancePrefix = ""
         guard !text.isEmpty else { return }
         lastActivity = Date()
-        pendingUserEntryID = store.append(.user, text)
+        let entryID = store.append(.user, text, images: takePendingImages())
+        pendingUserEntryID = entryID
+        let start = utteranceStart
+        lastUtteranceStart = start
+        utteranceStart = nil
         // Nová úloha rozpoznávání = čistý start pro detekci přerušení.
         recognizer.startTask()
         state = .thinking
         updateNowPlaying()
-        sendToClaude()
+        // Přesný přepis: nahrávku promluvy přepíše ElevenLabs; při chybě zůstane přepis z iPhonu.
+        guard cloudSTT, CloudQuota.isAvailable(.stt), let start, let wav = recorder.wav(from: start) else {
+            sendToClaude()
+            return
+        }
+        sttTask?.cancel()
+        sttTask = Task { @MainActor [weak self] in
+            let result = await CloudVoice.transcribe(wav)
+            guard let self, !Task.isCancelled, self.state == .thinking, self.pendingUserEntryID == entryID else { return }
+            switch result {
+            case .success(let precise):
+                if CloudQuota.wasPaused(.stt) {
+                    CloudQuota.markWorking(.stt)
+                    self.store.append(.notice, "Přesné rozpoznávání řeči je opět k dispozici.")
+                }
+                if !precise.isEmpty { self.store.update(id: entryID, text: precise) }
+            case .failure(.quotaExhausted):
+                if !CloudQuota.wasPaused(.stt) {
+                    self.store.append(.notice, "Kredit přesného rozpoznávání je vyčerpán — dočasně rozpoznává iPhone, za 30 minut to zkusím znovu.")
+                }
+                CloudQuota.markExhausted(.stt)
+            default:
+                break
+            }
+            self.sendToClaude()
+        }
+    }
+
+    /// Začátek promluvy v nahrávce (s rezervou, protože rozpoznávání reaguje se zpožděním).
+    private func markUtteranceStart(preRoll: Double = 1.5) {
+        utteranceStart = max(0, recorder.position - Int(UtteranceRecorder.sampleRate * preRoll))
     }
 
     // MARK: - Claude
 
-    private func sendToClaude() {
+    private func sendToClaude(speak: Bool = true) {
         let messages = store.apiMessages()
-        let client = ClaudeClient()
+        // Stejný čas pro všechna navazující kola odpovědi (server ho vkládá do zprávy uživatele).
+        let now = ClaudeClient.isoNow()
         assistantText = ""
         assistantEntryID = nil
         splitter = SentenceSplitter()
         isNotice = false
-        speech.begin()
+        textOnly = !speak
+        if speak { speech.begin() }
 
         responseTask?.cancel()
         responseTask = Task { @MainActor [weak self] in
             do {
-                for try await chunk in client.stream(messages: messages) {
-                    guard let self, !Task.isCancelled else { return }
-                    self.assistantText += chunk
-                    if let id = self.assistantEntryID {
-                        self.store.update(id: id, text: self.assistantText, persist: false)
-                    } else {
-                        self.assistantEntryID = self.store.append(.assistant, self.assistantText)
+                var continuation: [String: Any]?
+                // Kalendář a připomínky běží v telefonu → odpověď může mít víc navazujících kol.
+                for _ in 0..<4 {
+                    guard let self else { return }
+                    var toolRequest: (calls: [ClientToolCall], pending: [String: Any])?
+                    var firstChunkOfRound = true
+                    for try await item in ClaudeClient().stream(messages: messages, now: now, continuation: continuation) {
+                        guard !Task.isCancelled else { return }
+                        switch item {
+                        case .text(var chunk):
+                            // Text dalšího kola oddělíme mezerou, ať se věty neslepí.
+                            if firstChunkOfRound, !self.assistantText.isEmpty, let c = chunk.first, !c.isWhitespace {
+                                chunk = " " + chunk
+                            }
+                            firstChunkOfRound = false
+                            self.handleChunk(chunk, speak: speak)
+                        case .clientTools(let calls, let pending):
+                            toolRequest = (calls, pending)
+                        }
                     }
-                    for sentence in self.splitter.append(chunk) { self.speech.enqueue(sentence) }
+                    guard let request = toolRequest, !Task.isCancelled else { break }
+                    var results = request.pending["server_results"] as? [[String: Any]] ?? []
+                    for call in request.calls {
+                        let r = await self.deviceTools.run(call)
+                        results.append(["tool_use_id": call.id, "content": r.content, "is_error": r.isError])
+                    }
+                    guard !Task.isCancelled else { return }
+                    continuation = ["assistant": request.pending["assistant"] ?? [], "tool_results": results]
                 }
                 guard let self, !Task.isCancelled else { return }
-                if let rest = self.splitter.flush() { self.speech.enqueue(rest) }
                 if let id = self.assistantEntryID { self.store.update(id: id, text: self.assistantText) }
                 self.pendingUserEntryID = nil
+                if !speak {
+                    self.assistantEntryID = nil
+                    self.isTextBusy = false
+                    return
+                }
+                if let rest = self.splitter.flush() { self.speech.enqueue(rest) }
                 if self.assistantText.isEmpty {
                     self.speech.stop()
                     self.state = .listening
@@ -294,8 +411,89 @@ final class VoiceSession: ObservableObject {
         }
     }
 
+    private func handleChunk(_ chunk: String, speak: Bool) {
+        assistantText += chunk
+        if let id = assistantEntryID {
+            store.update(id: id, text: assistantText, persist: false)
+        } else {
+            assistantEntryID = store.append(.assistant, assistantText)
+        }
+        if speak {
+            for sentence in splitter.append(chunk) { speech.enqueue(sentence) }
+        }
+    }
+
+    // MARK: - Psaní (když aplikace špatně rozumí nebo nelze mluvit)
+
+    /// Odešle napsanou zprávu. V hlasovém rozhovoru se chová jako vyslovená věta (odpověď hlasem),
+    /// mimo něj odpoví Claude jen textem.
+    func sendText(_ raw: String) {
+        let text = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !text.isEmpty || !pendingImages.isEmpty else { return }
+        lastError = nil
+        lastActivity = Date()
+        switch state {
+        case .idle:
+            if isTextBusy { cancelResponse(keepSpokenPart: false) }
+            pendingUserEntryID = store.append(.user, text, images: takePendingImages())
+            isTextBusy = true
+            sendToClaude(speak: false)
+        case .suspended:
+            lastError = "Rozhovor je pozastavený (hovor). Zkuste to po jeho skončení."
+        case .listening, .thinking, .speaking:
+            if state == .speaking || state == .thinking { cancelResponse(keepSpokenPart: true) }
+            speech.stop()
+            isNotice = false
+            noticeCompletion = nil
+            endpointTimer?.invalidate()
+            liveTranscript = ""
+            utterancePrefix = ""
+            heardWhileSpeaking = ""
+            pendingUserEntryID = store.append(.user, text, images: takePendingImages())
+            recognizer.startTask()
+            state = .thinking
+            updateNowPlaying()
+            sendToClaude(speak: true)
+        }
+    }
+
+    /// Zastaví textovou odpověď (rozepsaná část zůstane v přepisu označená jako přerušená).
+    func stopTextResponse() {
+        guard isTextBusy else { return }
+        responseTask?.cancel()
+        responseTask = nil
+        if let id = assistantEntryID, !assistantText.isEmpty {
+            store.update(id: id, text: assistantText, interrupted: true)
+        }
+        assistantEntryID = nil
+        pendingUserEntryID = nil
+        isTextBusy = false
+    }
+
+    /// Oprava špatně rozpoznané zprávy: smaže ji i vše po ní a odešle opravené znění.
+    func correctAndResend(entryID: UUID, newText: String) {
+        if state == .speaking || state == .thinking || isTextBusy {
+            cancelResponse(keepSpokenPart: false)
+            speech.stop()
+            isTextBusy = false
+            if state != .idle { state = .listening }
+        }
+        store.removeFrom(id: entryID)
+        sendText(newText)
+    }
+
     private func handleResponseError(_ error: Error) {
         let message = (error as? LocalizedError)?.errorDescription ?? "Spojení se serverem selhalo."
+        if textOnly {
+            if let id = assistantEntryID, !assistantText.isEmpty {
+                store.update(id: id, text: assistantText, interrupted: true)
+            }
+            assistantEntryID = nil
+            store.append(.notice, message)
+            lastError = message
+            isTextBusy = false
+            return
+        }
         speech.stop()
         if let id = assistantEntryID, !assistantText.isEmpty {
             store.update(id: id, text: assistantText, interrupted: true)
@@ -319,6 +517,7 @@ final class VoiceSession: ObservableObject {
         updateNowPlaying()
         // Případné zbytky ozvěny z doby mluvení zahodíme a začneme naslouchat načisto.
         liveTranscript = ""
+        utteranceStart = nil
         recognizer.startTask()
     }
 
@@ -357,14 +556,19 @@ final class VoiceSession: ObservableObject {
         speech.stop()
         if let id = pendingUserEntryID, let entry = store.entries.first(where: { $0.id == id }) {
             utterancePrefix = entry.text
+            if let images = entry.images { pendingImages = images + pendingImages }
             store.remove(id: id)
         }
+        // Přesný přepis pak zahrne celou promluvu od jejího původního začátku.
+        utteranceStart = lastUtteranceStart
         pendingUserEntryID = nil
         state = .listening
         updateNowPlaying()
     }
 
     private func cancelResponse(keepSpokenPart: Bool) {
+        sttTask?.cancel()
+        sttTask = nil
         responseTask?.cancel()
         responseTask = nil
         guard let id = assistantEntryID else { return }
@@ -570,4 +774,6 @@ enum SettingsKey {
     static let voiceID = "voiceID"
     static let speechRate = "speechRate"
     static let preferOnDevice = "preferOnDevice"
+    static let cloudVoice = "cloudVoice"
+    static let cloudSTT = "cloudSTT"
 }

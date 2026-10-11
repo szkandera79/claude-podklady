@@ -14,7 +14,9 @@ struct SettingsView: View {
     @AppStorage(SettingsKey.idleMinutes) private var idleMinutes = 10.0
     @AppStorage(SettingsKey.voiceID) private var voiceID = ""
     @AppStorage(SettingsKey.speechRate) private var speechRate = Double(AVSpeechUtteranceDefaultSpeechRate)
-    @AppStorage(SettingsKey.preferOnDevice) private var preferOnDevice = true
+    @AppStorage(SettingsKey.preferOnDevice) private var preferOnDevice = false
+    @AppStorage(SettingsKey.cloudVoice) private var cloudVoice = true
+    @AppStorage(SettingsKey.cloudSTT) private var cloudSTT = true
 
     private let voices = SpeechOutput.czechVoices()
 
@@ -35,6 +37,14 @@ struct SettingsView: View {
                     Text("Token aplikace není API klíč Anthropicu — ten je bezpečně jen na serveru. Token je uložen v Klíčence iPhonu.")
                 }
 
+                if let expiry = InstallExpiry.expirationDate {
+                    Section {
+                        LabeledContent("Instalace platí do", value: expiry.formatted(date: .abbreviated, time: .shortened))
+                    } footer: {
+                        Text("Před vypršením přijde upozornění. Stačí pak připojit iPhone kabelem k Macu a odemknout ho — Mac aplikaci obnoví sám.")
+                    }
+                }
+
                 Section("Konverzace") {
                     VStack(alignment: .leading) {
                         Text("Konec promluvy po tichu: \(silenceTimeout, specifier: "%.1f") s")
@@ -48,7 +58,16 @@ struct SettingsView: View {
                 }
 
                 Section {
-                    Picker("Hlas", selection: $voiceID) {
+                    Toggle("Přirozený hlas (ElevenLabs)", isOn: $cloudVoice)
+                    Toggle("Přesné rozpoznávání řeči (ElevenLabs)", isOn: $cloudSTT)
+                } header: {
+                    Text("Kvalita hlasu")
+                } footer: {
+                    Text("Placená služba podle spotřeby (tarif ElevenLabs). Když kredit dojde nebo služba nejde, aplikace sama přejde na hlas a rozpoznávání iPhonu. Spotřebu ukáže tlačítko „Zjistit dnešní spotřebu“.")
+                }
+
+                Section {
+                    Picker("Hlas iPhonu (záložní)", selection: $voiceID) {
                         Text("Automaticky (nejlepší)").tag("")
                         ForEach(voices, id: \.identifier) { v in
                             Text("\(v.name) – \(qualityName(v.quality))").tag(v.identifier)
@@ -58,7 +77,7 @@ struct SettingsView: View {
                         Text("Rychlost řeči")
                         Slider(value: $speechRate, in: 0.35...0.65)
                     }
-                    Toggle("Rozpoznávání řeči v telefonu (pokud je k dispozici)", isOn: $preferOnDevice)
+                    Toggle("Rozpoznávat řeč offline v telefonu (méně přesné)", isOn: $preferOnDevice)
                 } header: {
                     Text("Hlas a řeč")
                 } footer: {
@@ -102,7 +121,13 @@ struct SettingsView: View {
             }
             let today = obj["today"] as? Int ?? 0
             let limit = obj["limit"] as? Int ?? 0
-            usageText = "Dnes: \(today.formatted()) z \(limit.formatted()) tokenů"
+            var text = "Claude dnes: \(today.formatted()) z \(limit.formatted()) tokenů"
+            if let v = obj["voice"] as? [String: Any], v["enabled"] as? Bool == true {
+                let chars = v["tts_chars"] as? Int ?? 0, charLimit = v["tts_limit"] as? Int ?? 0
+                let secs = v["stt_seconds"] as? Int ?? 0
+                text += "\nHlas tento měsíc: \(chars.formatted()) z \(charLimit.formatted()) znaků · rozpoznávání \(secs / 60) min"
+            }
+            usageText = text
         } catch {
             usageText = "Server nedostupný: \(error.localizedDescription)"
         }

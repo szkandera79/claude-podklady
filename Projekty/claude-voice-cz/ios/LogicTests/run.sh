@@ -7,5 +7,7 @@ swiftc -O -o "$OUT" \
   ClaudeVoiceCZ/SentenceSplitter.swift \
   ClaudeVoiceCZ/SSEParser.swift \
   ClaudeVoiceCZ/ConversationStore.swift \
+  ClaudeVoiceCZ/CloudVoice.swift \
+  ClaudeVoiceCZ/AppConfig.swift \
   LogicTests/main.swift
 "$OUT"

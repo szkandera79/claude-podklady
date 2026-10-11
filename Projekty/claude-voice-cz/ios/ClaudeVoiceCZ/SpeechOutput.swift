@@ -23,6 +23,16 @@ final class SpeechOutput: NSObject, AVSpeechSynthesizerDelegate, @unchecked Send
 
     var onStartedSpeaking: (() -> Void)?
     var onFinished: (() -> Void)?
+    /// Kredit přirozeného hlasu došel → dál mluví hlas Apple (volá se jednou).
+    var onCloudExhausted: (() -> Void)?
+    /// Přirozený hlas je po obnovení kreditu opět k dispozici.
+    var onCloudRestored: (() -> Void)?
+
+    /// Přirozený hlas ElevenLabs (přes server); při chybě nebo vyčerpání se použije hlas Apple.
+    var useCloud = false
+    /// Věty, jejichž zvuk se právě stahuje (v pořadí); stahují se předem, zatímco zní předchozí věta.
+    private var cloudQueue: [(text: String, task: Task<Result<Data, CloudVoice.Failure>, Never>)] = []
+    private var cloudConsumerRunning = false
 
     init(audio: AudioController) {
         self.audio = audio
@@ -57,8 +67,64 @@ final class SpeechOutput: NSObject, AVSpeechSynthesizerDelegate, @unchecked Send
     func enqueue(_ sentence: String) {
         let text = sentence.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !text.isEmpty, !didNotifyFinish else { return }
+        if useCloud && CloudQuota.isAvailable(.voice) {
+            let task = Task { await CloudVoice.speech(text) }
+            cloudQueue.append((text, task))
+            if !cloudConsumerRunning { consumeCloud() }
+            return
+        }
         queue.append(text)
         pump()
+    }
+
+    /// Přehrává stažené věty postupně; při chybě přepne zbytek odpovědi na hlas Apple.
+    private func consumeCloud() {
+        cloudConsumerRunning = true
+        let gen = generation
+        Task { @MainActor [weak self] in
+            while let self, gen == self.generation, !self.cloudQueue.isEmpty {
+                let item = self.cloudQueue.removeFirst()
+                let result = await item.task.value
+                guard gen == self.generation else { return }
+                switch result {
+                case .success(let data):
+                    if CloudQuota.wasPaused(.voice) {
+                        CloudQuota.markWorking(.voice)
+                        self.onCloudRestored?()
+                    }
+                    guard let buffer = CloudVoice.pcmBuffer(data, format: self.audio.playbackFormat) else { continue }
+                    self.pendingBuffers += 1
+                    let text = item.text
+                    self.audio.schedule(buffer) { [weak self] in
+                        DispatchQueue.main.async {
+                            guard let self, gen == self.generation else { return }
+                            self.pendingBuffers -= 1
+                            self.spokenSentences.append(text)
+                            self.checkDone()
+                        }
+                    }
+                    if !self.didNotifyStart {
+                        self.didNotifyStart = true
+                        self.onStartedSpeaking?()
+                    }
+                case .failure(let failure):
+                    if failure == .quotaExhausted {
+                        let first = CloudQuota.isAvailable(.voice) && !CloudQuota.wasPaused(.voice)
+                        CloudQuota.markExhausted(.voice) // další pokus nejdřív za 30 minut
+                        if first { self.onCloudExhausted?() }
+                    }
+                    // Tuto a všechny další věty řekne hlas Apple.
+                    let rest = [item.text] + self.cloudQueue.map(\.text)
+                    self.cloudQueue.forEach { $0.task.cancel() }
+                    self.cloudQueue.removeAll()
+                    self.queue.append(contentsOf: rest)
+                    self.pump()
+                }
+            }
+            guard let self, gen == self.generation else { return }
+            self.cloudConsumerRunning = false
+            self.checkDone()
+        }
     }
 
     /// Stream skončil — po dohrání fronty se zavolá onFinished.
@@ -71,6 +137,9 @@ final class SpeechOutput: NSObject, AVSpeechSynthesizerDelegate, @unchecked Send
     func stop() {
         generation += 1
         queue.removeAll()
+        cloudQueue.forEach { $0.task.cancel() }
+        cloudQueue.removeAll()
+        cloudConsumerRunning = false
         currentUtterance = nil
         pendingBuffers = 0
         inputClosed = true
@@ -126,7 +195,8 @@ final class SpeechOutput: NSObject, AVSpeechSynthesizerDelegate, @unchecked Send
     }
 
     private func checkDone() {
-        guard !didNotifyFinish, inputClosed, queue.isEmpty, currentUtterance == nil, pendingBuffers == 0 else { return }
+        guard !didNotifyFinish, inputClosed, queue.isEmpty, currentUtterance == nil, pendingBuffers == 0,
+              cloudQueue.isEmpty, !cloudConsumerRunning else { return }
         didNotifyFinish = true
         onFinished?()
     }

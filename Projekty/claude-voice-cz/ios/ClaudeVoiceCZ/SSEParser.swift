@@ -5,6 +5,8 @@ enum ServerEvent: Equatable {
     case text(String)
     case done(stopReason: String?)
     case error(String)
+    /// Server žádá provedení nástrojů v telefonu (kalendář, připomínky). JSON s `calls` a `pending`.
+    case clientTools(Data)
 }
 
 enum SSEParser {
@@ -24,6 +26,9 @@ enum SSEParser {
             return .done(stopReason: obj["stop_reason"] as? String)
         case "error":
             return .error(obj["message"] as? String ?? "Neznámá chyba")
+        case "client_tools":
+            guard let raw = try? JSONSerialization.data(withJSONObject: obj) else { return nil }
+            return .clientTools(raw)
         default:
             return nil
         }

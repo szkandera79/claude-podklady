@@ -7,6 +7,7 @@ struct ClaudeVoiceCZApp: App {
 
     init() {
         AppConfig.bootstrap()
+        InstallExpiry.scheduleReminders()
         let store = ConversationStore()
         _store = StateObject(wrappedValue: store)
         _session = StateObject(wrappedValue: VoiceSession(store: store))

@@ -1,0 +1,25 @@
+[Text vytažený z PW12-3 phase energy label.pdf]
+
+--- strana 1 ---
+POWER WORLD PW12-DKXLRE3-H8
+55 °C 35 °C
+A+++
+A++
+A+
+A
+B
+C
+D
+A+++ A+++
+00
+dB
+11
+12
+13
+11
+12
+13
+kW kW
+55
+dB
+2019 811/2013

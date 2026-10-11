@@ -1,0 +1,78 @@
+[Text vytažený z RH030.xlsx]
+
+--- list sheet1 ---
+Technical parameters for heat pump space heaters and heat pump combination heaters
+Model(s):    | RH030-PW8-A2
+Air-to-water heat pump: | YES
+Water-to-water heat pump:  | NO
+Brine-to-water heat pump:  | NO
+Low-temperature heat pump:  | NO
+Equipped with a supplementary heater:  | NO
+Heat pump combination heater:  | NO
+Parameters shall be declared for medium-temperature application, except for low-temperature heat pumps. For low-temperature heat pumps, parameters shall be declared for low-temperature application.
+Parameters shall be declared for average, colder and warmer climate conditions.
+Item | Symbol | Value | Unit | Item | Symbol | Value | Unit
+Rated heat output  (3) | Prated | 5.8209999999999997 | kW | Seasonal space heating energy efficiency SCOP | ηs  | 182.7 | %
+Declared capacity for heating for part load at indoor temperature 20 °C and outdoor temperature Tj  | Declared coefficient of performance or primary energy ratio for part load at indoor temperature 20 °C and outdoor temperature Tj 
+Tj = – 7 °C | Pdh | 5.15 | kW | Tj = – 7 °C | COPd or PERd | 3.33 | – 
+Tj = + 2 °C | Pdh | 3.2130000000000001 | kW | Tj = + 2 °C | COPd or PERd | 4.55 | –
+Tj = + 7 °C | Pdh | 3.29 | kW | Tj = + 7 °C | COPd or PERd | 6.11 | –
+Tj = + 12 °C | Pdh | 3.77 | kW | Tj = + 12 °C | COPd or PERd | 7.88 | – 
+Tj = bivalent temperature | Pdh | 5.15 | kW | Tj = bivalent temperature | COPd or PERd | 3.33 | – 
+Tj = operation limit temperature | Pdh | 5.8410000000000002 | kW | Tj = operation limit temperature | COPd or PERd | 2.84 | – 
+For air-to-water heat pumps: Tj = – 15 °C (if TOL < – 20 °C) | Pdh | _ | kW | For air-to-water heat pumps: Tj = – 15 °C (if TOL < – 20 °C) | COPd or PERd | –  | – 
+Bivalent temperature | Tbiv  | -7 | °C | For air-to-water heat pumps: Operation limit temperature | TOL | -10 | °C
+Cycling interval capacity for heating | Pcych | _ | kW | Cycling interval efficiency | COPcyc or PERcyc | –  |  %
+Degradation co-efficient (4) | Cdh | 0.99 | — | Heating water operating limit temperature | WTOL | 60 | °C
+Power consumption in modes other than active mode | Supplementary heater
+Off mode | POFF  | 6.0000000000000001E-3 | kW | Rated heat output (4) | Psup | –  | kW
+Thermostat-off mode | PTO  | 0.02 | kW | Type of energy input | – 
+Standby mode | PSB  | 6.0000000000000001E-3 | kW
+Crankcase heater mode | PCK  | 4.2000000000000003E-2 | kW
+Other items
+Capacity control | variable | For air-to-water heat pumps: Rated air flow rate, outdoors | — | — | m3/h
+Sound power level, indoors/outdoors | LWA  | 00/58 | dB | For water- or brine-to-water heat pumps: Rated brine or water flow rate, outdoor heat exchanger | — | — | m3/h
+Annual energy consumption | QHE  | 2590 | kWh or GJ
+For heat pump combination heater:
+Declared load profile | - | Water heating energy efficiency | ηwh  | - | %
+Daily electricity consumption | Qelec  | - | kWh | Daily fuel consumption | Qfuel  | - | kWh
+Annual electricity consumption | AEC | - | kWh | Annual fuel consumption | AFC | - | GJ
+Contact details | Riva Trade, s.r.o. Korunní 2569/108, 101 00, Czech Republic www.reoheating.cz
+--- list sheet2 ---
+Technical parameters for heat pump space heaters and heat pump combination heaters
+Model(s):    | RH030-PW8-A2
+Air-to-water heat pump: | YES
+Water-to-water heat pump:  | NO
+Brine-to-water heat pump:  | NO
+Low-temperature heat pump:  | NO
+Equipped with a supplementary heater:  | NO
+Heat pump combination heater:  | NO
+Parameters shall be declared for medium-temperature application, except for low-temperature heat pumps. For low-temperature heat pumps, parameters shall be declared for low-temperature application.
+Parameters shall be declared for average, colder and warmer climate conditions.
+Item | Symbol | Value | Unit | Item | Symbol | Value | Unit
+Rated heat output  (3) | Prated | 5.593 | kW | Seasonal space heating energy efficiency SCOP | ηs  | 136 | %
+Declared capacity for heating for part load at indoor temperature 20 °C and outdoor temperature Tj  | Declared coefficient of performance or primary energy ratio for part load at indoor temperature 20 °C and outdoor temperature Tj 
+Tj = – 7 °C | Pdh | 4.9480000000000004 | kW | Tj = – 7 °C | COPd or PERd | 2.38 | – 
+Tj = + 2 °C | Pdh | 3.03 | kW | Tj = + 2 °C | COPd or PERd | 3.34 | –
+Tj = + 7 °C | Pdh | 2.9340000000000002 | kW | Tj = + 7 °C | COPd or PERd | 4.6900000000000004 | –
+Tj = + 12 °C | Pdh | 3.6579999999999999 | kW | Tj = + 12 °C | COPd or PERd | 6.69 | – 
+Tj = bivalent temperature | Pdh | 4.9480000000000004 | kW | Tj = bivalent temperature | COPd or PERd | 2.38 | – 
+Tj = operation limit temperature | Pdh | 5.5839999999999996 | kW | Tj = operation limit temperature | COPd or PERd | 2.0699999999999998 | – 
+For air-to-water heat pumps: Tj = – 15 °C (if TOL < – 20 °C) | Pdh | _ | kW | For air-to-water heat pumps: Tj = – 15 °C (if TOL < – 20 °C) | COPd or PERd | –  | – 
+Bivalent temperature | Tbiv  | -7 | °C | For air-to-water heat pumps: Operation limit temperature | TOL | -10 | °C
+Cycling interval capacity for heating | Pcych | _ | kW | Cycling interval efficiency | COPcyc or PERcyc | –  |  %
+Degradation co-efficient (4) | Cdh | 0.99 | — | Heating water operating limit temperature | WTOL | 70 | °C
+Power consumption in modes other than active mode | Supplementary heater
+Off mode | POFF  | 6.0000000000000001E-3 | kW | Rated heat output (4) | Psup | –  | kW
+Thermostat-off mode | PTO  | 0.02 | kW | Type of energy input | – 
+Standby mode | PSB  | 6.0000000000000001E-3 | kW
+Crankcase heater mode | PCK  | 4.2000000000000003E-2 | kW
+Other items
+Capacity control | variable | For air-to-water heat pumps: Rated air flow rate, outdoors | — | — | m3/h
+Sound power level, indoors/outdoors | LWA  | 00/58 | dB | For water- or brine-to-water heat pumps: Rated brine or water flow rate, outdoor heat exchanger | — | — | m3/h
+Annual energy consumption | QHE  | 3325 | kWh or GJ
+For heat pump combination heater:
+Declared load profile | - | Water heating energy efficiency | ηwh  | - | %
+Daily electricity consumption | Qelec  | - | kWh | Daily fuel consumption | Qfuel  | - | kWh
+Annual electricity consumption | AEC | - | kWh | Annual fuel consumption | AFC | - | GJ
+Contact details | Riva Trade, s.r.o. Korunní 2569/108, 101 00, Czech Republic www.reoheating.cz

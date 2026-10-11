@@ -10,8 +10,9 @@ final class SpeechRecognizerService {
     private let lock = NSLock()
     private var taskID = 0
 
-    /// Upřednostnit rozpoznávání přímo v telefonu (rychlejší, bez časového limitu, offline), pokud ho iOS pro češtinu nabízí.
-    var preferOnDevice = true
+    /// Upřednostnit rozpoznávání přímo v telefonu (rychlejší, offline), pokud ho iOS pro češtinu nabízí.
+    /// Výchozí VYPNUTO: serverové rozpoznávání Applu je pro češtinu přesnější.
+    var preferOnDevice = false
     /// Průběžný / konečný výsledek (hlavní vlákno).
     var onResult: ((_ text: String, _ isFinal: Bool) -> Void)?
     /// Úloha skončila (konečný výsledek, chyba nebo časový limit) — hlavní vlákno.
@@ -53,7 +54,15 @@ final class SpeechRecognizerService {
         req.taskHint = .dictation
         req.addsPunctuation = true
         req.requiresOnDeviceRecognition = usesOnDevice
-        req.contextualStrings = ["Claude", "Claude Code", "GitHub", "Anthropic", "ThermaVera"]
+        // Odborné a vlastní výrazy uživatele — zvyšují šanci, že je rozpoznávání zachytí správně.
+        req.contextualStrings = [
+            "Claude", "Claude Code", "GitHub", "Anthropic", "ThermaVera", "REO HEATING", "REO", "R290 Smart",
+            "RH X50", "RH X40", "RH060", "tepelné čerpadlo", "tepelná čerpadla", "kotelna", "zelená kotelna",
+            "kaskáda", "akumulace", "akumulační nádrž", "ohřev teplé vody", "TUV", "ÚT", "SVJ", "bytový dům",
+            "bytové družstvo", "CZT", "teplárna", "fotovoltaika", "bivalence", "topná křivka", "COP", "SCOP",
+            "kilowatt", "megawatthodina", "návratnost", "dotace", "Nová zelená úsporám", "ETS2", "Veolia",
+            "BD Michal", "Jandova", "Ostrava", "Zábřeh", "Michálkovice", "web4u", "Cloudflare",
+        ]
 
         taskID += 1
         let id = taskID

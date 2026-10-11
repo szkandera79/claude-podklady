@@ -1,0 +1,985 @@
+[Text vytažený z Power World PW040 ERP report Single Phase  64.181.23.00422.02 Rev.00 (2).pdf]
+
+--- strana 1 ---
+Technical Report
+Technical Report No.: 64.181.23.00422.02 Rev.00
+Date: 2023-05-19
+POWER WORLD MACHINERY EQUIPMENT CO., LTD
+Client: Report holder’s name:
+Report holder’s
+Address:
+Contact person of
+applicant:
+Manufacturer’s name:
+Manufacturer’s
+address:
+Factory: Factory’s name:
+Factory’s address:
+No.24, the fourth industrial zone, HouTing Street, ShaJing
+Town, BaoAn District, Shenzhen China.
+Lydia Xie
+POWER WORLD MACHINERY EQUIPMENT CO., LTD
+No.24, the fourth industrial zone, HouTing Street, ShaJing
+Town, BaoAn District, Shenzhen China.
+POWER WORLD MACHINERY EQUIPMENT CO., LTD
+No. 32, Luxi 2nd Road, Liaobu Town, Dongguan, China
+Test object: Product:
+Model:
+Trade name:
+Test specification:
+DC Inverter Heat Pump
+PW040-DKZLRS-E/S
+EN 14825:2022
+EN 14511-3:2022
+EN 14511-4:2022 Clause 4
+EN 12102-1:2022
+Purpose of
+examination:
+Test according to the test specification
+(EU) No 813/2013
+EU 2016/2282:2016-11-30
+Doc No.: ITC-TTW0902.02E – Rev.12
+Test result:
+The test results show that the presented product is in compliance with the above
+listed test specifications.
+Any use for advertising purposes must be granted in writing. This technical report may only be quoted in full. This report is the
+result of a single examination of the object in question. It does not imply a general statement regarding the quality of products
+from regular production. For further details please see testing and certification regulation, chapter A-3.4.
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 1 of 19
+--- strana 2 ---
+Technical Report
+1
+1.1
+1.2
+1.3
+Description of the test object
+Function
+Manufacturer’s specification for intended use:
+The appliance is air to water heat pump.
+Manufacturer’s specification for predictive use:
+According to user manual
+Consideration of the foreseeable use
+Not applicable
+Covered through the applied standard
+Covered by the following comment
+Covered by attached risk analysis
+Technical Data
+Model :
+Rated Voltage (V) :
+Rated Frequency (Hz) :
+Rated Power (W) :
+Rated Current (A) :
+Protection Class :
+Protection Against Moisture :
+Construction :
+Supply connection :
+Operation mode:
+PW040-DKZLRS-E/S
+220-240V~
+50
+1460
+6.36
+Class I
+IP X4
+Stationary
+##
+Non detachable cord
+##
+##
+##
+##
+Permanent connection to fixed wiring
+Continuous operation;
+Intermittent operation;
+Short time operation;
+R290 / 0.95kg
+Average
+Warmer
+Colder
+Refrigerant/charge (kg) :
+Declared parameters :
+Sound power level dB(A) : Series No :
+N/A
+PPAL04022120532
+Doc No.: ITC-TTW0902.02E – Rev.12
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 2 of 19
+--- strana 3 ---
+Technical Report
+2
+2.1
+2.2
+2.3
+2.4
+2.5
+3
+Doc No.: ITC-TTW0902.02E – Rev.12
+3.1
+Order
+Date of Purchase Order, Customer’s Reference
+Date of Purchase Order: 2022-12-19, 2023-03-21
+Customer’s Reference: POWER WORLD MACHINERY EQUIPMENT CO., LTD
+Test Sample(s)
+• Reception date(s): 2022-12-20, 2023-03-21
+• Location(s) of reception:
+For Energy test:
+Guangzhou Customs District Technology Center
+Address: No.3, Desheng East Road, Daliang, Shunde District, Foshan, Guangdong,
+China
+For Noise tests:
+CVC Testing Technology Co., Ltd.
+Address: No.3, Tiantaiyi Road, Kaitai Avenue, Science City, Guangzhou, Guangdong,
+510663, P.R.China
+• Condition of test sample(s): completed and can be normal operation
+Date(s) of Testing
+2022-12-20
+to
+2023-01-09, 2023-03-28 to 2023-04-25
+Location(s) of Testing
+Same as 2.2
+Points of Non-compliance or Exceptions of the Test Procedure
+N/A
+Test Results
+☒ Decision rule according to ILAC-G8:09/2019 clause 4.2.1 Binary statement for simple
+acceptance rule or IEC Guide 115:2021, clause 4.4.3, 4.5.1 Accuracy method was
+applied.
+☐ Decision rule according to customer’s requirements was applied. It is:
+☐ Decision rule according to ILAC-G8:09/2019 clause 4.2.2 Binary statement with
+guard band - guard band length = 95 % extended measurement uncertainty, was
+applied.
+☐ Decision rule (based on ILAC-G8:09/2019 clause 4.2.3 Non-binary statement with
+guard band, guard band length = 95 % extended measurement uncertainty) for an
+upper specification limit (A lower limit or specification with an up-per and a lower limit is
+treated similarly.):
+• Compliance with the requirement: If a specification limit is not breached by a
+measurement result plus the expanded uncertainty with a 95% coverage probability,
+then compliance with the specification will be stated (e. g. Pass).
+• Non-compliance with the requirement: If a specification limit is exceeded by the
+measurement result minus the expanded uncertainty with a 95% coverage probability,
+then non-compliance with the specification will be stated (e. g. Fail).
+• Inconclusive result: If a measurement result plus/minus the expanded uncertainty with
+a 95 % coverage probability overlaps the limit it will be stated that it is not possible to
+state compliance or non-compliance.
+Positive Test Results
+See Appendix I
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 3 of 19
+--- strana 4 ---
+Technical Report
+4
+4.1
+4.2
+5
+6
+1)
+2)
+3)
+4)
+5)
+Remark
+General
+The user manual has been examined according to the minimum requirements described
+in the product standard. The manufacturer is responsible for the accuracy of further par-
+ticulars as well as of the composition and layout.
+When the product is placed on the market, it must be accompanied with safety Instruc-
+tions written in official language of the country. The instructions shall give information
+re-garding safe operation, installation and maintenance.
+Documentation
+• Appendix I: Test results
+• Appendix II: Marking plate
+• Appendix III: photo documentation
+• Appendix IV: Construction data form
+• Appendix V: Test equipment list
+Test History
+The appliance is Air to Water Heat Pump Unit, including a whole compression type
+refrigerant circuit to heat water in another circuit. The appliance was for cooling and
+heating water function, this report only for heating capacity test.
+The main power is supplied by a 3-pole supply cord connecting to fixed wiring.
+Water enthalpy method was adopted in this report.
+Standby mode power, off mode power and thermostat-off mode power were tested
+according to clause 12 of standard EN 14825:2022.
+This test report 64.181.23.00422.02 Rev.00, dated 2023-05-19 supersedes test report
+64.181.23.00422.01 Rev.00, dated 2023-01-11 to include the following changes and/or
+additions, which were considered technical modifications:
+a) Updating standard EN 14511-3, EN 12102-1 and EN 14825 in the report. Therefore,
+related testing for model PW040-DKZLRS-E/S was updated.
+b) Adding EN 14511-4:2022 Clause 4 test for models PW040-DKZLRS-E/S.
+Doc No.: ITC-TTW0902.02E – Rev.12
+TÜV SÜD Certification and Testing (China) Co., Ltd. Guangzhou Branch
+TÜV SÜD Group
+Tested by:
+William Liang, Project Handler
+Approved by:
+printed name, function & signature
+Plum Li, Designated Reviewer
+printed name, function & signature
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 4 of 19
+--- strana 5 ---
+Technical Report
+Appendix I Test results
+Table 1.
+Heating mode(Low temperature application): P
+Model PW040-DKZLRS-E/S
+Product
+type
+Air to Water Heating
+season
+Averag
+e
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor heat
+exchanger
+Indoor heat
+exchanger
+Condition
+Formula A W
+Inlet dry (wet)
+bulb
+temperature
+°C
+Inlet/outlet water
+temperatures (°C)
+A 88 (-7-16)/(Tdesignh-16) N/A N/A
+-7(-8) a / 34
+B 54 (+2-16)/ (Tdesignh-16) N/A N/A
+2(1) a / 30
+C 35 (+7-16)/(Tdesignh-16) N/A N/A
+7(6) a / 27
+D 15 (+12-16)/(Tdesignh-16) N/A N/A
+12(11) a / 24
+E
+(TOL-16)/ (Tdesignh-16)
+TOL a / 35.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 34
+G N/A (-15-16)/(Tdesignh-16) N/A N/A
+-15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2
+at 30/35 conditions, the capacity is 7.044kW, the power is 1.432kW, the COP is 4.92kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W34
+(88%)
+A2/W30
+(54%)
+A7/W27
+(35%)
+A12/W24
+(15%)
+A(-
+10)/W35.
+3
+(100%)
+A(-7)/
+W34
+(88%)
+-- A B C D
+E F
+Data
+collection
+period
+hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat
+pump defrosts
+-- No No No No
+No No
+Complete
+Cycles
+-- 0 0 0 0
+0 0
+Barometric
+pressure
+kPa 101.02 101.01 101.01 101.02
+101.01 101.02
+Voltage 230.9 231.5 231.0 230.4
+V 231.1 230.9
+Current input
+of the unit
+9.91 4.33 3.36 2.82
+A 12.23 9.91
+Doc No.: ITC-TTW0902.02E – Rev.12
+Power input
+of the unit
+kW 2.250 0.967 0.772 0.648
+2.805 2.250
+Test conditions indoor unit
+Inlet Water
+temperature,
+DB
+°C 28.92 26.96 25.03 23.11
+29.55 28.92
+Outlet Water
+temperature,
+DB
+°C 33.98 29.98 28.30 26.94
+35.27 33.98
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 5 of 19
+--- strana 6 ---
+Technical Report
+Appendix I Test results
+Test conditions outdoor unit
+Air inlet
+temperature,
+DB
+°C -7.02 1.97 Air inlet
+temperature,
+WB
+°C -7.94 1.05 Summary of the results
+Total heating
+capacity
+kW 6.983 4.261 Effective
+power input
+kW 2.225 0.941 Coefficient of
+performance
+(COP)
+-- 3.14 4.53 Compressor
+frequency
+Hz 78 35 Water flow m³/h 1.20 1.20 Remark: -
+3.Calculation/conclusion for SCOP(Average):
+Tdesignh(°C)
+-10 Tbiv(°C) Pdesignh(kW)
+7.894 TOL(°C) Test result A, B, C, D, E, F conditions:
+Condition
+Part load
+Measured
+capacity
+COP at
+measured
+capacity
+E 7.894
+7.885 2.84 F 6.983
+6.983 3.14 A 6.983
+6.983 3.14 B 4.251
+4.261 4.53 Doc No.: ITC-TTW0902.02E – Rev.12
+C 2.733
+4.518 6.05 D 1.214
+5.251 8.44 CR: part load divided by capacity;
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 6 of 19
+7.07 6.10 4.518 0.747 6.05 30 1.20 -7
+-10
+Cdh 0.90 0.90 0.90 0.90 0.90 0.90 12.04
+11.06
+5.251
+0.622
+8.44
+30
+1.20
+CR 1.00 1.00 1.00 1.00 0.60 0.23 -10.05 -7.02
+-10.98 -7.94
+7.885 6.983
+2.779 2.225
+2.84 3.14
+90 78
+1.20 1.20
+COP at part load
+2.84
+3.14
+3.14
+4.53
+5.68
+6.34
+--- strana 7 ---
+Technical Report
+Appendix I Test results
+Electric power consumptions Unit Value
+Thermostat-off mode [PTO] kW 0.023
+Standby mode [PSB] kW 0.005
+Crankcase heater [PCK] kW 0.035
+Off mode [POFF] kW 0.005
+Conclusions:
+Unit Value
+SCOPon: kWh/kWh 4.61
+SCOP: kWh/kWh 4.60
+QH: kWh/year 16309
+QHE: kWh/year 3546
+ηs,h % 181.0
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 2)
+-- A+++
+Doc No.: ITC-TTW0902.02E – Rev.12
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 7 of 19
+--- strana 8 ---
+Technical Report
+Appendix I Test results
+Table 2.
+Heating mode(Medium temperature application): P
+Model PW040-DKZLRS-E/S
+Product
+type
+Air to Water Heating
+season
+Averag
+e
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor heat
+exchanger
+Indoor heat
+exchanger
+Condition
+Formula A W C
+Inlet dry (wet)
+bulb
+temperature
+°C
+Inlet/outlet water
+temperatures (°C)
+A 88 (-7-16)/(Tdesignh-16) N/A N/A
+-7(-8) a / 52
+B 54 (+2-16)/ (Tdesignh-16) N/A N/A
+2(1) a / 42
+C 35 (+7-16)/(Tdesignh-16) N/A N/A
+7(6) a / 36
+D 15 (+12-16)/(Tdesignh-16) N/A N/A
+12(11) a / 30
+E
+(TOL-16)/ (Tdesignh-16)
+TOL a / 55.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 52
+G N/A (-15-16)/(Tdesignh-16) N/A N/A
+-15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2
+at 47/55 conditions, the capacity is 6.900kW, the power is 2.200kW, the COP is 3.14kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W52
+(88%)
+A2/W42
+(54%)
+A7/W36
+(35%)
+A12/W30
+(15%)
+A(-
+10)/W55.
+3
+(100%)
+A(-
+7)/W52
+(88%)
+-- A B C D
+E F
+Data
+collection
+period
+hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat
+pump defrosts
+-- No No No No
+No No
+Complete
+Cycles
+-- 0 0 0 0
+0 0
+Barometric
+pressure
+kPa 99.85 99.85 99.85 99.80
+99.75 99.85
+Voltage 230.7 232.1 230.3 230.3
+V 231.0 230.7
+Current input
+of the unit
+A 15.05 14.28 6.08 4.13 3.42
+14.28
+Doc No.: ITC-TTW0902.02E – Rev.12
+Power input
+of the unit
+kW 3.244 1.393 0.941 0.782
+3.459 3.244
+Test conditions indoor unit
+Inlet Water
+temperature,
+DB
+°C 43.06 36.58 32.34 28.48
+46.47 43.06
+Outlet Water
+temperature,
+DB
+°C 51.99 41.99 37.27 34.28
+55.15 51.99
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 8 of 19
+--- strana 9 ---
+Technical Report
+Appendix I Test results
+Test conditions outdoor unit
+Air inlet
+temperature,
+DB
+°C -7.05
+1.97
+Air inlet
+temperature,
+WB
+°C -8.05
+1.11
+Summary of the results
+Total heating
+capacity
+kW 7.700 4.699 Effective
+power input
+kW 3.241 1.391 Coefficient of
+performance
+(COP)
+-- 2.38 3.38 Compressor
+frequency
+Hz 85 40 Water flow m³/h 0.75 0.75 Remark: -
+3.Calculation/conclusion for SCOP(Average):
+Tdesignh(°C)
+-10 Tbiv(°C) Pdesignh(kW)
+8.704 TOL(°C) Test result A, B, C, D, E, F conditions:
+Condition
+Part load
+Measured
+capacity
+COP at
+measured
+capacity
+E 8.704
+7.471 2.16 F 7.700
+7.700 2.38 A 7.700
+7.700 2.38 B 4.687
+4.699 3.38 Doc No.: ITC-TTW0902.02E – Rev.12
+C 3.013
+4.410 4.70 D 1.339
+5.082 6.52 CR: part load divided by capacity;
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 9 of 19
+7.01
+6.09
+4.410 0.939 4.70 30 0.75 -7
+-10
+Cdh 0.90 0.90 0.90 0.90 0.90 0.90 12.04
+11.11
+5.082
+0.780
+6.52
+30
+0.75
+CR 1.00 1.00 1.00 1.00 0.68 0.26 -10.05 -7.05
+-11.02 -8.05
+7.471 7.700
+3.457 3.241
+2.16 2.38
+90 85
+0.75 0.75
+COP at part load
+2.16
+2.38
+2.38
+3.38
+4.49
+5.09
+--- strana 10 ---
+Technical Report
+Appendix I Test results
+Electric power consumptions Unit Value
+Thermostat-off mode [PTO] kW 0.023
+Standby mode [PSB] kW 0.005
+Crankcase heater [PCK] kW 0.035
+Off mode [POFF] kW 0.005
+Conclusions:
+Unit Value
+SCOPon: kWh/kWh 3.51
+SCOP: kWh/kWh 3.50
+QH: kWh/year 17983
+QHE: kWh/year 5139
+ηs,h % 137.0
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 1)
+-- A++
+Doc No.: ITC-TTW0902.02E – Rev.12
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 10 of 19
+--- strana 11 ---
+Technical Report
+Appendix I Test results
+Table 3a.
+Sound power level measurement(Low temperature application) P
+Model
+PW040-DKZLRS-E/S
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C):
+7.0 /6.0
+Indoor heat exchanger, Water inlet/outlet temperature (°C):
+30.0 /35.0
+Voltage (V): 230
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment : Hemi-anechoic
+room
+Windshield type : Sponge
+Measured position amount : 14
+Water flow (m³/h): 1.20
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `
+Lp(ST)
+****
+-- 43 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 57 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Fan speed: 400 r/min, compressor speed: 53Hz.
+Doc No.: ITC-TTW0902.02E – Rev.12
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 11 of 19
+--- strana 12 ---
+Technical Report
+Appendix I Test results
+Table 3b.
+Sound power level measurement(Medium temperature
+application)
+P
+Model
+PW040-DKZLRS-E/S
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C):
+7.0 /6.0
+Indoor heat exchanger, Water inlet/outlet temperature (°C):
+47.0 /55.0
+Voltage (V): 230
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment : Hemi-anechoic
+room
+Windshield type : Sponge
+Measured position amount : 14
+Water flow (m³/h): 0.75
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `
+Lp(ST)
+****
+-- 47 --
+Measurement distance d * --
+1.0m --
+Sound power level LwA
+****
+-- 61 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Fan speed: 400 r/min, compressor speed: 58Hz.
+Doc No.: ITC-TTW0902.02E – Rev.12
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 12 of 19
+--- strana 13 ---
+Technical Report
+Appendix I Test results
+Clause 4 of EN 14511-4:2022
+Table 4. P
+Model
+PW040-DKZLRS-E/S
+Customer
+Code
+Execution
+Date [dd-
+mm-yyyy]
+Testing item Standard
+Reference
+Comment
+Test
+Response
+TEST 1 10-04-2023 STARTING
+TEST
+EN14511-
+4:2022, §
+4.2.1.2 Table
+3
+The "lower" starting operating conditions
+declared by the manufacturer for the
+heating mode- i.e. Tair=-24.78°C, T out
+water 8.98°C, Flow rate 0.74m3/h have
+been set and obtained. At those conditions,
+the machine was switched on. It started
+without any problem and worked for 30
+minutes without showing any warning or
+allarm. During the test the machine
+operated in automode. No damage was
+recorded on the machine during and after
+the test.
+Passed
+TEST 2 10-04-2023 OPERATING
+TEST
+EN14511-
+4:2022, §
+4.2.1.2Table 3
+From the machine "lower" starting
+conditions - i.e. - the machine was brought
+to the lower operating conditions declared
+by the manufacturer for the heating mode-
+i.e. Tair=-24.67°C, T out water 59.15°C,
+Flow rate 0.74m3/h. Once these conditions
+were obtained, the machine was let operate
+for over 1 hour in automode. During the
+test, no waring or alarm were showed. No
+damage was recorded on the machine
+during and after the test.
+Passed
+TEST 3 10-04-2023 SHUTTING
+OFF
+WATER
+FLOW
+EN14511-
+4:2022, § 4.5
+The water flow rate was shutted off through
+manual and automatic valves of the test rig.
+The machine switched off and only the flow
+switch Protection appeared on the user
+interface of indoor unit. Perform error reset
+operation , once the water flow rate was
+restored, the machine restarted
+automatically and worked for 30 minutes
+normally. No damage was recorded on the
+machine during and after the test.
+Passed
+TEST 4 10-04-2023 SHUTTING
+OFF AIR
+FLOW
+EN14511-
+4:2022, § 4.5
+Doc No.: ITC-TTW0902.02E – Rev.12
+The air flow rate was shutted off through a
+plastic sheet and a panel. The machine
+never turned off. It continued to operate
+with continuous frosting and defrosting
+cycles. After more than half an hour, the air
+flow rate was restored and the machine
+started to operate normally. During the test,
+no waring or alarm were showed. No
+damage was recorded on the machine
+during and after the test.
+Passed
+TEST 5 10-04-2023 COMPLETE
+POWER
+SUPPLY
+FAILURE
+EN14511-
+4:2022, § 4.6
+The power supply was cut off for about 10
+seconds.The unit restarted automatically
+within about 3 minutes after the power
+supply was reactivated.
+Passed
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 13 of 19
+--- strana 14 ---
+Technical Report
+Appendix II Marking plate
+Nameplate
+Model: PW040-DKZLRS-E/S
+Doc No.: ITC-TTW0902.02E – Rev.12
+Remark: -
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 14 of 19
+--- strana 15 ---
+Technical Report
+Appendix III photo documentaiton
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Doc No.: ITC-TTW0902.02E – Rev.12
+Left
+Top
+Bottom
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 15 of 19
+Overall view
+Compressor
+--- strana 16 ---
+Technical Report
+Appendix III photo documentaiton
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Doc No.: ITC-TTW0902.02E – Rev.12
+Left
+Top
+Bottom
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 16 of 19
+Fan Motor
+Main Control Board
+--- strana 17 ---
+Technical Report
+Appendix III photo documentaiton
+Details of: Water Pump
+View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Doc No.: ITC-TTW0902.02E – Rev.12
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 17 of 19
+--- strana 18 ---
+Technical Report
+Appendix IV Construction data form
+Model: PW040-DKZLRS-E/S
+Part 1. Compressor
+Manufacture: Type: Rated capacity: Serial-number: Specification: 2. Condenser
+Manufacture: Type: Heat exchanger:
+Dimension(mm):
+3. Evaporator
+Manufacture:
+Type:
+Heat exchanger:
+Dimension(mm):
+4. Fan motor
+Manufacture:
+Type:
+Fan type: Specification:
+5. Main control board
+Manufacture: Type:
+Specification:
+6. Water pump
+Doc No.: ITC-TTW0902.02E – Rev.12
+Manufacture: Type:
+Specification:
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 18 of 19
+Technical data
+Shanghai Hitachi Electrical Appliances Co., Ltd.
+WHP10200PSDPC9KQ
+2157W
+W7XN5H06HR1Q
+DC143.5V; R290
+Ningbo Hrale Plate Heat Exchanger Co., Ltd.
+B3-68-30-4.5
+Plate heat exchanger
+119(L)mmX526(H)mmX80.3(D)mm
+Guangzhou AOTAI Refrigeration Equipment
+Co.,LTD
+801002-1016
+Finned heat exchanger
+714*355*900*Φ7*3
+Jiangmen LT Motor Co., Ltd
+RD150HA
+3 blade; φ552*142
+DC310V; 150W
+Guangdong Chico Electronic Inc.
+PW58329
+220-240V; 50Hz
+SHIMGE PUMP INDUSTRY(JIANGSU)CO.,LTD.
+APM25-9-130 PWM1
+230V; 50/60Hz; 0.75A; 95W; IP44; TF110; Class
+F
+--- strana 19 ---
+Technical Report
+Appendix V Equipment List
+No. Type Manufacture Model Equipment ID Calibration
+Due Date
+1 Heat pump energy
+efficiency testing
+system
+PINXIN 10HP 2017J00001 2023-11-24
+2 Electromagnetic
+flowmeter
+KROHNE OPTIFLUX4100
+C
+H17221264 2023-12-21
+3 Anechoic rooms
+(hemi-anechoic rooms)
+Guangzhou Kinte - NC-036-2 2023-10-07
+4 AC source Supply YANGHONG YF-3600 VGDS-0637 2023-11-07
+5 6 channel data logger — PXI-1033 VGDY-0257 2024-05-20
+6 PULSE system B & K 3660C VGDY-0184 2024-04-12
+7 Calibrator B & K 4231 HJ-000095 2023-06-30
+8 Long steel tape— 5m HJ-000150 2024-01-01
+9 Temperature
+measurement system
+— — NC-036-1 2023-06-07
+10 Atmospheric pressure
+meter
+— — HJ-000165 2023-11-22
+11 Constant temperature
+water system
+B & K— VGDS-0448 2024-04-18
+12 Windscreen B & K WS002-5 — —
+-- End of Report --
+Doc No.: ITC-TTW0902.02E – Rev.12
+Project No: 64.181.23.00422.02
+Rev.: 00
+Date: 2023-05-19
+Page: 19 of 19

@@ -11,7 +11,7 @@ export const GITHUB_TOOLS = [
   {
     name: "seznam_projektu",
     description:
-      "Vrátí přehled projektů uživatele: složky v kořeni repozitáře a obsah kořenového CLAUDE.md (rozcestník s popisem projektů). Použij jako první krok, když se uživatel ptá na své projekty.",
+      "Vrátí přehled pracovních složek uživatele (kořen zrcadla) a jejich popis (README.md / CLAUDE.md). Použij jako první krok, když se uživatel ptá na své projekty nebo podklady.",
     input_schema: { type: "object", properties: {}, required: [] },
   },
   {
@@ -136,11 +136,11 @@ export class GitHubReader {
     const root = await this.listDir("");
     let guide = "";
     try {
-      guide = await this.readFile("CLAUDE.md");
+      guide = await this.readFile("README.md");
     } catch {
       /* rozcestník nemusí existovat */
     }
-    return truncate(`Složky v kořeni repozitáře:\n${root}\n\n--- CLAUDE.md (rozcestník) ---\n${guide}`);
+    return truncate(`Složky v kořeni repozitáře:\n${root}\n\n--- README.md (přehled složek) ---\n${guide}`);
   }
 
   private async tree(): Promise<string[]> {

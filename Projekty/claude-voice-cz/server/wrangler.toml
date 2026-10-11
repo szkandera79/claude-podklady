@@ -9,7 +9,12 @@ MODEL = "claude-opus-5-5"        # alternativy: claude-sonnet-5-5, claude-haiku-
 EFFORT = "low"                    # low | medium | high
 MAX_TOKENS = "1500"               # strop délky jedné odpovědi
 DAILY_TOKEN_LIMIT = "2000000"     # denní strop tokenů (vstup + výstup), poté server odmítá
-GITHUB_REPO = "szkandera79/thermavera-web"  # repozitář projektů (po přejmenování na GitHubu: szkandera79/Projekty)
+GITHUB_REPO = "szkandera79/claude-podklady"  # textové zrcadlo ~/Claude (Projekty, REO, …) — scripts/sync_podklady.py
+ELEVENLABS_VOICE = "bF7C2fCv7Zf30iT84wZ1"   # Jana – Warm, Confident Czech (knihovna ElevenLabs, vybráno 11. 10. 2026)
+ELEVENLABS_TTS_MODEL = "eleven_flash_v2_5"
+ELEVENLABS_STT_MODEL = "scribe_v1"
+TTS_MONTHLY_CHARS = "55000"      # Starter: 30 000 kreditů, Flash = 0,5 kreditu/znak (rezerva); při vyčerpání aplikace přejde na hlas Apple
+STT_MONTHLY_SECONDS = "3600"
 
 # Úložiště pro počítání denní spotřeby. ID doplní instalační skript
 # (npx wrangler kv namespace create USAGE).

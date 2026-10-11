@@ -1,0 +1,14 @@
+{
+ "47_1": "<f1>(1)</f1><f2> P_O: User side A zone water pump         P_R: Hot water tank return pump      P_S: Solar circulating water pump          </f2>",
+ "47_2": "      P_M1: B1 zone underfloor heating mixed water pump        P_M2: B2 zone underfloor heating mixed water pump",
+ "47_3": "(2) Go to Advanced setting---Parameters config.--07 Hydraulic Component - --- PUMPret, set P_R ON, set the parameters.",
+ "47_4": "Water Pump Wiring",
+ "48_1": "IBH1: Electric heater wiring",
+ "48_2": "Please setting internal electric heater parameters: Advanced setting → Parameters config. → 08 Auxiliary Heat Setting → active IBH, setting IBH the parameters.",
+ "48_3": "Internal Electric Heating Wiring",
+ "49_1": "Three Way Valve Wiring",
+ "49_2": "This heat pump can control 4 three way valves. ",
+ "49_3": "1ON 1OFF: S3V1  Main pipeline three way valve       2ON 2OFF: S3V2   A zone valve to switch between radiator and fan coil     ",
+ "49_4": "3ON 3OFF: S3V3  B1 zone mixing valve                    4ON 4OFF: S3V4   B2 zone mixing valve   ",
+ "50_0": "Thanks!"
+}

@@ -4,6 +4,12 @@
 <dict>
 	<key>CVAppToken</key>
 	<string>$(CV_APP_TOKEN)</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Fotoaparát slouží k vyfocení věcí, na které se chcete Clauda zeptat.</string>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>Claude může na váš pokyn číst a vytvářet události v kalendáři.</string>
+	<key>NSRemindersFullAccessUsageDescription</key>
+	<string>Claude může na váš pokyn číst a vytvářet připomínky.</string>
 	<key>CVServerURL</key>
 	<string>$(CV_SERVER_URL)</string>
 	<key>UIBackgroundModes</key>
