@@ -1,0 +1,112 @@
+[Text vytažený z Záruční list  02:03:26.pdf]
+
+--- strana 1 ---
+ZÁRUČNÍ LIST
+PODMÍNKY POUŽITÍ
+TEPELNÁ ČERPADLA REO HEATING
+REO R290
+Sériové číslo zařízení
+Typ zařízení
+……………………………………………………
+Datum prodeje
+Razítko prodejce
+……………………………………………………
+Datum prvního spuštění
+Razítko montážní firmy
+……………………………………………………
+Technická prohlídka
+2. rok
+Technická prohlídka
+3. rok
+Technická prohlídka
+4. rok
+poznámky:
+--- strana 2 ---
+ZÁRUČNÍ PODMÍNKY
+1. GARANT A ZÁKLADNÍ ZÁRUKA
+Garant: RIVA TRADE, s.r.o., Smetanova 555, 739 61 Třinec
+Základní záruka: 24 měsíců od prvního uvedení zařízení do provozu autorizovaným montérem
+nebo servisním technikem Garanta u zákazníka.
+Podmínky platnosti:
+• Potvrzený záruční list, protokol prvního spuštění, faktura, nebo smlouva o dílo prokazující
+autorizovanou instalaci
+• Záznam v záručním listu do 3 měsíců od nákupu
+• Při spuštění po více než 3 měsících se záruční doba přiměřeně zkrátí
+2. PRODLOUŽENÁ ZÁRUKA
+Možnost prodloužení až o 3 roky po skončení základní záruky.
+Podmínky:
+• Každoroční placené technické prohlídky autorizovaným servisem (není třeba v prvním roce
+užívání)
+• Kontrola před koncem každého roku od prvního spuštění
+• Cena roční kontroly: 4 500 Kč + DPH
+3. ROZSAH ZÁRUKY
+Garant zajišťuje:
+• Řádný provoz zařízení při instalaci dle pokynů výrobce
+• Bezplatné odstranění závad vzniklých výrobní vadou nebo vadou způsobenou výrobcem
+4. POSTUP PŘI REKLAMACI
+Podmínky pro posouzení reklamace:
+• Nahlášení závady do 24 hodin písemně a telefonicky
+• Použití autorizovaného technika pro instalaci a spuštění
+• Předložení dokumentů: záruční list, protokol prvního spuštění, doklad o koupi
+• Používání v souladu s určením a manuálem
+Kontakt pro reklamace:
+• E-mail: info@reoheating.cz
+• Telefon: +420 774 872 467
+--- strana 3 ---
+5. ZÁKAZ ZÁSAHŮ DO NASTAVENÍ – ZTRÁTA ZÁRUKY
+PŘÍSNÝ ZÁKAZ: Po instalaci je zakázáno zákazníkovi, nebo neautorizované osobě zasahovat
+do parametrů regulátoru, servisních menu, provozních režimů a ochranných funkcí. Zakázáno
+vypnout, nebo omezovat topení v topné sezoně především v období kdy potenciálně hrozí
+zamrznutí techniky a jeho trvalé poškození.
+POVOLENO: Změna režimu tepelného čerpadla (smart, plný výkon, tichý) a ovládání externího
+termostatu (teplota, časový program). Na konci topné sezony je možno topení vypnout a
+ponechat režim TUV.
+NÁSLEDKY PORUŠENÍ: Okamžitá ztráta záruky na celé zařízení bez ohledu na prokazatelnost
+souvislosti se závadou.
+6. NEAUTORIZOVANÝ ZÁSAH DO INSTALACE – ZTRÁTA ZÁRUKY
+Zakázané zásahy do:
+• Elektrické instalace (napájení, kabeláž, regulátor, čidla)
+• Hydraulického zapojení (armatury, čerpadla, ventily)
+• Chladivového okruhu a jeho prvků
+• Napojení na externí prvky
+NÁSLEDEK: Okamžitá ztráta záruky na zařízení i instalaci.
+7. POŠKOZENÍ ELEKTRONIKY PŘEPĚTÍM / PODPĚTÍM
+Záruka se NEVZTAHUJE na poškození elektroniky způsobené:
+• Přepětím nebo podpětím
+• Kolísáním napětí, výpadky napájení
+• Nesprávnou kvalitou elektrické sítě
+Dotčené komponenty: napájecí zdroje, výkonové moduly, řídicí desky, komunikační rozhraní.
+8. DALŠÍ VÝLUKY ZE ZÁRUKY
+Záruka se nevztahuje na:
+• Používání v rozporu s účelem nebo manuálem
+• Neodborné zásahy uživatelem nebo neautorizovanou osobou
+• Instalaci neautorizovaným technikem
+• Zanedbanou údržbu a běžné opotřebení
+• Usazování vodního kamene ve výměníku
+• Zamrznutí pracovního média hydraulického systému
+• Kontaminaci výparníku, korozi, změnu barvy
+• Nesprávnou přepravu nebo skladování
+--- strana 4 ---
+• Vnější mechanické vlivy
+• Nevhodný typ proudu, poklesy napětí
+• Použití nepovolených prvků automatizace
+• Škody způsobené dříve existující závadou
+• Nadměrně vysoký tlak vody a špatnou kvalitu otopné/instalační vody
+9. NÁKLADY ZÁKAZNÍKA
+Zákazník hradí servis při:
+• Neodůvodněných servisních požadavcích
+• Škodách nespadajících do záruky
+• Nemožnosti provést opravu z důvodů nezávislých na technikovi
+• Situacích, kdy závada není na zařízení
+10. PODMÍNKY ZTRÁTY ZÁRUKY
+Záruka zaniká při:
+• Instalaci neautorizovaným technikem
+• Neprovádění pravidelného servisu během záruční doby
+• Úpravách neoprávněnými osobami
+• Nesprávně vyplněném záručním listu
+• Neuhrazených platbách za služby Garanta
+11. ZÁVĚREČNÁ USTANOVENÍ
+• Garant neručí za škody nevznikající výrobní vadou
+• Vyměněné díly se stávají majetkem Garanta
+• Záruka neomezuje zákonná práva kupujícího
+• Platnost na území České republiky

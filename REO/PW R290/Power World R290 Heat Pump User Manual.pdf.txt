@@ -1,0 +1,1241 @@
+[Text vytažený z Power World R290 Heat Pump User Manual.pdf]
+
+--- strana 1 ---
+DC Inverter Heat Pump
+OPERATING INSTRUCTION MANUAL
+IMPORTANT SAFETY INSTRUCTIONS
+READ AND FOLLOW ALL INSTRUCTIONS
+SAVE THESE INSTRUCTIONS
+--- strana 3 ---
+Table of Contents
+IMPORTANT SAFETY PRECAUTIONS ......................................................................... - 2 -
+Section 1 Introduction ...........................................................- 3 -
+Product Overview .......................................................................................................- 3 -
+General Features........................................................................................................ - 3 -
+Section 2 Installation ...........................................................- 4 -
+Materials Needed for Installation .............................................................................. - 4 -
+Installation Details....................................................................................................- 12 -
+Drainage and Condensation ....................................................................................- 13 -
+Suggested Installation Methods ............................................................................. - 13 -
+Water Connections ...................................................................................................- 15 -
+Plumbing Installation Requirements ...................................................................... - 15 -
+Electrical Connections .............................................................................................- 15 -
+Power Supply ............................................................................................................- 16 -
+Grounding and Over Current Protection ................................................................- 16 -
+Electrical Wiring Diagram........................................................................................- 17 -
+Section 3 Operating Heat Pump .........................................................- 20 -
+Controller Panel........................................................................................................- 20 -
+1. Display Icon ....................................................................................................... - 20 -
+2. Definition of Buttons .........................................................................................- 21 -
+3. Wire Controller Operation .................................................................................- 22 -
+General Operating Guide.........................................................................................- 31 -
+Users’ Guide............................................................................................................. - 32 -
+Section 4 General maintenance ......................................................... - 33 -
+Controller Error Codes .............................................................................................- 33 -
+Owner Inspection ..................................................................................................... - 35 -
+Troubleshooting ....................................................................................................... - 36 -
+Maintenance ..............................................................................................................- 37 -
+Common Faults and Debugging ............................................................................. - 38 -
+Section 5 WIFI Connection and Operation ........................................................ - 39 -
+APP Download..........................................................................................................- 39 -
+WIFI Connect Method : bluetooth mode:................................................................- 39 -
+Software function operation ....................................................................................- 42 -
+--- strana 4 ---
+IMPORTANT SAFETY PRECAUTIONS
+Important Notice:
+This guide provides installation and operation instructions for the DC Inverter Air Source Heat Pump.
+Consult the seller with any questions regarding this equipment.
+Attention Installer: This guide contains important information about the installation, operation and
+safe use of this product. This information should be given to the owner and/or operator of this
+equipment after installation or left on or near the heat pump.
+Attention User: This manual contains important information that will help you in operating and
+maintaining this heat pump. Please retain it for future reference.
+WARNING - Before installing this product, read and follow all warning notices and
+instructions which are included. Failure to follow safety warnings and instructions can result in
+severe injury, death, or property damage.
+Codes and Standards
+The DC Inverter Air Source Heat Pump must be installed in accordance with the local building and
+installation codes as per the utility or authority having jurisdiction. All local codes take precedence
+over national codes. In the absence of local codes, refer to the latest edition of the National Electric
+Code (NEC) in the local government Electric Code (CEC) for installation.
+DANGER — Risk of electrical shock or electrocution.
+The electrical supply to this product must be installed by a licensed or certified
+electrician in accordance with the National Electrical Code and all applicable local
+codes and ordinances. Improper installation will create an electrical hazard which
+could result in death or serious injury to heat pump users, installers, or others due to
+electrical shock, and may also cause damage to property. Read and follow the
+specific instructions inside this guide.
+WARNING - To reduce the risk of injury, do not permit children to use this product unless
+they are closely supervised at all times.
+Consumer Information and Safety
+The DC Inverter Air Source Heat Pumps are designed and manufactured to provide years of safe
+and reliable service when installed, operated and maintained according to the information in this
+manual and the installation codes referred to in later sections. Throughout the manual, safety
+warnings and
+cautions are identified by the “ “symbol. Be sure to read and comply with all of the warnings
+and cautions.
+- 2 -
+--- strana 5 ---
+Heat Pump Energy Saving Tips
+If you do not plan to use hot water for a prolonged period, then you might choose to turn the heat
+pump off or decrease the temp. setting of the control several degrees to minimize energy
+consumption.
+We offer the following recommendations to help conserve energy and minimize the cost of
+operating your heat pump without sacrificing comfort.
+1. A maximum water temp. of 60°C is recommended.
+2. It is recommended to turn off the heat pump when ambient air temp. is less than -20℃ or if on
+vacation for longer than a week.
+3. To save energy, it is recommended that the heat pump is operated during daytime when the
+ambient temp. is higher.
+4. Try to install the heat pump at the ventilated places outdoor, where possible, shelter the heat
+pump from prevailing winds, rain and snow. Suggest use a shelter when practical, which will
+reduce the possibility of frosting and icing.
+General Installation Information
+1. Installation and service must be performed by a qualified installer or service agent, and must
+conform to all national, state, and local codes and/or safety regulations.
+2. This DC Inverter Air Source Heat Pump is specifically designed for domestic hot water & house
+heating.
+Section 1 Introduction
+Product Overview
+DC Inverter Air Source Heat Pumps transfer heat from the ambient air to water, providing high-temp.
+hot water up to 70°C. The unique high-temp. heat pump is widely used for house warming. With
+innovative & advanced technology, the heat pump can operate very well at -20℃ ambient temp.
+with high output temp.s up to 60℃, which ensures the compatibility with normal sized radiator
+based systems without supplementation. Compared with traditional oil/LPG boilers, DC Inverter
+heat pump produces up to 50% less CO2 whilst saves 80% running cost.
+Our heat pumps are not only highly efficient, but also easy and safe to operate.
+General Features
+1. Low running costs and high efficiency
+·A high coefficient of performance (COP) of up to 5 results in lower running costs compared with
+traditional ASHP technology.
+·No immersion heater supplement is required.
+2. Reduced Capital Costs
+·Simple installation
+3. High Comfort Levels
+·High storage temp. results in increased hot water availability.
+- 3 -
+--- strana 6 ---
+4. No potential danger of any inflammable, gas poisoning, explosion, fire, electrical shock which are
+associated with other heating systems.
+5. A digital controller is incorporated to maintain the desired water temp..
+6. Long-life and corrosion resistant composite cabinet stands up to severe climates.
+7. HIGHLY compressor ensures outstanding performance, ultra energy efficiency, durability and
+quiet operation.
+8. Self-diagnostic control panel monitors and troubleshoots heat pump operations to ensure safe
+and reliable operation.
+9. Intelligent digital controller with friendly user interface and blue LED back light.
+10. Separate isolated electrical compartment prevents internal corrosion and extends heat pump
+life.
+11. The heat pump can operate down to ambient air temp. of -20℃。
+Section 2 Installation
+The following general information describes how to install the DC Inverter Air Source Heat Pump.
+Note: Before installing this product, read and follow all warning notices and instructions.
+Only a qualified service person should install the heat pump.
+Materials Needed for Installation
+The following items are needed and are to be supplied by the installer for all heat pump
+installations:
+1. Plumbing fittings.
+2. 3. Level surface for proper drainage.
+Ensure that a suitable electrical supply line is provided. See the rating plate on the heat pump
+for electrical specifications. Please take a note of the specified current rating. No junction box is
+needed at the heat pump; Connections are made inside of the heat pump electrical
+compartment. Conduit may be attached directly to the heat pump jacket.
+4. 5. 6. It is advised to use PVC conduit for the electrical supply line.
+Use a booster pump for pumping water in case of low water pressure.
+A filter on the water inlet is needed.
+7. The plumbing should be insulated to reduce its heat loss.
+Note: We recommend installing shut-off valves on the inlet and outlet water connections for ease of
+serviceability.
+- 4 -
+--- strana 7 ---
+Technical data
+BOM code CP-RW0300106 CP-RW0400068 CP-RW0500110 CP-RW0500111 CP-RW0600052
+Model PW030-DKZLRS
+-E/S
+PW040-DKZLRS
+-E/S
+PW050-DKZLRS
+-E/S
+PW050-DKZLRS
+-E
+PW060-DKZLRS
+-E
+Heating Condition - Ambient Temp.（DB/WB）: 7/6℃，Water Temp.（In/Out）：30/35℃
+Heating Capacity
+Range (kW) 3.3~8.3 4.5~11.4 5.9~14.8 5.9~14.8 8.8~22.0
+Heating Power
+Input Range(kW) 0.64~2.18 0.85~2.95 1.13~3.83 1.13~3.83 1.68~5.77
+COP Range 3.81~5.17 3.86~5.29 3.86~5.22 3.86~5.22 3.81~5.24
+DHW Condition-Ambient Temp.（DB/WB）: 7/6℃，Water Temp.（In/Out）：15/55℃
+Heating Capacity
+Range (kW) 3.7~7.4 5.2~10.2 6.6~13.2 6.6~13.2 7.8~17.6
+Heating Power
+Input Range(kW) 0.79~2.10 1.10~2.87 1.41~3.73 1.41~3.73 1.67~5.01
+COP Range 3.52~4.69 3.55~4.71 3.54~4.67 3.54~4.67 3.51~4.66
+Cooling Condition - Ambient Temp.（DB/WB）:35/24℃，Water Temp.（In/Out）：12/7℃
+Cooling Capacity
+Range (kW) 2.4~5.8 3.3~8.2 4.3~10.8 4.3~10.8 6.2~15.3
+Cooling Power
+Input Range(kW) 0.79~2.19 1.08~3.07 1.39~3.99 1.39~3.99 1.99~5.60
+EER Range 2.65~3.04 2.67~3.06 2.71~3.10 2.71~3.10 2.73~3.12
+ErP Level (35°C) A+++ A+++ A+++ A+++ A+++
+Refrigerant R290
+Power supply 230V/1Ph/50Hz/60Hz 380V/3Ph/50-60Hz
+Diameter of pipe
+(mm) DN25 DN25 DN25 DN25 DN25
+Max water
+head(m) 9 9 9 9 12
+Noise dB(A) ≤47 ≤50 ≤52 ≤52 ≤53
+Net Weight (kg) 105 115 160 160 165
+Net Dimension
+(L/W/H) mm 1080×460×820 1080×460×960 1080×480×1060 1080×480×1060 1080×480×1372
+Operation
+Ambient Temp. -25~43℃
+Operating water
+temperature (℃) 20~65℃（DHW ）
+Operating water
+temperature (℃) 20~70℃（Heating）
+Operating water
+temperature (℃) 7~35℃（Cooling）
+Note:
+The above design and specifications are subject to change without prior notice for product improvement.
+Detailed specifications of the units please refer to nameplate on the units.
+- 5 -
+--- strana 8 ---
+Correct installation is required to ensure safe operation. The requirements for heat pumps include
+the following:
+1. Dimensions for critical connections.
+2. Field assembly (if required).
+3. Appropriate site location and clearances.
+4. Proper electrical wiring.
+5. Adequate water flow.
+This manual provides the information needed to meet these requirements. Review all application
+and installation procedures completely before continuing the installation.
+Dimension:
+Unit:mm
+PW030-DKZLRS-E/S
+- 6 -
+--- strana 9 ---
+PW040-DKZLRS-E/S
+1079.3
+430
+960.6
+440
+460
+700
+PW050-DKZLRS-E/S PW050-DKZLRS-E
+700
+460
+1079
+450
+1061
+103 806
+- 7 -
+100.3 570.3
+123
+81
+--- strana 10 ---
+PW060-DKZLRS-E
+688
+443
+1072
+511.5
+568.7
+107
+1372
+449
+480
+- 8 -
+--- strana 11 ---
+Exploded view
+PW030-DKZLRS-E/S PW040-DKZLRS-E/S
+- 9 -
+--- strana 12 ---
+PW050-DKZLRS-E/S PW050-DKZLRS-E
+- 10 -
+--- strana 13 ---
+PW060-DKZLRS-E
+- 11 -
+--- strana 14 ---
+Installation Location
+CAUTION!
+1. DO NOT install the heat pump near to hazardous materials and places
+2. DO NOT install the heat pump under deep sloping roofs without gutters which will allow rain
+water, mixed with debris, to be forced through the unit.
+3. Place the heat pump on a flat slightly pitched surface, such as concrete or fabricated slab. This
+will allow proper drainage of condensation and rain water from the base of the unit. If possible, the
+slab should be placed at the same level or slightly higher than the filter system/equipment.
+Installation Details
+All criteria given in the following sections reflect minimum clearances. However, each installation
+must also be evaluated, taking into account the prevailing local conditions such as proximity and
+height of walls, and proximity to public access areas. The heat pump must be placed to provide
+clearances on all sides for maintenance and inspection.
+1. The heat pump installation area must have good ventilation and the air inlet/outlet must not be
+2. 3. 4. hindered.
+The installation area must have good drainage and be built on a solid foundation.
+Do not install the unit in areas accumulated with pollutions like aggressive gas (chlorine or
+acidic), dust, sand and leaves etc.
+For easier and better maintenance and troubleshooting, no obstacles around the unit should be
+closer than 1m. And no obstructions within 2m, vertically, from the unit for air ventilation. (See
+Figure 1)
+Air Inlet
+＞0.5m
+＞0.5m
+Heat Pump
+Air Inlet
+＞0.5m
+＞0.5m
+Air Outlet ＞2m
+Air Inlet
+＞0.5m
+＞0.5m
+5. 6. Figure 1
+The heat pump must be installed with shockproof bushes to prevent vibration and/or imbalance.
+Even though the controller is waterproof, care should be taken to avoid direct sunlight and high
+temp.. In addition, the heat pump should be placed to ensure quality viewing of the controller.- 12 -
+--- strana 15 ---
+7. 8. The plumbing pipes must be installed with proper support to prevent possible damage due to
+vibration.Running water pressure should be kept over 196kpa. Otherwise, booster pump
+should be installed.
+The acceptable operating voltage range should be within ±10% of the rated voltage.
+ The heat pump unit must be grounded /earthed for safety purposes.
+Drainage and Condensation
+Condensation will occur from the evaporator when the unit is running and drain at a steady rate,
+depending upon ambient air temp. and humidity. The more humid the ambient conditions, the more
+condensation will occur. The bottom of the unit acts as a tray to catch rainwater and condensation.
+Keep the drain holes, located on the bottom pan of the unit base, clear from debris at all times.
+Suggested Installation Methods
+DC Inverter Heat Pump can provide heating/cooling and domestic hot water. Floor heating loops
+and Radiator are used for space heating and fan coil units are used for space cooling. Domestic hot
+water is supplied from the domestic hot water tank connected to the heat pump.
+DC Inverter Heat Pump with a main circulation pump built inside. When install the unit, installers
+should connect the heat pump with other parts including the buffer tank (for space heating/cooling),
+storage water tank (for domestic hot water) . External fittings are also needed including a safety
+valve, a water charge valve, Three-way valve. Temperature sensor should be added in the storage
+water tank. An additional electric heater can be installed in the DHW tank or the buffer tank which
+can get the control signal from the heat pump.
+1) System installation diagram to see Figure 2.
+2) 3-way valve: For domestic hot water mode, 3-way valve powers on. For underfloor heating or
+cooling, 3-way valve powers off.
+3) When both heating(or cooling) and domestic hot water don't reach the setting temp., hot water is
+priority.
+4) The hot water tank with coil for domestic hot water should be specially customized.
+5) The heat exchange capacity of the coil should be ≥ the rated heating capacity of the heat pump.
+6) The unit is delivered ready for operation and is filled with R290 refrigeant.
+7) The refrigerant R290 are flammable and explosive, It's prohibited from installing in one
+environment which have operating or potential ignition sources.
+- 13 -
+--- strana 16 ---
+- 14 -
+M
+3-way valve
+Water pump
+Cold water inlet
+Safety valve
+Magnesiumrod
+Hot water outlet
+Hot water tank
+sensor
+Cold water inlet
+Limber hole
+Safety valve
+Water tank
+M
+Fan coil
+Radiator
+Floor pipe
+--- strana 17 ---
+Water Connections
+Water Connections at the Heat Pump
+Quick Connect fittings are recommended to be installed on the water inlet and outlet connections.
+It is recommended to use stainless steel or PPR pipes for the heat pump plumbing. The water inlet
+and outlet connection to the heat pump accepts stainless steel or PPR pipe fittings.
+CAUTION— Make sure that flow requirements and tap water turnover rates can be
+maintained with the installation of additional heat pumps and plumbing restrictions.
+Plumbing Installation Requirements
+1. When water pressure exceeds 490Kpa, please use reducing valve to reduce the water
+2. 3. 4. 5. 6. 7. pressure below 294Kpa.
+Each part connected to unit needs to be connected with method of loose joint and installed with
+intermediate valve.
+Ensure that all plumbing has been properly completed and then proceed to do a water leakage
+and pressure test.
+All the pipelines and pipe fittings must be insulated to prevent heat loss.
+Install a drain valve at the lowest point of the system to enable the system to be drained during
+freezing conditions (winterizing).
+Install a check valve on the water outlet connection in order to prevent back siphoning when
+water pump stops.
+In order to reduce the back pressure, the pipes should be installed horizontally
+8. And minimize the elbows (90 degrees connections). If a higher flow rate is required, install a
+bypass valve
+Electrical Connections
+WARNING —Risk of electrical shock or electrocution.
+Ensure that all high voltage circuits are disconnected before commencing heat pump
+installation. Contact with these circuits could result in death or serious injury to users,
+installers or others, due to electrical shock and may also cause damage to property.
+CAUTION — Label all wires prior to disconnection when servicing the heat pump. Wiring errors
+can cause improper and dangerous operation. Check and ensure proper operation after servicing.- 15 -
+--- strana 18 ---
+Power Supply
+1. 2. 3. If the supply voltage is too low or too high, it can cause damage and/or result in unstable
+operation of the heat pump unit, due to high in rush currents on start up.
+The minimum starting voltage should be above 90% of rated voltage. The acceptable operating
+voltage range should be within ±10% of the rated voltage.
+Ensure the cable specifications meet the correct requirements for the specific installation. The
+distance between the installation site and mains power supply will affect the cable thickness.
+Follow the local electrical standards to select the cables, circuit breakers and isolator breakers.
+Grounding and Over Current Protection
+In order to prevent electrical shock in case of leakage from unit, install the heat pump according to
+local electrical standard.
+1. Do not interrupt the voltage supply to the heat pump frequently as this may result a shorter life
+expectance of the heat pump.
+2. When installing over current protection, ensure that the correct current rating is met for this
+specific installation.
+3. If an additional auxiliary heater is need to be controlled by the heat pump controller, the relay (or
+power) of the aux-heater must be connected to the relevant output of the controller.
+- 16 -
+--- strana 19 ---
+Electrical Wiring Diagram
+1. Single phase system (PW030/040-DKZLRS-E/S)
+- 17 -
+--- strana 20 ---
+2. Single phase system (PW050-DKZLRS-E)
+- 18 -
+--- strana 21 ---
+3. Three phase system (PW050/060-DKZLRS-E)
+- 19 -
+--- strana 22 ---
+Section 3 Operating Heat Pump
+Controller Panel
+1. Display Icon
+Mode Meaning
+Heating mode
+Hot water mode
+Cooling mode
+Heating and Hot water Mode
+(Hot water function as priority)
+Cooling and Hot water Mode
+(Hot water function as priority)
+Smart mode
+Power mode
+Slient mode
+Vacation mode
+Compressor working
+Water pump working
+Fan motor working
+- 20 -
+--- strana 23 ---
+Electric heating working
+Defrosting
+Antifreezing
+2. Definition of Buttons
+Button Description Function
+On/off turn on or turn off the heat pump.
+Mode switch the operating mode of the heat pump.
+Timer set timer switch and working weekdays.
+Setting query running parameters, check and set system parameters,
+error code records, Wifi connection, etc.
+Temperature
+setting 1
+Temperature setting for only hot water, only heating and only
+cooling mode(the interface displays the inlet water temperature
+and outlet water temperature)
++ Temperature
+setting 2
+In hot water+heating or hot water+cooling mode, the left side
+is temperature setting for heating and cooling, and the right side
+is temperature setting for hot water (the main interface
+temperature display shows on the left side is inlet water
+temperature, and on the right side is water tank temperature)
+Status Check the running parameters of the heat pump
+Faulty Record the most recent error codes
+Wifi Wifi setting
+User
+parameters Check and set the user parameters of the heat pump
+Factory
+parameters
+Check and set the factory parameters(Do not advise to amend
+the factory parameters.
+- 21 -
+--- strana 24 ---
+Run the
+curve
+Check the inlet water and outlet water operation curves and
+operation power curves.
+System
+parameters
+Check the version information of the system motherboard and
+the remote control program.
+Language Language selection
+3. Wire Controller Operation
+3.1.START / STOP THE HEAT PUMP
+◎In the main interface, press the "ON/OFF" key for 1 second, and the "Startup Confirmation"
+pop-up window pops up. After the startup is confirmed, the mode symbol is displayed in the
+startup status, but not in the shutdown status.
+3.2. SET TARGET WATER TEMPERATURE
+In single mode (only cooling, only heating, only hot water mode), click "+" and "-" on the
+main interface to adjust the required temperature; in dual mode (heating+hot water,
+cooling+hot water mode), click "+" and "-" on the left side of the main interface to adjust the
+required heating and cooling temperature; click "+" and "-" on the right side to adjust the
+required hot water temperature.
+- 22 -
+--- strana 25 ---
+3.3. RUNNING MODE SETTING/OPERATING MODE SELECTION
+In the main interface, press the "MODE" key for 1 second to enter the operation mode, frequency mode and
+holiday mode selection interface, and select the required operation mode (parameter setting model) and frequency
+mode of the unit;
+◎Click“ MODE”on the Setting interface to enter Operating mode selection interface；
+◎Operating mode description：In the normal mode, Heat pump has Smart,Powerful,& Silent
+Operating states to choose.
+◎Vacation mode description：When this mode is enabled,The heat pump runs in heating
+mode only,with a Target temperature of vacation Set；
+3.4. CLOCK SETTING:
+◎In the main interface, press to enter clock setting interface as below.
+◎Press the date (Year/Month/Day column) or hour (Hour:Minute column) , the keyboard will
+occur to input the value. Press the weekday(Weekday column) to switch from Mon. to Sun.
+◎Press CONFIRM button to save and exit, or press CANCEL button to exit without saving.
+- 23 -
+--- strana 26 ---
+3.5. TIMER SETTING:
+◎In the main interface, press TIMER button to enter timing setting interface.
+◎In the WEEK column, users can select which weekdays to perform timer switch. When the
+weekday button (From MON. to SUN.) turns highlight white, the timer will perform on that
+day. When the weekday button turns gray, the timer will not perform on that day.
+◎In the TIMER column, users can set 4 pairs of timer at maximum
+◎ The timer is invalid when the turn on time equals the turn off time in the same timer.
+SILENT TIME：
+◎Click “ ” in the “SET TIME” Interface to enter Timing silent interface, The unit will runs
+as Silent Mode during the scheduled mute time.
+- 24 -
+--- strana 27 ---
+3.6.OPERATION PARAMETER QUERY
+Press the "SETTING" key in the main interface to enter the setting interface. Then press "UNIT
+STATUS" to enter the unit list interface, select the corresponding unit to enter the "Parameter Query", and
+check the operation status of the heat pump. The status table is as follows:
+Forced defrosting: In the unit selection interface of the query status, press and hold the
+corresponding unit number to pop up the forced defrosting selection interface of the corresponding unit.
+If Yes is selected, the corresponding unit enters forced defrosting.
+- 25 -
+--- strana 28 ---
+◎List of operation parameters
+Code Description 01 Water inlet temp. 02 Water outlet temp. 03 Ambient temp. 04 Exhaust gas temp. 05 Return gas temp. 06 Evaporator coil temp. 07 Inlet temp. of economizer 08 Outlet temp. of economizer 09 Cooling coil temp. 10 Water tank temp. 11 Opening of main expansion valve
+12 Opening of assistant expansion valve
+13 Compressor current
+14 Heat sink temp.
+15 DC bus voltage value
+16 Compress actual frequency
+17 Low pressure gauge pressure value (R290) 18 High pressure gauge pressure value (R290) 19 Wind speed of DC fan 1
+20 Wind speed of DC fan 2
+21 Low pressure conversion temp.
+22 High pressure conversion temp.
+23 DC pump speed
+- 26 -
+Remark
+-30~99℃
+-30~99℃
+-30~99℃
+0~125℃
+-30~99℃
+-30~99℃
+-30~99℃
+-30~99℃
+-30~99℃
+-30~99℃
+Real time data(Bar)
+Real time data(Bar)
+--- strana 29 ---
+USER PARAMETERS QUERY & SETTING
+◎ Press “SETTING” in the main interface to enter setting interface, then press “USER
+PARAMETERS” to enter parameter query and setting. Below lists shows the code,
+definition, range and default value.
+◎ List of user parameters
+Code Definition Settable Range Default
+P01 Temp difference of return water and
+cooling target temp 2℃~18℃ 2℃
+P02 Temp difference of return water and hot
+water target temp 2℃~18℃ 5℃
+P03 Hot water setting temp. 28℃~60℃ 50℃
+P04 Cooling setting temp. 7℃~30℃ 12℃
+P05 Heating setting temp. 15℃~50℃ 35℃
+P06 Setting temp of exhaust gas too high
+protection (TP4) 50℃~125℃ 120℃
+P07 Setting temp of exhaust gas too high
+recover (tp0) 50℃~125℃ 95℃
+P08 Water temp. compensation -5℃~15℃ (inlet/outlet water
+& water tank)
+P09 Defrosting frequency 30-120HZ 60HZ
+P10 Defrosting period 20MIN~90MIN 45MIN
+P11 Defrosting enter temp. -15℃~-1℃ -3℃
+P12 Defrosting time 5MIN~20MIN 10MIN
+P13 Defrost exit temp. 1℃~40℃ 20℃
+- 27 -
+--- strana 30 ---
+P14 P15 P16 P17 P18 P19 P20 P21 P22 P23
+P24 P25 P26 P27 F01 F02 F03 F04 F06 F08 P28 P29 Defrosting environment and evaporator
+coil temp. difference 1 Defrosting environment and evaporator
+coil temp. difference 2 Ambient temp. for defrosting High temperature disinfection cycle
+days
+High temperature disinfection start time High temperature disinfection sustaining
+time High temperature disinfection setting
+temperature Heat pump’s setting temperature for
+high temperature disinfection Celsius/Fahrenheit switch Heating target temperature automatic
+adjustment enable
+Heating compensation temperature
+point
+(ambient temperature)
+Target temperature compensation
+coefficient
+Compressor’s Frequency operation
+mode after constant Temperature
+Pipeline E-Heater Enable Ambient
+Temp. Water Tank E-Heater Entry time Heat Pump Function
+Circulation pump status after reaching
+target temp.
+Circulation pump on-off cycle after
+reaching set temp.
+DC circulation pump mode
+DC water pump manual speed
+Minimum speed of DC circulation pump
+On-line units
+Control address
+0℃~15℃ 5℃
+0℃~15℃ 5℃
+0℃~20℃ 17℃
+0~30 days
+Disinfection function is not
+executed when set to 0
+7
+0~23:00 23
+0~90min 30
+0~90℃ 70℃
+40~60℃ 53℃
+0 Celsius/1 Fahrenheit 0
+0~1 (0 is not enabled, 1 is
+enabled) (only applicable
+at heating mode)
+0
+0-40 20
+1~30 (1 corresponds to
+actual 0.1) 1
+0-Decrease Frequency
+after constant Temp.
+/1-Non Decrease
+Frequency after constant
+Temp.
+0
+-20-20℃ 0
+0-60 min 30
+1 Heating only
+2 Heating+Cooling
+3 Heating+DHW
+4 Heating+Cooling+DHW
+4
+0 Intermittent
+1 All time
+2 Stop at constant Temp.
+1
+1~120min 30（OFF30min
+ON3min）
+0 No Start
+1 Auto
+2 Manual
+1
+10~100%
+50
+10~100%
+40
+1~8
+1
+1~255
+1
+- 28 -
+--- strana 31 ---
+Restore factory settings
+In the upper right corner of the factory parameter R interface, there is a parameter reset
+factory value button. Press this button to pop up the reset parameter confirmation selection.
+If Yes is selected, the factory default value will be restored;
+High Temperature Antisepsis Function: (when hot water function is selected)
+◎ High temperature Antisepsis cycle is once every 7 (P17) days;
+◎ When entering the high temperature Antisepsis, the water tank electric heater will be
+forced to turn on.
+◎ During the Antisepsis process, if the water tank temperature > 65℃(the maximum settable
+temperature), then the compressor will not start, but only start electric heating; If the water
+tank temperature ≤60℃, both the compressor and electric heater will start.
+◎ When the water tank temperature ≥70℃ (P20) and the protection temperature lasts for 30
+minutes (P19), exit the high temperature Antisepsis;
+◎ After entering high temperature Antisepsis, if the temperature of the hot water tank does
+not reach 70°C after 1 hour, the high temperature Antisepsis program will be forced to exit.
+- 29 -
+--- strana 32 ---
+Target Temperature Auto Adjustment Logic ( Under Heating Mode)
+◎ The target temperature under heating mode can be automatically adjusted according to
+the ambient temperature.
+◎ Entry conditions
+When Parameter P22=1 enables automatic adjustment mode of heating target temperature.
+◎ Calculation formula of heating target temperature
+Pset (heating target temperature) = 20 + (P24/10) * (P23 - current ambient temperature)
+◎ The above different curves stands for the different value of P24.
+(When P24=1, the actual value is 0.1)
+◎ The target temperature range of automatic temperature adjustment is 20-60℃
+Auxiliary Electric Heater for Water Tank
+◎ Start conditions (all below conditions must be met at the same time)
+1) In hot water mode;
+2) The compressor runs for P27（30）minutes;
+3) There is a demand for hot water, and the temperature of the water tank is ≤55℃;
+4) The pump is running
+◎ Exit condition (only need to meet any one of the below conditions)
+1) When the heat pump is performing cooling mode / hot water mode;
+2) When there is no demand for hot water or constant temperature control;
+3) The water tank temperature sensor has a fault alarm;
+◎ When it is under defrosting / forced defrosting / secondary antifreeze , the electric heating
+is forced to turn on;
+- 30 -
+--- strana 33 ---
+◎ When there is high-pressure failure / low-pressure failure / exhaust temperature sense
+failure / excessive exhaust protection stop,and if compressor is locked and cannot be
+started, then the electric heating will be started instead of the compressor after 5 minutes.
+Auxiliary Electric Heater for Space heating
+◎Enable condition：
+Under Heating mode；
+Ambient Temp.＜P26（0℃）Or Ambient Temp. Sensor Fault
+There has Heating Demand, Inlet Water Temp.≤Heating Set Temp. (P05) - difference(P01)；
+Water pump during Working States
+When the above conditions are met, The Electric Heater will turn on.
+◎Shut-down condition:
+Restart
+Under Cooling or Hot Water Mode
+Without Heating Demand or Constant Temp. Control
+Inlet Water Temp. Sensor Failure or Alarm
+Ambient Temp＞0℃（P26）+1
+Water Flow Failures
+Circulation pump shut-down
+E-heater be shut-down when any of above conditions met
+General Operating Guide
+Initial Start-up Precautions
+First boot-strap and Running state checks
+1. To ensure the power same as the product nameplate required power.
+2. Unit electrical connections: Check if power supply wire track and connection is ok; if ground wire
+is properly connected; Check if water pump and other chain device is properly connected
+3. Water pipe and pipe: water pipe and pipe must be washed two and three times, ensure clean and
+no any pollution.
+4. Check water system: If the water is enough and no any air, ensure no leakage
+5. First boot-strap or starting up again after long time stop, ensure power on ahead and heating at
+least 12 hours for crankcase (local loop temp. is zero). Water pump start up first, last a while, fan
+start up, compressor start up, unit regular work.
+6. Running checks (according to the following data to check if the unit running is normal)
+After unit normal running, check the following item:
+a. Input and output water temp.
+b. cycle water flow of the side
+c. running electric current of compressor and fan
+d. High and low pressure value when heating running.
+- 31 -
+--- strana 34 ---
+CAUTION — Refrain from using this heat pump if any electrical components have been in
+contact with water. Immediately call a qualified service technician to inspect the heat pump.
+CAUTION — Keep all objects clear above the heat pump. Blocking air flow could damage the
+unit and may void the warranty.
+Users’ Guide
+1. Rights and Responsibility
+1.1 To ensure you have the service in guarantee period, only the professional server and
+technology staff can install and repair the unit. If you infract this request and cause any loss and
+damage, our company will not be claimed any responsibility.
+1.2 After receiving the unit, check if have damage on shipment and all parts are complete; any
+damage and lack of parts please notice the dealer in written.
+2. User Guide
+2.1 All safety protection device are set in unit before leaving factory, don’t adjust by yourself.
+2.2 Unit have enough refrigerant and lubricating oil, don’t fill or replace them; if need fill owing to
+leak, please refer to the quantity on nameplate (if refill refrigerant, need re-vacuum).
+2.3 External water pump must connect with the message of unit, or else easy show various
+water lack alarm.
+2.4 Regular clean water system according to maintenance request.
+2.5 Pay attention to antifreeze when the environment temp. is less than zero in winter.
+2.6 Safety Precautions
+A User can’t self-install the unit, ensure agent or specialized install company to do, or else
+maybe cause safety accident and affect the use effect.
+B When install or use the unit, please check if the power is corresponding with unit power.
+C The main power switch of unit should install leakage protector; the power cord must meet unit
+power request and national standard and local Fire & Safety Regulations.
+D Unit must have ground wire; don’t use the unit if no ground wire; forbid connect the ground
+wire to null line or water pump.
+E The main power switch of unit should set much higher 1.4 meter (child don’t touch it), to
+prevent child play it and cause danger.
+F More than 52℃ hot water can cause damage, hot and cold water must be mixed then use it.
+G When unit is soaking, please contact the factory or maintain department, you can use it again
+after maintain.
+H Forbid insert any tools into fan fence of unit, fan is dangerous. (child special care)
+I Don’t use the unit if turn off the fan fence.
+J To avoid electric shock or cause fire, don’t store and use fixture, oil paint and petrol etc.
+combustible gas or liquid around the unit; don’t throw the water or other liquid on the unit and
+don’t touch the unit by wet hand.
+K Don’t adjust the switch, valve, controller and internal data except company server or
+authorized staff.
+L If safety protection device often start up, please contact factory or local dealer.
+- 32 -
+--- strana 35 ---
+Section 4 General maintenance
+Controller Error Codes
+◎ If there’s error in the heat pumps, the error code and error definition will be
+displayed in the main interface, and saved the record in FAULTY column inside the
+SETTING interface.
+◎The following Common Error Codes will be displayed on the controller panel:
+Error Code Definition of Error or Protection
+Er 03 Water flow failure
+Er 04 Antifreeze in winter
+Er 05 High pressure fault
+Er 06 Low pressure fault
+Er 09 Communication failure
+Er 10
+Communication failure of frequency conversion module (alarm
+when communication between outer board and drive board is
+disconnected)
+Er 12 Exhaust temp too high protection
+Er 14 Water tank temp. sensor fault
+Er 15 Water inlet temp. sensor fault
+Er 16 Evaporator coil temp. sensor fault
+Er 18 Exhaust temp. fault
+- 33 -
+--- strana 36 ---
+Er 20 Abnormal protection of frequency conversion module
+Er 21 Ambient temp. sensor fault
+Er 23 Cooling outlet water temp. supercooling protection
+Er 26 Heat sink temp. fault
+Er 27 Outlet water temp. sensor fault
+Er 29 Return gas temp. sensor fault
+Er 32 Heating too high outlet water temp. protection
+Er 33 Coil temp. too high
+Er 34 The temp. of frequency conversion module is too high
+Er 42 Cooling coil temp. sensor failure
+Er 62 Inlet temp. fault of economizer
+Er 63 Outlet temp. failure of economizer
+Er 64 DC fan 1 fault
+Er 66 DC fan 2 fault
+Er 67 Low pressure switch failure
+Er 68 High pressure switch failure
+Er 69 Too low pressure protection
+Er 70 Too high pressure protection
+◎ When there’s Er 20 error in the system, it will display below detailed error code
+from 1 to 348. Among them, 1~128 are in the first class, when will be displayed as
+priority, 257~384 are in the second class, which will be displayed only when error
+1~128 don’t appear. If 2 or more than 2 error occurs simultaneously in the same
+class, then it will display the sum of the error number. For example, when 16 and
+32 exist at the same time, then it will display error code 48 (16+32=48)
+- 34 -
+--- strana 37 ---
+◎ Detailed error code list for Er 20:
+Error
+Code name description Solution suggestion
+1 IPM Over-current IPM Module problem Replace inverter module
+2 compressor
+synchronous abnormal Compressor failure Replace compressor
+4 reserved -- --
+8 compressor output
+phase absent
+Compressor wiring disconnected
+or poor contact
+Checking compressor input
+circuit
+16 DC bus low voltage Input too low voltage, PFC module
+failure,
+Inspect the input voltage,
+replace module
+32 DC bus high voltage Input voltage too high, PFC Module
+failure Replace inverter module
+64 Radiator over
+temperature
+Main unit fan motor failure, air duct
+blockage Inspect fan motor, air duct
+128 Radiator temperature
+error
+Radiator sensor short circuit or
+open circuit fault Replace inverter module
+257 communication failure Inverter module doesn’t receive
+order from main controller
+Inspect the communication
+wiring= between main
+controller and inverter module
+258 AC Input phase absent Input phase absent (Three phase
+module is effective) Inspection input circuit
+260 AC Input over-current Input three phase imbalance (three
+phase module is effective)
+Inspection input three phase
+phase voltage
+264 AC Input low voltage Input low voltage Inspect input voltage
+272 Compressor High
+pressure failure
+Compressor high pressure failure
+(reserved)
+288 IPM too high
+temperature
+Main unit fan motor failure, air duct
+blocked Inspect fan motor and air duct
+320 Compressor peak
+current too high
+Compressor line current too high,
+the driver program doesn’t match
+with compressor
+Replace inverter module
+384 PFC module
+over-temperature PFC Module too high temperature
+Owner Inspection
+We recommend that inspections on heat pumps are done frequently, especially after abnormal
+weather conditions. The following basic guidelines are suggested for your inspection:
+1. Make sure the front of the unit is accessible for future service.
+- 35 -
+--- strana 38 ---
+2. 3. Keep the top and surrounding areas of the heat pump clear of all debris.
+Keep all plants and shrubs trimmed and away from the heat pump especially the area
+above the fan.
+4. Keep lawn sprinklers from spraying on the heat pump to prevent corrosion and
+damage.
+5. 6. Ensure that the ground wire is always properly connected.
+The filter must be maintained on a regular basis in order to ensure clean and healthy
+water to protect the heat pump from damaging.
+7. 8. Keep inspecting power and electrical components’ wiring to make sure their normal operation.
+All the safety protection devices have been set up; please refrain from changing these
+settings. If any changes are needed, please contact the authorized installer/agent.
+9. If the heat pump is installed under roof without a gutter, ensure that all measures are
+taken to prevent excessive water from flooding the unit.
+10. Do not use this heat pump if any electrical part has been in contact with water. Contact
+an authorized installer/agent.
+11. If the increase of power consumption is not due to colder weather, please consult with
+the local authorized installer/agent.
+12. Please turn off the heat pump and disconnect it from the mains power supply, when not
+in use for a prolonged period of time.
+Troubleshooting
+Use the following troubleshooting information to resolve issues/problems with your
+DC Inverter heat pump.
+WARNING — RISK OF ELECTRICAL SHOCK OR ELECTROCUTION.
+Ensure that all high voltage circuits are disconnected before commencing heat pump
+installation. Contact with these circuits could result in death or serious injury to users,
+installers or others, due to electrical shock and may also cause damage to property.
+DO NOT opens any part of the heat pump as this may result to electrocution.
+1. 2. a) b) Keep your hands and hair clear of the fan blades to avoid injury.
+If you are not familiar with your heater:
+DO NOT attempt to adjust or service the unit without consulting your authorized installer/agent.
+PLEASE read the complete Installation and/or User’s Guide before attempting to operate
+service or adjust the heater.
+IMPORTANT: Turn off the mains power supply to the DC Inverter heat pump prior to attempting
+service or repair.
+- 36 -
+--- strana 39 ---
+Maintenance
+The DC Inverter air source heat pump unit is highly automation device. If the units are cared and
+maintained effectively regularly , the operation reliability and the lifetime of the unit will be highly
+improved.
+Important tips below shall be paid more attention to when doing the maintenance:
+1. The water filter shall be cleaned termly, to make sure the water is clean, and avoid any damage
+caused by the filter blockage.
+2. All the safety protection device set up already before leaving the factory, forbid to adjust by oneself.
+We could not take any responsibility for any unit damage caused by the user’s self-adjustment.
+3. The surrounding of the unit shall be clean, dry and draughty. If the side of the heat exchanger could be
+cleaned termly(every 1-2 month), the heat exchanging efficiency will be better, and energy saving.
+4. The water supplement of water system and air discharge device shall be checked frequently, to avoid
+the air to enter the system, causing the water circulation decrease, or the water cycle trouble, or it will
+effect the unit’s cooling, heating efficiency and the working reliability .
+6. 5. The power of the unit and the electrical wiring shall be checked frequently, make sure the wiring is
+fastened and the electrical component is normal. If abnormal, it shall be repaired or replaced, the unit
+shall be connected to the ground reliably.
+7. Check every components during the unit operation frequently. Check whether the working pressure of
+cooling system is normal or not. Check the pipe splice and the air injection valve whether have greasy
+dirt. Make sure not any refrigerant leakage in the cooling system.
+7. Don’t stack any sundries around the unit, in case blocking the air inlet and outlet. The surrounding of
+the unit shall keep clean, dry and draughty.
+8. The water in the water system shall be discharged if the unit need to take a long break after running
+for a period. And the power shall be off, put a cover on the unit. Only after the water system is
+replenished full with water and the unit is checked roundly, and the unit is power on to warm up for at
+lease 6 hours, all is fine, then the unit could be started up again.
+Notice:
+The unit should be equipped with the dedicated power supply. The voltage range should be within ±10%.
+The switch should be automatic air switch. The setting electric current should be 1.5 times of the running
+current, and equipped with lack of phase safeguard. The knife switch is forbidden to use in the unit.
+The unit must be power on to warm up for at lease 12 hours before running every season. If the cooling
+only models haven’t been working for long term in winter, make sure to discharge out all the water, in
+case the pipe and the unit are damaged by frost. The master controller and the unit should be in
+correspondence and couldn’t be power off if the heating only models stop working for long term in winter,
+to avoid the frost damage.
+The heat pump switch couldn’t be operated frequently, can not be over 4 times within one hour. The
+electric cabinet shall prevent to be affected with damp.
+Forbid to flush the DC inverter air source heat pump with water, avoid any electric shock or other
+accidents.
+- 37 -
+--- strana 40 ---
+Common Faults and Debugging
+◎The user must hire the professional maintenance staff to fix if the unit has any problems
+during working. The maintenance staff might refer to the chart to debug.
+Error Status Possible reason Solution
+Heat pump not
+running
+Power fault
+Wiring loose
+Fuse blow fused
+Thermal Overloaded protector off
+Low pressure too low
+Put off the power switch, check the
+power supply
+find out the causes and repair
+Replace the fuse blow
+test the voltage and current
+Water pump is
+working but without
+water cycle or
+water pump high
+noise
+Lack of water in the system
+with air in the water system
+the valves are not all open
+filter is dirty and blocked
+Check the system replenishment
+device and replenish the system
+discharge the air in the water system
+Open the water system valve
+Clean the water filter
+Low heating
+capacity
+Lack of refrigerant
+Bad heat preservation of water
+system;
+Dry filter blocked
+Bad heat dissipation of air heat
+exchanger
+Not enough water flow
+Leakage detecting and supply
+refrigerant
+Reinforce the heat preservation of
+water system
+Change the dry filter
+Clean the air heat exchanger
+Clean the water filter
+Compressor not
+working
+Power failure;
+Contactor of compressor damage;
+wiring loose
+Compressor
+overheat protection
+outlet water temp. Too high;
+Not enough water flow
+Compressor overload protector
+tripped
+Find out the causes and solve the
+power failure
+Change the contactor of compressor
+Find out the loose point and repair
+Check the unit pressure and Exhaust
+gas temp.
+Reset the outlet water temp
+Clean the water filter and discharge
+the air in the system
+Check the running current and whether
+overload protector damage
+compressor
+running noise too
+high
+Liquid refrigerant enter the
+compressor
+The inner parts of compressor
+damage
+Too Low voltage
+Check the expansion valve whether
+out of effect
+Replace the compressor
+Check Power Voltage
+Fan not working
+The fastening screw of the fan
+loose
+Fan motor damage
+Contactor damage
+Reinforce the screw
+Replace the fan motor
+Replace the contactor
+Compressor
+running but heat
+pump not heating
+Refrigerant is all leaking out
+Compressor fault
+Compressor reversal
+Check leakage and charging the
+refrigerant
+Replace the compressor
+Exchange the phase order of
+compressor
+Low water flow
+protection
+Not enough water flow in the
+system
+Water switch fault
+Clean the water filter and discharge
+the air in the system
+Check the water switch and replace it
+- 38 -
+--- strana 41 ---
+Section 5 WIFI Connection and Operation
+APP Download
+◎Please go to “Google Play Store” or “Apple App Store” and search “Smart Life” or “Tuya
+Smart” then download. See below figures.
+WIFI Connect Method : bluetooth mode:
+The 1st step:
+◎By default, it can be connected within 10s after the first power-on, and it needs to be
+connected by pressing buttons after 10 seconds. (10s is the delay for wifi to enter low
+power consumption)
+◎Manually enter the smart distribution mode: select "SMART MODE"or "AP MODE" on the
+WIFI interface of the wired controller, click "Add Device" to enter the smart distribution
+mode, the " " icon on the main interface flashes, and the mobile phone can start to
+configure the network.
+- 39 -
+--- strana 42 ---
+◎Exit the network configuration status after 3 minutes, the " " icon stops flashing, and the
+WIFI module is no longer networked. If you want to configure the network again, you need
+to click the "Add Device" button on the WIFI interface again.
+The 2nd step:
+◎Turn on the phone's bluetooth
+◎Turn on the WIFI function of the mobile phone and connect to the WIFI hotspot. The WIFI
+hotspot must be able to connect to the Internet normally, as shown in the figure: Connect
+the WIFI hotspot "123456789".
+The 3rd step:
+◎Open the "Smart Life" APP, login and enter the main interface, click "╋" in the upper right
+corner or "Add Device" on the interface ,The Interface shows Findings”Discovering
+devices”...,Click"Add" To Entering "Add Device" Interface，click "╋"
+，Then Select WIFI in
+the Network selection interface,Input & Confirm the Correct Wifi Password, Click"Next" to
+Start Matching Wifi.
+- 40 -
+--- strana 43 ---
+The 4th step:
+◎When the connection is successful and the system prompts "Added successfully", then the
+network configuration is successful. Click "Done" to entry Homepage
+- 41 -
+--- strana 44 ---
+Software function operation
+Interface Introduction
+◎After the device is successfully bound, enter the "My house Heat Pump " (device name can
+be modified) operation page.
+◎Click "My house Heat Pump" in "All Devices" in the main interface of "Smart Life" APP to
+enter the "My house Heat Pump" device’s operation page.
+return
+Fault information:
+display fault
+information when a
+fault occurs.
+More: You can
+change the device
+name, select the
+device installation
+location, check the
+network status, add
+shared users,
+create a device
+group, view device
+information, etc.
+Current mode
+Operating mode
+Power button: click
+to turn on/off
+Setting:
+Click to add timing
+on/off time
+Mode switching: Click
+to select the mode to
+be switched
+Param Query: View
+unit status data
+- 42 -
+--- strana 45 ---
+Mode setting
+◎Click "Work mode" on the main interface of the equipment operation to switch mode, and
+the mode selection interface will pop up as shown in the figure below, just click the mode
+you need to select.
+Water Temp. Setting
+◎In the Setting interface, click“Water Temp. Setting” to set the Desired Temp. And Return
+difference Temperature
+- 43 -
+--- strana 46 ---
+User setting
+High Temperature Antisepsis Function: (when hot water function is selected)
+◎ High temperature Antisepsis cycle is once every 7 days（Cancel this function when the
+selection is 0）;
+◎ When entering the high temperature Antisepsis, the water tank electric heater will be
+forced to turn on.
+◎ During the Antisepsis process, if the water tank temperature > 60℃(the maximum
+settable temperature), then the compressor will not start, but only start electric heating; if
+the water tank temperature ≤55℃, both the compressor and electric heater will start.
+◎ When the water tank temperature ≥70℃ and the protection temperature lasts for
+30minutes ≥65℃, exit the high temperature Antisepsis;
+◎ After entering high temperature Antisepsis, if the temperature of the hot water tank does
+not reach 65°C after 1 hour, the high temperature Antisepsis program will be forced to exit;
+Target Temperature Auto Adjustment Logic ( Under Heating Mode)
+◎ The target temperature under heating mode can be automatically adjusted according to
+the ambient temperature.
+◎ Entry conditions
+When Parameter enables automatic adjustment mode of heating target temperature.
+◎ Calculation formula of heating target temperature
+- 44 -
+--- strana 47 ---
+Pset (heating target temperature) =20℃ + (Target temperature compensation coefficient
+÷10) * (Heating compensation temperature point - current ambient temperature)
+◎ The above different curves stands for the different value of Target temperature
+compensation coefficient.
+(When Target temperature compensation coefficient=1, the actual value is 0.1)
+◎ The target temperature range of automatic temperature adjustment is 20-70℃
+Auxiliary Electric Heater for Water Tank
+◎ Start conditions (all below conditions must be met at the same time)
+1) In hot water mode;
+2) The compressor runs for start time for electric heating of water tank（30）minutes;
+3) There is a demand for hot water, and the temperature of the water tank is ≤70℃;
+4) The pump is running
+◎ Exit condition (only need to meet any one of the below conditions)
+1) When the heat pump is performing cooling mode / hot water mode;
+2) When there is no demand for hot water or constant temperature control;
+3) The water tank temperature sensor has a fault alarm;
+◎ When it is under defrosting / forced defrosting / secondary antifreeze , the electric heating is
+forced to turn on;
+◎ When there is high-pressure failure / low-pressure failure / exhaust temperature sense
+failure / excessive exhaust protection stop,and if compressor is locked and cannot be
+started, then the electric heating will be started instead of the compressor after 5 minutes.
+- 45 -
+--- strana 48 ---
+Auxiliary Electric Heater for Space heating
+◎Enable condition：
+1) Under Heating mode；
+2) Ambient Temp.＜Ambient Temp for starting electric heating（0℃）Or Ambient Temp.
+Sensor Fault
+3) There has Heating Demand, Inlet Water Temp.≤Heating Set Temp. (P05) - Restart
+difference(P01)；
+4) Water pump during Working States
+When the above conditions are met, The Electric Heater will turn on.
+◎Shut-down condition:
+1) Under Cooling or Hot Water Mode
+2) Without Heating Demand or Constant Temp. Control
+3) Inlet Water Temp. Sensor Failure or Alarm
+4) Ambient Temp＞0℃（Ambient Temp for starting electric heating）+1
+5) Water Flow Failures
+6) Circulation pump shut-down
+E-heater be shut-down when any of above conditions met
+Timer setting
+◎In the Setting interface, click ”timing” to enter timer setting, click to add timer.
+- 46 -
+--- strana 49 ---
+◎In the timer setting, slide the hour/minute up and down to set the timer time,and set the
+repeating week and on/off, press the upper right corner to save, as shown in the below Fig.
+Hou
+r
+Minutes
+Available select repeating times
+Available setting timer power
+on/off
+Equipment sharing
+◎Share the bound device, the sharer operates in the following sequence.
+◎After successful sharing, the list will be increased and show the shared person.
+◎To delete the shared person, long press the selected user, the delete interface will pop up,
+click "Delete".
+◎The operation of the sharing interface is as follows:
+- 47 -
+--- strana 50 ---
+◎Input the account of the shared person, click "Done", the shared success list will display
+the account of the newly-added shared person. The shared person showing the received
+shared device, click in to operate and control the device.
+Device removal
+◎APP removal
+Click in the upper right corner of device operation main interface to enter device details
+interface, and click ”Remove Device” interface to enter the intelligent network configuration
+mode. " " Corresponding indicator light does not flash, and the network can be
+reconfigured within 3 minutes. If it exceeds 3mins, it will exit the distribution network.
+- 48 -

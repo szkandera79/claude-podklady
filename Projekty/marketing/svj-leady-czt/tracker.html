@@ -1,0 +1,259 @@
+<title>Leady SVJ — drahé teplo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDF1EC; --surface:#FFFFFF; --surface-2:#F5F8F4; --ink:#16201C; --muted:#5A675F; --line:#D8E0D7;
+  --accent:#1E6B45; --accent-ink:#FFFFFF; --accent-soft:#E2F0E6;
+  --new:#6B7A71; --new-bg:#EEF1EE; --sent:#8A6216; --sent-bg:#FBF0DA;
+  --warm:#1E6B45; --warm-bg:#DDEFE3; --cold:#8A3E32; --cold-bg:#F8E7E3;
+  --shadow:0 1px 2px rgba(22,32,28,.07), 0 6px 20px rgba(22,32,28,.08);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#101512; --surface:#18201B; --surface-2:#1E2822; --ink:#E4EBE5; --muted:#98A69D; --line:#2A362E;
+  --accent:#63BA86; --accent-ink:#0C1810; --accent-soft:#1E3326;
+  --new:#94A29A; --new-bg:#222B25; --sent:#D9A441; --sent-bg:#2E2617;
+  --warm:#63BA86; --warm-bg:#17301F; --cold:#E08975; --cold-bg:#33201B;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.45);
+}}
+:root[data-theme="dark"]{
+  --bg:#101512; --surface:#18201B; --surface-2:#1E2822; --ink:#E4EBE5; --muted:#98A69D; --line:#2A362E;
+  --accent:#63BA86; --accent-ink:#0C1810; --accent-soft:#1E3326;
+  --new:#94A29A; --new-bg:#222B25; --sent:#D9A441; --sent-bg:#2E2617;
+  --warm:#63BA86; --warm-bg:#17301F; --cold:#E08975; --cold-bg:#33201B;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.45);
+}
+html,body{ background:var(--bg); }
+body{ color:var(--ink); font-family:Inter,-apple-system,"Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.5; }
+.wrap{ max-width:1080px; margin:0 auto; padding:24px 16px 56px; display:flex; flex-direction:column; gap:16px; }
+
+h1{ font-family:Poppins,Inter,sans-serif; font-weight:600; font-size:clamp(21px,3vw,27px); margin:0; text-wrap:balance; }
+.eyebrow{ font-size:11.5px; font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); }
+.lede{ margin:5px 0 0; color:var(--muted); max-width:66ch; font-size:14px; }
+
+.tiles{ display:grid; grid-template-columns:repeat(auto-fit,minmax(118px,1fr)); gap:1px; background:var(--line);
+        border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+.tile{ appearance:none; font:inherit; text-align:left; cursor:pointer; background:var(--surface); color:inherit;
+       padding:10px 12px; display:grid; gap:1px; }
+.tile[aria-pressed="true"]{ background:var(--accent-soft); }
+.tile:focus-visible{ outline:2px solid var(--accent); outline-offset:-2px; }
+.tile b{ font-family:Poppins,Inter,sans-serif; font-size:19px; font-variant-numeric:tabular-nums; }
+.tile span{ font-size:11.5px; color:var(--muted); }
+
+.bar{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.bar input[type="search"]{ flex:1 1 220px; font:inherit; padding:9px 12px; border-radius:9px;
+       border:1px solid var(--line); background:var(--surface); color:var(--ink); min-width:0; }
+.bar input:focus-visible{ outline:2px solid var(--accent); outline-offset:1px; }
+.chip{ appearance:none; font:inherit; font-size:13.5px; cursor:pointer; padding:8px 13px; border-radius:99px;
+       border:1px solid var(--line); background:var(--surface); color:var(--ink); }
+.chip[aria-pressed="true"]{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+.chip:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+
+.list{ display:flex; flex-direction:column; gap:10px; }
+.lead{ background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:13px 15px;
+       display:grid; gap:9px; box-shadow:var(--shadow); }
+.lead.done{ opacity:.72; }
+.top{ display:flex; gap:10px 14px; align-items:baseline; flex-wrap:wrap; }
+.rank{ font-family:Poppins,Inter,sans-serif; font-weight:600; font-size:12px; color:var(--muted);
+       background:var(--surface-2); border-radius:6px; padding:2px 7px; font-variant-numeric:tabular-nums; }
+.name{ font-family:Poppins,Inter,sans-serif; font-weight:600; font-size:15.5px; flex:1 1 260px; }
+.price{ font-variant-numeric:tabular-nums; font-weight:700; color:var(--cold); white-space:nowrap; }
+.meta{ font-size:13px; color:var(--muted); display:grid; gap:2px; }
+.meta a{ color:var(--accent); }
+.contacts{ display:flex; flex-wrap:wrap; gap:8px; }
+.contacts a{ font-size:13.5px; font-weight:600; text-decoration:none; color:var(--accent);
+             border:1px solid var(--line); border-radius:8px; padding:6px 11px; background:var(--surface-2); }
+.contacts .none{ font-size:13px; color:var(--muted); align-self:center; }
+.row{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+select, textarea{ font:inherit; border:1px solid var(--line); border-radius:8px; background:var(--surface);
+                  color:var(--ink); padding:7px 10px; }
+select{ font-size:13.5px; font-weight:600; }
+textarea{ width:100%; min-height:38px; resize:vertical; font-size:13.5px; }
+.stav{ font-size:11.5px; font-weight:700; padding:3px 9px; border-radius:99px; white-space:nowrap; }
+.s-novy{ background:var(--new-bg); color:var(--new); }
+.s-dopis, .s-kontakt{ background:var(--sent-bg); color:var(--sent); }
+.s-zajem, .s-schuzka{ background:var(--warm-bg); color:var(--warm); }
+.s-nezajem{ background:var(--cold-bg); color:var(--cold); }
+.when{ font-size:12px; color:var(--muted); }
+
+.note{ border-left:3px solid var(--sent); background:var(--sent-bg); color:var(--ink);
+       padding:10px 13px; border-radius:0 9px 9px 0; font-size:13.5px; }
+.foot{ color:var(--muted); font-size:12.5px; border-top:1px solid var(--line); padding-top:12px; }
+.status{ font-size:13px; color:var(--muted); min-height:1.2em; }
+.btn{ appearance:none; font:inherit; font-weight:600; font-size:13.5px; cursor:pointer; border-radius:9px;
+      padding:8px 14px; border:1px solid var(--accent); background:var(--accent); color:var(--accent-ink); }
+.btn.ghost{ background:transparent; color:var(--accent); }
+.btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+@media (max-width:420px){ .tiles{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+</style>
+
+<div class="wrap">
+  <div>
+    <div class="eyebrow">ThermaVera · akvizice zelených kotelen</div>
+    <h1>Leady SVJ — drahé teplo z CZT</h1>
+    <p class="lede">Ověřené kontakty na společenství vlastníků v lokalitách s nejdražším teplem podle ceníku ERÚ k 1. 1. 2026. Stav oslovování se ukládá sdíleně, takže ho vidíte na všech svých zařízeních.</p>
+  </div>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="bar">
+    <input type="search" id="q" placeholder="Hledat název, adresu nebo IČO…" aria-label="Hledat v leadech">
+    <button class="chip" id="onlyContact" type="button" aria-pressed="false">Jen s kontaktem</button>
+    <button class="btn ghost" id="export" type="button" hidden>Stáhnout CSV</button>
+  </div>
+
+  <p class="status" id="status"></p>
+  <div class="list" id="list"></div>
+
+  <div class="note">Žádné hromadné e‑maily ani zprávy do datových schránek bez souhlasu (§ 7 zákona č. 480/2004 Sb.). Doporučený první krok je dopis na adresu sídla k rukám výboru; souhlas s e‑mailem si vyžádat až od těch, kdo se ozvou.</div>
+  <div class="foot">Zdroj kontaktů: ARES a veřejné weby SVJ, ověřeno 22. 9. 2026. Ceny tepla: předběžné ceny ERÚ k 1. 1. 2026, úroveň domovní předávací stanice, vč. DPH. Seznam se generuje z <code>kontakty-davka-*.csv</code> v repozitáři (<code>src/gen_tracker.py</code>) — kontakty se opravují tam, stav oslovování tady.</div>
+</div>
+
+<script>
+const LEADS = [{"id": "01615220", "poradi": 1, "cena": 2461.45, "nazev": "Společenství vlastníků jednotek Michelangelova 3368", "ico": "01615220", "adresa": "Michelangelova 3368/22, 10000 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu. Web SVJ ani správce nenalezen; výsledky patřily jiným SVJ v ulici (č.p. 3344, Rezidence Michelangelova 3464) – nepoužito. Lokalita ERÚ: „Praha - Michelangelova 3368/22; G890“.", "davka": "01"}, {"id": "07317778", "poradi": 2, "cena": 2255.21, "nazev": "Společenství vlastníků jednotek Lihovarská 1094, Praha 8", "ico": "07317778", "adresa": "Lihovarská 1094/8, 19000 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu (název uvádí Praha 8, adresa je Praha 9). Web projektu Lihovarská (Praha Půdní Byty) uvádí jen prodejní kontakt – nepoužito. Lokalita ERÚ: „Praha 9 - Libeň, Lihovarská 1094/8, K05“.", "davka": "01"}, {"id": "03936635", "poradi": 3, "cena": 2058.73, "nazev": "Společenství vlastníků domu Padovská č.p. 696", "ico": "03936635", "adresa": "Padovská 696/3, 10900 Praha", "sidlo": "shodné s adresou domu", "web": "https://www.ppmas.cz/ (správce)", "email": "eda@ppmas.cz", "tel": "+420 775 885 885", "typ": "správce domu – požádat o předání výboru", "overeni": "částečně ověřeno", "poznamka": "Správce Prague Property Management a.s. uvádí SVJ (IČO) v seznamu SVJ v PDF z r. 2018 – aktuálnost správy nepotvrzena. eda@ppmas.cz je obecná linka správce (podněty/reklamace), ne adresa vyhrazená domu. Nezaměnit se SVJ Padovská 585. Lokalita ERÚ: „Praha - Padovská 696/3; G936“.", "davka": "01"}, {"id": "07317654", "poradi": 4, "cena": 2045.42, "nazev": "Společenství vlastníků jednotek Lihovarská 1093, Praha 8", "ico": "07317654", "adresa": "Lihovarská 1093/10, 19000 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu. Web projektu uvádí jen prodejní kontakt – nepoužito. Lokalita ERÚ: „Praha 9 - Libeň, Lihovarská 1093/10, K06“.", "davka": "01"}, {"id": "05848971", "poradi": 5, "cena": 2029.89, "nazev": "Společenství vlastníků domu Honzíkova č.p. 610", "ico": "05848971", "adresa": "Honzíkova 610/4, 11101 Praha", "sidlo": "shodné s adresou domu", "web": "https://www.ppmas.cz/ (správce)", "email": "eda@ppmas.cz", "tel": "+420 775 885 885", "typ": "správce domu – požádat o předání výboru", "overeni": "částečně ověřeno", "poznamka": "SVJ (IČO) uvedeno v seznamu SVJ správce Prague Property Management a.s. (PDF 2018) – aktuálnost správy nepotvrzena. Obecná linka správce, ne adresa vyhrazená domu. Lokalita ERÚ: „Praha - Honzíkova 610/4; G987“.", "davka": "01"}, {"id": "29045061", "poradi": 6, "cena": 1968.95, "nazev": "Společenství pro dům č.p. 962, Praha 11 - Háje", "ico": "29045061", "adresa": "Jurkovičova 962/18, 14900 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu. Web jurkovicova988.cz a projekt č.p. 963 patří jiným domům – nepoužito. Lokalita ERÚ: „Praha - Jurkovičova 962/16; G554“.", "davka": "01"}, {"id": "28509731", "poradi": 7, "cena": 1965.98, "nazev": "Společenství vlastníků Sklenská 1582", "ico": "28509731", "adresa": "Sklenská 1582/1b, 19800 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu. Výsledky pro Sklenská 1581 (jiné SVJ) nepoužity. Lokalita ERÚ: „Praha - Kyje, Sklenská 1582/1b“.", "davka": "01"}, {"id": "06169643", "poradi": 8, "cena": 1936.63, "nazev": "Společenství vlastníků domu Padovská č.p. 749, 109 00 Praha 10", "ico": "06169643", "adresa": "Padovská 749/7, 10900 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu (vznik 2017). Kontakty padovska.eu patří SVJ Padovská 585 – nepoužito. Lokalita ERÚ: „Praha - Padovská 749/7; G985“.", "davka": "01"}, {"id": "19394675", "poradi": 9, "cena": 1934.07, "nazev": "Společenství vlastníků pro dům Laudova č.p. 1443, Praha 17, Řepy", "ico": "19394675", "adresa": "Laudova 1443/28, 16300 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu; nově vzniklé SVJ bez webové stopy. Kontakty jiných SVJ v ulici Laudova nepoužity. Lokalita ERÚ: „Praha 17 - Řepy, Laudova 1443/28“.", "davka": "01"}, {"id": "05848776", "poradi": 10, "cena": 1855.68, "nazev": "Společenství vlastníků domu Kardausova č.p. 611", "ico": "05848776", "adresa": "Kardausova 611/3, 11101 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu (vznik 2017). Kontakt na agregátoru neověřen – nepoužit. Lokalita ERÚ: „Praha - Kardausova 611/3; G988“.", "davka": "01"}, {"id": "29050715", "poradi": 11, "cena": 1822.21, "nazev": "Společenství vlastníků domu č.p. 961, Praha 11 - Háje", "ico": "29050715", "adresa": "Jurkovičova 961/12, 14900 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu (vznik 2009). Kontakty jiných SVJ v ulici (č.p. 962, 983, 988, 1040) nepoužity. Lokalita ERÚ: „Praha - Jurkovičova 961/14; G553“.", "davka": "01"}, {"id": "29008069", "poradi": 12, "cena": 1817.94, "nazev": "Společenství vlastníků jednotek domu č.p. 963, Praha 11 - Háje", "ico": "29008069", "adresa": "Jurkovičova 963/20, 14900 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu (vznik 2009). Zmínka o starším SVJ č.p. 961–963 (IČO 26114313) – jiný subjekt, neověřeno. Lokalita ERÚ: „Praha - Jurkovičova 963/20; G555“.", "davka": "01"}, {"id": "05340136", "poradi": 13, "cena": 1801.55, "nazev": "Společenství vlastníků domu Padovská č.p. 747, 109 00 Praha 10", "ico": "05340136", "adresa": "Padovská 747/5, 10900 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu (vznik 2016). padovska.eu patří SVJ Padovská 585 – nepoužito. Lokalita ERÚ: „Praha - Padovská 747/5; G970“.", "davka": "01"}, {"id": "21462275", "poradi": 14, "cena": 1774.39, "nazev": "Společenství vlastníků jednotek K Lesu 2695, Nymburk", "ico": "21462275", "adresa": "K Lesu 2695, 28802 Nymburk", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu (vznik 2024). Předsedou je právnická osoba BB - předseda SVJ s.r.o. (IČO 21923353, Lovosice) – bez veřejného webu/kontaktu. Zbývá písemný kontakt na sídlo. Lokalita ERÚ: „Nymburk - K Lesu 2695, DPK Babín SO 08“.", "davka": "01"}, {"id": "21462348", "poradi": 15, "cena": 1774.39, "nazev": "Společenství vlastníků jednotek K Lesu 2696, Nymburk", "ico": "21462348", "adresa": "K Lesu 2696, 28802 Nymburk", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu (vznik 2024). Profesionální předseda jako u ř. 14, bez veřejného kontaktu. Lokalita ERÚ: „Nymburk - K Lesu 2696, DPK Babín SO 09“.", "davka": "01"}, {"id": "28419057", "poradi": 16, "cena": 1729.36, "nazev": "Společenství vlastníků jednotek pro dům Rezidence Tulipán, Praha 9", "ico": "28419057", "adresa": "Drahobejlova 2391/13, 19000 Praha", "sidlo": "shodné s adresou domu", "web": "https://www.strankydomu.cz/drahobejlova13/", "email": "svj.tulipan@seznam.cz", "tel": "+420 266 310 266", "typ": "přímý kontakt SVJ (e‑mail); telefon = správce domu – požádat o předání výboru", "overeni": "ověřeno – přímý kontakt organizace", "poznamka": "E‑mail SVJ na webu domu (Kontakty). Telefon je kancelář správce JIVIŠ – správa nemovitostí pro Prahu, s.r.o. Jmenné e‑maily pracovníků správce záměrně nepřevzaty. Datum aktualizace stránky neuvedeno. Lokalita ERÚ: „Praha - Drahobejlova 2391/13; G534“.", "davka": "01"}, {"id": "21831637", "poradi": 17, "cena": 1714.15, "nazev": "Společenství vlastníků jednotek pro dům Pekařova 860/8, Praha-Bohnice", "ico": "21831637", "adresa": "Pekařova 860/8, 18100 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu (nové SVJ, 2024). Jiné SVJ Pekařova 861/16 nepoužito. Lokalita ERÚ: „Praha 8 - Pekařova 860/8“.", "davka": "01"}, {"id": "17651093", "poradi": 18, "cena": 1712.65, "nazev": "Společenství vlastníků domu Kurandové č.p. 1282, Praha 5", "ico": "17651093", "adresa": "Kurandové 1282/8, 15200 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu (projekt Barrandez Vous – Sever, 2022). Web projektu uvádí jen prodejní kontakt developera – nepoužito. Lokalita ERÚ: „Praha 5 - Hlubočepy, Kurandové 1282, BARRANDEZ VOUS - Sever, K34“.", "davka": "01"}, {"id": "17660556", "poradi": 19, "cena": 1698.47, "nazev": "Společenství vlastníků domu Dostalové č.p. 1283, Praha 5", "ico": "17660556", "adresa": "Dostalové 1283/8, 15200 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu (projekt Barrandez Vous – Jih, 2022). Prodejní kontakt developera nepoužit. Lokalita ERÚ: „Praha 5 - Hlubočepy, Dostálové 1283, BARRANDEZ VOUS - Jih, K35“.", "davka": "01"}, {"id": "14280752", "poradi": 20, "cena": 1689.54, "nazev": "Společenství vlastníků domu Františka Jansy č.p. 694", "ico": "14280752", "adresa": "Františka Jansy 694/2, 11101 Praha", "sidlo": "shodné s adresou domu", "web": "https://www.svjfrantiskajansy694.cz/", "email": "svj@finep.cz", "tel": "+420 731 396 617", "typ": "přímý kontakt SVJ (e‑mail); telefon = správce domu – požádat o předání výboru", "overeni": "částečně ověřeno", "poznamka": "E‑mail uveden na oficiálním webu SVJ, ale na doméně developera FINEP – může pocházet z doby správy developerem. Telefon = správce Stavební bytové družstvo Praha uvedený na webu SVJ. Jmenný e‑mail pracovníka správce nepřevzat. Lokalita ERÚ: „Praha - Františka Jansy 694/2; G383“.", "davka": "01"}, {"id": "03818420", "poradi": 21, "cena": 1686.22, "nazev": "Společenství vlastníků domu Honzíkova č.p. 580", "ico": "03818420", "adresa": "Honzíkova 580/2, 11101 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu. svj668.cz patří SVJ Honzíkova 668 – nepoužito. Lokalita ERÚ: „Praha - Honzíkova 580/2; G935“.", "davka": "01"}, {"id": "07726848", "poradi": 22, "cena": 1659.88, "nazev": "Společenství vlastníků domu Matyáš", "ico": "07726848", "adresa": "U Elektrárny 817, 25246 Vrané nad Vltavou", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu (BD Matyáš, 45 bytů). Kontakt developera nepoužit. POZOR: podle webu developera dům už vytápí tepelná čerpadla vzduch/voda – pro nabídku pravděpodobně nevhodný. Lokalita ERÚ: „Vrané nad Vltavou - U Elektrárny 817, BD Matyáš“.", "davka": "01"}, {"id": "28456351", "poradi": 23, "cena": 1653.28, "nazev": "Společenství vlastníků jednotek pro dům čp. 1087 Přeštická 22 Praha 10 - Hostivař", "ico": "28456351", "adresa": "Přeštická 1087/22, 10200 Praha", "sidlo": "shodné s adresou domu", "web": "https://www.presticka1087.cz/", "email": "info@presticka1087.cz", "tel": "", "typ": "přímý kontakt SVJ", "overeni": "ověřeno – přímý kontakt organizace", "poznamka": "Vlastní web SVJ, stránka Kontakt uvádí stejný název a sídlo jako ARES. Telefon ani správce neuvedeni. Lokalita ERÚ: „Praha - Přeštická 1087/22; G526“.", "davka": "01"}, {"id": "28501004", "poradi": 24, "cena": 1632.95, "nazev": "Společenství pro dům Akademická 688-Malešice", "ico": "28501004", "adresa": "Akademická 688/1, 10800 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu. Kontakty jiných firem na stejné adrese nepoužity. Lokalita ERÚ: „Praha - Akademická 688/1; G537“.", "davka": "01"}, {"id": "19070284", "poradi": 25, "cena": 1629.85, "nazev": "Společenství vlastníků jednotek K Lesu 2693, Nymburk", "ico": "19070284", "adresa": "K Lesu 2693, 28802 Nymburk", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; sídlo = adresa domu (Rezidence Babín, 2023). Profesionální předseda BB - předseda SVJ s.r.o. bez veřejného webu/e‑mailu. Kontakt developera nepoužit. Lokalita ERÚ: „Nymburk - K Lesu 2693, DPK Babín SO 07“.", "davka": "01"}, {"id": "21462399", "poradi": 26, "cena": 1616.88, "nazev": "Společenství vlastníků jednotek Kopřivová 1677, Hořovice", "ico": "21462399", "adresa": "Kopřivová 1677/2, 26801 Hořovice", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES (vznik 2024). Předsedou je právnická osoba BB - předseda SVJ s.r.o. (IČO 21923353) bez veřejného webu/kontaktu. Lokalita ERÚ: „Hořovice - Kopřivová 1677/2, DPK C7“.", "davka": "02"}, {"id": "28489233", "poradi": 27, "cena": 1614.49, "nazev": "Společenství vlastníků jednotek pro dům č.p. 685, Univerzitní ulice", "ico": "28489233", "adresa": "Univerzitní 685/10, 10800 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; výbor tvoří fyzické osoby. Web developera (Ecocity Malešice) nepoužit, vazba na dům neověřena. Lokalita ERÚ: „Praha - Univerzitní 685/10; G196“.", "davka": "02"}, {"id": "28495420", "poradi": 28, "cena": 1605.61, "nazev": "Společenství vlastníků Ocelářská 344/10, Praha 9", "ico": "28495420", "adresa": "Ocelářská 344/10, 19000 Praha", "sidlo": "shodné s adresou domu", "web": "https://www.locelot.cz/", "email": "vybor@locelot.com", "tel": "", "typ": "přímý kontakt SVJ", "overeni": "ověřeno – přímý kontakt organizace", "poznamka": "Web domu L'Ocelot uvádí stejné IČO a sídlo. Obecná adresa výboru; na webu i kontaktní formulář. Osobní telefon člena výboru záměrně nepřevzat. Web uvádí ‚Veolia kotelna‘ (dodavatel tepla pravděpodobně Veolia – jen informativně). Lokalita ERÚ: „Praha - Ocelářská 344/10; G527“.", "davka": "02"}, {"id": "19262400", "poradi": 29, "cena": 1604.52, "nazev": "Společenství vlastníků pro dům Grafická 3381/4, Smíchov, Praha 5", "ico": "19262400", "adresa": "Grafická 3381/4, 15000 Praha", "sidlo": "shodné s adresou domu", "web": "https://optimcare.cz/ (správce / profesionální předseda)", "email": "info@optimcare.cz", "tel": "+420 284 861 466", "typ": "správce domu – požádat o předání výboru", "overeni": "ověřeno – kontakt přes správce", "poznamka": "Dle veřejného rejstříku je předsedou SVJ OptimCare s.r.o. (IČO 27867935) od 26. 9. 2023; web dům výslovně nejmenuje – vazba z rejstříku. Nezaměnit s OptimCare, správa nemovitostí s.r.o. (IČO 03625435). Lokalita ERÚ: „Praha 5 - Grafická 3381/4, DPK Kobrova“.", "davka": "02"}, {"id": "01411756", "poradi": 30, "cena": 1589.65, "nazev": "Společenství vlastníků jednotek domu Práčská 3315/E,F", "ico": "01411756", "adresa": "Práčská 3315/8e, 10600 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; výbor fyzické osoby. Weby projektu (Geosan) nepoužity; pracskasedma.cz patří jinému SVJ. Lokalita ERÚ: „Praha 10 - Práčská 3315/8e,f, VS Botič VS A1,A2“.", "davka": "02"}, {"id": "28543220", "poradi": 31, "cena": 1588.44, "nazev": "Společenství vlastníků pro dům Schoellerova 936", "ico": "28543220", "adresa": "Schoellerova 936/28, 19600 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES. Od 27. 7. 2026 je předsedou FIRST předsedové s.r.o. (IČO 18045138) – zatím bez veřejného webu/kontaktu; doporučeno zkusit znovu později. Kontakty MŠ na stejné adrese nepoužity. Lokalita ERÚ: „Praha - Schoellerova 936/28; G544“.", "davka": "02"}, {"id": "28966520", "poradi": 32, "cena": 1586.46, "nazev": "Společenství vlastníků jednotek Letovská 546 - 549, Praha 18 - Letňany", "ico": "28966520", "adresa": "Letovská 549, 19900 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES. SVJ má profil zadavatele na vhodne-uverejneni.cz (zakázky 2020–2023, mj. hydraulické vyvážení otopné soustavy) bez kontaktu. MSH servis spravuje sousední Letovskou 557–558 – nepoužito. Lokalita ERÚ: „Praha 9 - Letňany, Letovská 549, sídliště Letovská“.", "davka": "02"}, {"id": "14280604", "poradi": 33, "cena": 1584.43, "nazev": "Společenství vlastníků domu Františka Jansy č.p. 695", "ico": "14280604", "adresa": "Františka Jansy 695/4, 11101 Praha", "sidlo": "shodné s adresou domu", "web": "https://svjfrantiskajansy695.cz/", "email": "info@sbdpraha.cz", "tel": "+420 227 229 111", "typ": "správce domu – požádat o předání výboru", "overeni": "ověřeno – kontakt přes správce", "poznamka": "Web SVJ uvádí stejné IČO a jako správce Stavební bytové družstvo Praha. Web uvádí i svj@finep.cz (doména developera) – nepoužito jako neaktuální (u sousedního č.p. 694 v dávce 1 uvedeno jako ‚částečně ověřeno‘). Jmenné kontakty referenta nepřevzaty. Lokalita ERÚ: „Praha - Františka Jansy 695/4; G384“.", "davka": "02"}, {"id": "19756909", "poradi": 34, "cena": 1582.93, "nazev": "Společenství vlastníků jednotek Ovesná 1684/3, Hořovice", "ico": "19756909", "adresa": "Ovesná 1684/3, 26801 Hořovice", "sidlo": "shodné s adresou domu", "web": "https://www.fajnstranky.cz/ (správce / profesionální předseda)", "email": "admin@fajnstranky.cz", "tel": "+420 604 450 001", "typ": "správce domu – požádat o předání výboru", "overeni": "ověřeno – kontakt přes správce", "poznamka": "Dle veřejného rejstříku je předsedou SVJ FAJN group s.r.o. (IČO 18601065, Komárov); web uvádí stejné IČO, dům výslovně nejmenuje – vazba z rejstříku. Lokalita ERÚ: „Hořovice - Ovesná 1684/3, DPK C6“.", "davka": "02"}, {"id": "22264078", "poradi": 35, "cena": 1577.81, "nazev": "Společenství vlastníků jednotek Kopřivová 1700, Hořovice", "ico": "22264078", "adresa": "Kopřivová 1700/6, 26801 Hořovice", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES (vznik 2024). Předseda BB - předseda SVJ s.r.o. bez veřejného kontaktu. Lokalita ERÚ: „Hořovice - Kopřivová 1700/6, DPK C10“.", "davka": "02"}, {"id": "22264108", "poradi": 36, "cena": 1577.81, "nazev": "Společenství vlastníků jednotek Kopřivová 1701, Hořovice", "ico": "22264108", "adresa": "Kopřivová 1701/8, 26801 Hořovice", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES (vznik 2024). Předseda BB - předseda SVJ s.r.o. bez veřejného kontaktu. Lokalita ERÚ: „Hořovice - Kopřivová 1701/8, DPK C11“.", "davka": "02"}, {"id": "22264159", "poradi": 37, "cena": 1577.81, "nazev": "Společenství vlastníků jednotek Ovesná 1699, Hořovice", "ico": "22264159", "adresa": "Ovesná 1699/4, 26801 Hořovice", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES (vznik 2024). Předseda BB - předseda SVJ s.r.o. bez veřejného kontaktu. Lokalita ERÚ: „Hořovice - Ovesná 1699/4, DPK C9“.", "davka": "02"}, {"id": "21463611", "poradi": 38, "cena": 1576.69, "nazev": "Společenství vlastníků jednotek Kopřivová 1678, Hořovice", "ico": "21463611", "adresa": "Kopřivová 1678/4, 26801 Hořovice", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES (vznik 2024). Předseda BB - předseda SVJ s.r.o. bez veřejného kontaktu. Lokalita ERÚ: „Hořovice - Kopřivová 1678/4, DPK C8“.", "davka": "02"}, {"id": "19086628", "poradi": 39, "cena": 1573.97, "nazev": "Společenství vlastníků domu Osadní 33", "ico": "19086628", "adresa": "Osadní 701/33, 17000 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES. osadni33.cz je prodejní web developera – nepoužito. Pozor na sousední SVJ Osadní 43, 37, 6. Lokalita ERÚ: „Praha - Osadní 701/33; G019“.", "davka": "02"}, {"id": "05634377", "poradi": 40, "cena": 1569.8, "nazev": "Společenství vlastníků Na Petynce 983/30", "ico": "05634377", "adresa": "Na Petynce 983/30, 16900 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES. Kontakty jiných SVJ v ulici Na Petynce nepřevzaty; developerské projekty s č.p. 983 spolehlivě nespojeny. Lokalita ERÚ: „Praha - Na Petynce 983/30; G863“.", "davka": "02"}, {"id": "17801559", "poradi": 41, "cena": 1563.61, "nazev": "Společenství vlastníků Panorama Boskovice BD-D, Otakara Kubína 2642/14", "ico": "17801559", "adresa": "Otakara Kubína 2642/14, 68001 Boskovice", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; výbor fyzické osoby. panoramaboskovice.cz je web developera – nepoužito. Lokalita ERÚ: „Boskovice - Otakara Kubína 2642/14, Panorama Boskovice“.", "davka": "02"}, {"id": "21875987", "poradi": 42, "cena": 1558.27, "nazev": "Společenství vlastníků jednotek pro dům Pekařova 861/16, Praha - Bohnice", "ico": "21875987", "adresa": "Pekařova 861/16, 18100 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES. Nalezeny jen weby developera/realitek – nepoužity. Pozor na záměnu se SVJ Pekařova 838 a 860. Lokalita ERÚ: „Praha 8 - Pekařova 861/16, BD Bohnice B2“.", "davka": "02"}, {"id": "24223654", "poradi": 43, "cena": 1555.15, "nazev": "Společenství vlastníků Miroslava Hajna 740", "ico": "24223654", "adresa": "Miroslava Hajna 740/2, 19900 Praha", "sidlo": "shodné s adresou domu", "web": "http://www.mh740.cz/", "email": "spolecenstvimh740@seznam.cz", "tel": "", "typ": "přímý kontakt SVJ", "overeni": "ověřeno – přímý kontakt organizace", "poznamka": "Oficiální web SVJ. Správce BestoCZ s.r.o. (besto.cz, info@besto.cz) uveden na téže stránce; linka 800 290 291 je jen havarijní – jako telefon SVJ neuvedena. Lokalita ERÚ: „Praha - Miroslava Hajna 740/2; G735“.", "davka": "02"}, {"id": "21103101", "poradi": 44, "cena": 1549.68, "nazev": "Společenství vlastníků jednotek U Knížecí cesty 1691, 268 01 Hořovice", "ico": "21103101", "adresa": "U Knížecí cesty 1691/7, 26801 Hořovice", "sidlo": "shodné s adresou domu", "web": "https://www.fajnstranky.cz/ (správce / profesionální předseda)", "email": "admin@fajnstranky.cz", "tel": "+420 604 450 001", "typ": "správce domu – požádat o předání výboru", "overeni": "ověřeno – kontakt přes správce", "poznamka": "Předsedou dle veřejného rejstříku FAJN group s.r.o. (IČO 18601065); vazba na dům z rejstříku, web dům nejmenuje. Lokalita ERÚ: „Hořovice - U Knížecí cesty 1691/7, DPK C4“.", "davka": "02"}, {"id": "17540127", "poradi": 45, "cena": 1542.86, "nazev": "Společenství vlastníků jednotek K Rusínku 2691, Nymburk", "ico": "17540127", "adresa": "K Rusínku 2691, 28802 Nymburk", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES; statutárem fyzická osoba. Není na seznamu SVJ spravovaných SBD Nymburk. Kontakt podnikající fyzické osoby na adrese nepoužit. Lokalita ERÚ: „Nymburk - K Rusínku 2691, DPK Babín SO 01+02“.", "davka": "02"}, {"id": "04592417", "poradi": 46, "cena": 1538.77, "nazev": "Společenství vlastníků jednotek v bytovém domě Rezidence Vltava na pozemku parc. č. 939, k.ú. Karlín, obec Praha", "ico": "04592417", "adresa": "Za Karlínským přístavem 683/6, 18600 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES. Jen weby developera/prodejců – nepoužity. Nezaměnit s Rezidence Vltava s.r.o. (IČO 19508239) na stejné adrese. Lokalita ERÚ: „Praha - Za Karlínským přístavem 683/8; G955“.", "davka": "02"}, {"id": "17847591", "poradi": 47, "cena": 1531.89, "nazev": "Společenství vlastníků jednotek U Knížecí cesty 1673, Hořovice", "ico": "17847591", "adresa": "U Knížecí cesty 1673/1, 26801 Hořovice", "sidlo": "shodné s adresou domu", "web": "https://www.fajnstranky.cz/ (správce / profesionální předseda)", "email": "admin@fajnstranky.cz", "tel": "+420 604 450 001", "typ": "správce domu – požádat o předání výboru", "overeni": "ověřeno – kontakt přes správce", "poznamka": "Předsedou dle veřejného rejstříku FAJN group s.r.o.; stejný kontakt jako ř. 44 a 49. Lokalita ERÚ: „Hořovice - U Knížecí cesty 1673, DPK C1“.", "davka": "02"}, {"id": "21730946", "poradi": 48, "cena": 1529.61, "nazev": "Společenství vlastníků jednotek Na Větrníku 2513/4", "ico": "21730946", "adresa": "Na Větrníku 2513/4, 16200 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES (dříve ‚SV Domu Comenius‘). Ve statutárním orgánu KRIT CZ s.r.o. – bez webu potvrzujícího vazbu. Nájemní/studentský projekt J&T Real Estate – pro nabídku spíše nevhodný. Lokalita ERÚ: „Praha 6 - Břevnov, Na Větrníku 2513/4, Dům Comenius, K95“.", "davka": "02"}, {"id": "17847737", "poradi": 49, "cena": 1525.62, "nazev": "Společenství vlastníků jednotek U Knížecí cesty 1674, Hořovice", "ico": "17847737", "adresa": "U Knížecí cesty 1674/3, 26801 Hořovice", "sidlo": "shodné s adresou domu", "web": "https://www.fajnstranky.cz/ (správce / profesionální předseda)", "email": "admin@fajnstranky.cz", "tel": "+420 604 450 001", "typ": "správce domu – požádat o předání výboru", "overeni": "ověřeno – kontakt přes správce", "poznamka": "Předsedou dle veřejného rejstříku FAJN group s.r.o.; stejný kontakt jako ř. 44 a 47. Lokalita ERÚ: „Hořovice - U Knížecí cesty 1674/3, DPK C2“.", "davka": "02"}, {"id": "02315165", "poradi": 50, "cena": 1523.3, "nazev": "Společenství vlastníků jednotek Harlacherova 3321", "ico": "02315165", "adresa": "Harlacherova 3321/10, 10600 Praha", "sidlo": "shodné s adresou domu", "web": "", "email": "", "tel": "", "typ": "kontakt nezveřejněn / nenalezen", "overeni": "kontakt nenalezen", "poznamka": "Identita ověřena v ARES. Bez webu i kontaktu; společné stanovisko výborů SVJ 3319–3321 na chodcisobe.cz bez kontaktu. Pozor na sousední SVJ 3319, 3320, 3326, 3327. Lokalita ERÚ: „Praha 10 - Harlacherova 3321/10, VS F“.", "davka": "02"}];
+
+const STAVY = [
+  ['novy',    'Nový',          's-novy'],
+  ['dopis',   'Dopis odeslán', 's-dopis'],
+  ['kontakt', 'Kontaktováno',  's-kontakt'],
+  ['zajem',   'Zájem',         's-zajem'],
+  ['schuzka', 'Schůzka',       's-schuzka'],
+  ['nezajem', 'Nezájem',       's-nezajem'],
+];
+const LABEL = Object.fromEntries(STAVY.map(([k, l]) => [k, l]));
+const CLS = Object.fromEntries(STAVY.map(([k, , c]) => [k, c]));
+const esc = s => String(s ?? '').replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+const kc = v => v == null ? '—' : v.toLocaleString('cs-CZ', {maximumFractionDigits: 0}) + ' Kč/GJ';
+const dnes = () => new Date().toISOString().slice(0, 10);
+const cz = d => d ? d.split('-').reverse().map(Number).join('. ') + '.' : '';
+
+let state = {};                 // ico → {stav, poznamka, datum}
+let filtr = null, jenKontakt = false, hledat = '';
+let db = null, downloads = null;
+
+const $ = id => document.getElementById(id);
+const setStatus = t => { $('status').textContent = t; };
+
+function counts(){
+  const c = Object.fromEntries(STAVY.map(([k]) => [k, 0]));
+  LEADS.forEach(l => c[(state[l.id]?.stav) || 'novy']++);
+  return c;
+}
+
+function renderTiles(){
+  const c = counts();
+  $('tiles').innerHTML = STAVY.map(([k, label]) =>
+    `<button class="tile" type="button" data-k="${k}" aria-pressed="${filtr === k}">
+       <b>${c[k]}</b><span>${label}</span></button>`).join('')
+    + `<button class="tile" type="button" data-k="" aria-pressed="${filtr === null}">
+         <b>${LEADS.length}</b><span>Vše</span></button>`;
+}
+
+function viditelne(){
+  const q = hledat.trim().toLowerCase();
+  return LEADS.filter(l => {
+    const s = state[l.id]?.stav || 'novy';
+    if (filtr && s !== filtr) return false;
+    if (jenKontakt && !(l.email || l.tel || l.web)) return false;
+    if (q && !(l.nazev + ' ' + l.adresa + ' ' + l.ico).toLowerCase().includes(q)) return false;
+    return true;
+  });
+}
+
+function renderList(){
+  const rows = viditelne();
+  $('list').innerHTML = rows.length ? rows.map(l => {
+    const st = state[l.id] || {}, stav = st.stav || 'novy';
+    const kontakty = [
+      l.tel && `<a href="tel:${esc(l.tel.replace(/\s/g, ''))}">${esc(l.tel)}</a>`,
+      l.email && `<a href="mailto:${esc(l.email)}">${esc(l.email)}</a>`,
+      l.web && `<a href="${esc(l.web.startsWith('http') ? l.web : 'https://' + l.web)}" target="_blank" rel="noopener">web</a>`,
+    ].filter(Boolean);
+    return `<article class="lead${stav === 'nezajem' ? ' done' : ''}" data-id="${l.id}">
+      <div class="top">
+        <span class="rank">#${l.poradi}</span>
+        <span class="name">${esc(l.nazev)}</span>
+        <span class="price">${kc(l.cena)}</span>
+        <span class="stav ${CLS[stav]}">${LABEL[stav]}</span>
+      </div>
+      <div class="meta">
+        <span>${esc(l.adresa)}${l.sidlo && l.sidlo !== 'shodné s adresou domu' ? ' · sídlo: ' + esc(l.sidlo) : ''}</span>
+        <span>IČO ${esc(l.ico)} · ${esc(l.overeni)}</span>
+      </div>
+      <div class="contacts">${kontakty.length ? kontakty.join('') : '<span class="none">Kontakt nezveřejněn — oslovit dopisem na adresu sídla.</span>'}</div>
+      <div class="row">
+        <select data-act="stav" aria-label="Stav leadu ${esc(l.nazev)}">
+          ${STAVY.map(([k, label]) => `<option value="${k}"${k === stav ? ' selected' : ''}>${label}</option>`).join('')}
+        </select>
+        <span class="when">${st.datum ? 'změněno ' + cz(st.datum) : ''}</span>
+      </div>
+      <textarea data-act="pozn" rows="1" placeholder="Poznámka z jednání…" aria-label="Poznámka">${esc(st.poznamka || '')}</textarea>
+    </article>`;
+  }).join('') : `<p class="status">Nic neodpovídá filtru.</p>`;
+}
+
+function render(){ renderTiles(); renderList(); }
+
+// --- ukládání do sdílené databáze artefaktu
+async function ulozit(id, patch){
+  state[id] = {...(state[id] || {}), ...patch, datum: dnes()};
+  render();
+  if (!db) { setStatus('Změna platí jen v tomto okně — sdílené ukládání tu není dostupné.'); return; }
+  try {
+    await db.doc('leady/' + id).set(state[id]);
+    setStatus('Uloženo ' + new Date().toLocaleTimeString('cs-CZ', {hour: '2-digit', minute: '2-digit'}));
+  } catch (e) {
+    setStatus(e && e.code === 'quota_exceeded' ? 'Databáze je plná — smažte staré záznamy.' : 'Uložení se nepovedlo, zkuste to prosím znovu.');
+  }
+}
+
+$('list').addEventListener('change', e => {
+  const art = e.target.closest('.lead'); if (!art) return;
+  if (e.target.dataset.act === 'stav') ulozit(art.dataset.id, {stav: e.target.value});
+});
+let t;
+$('list').addEventListener('input', e => {
+  if (e.target.dataset.act !== 'pozn') return;
+  const id = e.target.closest('.lead').dataset.id, v = e.target.value;
+  clearTimeout(t); t = setTimeout(() => ulozit(id, {poznamka: v}), 700);   // jeden zápis po dopsání
+});
+$('tiles').addEventListener('click', e => {
+  const b = e.target.closest('.tile'); if (!b) return;
+  filtr = b.dataset.k || null; render();
+});
+$('q').addEventListener('input', e => { hledat = e.target.value; renderList(); });
+$('onlyContact').addEventListener('click', e => {
+  jenKontakt = !jenKontakt; e.currentTarget.setAttribute('aria-pressed', jenKontakt); render();
+});
+
+// --- export do CSV (stav + kontakty), ať jde výsledek vrátit do repa
+$('export').addEventListener('click', async () => {
+  const head = ['poradi','cena_tepla','nazev_organizace','ico','adresa_domu','web','email','telefon','stav','poznamka_obchod','zmeneno'];
+  const q = s => '"' + String(s ?? '').replace(/"/g, '""') + '"';
+  const csv = '﻿' + [head.join(';')].concat(LEADS.map(l => {
+    const st = state[l.id] || {};
+    return [l.poradi, l.cena, l.nazev, l.ico, l.adresa, l.web, l.email, l.tel,
+            LABEL[st.stav || 'novy'], st.poznamka || '', st.datum || ''].map(q).join(';');
+  })).join('\n');
+  try {
+    await downloads.save({filename: 'leady-svj-stav-' + dnes() + '.csv', data: csv});
+    setStatus('CSV staženo.');
+  } catch (e) {
+    setStatus(e && e.code === 'declined' ? 'Stažení zrušeno.' : 'Stažení tu není dostupné.');
+  }
+});
+
+render();
+setStatus('Načítám uložený stav…');
+(async () => {
+  db = window.claude && window.claude.use ? await window.claude.use('db') : null;
+  downloads = window.claude && window.claude.use ? await window.claude.use('downloads') : null;
+  if (downloads) $('export').hidden = false;
+  if (!db) { setStatus('Sdílené ukládání není v tomto zobrazení dostupné — změny se neuloží.'); return; }
+  db.collection('leady').onSnapshot(
+    snap => { snap.docs.forEach(d => { state[d.id] = d.data(); }); render(); setStatus(''); },
+    e => setStatus(e && e.code === 'revoked' ? 'Přístup k uloženému stavu skončil.' : 'Uložený stav se nepodařilo načíst.')
+  );
+})();
+</script>

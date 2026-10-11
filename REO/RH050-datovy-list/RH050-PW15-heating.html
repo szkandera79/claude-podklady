@@ -1,0 +1,168 @@
+<!-- RH050-PW15 Heating — výkonová tabulka + křivky, A4 na výšku, značka REO HEATING -->
+<meta charset="utf-8">
+<title>RH050-PW15 Heating — REO HEATING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  :root{
+    --green:#2E6B33; --green-bright:#5BA32E; --green-tint:#EAF4DE;
+    --ink:#16201C; --body:#3A4540; --line:#9AA69E; --soft:#F5F9F1;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#fff; }
+  body{ font-family:Inter, "Helvetica Neue", Arial, sans-serif; color:var(--ink);
+        -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:210mm; height:297mm; padding:9mm 7mm 8mm; overflow:hidden;
+         display:flex; flex-direction:column; }
+
+  /* Hlavička */
+  header{ display:flex; align-items:center; justify-content:space-between;
+          padding-bottom:3.5mm; border-bottom:0.8mm solid var(--green-bright); }
+  header h1{ font-family:Poppins, Inter, sans-serif; font-weight:600; font-size:20pt;
+             margin:0; letter-spacing:.2pt; }
+  header h1 small{ display:block; font-family:Inter, sans-serif; font-weight:500;
+                   font-size:9.5pt; color:var(--green); letter-spacing:.3pt; margin-top:.5mm; }
+  header img{ height:18mm; width:auto; display:block; }
+
+  /* Tabulka */
+  table{ width:100%; border-collapse:collapse; table-layout:fixed; margin-top:4.5mm;
+         font-variant-numeric:tabular-nums; }
+  col.c-grp{ width:14.5mm } col.c-mode{ width:9mm } col.c-par{ width:33.5mm }
+  th,td{ border:0.25mm solid var(--line); height:6.5mm; padding:0 .3mm;
+         text-align:center; vertical-align:middle; white-space:nowrap; }
+  td{ font-size:9.4pt; }
+  td.par{ text-align:left; padding-left:1.4mm; font-size:8.4pt; color:var(--body); }
+  td.mode{ font-weight:700; font-size:8.5pt; }
+  td.grp{ font-size:7.6pt; line-height:1.25; white-space:normal; color:var(--body); }
+  td.grp b{ display:block; font-size:12pt; color:var(--green); margin-top:.6mm; }
+  tr.cop td:not(.grp):not(.mode){ font-weight:600; }
+  tr.cop td.par{ font-weight:600; color:var(--ink); }
+  tr.amb th{ background:var(--green-tint); font-size:10pt; font-weight:700; height:7mm; }
+  tr.amb th.lbl{ text-align:left; padding-left:1.6mm; font-size:9pt; font-weight:600; }
+  tr.gap td{ height:1.6mm; padding:0; background:var(--soft); border-left:0; border-right:0; }
+  tbody tr.zebra td:not(.grp):not(.mode){ background:#FAFBFA; }
+
+  /* Grafy */
+  .charts{ flex:1; display:grid; grid-template-columns:1fr; grid-template-rows:1fr 1fr; gap:3mm; margin-top:4mm; min-height:0; }
+  figure{ margin:0; border:0.25mm solid var(--line); border-radius:1.2mm; padding:1.5mm 2mm .5mm;
+          display:flex; flex-direction:column; min-height:0; position:relative; }
+  figcaption{ position:absolute; top:3.2mm; left:15mm; z-index:1; padding:.4mm 1.6mm;
+              background:rgba(255,255,255,.92); border-radius:.8mm;
+              font-family:Poppins, Inter, sans-serif; font-weight:600; font-size:10pt; }
+  figure svg{ flex:1; width:100%; min-height:0; display:block; }
+  .legend{ display:flex; flex-wrap:wrap; justify-content:center; gap:1.2mm 5mm; margin-top:3mm;
+           font-size:8.5pt; color:var(--body); }
+  .legend span{ display:inline-flex; align-items:center; gap:1.5mm; white-space:nowrap; }
+  .legend svg{ width:9mm; height:3.2mm; }
+</style>
+
+<div class="page">
+  <header>
+    <h1>RH050-PW15 Heating<small>Heating performance data · air-to-water heat pump</small></h1>
+    <img src="logo-reoheating.png" alt="REO HEATING">
+  </header>
+
+  <table id="perf">
+    <colgroup><col class="c-grp"><col class="c-mode"><col class="c-par"></colgroup>
+  </table>
+
+  <div class="charts">
+    <figure><figcaption>Curve of Heating Capacity Performance</figcaption><svg id="chCap"></svg></figure>
+    <figure><figcaption>Curve of COP Performance</figcaption><svg id="chCop"></svg></figure>
+  </div>
+  <div class="legend" id="legend"></div>
+</div>
+
+<script>
+// Hodnoty 1:1 z podkladu výrobce (RH050-PW15 Heating)
+const AMB = [-25,-20,-15,-12,-10,-7,-5,0,2,5,7,10,12,15,21];
+const D = {
+  35:{ MAX:{ cap:[5.5,6.9,8.3,9.2,9.8,10.6,11.2,12.7,13.2,14.1,14.8,15.3,15.5,15.8,16.3],
+             inp:[3.25,3.30,3.36,3.40,3.42,3.44,3.46,3.49,3.50,3.51,3.53,3.55,3.49,3.40,3.21],
+             cop:[1.71,2.10,2.46,2.69,2.85,3.09,3.25,3.65,3.77,4.03,4.19,4.32,4.46,4.67,5.06] },
+       MIN:{ cap:[2.8,3.2,3.7,3.9,4.1,4.5,4.6,5.1,5.3,5.7,5.9,6.1,6.2,6.3,6.5],
+             inp:[1.02,1.04,1.06,1.07,1.08,1.08,1.09,1.10,1.10,1.10,1.11,1.12,1.10,1.07,1.01],
+             cop:[2.70,3.09,3.46,3.64,3.84,4.12,4.27,4.66,4.81,5.13,5.32,5.48,5.65,5.91,6.42] } },
+  45:{ MAX:{ cap:[5.4,6.7,8.0,8.8,9.4,10.3,10.9,12.3,12.7,13.7,14.3,14.8,15.0,15.3,15.7],
+             inp:[3.67,3.73,3.80,3.85,3.87,3.89,3.91,3.95,3.96,3.97,3.99,4.01,3.94,3.84,3.63],
+             cop:[1.46,1.80,2.10,2.30,2.43,2.64,2.78,3.11,3.22,3.44,3.58,3.69,3.81,3.98,4.32] },
+       MIN:{ cap:[2.7,3.1,3.5,3.8,4.0,4.3,4.5,4.9,5.1,5.5,5.7,5.9,6.0,6.1,6.3],
+             inp:[1.16,1.18,1.20,1.22,1.23,1.23,1.24,1.25,1.26,1.26,1.27,1.27,1.25,1.22,1.15],
+             cop:[2.29,2.61,2.93,3.08,3.25,3.49,3.61,3.94,4.07,4.34,4.50,4.64,4.78,5.01,5.43] } },
+  55:{ MAX:{ cap:[5.1,6.4,7.6,8.5,9.0,9.8,10.4,11.8,12.2,13.1,13.7,14.2,14.4,14.7,15.0],
+             inp:[4.12,4.19,4.27,4.32,4.35,4.37,4.39,4.44,4.45,4.46,4.48,4.51,4.43,4.31,4.08],
+             cop:[1.24,1.53,1.79,1.96,2.07,2.25,2.37,2.66,2.74,2.93,3.05,3.15,3.25,3.40,3.69] },
+       MIN:{ cap:[2.6,3.0,3.4,3.6,3.8,4.1,4.3,4.7,4.9,5.2,5.5,5.7,5.7,5.8,6.0],
+             inp:[1.32,1.34,1.36,1.38,1.39,1.40,1.40,1.42,1.42,1.42,1.43,1.44,1.41,1.38,1.30],
+             cop:[1.94,2.21,2.48,2.61,2.75,2.96,3.06,3.34,3.45,3.68,3.81,3.93,4.05,4.24,4.60] } },
+};
+const PAR = [['cap','Heating capacity (kW)',1],['inp','Input power (kW)',2],['cop','COP',2]];
+
+// --- tabulka
+const t = document.getElementById('perf');
+const ambRow = () => `<tr class="amb"><th class="lbl" colspan="3">Ambient temp. (°C)</th>${AMB.map(a=>`<th>${String(a).replace('-','−')}</th>`).join('')}</tr>`;
+let h = `<thead>${ambRow()}</thead><tbody>`;
+[35,45,55].forEach((w,wi) => {
+  if (wi) h += `<tr class="gap"><td colspan="18"></td></tr>`;
+  ['MAX','MIN'].forEach((m,mi) => PAR.forEach(([k,label,dec],pi) => {
+    h += `<tr class="${k==='cop'?'cop':''}${mi?' zebra':''}">`;
+    if (mi===0 && pi===0) h += `<td class="grp" rowspan="6">Water temp. outlet<b>${w} °C</b></td>`;
+    if (pi===0) h += `<td class="mode" rowspan="3">${m}</td>`;
+    h += `<td class="par">${label}</td>` + D[w][m][k].map(v=>`<td>${v.toFixed(dec)}</td>`).join('') + `</tr>`;
+  }));
+});
+t.insertAdjacentHTML('beforeend', h + `</tbody><tfoot>${ambRow()}</tfoot>`);
+
+// --- grafy (kategorická osa X jako v originále)
+const SERIES = [
+  {w:35,m:'MAX',c:'#1F2A8A',mk:'diamond'}, {w:45,m:'MAX',c:'#D61FB7',mk:'square'},
+  {w:55,m:'MAX',c:'#8C8C8C',mk:'triangle'},{w:35,m:'MIN',c:'#E8B400',mk:'cross'},
+  {w:45,m:'MIN',c:'#3E86DB',mk:'star'},    {w:55,m:'MIN',c:'#2F9E44',mk:'circle'},
+];
+const NS='http://www.w3.org/2000/svg';
+function marker(mk,x,y,c,s){
+  const f=`fill="${c}"`, st=`stroke="${c}" stroke-width="${s*.45}"`;
+  switch(mk){
+    case 'diamond': return `<path d="M${x} ${y-s}L${x+s} ${y}L${x} ${y+s}L${x-s} ${y}Z" ${f}/>`;
+    case 'square':  return `<rect x="${x-s*.8}" y="${y-s*.8}" width="${s*1.6}" height="${s*1.6}" ${f}/>`;
+    case 'triangle':return `<path d="M${x} ${y-s}L${x+s} ${y+s*.8}L${x-s} ${y+s*.8}Z" ${f}/>`;
+    case 'cross':   return `<path d="M${x-s*.8} ${y-s*.8}L${x+s*.8} ${y+s*.8}M${x+s*.8} ${y-s*.8}L${x-s*.8} ${y+s*.8}" ${st}/>`;
+    case 'star':    return `<path d="M${x-s} ${y}H${x+s}M${x} ${y-s}V${y+s}M${x-s*.7} ${y-s*.7}L${x+s*.7} ${y+s*.7}M${x+s*.7} ${y-s*.7}L${x-s*.7} ${y+s*.7}" ${st}/>`;
+    default:        return `<circle cx="${x}" cy="${y}" r="${s*.8}" ${f}/>`;
+  }
+}
+function chart(id,key,yMin,yMax,step,yLabel){
+  const svg=document.getElementById(id), r=svg.getBoundingClientRect();
+  const W=r.width, H=r.height;
+  const px=document.querySelector('.page').getBoundingClientRect().width/210;   // 1 jednotka = 1 mm
+  const L=11*px, R=2*px, T=2*px, B=9.5*px, pw=W-L-R, ph=H-T-B;
+  const X=i=>L+pw*(i/(AMB.length-1)), Y=v=>T+ph*(1-(v-yMin)/(yMax-yMin));
+  const fs=2.9*px;
+  let s=`<rect x="${L}" y="${T}" width="${pw}" height="${ph}" fill="#F3F5F4"/>`;
+  for(let v=yMin; v<=yMax+1e-9; v+=step){
+    s+=`<line x1="${L}" x2="${L+pw}" y1="${Y(v)}" y2="${Y(v)}" stroke="#C9D1CC" stroke-width="${.22*px}"/>`;
+    s+=`<text x="${L-1.4*px}" y="${Y(v)+fs*.35}" text-anchor="end" font-size="${fs}" fill="#3A4540">${v}</text>`;
+  }
+  AMB.forEach((a,i)=>{
+    s+=`<line x1="${X(i)}" x2="${X(i)}" y1="${T}" y2="${T+ph}" stroke="#DDE3DF" stroke-width="${.22*px}"/>`;
+    s+=`<text x="${X(i)}" y="${T+ph+4*px}" text-anchor="middle" font-size="${fs}" fill="#3A4540">${String(a).replace('-','−')}</text>`;
+  });
+  s+=`<rect x="${L}" y="${T}" width="${pw}" height="${ph}" fill="none" stroke="#6F7C74" stroke-width="${.3*px}"/>`;
+  SERIES.forEach(se=>{
+    const v=D[se.w][se.m][key];
+    s+=`<polyline fill="none" stroke="${se.c}" stroke-width="${.5*px}" stroke-linejoin="round" points="${v.map((y,i)=>X(i)+','+Y(y)).join(' ')}"/>`;
+    v.forEach((y,i)=> s+=marker(se.mk,X(i),Y(y),se.c,.9*px));
+  });
+  s+=`<text x="${L+pw/2}" y="${H-1.2*px}" text-anchor="middle" font-size="${fs*1.05}" font-weight="600" fill="#16201C">Ambient temp. (°C)</text>`;
+  s+=`<text transform="translate(${3*px},${T+ph/2}) rotate(-90)" text-anchor="middle" font-size="${fs*1.05}" font-weight="600" fill="#16201C">${yLabel}</text>`;
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  svg.innerHTML=s;
+}
+chart('chCap','cap',2,18,4,'Heating capacity (kW)');
+chart('chCop','cop',1,7,1,'COP');
+
+document.getElementById('legend').innerHTML = SERIES.map(se =>
+  `<span><svg viewBox="0 0 30 10"><line x1="1" x2="29" y1="5" y2="5" stroke="${se.c}" stroke-width="1.6"/>${marker(se.mk,15,5,se.c,3)}</svg>${se.w} °C ${se.m}</span>`
+).join('');
+</script>

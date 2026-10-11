@@ -1,0 +1,864 @@
+[Text vytažený z RH-X50-vykonove-krivky.pdf]
+
+--- strana 1 ---
+RH X50
+Pro
+t
+o
+k
+o
+l výk
+onových charakt
+erist
+ik · t
+epelné čerpadl
+o vzd
+u
+ch–voda · R290
+Topení t
+opný výk
+on, pří
+k
+on a C
+OP podle venk
+ovn
+t
+epl
+t
+o
+y a výstupn
+t
+í
+epl
+t
+o
+y vody
+Venk
+ovn
+t
+epl
+o
+ta (°C) −25 −2
+0 −15 −12 −10 −7 −5 0
+2 5 7 10 12 15 21
+Výstupn
+t
+epl
+o
+ta
+vody
+35 °C
+Výstupn
+t
+epl
+o
+ta
+vody
+45 °C
+Výstupn
+t
+epl
+o
+ta
+vody
+55 °C
+Výstupn
+t
+epl
+o
+ta
+vody
+60 °C
+Výstupn
+t
+epl
+o
+ta
+vody
+65 °C
+Výstupn
+t
+epl
+o
+ta
+vody
+70 °C
+Výstupn
+t
+epl
+o
+ta
+vody
+75 °C
+MAX
+MIN
+MAX
+MIN
+MAX
+MIN
+MAX
+MIN
+MAX
+MIN
+MAX
+MIN
+MAX
+MIN
+Topný výk
+on (kW) 2
+3.1 27.0
+3
+0.9 33.3 3
+4.9 37.4
+39.1 41.7 42.8 46.7 49.3 55.8 60.1 63.1 69.0
+k
+Pří
+on (kW) C
+12.85 13.94 14.89 15.39 15.09 14.71 14.00 13.3
+4 12.95 12.96 12.96 13.0
+3 13.07 12.96 12.77
+OP 1.80 1.90
+2.10
+2.16 2.3
+0
+2.50
+2.70
+3.10
+3.3
+0
+3.60
+3.80
+4.3
+0
+4.60
+4.90 5.4
+0
+Topný výk
+on (kW) 5.1 6.8 8.5 9.4 10.2 11.4 12.2 14.8 15.8 17.4 18.4 19.8 2
+k
+Pří
+on (kW)4.4
+3
+4.50
+4.57 4.61 4.59 4.55 4.53
+C
+OP 1.2
+0 1.51 1.85 2.00
+2.2
+3
+2.51 2.70
+4.4
+0
+4.3
+0
+3.38 3.66 4.10
+4.24 4.2
+4.3
+3
+0
+0.8 22.3
+4.2
+0
+4.2
+0
+4.10
+25.2
+3.95
+4.71 4.95 5.41 6.38
+Topný výk
+on (kW) 19.2 2
+3.2 27.3
+29.7 3
+2.1 35.8 38.2 4
+0.8 41.3
+45.5 47.7 49.4 53.3 56.0 61.3
+Pří
+C
+k
+on (kW) 13.24 14.4
+3 15.44 15.96 15.81 15.63 16.00 16.21 16.60 17.3
+0 16.95 16.94 17.00 17.13 17.51
+OP 1.45 1.60 1.80 1.86 2.00
+2.3
+0
+2.46 2.50
+2.50
+2.68 2.80
+2.90
+3.15 3.3
+0
+3.50
+Topný výk
+on (kW) 9.0 8.8 8.7 8.6 9.5 10.8 11.7 14.1 15.1 16.6 17.8 19.7 2
+0.9 21.7 2
+3.2
+Pří
+C
+k
+on (kW) 6.75 6.2
+0 5.70 5.4
+0 5.38 5.35 5.3
+2 5.3
+0 5.2
+0 5.19 5.10 5.00
+OP 1.33 1.42 1.53 1.60 1.77 2.0
+3
+2.2
+0
+2.69 2.89 3.19 3.48 3.93
+4.93
+4.90
+4.80
+4.24 4.4
+3
+4.83
+Topný výk
+on (kW) 16.9 2
+0.8 24.8 27.2
+31.0
+33.1 35.5 37.6 38.4
+39.7 41.7 4
+3.1 46.5 49.3 54.8
+k
+Pří
+on (kW) 14.39 15.79 16.87 17.39 15.55 16.3
+4 17.10 16.84 16.75 16.60 16.60 16.59 16.50 16.90 17.50
+C
+OP 1.17 1.3
+0 1.50 1.56 2.00
+2.0
+3
+2.07 2.2
+0
+2.3
+0
+2.39 2.50
+2.60
+2.81 2.90
+3.10
+Topný výk
+on (kW) 8.4 8.2 7.9 7.7 8.4 9.5 10.2 12.7 13.7 15.3 16.5 18.5 19.8 2
+0.7 22.7
+Pří
+C
+k
+on (kW) 7.55 7.00 6.50 6.17 6.25 6.37 6.45 6.50 6.50 6.50 6.4
+0 6.2
+0 6.12 6.10 6.05
+OP 1.11 1.16 1.22 1.26 1.35 1.49 1.57 1.96 2.12 2.35 2.59 2.97 3.2
+3 3.4
+0
+3.77
+Topný výk
+on (kW) 11.7 17.0
+22.2 25.4 26.6 28.5 29.7 3
+2.4
+33.4
+35.0
+37.2
+38.9 42.8 44.7 49.0
+k
+Pří
+on (kW) 15.91 16.94 17.58 17.95 17.53 17.12 16.91 16.81 16.79 16.72 16.55 16.42 16.10 16.06 15.90
+C
+OP 0.74 1.00 1.3
+0 1.42 1.50 1.70 1.76 1.90
+2.00
+2.09 2.3
+0
+2.4
+0
+2.65 2.80
+3.06
+Topný výk
+on (kW) 5.9 6.7 7.4 7.9 8.5 9.5 10.2 12.4 13.3 14.7 15.9 17.6 18.7 19.6 21.3
+k
+Pří
+on (kW) 4.73 5.50 6.2
+0 6.60 6.69 6.82 6.91 7.00 7.10 7.11 7.10 7.00 6.90 6.90 6.87
+C
+OP 1.25 1.22 1.2
+0 1.19 1.28 1.4
+0 1.48 1.78 1.89 2.08 2.25 2.53
+2.71 2.84
+3.10
+Topný výk
+on (kW) — — — 2
+3.4 25.1 27.7 29.4
+3
+0.9 31.5 3
+2.4
+3
+4.2
+35.6 38.8 4
+0.9 45.0
+Pří
+C
+k
+on (kW) — — — 18.01 17.83 17.74 17.73 16.64 16.28 15.75 15.81 15.82 15.80 15.91 16.0
+3
+OP — — — 1.31 1.4
+0 1.60 1.66 1.90 1.90
+2.05 2.2
+0
+2.3
+0
+2.45 2.60
+2.81
+Topný výk
+on (kW) — — — 7.6 8.2 9.0 9.6 11.7 12.6 13.9 14.8 16.2 17.2 18.2 2
+0.1
+Pří
+C
+k
+on (kW) — — — 7.0
+3 7.15 7.3
+2 7.44 7.60 7.70 7.82 7.70 7.60 7.50 7.60 7.68
+OP — — — 1.08 1.14 1.2
+3 1.28 1.54 1.63 1.78 1.92 2.14 2.29 2.4
+0
+2.62
+Topný výk
+on (kW) — — — — 21.9 24.2 25.7 28.7 29.9 31.7 3
+2.3 3
+2.8 3
+4.0
+36.1 4
+0.3
+Pří
+C
+k
+on (kW) — — — — 17.47 17.66 17.70 16.93 16.66 16.3
+4 16.19 16.10 15.87 15.82 15.68
+OP — — — — 1.25 1.4
+0 1.45 1.70 1.80 1.94 2.00
+2.00
+2.14 2.3
+0
+2.57
+Topný výk
+on (kW) — — — — 8.3 9.7 10.1 11.6 12.2 13.1 13.8 15.0 15.7 16.8 18.9
+k
+Pří
+on (kW) — — — — 6.81 7.82 7.90 8.2
+0 8.3
+0 8.50 8.4
+0 8.2
+0 8.10 8.2
+0 8.4
+0
+C
+OP — — — — 1.22 1.24 1.28 1.41 1.47 1.54 1.65 1.82 1.94 2.0
+4 2.25
+Topný výk
+on (kW) — — — — — — 2
+0.8 2
+3.8 25.0
+26.9 27.0
+27.0
+27.2 28.2 —
+Pří
+C
+k
+on (kW) — — — — — — 17.25 17.0
+2 16.93 16.84 15.75 15.06 13.68 13.4
+3 —
+OP — — — — — — 1.2
+0 1.4
+0 1.50 1.60 1.70 1.80 1.99 2.10 —
+Topný výk
+on (kW) — — — — — — 9.6 11.1 11.6 12.5 13.0 13.7 14.2 15.4 —
+Pří
+C
+k
+on (kW) — — — — — — 8.4
+0 8.80 8.90 9.10 9.00 8.80 8.70 8.80 —
+OP — — — — — — 1.14 1.26 1.31 1.37 1.45 1.56 1.63 1.75 —
+Venk
+ovn
+t
+epl
+o
+ta (°C) −25 −2
+0 −15 −12 −10 −7 −5 0
+2 5 7 10 12 15 21
+í
+í
+í
+í
+í
+í
+í
+í
+í
+í
+MAX / MIN = provoz př
+i maximáln
+ím, resp. minimáln
+ím výk
+u
+on
+invert
+orového
+t
+t
+mi
+o hodno
+ě
+tami. Hodno
+t
+y výrobce pro
+ustálený provoz př
+i
+uvedených
+t
+epl
+o
+liši
+t podle hydrauliky, průt
+o
+ku a způsob
+u reg
+ulace. Hodno
+t
+y jso
+u zao
+kro
+u
+k
+ompresoru; jedno
+tka plyn
+ule reg
+ulu
+je výk
+on mezi
+tách. Skut
+ečné hodno
+t
+y v k
+onkrét
+n
+instalaci se moho
+u
+hleny na uvedený poče
+t
+dese
+t
+inných míst. RE
+O
+í
+HEATING · 1/4
+--- strana 2 ---
+RH X50
+Pro
+t
+o
+k
+o
+l výk
+onových charakt
+erist
+ik · t
+epelné čerpadl
+o vzd
+u
+ch–voda · R290
+Topení — výkonové křivky plná čára MAX, t
+enká čára MIN
+7
+0
+Topný výkon
+60
+50
+Topný výk
+on (kW)
+40
+30
+2
+0
+10
+0
+−25 −2
+0
+−15 −12 −10
+−7 −5 0
+Venk
+ovn
+2 5 7 10 12 15 21
+í
+t
+epl
+o
+ta (°C)
+7
+6
+Topný faktor COP
+5
+4
+C
+OP
+3
+2
+1
+0
+−25 −2
+−7 −5 0
+Venk
+ovn
+2 5 7 10 12 15 21
+í
+t
+epl
+o
+ta (°C)
+35 °C MAX 45 °C MAX 55 °C MAX 60 °C MAX 65 °C MAX7
+35 °C MIN 45 °C MIN 55 °C MIN 60 °C MIN 65 °C MIN 7
+0 °C MAX75 °C MAX
+0 °C MIN 75 °C MIN
+Kř
+ivky vycházej
+í z hodno
+t v tab
+ulce na stran
+1.
+ě
+O
+sa venk
+ovn
+t
+epl
+t
+o
+y je kat
+egorická (body odpovídaj
+í m
+ěřeným t
+epl
+o
+tám), nik
+o
+li
+lineárn
+í. RE
+O
+í
+HEATING · 2/4
+0
+−15 −12 −10
+--- strana 3 ---
+RH X50
+Pro
+t
+o
+k
+o
+l výk
+onových charakt
+erist
+ik · t
+epelné čerpadl
+o vzd
+u
+ch–voda · R290
+í
+í
+í
+í
+Chladicí výkon
+Chlazení chladic
+í výk
+on, pří
+k
+on a EER podle venk
+ovn
+í
+t
+epl
+o
+t
+y a výstupn
+t
+epl
+o
+t
+y vody
+Venk
+ovn
+t
+epl
+o
+ta (°C) 21 25 3
+0
+35 4
+3
+Chladic
+í výk
+on (kW)41.3 39.2
+36.6 3
+4.5 27.0
+MAX
+Pří
+k
+on (kW) 14.0
+4 14.3
+0 14.77 16.2
+0 13.99
+Výstupn
+t
+epl
+o
+ta vody
+7 °C
+í
+EER 2.94 2.70
+2.48 2.10 1.93
+Chladic
+í výk
+on (kW) 19.4 18.4 17.1 13.8 13.6
+MIN
+Pří
+k
+on (kW)3.18 3.60
+4.06 5.2
+0 5.35
+EER 6.11 5.15 4.21 2.65 2.54
+Chladic
+í výk
+on (kW) 50.8 47.7 4
+3.8 38.4 29.8
+MAX
+Pří
+k
+on (kW) 16.13 16.2
+0 16.3
+0 15.2
+0 13.37
+Výstupn
+t
+epl
+o
+ta vody
+18 °C
+EER3.15 2.90
+2.69 2.53
+2.2
+3
+Chladic
+í výk
+on (kW) 2
+0.3 19.6 17.1 16.1 11.3
+MIN
+Pří
+k
+on (kW) 5.61 5.70 5.57 5.49 4.41
+EER3.62
+3.42
+3.07 2.94 2.56
+Venk
+ovn
+t
+epl
+o
+ta (°C) 21 25 3
+0
+35 4
+3
+55
+50
+45
+on (kW)
+í výk
+Chladic
+40
+35
+30
+25
+2
+0
+15
+10
+7
+6
+5
+EER
+4
+3
+2
+1
+21 25 30 35 43
+Venk
+ovn
+t
+epl
+o
+ta (°C)
+í
+Chladicí faktor EER
+21 25 30 35 43
+Venk
+ovn
+t
+epl
+o
+ta (°C)
+í
+7 °C MAX 18 °C MAX7 °C MIN 18 °C MIN
+Pom
+ě
+r chladic
+í
+ho výk
+on
+„C
+OP“, graf ale po
+už
+u a pří
+k
+u
+on
+je zde označen jak
+o EER; v původn
+ím pro
+t
+k
+o
+o
+lu výrobce je
+t
+t
+en
+o
+ř
+ádek v tab
+ulce nadepsán
+ívá EER. Číselné hodno
+t
+y jso
+u převzat
+y beze zm
+ny. RE
+ě
+O
+HEATING · 3/4
+--- strana 4 ---
+RH X50
+Pro
+t
+o
+k
+o
+l výk
+onových charakt
+erist
+ik · t
+epelné čerpadl
+o vzd
+u
+ch–voda · R290
+Ohřev teplé vody t
+opný výk
+on, pří
+k
+on a C
+OP podle venk
+ovn
+t
+epl
+o
+t
+y
+Venk
+ovn
+í
+t
+epl
+o
+ta (°C) −25 −2
+0 −12 −5 2 7 2
+0
+0
+3
+3
+4
+Topný výk
+on (kW) 18.6 21.9 27.1 31.7 41.4 48.4 68.0 66.0 62.0
+Pří
+k
+on (kW) 15.64 14.25 12.98 12.3
+2 13.49 14.11 15.46 13.58 11.78
+C
+OP 1.19 1.54 2.09 2.57 3.07 3.4
+3
+4.46 4.86 5.26
+í
+Topný výk
+on (kW)
+7
+60
+50
+40
+30
+2
+10
+0
+Topný výkon — ohřev TV
+0
+−25 −2
+0
+−12 −5 2 7 2
+0 30 43
+Venk
+ovn
+t
+epl
+o
+ta (°C)
+í
+6
+Topný faktor COP — ohřev TV
+5
+4
+C
+OP
+3
+2
+1
+−25 −2
+−12 −5 2 7 2
+0 30 43
+Venk
+ovn
+t
+epl
+o
+ta (°C)
+í
+Rež
+im oh
+řevu t
+eplé vody, jedno
+oh
+řevu závisí
+na objemu zásobn
+tka prac
+u
+ku, t
+epl
+o
+í
+je na maximáln
+í výk
+on k
+ompresoru. Hodno
+t
+y výrobce pro
+ustálený provoz; skut
+ečná doba
+t
+stu
+ě
+dené vody a hydraulickém zapojen
+í. RE
+O
+HEATING · 4/4
+0

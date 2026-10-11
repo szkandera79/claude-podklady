@@ -1,0 +1,1427 @@
+[Text vytažený z PW_R290_Commercial_Heat_Pump_Technical_Manual_20250520 cs.pdf]
+
+--- strana 1 ---
+DC invertorové tepelné čerpadlo
+NÁVOD K POUŽITÍ
+DŮLEŽITÉ BEZPEČNOSTNÍ POKYNY PŘEČTĚTE SI
+A DODRŽUJTE VŠECHNY POKYNY
+TENTO NÁVOD SI USCHOVEJTE
+Verze: 1.5 Datum aktualizace: 20250519
+--- strana 2 ---
+Obsah
+DŮLEŽITÁ BEZPEČNOSTNÍ OPATŘENÍ...............................................................................................................- 1 -
+Část 1 Úvod.................................................................................................................. - 6 -
+1.1 Přehled produktu ................................................................................ ............................... - 6 -
+1.2 Obecné vlastnosti................................................................................................................- 6 -
+Část 2 Instalace.................................................................................................................... - 6 -
+2.1 Materiály potřebné k instalaci ...........................................................................................- 7 -
+2.2 Technické údaje ........................................................................................................................- 7 -
+2.3 Rozměry .............................................................................................................................. - 9 -
+2.4 Rozložený pohled ......................................................................................................................- 11 -
+2.5 Příprava před instalací ....................................................................................................... - 13 -
+2.6 Místo instalace............................................................................................................ - 13 -
+2.7 Umístění tepelného čerpadla ................................................................................................... - 14 -
+2.8 Odtok a kondenzace...................................................................................................... - 16
+2.9 Doporučené způsoby instalace ..................................................................................... - 18 -
+2.10 Připojení vody.........................................................................................................- 20 -
+2.11 Elektrické přípojky................................................................................................... - 21 -
+Část 3 Provoz tepelného čerpadla ...............................................................................................- 25 -
+3.1 Ovládací panel................................................................................................................... - 25 -
+3.2 Ikony na displeji ......................................................................................................................... - 26 -
+3.3 Struktura menu .....................................................................................................................- 26 -
+3.4 Spuštění a vypnutí .............................................................................................................- 31 -
+3.5 Ovládání pomocného zdroje tepla ...............................................................................................- 33 -
+3.6 Kontrola provozních parametrů ................................................................................................. - 35 -
+3.7 Dotaz na verzi softwaru jednotky ........................................................................................- 36 -
+Část 4 Chybové kódy a řešení problémů ................................................................................ - 37 -
+4.1 Kontrola chybového kódu ........................................................................................................... - 37 -
+4.2 Seznam chybových kódů .................................................................................................................... - 37 -
+4.3 Kontrola majitelem ................................................................................................................. - 40 -
+4.4 Odstraňování poruch .................................................................................................................. - 41 -
+Část 5 Obecná údržba ............................................................................................................... - 42 -
+Část 6 Připojení a provoz WIFI............................................................................................. - 45 -
+4.1 Upozornění k použití ........................................................................................................................- 45 -
+4.2 Stažení aplikace ..................................................................................................................... - 45 -
+4.3 Připojení telefonu k Wi-Fi .............................................................................................. - 45 -
+4.4 Zkontrolujte stav Wi-Fi zařízení .............................................................................................. - 45 -
+4.5 Přidání zařízení ...........................................................................................................................- 46 -
+4.6 Styl rozhraní .......................................................................................................................- 49 -
+4.7 Sdílení zařízení ............................................................................................................... - 50 -
+--- strana 3 ---
+DŮLEŽITÁ BEZPEČNOSTNÍ OPATŘENÍ
+1.Bezpečnostní opatření pro chladivo R290
+VAROVÁNÍ – Chladivo R290 (propan) je hořlavé a smí s ním manipulovat pouze kompetentní a odpovědní
+pracovníci za podmínek stanovených platnými bezpečnostními předpisy. Ke spalování dochází, když se HC smíchá se
+vzduchem v poměru přibližně 1,7 % (dolní mez hořlavosti) a 10,8 % (horní mez hořlavosti).
+1.1 Tepelné čerpadlo obsahuje hořlavé chladivo a patří do bezpečnostní skupiny A3 podle normy ISO 817 a ANSI /
+ASHRAE Standard 34. Obsahuje hořlavé chladivo R290 (propan C3H8). V případě úniku může unikající chladivo vytvořit
+v okolním vzduchu hořlavou nebo výbušnou atmosféru. Vytvořte kolem venkovní jednotky bezpečnou zónu se zvláštními
+požadavky na údržbu zařízení.
+1.2 Nebezpečí výbuchu
+Unikající chladivo může vytvořit hořlavou nebo výbušnou atmosféru v okolním vzduchu. Pro zabránění požáru a výbuchu
+v bezpečné zóně proveďte následující opatření:
+1.2.1 Udržujte mimo dosah zdrojů vznícení, jako jsou otevřený oheň, povrchy s vysokou teplotou, elektrická zařízení
+bez zdroje vznícení a mobilní zařízení s integrovanými bateriemi (např. mobilní telefony, zdravotní hodinky atd.).
+1.2.2 Povolené nástroje: Všechny nástroje používané v bezpečných oblastech musí splňovat normy a předpisy platné
+pro chladiva bezpečnostní skupiny A2L a A3, jako jsou bezkartáčové stroje (bezdrátové šroubováky), čerpací zařízení,
+kontejnery na odpad, pomocné instalační nástroje, vakuové pumpy, vodivé hadice, mechanické nástroje vyrobené z
+materiálů, které nevytvářejí jiskry, atd. Upozorňujeme, že nástroj musí být také vhodný pro použitý rozsah tlaku. Nástroj
+musí být v dobrém stavu.
+1.2.3 Elektrická zařízení musí splňovat požadavky pro oblasti s rizikem výbuchu.
+1.2.4. Nepoužívejte hořlavé materiály, jako jsou spreje nebo jiné hořlavé plyny.
+1.2.5 Vypouštění statické elektřiny: před zahájením práce se bezpečně dotkněte uzemněných předmětů, jako je
+zemnící vodič nebo kovová vodovodní trubka.
+1.2.6 Neodstraňujte, neblokujte ani nepřeklenujte bezpečnostní zařízení.
+1.2.7 Zakazuje se provádět jakékoli změny na přívodním/odvodním potrubí tepelného čerpadla, elektrickém připojení nebo
+kabelu.
+1.2.8 Nesmí být odstraněny žádné součásti ani těsnění.
+1.3 Chladivo R290 (propan) je bezbarvý, bezchutný, hořlavý plyn, který ve směsi se vzduchem tvoří výbušnou
+směs. Při manipulaci musí být vzduch vypuštěn a vypuštěný plyn
+- 1 -
+--- strana 4 ---
+chladivo musí být řádně zlikvidováno autorizovaným dodavatelem.
+1.4 Způsob likvidace úniku chladiva
+NEBEZPEČÍ! Únik chladiva může způsobit požár a výbuch a vést k velmi vážným zraněním nebo smrti. Při vdechnutí hrozí
+nebezpečí udušení.
+■ Zajistěte, aby byl prostor kolem venkovní jednotky velmi dobře větraný.
+■ NEKOUŘIT！ Zabraňte vzniku otevřeného ohně a jisker. Nikdy nezapínejte ani nevypínejte světla nebo elektrická
+zařízení.
+■ Evakuujte personál z nebezpečné oblasti.
+■ Odpojte napájení všech součástí systému z bezpečného místa.
+■ Odstraňte zdroj vznícení z nebezpečné oblasti.
+■ Upozorněte uživatele, aby během údržby nevnášeli zdroje vznícení do nebezpečné oblasti.
+■ Údržbové práce musí provádět autorizovaný dodavatel.
+■ Systém lze restartovat až po dokončení opravy systému.
+■ Zabraňte přímému kontaktu s kapalnými a plynnými chladivy.
+■ Nevdechujte výpary chladiva.
+NEBEZPEČÍ! Přímý kontakt s kapalnými a plynnými chladivy může způsobit vážné poškození zdraví, jako jsou omrzliny
+a/nebo popáleniny. Vdechování může způsobit riziko udušení.
+2.Důležité upozornění:
+Tato příručka obsahuje pokyny k instalaci a obsluze tepelného čerpadla s DC invertorem a vzduchovým zdrojem. V případě
+jakýchkoli dotazů týkajících se tohoto zařízení se obraťte na prodejce.
+Upozornění pro instalatéra: Tato příručka obsahuje důležité informace o instalaci, provozu a bezpečném používání
+tohoto produktu. Tyto informace by měly být po instalaci předány majiteli a/nebo provozovateli tohoto zařízení nebo
+ponechány na tepelném čerpadle nebo v jeho blízkosti.
+Upozornění pro uživatele: Tato příručka obsahuje důležité informace, které vám pomohou při obsluze a údržbě tohoto
+tepelného čerpadla. Uschovejte ji pro budoucí použití.
+VAROVÁNÍ – Před instalací tohoto produktu si přečtěte a dodržujte všechna varování a
+pokyny, které jsou součástí balení. Nedodržení bezpečnostních varování a pokynů může mít za následek vážné zranění,
+smrt nebo poškození majetku.
+3.Normy a standardy
+Tepelné čerpadlo s DC invertorem musí být instalováno v souladu s místními stavebními a instalačními předpisy podle
+požadavků příslušného úřadu nebo orgánu. Všechny místní předpisy mají přednost před národními předpisy. Pokud
+neexistují místní předpisy, řiďte se při instalaci nejnovějším vydáním Národního elektrotechnického předpisu (NEC) v
+místním vládním elektrotechnickém předpisu (CEC).
+-2 -
+--- strana 5 ---
+NEBEZPE
+— Nebezpečí úrazu elektrickým proudem nebo smrtelného úrazu elektrickým proudem.
+ČÍ
+Elektrické napájení tohoto produktu musí být nainstalováno autorizovaným nebo certifikovaným
+elektrikářem v souladu s národními elektrotechnickými předpisy a všemi platnými místními předpisy a
+nařízeními. Nesprávná instalace způsobí elektrické nebezpečí, které může vést k úmrtí nebo vážnému
+zranění uživatelů tepelného čerpadla, instalatérů nebo jiných osob v důsledku úrazu elektrickým
+proudem a může také způsobit škody na majetku. Přečtěte si a dodržujte konkrétní pokyny uvedené v
+této příručce.
+VAROVÁNÍ – Aby se snížilo riziko úrazu, nedovolte dětem používat tento produkt, pokud nejsou po celou dobu
+pod pečlivým dohledem.
+4.Informace pro spotřebitele a bezpečnost
+Tepelná čerpadla DC Inverter Air Source jsou navržena a vyrobena tak, aby po instalaci, provozu a údržbě v souladu s
+informacemi v této příručce a instalačními předpisy uvedenými v dalších částech poskytovala dlouholetý bezpečný a
+spolehlivý provoz. V celé příručce jsou uvedeny bezpečnostní
+Varování a upozornění jsou označena symbolem „ varování a upozornění.
+“. Přečtěte si všechna
+VAROVÁNÍ
+1. Neoprávněné osoby nesmějí zařízení instalovat samy, instalace musí provést kvalifikovaný instalatér. Důsledky
+(bezpečnostní nehody a vliv na používání) způsobené neoprávněnými osobami nesou uživatelé sami.
+2. S výjimkou pokynů odborného personálu nesmí neoprávněné osoby bez povolení demontovat stroj nebo jeho části,
+jinak může dojít k nehodám nebo poškození stroje.
+3. V blízkosti tohoto stroje nepoužívejte ručníky, barvy, benzín, alkohol a jiné hořlavé předměty, protože by mohlo dojít k
+požáru.
+4. Hlavní vypínač jednotky by měl být umístěn mimo dosah dětí, aby se zabránilo tomu, že se děti dostanou k vypínači a
+způsobí potenciální bezpečnostní riziko.
+5. Při bouřce vypněte hlavní vypínač zařízení, jinak by mohlo dojít k jeho poškození.
+6. Zařízení musí být vybaveno samostatným vypínačem, aby se zabránilo sdílení stejného obvodu s jinými elektrickými
+spotřebiči, a je třeba zvolit napájecí obvod a jistič (s funkcí ochrany proti úniku proudu), které odpovídají proudu pro
+napájení zařízení.
+7. Zařízení musí být instalováno s uzemňovacím vodičem o stanoveném průřezu. Nezapojujte uzemňovací vodič k
+uzemňovacímu vodiči plynových potrubí, trubek, hromosvodů nebo telefonních linek. Současně musí být spolehlivě
+uzemněno, aby se předešlo nehodám.
+8. Aby nedošlo k nehodám, nepřerušujte násilně napájení, když je jednotka v provozu.
+9. Pokud zařízení nebude delší dobu používáno, vypusťte vodu z potrubí, uzavřete
+-3 -
+--- strana 6 ---
+a odpojte hlavní vypínač napájení, aby nedošlo k nehodám.
+10. Zařízení musí používat speciální napájecí zdroj a napájecí napětí musí splňovat normu jmenovitého napětí.
+11. Pokud je napájecí kabel poškozený, je nutné použít napájecí kabel specifikovaný výrobcem a vyměnit jej odborným
+servisním personálem.
+VAROVÁNÍ
+1. Nevkládejte ruce ani cizí předměty do výstupu vzduchu, protože vysokorychlostní ventilátor může ohrozit osobní
+bezpečnost.
+2. Neodstraňujte kryt vzduchového vedení jednotky, jinak by vysokorychlostní provoz ventilátoru mohl způsobit zranění
+osob.
+3. Zařízení může být ovlivněno bleskem a jinými zdroji elektromagnetického záření. V takovém případě vypněte
+napájení a znovu jej zapněte.
+4. Při používání se ujistěte, že je vzduch v potrubí zcela vypuštěn, a poté otevřete doplňovací ventil, aby se do systému
+doplnila voda.
+5. Před uvedením stroje do provozu si pečlivě přečtěte všechna varování a bezpečnostní opatření.
+6. „Varování“ a „bezpečnostní opatření“ uvádějí různé důležité bezpečnostní záležitosti, které je třeba přísně dodržovat.
+7. Pracovní prostředí jednotky by mělo být daleko od zdrojů ohně. V případě požáru způsobeného problémy s vedením
+okamžitě vypněte hlavní vypínač a použijte hasicí přístroj s práškovým hasivem k uhašení ohně.
+8. Před opravou zařízení je nutné odpojit napájení.
+9. Je zakázáno umisťovat předměty na zařízení, aby se zabránilo nehodám způsobeným padajícími předměty během
+provozu stroje.
+5.Tipy pro úsporu energie tepelného čerpadla
+Pokud neplánujete dlouhodobě používat teplou vodu, můžete tepelné čerpadlo vypnout nebo snížit nastavení teploty o
+několik stupňů, abyste minimalizovali spotřebu energie.
+Nabízíme následující doporučení, která vám pomohou šetřit energii a minimalizovat náklady na provoz tepelného
+čerpadla, aniž by došlo ke snížení komfortu.
+1. Doporučuje se maximální teplota vody 60 °C.
+2. Doporučuje se vypnout tepelné čerpadlo, pokud je teplota okolního vzduchu nižší než -20 °C nebo pokud jste na
+dovolené déle než týden.
+3. Z důvodu úspory energie se doporučuje provozovat tepelné čerpadlo během dne, kdy je teplota okolí vyšší.
+4. Snažte se instalovat tepelné čerpadlo na větraných místech venku, pokud je to možné, chraňte tepelné čerpadlo před
+převládajícími větry, deštěm a sněhem. Doporučujeme použít kryt, pokud je to praktické, což sníží možnost námrazy a
+námrazy.
+-4 -
+--- strana 7 ---
+6.Upozornění týkající se přepravy, skladování a manipulace
+1. Tepelné čerpadlo musí být přepravováno, manipulováno a skladováno ve svislé poloze. Převrácení stroje může
+způsobit poškození kompresoru nebo jiných součástí.
+2. 3. Neohýbejte, neuvolňujte ani netahat za vnější elektrické kabely tepelného čerpadla. Nevkládejte žádné ostré
+předměty do mřížky ventilátoru ani do samotného ventilátoru.
+Nevyplachujte vnitřek tepelného čerpadla vodou, protože by mohlo dojít k úrazu elektrickým proudem nebo požáru.
+Před jakýmkoli čištěním a/nebo údržbou odpojte hlavní napájení.
+7.Upozornění týkající se recyklace a likvidace jednotky
+Tento štítek označuje, že výrobek nesmí být likvidován společně s ostatním domácím odpadem v celé EU. Aby se
+zabránilo potenciálnímu poškození životního prostředí nebo lidského zdraví v důsledku nekontrolované likvidace odpadu,
+měly by být materiální zdroje zodpovědně recyklovány a využívány. Chcete-li vrátit použité zařízení, využijte recyklační a
+sběrný systém nebo se obraťte na prodejce, u kterého jste výrobek zakoupili. Ten může tento výrobek recyklovat
+ekologickým a bezpečným způsobem.
+-5 -
+--- strana 8 ---
+Část 1 Úvod
+1.1 Přehled produktu
+Tepelná čerpadla DC Inverter Air Source přenášejí teplo z okolního vzduchu do vody a poskytují vysokoteplotní horkou vodu
+až do 78 °C. Unikátní vysokoteplotní tepelné čerpadlo se široce používá pro vytápění domů. S
+Díky inovativní a pokročilé technologii může tepelné čerpadlo velmi dobře fungovat při okolní teplotě -25 °C s vysokou
+výstupní teplotou až 65 °C, což zajišťuje kompatibilitu se systémy s radiátory běžné velikosti
+bez nutnosti doplňování. Ve srovnání s tradičními olejovými/LPG kotli produkuje tepelné čerpadlo s DC invertorem až o
+50 % méně CO2 a zároveň šetří 80 % provozních nákladů.
+Naše tepelná čerpadla jsou nejen vysoce účinná, ale také snadno a bezpečně ovladatelná.
+1.2 Obecné vlastnosti
+1. Nízké provozní náklady a vysoká účinnost
+·Vysoký koeficient výkonu (COP) až 5 vede k nižším provozním nákladům ve srovnání s tradiční technologií ASHP.
+·Není nutné používat přídavný ponorný ohřívač.
+2. Snížené investiční náklady
+·Jednoduchá instalace
+3. Vysoká úroveň komfortu
+·Vysoká teplota skladování vede ke zvýšené dostupnosti teplé vody.
+4. Žádné potenciální nebezpečí vznícení, otravy plynem, výbuchu, požáru nebo úrazu elektrickým proudem, které jsou
+spojeny s jinými topnými systémy.
+5. Digitální regulátor udržuje požadovanou teplotu vody.
+6. Kompozitní skříň s dlouhou životností a odolností proti korozi odolává i drsným klimatickým podmínkám.
+7. Kompresor HIGHLY zajišťuje vynikající výkon, mimořádnou energetickou účinnost, odolnost a tichý provoz.
+8. Autodiagnostický ovládací panel monitoruje a řeší problémy s provozem tepelného čerpadla, aby byl zajištěn
+bezpečný a spolehlivý provoz.
+9. Inteligentní digitální ovladač s uživatelsky přívětivým rozhraním a modrým LED podsvícením.
+10. Samostatná izolovaná elektrická komora zabraňuje vnitřní korozi a prodlužuje životnost tepelného čerpadla.
+11. Tepelné čerpadlo může pracovat při teplotě okolního vzduchu až do -25 °C.
+Část 2 Instalace
+Následující obecné informace popisují, jak nainstalovat tepelné čerpadlo s DC invertorem a vzduchovým zdrojem.
+Poznámka: Před instalací tohoto produktu si přečtěte a dodržujte všechna varování a pokyny. Tepelné čerpadlo
+smí instalovat pouze kvalifikovaný servisní technik.
+-6 -
+--- strana 9 ---
+2.1 Materiály potřebné k instalaci
+Pro všechny instalace tepelných čerpadel jsou potřebné následující položky, které musí dodat instalatér:
+1. Instalatérské armatury.
+2. 3. Rovný povrch pro správný odtok.
+Zajistěte, aby bylo k dispozici vhodné elektrické napájení. Elektrické specifikace najdete na typovém štítku tepelného
+čerpadla. Poznamenejte si uvedený jmenovitý proud. U tepelného čerpadla není potřeba žádná propojovací
+skříňka; připojení se provádí uvnitř elektrické skříně tepelného čerpadla. Potrubí lze připojit přímo k plášti tepelného
+čerpadla.
+4. 5. 6. 7. Pro elektrické napájení se doporučuje použít potrubí z PPR/PVC.
+V případě nízkého tlaku vody použijte posilovací čerpadlo pro čerpání vody.
+Na přívodu vody je nutný filtr.
+Potrubí by mělo být izolováno, aby se snížily tepelné ztráty.
+Poznámka: Pro snadnou údržbu doporučujeme instalovat uzavírací ventily na přívodní a odtokové vodovodní přípojky.
+2.2 Technické údaje
+Model PW150-DKZLRS-E PW300-DKZLRS-E
+Topné podmínky – teplota okolí (DB/WB): 7/6 °C, teplota vody (vstup/výstup): 30/35 °C
+Rozsah topného výkonu (kW) 18,4~49,25 35,2~92
+Rozsah příkonu topení (kW) 4,23~12,96 7,0~23,8
+Rozsah COP 3,8~4,3 3,86~5,02
+Podmínky pro ohřev teplé vody – teplota okolí (DB/WB): 20/15 °C, teplota vody (vstup/výstup): 15/55 °C
+Rozsah topného výkonu (kW) 23,8~68 40,0~120
+Rozsah příkonu topení (kW) 4,23~15,46 9,0~29,5
+Rozsah COP 4,39~5,62 4,06~5,5
+Chladicí podmínky – teplota okolí (DB/WB): 35/24 °C, teplota vody (vstup/výstup): 12/7 °C
+Rozsah chladicího výkonu (kW) 13,8~34,5 25~66
+Rozsah příkonu chlazení (kW) 5,2~16,2 8,92~30,7
+Rozsah EER 2,1~2,65 2,15~2,8
+Úroveň ERP (35 °C) A A+++
+Chladivo R290/4,0 kg R290/8,0 kg
+Napájení
+Max. příkon (kW) 20 40
+Max. proud (A) 32 64
+-7 -
+--- strana 10 ---
+Pojistka nebo jistič (A) 40 80
+Průměr vodiče mm² 10 mm 22 mm²
+Průměr trubky (palce) G1,5" G2,0"
+Hlučnost dB(A) ≤62 ≤65
+Čistá hmotnost (kg) 370 745
+Čistý rozměr (D/Š/V) mm 1195×980×1900 2510 × 979 × 1882
+Provozní teplota okolí -25~43 -25~43
+Teplota vody na výstupu (℃) 20~78 ℃ (TUV) 20~78 ℃ (TUV)
+Teplota vody na výstupu (℃) 20~78℃（Ohřev） 20~78℃（Vytápění）
+Teplota vody na výstupu (℃) 7~30 °C (chlazení) 7~30℃（Chlazení）
+Poznámka:
+Výše uvedené konstrukční řešení a specifikace se mohou bez předchozího upozornění změnit z důvodu vylepšení produktu.
+Podrobné specifikace jednotek naleznete na typovém štítku na jednotkách.
+Pro zajištění bezpečného provozu je nutná správná instalace. Požadavky na tepelná čerpadla zahrnují následující:
+1. Rozměry kritických připojení.
+2. Montáž na místě (je-li požadována).
+3. Vhodné umístění a volný prostor.
+4. Správné elektrické zapojení.
+5. Adekvátní průtok vody.
+Tato příručka obsahuje informace potřebné ke splnění těchto požadavků. Před pokračováním v instalaci si pečlivě
+prostudujte všechny postupy použití a instalace.
+-8 -
+--- strana 11 ---
+2.3 Rozměry PW150-
+Jednotka: mm
+DKZLRS-E
+-9 -
+--- strana 12 ---
+PW300-DKZLRS-E
+-10 -
+--- strana 13 ---
+2.4 Rozložený pohled
+PW150-DKZLRS-E
+-11 -
+--- strana 14 ---
+PW300-DKZLRS-E
+-12 -
+--- strana 15 ---
+2.5 Příprava před instalací
+1. Ujistěte se, že místo je dostatečně velké, aby pojalo veškeré zařízení, a že má dostatek prostoru pro provoz.
+2. Změřte dráhu zvedání, abyste se ujistili, že cesta k místu instalace je volná, a zabránili tak tomu, aby se zařízení
+během instalace dostalo na místo.
+3. Ověřte, zda je kapacita elektroměru a kapacita vodičů dostatečná a zda fáze (třífázová, dvoufázová) splňuje
+požadavky.
+4. Naplánujte rozmístění zařízení podle místa zákazníka. Snažte se o co nejkratší a nejrovnější vodovodní potrubí a
+dostatek prostoru pro provoz a údržbu.
+6. Platné předpisy vyžadují, aby byla topná instalace před uvedením do provozu zkontrolována. Kontrolu musí provést
+kvalifikovaná osoba a musí být zdokumentována. V případě výměny tepelného čerpadla musí být instalace znovu
+zkontrolována. V případě instalace s uzavřenými topnými systémy se ujistěte, že potrubí má odvzdušňovací ventil
+(automatický odvzdušňovací ventil je součástí tepelného čerpadla). V případě potřeby může instalační technik přidat do
+potrubí další odvzdušňovací ventily.
+7.Požadavky na instalaci jednotky:
+Výška jednotky od země by měla být větší než 30 cm a v oblastech s intenzivním výskytem ledu a sněhu by měla být
+větší než 50 cm.
+2.6 Místo instalace
+UPOZORNĚNÍ!
+1. NEINSTALUJTE tepelné čerpadlo v blízkosti nebezpečných materiálů a míst.
+2. NEINSTALUJTE tepelné čerpadlo pod hlubokými šikmými střechami bez okapů, které by umožňovaly pronikání
+dešťové vody smíchané s nečistotami do jednotky.
+3. Umístěte tepelné čerpadlo na rovný, mírně nakloněný povrch, například betonovou nebo prefabrikovanou desku. To
+umožní správný odtok kondenzátu a dešťové vody ze spodní části jednotky. Pokud je to možné, deska by měla být
+umístěna ve stejné výšce nebo mírně výše než filtrační systém/zařízení.
+2.6.1 Podrobnosti o instalaci
+Všechna kritéria uvedená v následujících částech odrážejí minimální volné prostory. Každá instalace však musí být také
+vyhodnocena s přihlédnutím k převládajícím místním podmínkám, jako je blízkost a výška stěn a blízkost veřejně
+přístupných oblastí. Tepelné čerpadlo musí být umístěno tak, aby bylo zajištěno volné prostory na všech stranách pro
+údržbu a kontrolu.
+1. Místo instalace tepelného čerpadla musí být dobře větrané a přívod/odvod vzduchu nesmí být ničím bráněn.
+2. Místo instalace musí mít dobrý odtok a být postaveno na pevném podkladu.
+3. Neinstalujte jednotku v místech, kde se hromadí znečištění, jako jsou agresivní plyny (chlor nebo kyseliny), prach,
+písek, listí atd.
+4. Pro snazší a lepší údržbu a odstraňování poruch by v okolí jednotky neměly být žádné překážky.
+-13 -
+--- strana 16 ---
+blíže než 1 m. A žádné překážky ve vertikálním směru do 2 m od jednotky pro větrání. (Viz obrázek 1)
+Obrázek 1
+5. Tepelné čerpadlo musí být instalováno s nárazuvzdornými pouzdry, aby se zabránilo vibracím a/nebo nevyváženosti.
+6. I když je ovladač vodotěsný, je třeba dbát na to, aby nebyl vystaven přímému slunečnímu záření a vysokým teplotám.
+Kromě toho by mělo být tepelné čerpadlo umístěno tak, aby byl zajištěn dobrý výhled na ovladač.
+7. Potrubí musí být instalováno s podpěrami, aby se zabránilo možnému poškození v důsledku vibrací. Tlak tekoucí
+vody by měl být udržován nad 196 kPa. V opačném případě by mělo být nainstalováno posilovací čerpadlo.
+8. Přijatelný rozsah provozního napětí by měl být v rozmezí ±10 % jmenovitého napětí.
+⚫ Z bezpečnostních důvodů musí být tepelné čerpadlo uzemněno.
+2.7 Umístění tepelného čerpadla
+1. Tepelné čerpadlo by mělo být pevně připevněno k podkladu, nejlépe betonovému.
+2. Výška instalace by měla být ≥300 mm (záleží na výšce odtoku a výšce sněhu v dané lokalitě).
+-14 -
+--- strana 17 ---
+PW150-DKZLRS-E: Zákazník musí k upevnění jednotky k montážní základně použít šrouby M8.
+PW300-DKZLRS-E：Zákazník musí k upevnění jednotky k montážní základně použít šrouby M10.
+-15 -
+--- strana 18 ---
+≥300 mm
+2.8 Odvodnění a kondenzace
+1. Při provozu jednotky dochází k kondenzaci z výparníku, která odtéká rovnoměrným tempem v závislosti na teplotě a
+vlhkosti okolního vzduchu. Čím vlhčí jsou okolní podmínky, tím více kondenzace vzniká. Spodní část jednotky slouží jako
+vana, která zachycuje dešťovou vodu a kondenzát.
+2. Odtokové otvory, které se nacházejí na spodní vaně základny jednotky, udržujte vždy čisté od nečistot.
+3. Podvozek je vybaven několika odtokovými otvory (na obrázku níže označenými fialovou a modrou barvou), které
+umožňují přímý odtok kondenzované vody a zabraňují hromadění vody, které by mohlo způsobit zamrznutí.
+4. Zařízení instalujte pokud možno na dobře odvodněném místě. K tomu je vhodné pod uvedený otvor umístit vrstvu
+štěrku, písku nebo podobného materiálu. Pokud je odtokový otvor tepelného čerpadla zakryt montážní základnou nebo
+podlahou, zvedněte jednotku tak, aby pod ní byl volný prostor nejméně 100 mm.
+5. Pokud je zařízení instalováno na terase nebo fasádě, musí být výstup kondenzátu veden do odtoku, aby se zabránilo
+nepříjemnostem a/nebo škodám způsobeným kapající kondenzovanou vodou. Pokud je instalace prováděna v oblasti,
+kde může být teplota po dlouhou dobu pod 0 °C, nepřipojujte odtokový výstup k centrálnímu vodovodnímu potrubí, ale
+odvodňujte přímo, aby nedošlo k zamrznutí vodovodního potrubí.
+-16 -
+--- strana 19 ---
+PW150-DKZLRS-E：
+PW300-DKZLRS-E：
+-17 -
+--- strana 20 ---
+2.9 Doporučené způsoby instalace
+Tepelné čerpadlo s DC invertorem může zajišťovat vytápění/chlazení a ohřev užitkové vody. Pro vytápění prostor se
+používají podlahové topné smyčky a radiátory, pro chlazení prostor se používají fancoilové jednotky. Užitková voda je
+dodávána z nádrže na užitkovou vodu připojené k tepelnému čerpadlu.
+Tepelná čerpadla mohou být vybavena cirkulačními vodními čerpadly podle potřeby (volitelně). Při instalaci cirkulačního
+vodního čerpadla by instalatéři měli připojit tepelné čerpadlo k dalším částem, včetně vyrovnávací nádrže (pro
+vytápění/chlazení prostor) a zásobníku teplé vody (pro ohřev teplé užitkové vody). Jsou také potřebné vnější armatury,
+včetně pojistného ventilu, ventilu pro plnění vodou a trojcestného ventilu. Do zásobníku vody je třeba přidat teplotní čidlo.
+Do zásobníku teplé užitkové vody nebo vyrovnávacího zásobníku lze nainstalovat přídavný elektrický ohřívač, který
+může přijímat řídicí signál z tepelného čerpadla.
+1) Schéma instalace systému je uvedeno na obrázku níže.
+2) Třícestný ventil: V režimu ohřevu teplé užitkové vody se třícestný ventil zapne. V režimu vytápění nebo chlazení se
+třícestný ventil vypne.
+3) Pokud vytápění (nebo chlazení) a ohřev teplé užitkové vody nedosáhnou nastavené teploty, má přednost ohřev teplé
+vody.
+4) Nádrž na teplou vodu s cívkou pro ohřev užitkové vody by měla být speciálně přizpůsobena.
+5) Tepelná výměnná kapacita cívky by měla být ≥ jmenovitému topnému výkonu tepelného čerpadla.
+6) Jednotka je dodávána připravená k provozu a je naplněna chladivem R290.
+7) Chladivo R290 je hořlavé a výbušné, je zakázáno jej instalovat v prostředí, kde se nacházejí provozní nebo
+potenciální zdroje vznícení.
+-18 -
+--- strana 21 ---
+Schematický diagram instalace sekundárního cyklu
+-19 -
+--- strana 22 ---
+2.10 Vodní přípojky
+2.10.1 Vodní přípojky na tepelném čerpadle
+Na přívodní a odvodní potrubí se doporučuje instalovat rychlospojky. Pro potrubí tepelného čerpadla se doporučuje
+použít trubky z nerezové oceli nebo PPR. Přívodní a odvodní potrubí tepelného čerpadla je kompatibilní s trubkovými
+spojkami z nerezové oceli nebo PPR.
+UPOZORNĚNÍ — Ujistěte se, že požadavky na průtok a obratovou rychlost vody z vodovodu lze dodržet i po instalaci
+dalších tepelných čerpadel a omezení potrubí.
+2.10.2 Požadavky na instalatérské práce
+1. Pokud tlak vody překročí 490 kPa, použijte redukční ventil k snížení tlaku vody pod 294 kPa.
+2. Každá část připojená k jednotce musí být připojena volným spojem a instalována s mezilehlým ventilem.
+3. Ujistěte se, že veškeré instalatérské práce byly řádně dokončeny, a poté proveďte zkoušku těsnosti a tlakovou
+zkoušku.
+4. Všechny potrubí a potrubní armatury musí být izolovány, aby se zabránilo tepelným ztrátám.
+5. Na nejnižším místě systému nainstalujte vypouštěcí ventil, aby bylo možné systém v případě mrazu vypustit (zimní
+údržba).
+6. Na výstupní přípojku vody nainstalujte zpětný ventil, aby se zabránilo zpětnému sifonování při zastavení vodního
+čerpadla.
+7. Aby se snížil zpětný tlak, potrubí by mělo být instalováno vodorovně
+8. A minimalizujte počet kolen (90stupňových spojů). Pokud je vyžadován vyšší průtok, nainstalujte obtokový ventil.
+9. Před připojením tepelného čerpadla je nutné potrubí propláchnout, aby žádné nečistoty nepoškodily součásti.
+10. Směr přívodu a odvodu topné/chladicí vody musí být připojen podle označených oblastí na tepelném čerpadle.
+11. Ve vodním okruhu tepelného čerpadla musí být nainstalován vodní filtr, aby se zabránilo ucpání nebo zúžení
+způsobenému nečistotami v instalaci. Filtr MUSÍ být nainstalován před naplněním instalace vodou a v zpětném
+potrubí stroje, aby se zabránilo vniknutí znečištěné vody do výměníku tepla (kondenzátoru). Vodní filtr by měl být
+zkontrolován a v případě potřeby vyčištěn alespoň jednou ročně. U nové instalace je však vhodné jej zkontrolovat
+během prvních několika měsíců od uvedení do provozu.
+12. Veškeré potrubí vodního okruhu MUSÍ být izolováno, aby se zabránilo kondenzaci během provozu v režimu chlazení
+-20 -
+--- strana 23 ---
+a snížení chladicího a topného výkonu, jakož i aby se zabránilo zamrzání venkovních potrubí v zimě. Minimální
+tloušťka izolace potrubí by měla být 20 mm, nejlépe s izolací z uzavřených buněk nebo parotěsnou zábranou. Ve
+venkovních prostorách vystavených slunečnímu záření musí být izolace chráněna před účinky degradace.
+13. Cirkulační čerpadlo vody musí být vždy v provozu (i když jednotka neběží), aby se zabránilo možnému poškození v
+důsledku zamrznutí. I v pohotovostním režimu je cirkulační čerpadlo řízeno přímo z jednotky, která zohledňuje
+venkovní teplotu a teplotu v potrubí a rozhoduje, zda bude voda v systému cirkulovat.
+14. DŮLEŽITÉ: I když je jednotka vybavena ochranou proti zamrznutí, v případě poruchy oběhového čerpadla nebo
+problému s napájením stále existuje riziko poškození v důsledku zamrznutí. Během instalace se důrazně doporučuje
+použít nemrznoucí směs (ethylenglykol). Pokud je teplota vzduchu nižší než 0 °C, musí být použito dostatečné
+množství glykolu.
+2.11 Elektrické připojení
+VAROVÁNÍ — Nebezpečí úrazu elektrickým proudem nebo smrtelného úrazu elektrickým proudem.
+Před zahájením instalace tepelného čerpadla se ujistěte, že jsou odpojeny všechny vysokonapěťové
+obvody. Kontakt s těmito obvody může vést k úmrtí nebo vážnému zranění uživatelů, instalatérů nebo
+jiných osob v důsledku úrazu elektrickým proudem a může také způsobit škody na majetku.
+UPOZORNĚNÍ — Před odpojením při údržbě tepelného čerpadla označte všechny vodiče. Chyby v zapojení
+mohou způsobit nesprávný a nebezpečný provoz. Po údržbě zkontrolujte a zajistěte správný provoz.
+2.11.1 Napájení
+1. 2. 3. Pokud je napájecí napětí příliš nízké nebo příliš vysoké, může dojít k poškození a/nebo nestabilnímu provozu
+tepelného čerpadla v důsledku vysokých spouštěcích proudů při startu.
+Minimální startovací napětí by mělo být vyšší než 90 % jmenovitého napětí. Přijatelný rozsah provozního napětí by
+měl být v rozmezí ±10 % jmenovitého napětí.
+Zajistěte, aby specifikace kabelů splňovaly správné požadavky pro konkrétní instalaci. Vzdálenost mezi místem
+instalace a síťovým napájením ovlivní tloušťku kabelu.
+Při výběru kabelů, jističů a izolačních spínačů postupujte podle místních elektrotechnických norem.
+Ujistěte se, že specifikace kabelů splňují správné požadavky pro konkrétní instalaci.
+Vzdálenost mezi místem instalace a síťovým napájením ovlivní tloušťku kabelu. Při výběru kabelů, jističů a izolačních
+spínačů postupujte podle místních elektrotechnických norem.
+-21 -
+--- strana 24 ---
+Model Napájení Max. proud (A) Pojistka/jistič (A) Průměr vodiče
+PW150-DKZLRS-E 380 V/3 fáze/50–60 Hz 32 40 10 mm
+PW300-DKZLRS-E 380 V/3 fáze/50–60 Hz 64 80 22 mm²
+Třífázový příkon
+2.11.2 Uzemnění a nadproudová ochrana
+Aby se zabránilo úrazu elektrickým proudem v případě úniku z jednotky, nainstalujte tepelné čerpadlo v souladu s
+místními elektrotechnickými normami.
+1. Nepřerušujte často napájení tepelného čerpadla, protože by to mohlo zkrátit jeho životnost.
+2. Při instalaci nadproudové ochrany se ujistěte, že je splněn správný jmenovitý proud pro tuto konkrétní instalaci.
+3. Pokud je třeba, aby byl pomocný ohřívač řízen regulátorem tepelného čerpadla, musí být relé (nebo napájení)
+pomocného ohřívače připojeno k příslušnému výstupu regulátoru.
+-22 -
+--- strana 25 ---
+2.12 Elektrické schéma zapojení
+1. Třífázový systém (PW150-DKZLRS-E)
+-23 -
+--- strana 26 ---
+3 Třífázový systém (PW300-DKZLRS-E)
+-24 -
+--- strana 27 ---
+Část 3 Provoz tepelného čerpadla
+3.1 Ovládací panel
+-25 -
+--- strana 28 ---
+3.2 Ikona displeje
+Ikona Význam Ikona Význam
+Režim topení Nízký výkon
+Režim ohřevu teplé vody Stav špičkového odběru elektřiny
+Režim chlazení Režim bezplatné elektřiny
+Automatický režim Normální provoz Wi-Fi
+Zamknutí obrazovky Časování
+Odmrazování Chyba
+Dezinfekce
+Definice tlačítek
+Tlačítko Popis Funkce
+Zapnout/vypnout Zapnutí nebo vypnutí tepelného čerpadla.
+Dotaz Zkontrolujte provozní parametry, aktuální kód poruchy, verzi softwaru. Vraťte se
+na vyšší úroveň.
+Nastavit
+Přejděte k dalšímu kroku při programování plánu v struktuře menu a potvrďte
+výběr pro vstup do podmenu struktury menu.
+Režim Přepněte provozní režim tepelného čerpadla.
+3.3 Struktura menu
+3.3.1 O struktuře menu
+Strukturu menu můžete použít k přečtení a konfiguraci nastavení, která NEJSOU určena pro každodenní použití. Co
+můžete ve struktuře menu vidět a dělat, je popsáno v příslušných částech.
+3.3.2 Nastavení
+Kliknutím na hlavním rozhraní pro vstup do nabídky nastavení, kde můžete nastavit parametry kabelového ovladače,
+-26 -
+--- strana 29 ---
+čas a datum, časování, nastavení Wi-Fi, ruční odmrazování, nastavení historických poruch atd.
+3.3.3 Přepínač jazyka
+Klikněte na „ “ (Nastavení) na hlavním rozhraní, abyste vstoupili do nabídky nastavení uživatele, klikněte na první
+položku „Display setting“ (Nastavení displeje), abyste vstoupili do nastavení displeje kabelového ovladače, a poté
+klikněte na první položku „Language“ (Jazyk), abyste vstoupili do rozhraní pro výběr jazyka (obrázek 1). Po výběru
+jazyka se zobrazí výzva na obrázku 2. Po kliknutí na „√“ se kabelový ovladač restartuje a po restartu bude přepnutí
+jazyka úspěšné.
+3.3.4 Nastavení systémového času a data
+Klikněte na „
+“ ( Nastavení) na hlavním rozhraní, abyste vstoupili do nabídky uživatelských nastavení, klikněte na
+druhou položku „Time and date“ (Čas a datum), abyste vstoupili do nastavení systémového času a data (jak je
+znázorněno níže), a klikněte na zobrazené číslo, abyste provedli změnu. Po provedení změny klikněte na „ “
+( Z m ě n i t n a s t a v e n í ), abyste se vrátili na hlavní rozhraní.
+-27 -
+--- strana 30 ---
+3.3.5 Nastavení časování
+Klikněte na tlačítko „ “ (Nastavení časovače) na hlavním rozhraní, abyste vstoupili do nabídky, vyberte třetí položku
+„Timer“ (Časovač) a přejděte do nastavení časovače, kde můžete nastavit zapnutí a vypnutí časovače.
+(1) Nastavení zapnutí a vypnutí časovače:
+◎ Denní plán:
+Kliknutím zobrazíte jednotlivé nastavení časování a vstoupíte do rozhraní pro nastavení skupinového časování (obrázek
+4). Klikněte na „Start hour“ (Začátek hodiny), „Start minute“ (Začátek minuty), „End hour“ (Konec hodiny), „End minute“
+(Konec minuty), klikněte na příslušné okno, které se zobrazí, a proveďte nastavení podle rozsahu, po nastavení klikněte
+na „√“ pro návrat na stránku časování.
+◎ Týdenní plán:
+Vyberte druhou položku v nabídce časování zapnutí a vypnutí, kliknutím přejděte do rozhraní týdenního časování (obrázek 1
+níže) a klikněte na týdenní stupnici podle skutečné situace.
+Kliknutím na „NEXT“ (další) (obrázek 1 níže) přejdete do rozhraní týdenního časování (obrázek 2 níže), kde si můžete
+prohlédnout nastavení časování jednotlivých skupin. Zbývající operace jsou stejné jako u denního časování.
+-28 -
+--- strana 31 ---
+◎ Zrušení časování
+Vyberte třetí položku v nabídce časování, klikněte na „ “ (Potvrdit zrušení časování) v okně s potvrzením (obrázek 1
+níže), klikněte na „ “ ( Potvrdit zrušení) a zavřete vyskakovací okno.
+“ (Potvrdit zrušení) pro potvrzení zrušení časování a zavření vyskakovacího okna, klikněte na „
+Časování vysokoteplotní sterilizace
+Klikněte na „ “ v hlavním rozhraní pro vstup do nabídky, vyberte třetí položku „Timer“ pro vstup do nastavení
+časování, klikněte na druhou položku „sterilization timing“ pro vstup do rozhraní nastavení, podle skutečných potřeb
+nastavte čas spuštění, den v týdnu (zelené tlačítko) a spusťte funkci časování sterilizace.
+3.3.6 Ruční odmrazování
+Klikněte na tlačítko „
+“ ( N a s t a v e n í ) na hlavním rozhraní pro vstup do nabídky, vyberte pátou položku „Mnl
+defrost“ (Ruční odmrazování) pro vstup do rozhraní ručního odmrazování, kde můžete vybrat kompresor 1 nebo
+kompresor 2 pro samostatné odmrazování.
+-29 -
+--- strana 32 ---
+3.37 Nastavení uživatelských parametrů
+Klikněte n u hlavního rozhraní pro vstup do menu, vyberte poslední položku, pokročilé parametry, zadejte normální
+heslo (123) a zadejte nastavení uživatelských parametrů.
+Uživatelské parametry najdete v následující tabulce (skutečné parametry se řídí podle zobrazení na kabelovém
+ovladači):
+Kód Položka nastavení Rozsah nastavení Jednotka
+1 Režim
+Režim chlazení
+Režim ohřevu
+Režim Auto
+Režim ohřevu teplé vody
+Režim ohřevu teplé vody a
+chlazení Režim ohřevu teplé
+vody a topení
+/
+2 Nastavení teploty chlazení min…max ℃
+3 Nastavení teploty topení min…max ℃
+4 Nastavení teploty teplé vody min…max ℃
+6 Funkce nastavení energie při zapnutí nelze použít /
+8 Kompenzace tepelného cíle vypnout k dispozici /
+9 Teplota kompenzace vytápění 1 min…max ℃
+10 Teplota kompenzace vytápění 2 min…max ℃
+11 Teplota okolí pro kompenzaci vytápění 1 min…max ℃
+12 Kompensace vytápění okolní teploty 2 min…max ℃
+13 Kompensace cíle chlazení vypnout k dispozici /
+14 Teplota kompenzace chlazení 1 min…max ℃
+15 Teplota kompenzace chlazení 2 min…max ℃
+16 Teplota okolí pro kompenzaci chlazení 1 min…max ℃
+17 Kompensace chlazení okolní teploty 2 min…max ℃
+18 Cyklus aktualizace kompenzace 0~59 min
+19 Funkce služby vypnuto k dispozici /
+20 Teplota v provozu min…max ℃
+21 Teplota chlazení v provozu min…max ℃
+-30 -
+--- strana 33 ---
+22 Začátek pracovní doby 0~23 hodina
+23 Minuta zahájení služby 0~59 min
+24 Hodina ukončení provozu 0 hodina
+25 Minimální doba provozu 0~59 min
+26 Nastavení tónu alarmu
+ztlumit
+Dlouhé
+zvonění
+Zvonění po dobu
+10 s Doba zvonění 10
+/
+s
+27 Den zahájení sterilizace
+Neděle Pondělí
+Úterý Středa
+Čtvrtek Pátek
+Sobota /
+28 Hodina zahájení sterilizace 0 hodina
+29 Minuta zahájení sterilizace 0~59 min
+30 Funkce časované sterilizace vypnuto k dispozici /
+3.4 Spuštění a vypnutí
+3.4.1 Odemknout
+Pokud se na obrazovce zobrazí ikona zámku, je ovladač uzamčen. Zobrazte následující rozhraní; stiskněte libovolné
+místo na obrazovce a budete vyzváni k dlouhému stisknutí ikony „zámku“ pro odemčení. Dlouhým stisknutím po dobu
+dvou sekund ikona zámku zmizí a rozhraní lze ovládat. Pokud po delší dobu (přibližně 90 sekund) nedojde k žádné akci,
+rozhraní se uzamkne.
+3.4.2 Spuštění a vypnutí
+◎ Spuštění a vypnutí
+Klikněte na „ potvrzení spuštění
+ohřevu, jak je znázorněno níže:
+“ (Spustit) v hlavním rozhraní, aby se zobrazilo okno „Confirm ON“ (Potvrdit zapnutí), a poté klikněte na „√“ pro
+-31 -
+--- strana 34 ---
+Poznámka: Pokud je jednotka po delší dobu vypnutá a má nízkou teplotu nebo pokud je zapnuta poprvé, přejde do fáze
+předehřívání. Během předehřívání nesmí být jednotka spuštěna, dokud není dokončeno zahřátí oleje kompresoru.
+Při spouštění se zobrazí vyskakovací okno s pokyny, abyste počkali na předehřátí nebo pokračovali ve spouštění. Aby
+bylo zajištěno spolehlivé používání kompresoru, doporučujeme nepřeskakovat předehřátí jednotky. Počkejte na
+dokončení předehřátí, poté můžete jednotku spustit normálně.
+◎ Nastavení cílové teploty
+V hlavním rozhraní nejprve klikněte na číslo teploty (obrázek 1 níže), poté se zobrazí okno (obrázek 2 níže), zadejte
+požadovanou hodnotu nastavení, klikněte na „√“ pro potvrzení a přímo se vraťte do hlavního rozhraní, aby bylo
+nastavení teploty dokončeno (obrázek 3 níže).
+Nastavení režimu:
+Klikněte na hlavní rozhraní (obrázek 1 níže) a zobrazí se okno pro výběr režimu (obrázek 2 níže). Klikněte na režim,
+který chcete vybrat, a vraťte se přímo do hlavního rozhraní.
+-32 -
+--- strana 35 ---
+Na výběr je 6 pracovních režimů: automatický, chlazení, topení, teplá voda, chlazení + teplá voda, topení + teplá voda.
+Během spouštění nelze pracovní režim změnit. Pokud chcete provést změnu, musíte jednotku vypnout.
+3.5 Ovládání pomocného zdroje tepla
+3.5.1 Nastavení parametrů pomocného zdroje tepla
+V ovládání pomocného zdroje tepla je třeba nastavit následující parametry:
+22 Ovládání pomocného zdroje tepla
+[0] Zakázat; [1] Pouze vytápění;
+[2] Pouze teplá voda; [3]
+Topení a teplá voda
+23 Zpoždění aktivace pomocného zdroje tepla 1...120
+24 Rozdíl teplot vody při zapnutí pomocného zdroje tepla 2...10
+2 Rozdíl teploty vody při vypnutém pomocném zdroji tepla 0...5
+26 Okolní teplota při zapnutém pomocném zdroji tepla -15...10
+Pokročilá nastavení > Nastavení parametrů > Parametry kompresoru a elektrického ohřevu
+22 Pomocný zdroj tepla: deaktivujte nebo vyberte režim pro aktivaci funkce pomocného zdroje tepla
+23 Zpoždění aktivace pomocného zdroje tepla: zpoždění opětovného zapnutí pomocného zdroje tepla po jeho vypnutí.
+24 Rozdíl teplot vody při zapnutí pomocného zdroje tepla: Když je celková výstupní teplota jednotky ≤ nastavené teplotě
+- „Rozdíl teplot vody při zapnutí pomocného zdroje tepla“, zapne se pomocný zdroj tepla.
+25 Rozdíl teplot vody při vypnutí pomocného zdroje tepla: Když je celková výstupní teplota jednotky ≥ nastavené teplotě
++ „Rozdíl teplot vody při vypnutí pomocného zdroje tepla“, pomocný zdroj tepla se vypne.
+26 Okolní teplota při zapnutí pomocného zdroje tepla: Pokud je okolní teplota vyšší než „okolní teplota při zapnutí
+pomocného zdroje tepla“, funkce pomocného zdroje tepla se nezapne. Pokud je okolní teplota nižší než „okolní teplota
+při zapnutí pomocného zdroje tepla“, pomocný zdroj tepla se zapne.
+3.5.2 Nainstalujte snímač celkové teploty vody na výstupu.
+Při instalaci pomocného zdroje tepla je nutné nainstalovat snímač celkové výstupní teploty a před použitím pomocného
+zdroje tepla nastavit snímač celkové výstupní teploty na aktivní. Kroky k aktivaci celkové výstupní teploty systému jsou
+následující:
+①V části „Pokročilá nastavení > Nastavení parametrů > Použití senzoru“ nastavte „21 Celková výstupní teplota systému“
+na povolenou (TWout temp);
+-33 -
+--- strana 36 ---
+②Nainstalujte snímač celkové výstupní teploty vody na odpovídající místo na vodním systému a základní desce.
+③Přejděte do „Pokročilá nastavení > Nastavení parametrů > Nastavení uživatelských parametrů“ a nastavte „25 Kompenzace
+celkové výstupní teploty“ tak, aby se upravil rozdíl mezi zobrazenými a skutečnými hodnotami
+celkové výstupní teploty systému.
+21 Celková výstupní teplota systému (TWout temp) [0]Zakázat;[1]Povolit
+25 Kompenzace celkové výstupní teploty -10
+3.5.3 Řídicí logika pomocného zdroje tepla v různých režimech
+(1)Když je pomocný zdroj tepla nastaven do režimu pouze topení:
+1
+Pokud kompresor jednotky pracuje normálně, je-li okolní teplota nižší než „okolní teplota při zapnutí
+pomocného zdroje tepla“ a počáteční celková teplota vody na výstupu jednotky je příliš nízká nebo cílová teplota vody je
+příliš vysoká a pomocný zdroj tepla byl vypnut déle než „Doba zpoždění pro aktivaci pomocného zdroje tepla“, pomocný
+zdroj tepla se zapne.
+Pokud okolní teplota překročí „okolní teplotu při zapnutí pomocného zdroje tepla“ nebo pokud celková teplota vody na
+výstupu jednotky příliš překročí cílovou teplotu vody, pomocný zdroj tepla se vypne.
+2
+Pokud je kompresor jednotky v abnormálním stavu, je počáteční celková teplota vody na výstupu jednotky
+příliš nízká nebo je cílová teplota vody příliš vysoká a pomocný zdroj tepla byl zapnutý nebo vypnutý déle než 5 minut,
+pomocný zdroj tepla se automaticky spustí. Pokud celková teplota vody na výstupu jednotky příliš překročí cílovou
+teplotu vody, pomocný zdroj tepla se vypne.
+(2)Když je pomocný zdroj tepla nastaven na režim pouze horká voda:
+1
+Pokud kompresor jednotky pracuje normálně, ale teplota zásobníku teplé vody a celková teplota vody na
+výstupu z jednotky jsou příliš nízké a pomocný zdroj tepla byl vypnut na dobu delší než „Doba zpoždění pro aktivaci
+pomocného zdroje tepla“, pomocný zdroj tepla se automaticky zapne.
+Pokud teplota zásobníku teplé vody překročí cílovou teplotu vody nebo je celková výstupní teplota jednotky příliš vysoká,
+pomocný zdroj tepla se vypne.
+2
+Pokud je kompresor jednotky v abnormálním stavu a teplota zásobníku teplé vody a celková výstupní teplota
+vody jednotky jsou příliš nízké a pomocný zdroj tepla byl zapnutý nebo vypnutý po dobu delší než 5 minut, zapněte
+pomocný zdroj tepla.
+Pokud teplota zásobníku teplé vody překročí cílovou teplotu vody nebo je celková výstupní teplota jednotky příliš vysoká,
+pomocný zdroj tepla se vypne.
+(3)Pokud je jednotka v režimu odmrazování a celková výstupní teplota vody jednotky je nižší než 16 °C, pomocný zdroj
+tepla se zapne. Když jednotka ukončí odmrazování nebo celková výstupní teplota vody jednotky překročí 20 °C,
+pomocný zdroj tepla se vypne.
+-34 -
+--- strana 37 ---
+3.6 Kontrola provozních parametrů
+1. Na hlavním rozhraní klikněte na nabídku kontroly parametrů a zkontrolujte aktuální chybový kód jednotky, stavové
+parametry jednotky a číslo verze softwaru.
+◎Seznam provozních parametrů
+Kód Popis Poznámka
+1 Envtemp (teplota okolí) -30~99
+2 Sys.evap.out T (Teplota vody na výstupu ze systému) -30~99
+3 Sys.evap.inlet (Teplota vody na vstupu do systému) -30~99
+4 Sys.hottemp (teplota horké vody v systému) -30 až 99 °C
+5 Sys.TWout (celková teplota výstupní vody systému) -30~99 °C
+6 EHeater (Elektrický ohřívač) Zapnuto/vypnuto
+7 AHS (pomocný zdroj tepla) ON/OFF
+8 TBH (ohřívač vody) ZAP/VYP
+9 3PV1 (Třícestný ventil 1) ON/OFF
+10 3PV2 (třícestný ventil 2) ZAP/VYP
+11 Alarm ZAP/VYP
+12 1#Outtmp（1# teplota vody na výstupu） -30~99
+13 Cellwaterin（1# teplota přívodní vody） -30~99
+14 ECfan1Drv.temp (teplota pohonu ECFan 1) -30~99
+15 ECfan1Setspeed (nastavená rychlost ECFan 1) RPM
+16 ECfan1cur.speed (aktuální rychlost ECFan 1) RPM
+17 ECfan1cur.curr（Proud ventilátoru 1） A
+18 1#CMruntime（1# Doba chodu kompresoru） h
+1 1#M.EEVOD%（1# Aktuální kroky hlavního EEV） st
+20 1#Nastavená rychlost（1# Cílová rychlost kompresoru） rps
+21 1#Curspeed（1# Skutečná rychlost kompresoru） rps
+22 1#Proud（1# Proud kompresoru） A
+23 1#Invt.V.Out (výstupní napětí modulu s proměnnou frekvencí č. 1) V
+24 1#Invt.temp.（Teplota modulu s proměnnou frekvencí č. 1） -30~99
+25 1#Suct.tmp（1# Teplota sání） -30~99
+26 1#Evap.in（1# Teplota výparníku） -30~99
+27 1#Invt.V.Bus (1# modul s proměnnou frekvencí, napětí sběrnice DC) V
+28 1#Coiltmp (teplota výparníku 1#) -30~99
+- 35 -
+--- strana 38 ---
+29 1#Exh.tmp（1# Teplota výfukových plynů） 0~125
+30 1#Cur.superH（1# Aktuální přehřátí） -30~99
+31 1#Obj.superH（1# Cílový přehřátí） -30~99
+32 1#Invt.limit（1#Informace o omezení frekvence modulu frekvenčního měniče）
+35 2#CMruntime（2# Doba chodu kompresoru） h
+36 2#M.EEVOD%（2# Hlavní kroky proudu EEV） st
+37 2#Nastavená rychlost（2# Cílová rychlost kompresoru） rps
+38 2#Curspeed（2# Skutečná rychlost kompresoru） rps
+39 2#Proud (2# Proud kompresoru) A
+40 2#Invt.V.Out (2# Výstupní napětí modulu s proměnnou frekvencí č. 1) V
+41 2#Invt.temp.（2# Teplota modulu s proměnnou frekvencí） -30~99
+42 2#Suct.tmp（2# Teplota sání） -30~99
+43 2#Evap.in (2# Teplota výparníku) -30~99
+44 2#Invt.V.Bus (2# modul s proměnnou frekvencí, napětí sběrnice DC) V
+45 2#Coiltmp (2# teplota výparníku) -30~99
+46 2#Exh.tmp（2# Teplota výfukových plynů） 0~125
+47 2#Cur.superH (2# Aktuální přehřátí) -30~99
+48 2#Obj.superH（2# Cílový přehřátí） -30~99
+49 2#Invt.limit（2#Informace o omezení frekvence modulu frekvenční konverze）
+50 ACPump（AC cirkulační čerpadlo） Zapnuto/vypnuto
+51 CrankH（Elektrické vyhřívání klikového hřídele） Zapnuto/vypnuto
+52 BtHeat (Elektrické vyhřívání podvozku) Zapnuto/vypnuto
+53 1#comp (1#kompresor) Zapnuto/vypnuto
+54 1#4WV（1#Čtyřcestný ventil） ZAP/VYP
+55 2#comp（2#Kompresor） ZAP/VYP
+56 2#4WV（2#Čtyřcestný ventil） ZAP/VYP
+3.7 Dotaz na verzi softwaru jednotky
+Klikněte na hlavní rozhraní pro vstup do kontrolního menu, vyberte kontrolu verze pro vstup a posuňte nahoru a dolů pro
+zobrazení.
+-36 -
+--- strana 39 ---
+Část 4 Chybové kódy a řešení problémů
+4.1 Kontrola chybového kódu
+Klikněte na „ “ (Chyby a řešení problémů) na hlavním rozhraní a přejděte do nabídky dotazů. Poté klikněte na „ “
+(Chyby a řešení problémů) na hlavním rozhraní a přejděte do nabídky, vyberte šestou položku „His err“ (Jeho chyba),
+zadejte dotaz na historii chyb, klikněte na libovolnou chybu a zobrazte čas výskytu chyby, kód a podrobnosti o chybě.
+Kliknutím na tlačítko „Delete“ (Odstranit) odstraníte záznamy o historii chyb.
+4.2 Seznam chybových kódů
+V případě výskytu se na řadiči zobrazí následující běžné chybové kódy.
+Metoda resetování: Resetování zapnutím, A = automatické resetování; M = ruční resetování; A/M = omezené
+automatické resetování; viz „Pokyny pro resetování poruch“ v dolní části tabulky; Modul XX označuje číslo modulu
+kaskádové jednotky a n# označuje, který kompresor je na stejné jednotce.
+Chybo
+vý kód
+Název poruchy Režim resetování Akce alarmu Navrhované řešení
+2 Systémový modul: Chyba dat
+EEPROM
+Reset při
+zapnutí Závažná porucha, zastavte jednotku.
+Nastavte všechny parametry
+na počáteční hodnoty a znovu
+zapněte zařízení. Pokud se
+porucha
+nelze odstranit, kontaktujte
+nás.
+3 Systémový modul:
+Porucha externího blokování
+M Závažná porucha, zastavte jednotku.
+9 Systémový modul:
+Nedostatečný průtok vody A/M
+⚫ Při použití [nedostatečný
+průtok vody pro spuštění
+čerpadla] zastavte všechny
+kompresory
+a vodní čerpadlo se nezastaví;
+⚫ Když je funkce [nedostatečný
+průtok vody pro spuštění
+čerpadla] deaktivována,
+zastavte všechny kompresory a
+zastavte vodní čerpadla.
+1. Zkontrolujte, zda jsou
+odpovídající nastavení
+„normálně otevřeno a normálně
+uzavřeno“ vstupů konzistentní,
+protože nekonzistentnost
+signalizuje poruchový stav.
+2. Pokud není problém s
+nastavením „Normálně
+otevřeno, normálně uzavřeno“,
+zkontrolujte příčinu jednotky
+-37 -
+--- strana 40 ---
+178
+177 1
+41
+200
+40
+196
+204
+0
+1#73、
+2#105
+1#49、
+2#81
+1#48、
+2#80
+1#66、
+2#98
+1#67、
+2#99
+Modul xx:
+Nedostatečný průtok vody pro
+jednotný modul
+Systémový modul:
+Výpadek napájení Modul xx:
+Porucha napájení Systémový modul:
+Teplota vody na výstupu systému je
+příliš nízká
+Modul xx:
+1# Teplota vody na výstupu je příliš
+nízká
+Systémový modul:
+Teplota vody na výstupu ze systému
+je příliš vysoká
+Modul xx:
+1# Teplota vody na výstupu je příliš
+vysoká
+Modul xx:
+Abnormální rozdíl teplot na
+výstupu/vstupu modulu
+Modul xx: Porucha
+komunikace Modul xx: n#Ochrana
+kompresoru
+Modul xx:
+n#Vysokotlaký kompresor
+Modul xx:
+n#Nízký tlak kompresoru Modul xx:
+n#Ochrana kompresoru proti
+nízkému tlaku Modul xx:
+n#Ochrana kompresoru před
+vysokým tlakem A/M Zastavte modul xx.
+M Závažné poruchy, zastavte jednotku
+(přímo zastavte kompresor).
+M Zastavte modul xx.
+A Zastavte všechny kompresory a
+ventilátory.
+A Zastavte modul xx.
+A Zastavte všechny kompresory a
+ventilátory.
+A Zastavte modul xx.
+M Zastavte modul xx.
+A Zastavte modul xx.
+Zastavte příslušný kompresor a
+ventilátor modulu
+xx.
+A/M
+Zastavte příslušný kompresor a
+ventilátor modulu
+xx.
+Zastavte příslušný kompresor a
+ventilátory modulu xx.
+A/M
+Zastavte příslušný kompresor a
+ventilátory modulu xx.
+A/M
+Zastavte příslušný kompresor a
+ventilátor modulu xx.
+A/M
+-38 -
+Abnormality.
+1. Zkontrolujte detekci fáze
+třífázového napájení J1, zapojení
+je v pořádku.
+2. Zkontrolujte, zda jsou
+odpovídající nastavení
+„normálně otevřené a normálně
+uzavřené“ vstupů konzistentní,
+přičemž nekonzistence indikuje
+poruchový stav.
+3. Pokud není problém s
+nastavením „Normálně
+otevřeno, normálně uzavřeno“,
+zkontrolujte příčinu
+abnormality.
+1. Zkontrolujte, zda jsou
+všechny příslušné parametry
+nastavené teploty v normálním
+rozsahu.
+2. Zkontrolujte, zda je sonda
+výstupní teploty namontována
+ve správné poloze a zda není
+poškozená.
+3. Zkontrolujte, co způsobuje
+abnormální teplotu.
+1. Zkontrolujte, zda je poloha
+teplotního čidla správná.
+2. Zkontrolujte, zda je zapojení
+pevné a spolehlivé.
+Zkontrolujte, zda je
+komunikační kabel mezi
+moduly správně připojen a
+má dobrý kontakt.
+1. Zkontrolujte, zda jsou
+odpovídající nastavení
+„normálně otevřeno a normálně
+uzavřeno“ vstupů konzistentní,
+přičemž nekonzistence indikuje
+poruchový stav;
+2. Pokud nastavení „normálně
+otevřeno a normálně uzavřeno“
+není sporné, je možné nastavit
+„normálně otevřeno a normálně
+uzavřeno“. problém, zkontrolujte
+příčinu abnormality jednotky.
+--- strana 41 ---
+1#58、
+2#90
+1#59、
+2#91
+1#68、
+2#100
+1#72
+2#104
+1#71、
+2#103
+1#248、
+2#250
+1#247、
+2#249
+1#70、
+2#102
+34 35 45 36 33 192 1#56
+2#88
+1#55、
+2#87
+1#61、
+2#93
+Modul xx:
+n# Teplota žebrové cívky příliš
+vysoká
+Modul xx:
+n#Příliš vysoká teplota výfukových
+plynů
+Modul xx:
+n#Příliš nízká teplota výfukových
+plynů
+Modul xx:
+n#Porucha frekvenčního měniče Modul xx: n#Modul
+střídače
+porucha komunikace
+Modul xx:
+Porucha
+ventilátoru EC n
+Modul xx:
+Porucha komunikace ventilátoru EC
+n
+Modul xx:
+n# Teplotní rozdíl
+mezi teplotou okolí a teplotou
+žebrové cívky
+Systémový modul:
+Porucha teploty výstupní vody
+systému
+Systémový modul: Porucha
+teploty vstupní vody do
+systému
+Systémový modul:
+Porucha celkové teploty
+výstupní vody systému
+Systémový modul:
+Porucha teploty vodní
+nádrže
+Systémový modul:
+Porucha snímače teploty okolí Modul xx:
+1# Porucha teploty vody na výstupu Modul xx:
+n# Porucha teploty výfukových
+plynů
+Modul xx:
+n# Porucha teploty cívky
+Modul xx:
+n#Porucha nízkého tlaku
+kompresoru
+A/M
+A/M
+A/M
+A/M
+A
+A/M
+A
+M
+M
+M
+Zastavte příslušný
+kompresor a ventilátory modulu xx.
+Zastavte příslušný
+kompresor a ventilátor modulu xx.
+Zastavte příslušný kompresor a
+ventilátory modulu xx.
+Zastavte příslušný kompresor modulu
+xx.
+Zastavte příslušný kompresor modulu
+xx.
+Zastavte příslušný kompresor a
+ventilátory modulu xx.
+Zastavte příslušný kompresor a
+ventilátory modulu xx.
+Zastavte příslušný kompresor a
+ventilátory modulu xx.
+Nouzové zastavení všech kompresorů
+během provozu. Alarm pouze v případě
+zamrznutí.
+Pouze alarm
+Během provozu zastavte všechny
+kompresory.
+Závažná porucha, zastavte jednotku.
+Zastavte provoz modulu.
+Zastavte příslušné lisy a ventilátory.
+-39 -
+1. Zkontrolujte příslušné
+hodnoty nastavených
+teplotních parametrů, zda
+nevykazují problémy.
+2. Zkontrolujte, zda je sonda
+namontována ve správné
+poloze.
+3. Zkontrolujte, co způsobuje
+abnormality v související
+teplotě.
+Zkontrolujte chybový kód
+porouchaného měniče v dotazu na
+stav, kontaktujte nás.
+Zkontrolujte nastavení [Základní
+adresa měniče].
+Zkontrolujte nastavení komunikace
+adresy měniče.
+Zkontrolujte kód poruchy
+nefunkčního ventilátoru EC v
+dotazu na stav a podle příručky k
+ventilátoru EC
+řešení problému.
+Zjistěte nastavení [Základní adresa
+ventilátoru EC].
+Detekuje nastavení komunikační
+adresy ventilátoru EC
+ventilátoru.
+Detekujte změny v rozdílu teplot
+žebrového výměníku a přípustném
+rozdílu teplot žebrového výměníku
+.
+1. Zkontrolujte, zda je sonda
+senzoru správně připojena.
+2. Zkontrolujte, zda nebyla
+deaktivována nepřipojená sonda.
+--- strana 42 ---
+1#62、
+2#94
+Modul xx:
+n#Porucha vysokého tlaku
+kompresoru
+M
+1#53、
+2#85
+Modul xx:
+n# Porucha teploty za ventilem
+A
+1#52、
+2#84
+Modul xx:
+n#Porucha teploty sání
+213 Modul xx:
+Porucha snímače teploty
+kondenzátoru
+A Pouze alarm, žádné vypnutí
+208 Porucha snímače R290 A Pouze alarm, žádné vypnutí
+210
+Porucha snímače teploty vratné
+vody jednotky A Pouze alarm, žádné vypnutí.
+1. Zkontrolujte, zda je sonda
+senzoru správně připojena.
+2. Zkontrolujte, zda nebyla
+odpojená sonda deaktivována.
+Alarm úniku chladiva R290
+20
+M Zastavte všechny moduly a spusťte
+ventilátor na nejnižší rychlost.
+Okamžitě vypněte jednotku,
+vyvětrejte místnost,
+zkontrolujte místo úniku
+chladiva z jednotky
+a opravte jej
+4.3 Kontrola majitelem
+Doporučujeme uživateli pravidelně kontrolovat tepelné čerpadlo, zejména po abnormálních povětrnostních podmínkách.
+Doporučujeme také dodržovat následující základní pokyny pro kontrolu:
+1. Zajistěte, aby bylo kolem zařízení dostatek prostoru pro údržbu nebo opravy.
+2. Udržujte horní část a okolí tepelného čerpadla čisté a zajistěte dobrý průtok vzduchu.
+3. Zajistěte, aby v blízkosti jednotky nebyly žádné rostliny, u nichž hrozí riziko, že by listy/větve mohly spadnout dovnitř
+ventilátoru nebo výparníku.
+4. Při zalévání rostlin nestříkejte vodu na jednotku, aby nedošlo k její korozi a poškození.
+5. Zajistěte, aby byla jednotka vždy dobře uzemněna.
+6. Pravidelně udržujte vnější filtr, aby byla zajištěna čistota vody a nedošlo k poškození vnitřních součástí jednotky.
+7.Pravidelně kontrolujte zapojení napájení a elektrických součástí, abyste zajistili jejich normální fungování.
+8.Po instalaci všech bezpečnostních krytů neměňte nastavení sami. Pokud jsou nutné nějaké změny, obraťte se na
+autorizovaného profesionálního instalatéra/zástupce.
+9.Pokud je jednotka instalována pod střechou bez odtokového kanálu, zajistěte, aby byla přijata nezbytná opatření, která
+zabrání přímému stříkání nebo vniknutí nadměrného množství vody do jednotky.
+10. Pokud voda vnikne do jednotky a dostane se do kontaktu s jakoukoli elektrickou součástí, odpojte napájení a přestat
+jednotku používat. Kontaktujte také autorizovaného profesionálního instalatéra / zástupce, aby provedl kontrolu.
+11. Pokud se spotřeba energie jednotky příliš zvýšila, aniž by to bylo způsobeno chladným počasím, kontaktujte místního
+autorizovaného instalatéra, aby provedl kontrolu.
+12. Pokud zařízení delší dobu nepoužíváte, uzavřete jej a odpojte od napájení.
+-40 -
+--- strana 43 ---
+4.4 Odstraňování poruch
+Následující informace o řešení problémů slouží k vyřešení problémů, které se vyskytnou při používání jednotky.
+Varování – nebezpečí úrazu elektrickým proudem
+Před otevřením jednotky a zahájením instalace se ujistěte, že jsou všechny vysokonapěťové obvody
+odpojeny. Kontakt s těmito obvody může způsobit smrt nebo vážné zranění uživatele, instalatéra nebo jiné
+osoby a také možné poškození majetku.
+Neodborníci, nezapínejte tepelné čerpadlo, abyste se vyhnuli úrazu elektrickým proudem.
+1. Aby nedošlo ke zranění, držte ruce a vlasy mimo lopatky ventilátoru.
+2. Pokud nejste se svým tepelným čerpadlem obeznámeni:
+A) Než se pokusíte zařízení seřídit nebo opravit, poraďte se s autorizovaným instalatérem/zástupcem.
+B) Před použitím nebo nastavením tepelného čerpadla si přečtěte kompletní instalační a uživatelský manuál.
+Důležité: Před opravou je nutné vypnout hlavní napájení tepelného čerpadla.
+4.1 Časté poruchy a odstraňování závad
+Pokud uživatelé narazí na problémy během provozu, musí si na údržbu najmout profesionální servisní techniky. Servisní
+technici mohou při odstraňování závad postupovat podle tabulky.
+Porucha Možné příčiny Řešení
+Tepelné čerpadlo je nefunguje 1. Výpadek napájení
+2. Uvolněné vedení
+3. spálená pojistka
+4. Nízký tlak je příliš nízký
+1. Vypněte napájecí spínač a zkontrolujte stav
+napájení
+2. Zjistěte příčinu a opravte ji.
+3. Vyměňte pojistku.
+4. Zkontrolujte napětí a proud
+Voda
+Cirkulační čerpadlo je
+funguje, ale ne
+cirkulace vody ani
+vysoký hluk
+vodního čerpadla
+1. Nedostatek vody v systému
+2. Ve vodním systému je vzduch
+3. Tyto ventily nejsou všechny otevřené
+4. Vodní filtr je velmi znečištěný a
+ucpaný
+1. Zkontrolujte doplňkové zařízení systému a
+doplňte systém
+2. Odvzdušněte vodní systém
+3. Otevřete ventil systému přívodu vody
+4. Vyčistěte vodní filtr
+-41 -
+--- strana 44 ---
+Nízký topný
+výkon
+1. Nedostatek chladiva
+2. Špatná tepelná izolace vodního
+systému;
+3. Suchý filtr je ucpaný
+4. Vzduchový výměník tepla má špatný
+odvod tepla
+5. Nedostatek vody
+1. Detekce úniku a doplnění dostatečného
+množství chladiva
+2. Posílení tepelné izolace vodovodního systému
+3. Vyměňte suchý filtr
+4. Vyčistit výměník tepla
+5. Vyčistěte filtr
+Kompresor
+nefunguje
+1. Porucha napájení
+2. Poškozený stykač
+kompresoru;
+3. Uvolněné zapojení
+4. Ochrana kompresoru proti přehřátí
+5. Teplota výstupní vody je
+příliš vysoká
+6. Průtok vody je nedostatečný
+7. Ochrana kompresoru proti přetížení
+má vypínací funkci
+1. Zjistěte příčinu a vyřešte problém s výpadkem
+napájení
+2. Vyměňte stykač kompresoru
+3. Zjistěte místo uvolnění a opravte ho
+4. Zkontrolujte tlak jednotky a teplotu výfuku.
+5. Resetujte teplotu vody
+6. Vyčistěte vodní filtr a vypusťte vzduch ze
+systému
+7. Zkontrolujte provozní proud a zkontrolujte, zda není
+poškozen
+není poškozena ochrana proti přetížení
+Hluk kompresoru je
+příliš vysoký
+1. Do kompresoru vniká kapalné
+chladivo
+2. Vnitřní části kompresoru jsou
+poškozené
+3. Napětí je příliš nízké
+1. Zkontrolujte, zda není porucha expanzního ventilu
+2. Vyměňte kompresor
+3. Zkontrolujte napájecí napětí
+Ventilátor nefunguje
+1. Upevňovací šroub motoru
+ventilátoru je uvolněný
+2. Motor ventilátoru je poškozený
+3. Poškozený je kontakt
+1. Upevněte šroub
+2. Vyměňte motor ventilátoru
+3. Vyměňte kontaktor
+Kompresor funguje, ale
+tepelné čerpadlo ne
+neposkytuje vytápění
+1. Všechno chladivo uniklo
+2. Porucha kompresoru
+3. Obrácení kompresoru
+1. Zkontrolujte únik a doplňte chladivo
+2. Vyměňte kompresor
+3. Vyměňte fázovou sekvenci kompresoru
+Ochrana proti nízkému
+průtoku vody
+1. Nedostatečný průtok vody v
+systému
+2. Porucha spínače průtoku vody
+Porucha
+1. Vyčistěte systém vodního filtru a vypusťte
+vzduch ze systému
+2. Zkontrolujte a vyměňte spínač průtoku vody
+Část 5 Obecná údržba
+Tepelné čerpadlo R290 DC s invertorem je vysoce automatizované zařízení. Pravidelná a účinná údržba zařízení výrazně zvýší
+spolehlivost provozu a prodlouží životnost zařízení.
+5.1 Obecná údržba
+Během údržby věnujte větší pozornost následujícím důležitým tipům:
+-42 -
+--- strana 45 ---
+1. Vodní filtr by měl být pravidelně čištěn, aby byla zajištěna čistota vody a aby se zabránilo poškození způsobenému
+ucpáním filtračního prvku.
+2. Uživatelé nesmí měnit vnitřní strukturu ani zapojení zařízení. Všechna bezpečnostní ochranná zařízení byla
+nastavena před opuštěním továrny a jejich změny jsou přísně zakázány. Nepřebíráme žádnou odpovědnost za
+poškození zařízení způsobené úpravami provedenými uživatelem.
+3. Povrch výparníku je třeba pravidelně čistit (každý 1–2 měsíce). Pokud je zařízení provozováno v znečištěném nebo
+mastném prostředí, musí výparník vyčistit odborníci pomocí určených čisticích prostředků, aby byla zajištěna výkonnost
+a účinnost zařízení.
+4. Pravidelně kontrolujte přívodní a odvodní zařízení vodního systému, aby se do systému nedostal vzduch, což by
+vedlo ke snížení cirkulace vody nebo selhání cirkulace vody a ovlivnilo by to účinnost chlazení a vytápění a spolehlivost
+zařízení.
+5. Inteligentní řídicí systém dokáže automaticky analyzovat různé problémy s ochranou při každodenním používání a
+zobrazit kód poruchy na ovladači. Jednotka se může sama obnovit. Za normálních provozních podmínek není pro potrubí
+uvnitř jednotky nutná žádná údržba.
+6. Napájení a elektrické zapojení jednotky by mělo být pravidelně kontrolováno, aby se zajistilo, že zapojení je pevné a
+elektrické komponenty jsou v normálním stavu. V případě abnormality by mělo být opraveno nebo vyměněno a jednotka
+musí být spolehlivě uzemněna.
+7. Během provozu jednotky pravidelně kontrolujte všechny druhy dílů. Zkontrolujte, zda je pracovní tlak chladicího
+systému v normě. Zkontrolujte, zda na spojích potrubí a ventilu pro vstřikování vzduchu není mastnota. Ujistěte se, že v
+chladicím systému nedochází k úniku chladiva.
+8. Zkontrolujte, zda je jednotka pevně nainstalována. Nehromažďujte kolem zařízení žádné nečistoty, aby nedošlo k
+zablokování výstupu vzduchu. Prostředí kolem jednotky musí být udržováno v čistotě, suchu a musí být dobře větrané.
+9. Pokud zařízení nebude po delší době provozu používáno, je třeba vypustit vodu z vodního systému. Vypněte
+napájení a zakryjte zařízení. Pokud je třeba zařízení znovu použít, počkejte, až se vodní systém naplní vodou, důkladně
+zkontrolujte zařízení, spusťte ho a předehřejte po dobu nejméně 6 hodin a restartujte zařízení až poté, co je vše v
+pořádku.
+10. Pokud není poškozeno vodní čerpadlo, není nutné provádět žádné speciální opravy nebo údržbu vodního systému
+zařízení. Doporučuje se pravidelně čistit nebo vyměňovat vodní filtr, pokud je velmi znečištěný nebo ucpaný.
+Bezpečnostní opatření:
+1. Zařízení musí být vybaveno specializovaným napájecím zdrojem. Rozsah napětí musí být v rozmezí ± 10 %. Spínač
+musí být automatický vzduchový spínač. Nastavený proud musí být 1,5násobkem provozního proudu a musí být vybaven
+zařízením bez fázové ochrany. V zařízení se nepoužívá nožový spínač.
+2. Před sezónním provozem musí být zařízení napájeno po dobu nejméně 12 hodin. Pokud zařízení v zimě dlouhodobě
+nepracuje, je nutné vypustit veškerou vodu, aby nedošlo k zamrznutí a poškození potrubí a zařízení. Řídicí jednotka
+musí být kompatibilní se zařízením. Pokud v zimě přestane topné zařízení fungovat, nesmí být odpojeno od napájení,
+aby nedošlo k zamrznutí a poškození.
+3. Spínač tepelného čerpadla nelze ovládat často, maximálně 4krát za 1 hodinu. Elektrická
+-43 -
+--- strana 46 ---
+skříň musí být chráněna před vlhkostí.
+4.Je přísně zakázáno proplachovat vzduchové tepelné čerpadlo s DC invertorem vodou, aby se zabránilo úrazu
+elektrickým proudem nebo jiným nehodám.
+5.2 Údržba nemrznoucí směsi
+Pokud tepelné čerpadlo v zimě nepracuje, je nutné ponechat napájení připojené z důvodu ochrany proti
+zamrznutí.
+V chladném počasí (≤ 0 °C), pokud již není tepelné čerpadlo potřeba, vypusťte veškerou vodu ze systému.
+1. Nechte zapnuté napájení
+Nevypínejte napájení, když je tepelné čerpadlo dočasně mimo provoz nebo když se nepoužívá, protože jednotka je
+vybavena funkcí ochrany proti zamrznutí. Pouze když jednotka běží normálně nebo když oběhové čerpadlo běží
+normálně, může jednotka zajistit, že voda v chladném počasí nezamrzne. Proto lze teplotu vody vhodně snížit, aby se
+ušetřila energie. (Doporučuje se nastavit teplotu vody na 25–30 °C, pokud se zařízení krátkodobě nepoužívá, což nejen
+šetří elektřinu, ale také zabraňuje zamrznutí.
+2.Izolace potrubí
+Pro potrubí by měla být přijata odpovídající izolační opatření. Věnujte prosím pozornost kontrole, zda je izolační obal
+potrubí na svém místě, aby nedošlo k zamrznutí potrubí. K izolaci potrubí se používá hlavně izolační vata a
+polyuretanová pěna. (Malé trubky jsou obecně izolovány izolační vatou, zatímco velké trubky jsou izolovány
+polyuretanovou pěnou.)
+3.Opatření při odstavení
+Pokud uživatel není delší dobu doma, je třeba tepelné čerpadlo na delší dobu vypnout, nebo pokud výpadek proudu trvá
+déle než 15–30 minut, musí uživatel vypustit vodu z potrubí tepelného čerpadla, aby se zabránilo zamrznutí vody při
+zastavení provozu jednotky. Po důkladném vypuštění vody je třeba vypnout napájení, aby se zabránilo nesprávnému
+provozu jednotky z důvodu nedostatku vody.
+4.Opatření pro nemrznoucí směs
+U systémů s tepelným čerpadlem se doporučuje, aby uživatelé přidávali nemrznoucí směs, aby chránili potrubí před
+zamrznutím.
+Při používání nemrznoucí směsi se doporučuje věnovat pozornost následujícím bodům:
+Vyberte si kvalitní nemrznoucí směs. Padělané výrobky jsou sice levné, ale jejich kvalita není zaručena.
+2. Množství použité nemrznoucí směsi odpovídá množství vody v systému a vhodná nemrznoucí směs by měla být
+vybrána na základě místní minimální teploty, bod mrazu nemrznoucí směsi by měl být o 5–10 stupňů nižší než místní
+minimální teplota. (například ethylenglykol
+nemrznoucí směs typu -25 ℃, -30 ℃).
+-44 -
+--- strana 47 ---
+3. Při přípravě nemrznoucí směsi by obsah ethylenglykolu neměl překročit 68 %, jinak se bod tuhnutí již nebude
+snižovat, ale naopak dojde ke zvýšení viskozity nemrznoucí směsi při nízkých teplotách a ke snížení odvodu tepla.
+4. Různé typy nemrznoucí směsi by se neměly míchat, aby nedošlo k chemickým změnám, srážení nebo korozi.
+5. Pravidelně kontrolujte stav nemrznoucí směsi v potrubí a doporučujeme ji vyměnit každé 2–3 roky.
+Část 6 Připojení a provoz WIFI
+4.1 Upozornění k použití
+Vážený zákazníku
+v něm uvedených.
+děkujeme, že jste si vybrali naše produkty! Pro vaše pohodlí si prosím pečlivě přečtěte návod a postupujte podle pokynů
+4.2 Stažení aplikace
+Vyhledejte „smart life“ v APP STORE nebo GOOGLE PLAY a nainstalujte si aplikaci.
+4.3 Připojte telefon k Wi-Fi
+Ujistěte se, že mobilní telefon a zařízení, které chcete připojit, jsou ve stejném Wi-Fi prostředí. Vyberte v mobilním telefonu síť
+Wi-Fi 2,4 GHz a zadejte heslo pro připojení mobilního telefonu k síti.
+*Poznámka: Pokud je Wi-Fi v aktuálním prostředí 5 GHz, nastavte nejprve router na 2,4 GHz.
+4.4 Zkontrolujte stav Wi-Fi zařízení
+1. Vstupte do rozhraní nabídky nastavení a vyberte „Nastavení Wi-Fi“.
+-45 -
+--- strana 48 ---
+2. Zkontrolujte, zda se v rozhraní zobrazuje zpráva „Konfiguruje se inteligentní režim“. Pokud se zobrazují jiné zprávy,
+stiskněte a podržte tlačítko < Reset WIF >, aby se resetovalo Wi-Fi.
+4.5 Přidat zařízení
+1) Zapněte Wi-Fi a Bluetooth na mobilním telefonu.
+2) Otevřete aplikaci Smart Life v mobilním telefonu a v dolní navigační liště vyberte možnost „Domů“.
+3) Klikněte na tlačítko „+“ v pravém horním rohu domovské stránky nebo klikněte na tlačítko „Add Device“ (Přidat
+zařízení) uprostřed domovské stránky a přejděte do rozhraní pro přidání zařízení.
+4) V rozhraní pro přidání zařízení zkuste přidat zařízení jedním z následujících způsobů:
+A.Automatické vyhledání zařízení
+-46 -
+--- strana 49 ---
+Telefon automaticky vyhledá dostupná zařízení v okolí. Po vyhledání zařízení postupujte podle pokynů na obrázku níže a
+dokončete následné operace konfigurace sítě.
+B.Ruční přidání zařízení
+Po vstupu do rozhraní pro přidání zařízení přejděte dolů a vyberte „Inteligentní tepelné čerpadlo“ ve vašem domácím spotřebiči
+a postupujte podle pokynů na následujícím obrázku, abyste dokončili operaci.
+*Poznámka: Pokud jste zkontrolovali a potvrdili, že stav WIFI zařízení je správný, v kroku „Resetovat zařízení“ zaškrtněte
+přímo „Potvrdit stav WIFI“ a klikněte na tlačítko „Další“, abyste mohli přímo nakonfigurovat síť bez nutnosti resetovat
+zařízení.
+-47 -
+--- strana 50 ---
+-48 -
+--- strana 51 ---
+4.6 Styl rozhraní
+Návrat
+Přepínání režimu:
+kliknutím vyberte režim,
+který chcete přepnout
+Více: Můžete změnit název
+zařízení, vybrat místo instalace
+zařízení, zkontrolovat stav sítě,
+přidat sdílené uživatele, vytvořit
+skupinu zařízení, zobrazit informace
+o zařízení atd.
+Informace o poruchách:
+při výskytu poruchy se
+zobrazí informace o
+poruše.
+Tlačítko napájení:
+kliknutím
+zapnete/vypnete
+Dotaz na parametry:
+Zobrazení údajů o stavu
+jednotky
+-49 -
+--- strana 52 ---
+Hlavní rozhraní Obrazovka dotazu na stav Další nabídkové lišty Rozhraní pro obecná nastavení
+Rozhraní pro výběr režimu PokročiléFunkce
+Rozhraní
+Obrazovka chybové historie Parametrnastavení
+Rozhraní
+4.7 Sdílení zařízení
+◎Sdílení připojeného zařízení, sdílející osoba postupuje v následujícím pořadí.
+◎Po úspěšném sdílení se seznam rozšíří a zobrazí se sdílená osoba.
+◎Chcete-li sdílenou osobu odstranit, dlouze stiskněte vybraného uživatele, zobrazí se rozhraní pro odstranění, klikněte na „Odstranit“.
+◎Ovládání rozhraní pro sdílení je následující:
+-50 -
+--- strana 53 ---
+◎Zadejte účet sdílené osoby, klikněte na „Hotovo“ a v seznamu úspěšně sdílených osob se zobrazí účet nově přidané sdílené
+osoby. Sdílená osoba zobrazí přijaté sdílené zařízení, kliknutím na něj můžete zařízení ovládat a řídit.
+-51 -

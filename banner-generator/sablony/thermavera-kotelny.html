@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>ThermaVera — bannery kotelny pro bytové domy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="engine.css">
+<script>
+/* =====================================================================
+   ThermaVera Energy — zelené kotelny na klíč pro bytové domy / SVJ / družstva.
+   Designový jazyk: převzatý z REO AI bannerů (marketing/Design), značka a paleta
+   ThermaVera dle webu (index.html :root).
+   Právní mantinely (CLAUDE.md webu):
+     - návratnost jen „u vhodných projektů obvykle do 7 let“, nikdy garance ani % úspory
+     - ETS2: „může zvýšit náklady“, „podle aktuálně uváděných informací od roku 2028“
+     - žádné fiktivní reference / výsledky, žádný motiv listů
+   Fotky: assets/images webu thermavera.cz.
+   Značení: [[zelená]]  {{žlutá}}  **tučně**  |  = nový řádek
+   ===================================================================== */
+window.BRAND = {
+  title: 'ThermaVera Energy — kotelny pro bytové domy',
+  logo: 'thermavera',
+  theme: {
+    'accent': '#2E6B33', 'accent-text': '#5BA32E',
+    'cta': '#FCC83C', 'cta-text': '#241603',
+    'ink': '#16201C', 'muted': '#5F6B64', 'dark': '#22302A', 'dark-panel': '#16201C',
+    'line': '#E6EEE0',
+  },
+};
+
+window.BANNERS = [
+  {
+    id: 'T1', name: 'Spravujete bytový dům a cena tepla roste?',
+    photo: 'assets/tv-bytovy-dum.jpg',
+    vars: { 'h1': '68px', 'photo-w': '60%', 'photo-pos': '65% center' },
+    h1: 'Spravujete bytový dům|a [[cena tepla]]|zase roste?',
+    sub: 'Postavíme vám vlastní|**zelenou kotelnu na klíč**|a spočítáme úsporu|i návratnost.',
+    cta: { text: 'Nezávazné posouzení', style: 'green', arrow: 'chevron' },
+    bottom: [
+      { type: 'icons', items: [
+        { i: 'calc', t: 'Posouzení|a výpočet' },
+        { i: 'doc', t: 'Projekt|a dotace' },
+        { i: 'key', t: 'Realizace|na klíč' },
+        { i: 'wrench', t: 'Servis|a provoz' },
+      ] },
+    ],
+  },
+  {
+    id: 'T2', name: 'Zelené kotelny, které dávají ekonomický smysl',
+    photo: 'assets/tv-zelena-kotelna.jpg',
+    vars: { 'h1': '60px', 'photo-w': '58%', 'photo-pos': '40% center', 'badge-x': '640px', 'badge-y': '470px', 'badge-d': '230px' },
+    h1: 'Zelené kotelny|na klíč, které|dávají|[[ekonomický smysl]]',
+    feats: [
+      { i: 'calc', t: 'Spočítáme|**úsporu i návratnost**' },
+      { i: 'bars', y: true, t: 'U vhodných projektů|**obvykle do 7 let**' },
+      { i: 'check', t: 'Nezávazně, **přehledně,**|**srozumitelně**' },
+    ],
+    badge: { icon: 'calc', text: 'Spočítejte|{{návratnost}}' },
+    bottom: [
+      { type: 'band', icon: 'trend', text: 'Úspora nákladů|{{přehledně v číslech}}' },
+      { type: 'cta', text: 'Spočítat návratnost' },
+    ],
+  },
+  {
+    id: 'T3', name: 'Vlastní kotelna místo závislosti na dodavateli',
+    dark: true,
+    photo: 'assets/tv-realizace-bytove-domy.jpg',
+    photoFull: true,
+    vars: { 'h1': '64px', 'dark-w': '62%', 'photo-pos': '75% center' },
+    h1: 'Vlastní kotelna|místo [[závislosti|na dodavateli tepla]]',
+    sub: 'Tepelná čerpadla, biomasa|nebo jejich kombinace —|**navrženo pro váš dům.**',
+    aud: [
+      { i: 'building', t: 'Bytové domy' },
+      { i: 'users', t: 'SVJ' },
+      { i: 'home', t: 'Družstva' },
+    ],
+    cta: { text: 'Zjistit možnosti', arrow: 'chevron' },
+    bottom: [
+      { type: 'calc', text: 'Nezávazně [[spočítáme]] možnosti i návratnost' },
+    ],
+  },
+  {
+    id: 'T4', name: 'ETS2 může zvýšit náklady na vytápění plynem',
+    photo: 'assets/tv-kotelna-exterier.jpg',
+    vars: { 'h1': '64px', 'photo-w': '58%', 'photo-pos': '30% center', 'col-top': '40px' },
+    pill: { icon: 'clock', text: 'ETS2|od roku 2028' },
+    h1: 'ETS2 může|[[zvýšit náklady]]|na vytápění plynem',
+    sub: 'Podle aktuálně uváděných informací|od roku 2028. Zelená kotelna|**snižuje závislost**|**na fosilních palivech.**',
+    ask: { icon: 'bars', q: 'Chcete vědět, jak by to|vyšlo u vašeho domu?', a: 'Nechte si spočítat možnosti|i návratnost.' },
+    cta: { text: 'Nechat si spočítat' },
+    bottom: [
+      { type: 'aud', icon: 'users', text: 'Pro bytové domy, SVJ a družstva' },
+    ],
+  },
+  {
+    id: 'T5', name: 'Od výpočtu po servis — vše pod jednou střechou',
+    photo: 'assets/tv-technologie-instalace.jpg',
+    vars: { 'h1': '58px', 'feat': '27px', 'photo-w': '56%', 'photo-pos': '60% center' },
+    css: '& .bn-feats { gap: 14px; }',
+    h1: 'Od výpočtu|po servis.|[[Vše pod jednou|střechou.]]',
+    feats: [
+      { i: 'calc', t: '**Technicko‑ekonomické**|**posouzení** objektu' },
+      { i: 'doc', y: true, t: 'Projekt a pomoc|**s dotacemi**' },
+      { i: 'key', t: 'Realizace kotelny|**na klíč**' },
+      { i: 'wrench', t: 'Servis|**a provoz**' },
+    ],
+    bottom: [
+      { type: 'aud', icon: 'building', text: 'Zelené kotelny pro bytové domy, SVJ a družstva' },
+      { type: 'cta', text: 'Nezávazné posouzení' },
+    ],
+  },
+];
+</script>
+<script src="engine.js"></script>
+</head>
+<body></body>
+</html>

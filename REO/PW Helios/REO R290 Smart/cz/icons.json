@@ -1,0 +1,1022 @@
+{
+ "7_3": {
+  "en": "The DC Inverter Air Source Heat Pumps are designed and manufactured to provide years of safe and reliable service when installed, operated and maintained according to the information in this manual and the installation codes referred to in later sections. Throughout the manual, safety warnings and cautions are identified by the “{I1}“symbol. Be sure to read and comply with all of the warnings and cautions.",
+  "icons": [
+   {
+    "xref": 175,
+    "bbox": [
+     280.20001220703125,
+     166.32000732421875,
+     298.55999755859375,
+     179.6400146484375
+    ],
+    "line": [
+     56.63999938964844,
+     168.20904541015625,
+     535.7394409179688,
+     183.27020263671875
+    ]
+   }
+  ]
+ },
+ "29_0": {
+  "en": "intermediate valve. 3.Ensure that all plumbing has been properly completed and then proceed to do a water leakage and pressure test. 4.All the pipelines and pipe fittings must be insulated to prevent heat loss. 5.Install a drain valve at the lowest point of the system to enable the system to be drained during freezing conditions (winterizing). 6.Install a check valve on the water outlet connection in order to prevent back siphoning when water pump stops. 7.In order to reduce the back pressure, the pipes should be installed horizontally 8. And minimize the elbows (90 degrees connections). If a higher flow rate is required, install a b{I1}ypass valve",
+  "icons": [
+   {
+    "xref": 238,
+    "bbox": [
+     59.7599983215332,
+     194.0399932861328,
+     82.31999969482422,
+     221.0399932861328
+    ],
+    "line": [
+     74.63999938964844,
+     192.5690460205078,
+     138.26144409179688,
+     207.6302032470703
+    ]
+   }
+  ]
+ },
+ "49_4": {
+  "en": "Click the \"{I1}\" button, the lock screen icon will disappear, and the remote control can be operated, as shown in the figure:",
+  "icons": [
+   {
+    "xref": 306,
+    "bbox": [
+     105.72000122070312,
+     457.08001708984375,
+     124.68000030517578,
+     479.760009765625
+    ],
+    "line": [
+     56.63999938964844,
+     468.3280334472656,
+     535.7376708984375,
+     483.3891906738281
+    ]
+   }
+  ]
+ },
+ "54_6": {
+  "en": "Click“{I1}",
+  "icons": [
+   {
+    "xref": 327,
+    "bbox": [
+     91.55999755859375,
+     656.4000244140625,
+     134.0399932861328,
+     698.8800048828125
+    ],
+    "line": [
+     56.63999938964844,
+     687.4490356445312,
+     91.56999969482422,
+     702.5101928710938
+    ]
+   }
+  ]
+ },
+ "55_4": {
+  "en": "On the main interface, locate the \"Forced Open\" function“{I1}”，and click on \"Floor Heat Dry\" to access the settings.",
+  "icons": [
+   {
+    "xref": 332,
+    "bbox": [
+     338.2799987792969,
+     559.3200073242188,
+     368.0400085449219,
+     587.6400146484375
+    ],
+    "line": [
+     56.63999938964844,
+     576.2090454101562,
+     535.8223876953125,
+     591.2702026367188
+    ]
+   }
+  ]
+ },
+ "56_0": {
+  "en": "If the underfloor heating and drying function has been enabled, click the \"{I1}\" button in the \" Floor",
+  "icons": [
+   {
+    "xref": 337,
+    "bbox": [
+     412.0799865722656,
+     243.60000610351562,
+     434.6399841308594,
+     256.32000732421875
+    ],
+    "line": [
+     56.63999938964844,
+     244.8890380859375,
+     535.6783447265625,
+     259.9501953125
+    ]
+   }
+  ]
+ },
+ "56_1": {
+  "en": "Heat Dry \" option to pop up a confirmation interface to close the function. Click the \"{I1}",
+  "icons": [
+   {
+    "xref": 338,
+    "bbox": [
+     463.44000244140625,
+     258.7200012207031,
+     498.0,
+     279.0
+    ],
+    "line": [
+     56.63999938964844,
+     267.56903076171875,
+     463.1517028808594,
+     282.63018798828125
+    ]
+   }
+  ]
+ },
+ "56_3": {
+  "en": "Click the \"{I1}",
+  "icons": [
+   {
+    "xref": 339,
+    "bbox": [
+     111.0,
+     294.0,
+     136.55999755859375,
+     314.2799987792969
+    ],
+    "line": [
+     56.63999938964844,
+     302.7280578613281,
+     105.79169464111328,
+     317.7892150878906
+    ]
+   }
+  ]
+ },
+ "56_6": {
+  "en": "On the main interface, locate the \"Forced Open\" function“{I1}”，and click on“Force ON AEH” to access the settings.",
+  "icons": [
+   {
+    "xref": 332,
+    "bbox": [
+     340.20001220703125,
+     355.0799865722656,
+     369.96002197265625,
+     383.3999938964844
+    ],
+    "line": [
+     56.63999938964844,
+     371.96905517578125,
+     541.3300170898438,
+     387.03021240234375
+    ]
+   }
+  ]
+ },
+ "56_7": {
+  "en": "Click the \"{I1}\" button to pop up the confirmation interface. Click the \"{I2}",
+  "icons": [
+   {
+    "xref": 341,
+    "bbox": [
+     110.04000091552734,
+     628.2000122070312,
+     131.04000854492188,
+     643.2000122070312
+    ],
+    "line": [
+     56.63999938964844,
+     631.76904296875,
+     414.5517272949219,
+     646.8302001953125
+    ]
+   },
+   {
+    "xref": 338,
+    "bbox": [
+     415.9200134277344,
+     622.9199829101562,
+     450.4800109863281,
+     643.2000122070312
+    ],
+    "line": [
+     56.63999938964844,
+     631.76904296875,
+     414.5517272949219,
+     646.8302001953125
+    ]
+   }
+  ]
+ },
+ "56_9": {
+  "en": "confirm the use of this function and close the interface. Click the \"{I1}\" button to cancel and close the interface.",
+  "icons": [
+   {
+    "xref": 339,
+    "bbox": [
+     375.3599853515625,
+     645.47998046875,
+     400.91998291015625,
+     665.760009765625
+    ],
+    "line": [
+     56.63999938964844,
+     654.2090454101562,
+     535.8224487304688,
+     669.2702026367188
+    ]
+   }
+  ]
+ },
+ "56_10": {
+  "en": "If the forced opening auxiliary electric heating function has been enabled, click the \"{I1}\" button in the \" Force ON AEH \" option to pop up a confirmation interface to close the function. Click the",
+  "icons": [
+   {
+    "xref": 337,
+    "bbox": [
+     463.79998779296875,
+     692.760009765625,
+     486.3599853515625,
+     705.47998046875
+    ],
+    "line": [
+     56.63999938964844,
+     694.049072265625,
+     535.8238525390625,
+     709.1102294921875
+    ]
+   }
+  ]
+ },
+ "56_13": {
+  "en": "and close the interface. Click the \"{I1}\" button to cancel and close the interface.",
+  "icons": [
+   {
+    "xref": 339,
+    "bbox": [
+     222.60000610351562,
+     743.1599731445312,
+     248.16000366210938,
+     763.4400024414062
+    ],
+    "line": [
+     56.63999938964844,
+     751.8880615234375,
+     449.57763671875,
+     766.94921875
+    ]
+   }
+  ]
+ },
+ "57_2": {
+  "en": "On the main interface, locate the \"Forced Open\" function \"{I1} to access the settings.",
+  "icons": [
+   {
+    "xref": 332,
+    "bbox": [
+     346.9200134277344,
+     132.36001586914062,
+     382.08001708984375,
+     166.32000732421875
+    ],
+    "line": [
+     56.63999938964844,
+     154.8890380859375,
+     346.1517028808594,
+     169.9501953125
+    ]
+   }
+  ]
+ },
+ "57_4": {
+  "en": "Click the \"{I1}\" button to pop up the confirmation interface. Click the \"{I2}",
+  "icons": [
+   {
+    "xref": 341,
+    "bbox": [
+     110.04000091552734,
+     398.1600036621094,
+     131.04000854492188,
+     413.1600036621094
+    ],
+    "line": [
+     56.63999938964844,
+     401.7280578613281,
+     414.5517272949219,
+     416.7892150878906
+    ]
+   },
+   {
+    "xref": 338,
+    "bbox": [
+     415.9200134277344,
+     393.0,
+     450.4800109863281,
+     413.2799987792969
+    ],
+    "line": [
+     56.63999938964844,
+     401.7280578613281,
+     414.5517272949219,
+     416.7892150878906
+    ]
+   }
+  ]
+ },
+ "57_6": {
+  "en": "confirm the opening and closing of the water tank electric heating interface. Click the \"{I1}\" button to cancel and close the interface.",
+  "icons": [
+   {
+    "xref": 339,
+    "bbox": [
+     472.79998779296875,
+     421.9200134277344,
+     498.3599853515625,
+     442.20001220703125
+    ],
+    "line": [
+     56.63999938964844,
+     430.6490478515625,
+     535.822021484375,
+     445.710205078125
+    ]
+   }
+  ]
+ },
+ "57_7": {
+  "en": "If the forced opening water tank electric heating function has been enabled, click the \"{I1}\" button in the \"Forced opening water tank electric heating\" option to pop up a confirmation interface to",
+  "icons": [
+   {
+    "xref": 337,
+    "bbox": [
+     475.44000244140625,
+     487.79998779296875,
+     498.0,
+     500.5199890136719
+    ],
+    "line": [
+     56.63999938964844,
+     489.0880432128906,
+     535.822021484375,
+     504.1492004394531
+    ]
+   }
+  ]
+ },
+ "57_8": {
+  "en": "close the function. Click the \"{I1}",
+  "icons": [
+   {
+    "xref": 338,
+    "bbox": [
+     208.1999969482422,
+     528.239990234375,
+     242.75999450683594,
+     548.52001953125
+    ],
+    "line": [
+     56.63999938964844,
+     536.9690551757812,
+     206.35169982910156,
+     552.0302124023438
+    ]
+   }
+  ]
+ },
+ "57_10": {
+  "en": "interface, and click the \"{I1}\" button to cancel and close the interface.",
+  "icons": [
+   {
+    "xref": 339,
+    "bbox": [
+     173.16000366210938,
+     557.1599731445312,
+     198.72000122070312,
+     577.4400024414062
+    ],
+    "line": [
+     56.63999938964844,
+     565.8890380859375,
+     400.01763916015625,
+     580.9501953125
+    ]
+   }
+  ]
+ },
+ "57_12": {
+  "en": "On the main interface, locate the \"Forced Open\" function \"{I1} to access the settings.",
+  "icons": [
+   {
+    "xref": 332,
+    "bbox": [
+     342.3599853515625,
+     662.5199584960938,
+     377.5199890136719,
+     696.47998046875
+    ],
+    "line": [
+     56.63999938964844,
+     685.049072265625,
+     342.0707092285156,
+     700.1102294921875
+    ]
+   }
+  ]
+ },
+ "58_0": {
+  "en": "Click the \"{I1}\" button to pop up the confirmation interface. Click the \"{I2}",
+  "icons": [
+   {
+    "xref": 341,
+    "bbox": [
+     110.04000091552734,
+     248.04000854492188,
+     131.04000854492188,
+     263.0400085449219
+    ],
+    "line": [
+     56.63999938964844,
+     251.60903930664062,
+     414.5517272949219,
+     266.6701965332031
+    ]
+   },
+   {
+    "xref": 338,
+    "bbox": [
+     415.9200134277344,
+     242.760009765625,
+     450.4800109863281,
+     263.0400085449219
+    ],
+    "line": [
+     56.63999938964844,
+     251.60903930664062,
+     414.5517272949219,
+     266.6701965332031
+    ]
+   }
+  ]
+ },
+ "58_2": {
+  "en": "confirm the forced hot water mode and close the interface. Click the \"{I1}\" button to cancel and close the interface.",
+  "icons": [
+   {
+    "xref": 339,
+    "bbox": [
+     401.0400085449219,
+     271.67999267578125,
+     426.6000061035156,
+     291.9599914550781
+    ],
+    "line": [
+     56.63999938964844,
+     280.4090576171875,
+     535.8229370117188,
+     295.47021484375
+    ]
+   }
+  ]
+ },
+ "58_3": {
+  "en": "If the forced hot water function has been enabled, click the \"{I1}\" button in the \"Forced Hot Water",
+  "icons": [
+   {
+    "xref": 337,
+    "bbox": [
+     350.760009765625,
+     337.67999267578125,
+     373.32000732421875,
+     350.3999938964844
+    ],
+    "line": [
+     56.63999938964844,
+     338.96905517578125,
+     535.8784790039062,
+     354.03021240234375
+    ]
+   }
+  ]
+ },
+ "58_4": {
+  "en": "Mode\" option to pop up a confirmation screen to turn off the function. Click the \"{I1}",
+  "icons": [
+   {
+    "xref": 338,
+    "bbox": [
+     450.1199951171875,
+     359.1600036621094,
+     484.67999267578125,
+     379.44000244140625
+    ],
+    "line": [
+     56.63999938964844,
+     367.8890380859375,
+     449.7117004394531,
+     382.9501953125
+    ]
+   }
+  ]
+ },
+ "58_6": {
+  "en": "confirm turning off the forced hot water function and closing the interface. Click the \"{I1}\" button to cancel and close the interface.",
+  "icons": [
+   {
+    "xref": 339,
+    "bbox": [
+     460.9200134277344,
+     387.9599914550781,
+     486.4800109863281,
+     408.239990234375
+    ],
+    "line": [
+     56.63999938964844,
+     396.8090515136719,
+     535.8223876953125,
+     411.8702087402344
+    ]
+   }
+  ]
+ },
+ "58_9": {
+  "en": "On the main interface, locate the \"Forced Open\" function \"{I1} to access the settings.",
+  "icons": [
+   {
+    "xref": 332,
+    "bbox": [
+     343.0799865722656,
+     511.8000183105469,
+     378.239990234375,
+     545.760009765625
+    ],
+    "line": [
+     56.63999938964844,
+     534.3280639648438,
+     342.7917175292969,
+     549.3892211914062
+    ]
+   }
+  ]
+ },
+ "59_0": {
+  "en": "Click the \"{I1}\" button to pop up the confirmation interface. Click the \"{I2}",
+  "icons": [
+   {
+    "xref": 341,
+    "bbox": [
+     110.04000091552734,
+     36.47999954223633,
+     131.04000854492188,
+     51.47999954223633
+    ],
+    "line": [
+     56.63999938964844,
+     39.92805099487305,
+     414.5517272949219,
+     54.989200592041016
+    ]
+   },
+   {
+    "xref": 338,
+    "bbox": [
+     415.9200134277344,
+     31.19999885559082,
+     450.4800109863281,
+     51.47999954223633
+    ],
+    "line": [
+     56.63999938964844,
+     39.92805099487305,
+     414.5517272949219,
+     54.989200592041016
+    ]
+   }
+  ]
+ },
+ "59_2": {
+  "en": "confirm the opening and closing of the external heat source interface. Click the \"{I1}\" button to cancel and close the interface.",
+  "icons": [
+   {
+    "xref": 339,
+    "bbox": [
+     457.9200134277344,
+     60.12000274658203,
+     483.4800109863281,
+     80.4000015258789
+    ],
+    "line": [
+     56.63999938964844,
+     68.84905242919922,
+     535.8223876953125,
+     83.91020202636719
+    ]
+   }
+  ]
+ },
+ "59_3": {
+  "en": "If the forced external heat source function has been enabled, click the \"{I1}\" button in the \"Forced External Heat Source\" option to pop up a confirmation screen to turn off the function. Click the",
+  "icons": [
+   {
+    "xref": 337,
+    "bbox": [
+     403.9200134277344,
+     126.0,
+     426.4800109863281,
+     138.72000122070312
+    ],
+    "line": [
+     56.63999938964844,
+     127.28905487060547,
+     535.8214111328125,
+     142.35020446777344
+    ]
+   }
+  ]
+ },
+ "59_6": {
+  "en": "interface. Click the \"{I1}\" button to cancel and close the interface.",
+  "icons": [
+   {
+    "xref": 339,
+    "bbox": [
+     154.0800018310547,
+     195.36000061035156,
+     179.63999938964844,
+     215.63999938964844
+    ],
+    "line": [
+     56.63999938964844,
+     204.08905029296875,
+     381.056640625,
+     219.15020751953125
+    ]
+   }
+  ]
+ },
+ "59_12": {
+  "en": "“{I1}”indicates that the load has output, while “{I2}”indicates no output.",
+  "icons": [
+   {
+    "xref": 352,
+    "bbox": [
+     67.68000030517578,
+     742.4400024414062,
+     86.4000015258789,
+     761.1599731445312
+    ],
+    "line": [
+     56.63999938964844,
+     749.6090698242188,
+     429.41754150390625,
+     764.6702270507812
+    ]
+   },
+   {
+    "xref": 353,
+    "bbox": [
+     306.6000061035156,
+     741.5999755859375,
+     323.1600036621094,
+     761.0399780273438
+    ],
+    "line": [
+     56.63999938964844,
+     749.6090698242188,
+     429.41754150390625,
+     764.6702270507812
+    ]
+   }
+  ]
+ },
+ "60_4": {
+  "en": "Find the 'Logout' option in the advanced settings interface and click the '{I1} time you re-enter the advanced settings interface, you need to re-enter your password. If you have not selected to log out, you do not need to enter a password for the next time you re-enter the advanced settings interface (unless you power on again or there is no operation for a long time).",
+  "icons": [
+   {
+    "xref": 359,
+    "bbox": [
+     420.8399963378906,
+     507.3600158691406,
+     448.55999755859375,
+     535.0800170898438
+    ],
+    "line": [
+     56.63999938964844,
+     523.6490478515625,
+     414.89947509765625,
+     538.710205078125
+    ]
+   }
+  ]
+ },
+ "61_2": {
+  "en": "Main interface>{I1}>User parameters",
+  "icons": [
+   {
+    "xref": 364,
+    "bbox": [
+     132.24000549316406,
+     234.0,
+     161.04000854492188,
+     262.32000732421875
+    ],
+    "line": [
+     56.63999938964844,
+     250.8890380859375,
+     249.3614044189453,
+     265.9501953125
+    ]
+   }
+  ]
+ },
+ "65_2": {
+  "en": "Use the“{I1}",
+  "icons": [
+   {
+    "xref": 382,
+    "bbox": [
+     98.27999877929688,
+     460.20001220703125,
+     133.55999755859375,
+     481.20001220703125
+    ],
+    "line": [
+     56.63999938964844,
+     469.76904296875,
+     98.2386474609375,
+     484.8302001953125
+    ]
+   }
+  ]
+ },
+ "65_6": {
+  "en": "button “{I1}”or“{I2}”in the ZoneA Cool/Heat Curve,Zone B Cool/Heat Curve section to enable or disable the corresponding curve function..",
+  "icons": [
+   {
+    "xref": 341,
+    "bbox": [
+     95.63999938964844,
+     507.96002197265625,
+     116.63999938964844,
+     522.9600219726562
+    ],
+    "line": [
+     56.63999938964844,
+     512.1514282226562,
+     535.6792602539062,
+     526.394775390625
+    ]
+   },
+   {
+    "xref": 384,
+    "bbox": [
+     136.1999969482422,
+     510.2400207519531,
+     160.9199981689453,
+     522.9600219726562
+    ],
+    "line": [
+     56.63999938964844,
+     512.1514282226562,
+     535.6792602539062,
+     526.394775390625
+    ]
+   }
+  ]
+ },
+ "65_7": {
+  "en": "An illuminated icon “{I1}”on the main interface indicates that the curve function is enabled.",
+  "icons": [
+   {
+    "xref": 385,
+    "bbox": [
+     151.1999969482422,
+     549.3599853515625,
+     179.39999389648438,
+     577.5599975585938
+    ],
+    "line": [
+     56.63999938964844,
+     566.75146484375,
+     485.29193115234375,
+     580.9948120117188
+    ]
+   }
+  ]
+ },
+ "68_8": {
+  "en": "When TS–TWout1≥7HEAT_LOAD_dT +5 the heat pump provides heated water to the space heating terminals and when TWout1≥TS + 8HEAT_UNLOAD_dTthe heat pump does not provide heated water to the space heating terminals. When the room temperature control heat pump is selected (no water temperature control icon in the area of the main interface){I1} 10ROOM_TEMP_dT sets the temperature difference between the actual room temperature (TR) and set room temperature (TS) above which the heat pump provides heated water to the space heating terminals. When TS–TR≥10ROOM_TEMP_dT the heat pump provides heated water to the space heating terminals and when TR≥TS the heat pump does not provide heated water to the space heating terminals. TR: Room temperature TS: Heat pump room set temperature",
+  "icons": [
+   {
+    "xref": 399,
+    "bbox": [
+     203.39999389648438,
+     613.0800170898438,
+     220.1999969482422,
+     630.1199951171875
+    ],
+    "line": [
+     56.63999938964844,
+     618.5690307617188,
+     203.4755096435547,
+     633.6301879882812
+    ]
+   }
+  ]
+ },
+ "72_8": {
+  "en": "From the main interface, locate and select the \"Holi.Mode set\"{I1} setting",
+  "icons": [
+   {
+    "xref": 412,
+    "bbox": [
+     369.3599853515625,
+     714.1199951171875,
+     397.67999267578125,
+     742.4400024414062
+    ],
+    "line": [
+     56.63999938964844,
+     731.009033203125,
+     363.31170654296875,
+     746.0701904296875
+    ]
+   }
+  ]
+ },
+ "73_2": {
+  "en": "can be set. Navigate to:Main interface>{I1}>User parameters> 18 HOLIDAY_AWAY_ThS sets the heat pump’s leaving water set temperaturefor space heating mode when in holiday away mode. 19 HOLIDAY_AWAY_ThwS sets the heat pump’s leaving water set temperature for DHW mode when in holiday away mode.",
+  "icons": [
+   {
+    "xref": 364,
+    "bbox": [
+     247.8000030517578,
+     484.55999755859375,
+     267.6000061035156,
+     504.1199951171875
+    ],
+    "line": [
+     56.63999938964844,
+     492.56903076171875,
+     362.3621520996094,
+     507.63018798828125
+    ]
+   }
+  ]
+ },
+ "73_5": {
+  "en": "Click\"Auto”,to switch to: \"Manual” ,“{I1}\"shows that the function is on,\"{I2}\"shows that the function",
+  "icons": [
+   {
+    "xref": 417,
+    "bbox": [
+     228.9600067138672,
+     691.6799926757812,
+     250.6800079345703,
+     711.1199951171875
+    ],
+    "line": [
+     56.63999938964844,
+     699.6880493164062,
+     535.821533203125,
+     714.7492065429688
+    ]
+   },
+   {
+    "xref": 418,
+    "bbox": [
+     402.0,
+     693.1199951171875,
+     418.55999755859375,
+     711.1199951171875
+    ],
+    "line": [
+     56.63999938964844,
+     699.6880493164062,
+     535.821533203125,
+     714.7492065429688
+    ]
+   }
+  ]
+ },
+ "73_6": {
+  "en": "is off.Click\"{I1}\"or\"{I2}\"to toggle the switch state,If a valve does not turn on/off when its on/off state is toggled ，If a valve does not turn on/off when its on/off state is toggled or if a pump/heater does not operate when turned on, check the component’s connection to the system main PCB.",
+  "icons": [
+   {
+    "xref": 417,
+    "bbox": [
+     110.4000015258789,
+     713.52001953125,
+     132.1199951171875,
+     732.9600219726562
+    ],
+    "line": [
+     56.63999938964844,
+     721.5280151367188,
+     535.8214721679688,
+     736.5891723632812
+    ]
+   },
+   {
+    "xref": 418,
+    "bbox": [
+     149.75999450683594,
+     714.9600219726562,
+     166.3199920654297,
+     732.9600219726562
+    ],
+    "line": [
+     56.63999938964844,
+     721.5280151367188,
+     535.8214721679688,
+     736.5891723632812
+    ]
+   }
+  ]
+ },
+ "74_1": {
+  "en": "From the main interface,click\"{I1}\",locate and select \"Floor Heat Preheat\" to access the setting. Before floor heating, if a large amount of water remains on the floor, the floor may be warped or even rupture during floor heating operation, in order to protect the floor, floor drying is necessary, during which the temperature of the floor should be increased gradually.",
+  "icons": [
+   {
+    "xref": 423,
+    "bbox": [
+     201.24000549316406,
+     172.1999969482422,
+     221.04000854492188,
+     191.63999938964844
+    ],
+    "line": [
+     56.63999938964844,
+     180.08905029296875,
+     520.7385864257812,
+     195.15020751953125
+    ]
+   }
+  ]
+ },
+ "74_5": {
+  "en": "From the main interface,click\"{I1}\",locate and select \"Timed Floor Heat Dry\" to access the setting. For newly-installed under-floor heating systems, floor drying up mode can be used to remove moisture from the floor slab and sub-floor to prevent warping or rupture of the floor during floor heating operation.There are three phases to the floor drying up operation: Phase 1: gradual temperature increase from a starting point of 25°C to the peak temperature Phase 2: maintain peak temperature Phase 3: gradual temperature decrease from the peak temperature to 45°C.",
+  "icons": [
+   {
+    "xref": 423,
+    "bbox": [
+     201.24000549316406,
+     533.6400146484375,
+     223.92001342773438,
+     555.8400268554688
+    ],
+    "line": [
+     56.63999938964844,
+     544.4090576171875,
+     535.377685546875,
+     559.47021484375
+    ]
+   }
+  ]
+ },
+ "76_25": {
+  "en": "From the main interface,click \"{I1}",
+  "icons": [
+   {
+    "xref": 431,
+    "bbox": [
+     204.24000549316406,
+     734.6399536132812,
+     238.6800079345703,
+     768.5999755859375
+    ],
+    "line": [
+     56.63999938964844,
+     757.1690673828125,
+     204.3116912841797,
+     772.230224609375
+    ]
+   }
+  ]
+ },
+ "90_9": {
+  "en": "1. Click“{I1}”on the main interface to enter the Wi-Fi settings screen. 2. Check if the message \"connected to cloud server\" is displayed in the interface, if other messages are displayed,then click“smart mode”,to reset the WIFI",
+  "icons": [
+   {
+    "xref": 464,
+    "bbox": [
+     103.91999816894531,
+     636.5999755859375,
+     132.239990234375,
+     664.9199829101562
+    ],
+    "line": [
+     56.63999938964844,
+     653.992431640625,
+     400.69464111328125,
+     668.2357788085938
+    ]
+   }
+  ]
+ }
+}

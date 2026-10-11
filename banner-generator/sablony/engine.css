@@ -1,0 +1,264 @@
+/* =====================================================================
+   Banner engine — sdílený layout pro HTML šablony bannerů.
+   Designový jazyk převzatý z REO bannerů ve složce marketing/Design:
+   logo vlevo nahoře · velký headline se zvýrazněným slovem · fotka vpravo
+   s přechodem do bílé · produkt přes fotku · kulatý odznak · zelený pruh
+   · tmavý pruh se žlutým CTA · lišta ikon.
+   Barvy značky se nastavují proměnnými v <body> každé šablony.
+   ===================================================================== */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --accent: #4B8036;      /* hlavní zelená (pruhy, ikony) */
+  --accent-text: #4E9A2F; /* zelená zvýrazněných slov v headlinu */
+  --cta: #F3C324;         /* žlutá CTA */
+  --cta-text: #2D2E30;
+  --ink: #2D2E30;
+  --muted: #4A4D50;
+  --dark: #47484C;        /* tmavý pruh pod CTA */
+  --dark-panel: #1E2420;  /* tmavý levý panel (layout dark) */
+  --line: #E3E6E2;
+  --font-head: "Poppins", "Inter", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+body { font-family: var(--font-body); color: var(--ink); background: #fff; }
+
+/* ---------- plátno banneru ---------- */
+.bn {
+  position: relative;
+  width: var(--w, 1080px);
+  height: var(--h, 1080px);
+  overflow: hidden;
+  background: #fff;
+  --bottom-h: 0px;
+}
+
+/* fotka vpravo s přechodem do bílé */
+.bn-photo {
+  position: absolute; top: 0; right: 0;
+  width: var(--photo-w, 60%);
+  height: calc(100% - var(--bottom-h));
+  background-size: cover;
+  background-position: var(--photo-pos, center);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.55) 18%, #000 42%);
+          mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.55) 18%, #000 42%);
+}
+.bn.photo-full .bn-photo { width: 100%; -webkit-mask-image: none; mask-image: none; }
+
+/* světlý závoj za textovým sloupcem (čitelnost přes fotku) */
+.bn-veil {
+  position: absolute; top: 0; left: 0;
+  width: 66%; height: calc(100% - var(--bottom-h));
+  background: linear-gradient(to right, #fff 0%, #fff 72%, rgba(255,255,255,0) 100%);
+}
+
+/* ---------- tmavý layout (diagonální split jako 6F994214) ---------- */
+.bn.is-dark .bn-veil { display: none; }
+.bn-dark-edge, .bn-dark-panel {
+  position: absolute; top: 0; left: 0;
+  height: calc(100% - var(--bottom-h));
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+.bn-dark-edge  { width: calc(var(--dark-w, 58%) + 14px); background: var(--accent-text); }
+.bn-dark-panel { width: var(--dark-w, 58%);
+  background:
+    radial-gradient(120% 80% at 10% 0%, rgba(255,255,255,.07), transparent 60%),
+    linear-gradient(165deg, #232A25 0%, var(--dark-panel) 55%, #141815 100%); }
+.bn.is-dark .bn-col { color: #fff; }
+.bn.is-dark .bn-h1 { color: #fff; }
+.bn.is-dark .bn-sub, .bn.is-dark .bn-feats li { color: #E8ECE9; }
+
+/* ---------- produkt (výřez) ---------- */
+.bn-product {
+  position: absolute;
+  right: var(--prod-right, 20px);
+  bottom: calc(var(--bottom-h) + var(--prod-bottom, 14px));
+  width: var(--prod-w, 520px);
+  filter: drop-shadow(0 26px 22px rgba(0,0,0,.28));
+  z-index: 3;
+}
+.bn-ground {
+  position: absolute;
+  right: calc(var(--prod-right, 20px) + 30px);
+  bottom: calc(var(--bottom-h) + var(--prod-bottom, 14px) - 16px);
+  width: calc(var(--prod-w, 520px) - 60px); height: 40px;
+  background: radial-gradient(closest-side, rgba(0,0,0,.35), transparent);
+  z-index: 2;
+}
+
+/* ---------- textový sloupec ---------- */
+.bn-col {
+  position: absolute; z-index: 4;
+  left: 64px; top: var(--col-top, 40px);
+  width: var(--col-w, 600px);
+}
+.bn-logo { display: block; height: var(--logo-h, 132px); width: auto; margin-left: -6px; }
+.bn-logo-tv { display: flex; align-items: center; gap: 16px; font-family: var(--font-head);
+  font-weight: 700; font-size: 46px; letter-spacing: -.01em; white-space: nowrap; }
+.bn-logo-tv svg { width: 70px; height: 70px; flex: 0 0 auto; }
+.bn-logo-tv .b { color: var(--tv-green, #2E6B33); }
+.bn-logo-tv .t { color: var(--tv-amber-deep, #EAAE1C); }
+.bn-logo-tv .e { color: var(--ink); font-weight: 600; }
+.bn.is-dark .bn-logo-tv .b, .bn.is-dark .bn-logo-tv .e { color: #fff; }
+
+.bn-h1 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: var(--h1, 74px);
+  line-height: 1.08;
+  letter-spacing: -.015em;
+  color: var(--ink);
+  margin-top: var(--h1-mt, 30px);
+}
+.hl { color: var(--accent-text); }
+.y  { color: var(--cta); }
+.bn-rule { width: 84px; height: 5px; border-radius: 3px; background: var(--rule, var(--accent-text)); margin: 26px 0 0; }
+.bn-sub { font-size: var(--sub, 30px); line-height: 1.38; color: var(--muted); margin-top: 22px; }
+.bn-sub b { color: var(--ink); }
+.bn.is-dark .bn-sub b { color: var(--cta); }
+
+/* seznam výhod s ikonami */
+.bn-feats { list-style: none; margin-top: 26px; display: flex; flex-direction: column; gap: 20px; }
+.bn-feats li { display: flex; align-items: center; gap: 22px; font-size: var(--feat, 29px); line-height: 1.28; color: var(--muted); }
+.bn-feats li b { color: var(--ink); font-weight: 700; }
+.bn.is-dark .bn-feats li b { color: #fff; }
+.bn-feats .ic { flex: 0 0 auto; width: 66px; height: 66px; color: var(--accent-text); display: grid; place-items: center; }
+.bn-feats .ic.y { color: var(--cta); }
+.bn-feats .ic svg { width: 58px; height: 58px; }
+
+/* skupiny publika (Bytové domy | SVJ | Družstva) */
+.bn-aud { display: flex; margin-top: 28px; }
+.bn-aud div { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 24px; font-size: 24px; color: inherit; }
+.bn-aud div:first-child { padding-left: 0; }
+.bn-aud div + div { border-left: 2px solid rgba(127,127,127,.35); }
+.bn-aud svg { width: 58px; height: 58px; color: var(--accent-text); }
+
+/* blok „Chcete vědět…“ */
+.bn-ask { display: flex; gap: 20px; margin-top: 26px; align-items: flex-start; }
+.bn-ask .dot { flex: 0 0 auto; width: 76px; height: 76px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; }
+.bn-ask .dot svg { width: 42px; height: 42px; }
+.bn-ask strong { display: block; font-size: 29px; line-height: 1.25; color: var(--ink); }
+.bn-ask span { display: block; font-size: 27px; line-height: 1.3; color: var(--muted); margin-top: 6px; }
+
+/* CTA tlačítko ve sloupci */
+.bn-cta {
+  display: inline-flex; align-items: center; gap: 18px;
+  margin-top: var(--cta-mt, 34px);
+  height: 98px; padding: 0 44px;
+  border-radius: 16px;
+  background: var(--cta); color: var(--cta-text);
+  font-family: var(--font-head); font-weight: 700; font-size: 40px;
+  box-shadow: 0 14px 26px -12px rgba(0,0,0,.35);
+  white-space: nowrap;
+}
+.bn-cta.green { background: var(--accent); color: #fff; }
+.bn-cta.green svg { color: var(--cta); }
+.bn-cta svg { width: 40px; height: 40px; }
+
+/* ---------- kulatý odznak ---------- */
+.bn-badge {
+  position: absolute; z-index: 5;
+  left: var(--badge-x, 470px); top: var(--badge-y, 560px);
+  width: var(--badge-d, 236px); height: var(--badge-d, 236px);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #5FA83F, var(--accent) 70%);
+  border: 7px solid #fff;
+  box-shadow: 0 18px 30px -12px rgba(0,0,0,.45);
+  color: #fff; text-align: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--font-head); font-weight: 700; font-size: 25px; line-height: 1.12; text-transform: uppercase;
+  padding: 0 22px;
+}
+.bn-badge svg { width: 54px; height: 54px; }
+
+/* ---------- pilulka vpravo nahoře ---------- */
+.bn-pill {
+  position: absolute; z-index: 5; right: 40px; top: 40px;
+  display: flex; align-items: center; gap: 16px;
+  background: var(--accent); color: #fff;
+  border-radius: 999px; padding: 14px 34px 14px 14px;
+  font-family: var(--font-head); font-weight: 700; font-size: 28px; line-height: 1.08; text-transform: uppercase;
+  box-shadow: 0 14px 26px -14px rgba(0,0,0,.45);
+}
+.bn-pill .chk { width: 70px; height: 70px; border-radius: 50%; background: #fff; color: var(--accent); display: grid; place-items: center; flex: 0 0 auto; }
+.bn-pill .chk svg { width: 42px; height: 42px; }
+
+/* ---------- statistika (velké číslo) ---------- */
+.bn-stat {
+  position: absolute; z-index: 5;
+  right: var(--stat-right, 56px); top: var(--stat-top, 70px);
+  background: #fff; border-radius: 24px; padding: 26px 36px 28px;
+  box-shadow: 0 24px 50px -24px rgba(0,0,0,.45);
+  text-align: center; border-top: 8px solid var(--accent-text);
+}
+.bn-stat .lbl { font-family: var(--font-head); font-weight: 700; font-size: 24px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.bn-stat .num { font-family: var(--font-head); font-weight: 800; font-size: 132px; line-height: 1; color: var(--accent-text); margin-top: 6px; }
+.bn-stat .note { font-size: 22px; color: var(--muted); margin-top: 6px; }
+
+/* ---------- spodní části ---------- */
+.bn-bottom { position: absolute; left: 0; right: 0; bottom: 0; z-index: 6; }
+
+/* zelený pruh s ikonou + 2 řádky */
+.bb-band {
+  height: 150px; background: var(--accent);
+  display: flex; align-items: center; gap: 30px; padding: 0 64px;
+  font-family: var(--font-head); font-weight: 700; font-size: 38px; line-height: 1.12; text-transform: uppercase; color: #fff;
+  background-image: linear-gradient(100deg, rgba(255,255,255,.07) 0 40%, transparent 40%);
+}
+.bb-band svg { width: 84px; height: 84px; flex: 0 0 auto; }
+.bb-band .y { color: var(--cta); }
+
+/* tmavý pruh se žlutým CTA */
+.bb-cta { height: 140px; background: var(--dark); display: grid; place-items: center; }
+.bb-cta a {
+  display: inline-flex; align-items: center; justify-content: center; gap: 26px;
+  width: 720px; height: 100px; border-radius: 14px;
+  background: var(--cta); color: var(--cta-text);
+  font-family: var(--font-head); font-weight: 700; font-size: 46px;
+  box-shadow: 0 10px 0 rgba(0,0,0,.18);
+}
+.bb-cta svg { width: 48px; height: 48px; }
+
+/* lišta 4 ikon */
+.bb-icons {
+  height: 172px; background: #fff; border-top: 2px solid var(--line);
+  display: grid; grid-template-columns: repeat(4, 1fr); align-items: center;
+}
+.bb-icons div { display: flex; align-items: center; gap: 16px; padding: 0 26px; font-size: 25px; line-height: 1.22; color: var(--ink); }
+.bb-icons div + div { border-left: 2px solid var(--line); }
+.bb-icons svg { width: 56px; height: 56px; color: var(--accent-text); flex: 0 0 auto; }
+
+/* zelený pruh pro publikum */
+.bb-aud {
+  height: 104px; background: var(--accent); color: #fff;
+  display: flex; align-items: center; gap: 22px; padding: 0 64px;
+  font-family: var(--font-head); font-weight: 600; font-size: 34px;
+}
+.bb-aud svg { width: 54px; height: 54px; }
+
+/* tmavý pruh s kalkulačkou */
+.bb-calc {
+  height: 116px; background: var(--dark); color: #fff;
+  display: flex; align-items: center; justify-content: center; gap: 22px;
+  font-family: var(--font-head); font-weight: 600; font-size: 33px;
+}
+.bb-calc .dot { width: 70px; height: 70px; border-radius: 50%; border: 3px solid var(--accent-text); color: var(--accent-text); display: grid; place-items: center; }
+.bb-calc .dot svg { width: 38px; height: 38px; }
+.bb-calc .hl { color: var(--accent-text); }
+
+/* drobná poznámka (právní upřesnění) */
+.bn-foot { position: absolute; z-index: 6; left: 64px; right: 64px; font-size: 17px; line-height: 1.3; color: #8A8F8C; }
+
+/* ---------- galerie (náhled všech bannerů) ---------- */
+body.gallery { background: #EEF1EE; padding: 32px; }
+.g-head { font-family: var(--font-head); margin-bottom: 22px; }
+.g-head h1 { font-size: 26px; }
+.g-head p { color: #5F6B64; margin-top: 4px; font-size: 15px; }
+.g-grid { display: flex; flex-wrap: wrap; gap: 26px; }
+.g-card { background: #fff; border-radius: 14px; padding: 12px; box-shadow: 0 10px 30px -20px rgba(0,0,0,.4); }
+.g-card .g-t { font-family: var(--font-head); font-weight: 600; font-size: 14px; margin: 2px 4px 10px; display: flex; justify-content: space-between; gap: 12px; }
+.g-card .g-t a { color: #2E6B33; text-decoration: none; }
+.g-frame { width: calc(1080px * var(--s)); height: calc(var(--fh) * var(--s)); overflow: hidden; border-radius: 6px; }
+.g-frame .bn { transform: scale(var(--s)); transform-origin: 0 0; }

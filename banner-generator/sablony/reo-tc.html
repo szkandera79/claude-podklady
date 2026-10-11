@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>REO HEATING — bannery tepelná čerpadla</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="engine.css">
+<script>
+/* =====================================================================
+   REO HEATING — tepelná čerpadla (REO R290 Smart), rodinné domy.
+   Designový jazyk + logo: AI bannery z Projekty/marketing/Design.
+   Texty: 3 prodejní pilíře REO R290 Smart v tomto pořadí:
+     1) Topí přímo ze sluníčka — „od jara do podzimu“, „U velkých značek tohle nenajdete“
+     2) Účinnost — „víc než většina značkových“, nikdy „než všechny“
+     3) „kompresor Mitsubishi Electric“, nikdy „tepelné čerpadlo Mitsubishi“
+   Nikdy: Helios / Power World, „hydrobox“, „tišší než konkurence“.
+   Logo na jednotkách: velké jednotky (reo-skupina*) = celé AI logo svisle;
+   řada Smart (reo-smart-jednotka) = jen nápis „REO HEATING“ (na celé logo není místo).
+   Bannery o pilířích Smart (R1–R3) proto ukazují jen Smart jednotku.
+   Značení: [[zelená]]  {{žlutá}}  **tučně**  |  = nový řádek
+   ===================================================================== */
+window.BRAND = {
+  title: 'REO HEATING — tepelná čerpadla (REO R290 Smart)',
+  logo: 'assets/reo-logo-ai.png',
+  theme: {
+    'accent': '#4B8036', 'accent-text': '#4E9A2F',
+    'cta': '#F3C324', 'cta-text': '#2D2E30',
+    'ink': '#2D2E30', 'muted': '#4A4D50', 'dark': '#47484C',
+    'logo-h': '118px',
+  },
+};
+
+window.BANNERS = [
+  {
+    id: 'R1', name: 'Topí přímo ze sluníčka',
+    photo: 'assets/reo-foto-rd.jpg',
+    product: 'assets/reo-smart-jednotka.png',
+    vars: { 'h1': '58px', 'prod-w': '470px', 'prod-right': '24px', 'badge-x': '690px', 'badge-y': '270px', 'badge-d': '210px' },
+    h1: 'Tepelné čerpadlo,|které topí|[[přímo ze sluníčka]]',
+    feats: [
+      { i: 'sun', y: true, t: 'Od jara do podzimu|**topí ze sluníčka**' },
+      { i: 'bolt', t: 'Panely připojíte rovnou,|**bez střídače a baterie**' },
+      { i: 'plug', t: 'Co sluníčko nepokryje,|**vezme si ze sítě**' },
+    ],
+    badge: { icon: 'sun', text: 'Bez střídače|{{a baterie}}' },
+    bottom: [
+      { type: 'band', icon: 'sun', text: 'U velkých značek|{{tohle nenajdete}}' },
+      { type: 'cta', text: 'Chci topit ze sluníčka' },
+    ],
+  },
+  {
+    id: 'R2', name: 'Účinnost nad většinou značkových',
+    noVeil: true,
+    product: 'assets/reo-smart-jednotka.png',
+    vars: { 'h1': '64px', 'prod-w': '500px', 'prod-right': '30px', 'prod-bottom': '70px', 'stat-top': '60px', 'stat-right': '70px' },
+    css: '& { background: linear-gradient(160deg,#fff 0%,#F3F7F0 55%,#E3EDDC 100%); }',
+    h1: 'Vyšší účinnost|[[než většina|značkových]]',
+    stat: { label: 'SCOP až', num: '5,29', note: 'při 35 °C (RH14)' },
+    feats: [
+      { i: 'gauge', t: 'Ve třídě 8–12 kW|**SCOP 5,11–5,20**' },
+      { i: 'cpu', y: true, t: 'Kompresor|**Mitsubishi Electric**' },
+      { i: 'leaf', t: 'Přírodní chladivo|**R290**' },
+    ],
+    cta: { text: 'Porovnat účinnost' },
+    foot: 'SCOP při 35 °C. Srovnání se značkovými R290 monobloky ve třídě 8–12 kW.',
+    bottom: [
+      { type: 'icons', items: [
+        { i: 'sun', t: 'Topí|ze sluníčka' },
+        { i: 'gauge', t: 'Vysoká|účinnost' },
+        { i: 'cpu', t: 'Kompresor|Mitsubishi Electric' },
+        { i: 'leaf', t: 'Chladivo|R290' },
+      ] },
+    ],
+  },
+  {
+    id: 'R3', name: 'Kompresor Mitsubishi Electric',
+    dark: true, noVeil: true,
+    product: 'assets/reo-smart-jednotka.png',
+    vars: { 'h1': '64px', 'dark-w': '60%', 'prod-w': '500px', 'prod-right': '10px', 'prod-bottom': '120px' },
+    css: '& { background: linear-gradient(170deg,#fff 0%,#F2F6EF 60%,#E2ECDA 100%); }',
+    h1: 'Srdcem je|[[kompresor|Mitsubishi|Electric]]',
+    feats: [
+      { i: 'sun', y: true, t: 'Umí topit|**přímo ze sluníčka**' },
+      { i: 'shield', t: 'Integrovaný záložní|**dohřev 3 kW**' },
+      { i: 'leaf', t: 'Přírodní chladivo|**R290**' },
+    ],
+    cta: { text: 'Zjistit víc', arrow: 'chevron' },
+    bottom: [
+      { type: 'aud', icon: 'home', text: 'REO R290 Smart · výkonové modely 6–40 kW' },
+    ],
+  },
+  {
+    id: 'R4', name: 'Platíte za topení čím dál víc?',
+    noVeil: true,
+    product: 'assets/reo-unit-1.png',
+    vars: { 'h1': '74px', 'prod-w': '480px', 'prod-right': '40px', 'prod-bottom': '30px' },
+    css: '& { background: radial-gradient(70% 60% at 85% 70%, #E2EDDA 0%, rgba(226,237,218,0) 70%), linear-gradient(160deg,#fff 0%,#F4F8F1 100%); }',
+    h1: 'Platíte za topení|[[čím dál víc?]]',
+    sub: 'Přejděte na tepelné čerpadlo|**REO HEATING**. Spočítáme vám|úsporu i návratnost.',
+    cta: { text: 'Nechat si spočítat', style: 'green', arrow: 'chevron' },
+    bottom: [
+      { type: 'icons', items: [
+        { i: 'coins', t: 'Nižší náklady|na topení' },
+        { i: 'home', t: 'Řešení|na míru' },
+        { i: 'shield', t: 'Spolehlivý|provoz' },
+        { i: 'calc', t: 'Nezávazný|výpočet' },
+      ] },
+    ],
+  },
+  {
+    id: 'R5', name: 'Tepelná čerpadla pro váš dům (celé logo na jednotce)',
+    photo: 'assets/reo-foto-rd.jpg',
+    product: 'assets/reo-skupina-bok.png',
+    vars: { 'h1': '72px', 'photo-w': '64%', 'prod-w': '560px', 'prod-right': '-10px', 'prod-bottom': '0px', 'badge-x': '830px', 'badge-y': '36px', 'badge-d': '210px' },
+    h1: 'Tepelná čerpadla|[[pro váš dům]]',
+    sub: 'Od rodinných domů|po větší objekty.|**Spočítáme vám úsporu**|**i návratnost.**',
+    badge: { icon: 'calc', text: 'Nezávazný|{{výpočet}}' },
+    bottom: [
+      { type: 'band', icon: 'trend', text: 'Úspora nákladů|{{přehledně v číslech}}' },
+      { type: 'cta', text: 'Nechat si spočítat' },
+    ],
+  },
+];
+</script>
+<script src="engine.js"></script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,253 @@
+[Text vytažený z Podklad pro schůzi SVJ Baranova 10.docx]
+
+Podklad pro schůzi SVJ
+SVJ Baranova 10, Praha 3 — posouzení modernizace zdroje tepla
+
+Strana 1/2 — Současný stav a důvod řešení
+1. Současný stav objektu
+Objekt je aktuálně vytápěn vlastní plynovou kotelnou. Nejedná se o dodávku tepla z externího teplovodu.
+Položka
+Hodnota
+Stávající zdroj tepla
+plynové kotle De Dietrich
+Počet kotlů
+2 ks
+Výkon jednoho kotle
+140 kW
+Celkový výkon kotelny
+280 kW
+Primární palivo
+zemní plyn
+Tepelná ztráta objektu
+145 kW
+Externí dodavatel
+zajišťuje plyn, servis, revize a provozní služby
+
+2. Spotřeba plynu a současné náklady
+Roční spotřeba plynu činí:
+36 036 m³/rok
+Při přepočtu 1 m³ zemního plynu = cca 10,55 kWh odpovídá tato spotřeba:
+380,2 MWh energie v plynu za rok
+Současný roční náklad účtovaný externím dodavatelem:
+1 000 000 Kč bez DPH / rok
+Z toho vychází odvozená účtovaná cena:
+2 630 Kč/MWh bez DPH
+Položka
+Hodnota
+Roční spotřeba plynu
+36 036 m³
+Energie v plynu
+380,2 MWh
+Roční náklad
+1 000 000 Kč bez DPH
+Odvozená cena
+2 630 Kč/MWh bez DPH
+
+3. Obchodní rozdíl současného dodavatele
+Podle vstupního předpokladu lze plyn včetně distribuce pořídit přibližně za:
+1 500 Kč/MWh bez DPH
+Současný dodavatel účtuje odvozeně: 
+2 630 Kč/MWh bez DPH
+Rozdíl:
+2 630 − 1 500 = 1 130 Kč/MWh
+Položka
+Hodnota
+Srovnatelná cena plynu včetně distribuce
+1 500 Kč/MWh
+Účtovaná cena dodavatele
+2 630 Kč/MWh
+Rozdíl
+1 130 Kč/MWh
+Přirážka k pořizovací ceně
+75,3 %
+Hrubá marže z prodejní ceny
+43,0 %
+Roční rozdíl při spotřebě 380,2 MWh
+cca 429 700 Kč/rok
+Tento rozdíl nelze bez detailního rozpadu fakturace označit celý jako čistý zisk dodavatele, protože může zahrnovat servis, revize, správu a další služby. Pro SVJ ale představuje významný prostor pro úsporu nebo vyjednání lepších podmínek.
+
+4. Odhad skutečně dodaného tepla
+Energie v plynu není totéž co užitečné teplo dodané do domu. Při uvažované účinnosti plynových kotlů 90 % vychází:
+380,2 MWh × 0,90 = 342,2 MWh užitečného tepla ročně
+Položka
+Hodnota
+Energie v plynu
+380,2 MWh
+Uvažovaná účinnost kotlů
+90 %
+Odhad užitečného tepla
+342,2 MWh/rok
+Cena užitečného tepla ze současného řešení
+2 923 Kč/MWh
+
+Strana 2/2 — Návrh řešení a návratnost
+5. Navržené řešení — tepelná čerpadla REO X100
+Základní navrženou variantou je instalace kaskády tepelných čerpadel:
+Varianta A: 4 × REO X100
+Současně je pro ekonomické porovnání doplněna úspornější varianta:
+Varianta B: 3 × REO X100
+Stávající plynové kotle by zůstaly zachovány jako:
+	•	záložní zdroj,
+	•	bivalentní zdroj pro extrémní mrazy,
+	•	zdroj pro špičkové odběry,
+	•	záloha při servisu tepelných čerpadel,
+	•	případný dohřev teplé vody.
+
+6. Porovnání technických variant
+Položka
+Varianta A
+Varianta B
+Počet tepelných čerpadel
+4 × REO X100
+3 × REO X100
+Předpokládaný výkon při -15 °C
+cca 240 kW
+cca 180 kW
+Tepelná ztráta objektu
+145 kW
+145 kW
+Výkonová rezerva
+cca 95 kW
+cca 35 kW
+Charakter varianty
+vyšší rezerva a provozní jistota
+nižší investice, stále dostatečný výkon
+Stávající plynové kotle
+ponechány jako záloha
+ponechány jako záloha
+Obě varianty výkonově pokrývají tepelnou ztrátu objektu. Varianta se 4 ks má výrazně vyšší rezervu a lepší provozní bezpečnost při odstávce jedné jednotky. Varianta se 3 ks je investičně úspornější a podle předpokládaného výkonu cca 180 kW při -15 °C stále pokrývá tepelnou ztrátu domu 145 kW.
+
+7. Provozní náklady tepelných čerpadel
+Pro obě varianty je uvažováno stejné roční množství dodaného tepla:
+342,2 MWh/rok
+Uvažovaný sezónní topný faktor:
+SCOP 3,5
+Cena elektřiny:
+3 000 Kč/MWh bez DPH
+Roční spotřeba elektřiny: 
+342,2 / 3,5 = 97,8 MWh/rok
+Roční náklad na elektřinu:
+97,8 × 3 000 = 293 000 Kč bez DPH / rok
+Položka
+Hodnota
+Odhad roční potřeby tepla
+342,2 MWh
+SCOP
+3,5
+Spotřeba elektřiny
+97,8 MWh
+Cena elektřiny
+3 000 Kč/MWh
+Roční náklad na elektřinu
+293 000 Kč bez DPH
+Výrobní cena tepla z TČ
+857 Kč/MWh
+Poznámka: Výpočet zahrnuje pouze elektřinu pro provoz tepelných čerpadel. Nezahrnuje servis, opravy, pojištění ani financování.
+
+8. Investice a návratnost
+Současný roční náklad plynového řešení:
+1 000 000 Kč bez DPH
+Předpokládaný roční náklad tepelných čerpadel na elektřinu:
+293 000 Kč bez DPH
+Roční úspora proti současnému stavu:
+707 000 Kč bez DPH / rok
+Porovnání návratnosti bez emisních povolenek
+Varianta
+Investice bez DPH
+Roční náklad TČ
+Roční úspora
+Prostá návratnost
+A — 4 × REO X100
+4 649 000 Kč
+293 000 Kč
+707 000 Kč
+cca 6,6 roku
+B — 3 × REO X100
+3 900 000 Kč
+293 000 Kč
+707 000 Kč
+cca 5,5 roku
+
+9. Návratnost při započtení emisních povolenek ETS2
+Pro modelové posouzení byl uvažován dopad emisních povolenek na plyn přibližně:
+86 000 Kč/rok
+Modelový náklad současného plynového řešení po započtení ETS2:
+1 000 000 + 86 000 = 1 086 000 Kč/rok
+Roční úspora tepelných čerpadel proti plynu včetně ETS2:
+1 086 000 − 293 000 = 793 000 Kč/rok
+Varianta
+Investice bez DPH
+Roční úspora po započtení ETS2
+Prostá návratnost
+A — 4 × REO X100
+4 649 000 Kč
+793 000 Kč
+cca 5,9 roku
+B — 3 × REO X100
+3 900 000 Kč
+793 000 Kč
+cca 4,9 roku
+
+10. Citlivost na servisní náklady
+Pokud budou mít tepelná čerpadla samostatné servisní náklady, návratnost se prodlouží.
+Varianta A — 4 × REO X100, investice 4 649 000 Kč
+Roční servis TČ
+Roční úspora
+Prostá návratnost
+0 Kč
+707 000 Kč
+6,6 roku
+50 000 Kč
+657 000 Kč
+7,1 roku
+100 000 Kč
+607 000 Kč
+7,7 roku
+Varianta B — 3 × REO X100, investice 3 900 000 Kč
+Roční servis TČ
+Roční úspora
+Prostá návratnost
+0 Kč
+707 000 Kč
+5,5 roku
+50 000 Kč
+657 000 Kč
+5,9 roku
+100 000 Kč
+607 000 Kč
+6,4 roku
+
+11. Doporučení pro rozhodnutí SVJ
+Z ekonomického pohledu vychází nejlépe:
+Varianta B — 3 × REO X100
+Důvody:
+	•	nižší investice: 3 900 000 Kč bez DPH,
+	•	stále dostatečný výkon vůči tepelné ztrátě objektu,
+	•	návratnost cca 5,5 roku,
+	•	při započtení ETS2 návratnost cca 4,9 roku,
+	•	stávající plynové kotle zůstávají jako záloha. 
+Z provozního a bezpečnostního pohledu je silnější:
+Varianta A — 4 × REO X100
+Důvody:
+	•	vyšší výkonová rezerva,
+	•	lepší provoz při odstávce jedné jednotky,
+	•	menší zatížení jednotlivých jednotek,
+	•	vyšší jistota v extrémních mrazech,
+	•	vhodnější řešení, pokud má SVJ preferovat maximální spolehlivost před nejkratší návratností.
+
+12. Doporučený závěr pro schůzi SVJ
+Doporučuje se pokračovat v přípravě projektu náhrady stávajícího plynového provozu tepelnými čerpadly REO X100.
+Pro hlasování SVJ doporučujeme předložit dvě varianty:
+Varianta
+Doporučení
+4 × REO X100
+technicky bezpečnější varianta s vyšší rezervou
+3 × REO X100
+ekonomicky výhodnější varianta s kratší návratností
+Jako preferovanou variantu pro další rozpracování lze doporučit:
+3 × REO X100 za 3 900 000 Kč bez DPH
+za předpokladu, že projektant potvrdí dostatečný výkon, hydraulické zapojení, elektrický příkon a hlukové limity.
+Současně doporučujeme vyžádat si od stávajícího dodavatele detailní rozpad ceny 1 000 000 Kč bez DPH/rok, protože oproti srovnatelné ceně plynu včetně distribuce vychází obchodní rozdíl přibližně:
+429 700 Kč bez DPH ročně
+To je samostatný důležitý argument pro změnu současného modelu vytápění nebo alespoň pro nové vyjednání ceny.
+

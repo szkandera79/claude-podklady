@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://reoheating.cz/sitemap.xml
