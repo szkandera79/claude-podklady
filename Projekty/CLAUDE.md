@@ -8,7 +8,9 @@ CLAUDE.md** a drž se pravidel tam uvedených.
 ## Kde to leží
 - Lokální cesta: `~/Claude/Projekty` (odkaz na iCloud Drive `Claude/Projekty`) — stejná na iMacu i MacBooku.
 - Původní cesty `~/Claude/REO`, `~/Claude/banner-generator` atd. jsou odkazy na složky v Projektech (fungují dál).
-- GitHub: `szkandera79/Projekty` (soukromý). Před prací `git pull`, po práci `git commit` + `git push`.
+- GitHub: `szkandera79/Projekty` (soukromý). **Na iMacu se synchronizuje automaticky** po každé práci v Claude Code
+  (Stop hook → `~/Developer/ClaudeVoiceCZ/scripts/sync-projekty.sh`, max. 1× za 10 min: kontrola tajných údajů,
+  commit, `pull --rebase`, push; log `~/Library/Logs/claude-podklady-sync.log`). Ruční `git commit`/`push` není potřeba.
 - Skripty projektů počítají cesty relativně ke svému souboru; příkazy v README se spouštějí
   z kořene repozitáře (např. `python3 bd-jandova/src/gen_schema.py`).
 - Náhled v prohlížeči: konfigurace „projekty“ v `.claude/launch.json` (server z kořene na portu 8000)
