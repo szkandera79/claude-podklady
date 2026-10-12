@@ -1,0 +1,374 @@
+<title>REO R290 Smart vs. trh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: kontrolní lišta → srovnávací tabulka po výkonových třídách → grafy cena×SCOP → výbava značek → poznámky ke zdrojům */
+:root{
+  --bg:#F6F8F6; --surface:#FFFFFF; --fg:#16241C; --muted:#5C6B62; --line:#DCE6DF; --soft:#EEF4F0;
+  --brand:#26804B; --brand-ink:#1A5433; --brand-tint:#E6F3EB; --sun:#B7861A;
+  --good:#1F7A45; --bad:#B4432E; --warn:#9A6B00; --dot:#8A978F;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-data:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1612; --surface:#16201A; --fg:#E3ECE6; --muted:#97A69D; --line:#2A3830; --soft:#1C2A22;
+  --brand:#4FBF7E; --brand-ink:#8FDDB0; --brand-tint:#173326; --sun:#E5B54A;
+  --good:#5CCB8A; --bad:#EE7F68; --warn:#E0B24F; --dot:#7D8B83; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1612; --surface:#16201A; --fg:#E3ECE6; --muted:#97A69D; --line:#2A3830; --soft:#1C2A22;
+  --brand:#4FBF7E; --brand-ink:#8FDDB0; --brand-tint:#173326; --sun:#E5B54A;
+  --good:#5CCB8A; --bad:#EE7F68; --warn:#E0B24F; --dot:#7D8B83; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:14px/1.5 var(--f-body);margin:0}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:20px;padding-block:28px 56px;display:flex;flex-direction:column;gap:28px}
+h1{font-size:28px;line-height:1.15;margin:0;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:18px;margin:0;font-weight:700;text-wrap:balance}
+p{margin:0}
+.eyebrow{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);font-weight:600}
+.lead{color:var(--muted);max-width:75ch}
+header{display:flex;flex-direction:column;gap:8px}
+.num,td.n,th.n{font-family:var(--f-data);font-variant-numeric:tabular-nums}
+section{display:flex;flex-direction:column;gap:12px}
+.findings{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.finding{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.finding b{font-size:14px}
+.finding p{color:var(--muted);font-size:13px}
+.controls{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:flex-end;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.ctl{display:flex;flex-direction:column;gap:5px}
+.ctl>span{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;flex-wrap:wrap}
+.seg button{font:inherit;font-size:13px;background:transparent;color:var(--fg);border:0;padding:6px 11px;cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--brand);color:#fff}
+.seg button:focus-visible,input:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.ctl input{font:inherit;font-family:var(--f-data);width:92px;padding:5px 8px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--fg)}
+.tablebox{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--soft);white-space:nowrap;position:relative}
+th.sortable{cursor:pointer}
+th.sortable:hover{color:var(--fg)}
+td.n,th.n{text-align:right;white-space:nowrap}
+tr.cls td{background:var(--soft);font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--brand-ink)}
+tr.reo td{background:var(--brand-tint)}
+tr.reo td:first-child{box-shadow:inset 3px 0 0 var(--brand)}
+td .model{color:var(--muted);font-size:12px;display:block}
+.chip{display:inline-block;font-size:10.5px;line-height:1.5;padding:0 6px;border-radius:99px;border:1px solid var(--line);color:var(--muted);margin:2px 3px 0 0;white-space:nowrap}
+.chip.w{border-color:var(--warn);color:var(--warn)}
+.chip.ok{border-color:var(--good);color:var(--good)}
+.d{display:block;font-size:11px}
+.d.up{color:var(--good)} .d.down{color:var(--bad)} .d.eq{color:var(--muted)}
+.best{font-weight:700;color:var(--brand-ink)}
+.na{color:var(--muted)}
+.charts{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 12px 6px;min-width:0}
+.chart h3{margin:0 0 4px;font-size:13px}
+.chart svg{width:100%;height:auto;display:block}
+.chart text{font-family:var(--f-body);font-size:10px;fill:var(--muted)}
+.chart .lbl{fill:var(--fg);font-size:9.5px}
+.chart .lbl.reo{fill:var(--brand-ink);font-weight:700}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.eq td:first-child{font-weight:600;white-space:nowrap}
+.eq td{min-width:120px;font-size:12.5px}
+.eq th:first-child{min-width:150px}
+.yes{color:var(--good);font-weight:600} .no{color:var(--bad);font-weight:600} .part{color:var(--warn);font-weight:600}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+.note{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;font-size:13px;min-width:0}
+.note h3{margin:0 0 6px;font-size:14px}
+.note ul{margin:0;padding-left:18px;color:var(--muted);display:flex;flex-direction:column;gap:3px}
+.note a{color:var(--brand);word-break:break-all}
+.foot{color:var(--muted);font-size:12px;max-width:100ch}
+@media (max-width:640px){h1{font-size:22px}.controls{position:static}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">REO HEATING · interní podklad · stav 12. 10. 2026</span>
+  <h1>REO R290 Smart a starší REO R290 proti konkurenci</h1>
+  <p class="lead">Monobloky vzduch–voda s chladivem R290 pro rodinné domy, 6–16 kW. Cena je vždy za <b>funkční sestavu</b>: venkovní jednotka plus to, bez čeho nefunguje (řízení, oběhové čerpadlo). Chybějící dohřev nebo expanzní nádoba se nepřičítá. Ceny konkurence jsou nejnižší nalezené na českém internetu, kde to šlo; jinak ceník.</p>
+</header>
+
+<section aria-labelledby="h-find">
+  <h2 id="h-find">Hlavní zjištění</h2>
+  <div class="findings" id="findings"></div>
+</section>
+
+<div class="controls" role="group" aria-label="Nastavení srovnání">
+  <label class="ctl"><span>Cena</span>
+    <div class="seg" id="c-price"><button type="button" data-v="low" aria-pressed="true">nejnižší nalezená</button><button type="button" data-v="list">ceník</button></div></label>
+  <label class="ctl"><span>DPH</span>
+    <div class="seg" id="c-vat"><button type="button" data-v="0" aria-pressed="true">bez DPH</button><button type="button" data-v="21">s 21 %</button><button type="button" data-v="12">s 12 %</button></div></label>
+  <label class="ctl"><span>Otopná soustava (SCOP)</span>
+    <div class="seg" id="c-temp"><button type="button" data-v="35" aria-pressed="true">podlahovka 35 °C</button><button type="button" data-v="55">radiátory 55 °C</button></div></label>
+  <label class="ctl"><span>Výkonová třída</span>
+    <div class="seg" id="c-cls"></div></label>
+  <label class="ctl" for="i-heat"><span>Potřeba tepla MWh/rok</span><input id="i-heat" type="number" min="1" max="200" step="1" value="15"></label>
+  <label class="ctl" for="i-el"><span>Elektřina Kč/kWh</span><input id="i-el" type="number" min="1" max="20" step="0.1" value="5.5"></label>
+</div>
+
+<section aria-labelledby="h-tab">
+  <h2 id="h-tab">Cena, účinnost a hluk po výkonových třídách</h2>
+  <p class="foot">Rozdíly (zeleně ve prospěch Smart, červeně v neprospěch) se počítají proti modelu Smart ve stejné třídě. Provoz za rok = potřeba tepla ÷ SCOP × cena elektřiny; jde o orientační modelový výpočet bez TUV, ne o slib úspory. Klikněte na záhlaví sloupce pro řazení uvnitř tříd.</p>
+  <div class="tablebox"><table id="tab"></table></div>
+</section>
+
+<section aria-labelledby="h-ch">
+  <h2 id="h-ch">Účinnost vůči ceně</h2>
+  <div class="legend"><span><i style="background:var(--brand)"></i>REO R290 Smart</span><span><i style="background:var(--sun)"></i>REO R290 (starší řada)</span><span><i style="background:var(--dot)"></i>konkurence</span><span>Vlevo nahoře = levnější a účinnější.</span></div>
+  <div class="charts" id="charts"></div>
+</section>
+
+<section aria-labelledby="h-eq">
+  <h2 id="h-eq">Výbava a vlastnosti řad</h2>
+  <div class="tablebox"><table class="eq" id="eq"></table></div>
+</section>
+
+<section aria-labelledby="h-notes">
+  <h2 id="h-notes">Poznámky ke zdrojům a výhrady</h2>
+  <div class="notes" id="notes"></div>
+  <p class="foot">COP podle EN 14511, SCOP podle EN 14825 pro průměrné klima (u hodnot označených „odv.“ přepočteno z ηs: SCOP = (ηs + 3) × 0,025). SCOP je sezónní ukazatel, nemá bod A7. L<sub>WA</sub> = akustický výkon (ErP / EN 12102), L<sub>pA</sub> = akustický tlak v uvedené vzdálenosti; hodnoty v různé vzdálenosti nelze porovnávat přímo. Ceny konkurence se mění denně a u e‑shopů bývá DPH nejednoznačná – před použitím v obchodním jednání ověřit.</p>
+</section>
+</div>
+
+<script>
+/* ---------- DATA ----------
+ b: značka, ln: řada, m: model, cls: výkonová třída Smart, kw: výkon text,
+ low/list: cena funkční sestavy Kč bez DPH, set: co je v ceně,
+ c35/c55: COP A7/W35, A7/W55; s35/s55: SCOP; lwa: L_WA dB(A); lpa: text; fl: příznaky ceny/dat */
+const SMART='REO Smart', OLD='REO R290';
+const R=[
+ // REO R290 Smart (výrobce, ErP; L_WA/L_pA = horší z hodnot 35/55 °C, L_pA v 1 m)
+ {b:SMART,ln:'R290 Smart',m:'RH06 1F',cls:6,kw:'6 (3,4–8,5)',low:99000,list:99000,set:'jednotka',c35:5.04,c55:3.11,s35:5.00,s55:3.84,lwa:53,lpa:'38 / 1 m'},
+ {b:SMART,ln:'R290 Smart',m:'RH08 3F',cls:8,kw:'8 (4,1–11,0)',low:109000,list:109000,set:'jednotka',c35:4.89,c55:3.04,s35:5.15,s55:3.90,lwa:50,lpa:'35 / 1 m'},
+ {b:SMART,ln:'R290 Smart',m:'RH10 3F',cls:10,kw:'10 (4,2–12,9)',low:119000,list:119000,set:'jednotka',c35:4.92,c55:3.21,s35:5.20,s55:3.90,lwa:55,lpa:'40 / 1 m'},
+ {b:SMART,ln:'R290 Smart',m:'RH12 3F',cls:12,kw:'12 (6,3–17,0)',low:129000,list:129000,set:'jednotka',c35:5.03,c55:3.35,s35:5.11,s55:3.94,lwa:55,lpa:'40 / 1 m'},
+ {b:SMART,ln:'R290 Smart',m:'RH14 3F',cls:14,kw:'14 (6,6–19,3)',low:139000,list:139000,set:'jednotka',c35:4.80,c55:3.22,s35:5.29,s55:3.91,lwa:56,lpa:'41 / 1 m'},
+ {b:SMART,ln:'R290 Smart',m:'RH16 3F',cls:16,kw:'16 (7,8–22,0)',low:149000,list:149000,set:'jednotka',c35:4.90,c55:3.16,s35:5.09,s55:3.88,lwa:56,lpa:'41 / 1 m'},
+ {b:SMART,ln:'R290 Smart',m:'RHX40 3F',cls:30,kw:'30 (12,7–40,0)',low:350000,list:350000,set:'jednotka',c35:4.60,c55:2.80,s35:5.25,s55:3.90,lwa:59,lpa:'42 / 1 m'},
+ // REO R290 starší řada (ErP report / Keymark; COP při max. výkonu z tabulek výrobce)
+ {b:OLD,ln:'R290',m:'RH030',cls:6,kw:'5,8 (3,2–9,0)',low:95000,list:95000,set:'jednotka',c35:4.18,c55:3.04,s35:4.65,s55:3.48,lwa:58,lpa:'44 / 1 m',fl:['COP při max. výkonu','SCOP odv.']},
+ {b:OLD,ln:'R290',m:'RH040',cls:8,kw:'7,9 (4,2–11,8)',low:105000,list:105000,set:'jednotka',c35:4.13,c55:3.01,s35:4.60,s55:3.50,lwa:61,lpa:'47 / 1 m',fl:['COP při max. výkonu','SCOP odv.']},
+ {b:OLD,ln:'R290',m:'RH050',cls:12,kw:'12,2 (5,6–16,0)',low:125000,list:125000,set:'jednotka',c35:4.19,c55:3.05,s35:4.60,s55:3.44,lwa:59,lpa:'45 / 1 m',fl:['COP při max. výkonu','SCOP odv.']},
+ {b:OLD,ln:'R290',m:'RH060',cls:16,kw:'až 22 (7,7–22,0)',low:150000,list:150000,set:'jednotka',c35:4.16,c55:3.03,s35:4.80,s55:3.89,lwa:62,lpa:'46 / 1 m',fl:['COP při max. výkonu']},
+ // MIDEA M-Thermal (vše v jednotce) — nejnižší Baxx.cz / mideatepelnacerpadla.cz
+ {b:'Midea',ln:'M-Thermal Arctic',m:'MHC-V6WD2N7-E30',cls:6,kw:'6,2',low:88900,list:88900,set:'jednotka',c35:4.9,c55:3.1,s35:4.90,s55:3.80,lwa:58,lpa:'46 / 1 m',fl:['SCOP odv.','starší generace']},
+ {b:'Midea',ln:'M-Thermal Nature',m:'MHC-V8WD2N7-BE30',cls:8,kw:'8,0',low:94959,list:101900,set:'jednotka',c35:5.25,c55:3.35,s35:5.35,s55:4.06,lwa:52,lpa:'40 / 1 m'},
+ {b:'Midea',ln:'M-Thermal Nature',m:'MHC-V10WD2N7-BE30',cls:10,kw:'9,5',low:102900,list:102900,set:'jednotka',c35:4.95,c55:3.20,s35:5.33,s55:4.01,lwa:54,lpa:'41 / 1 m'},
+ {b:'Midea',ln:'M-Thermal Nature',m:'MHC-V12WD2(R)N7',cls:12,kw:'12,1',low:111488,list:139900,set:'jednotka',c35:4.95,c55:3.25,s35:4.94,s55:3.96,lwa:54,lpa:'43 / 1 m',fl:['kód na e‑shopu nejasný 1F/3F']},
+ {b:'Midea',ln:'M-Thermal Nature',m:'MHC-V14WD2(R)N7',cls:14,kw:'14,0',low:119752,list:146900,set:'jednotka',c35:4.70,c55:3.15,s35:4.76,s55:3.85,lwa:57,lpa:'46 / 1 m'},
+ {b:'Midea',ln:'M-Thermal Nature',m:'MHC-V16WD2(R)N7',cls:16,kw:'15,5',low:128017,list:164900,set:'jednotka',c35:4.50,c55:3.05,s35:4.72,s55:3.86,lwa:58,lpa:'49 / 1 m'},
+ // LG Therma V Monoblock S R290 (2026, vše v jednotce kromě dohřevu) — nejnižší lgtepelnacerpadla.cz; „ceník“ = OBCHOD-VTP.CZ
+ {b:'LG',ln:'Therma V Monoblock S',m:'HM051HFS.UA41 1F',cls:6,kw:'5,5',low:94900,list:114286,set:'jednotka',c35:4.90,c55:2.95,s35:4.58,s55:3.58,lwa:53,lpa:'31 / 5 m'},
+ {b:'LG',ln:'Therma V Monoblock S',m:'HM071HFS.UA41 1F',cls:8,kw:'7,0',low:99900,list:119232,set:'jednotka',c35:4.70,c55:2.85,s35:4.75,s55:3.60,lwa:54,lpa:'32 / 5 m'},
+ {b:'LG',ln:'Therma V Monoblock S',m:'HM093HFS.UA41 3F',cls:10,kw:'9,0',low:115900,list:136447,set:'jednotka',c35:4.60,c55:2.80,s35:4.70,s55:3.66,lwa:56,lpa:'34 / 5 m'},
+ {b:'LG',ln:'Therma V Monoblock S',m:'HM123HFS.UB41 3F',cls:12,kw:'12,0',low:119900,list:141566,set:'jednotka',c35:4.60,c55:2.95,s35:4.75,s55:3.65,lwa:56,lpa:'34 / 5 m',fl:['SCOP: CZ list 4,75, AT prospekt 4,60']},
+ {b:'LG',ln:'Therma V Monoblock S',m:'HM143HFS.UB41 3F',cls:14,kw:'14,0',low:121900,list:143243,set:'jednotka',c35:4.50,c55:2.90,s35:4.85,s55:3.65,lwa:57,lpa:'35 / 5 m',fl:['SCOP: CZ list 4,85, AT prospekt 4,55']},
+ {b:'LG',ln:'Therma V Monoblock S',m:'HM163HFS.UB41 3F',cls:16,kw:'16,0',low:123900,list:144979,set:'jednotka',c35:4.40,c55:2.80,s35:4.80,s55:3.60,lwa:59,lpa:'37 / 5 m',fl:['SCOP: CZ list 4,80, AT prospekt 4,50']},
+ // LG R290 Monobloc HF (předchozí generace) + ovládací box PHCS0 (bez něj nefunguje)
+ {b:'LG',ln:'R290 Monobloc HF',m:'HM071HF + PHCS0',cls:8,kw:'7,0',low:120900,list:125201,set:'+ ovládací box PHCS0',c35:5.00,c55:3.35,s35:5.24,s55:3.86,lwa:49,lpa:'27 / 5 m',fl:['předchozí generace','COP W55 při sníženém výkonu']},
+ {b:'LG',ln:'R290 Monobloc HF',m:'HM091HF + PHCS0',cls:10,kw:'9,0',low:136789,list:136789,set:'+ ovládací box PHCS0',c35:4.70,c55:3.30,s35:5.20,s55:3.86,lwa:50,lpa:'28 / 5 m',fl:['předchozí generace','COP W55 při sníženém výkonu']},
+ {b:'LG',ln:'R290 Monobloc HF',m:'HM123HF + PHCS0',cls:12,kw:'12,0',low:145256,list:145256,set:'+ ovládací box PHCS0',c35:4.70,c55:3.10,s35:5.45,s55:3.97,lwa:49,lpa:'27 / 5 m',fl:['předchozí generace']},
+ {b:'LG',ln:'R290 Monobloc HF',m:'HM143HF + PHCS0',cls:14,kw:'14,0',low:147876,list:147876,set:'+ ovládací box PHCS0',c35:4.50,c55:3.25,s35:5.38,s55:3.96,lwa:51,lpa:'29 / 5 m',fl:['předchozí generace']},
+ {b:'LG',ln:'R290 Monobloc HF',m:'HM163HF + PHCS0',cls:16,kw:'16,0',low:148751,list:150363,set:'+ ovládací box PHCS0',c35:4.30,c55:3.30,s35:5.11,s55:3.92,lwa:52,lpa:'30 / 5 m',fl:['předchozí generace']},
+ // GREE Versati V R290 — v ČR se neprodává; EU e-shopy (GR/IT) × 24,3 Kč/€
+ {b:'Gree',ln:'Versati V R290',m:'GRS-CQ6.0Pd/NpG4-E',cls:6,kw:'6,2',low:87100,list:87100,set:'jednotka',c35:5.0,c55:3.50,s35:5.18,s55:3.87,lwa:54,lpa:'47 / 1 m',fl:['EU cena, v ČR nedostupné']},
+ {b:'Gree',ln:'Versati V R290',m:'GRS-CQ8.0Pd/NpG4',cls:8,kw:'8,4',low:75440,list:75440,set:'jednotka',c35:5.0,c55:3.60,s35:5.13,s55:3.87,lwa:56,lpa:'51 / 1 m',fl:['EU cena, v ČR nedostupné']},
+ {b:'Gree',ln:'Versati V R290',m:'GRS-CQ10Pd/NpG4',cls:10,kw:'10,0',low:70550,list:70550,set:'jednotka',c35:4.75,c55:3.30,s35:4.85,s55:3.88,lwa:56,lpa:'52 / 1 m',fl:['EU cena, v ČR nedostupné','SCOP odv.']},
+ {b:'Gree',ln:'Versati V R290',m:'GRS-CQ12Pd/NpG4',cls:12,kw:'12,0',low:88190,list:88190,set:'jednotka',c35:4.95,c55:3.10,s35:4.75,s55:3.57,lwa:58,lpa:'55 / 1 m',fl:['EU cena, v ČR nedostupné']},
+ {b:'Gree',ln:'Versati V R290',m:'GRS-CQ14Pd/NpG4',cls:14,kw:'14,0',low:92100,list:92100,set:'jednotka',c35:4.70,c55:3.00,s35:4.72,s55:3.55,lwa:58,lpa:'55 / 1 m',fl:['EU cena, v ČR nedostupné','SCOP odv.']},
+ {b:'Gree',ln:'Versati V R290',m:'GRS-CQ16Pd/NpG4',cls:16,kw:'15,5',low:92350,list:92350,set:'jednotka',c35:4.70,c55:3.00,s35:4.75,s55:3.50,lwa:57,lpa:'53 / 1 m',fl:['EU cena, v ČR nedostupné']},
+ // IVT AIR X 500 + AirBox 500 E9 (venkovní jednotka bez čerpadla a řízení)
+ {b:'IVT',ln:'AIR X 500',m:'AIR X 505 + AirBox 500 E9',cls:6,kw:'6,8',low:194400,list:216000,set:'+ AirBox (čerpadlo, řízení, dohřev)',c35:4.85,c55:null,s35:4.65,s55:3.50,lwa:42,lpa:'34 / 1 m',fl:['nejnižší cena vč. montáže','COP při 40% zatížení']},
+ {b:'IVT',ln:'AIR X 500',m:'AIR X 507 + AirBox 500 E9',cls:8,kw:'8,0',low:201600,list:224000,set:'+ AirBox (čerpadlo, řízení, dohřev)',c35:4.85,c55:null,s35:4.58,s55:3.52,lwa:42,lpa:'34 / 1 m',fl:['nejnižší cena vč. montáže','COP při 40% zatížení']},
+ {b:'IVT',ln:'AIR X 500',m:'AIR X 510 + AirBox 500 E9',cls:10,kw:'12,7',low:226800,list:252000,set:'+ AirBox (čerpadlo, řízení, dohřev)',c35:4.84,c55:null,s35:4.77,s55:3.64,lwa:42,lpa:'34 / 1 m',fl:['nejnižší cena vč. montáže','COP při 40% zatížení']},
+ {b:'IVT',ln:'AIR X 500',m:'AIR X 512 + AirBox 500 E9',cls:12,kw:'12,9',low:236700,list:263000,set:'+ AirBox (čerpadlo, řízení, dohřev)',c35:4.84,c55:null,s35:4.66,s55:3.51,lwa:45,lpa:'40 / 1 m',fl:['nejnižší cena vč. montáže','COP při 40% zatížení']},
+ // NIBE S2125 + SMO S40 + oběhové čerpadlo UPM4 (venkovní jednotka bez čerpadla a řízení)
+ {b:'NIBE',ln:'S2125',m:'S2125-8 + SMO S40 + UPM4',cls:8,kw:'max 6,7',low:233200,list:252800,set:'+ SMO S40 + čerpadlo',c35:5.16,c55:null,s35:5.00,s55:3.70,lwa:49,lpa:'38 / 2 m',fl:['COP při částečném zatížení']},
+ {b:'NIBE',ln:'S2125',m:'S2125-12 + SMO S40 + UPM4',cls:12,kw:'max 9,9',low:256200,list:275700,set:'+ SMO S40 + čerpadlo',c35:5.24,c55:null,s35:5.00,s55:3.80,lwa:49,lpa:'38 / 2 m',fl:['COP při částečném zatížení']},
+ {b:'NIBE',ln:'S2125',m:'S2125-14 + SMO S40 + UPM4',cls:14,kw:'max 14,0',low:287200,list:301700,set:'+ SMO S40 + čerpadlo',c35:5.55,c55:null,s35:5.27,s55:4.06,lwa:52,lpa:'–',fl:['COP při částečném zatížení','L_WA odvozeno']},
+ {b:'NIBE',ln:'S2125',m:'S2125-16 + SMO S40 + UPM4',cls:16,kw:'max 15,8',low:301200,list:342700,set:'+ SMO S40 + čerpadlo',c35:5.55,c55:null,s35:5.33,s55:4.08,lwa:52,lpa:'–',fl:['COP při částečném zatížení','L_WA 52–55 (zdroje se liší)']},
+ // ACOND (ceník 1. 1. 2025; e-shopy cenu neuvádějí) — venk. + vnitřní jednotka s řízením + čerpadlo
+ {b:'Acond',ln:'Aconomis',m:'Aconomis S + UNI + čerpadlo',cls:6,kw:'Prated 4,7',low:130580,list:130580,set:'+ vnitřní jednotka s řízením + čerpadlo',c35:5.08,c55:3.18,s35:4.96,s55:3.70,lwa:53,lpa:'36 / 3 m',fl:['ceník 2025','čerpadlo z ceníku 2024']},
+ {b:'Acond',ln:'Aconomis',m:'Aconomis N + UNI + čerpadlo',cls:8,kw:'Prated 7,5',low:150600,list:150600,set:'+ vnitřní jednotka s řízením + čerpadlo',c35:4.95,c55:3.08,s35:4.77,s55:3.82,lwa:54,lpa:'37 / 3 m',fl:['ceník 2025','čerpadlo z ceníku 2024']},
+ {b:'Acond',ln:'Grandis',m:'Grandis N + vnitřní jedn. + čerpadlo',cls:8,kw:'Prated 4 (max 7,7)',low:186960,list:186960,set:'+ vnitřní jednotka s řízením + čerpadlo',c35:5.54,c55:3.26,s35:5.38,s55:4.05,lwa:46,lpa:'23 / 6 m',fl:['ceník 2025','COP při nízkém výkonu']},
+ {b:'Acond',ln:'PRO',m:'PRO N + vnitřní jedn. + čerpadlo',cls:8,kw:'Prated 5 (max 7,7)',low:218190,list:218190,set:'+ vnitřní jednotka s řízením + čerpadlo',c35:4.20,c55:2.77,s35:4.74,s55:3.68,lwa:48,lpa:'30 / 3 m',fl:['ceník 2025','COP při max. výkonu']},
+ {b:'Acond',ln:'Aconomis',m:'Aconomis R + UNI + čerpadlo',cls:14,kw:'Prated 14,2',low:171530,list:171530,set:'+ vnitřní jednotka s řízením + čerpadlo',c35:5.12,c55:3.24,s35:4.92,s55:3.86,lwa:57,lpa:'40 / 3 m',fl:['ceník 2025','čerpadlo z ceníku 2024']},
+ {b:'Acond',ln:'Grandis',m:'Grandis R + vnitřní jedn. + čerpadlo',cls:16,kw:'Prated 10 (max 17)',low:237180,list:237180,set:'+ vnitřní jednotka s řízením + čerpadlo',c35:5.52,c55:3.38,s35:5.58,s55:4.21,lwa:48,lpa:'24 / 6 m',fl:['ceník 2025','COP při nízkém výkonu']},
+ {b:'Acond',ln:'PRO',m:'PRO R + vnitřní jedn. + čerpadlo',cls:16,kw:'Prated 10 (max 15,4)',low:264550,list:264550,set:'+ vnitřní jednotka s řízením + čerpadlo',c35:4.53,c55:2.83,s35:5.05,s55:3.93,lwa:53,lpa:'36 / 3 m',fl:['ceník 2025','COP při max. výkonu']},
+ // VIESSMANN (vnitřní jednotka povinná: čerpadlo, řízení) + kulové kohouty + BUS kabel
+ {b:'Viessmann',ln:'Vitocal 250-A',m:'251.A06 + vnitřní jednotka',cls:6,kw:'A7/W35 4,8',low:165191,list:216290,set:'+ vnitřní jednotka',c35:5.1,c55:null,s35:4.70,s55:3.60,lwa:47,lpa:'–',fl:['DPH na e‑shopu nejasná','ceník 2023']},
+ {b:'Viessmann',ln:'Vitocal 150-A',m:'151.A06 + vnitřní jednotka',cls:6,kw:'A7/W35 4,8',low:196260,list:196260,set:'+ vnitřní jednotka',c35:4.9,c55:null,s35:4.60,s55:3.60,lwa:51,lpa:'–',fl:['ceník 2023','v CZ e‑shopech není']},
+ {b:'Viessmann',ln:'Vitocal 250-A',m:'251.A08 + vnitřní jednotka',cls:8,kw:'A7/W35 5,6',low:174810,list:231220,set:'+ vnitřní jednotka',c35:4.9,c55:null,s35:4.50,s55:3.60,lwa:48,lpa:'–',fl:['DPH na e‑shopu nejasná','ceník 2023']},
+ {b:'Viessmann',ln:'Vitocal 150-A',m:'151.A08 + vnitřní jednotka',cls:8,kw:'A7/W35 5,6',low:202710,list:202710,set:'+ vnitřní jednotka',c35:4.7,c55:null,s35:4.40,s55:3.60,lwa:51,lpa:'–',fl:['ceník 2023','v CZ e‑shopech není']},
+ {b:'Viessmann',ln:'Vitocal 250-A',m:'251.A10 400 V + vnitřní jednotka',cls:10,kw:'A7/W35 7,3',low:233562,list:344110,set:'+ vnitřní jednotka',c35:5.31,c55:null,s35:5.01,s55:3.87,lwa:49,lpa:'–',fl:['DPH na e‑shopu nejasná','ceník 2023']},
+ {b:'Viessmann',ln:'Vitocal 150-A',m:'151.A10 400 V + vnitřní jednotka',cls:10,kw:'A7/W35 7,4',low:267650,list:267650,set:'+ vnitřní jednotka',c35:5.2,c55:null,s35:5.06,s55:3.97,lwa:53,lpa:'–',fl:['ceník 2023','v CZ e‑shopech není']},
+ {b:'Viessmann',ln:'Vitocal 250-A',m:'251.A13 + vnitřní jednotka',cls:12,kw:'A7/W35 8,1',low:238652,list:352700,set:'+ vnitřní jednotka',c35:5.21,c55:null,s35:4.96,s55:3.93,lwa:50,lpa:'–',fl:['DPH na e‑shopu nejasná','ceník 2023']},
+ {b:'Viessmann',ln:'Vitocal 150-A',m:'151.A13 + vnitřní jednotka',cls:12,kw:'A7/W35 8,1',low:260775,list:274100,set:'+ vnitřní jednotka',c35:5.1,c55:null,s35:4.93,s55:3.95,lwa:54,lpa:'–',fl:['ceník 2023']},
+ {b:'Viessmann',ln:'Vitocal 250-A',m:'251.A16 + vnitřní jednotka',cls:16,kw:'A7/W35 8,5',low:261959,list:261959,set:'+ vnitřní jednotka',c35:5.31,c55:null,s35:4.85,s55:3.92,lwa:48,lpa:'–',fl:['DPH na e‑shopu nejasná','bez ceníku']},
+ {b:'Viessmann',ln:'Vitocal 150-A',m:'151.A16 + vnitřní jednotka',cls:16,kw:'A7/W35 9,1',low:245231,list:281090,set:'+ vnitřní jednotka',c35:5.0,c55:null,s35:4.78,s55:3.82,lwa:55,lpa:'–',fl:['ceník 2023']},
+];
+
+/* výbava po řadách: [hodnota, stav y|n|p] */
+const EQ_ROWS=[['all','Funguje bez vnitřní jednotky'],['heat','Záložní dohřev'],['pump','Oběhové čerpadlo'],['exp','Expanzní nádoba'],['wifi','Ovladač a aplikace'],['sg','SG Ready'],['pv','FV přímo do jednotky (bez střídače)'],['tmax','Max. teplota vody'],['tmin','Provoz do'],['cool','Chlazení'],['war','Záruka'],['comp','Kompresor']];
+const EQ={
+ [SMART]:{all:['ano','y'],heat:['3 kW ve venkovní jednotce','y'],pump:['ano, v jednotce','y'],exp:['6 l v jednotce','y'],wifi:['7" dotykový ovladač + Wi‑Fi aplikace','y'],sg:['ano + EVU/HDO, Modbus','y'],pv:['ano, deska MPPT (DC)','y'],tmax:['75 °C','y'],tmin:['−25 °C','y'],cool:['ano','y'],war:['24 měsíců (REO standard)','n'],comp:['Mitsubishi Electric','y']},
+ [OLD]:{all:['ano','y'],heat:['ne (dohřev v nádrži / REO Hydrobox)','p'],pump:['ano, v jednotce','y'],exp:['ne','p'],wifi:['Wi‑Fi aplikace Smart Life v ceně','y'],sg:['–','p'],pv:['ne','n'],tmax:['65 °C','p'],tmin:['−25 °C','y'],cool:['ano','y'],war:['24 měsíců (REO standard)','n'],comp:['Hitachi / Mitsubishi','y']},
+ 'Midea':{all:['ano','y'],heat:['3 kW (1F) / 9 kW (3F) v jednotce','y'],pump:['ano, v jednotce','y'],exp:['8 l dle e‑shopu, manuál uvádí externí – ověřit','p'],wifi:['ovladač s Wi‑Fi v ceně','y'],sg:['pravděpodobně (CN35), Midea nepotvrzuje','p'],pv:['ne (jen kontakt „solar“)','n'],tmax:['80 °C (Nature)','y'],tmin:['−25 °C','y'],cool:['ano','y'],war:['„až 5 let“ dle prodejce','p'],comp:['twin rotary, značka neuvedena','p']},
+'LG':{all:['ano (Monoblock S); řada HF potřebuje box PHCS0','y'],heat:['ne, příslušenství HA0xxM (povinné pro záruku)','n'],pump:['ano, v jednotce','y'],exp:['8 l v jednotce (S)','y'],wifi:['ThinQ, Wi‑Fi v ovladači (příp. modem)','y'],sg:['ano (certifikováno)','y'],pv:['ne (SG Ready / LG ESS)','n'],tmax:['75 °C (AT prospekt 65 °C)','y'],tmin:['−25 °C','y'],cool:['ano','y'],war:['2 roky; 7 let při spuštění certif. firmou','y'],comp:['LG twin rotary','y']},
+ 'Gree':{all:['ano','y'],heat:['ne, externí','n'],pump:['ano, v jednotce','y'],exp:['5 l v jednotce','y'],wifi:['ovladač + Wi‑Fi v ceně','y'],sg:['ano','y'],pv:['ne','n'],tmax:['80 °C','y'],tmin:['−25 °C','y'],cool:['ano','y'],war:['v ČR neznámá (GR 5 let)','p'],comp:['GREE','p']},
+ 'IVT':{all:['ne, nutný AirBox','n'],heat:['3/6/9 kW v AirBoxu','y'],pump:['jen v AirBoxu','n'],exp:['ne, externí','n'],wifi:['REGO 3100; Wi‑Fi modul za příplatek','p'],sg:['neuvedeno (FV kontakt)','p'],pv:['ne','n'],tmax:['75 °C','y'],tmin:['−23 °C','y'],cool:['ano','y'],war:['5 let, kompresor + měnič 10 let','y'],comp:['neuvedeno','p']},
+ 'NIBE':{all:['ne, nutné SMO/VVM + čerpadlo','n'],heat:['ne, externí (VVM 9 kW)','n'],pump:['ne, kupuje se zvlášť','n'],exp:['ne','n'],wifi:['myUplink v SMO S40','y'],sg:['ano (SMO S40)','y'],pv:['ne','n'],tmax:['75 °C','y'],tmin:['−25 °C','y'],cool:['ano','y'],war:['2 roky plná, díly 5 let, kompresor 10 let (podmíněno schválením instalace)','p'],comp:['rotační, neuvedeno','p']},
+ 'Acond':{all:['ne, nutná vnitřní jednotka','n'],heat:['v hydromodulu (výkon neuveden)','p'],pump:['ne, v hydromodulu nebo zvlášť','n'],exp:['ne','n'],wifi:['aplikace HeatingUp přes Ethernet, Wi‑Fi neuvedena','p'],sg:['jen varianta MX+SG','p'],pv:['ne (střídač / Infigy)','n'],tmax:['75 °C (PRO 70 °C)','y'],tmin:['−25 °C (PRO −22 °C)','y'],cool:['ano','y'],war:['Grandis 5 let / kompresor 10 let; PRO kompresor až 12 let','y'],comp:['Highly (Grandis), scroll (PRO)','p']},
+ 'Viessmann':{all:['ne, nutná vnitřní jednotka','n'],heat:['8 kW ve vnitřní jednotce','y'],pump:['ve vnitřní jednotce','p'],exp:['12–18 l ve vnitřní jednotce','y'],wifi:['ViCare, Wi‑Fi integrované','y'],sg:['neověřeno','p'],pv:['ne (energy management)','n'],tmax:['70 °C','p'],tmin:['−20 °C','p'],cool:['ano','y'],war:['2 roky; prodloužení neověřeno','p'],comp:['twin rotary / scroll, neuvedeno','p']},
+};
+
+const NOTES=[
+ ['REO R290 Smart a starší REO R290',['Smart: COP, SCOP a hluk podle podkladů výrobce (ErP, EN 14511/14825); L<sub>WA</sub> a L<sub>pA</sub> = horší z hodnot pro 35 a 55 °C.','Starší řada RH030–RH060: SCOP z ErP reportů (RH030–RH050 odvozeno z ηs), RH060 Keymark. COP z výkonových tabulek při maximálním výkonu, proto nižší než jmenovité COP ostatních.','Prodejní ceny REO bez DPH zadané 12. 10. 2026. Výkonová třída RHX40 (30–40 kW) v rešerši konkurenci nemá.','Slabé místo: standardní záruka REO 24 měsíců, konkurence běžně 5 let nebo 10 let na kompresor.']],
+ ['Midea – nejbližší přímý konkurent',['Stejný koncept jako Smart: dohřev, čerpadlo i ovladač s Wi‑Fi ve venkovní jednotce. Nejnižší ceny Baxx.cz (skladem, bez montáže) a mideatepelnacerpadla.cz.','Nature 12–16 kW: kódy na Baxx.cz zkomolené, nejasné 1F/3F. Expanzní nádobu ověřit u distributora.','Arctic 6 kW: SCOP odvozen z ηs. Nature Plus bez technických dat.']],
+['LG',['Dvě řady: nová Monoblock S R290 (2026, vše v jednotce kromě dohřevu) a předchozí HF, která potřebuje ovládací box PHCS0 (započten). Oficiální CZ ceník LG nenalezen; „ceník“ = OBCHOD-VTP.CZ, nejnižší lgtepelnacerpadla.cz (autorizovaný montážník).','Dohřev HA0xxM podle prodejce povinný pro záruku (+7 000 Kč bez DPH v setu) – podle zadání nepřičten.','Monoblock S 5–9 kW ověřeno Keymarkem; 12–16 kW se CZ list a AT prospekt liší (SCOP 4,75–4,85 vs. 4,50–4,60, max. 75 vs. 65 °C) – v tabulce CZ list. Řada HF je účinnější a tišší (SCOP 5,11–5,45 / 3,86–3,97, L<sub>WA</sub> 49–52 dB).']],
+ ['Gree',['R290 Versati V se v ČR neprodává (distributor má jen R32). Ceny z řeckých a italských e‑shopů bez DPH, přepočet 24,3 Kč/€ – jen orientačně.','Jednotka nemá záložní dohřev (nepřičten). SCOP u 10 a 14 kW odvozen z ηs.']],
+ ['IVT',['Prodej jen přes IVT CENTRUM. Nejnižší cena 1-topeni-levne.cz (ceník −10 %) zahrnuje montáž; samotné zboží by bylo levnější.','COP 4,85 je při 40% zatížení (EN 14825), COP A7/W55 IVT neuvádí. Řada končí na 12,9 kW, třídy 14–16 kW nemá.','Ceník IVT bez DPH (odvozeno), oficiální PDF nenalezen.']],
+ ['NIBE',['Ceník DZD Dražice 11. 5. 2026 bez DPH; nejnižší ceny nibe-shop.cz. Sestava = S2125 + SMO S40 + čerpadlo UPM4; bez kondenzátního ohřevu KVR a bez schválení instalace (7 000 Kč, podmínka záruky nad 2 roky).','COP A7/W55 NIBE nepublikuje (A7/W45 ≈ 3,9). COP A7/W35 při částečném zatížení 3–5 kW.']],
+ ['Acond',['E‑shopy cenu neuvádějí, použit ceník od 1. 1. 2025 (kopie u prodejce). Sestava = venkovní + nejlevnější vnitřní jednotka s řízením + čerpadlo z ceníku 2024 (levnější než hydromodul).','COP Grandis při nízkém jmenovitém výkonu, PRO při maximálním – srovnávejte hlavně SCOP. Grandis je nejúčinnější a nejtišší v rešerši.']],
+ ['Viessmann',['Oficiální ceník CZ z 28. 8. 2023 bez DPH, novější není. E‑shop 250-A (1-topeni-levne / eurosystemy) označuje ceny „bez DPH“, ale pole s/bez DPH jsou shodná.','150-A: účinnost z nové generace 03/2026, ceny původní. COP A7/W55 a L<sub>pA</sub> nepublikuje.','K sestavě přičteno 3 290 Kč (kulové kohouty, BUS kabel).']],
+ ['Ještě doplňuji',['Stiebel Eltron, Samsung a Hitachi – rešerše běží, doplní se do tabulky i grafů.']],
+];
+
+/* ---------- STAV ---------- */
+const S={price:'low',vat:0,temp:35,cls:'all',heat:15,el:5.5,sort:null,dir:1};
+try{const s=JSON.parse(localStorage.getItem('smartcmp')||'{}');Object.assign(S,s,{sort:null})}catch(e){}
+const save=()=>{try{localStorage.setItem('smartcmp',JSON.stringify({price:S.price,vat:S.vat,temp:S.temp,cls:S.cls,heat:S.heat,el:S.el}))}catch(e){}};
+const CLS=[6,8,10,12,14,16,30];
+const clsName=c=>c===30?'30–40 kW':c+' kW';
+const fmt=n=>n==null?'–':Math.round(n).toLocaleString('cs-CZ');
+const f2=n=>n==null?'–':n.toFixed(2).replace('.',',');
+const price=r=>{const p=S.price==='low'?r.low:r.list;return p==null?null:p*(1+S.vat/100)};
+const scop=r=>S.temp==35?r.s35:r.s55;
+const run=r=>{const s=scop(r);return s?S.heat*1000/s*S.el:null};
+const isReo=r=>r.b===SMART||r.b===OLD;
+const smartOf=c=>R.find(r=>r.b===SMART&&r.cls===c);
+
+function seg(id,key,vals){
+  const el=document.getElementById(id);
+  if(vals) el.innerHTML=vals.map(([v,t])=>`<button type="button" data-v="${v}">${t}</button>`).join('');
+  el.querySelectorAll('button').forEach(b=>{
+    b.setAttribute('aria-pressed',String(String(S[key])===b.dataset.v));
+    b.onclick=()=>{S[key]=isNaN(+b.dataset.v)||key==='cls'&&b.dataset.v==='all'?b.dataset.v:(key==='price'?b.dataset.v:+b.dataset.v);if(key==='cls'&&b.dataset.v!=='all')S.cls=+b.dataset.v;save();render()};
+  });
+}
+
+function delta(v,ref,lowerBetter,fmtFn,unit){
+  if(v==null||ref==null)return '';
+  const d=v-ref; if(Math.abs(d)<1e-9)return `<span class="d eq">= Smart</span>`;
+  const good=lowerBetter?d>0:d<0; // dobré pro Smart
+  const s=(d>0?'+':'−')+fmtFn(Math.abs(d))+(unit||'');
+  return `<span class="d ${good?'up':'down'}">${s}</span>`;
+}
+
+function renderTable(){
+  const cols=[
+    ['b','Značka / model',null],['kw','Výkon kW',null],['p','Cena sestavy','n'],['c35','COP A7/W35','n'],['c55','COP A7/W55','n'],
+    ['s35','SCOP 35 °C','n'],['s55','SCOP 55 °C','n'],['run','Provoz/rok','n'],['lwa','L<sub>WA</sub> dB(A)','n'],['lpa','L<sub>pA</sub> dB(A)','n']];
+  let h='<thead><tr>'+cols.map(([k,t,c])=>`<th class="${c||''} sortable" data-k="${k}" scope="col">${t}${S.sort===k?(S.dir>0?' ▲':' ▼'):''}</th>`).join('')+'</tr></thead><tbody>';
+  const classes=S.cls==='all'?CLS:[S.cls];
+  const keyVal={p:price,run:run,c35:r=>r.c35,c55:r=>r.c55,s35:r=>r.s35,s55:r=>r.s55,lwa:r=>r.lwa,b:r=>r.b+r.m,kw:r=>r.cls,lpa:r=>parseFloat(r.lpa)||null};
+  for(const c of classes){
+    let rows=R.filter(r=>r.cls===c);
+    if(!rows.length)continue;
+    if(S.sort){const f=keyVal[S.sort];rows.sort((a,b)=>{const x=f(a),y=f(b);if(x==null)return 1;if(y==null)return -1;return (x>y?1:x<y?-1:0)*S.dir})}
+    else rows.sort((a,b)=>(a.b===SMART?-2:a.b===OLD?-1:0)-(b.b===SMART?-2:b.b===OLD?-1:0)||price(a)-price(b));
+    const sm=smartOf(c);
+    const best=k=>{const v=rows.map(r=>r[k]).filter(x=>x!=null);return v.length?Math.max(...v):null};
+    const bs35=best('s35'),bs55=best('s55'),bc35=best('c35'),bc55=best('c55');
+    const minLwa=Math.min(...rows.map(r=>r.lwa).filter(x=>x!=null));
+    h+=`<tr class="cls"><td colspan="${cols.length}">Třída ${clsName(c)}${c===30?' · konkurence v rešerši chybí':''}</td></tr>`;
+    for(const r of rows){
+      const me=r===sm, chips=(r.fl||[]).map(f=>`<span class="chip w">${f}</span>`).join('')+(r.set&&r.set!=='jednotka'?`<span class="chip">${r.set}</span>`:'');
+      const p=price(r), ru=run(r);
+      h+=`<tr class="${isReo(r)?'reo':''}"><td><b>${r.b}</b> ${r.ln}<span class="model">${r.m}</span>${chips}</td>
+      <td class="n">${r.kw}</td>
+      <td class="n">${fmt(p)} Kč${me?'':delta(p,price(sm||{}),true,fmt,' Kč')}</td>
+      <td class="n ${r.c35===bc35?'best':''}">${f2(r.c35)}${me?'':delta(r.c35,sm&&sm.c35,false,f2)}</td>
+      <td class="n ${r.c55!=null&&r.c55===bc55?'best':''}">${r.c55==null?'<span class="na">neuvádí</span>':f2(r.c55)}${me||r.c55==null?'':delta(r.c55,sm&&sm.c55,false,f2)}</td>
+      <td class="n ${r.s35===bs35?'best':''}">${f2(r.s35)}${me?'':delta(r.s35,sm&&sm.s35,false,f2)}</td>
+      <td class="n ${r.s55===bs55?'best':''}">${f2(r.s55)}${me?'':delta(r.s55,sm&&sm.s55,false,f2)}</td>
+      <td class="n">${fmt(ru)} Kč${me?'':delta(ru,sm&&run(sm),true,fmt,' Kč')}</td>
+      <td class="n ${r.lwa===minLwa?'best':''}">${r.lwa??'–'}${me?'':delta(r.lwa,sm&&sm.lwa,true,x=>String(Math.round(x*10)/10).replace('.',','),' dB')}</td>
+      <td class="n">${r.lpa}</td></tr>`;
+    }
+  }
+  h+='</tbody>';
+  const t=document.getElementById('tab');t.innerHTML=h;
+  t.querySelectorAll('th.sortable').forEach(th=>th.onclick=()=>{const k=th.dataset.k;if(S.sort===k){S.dir=-S.dir}else{S.sort=k;S.dir=(k==='p'||k==='run'||k==='lwa'||k==='b'||k==='kw'||k==='lpa')?1:-1}renderTable()});
+}
+
+function renderCharts(){
+  const el=document.getElementById('charts');
+  const classes=(S.cls==='all'?CLS.filter(c=>c!==30):[S.cls]).filter(c=>R.some(r=>r.cls===c&&!isReo(r)));
+  const all=R.filter(r=>r.cls!==30);
+  const pmax=Math.ceil(Math.max(...all.map(price))/50000)*50000;
+  const ys=all.map(scop);const ymin=Math.floor((Math.min(...ys)-0.05)*10)/10,ymax=Math.ceil((Math.max(...ys)+0.05)*10)/10;
+  const W=320,H=220,L=36,Rr=10,T=10,B=30;
+  const X=v=>L+(v/pmax)*(W-L-Rr), Y=v=>T+(ymax-v)/(ymax-ymin)*(H-T-B);
+  el.innerHTML=classes.map(c=>{
+    const rows=R.filter(r=>r.cls===c);
+    let g='';
+    for(let v=0;v<=pmax;v+=100000){g+=`<line x1="${X(v)}" x2="${X(v)}" y1="${T}" y2="${H-B}" stroke="var(--line)"/><text x="${X(v)}" y="${H-B+13}" text-anchor="middle">${v/1000}</text>`}
+    for(let v=Math.ceil(ymin*5)/5;v<=ymax+1e-9;v+=0.2){g+=`<line x1="${L}" x2="${W-Rr}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-5}" y="${Y(v)+3}" text-anchor="end">${v.toFixed(1).replace('.',',')}</text>`}
+    g+=`<text x="${(L+W-Rr)/2}" y="${H-3}" text-anchor="middle">cena sestavy, tis. Kč${S.vat?' s DPH':' bez DPH'}</text>`;
+    const pts=rows.map(r=>({r,x:X(price(r)),y:Y(scop(r))})).sort((a,b)=>a.y-b.y);
+    const placed=[];
+    let d='';
+    for(const p of pts){
+      const col=p.r.b===SMART?'var(--brand)':p.r.b===OLD?'var(--sun)':'var(--dot)';
+      d+=`<circle cx="${p.x}" cy="${p.y}" r="${isReo(p.r)?5.5:4}" fill="${col}"><title>${p.r.b} ${p.r.m}: ${fmt(price(p.r))} Kč, SCOP ${f2(scop(p.r))}</title></circle>`;
+      let lx=p.x+7,ly=p.y+3,anchor='start';
+      const name=p.r.b===SMART?p.r.m.split(' ')[0]:p.r.b===OLD?p.r.m:(p.r.b+(['Acond','Viessmann'].includes(p.r.b)?' '+p.r.ln.replace('Vitocal ','').replace('Aconomis','Acon.'):''));
+      const wEst=name.length*5.2;
+      if(lx+wEst>W-Rr){lx=p.x-7;anchor='end'}
+      let tries=0;while(placed.some(q=>Math.abs(q.y-ly)<10&&Math.abs(q.x-lx)<Math.max(wEst,q.w))&&tries<6){ly+=10;tries++}
+      placed.push({x:lx,y:ly,w:wEst});
+      d+=`<text class="lbl ${isReo(p.r)?'reo':''}" x="${lx}" y="${ly}" text-anchor="${anchor}">${name}</text>`;
+    }
+    return `<figure class="chart" style="margin:0"><h3>${clsName(c)} · SCOP ${S.temp} °C</h3><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cena a SCOP, třída ${clsName(c)}">${g}${d}</svg></figure>`;
+  }).join('');
+}
+
+function renderEq(){
+  const brands=Object.keys(EQ);
+  let h='<thead><tr><th scope="col">Vlastnost</th>'+brands.map(b=>`<th scope="col">${b}</th>`).join('')+'</tr></thead><tbody>';
+  for(const [k,t] of EQ_ROWS){
+    h+=`<tr><td>${t}</td>`+brands.map(b=>{const v=EQ[b][k];return v?`<td class="${{y:'yes',n:'no',p:'part'}[v[1]]}">${v[0]}</td>`:'<td class="na">–</td>'}).join('')+'</tr>';
+  }
+  document.getElementById('eq').innerHTML=h+'</tbody>';
+}
+
+function renderNotes(){
+  document.getElementById('notes').innerHTML=NOTES.map(([t,li])=>`<div class="note"><h3>${t}</h3><ul>${li.map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('');
+}
+
+function renderFindings(){
+  const F=[
+   ['Smart je nejlevnější kompletní značková sestava v ČR','Konkurenti NIBE, IVT, Acond a Viessmann potřebují vnitřní jednotku nebo řízení s čerpadlem; jejich funkční sestavy vycházejí na 1,3–2,5× ceny Smart ve stejné třídě.'],
+   ['Midea je přímý cenový soupeř','Stejný koncept „vše ve venkovní jednotce“ o 14–21 tis. Kč levněji. V 8–10 kW má vyšší SCOP, od 12 kW je Smart účinnější. Bez přímé FV.'],
+   ['Účinnostně silnější jsou Acond Grandis a NIBE 14–16 kW','Grandis SCOP 5,38–5,58 / 4,05–4,21 a L<sub>WA</sub> 46–48 dB, NIBE S2125-14/16 SCOP 5,27–5,33 / 4,06–4,08. Obojí ale za zhruba dvojnásobnou cenu.'],
+   ['Hluk: Smart ve středu pole','L<sub>WA</sub> Smart 50–56 dB(A). Tišší jsou IVT, Acond Grandis, Viessmann 250-A a NIBE (42–50 dB); hlučnější Gree, Midea 14–16 kW a starší REO R290 (58–62 dB).'],
+   ['Starší REO R290 je cenově nejníž, účinností pod trhem','RH030–RH060 za 95–150 tis. Kč; SCOP 35 °C 4,60–4,80 je pod Smart i většinou konkurence. Smart přináší za +4 až +14 tis. Kč výrazně vyšší SCOP.'],
+   ['Slabina: záruka','REO standardně 24 měsíců; IVT 5 let (kompresor 10), Acond 5/10 let, Midea až 5 let. Pro prodej Smart stojí za zvážení delší záruka.'],
+  ];
+  document.getElementById('findings').innerHTML=F.map(([b,p])=>`<div class="finding"><b>${b}</b><p>${p}</p></div>`).join('');
+}
+
+function render(){
+  seg('c-price','price');seg('c-vat','vat');seg('c-temp','temp');
+  seg('c-cls','cls',[['all','vše'],...CLS.map(c=>[c,c===30?'30–40':c])]);
+  renderTable();renderCharts();
+}
+document.getElementById('i-heat').value=S.heat;document.getElementById('i-el').value=S.el;
+document.getElementById('i-heat').oninput=e=>{const v=parseFloat(e.target.value);if(v>0){S.heat=v;save();renderTable()}};
+document.getElementById('i-el').oninput=e=>{const v=parseFloat(e.target.value);if(v>0){S.el=v;save();renderTable()}};
+renderFindings();renderEq();renderNotes();render();
+</script>
