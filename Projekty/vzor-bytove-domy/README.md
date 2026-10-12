@@ -45,7 +45,8 @@ artefakt znovu publikovat na stejnou URL. Artefakt **nemá tlačítko tisku** �
 přiloženého PDF v nové záložce (ověřeno 9/2026). Místo toho má **tlačítko „Stáhnout nabídku v PDF"**:
 publikuje se s `capabilities: {"downloads": true}` a PDF je v stránce vložené jako base64 konstanta
 `PDF_B64`, kterou tlačítko předá `claude.use('downloads').save(...)`. Při každé změně nabídky je proto
-nutné **nejdřív vygenerovat nové PDF** a teprve pak publikovat artefakt (skript v poznámce níže). Přehled cen tepla CZT 2026: https://claude.ai/artifact/56cq7XoAz7XYuJKZjdPnVr
+nutné **nejdřív vygenerovat nové PDF** a teprve pak publikovat artefakt:
+`python3 vzor-bytove-domy/src/build_artefakt.py <pdf> <výstup.html>` → publikovat na stejnou URL s `capabilities {"downloads": true}`. Přehled cen tepla CZT 2026: https://claude.ai/artifact/56cq7XoAz7XYuJKZjdPnVr
 
 ## Tisk do PDF
 Stejně jako u BD Jandova (viz `bd-jandova/README.md`, včetně dvou pastí se SVG):

@@ -6,6 +6,7 @@ v příloze Vám posíláme vzorovou nabídku **malé zelené kotelny** pro byto
 
 **Co navrhujeme**
 - **Kaskádu dvou tepelných čerpadel REO RH060** (vzduch/voda, přírodní chladivo R290). Při venkovní teplotě −15 °C a teplotě otopné vody 45 °C dodají společně 23,6 kW. Dům tak vytopí i v nejchladnějších dnech **bez bivalentního zdroje** a zbývá jim rezerva na ohřev teplé vody.
+- Výkon při výstupu 45 °C: jedna jednotka dává 21,2 kW při +7 °C a 11,8 kW při −15 °C. Zhruba od −8 °C výš stačí k vytápění domu jedna jednotka. Podrobná tabulka výkonů je v nabídce.
 - Jednotky se v provozu střídají a navzájem se zálohují. Při odstávce jedné udrží druhá dům v teple zhruba do −8 °C.
 - Akumulaci 1 000 l, zásobník teplé vody 1 000 l, kompletní strojovnu a regulaci se vzdáleným dohledem. Otopná soustava v bytech se nemění.
 
