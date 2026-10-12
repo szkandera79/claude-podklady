@@ -26,6 +26,7 @@ CLAUDE.md** a drž se pravidel tam uvedených.
 | `bd-michal/` | BD Michal — koncepční schémata kotelny, PENB, smlouva o dílo |
 | `bd-michal-nabidka/` | cenová nabídka BD u Dolu Michal (24 b.j.), varianty A/B, podklady pro společníky |
 | `porovnani-x50-2-3/` | porovnání 2× vs. 3× REO X50 (podklad pro výbor SVJ) |
+| `konkurence-tc-smart/` | konkurenční srovnání REO R290 Smart / REO R290 vs. 10 značek R290 monobloků (cena, COP/SCOP, hluk, výbava) |
 | `porovnani-x50-rh060/` | srovnání jednotek pro kaskády BD: RH X50 / X40 / X20 / RH060 |
 | `mobilni-kotelna-tc/` | podnikatelský a technický model pronájmu mobilních kotelen s TČ v kontejneru |
 | `marketing/` | oslovení SVJ (e‑maily, leady CZT, tracker), Google Ads / PPC, grafika |

@@ -34,7 +34,7 @@ section{display:flex;flex-direction:column;gap:12px}
 .finding{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .finding b{font-size:14px}
 .finding p{color:var(--muted);font-size:13px}
-.controls{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:flex-end;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.controls{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:flex-end;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
 .ctl{display:flex;flex-direction:column;gap:5px}
 .ctl>span{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
 .seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;flex-wrap:wrap}
@@ -61,12 +61,12 @@ td .model{color:var(--muted);font-size:12px;display:block}
 .d.up{color:var(--good)} .d.down{color:var(--bad)} .d.eq{color:var(--muted)}
 .best{font-weight:700;color:var(--brand-ink)}
 .na{color:var(--muted)}
-.charts{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.charts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,460px),1fr));gap:12px}
 .chart{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 12px 6px;min-width:0}
 .chart h3{margin:0 0 4px;font-size:13px}
 .chart svg{width:100%;height:auto;display:block}
-.chart text{font-family:var(--f-body);font-size:10px;fill:var(--muted)}
-.chart .lbl{fill:var(--fg);font-size:9.5px}
+.chart text{font-family:var(--f-body);font-size:11px;fill:var(--muted)}
+.chart .lbl{fill:var(--fg);font-size:10.5px}
 .chart .lbl.reo{fill:var(--brand-ink);font-weight:700}
 .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
@@ -80,7 +80,7 @@ td .model{color:var(--muted);font-size:12px;display:block}
 .note ul{margin:0;padding-left:18px;color:var(--muted);display:flex;flex-direction:column;gap:3px}
 .note a{color:var(--brand);word-break:break-all}
 .foot{color:var(--muted);font-size:12px;max-width:100ch}
-@media (max-width:640px){h1{font-size:22px}.controls{position:static}}
+@media (max-width:640px){h1{font-size:22px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 
@@ -173,6 +173,27 @@ const R=[
  {b:'LG',ln:'R290 Monobloc HF',m:'HM123HF + PHCS0',cls:12,kw:'12,0',low:145256,list:145256,set:'+ ovládací box PHCS0',c35:4.70,c55:3.10,s35:5.45,s55:3.97,lwa:49,lpa:'27 / 5 m',fl:['předchozí generace']},
  {b:'LG',ln:'R290 Monobloc HF',m:'HM143HF + PHCS0',cls:14,kw:'14,0',low:147876,list:147876,set:'+ ovládací box PHCS0',c35:4.50,c55:3.25,s35:5.38,s55:3.96,lwa:51,lpa:'29 / 5 m',fl:['předchozí generace']},
  {b:'LG',ln:'R290 Monobloc HF',m:'HM163HF + PHCS0',cls:16,kw:'16,0',low:148751,list:150363,set:'+ ovládací box PHCS0',c35:4.30,c55:3.30,s35:5.11,s55:3.92,lwa:52,lpa:'30 / 5 m',fl:['předchozí generace']},
+ // SAMSUNG EHS Mono R290 „Pump“ (B) + kabelový ovladač MWR-WW10JN (nutný). Nejnižší groupsumi.cz (šedý dovoz, DPH nejasná); „ceník“ = autorizovaný aaavytapeni.cz
+ {b:'Samsung',ln:'EHS Mono R290',m:'AE050CXYBEK + MWR-WW10JN',cls:6,kw:'5,0',low:75414,list:103102,set:'+ kabelový ovladač',c35:5.10,c55:3.10,s35:5.10,s55:3.60,lwa:55,lpa:'41 / 1 m',fl:['nejnižší = šedý dovoz, DPH nejasná']},
+ {b:'Samsung',ln:'EHS Mono R290',m:'AE080CXYBEK + MWR-WW10JN',cls:8,kw:'8,0',low:81575,list:115990,set:'+ kabelový ovladač',c35:4.91,c55:3.00,s35:4.85,s55:3.55,lwa:59,lpa:'45 / 1 m',fl:['nejnižší = šedý dovoz, DPH nejasná']},
+ {b:'Samsung',ln:'EHS Mono R290',m:'AE120CXYBGK + MWR-WW10JN',cls:12,kw:'12,0',low:98602,list:152583,set:'+ kabelový ovladač',c35:4.80,c55:3.00,s35:4.90,s55:3.65,lwa:60,lpa:'47 / 1 m',fl:['nejnižší = šedý dovoz, DPH nejasná']},
+ {b:'Samsung',ln:'EHS Mono R290',m:'AE160CXYBGK + MWR-WW10JN',cls:16,kw:'16,0',low:110136,list:175519,set:'+ kabelový ovladač',c35:4.51,c55:2.90,s35:4.70,s55:3.55,lwa:65,lpa:'51 / 1 m',fl:['nejnižší = šedý dovoz, DPH nejasná']},
+ // STIEBEL ELTRON HPA-O x.2 (venk. bez čerpadla a řízení) + HM Trend + povinný filtr FS-WP; ceník 7/2026 bez DPH, nejnižší 1-topeni-levne.cz
+ {b:'Stiebel Eltron',ln:'HPA-O Trend',m:'05.2 Trend + HM Trend',cls:6,kw:'A−7/W35 4,9',low:212160,list:212160,set:'+ HM Trend (řízení, čerpadlo, dohřev)',c35:5.39,c55:3.23,s35:4.69,s55:3.85,lwa:44,lpa:'–',fl:['ceník 7/2026','COP při částečném zatížení']},
+ {b:'Stiebel Eltron',ln:'HPA-O Plus',m:'05.2 Plus + HM Trend',cls:6,kw:'A−7/W35 5,2',low:221430,list:221430,set:'+ HM Trend (řízení, čerpadlo, dohřev)',c35:5.48,c55:null,s35:5.35,s55:4.07,lwa:43,lpa:'–',fl:['ceník 7/2026','COP při částečném zatížení']},
+ {b:'Stiebel Eltron',ln:'HPA-O Trend',m:'07.2 Trend + HM Trend',cls:8,kw:'A−7/W35 6,9',low:218340,list:218340,set:'+ HM Trend (řízení, čerpadlo, dohřev)',c35:5.44,c55:3.15,s35:4.67,s55:3.83,lwa:44,lpa:'–',fl:['ceník 7/2026','COP při částečném zatížení']},
+ {b:'Stiebel Eltron',ln:'HPA-O Plus',m:'07.2 Plus + HM Trend',cls:8,kw:'A−7/W35 7,1',low:174711,list:252330,set:'+ HM Trend (řízení, čerpadlo, dohřev)',c35:5.50,c55:null,s35:5.09,s55:4.02,lwa:43,lpa:'–',fl:['nejnižší: DPH nejasná','COP při částečném zatížení']},
+ {b:'Stiebel Eltron',ln:'HPA-O Trend',m:'10.2 Trend + HM Trend',cls:10,kw:'A−7/W35 9,5',low:162150,list:232250,set:'+ HM Trend (řízení, čerpadlo, dohřev)',c35:5.40,c55:3.33,s35:4.59,s55:3.79,lwa:46,lpa:'–',fl:['nejnižší: DPH nejasná','COP při částečném zatížení']},
+ {b:'Stiebel Eltron',ln:'HPA-O Plus',m:'10.2 Plus HC400 + HM Trend',cls:10,kw:'A−7/W35 10,1',low:223814,list:288590,set:'+ HM Trend (řízení, čerpadlo, dohřev)',c35:5.40,c55:null,s35:4.96,s55:3.99,lwa:46,lpa:'–',fl:['nejnižší: DPH nejasná','COP při částečném zatížení']},
+ {b:'Stiebel Eltron',ln:'HPA-O Trend',m:'13.2 Trend HC400 + HM Trend',cls:12,kw:'A−7/W35 12,5',low:187831,list:261710,set:'+ HM Trend (řízení, čerpadlo, dohřev)',c35:5.36,c55:3.24,s35:4.65,s55:3.85,lwa:49,lpa:'–',fl:['nejnižší: DPH nejasná','COP při částečném zatížení']},
+ {b:'Stiebel Eltron',ln:'HPA-O Plus',m:'13.2 Plus HC400 + HM Trend',cls:12,kw:'A−7/W35 13,2',low:223814,list:318460,set:'+ HM Trend (řízení, čerpadlo, dohřev)',c35:5.41,c55:null,s35:4.89,s55:4.01,lwa:45,lpa:'–',fl:['nejnižší: DPH nejasná','COP při částečném zatížení']},
+ {b:'Stiebel Eltron',ln:'HPA-O Trend',m:'17.2 Trend HC400 + HM Trend',cls:16,kw:'A−7/W35 17,4',low:290507,list:306870,set:'+ HM Trend (řízení, čerpadlo, dohřev)',c35:5.29,c55:3.36,s35:4.55,s55:3.83,lwa:52,lpa:'–',fl:['není oficiální set','COP při částečném zatížení']},
+ // HITACHI airH2O 800 M (R290) + povinný řídicí box ATW-CBX-01; nejnižší = BG ceník distributora 02/2026, „ceník“ = PL 07/2025 (EUR × 24,265)
+ {b:'Hitachi',ln:'airH2O 800 M',m:'RASM-3VTW2E + ATW-CBX-01',cls:6,kw:'6,0',low:133231,list:137752,set:'+ řídicí box',c35:4.84,c55:3.10,s35:4.67,s55:3.37,lwa:56,lpa:'29 / 5 m',fl:['ceny z EU ceníků, v CZ e‑shopech není']},
+ {b:'Hitachi',ln:'airH2O 800 M',m:'RASM-3.5VTW2E + ATW-CBX-01',cls:8,kw:'8,0',low:147539,list:152530,set:'+ řídicí box',c35:4.62,c55:2.93,s35:4.67,s55:3.44,lwa:57,lpa:'29 / 5 m',fl:['ceny z EU ceníků, v CZ e‑shopech není']},
+ {b:'Hitachi',ln:'airH2O 800 M',m:'RASM-4VTW2E + ATW-CBX-01',cls:10,kw:'10,0',low:161848,list:167307,set:'+ řídicí box',c35:4.53,c55:3.40,s35:4.53,s55:3.65,lwa:53,lpa:'27 / 5 m',fl:['ceny z EU ceníků, v CZ e‑shopech není']},
+ {b:'Hitachi',ln:'airH2O 800 M',m:'RASM-5VTW2E + ATW-CBX-01',cls:12,kw:'12,0',low:165601,list:171068,set:'+ řídicí box',c35:4.21,c55:3.30,s35:4.53,s55:3.55,lwa:53,lpa:'28 / 5 m',fl:['ceny z EU ceníků, v CZ e‑shopech není']},
+ {b:'Hitachi',ln:'airH2O 800 M',m:'RASM-6VTW2E + ATW-CBX-01',cls:14,kw:'13–14',low:168415,list:174126,set:'+ řídicí box',c35:4.20,c55:2.76,s35:4.54,s55:3.35,lwa:53,lpa:'28 / 5 m',fl:['ceny z EU ceníků, v CZ e‑shopech není']},
  // GREE Versati V R290 — v ČR se neprodává; EU e-shopy (GR/IT) × 24,3 Kč/€
  {b:'Gree',ln:'Versati V R290',m:'GRS-CQ6.0Pd/NpG4-E',cls:6,kw:'6,2',low:87100,list:87100,set:'jednotka',c35:5.0,c55:3.50,s35:5.18,s55:3.87,lwa:54,lpa:'47 / 1 m',fl:['EU cena, v ČR nedostupné']},
  {b:'Gree',ln:'Versati V R290',m:'GRS-CQ8.0Pd/NpG4',cls:8,kw:'8,4',low:75440,list:75440,set:'jednotka',c35:5.0,c55:3.60,s35:5.13,s55:3.87,lwa:56,lpa:'51 / 1 m',fl:['EU cena, v ČR nedostupné']},
@@ -218,6 +239,9 @@ const EQ={
  [OLD]:{all:['ano','y'],heat:['ne (dohřev v nádrži / REO Hydrobox)','p'],pump:['ano, v jednotce','y'],exp:['ne','p'],wifi:['Wi‑Fi aplikace Smart Life v ceně','y'],sg:['–','p'],pv:['ne','n'],tmax:['65 °C','p'],tmin:['−25 °C','y'],cool:['ano','y'],war:['24 měsíců (REO standard)','n'],comp:['Hitachi / Mitsubishi','y']},
  'Midea':{all:['ano','y'],heat:['3 kW (1F) / 9 kW (3F) v jednotce','y'],pump:['ano, v jednotce','y'],exp:['8 l dle e‑shopu, manuál uvádí externí – ověřit','p'],wifi:['ovladač s Wi‑Fi v ceně','y'],sg:['pravděpodobně (CN35), Midea nepotvrzuje','p'],pv:['ne (jen kontakt „solar“)','n'],tmax:['80 °C (Nature)','y'],tmin:['−25 °C','y'],cool:['ano','y'],war:['„až 5 let“ dle prodejce','p'],comp:['twin rotary, značka neuvedena','p']},
 'LG':{all:['ano (Monoblock S); řada HF potřebuje box PHCS0','y'],heat:['ne, příslušenství HA0xxM (povinné pro záruku)','n'],pump:['ano, v jednotce','y'],exp:['8 l v jednotce (S)','y'],wifi:['ThinQ, Wi‑Fi v ovladači (příp. modem)','y'],sg:['ano (certifikováno)','y'],pv:['ne (SG Ready / LG ESS)','n'],tmax:['75 °C (AT prospekt 65 °C)','y'],tmin:['−25 °C','y'],cool:['ano','y'],war:['2 roky; 7 let při spuštění certif. firmou','y'],comp:['LG twin rotary','y']},
+'Samsung':{all:['ano (varianta B „Pump“) + kabelový ovladač','y'],heat:['ne, externí MHC-300FP','n'],pump:['ano, v jednotce','y'],exp:['10 l v jednotce','y'],wifi:['Wi‑Fi kit v balení, SmartThings; ovladač zvlášť','y'],sg:['ano','y'],pv:['ne (jen signální kontakt)','n'],tmax:['75 °C (při −10 až 35 °C)','y'],tmin:['−25 °C','y'],cool:['ano','y'],war:['5 let (dle ceníku Samsung PL)','y'],comp:['Samsung rotary / scroll','p']},
+'Stiebel Eltron':{all:['ne, nutný HM Trend (WPM, čerpadlo)','n'],heat:['8,8 kW v HM Trend','y'],pump:['ne, v HM Trend','n'],exp:['24 l v HM Trend','p'],wifi:['aplikace jen přes ISG Connect (+7 210 Kč, Ethernet)','p'],sg:['ano (WPM)','y'],pv:['ne (SG Ready / ISG)','n'],tmax:['75 °C','y'],tmin:['−25 °C','y'],cool:['ano','y'],war:['5 let při placených prohlídkách','p'],comp:['neuvedeno','p']},
+'Hitachi':{all:['ne, nutný řídicí box ATW-CBX-01','n'],heat:['ne, externí (WEH-6E?)','n'],pump:['ano, v jednotce','y'],exp:['ne','n'],wifi:['Wi‑Fi v boxu, CSNET Home','y'],sg:['ano (box)','y'],pv:['ne','n'],tmax:['75 °C','y'],tmin:['−20 °C','p'],cool:['s doplňkovou sadou','p'],war:['5 let (UK), CZ neověřeno','p'],comp:['Hitachi twin rotary','y']},
  'Gree':{all:['ano','y'],heat:['ne, externí','n'],pump:['ano, v jednotce','y'],exp:['5 l v jednotce','y'],wifi:['ovladač + Wi‑Fi v ceně','y'],sg:['ano','y'],pv:['ne','n'],tmax:['80 °C','y'],tmin:['−25 °C','y'],cool:['ano','y'],war:['v ČR neznámá (GR 5 let)','p'],comp:['GREE','p']},
  'IVT':{all:['ne, nutný AirBox','n'],heat:['3/6/9 kW v AirBoxu','y'],pump:['jen v AirBoxu','n'],exp:['ne, externí','n'],wifi:['REGO 3100; Wi‑Fi modul za příplatek','p'],sg:['neuvedeno (FV kontakt)','p'],pv:['ne','n'],tmax:['75 °C','y'],tmin:['−23 °C','y'],cool:['ano','y'],war:['5 let, kompresor + měnič 10 let','y'],comp:['neuvedeno','p']},
  'NIBE':{all:['ne, nutné SMO/VVM + čerpadlo','n'],heat:['ne, externí (VVM 9 kW)','n'],pump:['ne, kupuje se zvlášť','n'],exp:['ne','n'],wifi:['myUplink v SMO S40','y'],sg:['ano (SMO S40)','y'],pv:['ne','n'],tmax:['75 °C','y'],tmin:['−25 °C','y'],cool:['ano','y'],war:['2 roky plná, díly 5 let, kompresor 10 let (podmíněno schválením instalace)','p'],comp:['rotační, neuvedeno','p']},
@@ -229,12 +253,14 @@ const NOTES=[
  ['REO R290 Smart a starší REO R290',['Smart: COP, SCOP a hluk podle podkladů výrobce (ErP, EN 14511/14825); L<sub>WA</sub> a L<sub>pA</sub> = horší z hodnot pro 35 a 55 °C.','Starší řada RH030–RH060: SCOP z ErP reportů (RH030–RH050 odvozeno z ηs), RH060 Keymark. COP z výkonových tabulek při maximálním výkonu, proto nižší než jmenovité COP ostatních.','Prodejní ceny REO bez DPH zadané 12. 10. 2026. Výkonová třída RHX40 (30–40 kW) v rešerši konkurenci nemá.','Slabé místo: standardní záruka REO 24 měsíců, konkurence běžně 5 let nebo 10 let na kompresor.']],
  ['Midea – nejbližší přímý konkurent',['Stejný koncept jako Smart: dohřev, čerpadlo i ovladač s Wi‑Fi ve venkovní jednotce. Nejnižší ceny Baxx.cz (skladem, bez montáže) a mideatepelnacerpadla.cz.','Nature 12–16 kW: kódy na Baxx.cz zkomolené, nejasné 1F/3F. Expanzní nádobu ověřit u distributora.','Arctic 6 kW: SCOP odvozen z ηs. Nature Plus bez technických dat.']],
 ['LG',['Dvě řady: nová Monoblock S R290 (2026, vše v jednotce kromě dohřevu) a předchozí HF, která potřebuje ovládací box PHCS0 (započten). Oficiální CZ ceník LG nenalezen; „ceník“ = OBCHOD-VTP.CZ, nejnižší lgtepelnacerpadla.cz (autorizovaný montážník).','Dohřev HA0xxM podle prodejce povinný pro záruku (+7 000 Kč bez DPH v setu) – podle zadání nepřičten.','Monoblock S 5–9 kW ověřeno Keymarkem; 12–16 kW se CZ list a AT prospekt liší (SCOP 4,75–4,85 vs. 4,50–4,60, max. 75 vs. 65 °C) – v tabulce CZ list. Řada HF je účinnější a tišší (SCOP 5,11–5,45 / 3,86–3,97, L<sub>WA</sub> 49–52 dB).']],
+['Samsung',['Varianta B (čerpadlo a expanze 10 l v jednotce); povinný kabelový ovladač MWR-WW10JN 4 214 Kč bez DPH započten, dohřev MHC-300FP ne.','Nejnižší ceny groupsumi.cz = španělský přeprodejce (šedý dovoz, nejistá záruka a servis, DPH neuvedena – brána jako 21 %). Jako „ceník“ autorizovaný prodejce aaavytapeni.cz (sada jednotka + ovladač). Oficiální CZ ceník nenalezen.','SCOP/COP z technické dokumentace Samsung, Keymark neověřen. COP A7/W55 při spádu 47/55 °C. 10 a 14 kW Samsung nevyrábí.']],
+['Stiebel Eltron',['Řady HPA-O x.2 Trend a Plus (R290). Venkovní jednotka nemá čerpadlo, expanzi ani regulátor: sestava = set s HM Trend (WPM, čerpadlo, 24 l, dohřev 8,8 kW) + povinný filtr FS‑WP.','Ceník od 1. 7. 2026 bez DPH (XLSX distributora Makatherm). Nejnižší ceny jen z 1-topeni-levne.cz (cca −30 %), DPH nejednoznačná. 17.2 nemá oficiální set s HM Trend.','COP A7/W35 v bodě EN 14511 při částečném zatížení (např. 4,3 kW u 10.2), COP A7/W55 u Plus neuveden. L<sub>pA</sub> nepublikováno.']],
+['Hitachi',['R290 monoblok airH2O 800 M (4–14 kW, 16 kW není). Řídicí box ATW-CBX-01 je povinný (ovladač, Wi‑Fi) – započten. Dohřev ani expanze v jednotce nejsou.','Oficiální CZ ceník nenalezen, v českých e‑shopech není. Nejnižší = bulharský ceník distributora 02/2026, „ceník“ = polský 07/2025; přepočet 24,265 Kč/€.','COP a SCOP z Keymarku, L<sub>pA</sub> z francouzského e‑shopu.']],
  ['Gree',['R290 Versati V se v ČR neprodává (distributor má jen R32). Ceny z řeckých a italských e‑shopů bez DPH, přepočet 24,3 Kč/€ – jen orientačně.','Jednotka nemá záložní dohřev (nepřičten). SCOP u 10 a 14 kW odvozen z ηs.']],
  ['IVT',['Prodej jen přes IVT CENTRUM. Nejnižší cena 1-topeni-levne.cz (ceník −10 %) zahrnuje montáž; samotné zboží by bylo levnější.','COP 4,85 je při 40% zatížení (EN 14825), COP A7/W55 IVT neuvádí. Řada končí na 12,9 kW, třídy 14–16 kW nemá.','Ceník IVT bez DPH (odvozeno), oficiální PDF nenalezen.']],
  ['NIBE',['Ceník DZD Dražice 11. 5. 2026 bez DPH; nejnižší ceny nibe-shop.cz. Sestava = S2125 + SMO S40 + čerpadlo UPM4; bez kondenzátního ohřevu KVR a bez schválení instalace (7 000 Kč, podmínka záruky nad 2 roky).','COP A7/W55 NIBE nepublikuje (A7/W45 ≈ 3,9). COP A7/W35 při částečném zatížení 3–5 kW.']],
  ['Acond',['E‑shopy cenu neuvádějí, použit ceník od 1. 1. 2025 (kopie u prodejce). Sestava = venkovní + nejlevnější vnitřní jednotka s řízením + čerpadlo z ceníku 2024 (levnější než hydromodul).','COP Grandis při nízkém jmenovitém výkonu, PRO při maximálním – srovnávejte hlavně SCOP. Grandis je nejúčinnější a nejtišší v rešerši.']],
  ['Viessmann',['Oficiální ceník CZ z 28. 8. 2023 bez DPH, novější není. E‑shop 250-A (1-topeni-levne / eurosystemy) označuje ceny „bez DPH“, ale pole s/bez DPH jsou shodná.','150-A: účinnost z nové generace 03/2026, ceny původní. COP A7/W55 a L<sub>pA</sub> nepublikuje.','K sestavě přičteno 3 290 Kč (kulové kohouty, BUS kabel).']],
- ['Ještě doplňuji',['Stiebel Eltron, Samsung a Hitachi – rešerše běží, doplní se do tabulky i grafů.']],
 ];
 
 /* ---------- STAV ---------- */
@@ -311,12 +337,12 @@ function renderCharts(){
   const all=R.filter(r=>r.cls!==30);
   const pmax=Math.ceil(Math.max(...all.map(price))/50000)*50000;
   const ys=all.map(scop);const ymin=Math.floor((Math.min(...ys)-0.05)*10)/10,ymax=Math.ceil((Math.max(...ys)+0.05)*10)/10;
-  const W=320,H=220,L=36,Rr=10,T=10,B=30;
+  const W=460,H=300,L=38,Rr=12,T=12,B=36;
   const X=v=>L+(v/pmax)*(W-L-Rr), Y=v=>T+(ymax-v)/(ymax-ymin)*(H-T-B);
   el.innerHTML=classes.map(c=>{
     const rows=R.filter(r=>r.cls===c);
     let g='';
-    for(let v=0;v<=pmax;v+=100000){g+=`<line x1="${X(v)}" x2="${X(v)}" y1="${T}" y2="${H-B}" stroke="var(--line)"/><text x="${X(v)}" y="${H-B+13}" text-anchor="middle">${v/1000}</text>`}
+    for(let v=0;v<=pmax;v+=100000){g+=`<line x1="${X(v)}" x2="${X(v)}" y1="${T}" y2="${H-B}" stroke="var(--line)"/><text x="${X(v)}" y="${H-B+15}" text-anchor="middle">${v/1000}</text>`}
     for(let v=Math.ceil(ymin*5)/5;v<=ymax+1e-9;v+=0.2){g+=`<line x1="${L}" x2="${W-Rr}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-5}" y="${Y(v)+3}" text-anchor="end">${v.toFixed(1).replace('.',',')}</text>`}
     g+=`<text x="${(L+W-Rr)/2}" y="${H-3}" text-anchor="middle">cena sestavy, tis. Kč${S.vat?' s DPH':' bez DPH'}</text>`;
     const pts=rows.map(r=>({r,x:X(price(r)),y:Y(scop(r))})).sort((a,b)=>a.y-b.y);
@@ -327,10 +353,10 @@ function renderCharts(){
       d+=`<circle cx="${p.x}" cy="${p.y}" r="${isReo(p.r)?5.5:4}" fill="${col}"><title>${p.r.b} ${p.r.m}: ${fmt(price(p.r))} Kč, SCOP ${f2(scop(p.r))}</title></circle>`;
       let lx=p.x+7,ly=p.y+3,anchor='start';
       const name=p.r.b===SMART?p.r.m.split(' ')[0]:p.r.b===OLD?p.r.m:(p.r.b+(['Acond','Viessmann'].includes(p.r.b)?' '+p.r.ln.replace('Vitocal ','').replace('Aconomis','Acon.'):''));
-      const wEst=name.length*5.2;
+      const wEst=name.length*5.8;
       if(lx+wEst>W-Rr){lx=p.x-7;anchor='end'}
-      let tries=0;while(placed.some(q=>Math.abs(q.y-ly)<10&&Math.abs(q.x-lx)<Math.max(wEst,q.w))&&tries<6){ly+=10;tries++}
-      placed.push({x:lx,y:ly,w:wEst});
+      let tries=0;const left=anchor==='start'?lx:lx-wEst;while(placed.some(q=>Math.abs(q.y-ly)<11&&left<q.x+q.w&&q.x<left+wEst)&&tries<8){ly+=11;tries++}
+      placed.push({x:left,y:ly,w:wEst});
       d+=`<text class="lbl ${isReo(p.r)?'reo':''}" x="${lx}" y="${ly}" text-anchor="${anchor}">${name}</text>`;
     }
     return `<figure class="chart" style="margin:0"><h3>${clsName(c)} · SCOP ${S.temp} °C</h3><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cena a SCOP, třída ${clsName(c)}">${g}${d}</svg></figure>`;
@@ -352,12 +378,14 @@ function renderNotes(){
 
 function renderFindings(){
   const F=[
-   ['Smart je nejlevnější kompletní značková sestava v ČR','Konkurenti NIBE, IVT, Acond a Viessmann potřebují vnitřní jednotku nebo řízení s čerpadlem; jejich funkční sestavy vycházejí na 1,3–2,5× ceny Smart ve stejné třídě.'],
-   ['Midea je přímý cenový soupeř','Stejný koncept „vše ve venkovní jednotce“ o 14–21 tis. Kč levněji. V 8–10 kW má vyšší SCOP, od 12 kW je Smart účinnější. Bez přímé FV.'],
-   ['Účinnostně silnější jsou Acond Grandis a NIBE 14–16 kW','Grandis SCOP 5,38–5,58 / 4,05–4,21 a L<sub>WA</sub> 46–48 dB, NIBE S2125-14/16 SCOP 5,27–5,33 / 4,06–4,08. Obojí ale za zhruba dvojnásobnou cenu.'],
-   ['Hluk: Smart ve středu pole','L<sub>WA</sub> Smart 50–56 dB(A). Tišší jsou IVT, Acond Grandis, Viessmann 250-A a NIBE (42–50 dB); hlučnější Gree, Midea 14–16 kW a starší REO R290 (58–62 dB).'],
-   ['Starší REO R290 je cenově nejníž, účinností pod trhem','RH030–RH060 za 95–150 tis. Kč; SCOP 35 °C 4,60–4,80 je pod Smart i většinou konkurence. Smart přináší za +4 až +14 tis. Kč výrazně vyšší SCOP.'],
-   ['Slabina: záruka','REO standardně 24 měsíců; IVT 5 let (kompresor 10), Acond 5/10 let, Midea až 5 let. Pro prodej Smart stojí za zvážení delší záruka.'],
+   ['Cena: Smart ve středu trhu','Značky „vše ve venkovní jednotce“ (Midea, LG Monoblock S, Samsung, Gree) jsou o 4–57 tis. Kč levnější. Systémy s povinnou vnitřní jednotkou (NIBE, IVT, Acond, Viessmann, Stiebel Eltron, Hitachi) stojí 1,2–2,2× víc než Smart (podle nejnižších nalezených cen).'],
+   ['Účinnost při 35 °C: Smart v čele','V třídách 10–14 kW má Smart druhý nejvyšší SCOP z 8–14 modelů, v 6, 8 a 16 kW čtvrtý. Výš jsou jen Midea Nature (8–10 kW), LG HF (8, 12–16 kW), Acond Grandis, NIBE 16 kW a Stiebel Plus 6 kW.'],
+   ['Při 55 °C jen průměr','SCOP 55 °C Smart 3,84–3,94 je solidní, ale lepší mají Midea Nature 8–10 kW, LG HF, Stiebel Eltron, Acond Grandis a NIBE 14–16 kW. Radiátorové aplikace nejsou silný argument.'],
+   ['Hlavní soupeř: Midea Nature','Stejný koncept s dohřevem ve venkovní jednotce, o 14–21 tis. Kč levnější. V 8–10 kW účinnější, od 12 kW je Smart lepší o 0,17–0,53 SCOP 35 °C. Přímé napojení FV nemá.'],
+   ['Hlídat LG','Monoblock S R290 je o 4–25 tis. levnější, ale SCOP 35 °C jen 4,58–4,85 a A++ při 55 °C. Předchozí řada LG HF s boxem stojí 121–149 tis., má SCOP 5,11–5,45 a L<sub>WA</sub> 49–52 dB – v 12–16 kW nejbližší soupeř v poměru cena/výkon.'],
+   ['FV přímo do jednotky má jen Smart','Žádná z 11 značek nenabízí napájení kompresoru z panelů bez střídače; konkurence umí jen SG Ready nebo signální kontakt. Integrovaný záložní dohřev ve venkovní jednotce má kromě Smart jen Midea.'],
+   ['Hluk: Smart ve středu pole','L<sub>WA</sub> Smart 50–56 dB(A). Tišší jsou Stiebel Eltron, IVT, Acond Grandis, Viessmann 250-A, NIBE a LG HF (42–52 dB); hlučnější Samsung (55–65), Gree, Midea 14–16 kW a starší REO R290 (58–62 dB).'],
+   ['Slabina: záruka','REO standardně 24 měsíců. Samsung, IVT, Acond, Stiebel Eltron a Hitachi uvádějí 5 let (u IVT a Acond kompresor 10 let), LG 7 let při certifikovaném spuštění.'],
   ];
   document.getElementById('findings').innerHTML=F.map(([b,p])=>`<div class="finding"><b>${b}</b><p>${p}</p></div>`).join('');
 }
