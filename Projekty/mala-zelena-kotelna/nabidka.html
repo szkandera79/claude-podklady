@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malá zelená kotelna | ThermaVera Energy</title>
+<style>
+:root{
+  --bg:#eef1ee; --panel:#fff; --ink:#1b2420; --muted:#5d6b64; --line:#d8ded9;
+  --accent:#1E8F5B; --accent-2:#0F3D2E; --accent-bg:#E7F3EC;
+  --amber:#F2A33A; --amber-deep:#DA8718; --amber-bg:#FFF6E9; --amber-ink:#8A5312;
+  --radius:14px; --shadow:0 1px 2px rgba(20,40,30,.05), 0 6px 22px rgba(20,40,30,.07);
+  --serif:Georgia,"Times New Roman","Iowan Old Style",serif;
+  --sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:26px 20px 60px}
+.doc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:44px 52px}
+
+/* ---- interní blok (netiskne se) ---- */
+.internal{background:#fff8e6;border:2px dashed var(--amber-deep);border-radius:12px;padding:16px 20px;margin-bottom:22px}
+.internal h4{margin:0 0 8px;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;color:var(--amber-ink)}
+.internal ol{margin:6px 0 0;padding-left:20px;font-size:13.5px}
+.internal li{margin:4px 0}
+.toolbar{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.btn{font:600 13.5px var(--sans);border:1px solid var(--line);background:#fff;color:var(--ink);
+     padding:9px 14px;border-radius:10px;cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* ---- hlavička dokumentu ---- */
+.head{border-bottom:2px solid var(--accent);padding-bottom:16px;margin-bottom:6px;display:flex;gap:18px;align-items:flex-start}
+.logo{width:46px;height:46px;flex:none;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:grid;place-items:center;color:#fff;font-weight:700;font-size:20px}
+.head .eyebrow{font-size:11.5px;letter-spacing:2.4px;text-transform:uppercase;color:var(--accent);font-weight:700}
+.head h1{font-family:var(--serif);font-size:27px;margin:6px 0 4px;line-height:1.2}
+.head .sub{color:var(--muted);font-size:13.5px}
+.head .meta{margin-left:auto;text-align:right;font-size:12px;color:var(--muted);line-height:1.7;white-space:nowrap}
+
+h2{font-family:var(--serif);font-size:18px;margin:30px 0 8px;color:var(--accent-2);padding-left:12px;border-left:3px solid var(--accent)}
+h3{font-size:14.5px;margin:18px 0 4px}
+p{margin:9px 0;font-size:14.5px;color:#26302b}
+ul{margin:8px 0;padding-left:20px;font-size:14.5px}
+li{margin:4px 0}
+.lead{font-size:15.5px}
+.small{font-size:12.5px;color:var(--muted)}
+
+/* ---- metriky ---- */
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 6px}
+.metric{border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;position:relative;overflow:hidden;background:#fbfdfb}
+.metric::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--accent),var(--accent-2))}
+.metric .k{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.metric .v{font-family:var(--serif);font-size:25px;margin-top:5px;color:var(--accent-2);line-height:1.15}
+.metric .s{font-size:11.5px;color:var(--muted);margin-top:3px}
+
+/* ---- tabulky ---- */
+table{width:100%;border-collapse:collapse;margin:12px 0 6px;font-size:13.8px}
+caption{text-align:left;font-weight:700;padding:6px 0;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f4f7f4;font-weight:600;color:var(--muted)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700;background:var(--accent-bg);color:var(--accent-2);border-bottom:none}
+tr.hl td{font-weight:700}
+.tiers td:first-child{white-space:nowrap}
+.pill{display:inline-block;min-width:26px;text-align:center;background:var(--accent-2);color:#fff;border-radius:999px;font-weight:700;font-size:12px;padding:2px 8px}
+.pill.o{background:#fff;color:var(--accent-2);border:1.5px dashed var(--accent)}
+
+/* ---- karty variant ---- */
+.vars{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+.var{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fbfdfb;display:flex;flex-direction:column}
+.var.reco{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
+.var .vh{background:var(--accent-2);color:#fff;padding:12px 16px}
+.var .vh .t{font-family:var(--serif);font-size:16.5px}
+.var .vh .p{font-size:12.5px;color:#CFE6D9;margin-top:2px}
+.var .vb{padding:14px 16px;font-size:13.5px;flex:1}
+.var .vb .tagline{margin-bottom:4px}
+.var .vb ul{padding-left:18px;margin:6px 0;font-size:13.3px}
+.var .price{border-top:1px solid var(--line);padding:12px 16px;background:#fff}
+.var .price .c{font-family:var(--serif);font-size:21px;color:var(--accent-2)}
+.var .price .n{font-size:11.5px;color:var(--muted)}
+.tagline{display:inline-block;background:var(--accent-bg);color:var(--accent-2);font-size:11px;font-weight:700;
+         padding:3px 9px;border-radius:999px;letter-spacing:.4px;text-transform:uppercase}
+.pros{color:var(--accent-2);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.5px;margin-top:10px}
+.cons{color:var(--amber-ink);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.5px;margin-top:10px}
+
+/* ---- zvýrazněné bloky ---- */
+.callout{border-radius:12px;padding:16px 20px;margin:16px 0;border:1px solid transparent}
+.callout.green{background:var(--accent-bg);border-color:#bfe0cd}
+.callout.amber{background:var(--amber-bg);border-color:#f0d3bf}
+.callout h3{margin-top:0;color:var(--accent-2)}
+.callout.amber h3{color:var(--amber-ink)}
+.callout p:last-child{margin-bottom:0}
+
+figure{margin:16px 0 6px}
+figure img,figure svg{display:block;width:100%;height:auto;max-width:100%;border:1px solid var(--line);border-radius:10px;background:#fff}
+figcaption{font-size:12px;color:var(--muted);margin-top:7px}
+
+.footnote{margin-top:20px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted)}
+.sign{margin-top:26px;font-size:14px;page-break-inside:avoid}
+.sign .brand-name{font-family:var(--serif);font-size:20px;color:var(--accent-2);margin:10px 0 10px}
+.contact{display:flex;flex-wrap:wrap;gap:8px 30px;background:var(--accent-bg);border:1px solid #bfe0cd;
+         border-radius:12px;padding:15px 20px;font-size:15px;color:var(--accent-2);font-weight:600}
+.contact .lbl{display:block;font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;
+              color:var(--accent);font-weight:700;margin-bottom:1px}
+.contact .web{font-weight:700;border-bottom:2px solid var(--accent)}
+
+@media screen and (max-width:760px){
+  .doc{padding:26px 22px}
+  .metrics{grid-template-columns:1fr}
+  .vars{grid-template-columns:1fr}
+  .head{flex-wrap:wrap}
+  .head .meta{margin-left:0;text-align:left;white-space:normal}
+}
+@media print{
+  /* Tisk drží stejnou sazbu jako náhled: šířka obsahu 796 px (jako .doc v náhledu)
+     se poměrově zmenší na tiskovou šířku A4 (186 mm ≈ 703 px). Tím sedí zalomení
+     řádků, počet sloupců i vzájemné velikosti písma. */
+  @page{size:A4 portrait;margin:12mm}
+  html,body{background:#fff}
+  .wrap{max-width:none;margin:0;padding:0;width:796px;zoom:0.8825}
+  .doc{box-shadow:none;border:none;border-radius:0;padding:0;background:#fff}
+  .no-print{display:none !important}
+  h2{page-break-after:avoid}
+  table,.metric,.var,.callout,figure{page-break-inside:avoid}
+  ul,ol{page-break-inside:avoid}
+  .page-break{page-break-before:always}
+}
+.tbd{background:var(--amber-bg);color:var(--amber-ink);border:1px dashed var(--amber-deep);border-radius:6px;padding:1px 7px;font-weight:700;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ====================== INTERNÍ POZNÁMKA (netiskne se) ====================== -->
+<div class="toolbar no-print">
+  <button class="btn primary" onclick="window.print()">Tisk / uložit jako PDF</button>
+  <button class="btn" onclick="document.getElementById('int').remove()">Skrýt interní poznámku</button>
+</div>
+<div class="internal no-print" id="int">
+  <h4>Interní — malá zelená kotelna, před rozesláním doplnit a ověřit</h4>
+  <ol>
+    <li><strong>Ceny chybí</strong> — vnitřní část kotelny (AKU 1 000 l, TUV 1 000 l, strojovna, regulace, montáž) a 2 × venkovní jednotka RH060 dodá Jindřich. Všechna pole <span class="tbd">doplní se</span> v sekcích 4, 5, 6 (splátky) a 12 nahradit; návratnost pak spočítá <code>src/model.py</code> (proměnné <code>PRICE_IN</code>, <code>PRICE_TC</code>).</li>
+    <li><strong>Výkony RH060</strong> jsou maximální výkony z výkonové mapy (technický list SVT, <code>REO/R290-datove-listy/src/data.js</code>). ErP list EN 14825 uvádí Prated 13,5 kW (W55) — to je výkon při dílčí zátěži, ne maximum. Pro pojistku výkonu v mrazu proměřit při první realizaci.</li>
+    <li>Ekonomika modelového domu: 18 kW × 2 000 h, TUV 70 %, SCOP 3,5 (ÚT) / 2,8 (TUV) — konzervativně pod SCOP RH060 pro české klima (W45 4,01, W55 3,63), elektřina 3 500 Kč/MWh, servis 15 000 Kč/rok.</li>
+    <li>Splátky pro RH060 zatím nejsou — v sekci 6 jsou pole k doplnění, odkupní podmínky převzaty z X50.</li>
+  </ol>
+</div>
+
+<div class="doc">
+
+<!-- ====================== HLAVIČKA ====================== -->
+<div class="head">
+  <div class="logo">7</div>
+  <div>
+    <div class="eyebrow">Vzorová nabídka</div>
+    <h1>Malá zelená kotelna pro bytový dům<br>s tepelnými čerpadly REO RH060</h1>
+    <div class="sub">Pro menší bytové domy s tepelnou ztrátou zhruba 12–22 kW — vytápění i ohřev teplé vody</div>
+  </div>
+  <div class="meta">
+    č. <strong>TV-MALA-BD-2026</strong><br>
+    ceník platný od 10/2026<br>
+    orientační nabídka<br>
+    ceny bez DPH
+  </div>
+</div>
+
+<p class="lead">Vážení členové výboru společenství vlastníků,<br>
+posíláme vzorovou nabídku <strong>malé zelené kotelny</strong> pro menší bytové domy, které dnes
+odebírají teplo z centrálního zásobování nebo topí vlastní plynovou kotelnou. Zdroj tvoří dvě
+kompaktní tepelná čerpadla REO RH060 v kaskádě, akumulace 1&nbsp;000&nbsp;l a zásobník teplé vody
+1&nbsp;000&nbsp;l. Najdete zde výkony jednotek, orientační cenu a modelový propočet provozních nákladů
+pro dům s tepelnou ztrátou kolem 18 kW. Konkrétní nabídku pro váš dům připravíme z vašich podkladů —
+co k tomu potřebujeme, je v závěru. Na přání nabízíme také kotle na biomasu včetně dodávek paliva, nebo
+teplo jako službu bez vstupní investice.</p>
+
+<div class="metrics">
+  <div class="metric">
+    <div class="k">Jedna jednotka RH060</div>
+    <div class="v">11,8 kW</div>
+    <div class="s">při −15 °C a výstupu 45 °C · 20,4 kW při A7/W55</div>
+  </div>
+  <div class="metric">
+    <div class="k">Kaskáda 2 × RH060</div>
+    <div class="v">23,6 kW</div>
+    <div class="s">při −15 °C / 45 °C · jednotky se vzájemně zálohují</div>
+  </div>
+  <div class="metric">
+    <div class="k">Velikost domu</div>
+    <div class="v">12 – 22 kW</div>
+    <div class="s">tepelná ztráta · typicky 6–10 bytů</div>
+  </div>
+</div>
+
+<!-- ====================== 1 PRINCIP ====================== -->
+<h2>1 · Jak malá zelená kotelna funguje</h2>
+<p>Ve stávající kotelně nebo výměníkové stanici vznikne nový zdroj tepla se dvěma tepelnými
+čerpadly vzduch/voda <strong>REO RH060</strong> s chladivem R290. Venkovní jednotky se osadí mimo
+objekt — na terén, na střechu nebo k fasádě. Uvnitř zůstává akumulační nádrž otopné vody
+1&nbsp;000&nbsp;l, zásobník teplé vody 1&nbsp;000&nbsp;l a strojovna. Otopná soustava v bytech se nemění.</p>
+<p>Dvě menší jednotky místo jedné velké mají pro malý dům tři výhody: <strong>záloha</strong> —
+při servisu nebo poruše jedné jednotky topí druhá; <strong>lepší účinnost při částečném
+zatížení</strong>, které převažuje většinu topné sezóny; a <strong>rezerva výkonu pro ohřev
+vody</strong> v souběhu s vytápěním.</p>
+
+<div class="callout green">
+  <h3>Jednotky se střídají a navzájem se zálohují</h3>
+  <p>Regulace kaskády rovnoměrně rozkládá provozní hodiny mezi obě jednotky. Za mírného počasí
+  stačí jedna, druhá se připojí v mrazech nebo při ohřevu teplé vody. Elektrická patrona
+  v akumulaci slouží jen jako rezerva.</p>
+</div>
+
+<!-- ====================== 2 VÝKON A DIMENZOVÁNÍ ====================== -->
+<h2>2 · Výkon jednotky RH060 a krytí tepelné ztráty</h2>
+<p>Kotelnu dimenzujeme podle <strong>tepelné ztráty domu při venkovní teplotě −15 °C</strong>
+a podle teploty vody, kterou otopná soustava potřebuje. Počítáme s výkonem v mrazu, nikoli
+s katalogovou hodnotou při +7 °C.</p>
+
+<table>
+  <caption>Maximální topný výkon REO RH060 podle výkonové mapy</caption>
+  <thead><tr><th>Venkovní teplota / výstupní voda</th><th class="num">1 × RH060</th><th class="num">COP</th><th class="num">2 × RH060</th></tr></thead>
+  <tbody>
+    <tr><td>A7 / W35 (podlahové topení, +7 °C)</td><td class="num">22,0 kW</td><td class="num">4,16</td><td class="num">44,0 kW</td></tr>
+    <tr class="hl"><td>A7 / W55 (radiátory, +7 °C)</td><td class="num">20,4 kW</td><td class="num">3,03</td><td class="num">40,8 kW</td></tr>
+    <tr><td>A−15 / W35</td><td class="num">12,3 kW</td><td class="num">2,44</td><td class="num">24,6 kW</td></tr>
+    <tr class="total"><td>A−15 / W45 — návrhový stav</td><td class="num">11,8 kW</td><td class="num">2,08</td><td class="num">23,6 kW</td></tr>
+    <tr><td>A−15 / W55</td><td class="num">11,4 kW</td><td class="num">1,78</td><td class="num">22,8 kW</td></tr>
+  </tbody>
+</table>
+<p class="small">A = teplota venkovního vzduchu, W = teplota vody na výstupu z tepelného čerpadla.
+Údaje výrobce pro maximální otáčky kompresoru; skutečný výkon ovlivňuje vlhkost vzduchu a odtávání.</p>
+
+<table class="tiers">
+  <caption>Doporučená sestava podle tepelné ztráty</caption>
+  <thead><tr><th>Tepelná ztráta při −15 °C</th><th>Jednotky REO RH060</th><th class="num">Výkon při −15 °C / 45 °C</th><th>Krytí špiček</th></tr></thead>
+  <tbody>
+    <tr><td>do 12 kW</td><td><span class="pill">1</span> &nbsp;nebo <span class="pill o">2</span> se zálohou</td><td class="num">11,8 / 23,6 kW</td><td>elektrická patrona, u dvou jednotek druhé čerpadlo</td></tr>
+    <tr><td>12 – 23 kW</td><td><span class="pill">2</span></td><td class="num">23,6 kW</td><td>druhá jednotka, patrona jen jako rezerva</td></tr>
+  </tbody>
+</table>
+<p class="small">Domy s tepelnou ztrátou nad 23 kW řešíme kaskádou REO X50 podle naší vzorové nabídky
+zelené kotelny pro bytové domy 25–100 kW.</p>
+
+<h3>Příklad: dům s tepelnou ztrátou 18 kW, otopná voda 45 °C</h3>
+<table>
+  <tbody>
+    <tr><td>Výkon kaskády 2 × RH060 při −15 °C / 45 °C</td><td class="num"><strong>23,6 kW</strong></td></tr>
+    <tr><td>Pokrytí tepelné ztráty při −15 °C</td><td class="num"><strong>131 %</strong></td></tr>
+    <tr><td>Rezerva výkonu pro ohřev teplé vody v nejchladnějších dnech</td><td class="num">≈ 5,6 kW</td></tr>
+    <tr><td>Jedna jednotka sama pokryje dům při venkovní teplotě</td><td class="num">do ≈ −8 °C</td></tr>
+    <tr><td>Elektrický příkon obou jednotek při −15 °C / 45 °C</td><td class="num">≈ 11,4 kW</td></tr>
+  </tbody>
+</table>
+<p>Kaskáda dvou jednotek RH060 tedy pokryje tepelnou ztrátu 18 kW celou, bez elektrického
+dotápění, a zbývá jí rezerva na ohřev vody. Stejná sestava vystačí pro domy s tepelnou ztrátou
+<strong>až zhruba 23 kW při 45 °C, resp. 22 kW při 55 °C</strong>. Kdyby jedna jednotka vypadla,
+druhá udrží dům v teple až do mrazů kolem −8 °C; pod touto teplotou pomáhá elektrická patrona
+v akumulaci.</p>
+
+<!-- ====================== 3 CO DODÁVÁME ====================== -->
+<h2>3 · Co dodáváme</h2>
+<table>
+  <caption>Součást sestavy</caption>
+  <tbody>
+    <tr><td><strong>2 × tepelné čerpadlo REO RH060</strong></td><td>Vzduch/voda s přírodním chladivem R290, invertorový kompresor, 11,8 kW při −15 °C / 45 °C a 20,4 kW při A7/W55 na jednotku. Řízení kaskády a střídání jednotek.</td></tr>
+    <tr><td><strong>Akumulace 1&nbsp;000&nbsp;l</strong></td><td>Hydraulicky odděluje zdroj od otopné soustavy, zajišťuje průtok do topení a omezuje taktování čerpadel. Elektrická patrona jako rezerva.</td></tr>
+    <tr><td><strong>Zásobník teplé vody 1&nbsp;000&nbsp;l</strong></td><td>Pokryje ranní a večerní odběrové špičky menšího domu (orientačně do 8 bytů). Při vyšší spotřebě doplníme druhý zásobník.</td></tr>
+    <tr><td><strong>Ohřev teplé vody</strong></td><td>Zásobník se nabíjí topným hadem přímo z okruhu tepelných čerpadel. Otopná voda je oddělena od pitné, řešení je jednoduché a s minimem armatur.</td></tr>
+    <tr><td><strong>Kompletní strojovna</strong></td><td>Oběhová čerpadla, expanzní a pojistné prvky, uzavírací a zpětné armatury, filtrace, propojovací potrubí a izolace.</td></tr>
+    <tr><td><strong>Regulace a dohled</strong></td><td>Řízení kaskády, priorita teplé vody, ekvitermní regulace vytápění, měření teplot a vzdálený dohled nad provozem.</td></tr>
+  </tbody>
+</table>
+
+<!-- ====================== 4 CENA ====================== -->
+<h2>4 · Orientační cena</h2>
+<div class="vars">
+  <div class="var reco">
+    <div class="vh">
+      <div class="t">Vnitřní část kotelny</div>
+      <div class="p">Akumulace, teplá voda, strojovna a regulace</div>
+    </div>
+    <div class="vb">
+      <div class="tagline">Stejná pro každý malý dům</div>
+      <ul>
+        <li>Akumulace 1 000 l s elektrickou patronou jako rezervou.</li>
+        <li>Zásobník teplé vody 1 000 l s topným hadem.</li>
+        <li>Oběhová čerpadla, armatury, expanze, potrubí a izolace.</li>
+        <li>Rozvaděč, regulace kaskády a vzdálený dohled.</li>
+        <li>Montáž, uvedení do provozu a revize.</li>
+      </ul>
+    </div>
+    <div class="price">
+      <div class="c"><span class="tbd">doplní se</span></div>
+      <div class="n">bez DPH · AKU 1 000 l + TUV 1 000 l</div>
+    </div>
+  </div>
+  <div class="var reco">
+    <div class="vh">
+      <div class="t">Venkovní jednotky</div>
+      <div class="p">Kaskáda dvou tepelných čerpadel REO RH060</div>
+    </div>
+    <div class="vb">
+      <div class="tagline">Tepelná ztráta 12 – 23 kW</div>
+      <p><strong>2 × REO RH060</strong> — 23,6 kW při −15 °C / 45 °C, 2 × 20,4 kW při A7/W55.
+      Jednotky se střídají a navzájem se zálohují.</p>
+      <ul>
+        <li>Plnohodnotná záloha zdroje.</li>
+        <li>Rezerva pro souběh vytápění a ohřevu vody.</li>
+        <li>Osazení, připojení a uvedení do provozu.</li>
+      </ul>
+    </div>
+    <div class="price">
+      <div class="c"><span class="tbd">doplní se</span></div>
+      <div class="n">bez DPH · 23,6 kW při −15 °C</div>
+    </div>
+  </div>
+</div>
+
+<div class="callout green">
+  <h3>Malá zelená kotelna celkem: <span class="tbd">doplní se</span> bez DPH</h3>
+  <p>Vnitřní část kotelny a dvě tepelná čerpadla REO RH060 v kaskádě — kompletní zdroj tepla
+  pro vytápění i ohřev teplé vody menšího bytového domu.</p>
+</div>
+<p class="small">Cena platí pro uvedený objem akumulace a zásobníku teplé vody. Stavební úpravy
+a případný druhý zásobník TUV se naceňují podle skutečnosti. Konečnou cenu potvrdíme
+po prohlídce objektu. Sazba DPH se určí podle charakteru díla.</p>
+
+<!-- ====================== 5 MODELOVÝ DŮM ====================== -->
+<div class="page-break"></div>
+<h2>5 · Modelový propočet provozních nákladů</h2>
+<h3>Kolik dnes platí bytové domy za teplo z CZT</h3>
+<p>Cena tepla se liší podle toho, kde dům teplo od dodavatele přebírá. Celostátní průměry
+Energetického regulačního úřadu pro rok 2026:</p>
+
+<table>
+  <caption>Ceny tepla k 1. 1. 2026 podle ERÚ (bez DPH)</caption>
+  <thead><tr><th>Kde dům teplo přebírá</th><th class="num">Průměr ČR</th><th class="num">Na byt a rok*</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Domovní předávací stanice</strong> — výměník teplárny ve sklepě domu</td><td class="num">967 Kč/GJ</td><td class="num">25 100 Kč</td></tr>
+    <tr><td><strong>Sekundární rozvod</strong> — společná výměníková stanice pro více domů</td><td class="num">944 Kč/GJ</td><td class="num">24 500 Kč</td></tr>
+    <tr><td><strong>Bloková kotelna</strong> dodavatele pro několik domů</td><td class="num">910 Kč/GJ</td><td class="num">23 700 Kč</td></tr>
+    <tr><td><strong>Domovní kotelna</strong> dodavatele (plynová)</td><td class="num">828 Kč/GJ</td><td class="num">21 500 Kč</td></tr>
+    <tr class="total"><td>Malá zelená kotelna 2 × RH060 (model, vč. servisu)</td><td class="num">≈ 375 Kč/GJ</td><td class="num">≈ 9 800 Kč</td></tr>
+  </tbody>
+</table>
+<p class="small">* Při spotřebě 26 GJ na byt a rok (vytápění a teplá voda), běžné rozpětí je 20–30 GJ.
+Průměry jsou vážené dodaným množstvím. V dražších soustavách je cena výrazně vyšší — například
+Ostrava 1 209 Kč/GJ bez DPH. Rozhodující je vždy vyúčtování vašeho domu.
+Cena tepla ze zelené kotelny nezahrnuje splátku investice.</p>
+
+<h3>Modelový dům s tepelnou ztrátou 18 kW</h3>
+<p>Propočet pro dům, který dnes odebírá teplo z CZT. Nejde o referenci konkrétní realizace,
+ale o výpočet podle předpokladů uvedených pod tabulkou.</p>
+
+<table>
+  <caption>Modelový dům (bez DPH, ročně)</caption>
+  <thead><tr><th>&nbsp;</th><th class="num">CZT 1 209 Kč/GJ<br><span class="small">(Ostrava)</span></th><th class="num">CZT 967 Kč/GJ<br><span class="small">(průměr ČR)</span></th></tr></thead>
+  <tbody>
+    <tr><td>Tepelná ztráta při −15 °C / sestava</td><td class="num" colspan="2">18 kW · 2 × REO RH060 (23,6 kW)</td></tr>
+    <tr><td>Potřeba tepla (vytápění 36 MWh + TUV 25 MWh)</td><td class="num" colspan="2">220 GJ</td></tr>
+    <tr><td>Dnešní náklad na teplo</td><td class="num">266 400 Kč</td><td class="num">213 000 Kč</td></tr>
+    <tr><td>Elektřina pro tepelná čerpadla</td><td class="num">67 500 Kč</td><td class="num">67 500 Kč</td></tr>
+    <tr><td>Servis a údržba</td><td class="num">15 000 Kč</td><td class="num">15 000 Kč</td></tr>
+    <tr class="total"><td>Roční provozní náklady</td><td class="num">82 500 Kč</td><td class="num">82 500 Kč</td></tr>
+    <tr class="hl"><td>Roční úspora</td><td class="num">183 900 Kč (69 %)</td><td class="num">130 500 Kč (61 %)</td></tr>
+    <tr><td>Investice</td><td class="num" colspan="2"><span class="tbd">doplní se</span></td></tr>
+    <tr class="total"><td>Prostá návratnost</td><td class="num"><span class="tbd">doplní se</span></td><td class="num"><span class="tbd">doplní se</span></td></tr>
+  </tbody>
+</table>
+<p class="small">Předpoklady: potřeba tepla na vytápění = tepelná ztráta × 2 000 plných hodin,
+teplá voda 70 % potřeby na vytápění, sezónní účinnost 3,5 pro vytápění a 2,8 pro teplou vodu
+(konzervativně pod sezónním topným faktorem RH060 pro české klima 4,0 při 45 °C),
+elektřina 3 500 Kč/MWh; bez inflace, dotace a nákladů na financování. Elektrické dotápění
+není potřeba — kaskáda pokryje ztrátu celou.</p>
+
+<div class="callout amber">
+  <h3>Kdy vyjde úspora nižší</h3>
+  <p>Propočet počítá s cenou tepla z centrálního zásobování. U domů s vlastní plynovou kotelnou
+  je dnešní cena tepla nižší, a úspora i návratnost proto vycházejí méně příznivě. Stejně tak
+  klesá úspora, pokud otopná soustava potřebuje vyšší teplotu vody než 45–55 °C. Zda je váš dům
+  vhodný, ukáže individuální propočet.</p>
+</div>
+
+<!-- ====================== 6 FINANCOVÁNÍ ====================== -->
+<h2>6 · Nemusíte platit všechno najednou</h2>
+<p>Pokud pro společenství není průchodné uvolnit celou částku z fondu oprav, nabízíme
+<strong>pronájem tepelných čerpadel se splátkovým kalendářem</strong>. Společenství hradí
+vnitřní část kotelny — nádrže, strojovnu, rozvody a instalaci — a samotná tepelná čerpadla
+se splácejí měsíčně. <strong>Servis a údržba jsou po dobu pronájmu zahrnuty ve splátce.</strong>
+Po skončení sjednané doby zařízení přechází do majetku společenství za odkupní cenu.</p>
+
+<table>
+  <caption>Orientační splátka za jednu jednotku REO RH060</caption>
+  <thead><tr><th>&nbsp;</th><th class="num">60 měsíců</th><th class="num">120 měsíců</th></tr></thead>
+  <tbody>
+    <tr><td>Měsíční splátka za jednotku</td><td class="num"><span class="tbd">doplní se</span></td><td class="num"><span class="tbd">doplní se</span></td></tr>
+    <tr><td>Odkupní cena po skončení</td><td class="num">15 % z ceny</td><td class="num">1 Kč</td></tr>
+  </tbody>
+</table>
+<p class="small">Splátka se násobí počtem jednotek. Uvedené splátky a odkupní ceny jsou orientační
+a podléhají potvrzení financující stranou a schválení žádosti. Ceny jsou bez DPH.</p>
+
+<!-- ====================== 7 BIOMASA A TEPLO JAKO SLUŽBA ====================== -->
+<div class="page-break"></div>
+<h2>7 · Další možnosti: biomasa a teplo jako služba</h2>
+<p>Zelenou kotelnu přizpůsobíme domu i tomu, jak chce společenství hospodařit. Kromě tepelných
+čerpadel nabízíme kotle na biomasu a také model, ve kterém společenství neinvestuje do technologie,
+ale kupuje od nás hotové teplo.</p>
+
+<div class="vars">
+  <div class="var">
+    <div class="vh">
+      <div class="t">Kotel na biomasu</div>
+      <div class="p">Doplnění nebo náhrada tepelných čerpadel</div>
+    </div>
+    <div class="vb">
+      <p>Na přání doplníme kaskádu tepelných čerpadel kotlem na biomasu, nebo tepelná čerpadla
+      kotlem zcela nahradíme. Kotel má <strong>vlastní zásobník paliva</strong> s automatickým
+      podáváním a napojí se na stejnou akumulaci a zásobníky teplé vody.</p>
+      <div class="pros">Kdy dává smysl</div>
+      <ul>
+        <li>Jako doplňkový zdroj pro nejchladnější dny místo elektrických patron.</li>
+        <li>Kde nelze umístit venkovní jednotky nebo nestačí elektrická přípojka.</li>
+        <li>U otopných soustav, které potřebují vyšší teplotu vody.</li>
+      </ul>
+    </div>
+    <div class="price">
+      <div class="c">Individuálně</div>
+      <div class="n">podle výkonu kotle a velikosti zásobníku paliva</div>
+    </div>
+  </div>
+
+  <div class="var">
+    <div class="vh">
+      <div class="t">Teplo jako služba</div>
+      <div class="p">Bez vstupní investice</div>
+    </div>
+    <div class="vb">
+      <p>Místo dodávky technologie kotelnu <strong>postavíme na vlastní náklady, vlastníme ji
+      a provozujeme</strong>. Společenství platí jen za dodané teplo podle měřidla, za cenu
+      sjednanou ve smlouvě.</p>
+      <div class="pros">Co získáte</div>
+      <ul>
+        <li>Žádná investice z fondu oprav ani úvěr.</li>
+        <li>Servis, revize, opravy a dohled nad provozem jsou naše starost.</li>
+        <li>Pro kotelny s tepelnými čerpadly i s biomasou.</li>
+      </ul>
+    </div>
+    <div class="price">
+      <div class="c">Cena za GJ</div>
+      <div class="n">délku smlouvy a cenu tepla nabídneme individuálně</div>
+    </div>
+  </div>
+</div>
+
+<div class="callout green">
+  <h3>O palivo i provoz se postaráme</h3>
+  <p>U kotlů na biomasu dodáváme klientům i palivo. Plánujeme a zajišťujeme dodávky, doplňujeme
+  zásobník a staráme se o čištění, servis a revize kotle. Společenství nemusí řešit nic kromě
+  toho, že má v domě teplo.</p>
+</div>
+
+<!-- ====================== 8 SCHÉMA ====================== -->
+<div class="page-break"></div>
+<h2>8 · Schéma kotelny</h2>
+<p>Dvě venkovní jednotky se připojují na společný sběrač a nabíjejí akumulaci otopné vody.
+Z ní se zásobuje ústřední topení domu a přes topný had i zásobník teplé vody.</p>
+<figure>
+  <!--SCHEMA:1-->
+<svg role="img" aria-label="Koncepční schéma malé zelené kotelny — kaskáda dvou tepelných čerpadel REO RH060 s akumulací 1 000 l a zásobníkem TUV 1 000 l" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 875 1005" width="875" height="1005" preserveAspectRatio="xMidYMid meet" font-family="Arial, Helvetica, sans-serif">
+<style>
+     .pipe{fill:none;stroke-linecap:round;stroke-linejoin:round}
+     .sym{fill:#fff;stroke:#16201C;stroke-width:2}
+     .symk{fill:#16201C}
+     .t{fill:#16201C;font-size:12px}
+     .ts{fill:#16201C;font-size:11px}
+     .tx{fill:#5F6B64;font-size:10.5px}
+     .tb{fill:#16201C;font-size:15px;font-weight:bold}
+     .tbs{fill:#16201C;font-size:12px;font-weight:bold}
+     .wt{fill:#fff;font-size:13px;font-weight:bold}
+     .wts{fill:#CFE6D9;font-size:12px;font-weight:bold}
+     .eb{fill:#1E8F5B;font-size:12px;font-weight:bold;letter-spacing:2.4px}
+     .zt{fill:#0F3D2E;font-size:11px;font-weight:bold;letter-spacing:1.2px}
+     .ttl{fill:#0F3D2E;font-size:22px;font-weight:bold}
+     .amb{fill:#8A5312;font-size:11px;font-weight:bold}
+    </style>
+<defs>
+<g id="v"><path class="sym" d="M-10,-7 L0,0 L-10,7 Z"/><path class="sym" d="M10,-7 L0,0 L10,7 Z"/></g>
+<g id="chk"><path class="sym" d="M-10,-7 L9,0 L-10,7 Z"/><line x1="10" y1="-8" x2="10" y2="8" stroke="#16201C" stroke-width="2.2"/></g>
+<g id="pump"><circle class="sym" r="13"/><path class="symk" d="M-5,-6.5 L7,0 L-5,6.5 Z"/></g>
+<g id="flt"><rect class="sym" x="-12" y="-10" width="24" height="20"/><line x1="-12" y1="-10" x2="12" y2="10" stroke="#16201C" stroke-width="1.5"/><line x1="-12" y1="10" x2="12" y2="-10" stroke="#16201C" stroke-width="1.5"/></g>
+<g id="exp"><rect class="sym" x="-13" y="-22" width="26" height="40" rx="12"/><line x1="-13" y1="-2" x2="13" y2="-2" stroke="#16201C" stroke-width="1.5"/></g>
+<g id="sv"><path class="sym" d="M-9,-6 L0,0 L-9,6 Z"/><path fill="none" stroke="#16201C" stroke-width="2" d="M0,0 L0,-9 L8,-9"/><path fill="none" stroke="#5F6B64" stroke-width="1.3" d="M-3,-13 l6,3 l-6,3 l6,3"/></g>
+<g id="mix"><path class="sym" d="M-10,-7 L0,0 L-10,7 Z"/><path class="sym" d="M10,-7 L0,0 L10,7 Z"/><path class="sym" d="M-7,16 L0,0 L7,16 Z"/><circle class="sym" cx="0" cy="-18" r="9"/><text x="0" y="-14" text-anchor="middle" style="font-size:10px;fill:#16201C;font-weight:bold">M</text><line x1="0" y1="-9" x2="0" y2="0" stroke="#16201C" stroke-width="1.6"/></g>
+<g id="ts"><circle class="sym" r="9"/><text x="0" y="4" text-anchor="middle" style="font-size:10px;fill:#16201C;font-weight:bold">T</text></g>
+<marker id="ar" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#16201C"/></marker>
+</defs>
+<rect x="0" y="0" width="875" height="1005" rx="0" fill="#fff" stroke="none"/>
+<rect x="14" y="14" width="847" height="977" rx="0" fill="none" stroke="#16201C" stroke-width="2"/>
+<text x="36" y="48" class="eb" text-anchor="start">THERMAVERA ENERGY</text>
+<text x="36" y="78" class="ttl" text-anchor="start">Malá zelená kotelna pro bytový dům</text>
+<text x="839" y="48" class="zt" text-anchor="end">TV-MALA-BD-01 · rev. 0</text>
+<text x="839" y="72" class="tx" text-anchor="end">tepelná ztráta do ≈ 24 kW · 2 × REO RH060 v kaskádě</text>
+<line x1="30" y1="94" x2="845" y2="94" stroke="#1E8F5B" stroke-width="2.5"/>
+<rect x="30" y="110" width="815" height="690" rx="8" fill="#FBFDFC" stroke="#DCE6DF" stroke-width="1.5"/>
+<path d="M30,118 a8,8 0 0 1 8,-8 h799 a8,8 0 0 1 8,8 v34 h-815 z" fill="#0F3D2E"/>
+<text x="46" y="137" class="wt" text-anchor="start">MALÁ ZELENÁ KOTELNA — kaskáda 2 × REO RH060</text>
+<text x="829" y="137" class="wts" text-anchor="end">23,6 kW při −15 °C / 45 °C</text>
+<line x1="50" y1="283" x2="825" y2="283" stroke="#16201C" stroke-width="2" stroke-dasharray="12 6"/>
+<text x="822" y="172" class="zt" text-anchor="end">VENKOVNÍ PROSTŘEDÍ</text>
+<text x="470" y="316" class="zt" text-anchor="start">STROJOVNA / KOTELNA</text>
+<rect x="70" y="180" width="175" height="85" rx="8" fill="#F4F8F5" stroke="#16201C" stroke-width="2.2"/>
+<text x="157" y="206" class="tbs" text-anchor="middle">TČ 1 — REO RH060</text>
+<text x="157" y="224" class="ts" text-anchor="middle">11,8 kW při −15 °C / 45 °C</text>
+<text x="157" y="241" class="tx" text-anchor="middle">střídají se v provozu</text>
+<text x="157" y="256" class="tx" text-anchor="middle">a navzájem se zálohují</text>
+<rect x="260" y="180" width="175" height="85" rx="8" fill="#F4F8F5" stroke="#16201C" stroke-width="2.2"/>
+<text x="347" y="206" class="tbs" text-anchor="middle">TČ 2 — REO RH060</text>
+<text x="347" y="224" class="ts" text-anchor="middle">11,8 kW při −15 °C / 45 °C</text>
+<text x="347" y="241" class="tx" text-anchor="middle">střídají se v provozu</text>
+<text x="347" y="256" class="tx" text-anchor="middle">a navzájem se zálohují</text>
+<rect x="470" y="180" width="345" height="85" rx="8" fill="#fff" stroke="#DCE6DF" stroke-width="1.5"/>
+<text x="486" y="204" class="tbs" text-anchor="start">Dům s tepelnou ztrátou ≈ 18 kW při −15 °C</text>
+<text x="486" y="224" class="ts" text-anchor="start">2 jednotky: 23,6 kW → rezerva pro ohřev TUV</text>
+<text x="486" y="241" class="ts" text-anchor="start">1 jednotka sama pokryje dům do cca −8 °C</text>
+<text x="486" y="257" class="tx" text-anchor="start">A7/W55: 20,4 kW na jednotku</text>
+<rect x="245" y="390" width="130" height="230" rx="32" fill="#EAF1EC" stroke="#16201C" stroke-width="2.3"/>
+<text x="310.0" y="503.0" class="tbs" text-anchor="middle">AKU</text>
+<text x="310.0" y="520.0" class="tx" text-anchor="middle">1 000 l · otopná voda</text>
+<rect x="530" y="390" width="90" height="230" rx="32" fill="#FDF3EA" stroke="#16201C" stroke-width="2.3"/>
+<text x="575.0" y="503.0" class="tbs" text-anchor="middle">TUV</text>
+<text x="575.0" y="520.0" class="tx" text-anchor="middle">1 000 l</text>
+<path d="M544.0,440 l5.166666666666667,-11 l5.166666666666667,11 l5.166666666666667,11 l5.166666666666667,-11 l5.166666666666667,-11 l5.166666666666667,11 l5.166666666666667,11 l5.166666666666667,-11 l5.166666666666667,-11 l5.166666666666667,11 l5.166666666666667,11 l5.166666666666667,-11" fill="none" stroke="#D62828" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M280.0,555 l8.4,-9 l8.4,18 l8.4,-18 l8.4,18 l8.4,-18 l8.4,18 l8.4,-9" fill="none" stroke="#DA8718" stroke-width="2.6" stroke-linejoin="round"/>
+<line x1="272.0" y1="555" x2="280.0" y2="555" stroke="#DA8718" stroke-width="2.6"/>
+<line x1="340.0" y1="555" x2="348.0" y2="555" stroke="#DA8718" stroke-width="2.6"/>
+<rect x="130" y="690" width="270" height="68" rx="8" fill="#EEF3F9" stroke="#16201C" stroke-width="1.8"/>
+<text x="265" y="716" class="tbs" text-anchor="middle">ÚSTŘEDNÍ TOPENÍ OBJEKTU</text>
+<text x="265" y="736" class="tx" text-anchor="middle">stávající otopná soustava domu</text>
+<rect x="500" y="690" width="315" height="68" rx="8" fill="#FDF3EA" stroke="#16201C" stroke-width="1.8"/>
+<text x="657" y="716" class="tbs" text-anchor="middle">ROZVOD TUV DO BYTŮ</text>
+<text x="657" y="736" class="tx" text-anchor="middle">zásobník 1 000 l · s cirkulací</text>
+<path class="pipe" d="M360,620 L360,785 L100,785 L100,265" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="5"/>
+<path class="pipe" d="M100,330 L290,330 L290,265" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="5"/>
+<line x1="141" y1="330" x2="159" y2="330" stroke="#fff" stroke-width="13"/>
+<line x1="290" y1="296" x2="290" y2="314" stroke="#fff" stroke-width="13"/>
+<path class="pipe" d="M282,390 L282,345 L215,345 L215,690" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D62828" stroke-width="5"/>
+<line x1="215" y1="421" x2="215" y2="439" stroke="#fff" stroke-width="13"/>
+<path class="pipe" d="M260,690 L260,620" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="5"/>
+<path class="pipe" d="M350,390 L350,360 L670,360 L670,440 L606,440" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D62828" stroke-width="5"/>
+<path class="pipe" d="M544,440 L500,440 L500,530 L375,530" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="5"/>
+<path class="pipe" d="M150,265 L150,430 L245,430" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D62828" stroke-width="5"/>
+<path class="pipe" d="M340,265 L340,305 L150,305" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D62828" stroke-width="5"/>
+<path class="pipe" d="M555,620 L555,655 L482,655" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="5"/>
+<path d="M492,649 L480,655 L492,661 Z" fill="#1D4E89"/>
+<text x="476" y="659" class="tx" text-anchor="end">studená voda</text>
+<path class="pipe" d="M595,390 L595,335 L750,335 L750,690" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D9761C" stroke-width="5"/>
+<line x1="595" y1="351" x2="595" y2="369" stroke="#fff" stroke-width="13"/>
+<path class="pipe" d="M595,390 L595,335" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D9761C" stroke-width="5"/>
+<path class="pipe" d="M700,690 L700,650 L600,650 L600,620" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#E9A85F" stroke-width="4" stroke-dasharray="9 6"/>
+<use href="#chk" transform="translate(150,370) rotate(90)"/>
+<use href="#v" transform="translate(150,405) rotate(90)"/>
+<use href="#pump" transform="translate(100,480)"/>
+<use href="#flt" transform="translate(100,560)"/>
+<path class="pipe" d="M100,360 L76,360" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="3"/>
+<use href="#sv" transform="translate(74,360) rotate(180)"/>
+<path class="pipe" d="M100,412 L72,412 L72,418" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="3"/>
+<use href="#exp" transform="translate(72,440)"/>
+<use href="#pump" transform="translate(460,360)"/>
+<use href="#mix" transform="translate(215,500)"/>
+<use href="#pump" transform="translate(215,585)"/>
+<use href="#ts" transform="translate(282,345)"/>
+<use href="#chk" transform="translate(340,285) rotate(90)"/>
+<text x="815" y="782" class="tx" text-anchor="end">Koncepční schéma — detaily upřesní prováděcí projekt.</text>
+<rect x="30" y="815" width="815" height="152" rx="8" fill="#fff" stroke="#DCE6DF" stroke-width="1.5"/>
+<text x="48" y="840" class="tbs" text-anchor="start">LEGENDA</text>
+<line x1="52" y1="863" x2="94" y2="863" stroke="#D62828" stroke-width="5" stroke-linecap="round"/>
+<text x="104" y="867" class="ts" text-anchor="start">topná voda ze zdroje</text>
+<line x1="52" y1="887" x2="94" y2="887" stroke="#1D4E89" stroke-width="5" stroke-linecap="round"/>
+<text x="104" y="891" class="ts" text-anchor="start">vratná voda</text>
+<line x1="52" y1="911" x2="94" y2="911" stroke="#D9761C" stroke-width="5" stroke-linecap="round"/>
+<text x="104" y="915" class="ts" text-anchor="start">teplá užitková voda</text>
+<line x1="52" y1="935" x2="94" y2="935" stroke="#E9A85F" stroke-width="5" stroke-linecap="round" stroke-dasharray="9 6"/>
+<text x="104" y="939" class="ts" text-anchor="start">cirkulace TUV</text>
+<use href="#pump" transform="translate(280,863)"/>
+<text x="300" y="867" class="ts" text-anchor="start">oběhové čerpadlo</text>
+<use href="#chk" transform="translate(280,887)"/>
+<text x="300" y="891" class="ts" text-anchor="start">zpětná klapka</text>
+<use href="#v" transform="translate(280,911)"/>
+<text x="300" y="915" class="ts" text-anchor="start">uzávěr</text>
+<use href="#flt" transform="translate(280,935)"/>
+<text x="300" y="939" class="ts" text-anchor="start">filtr</text>
+<use href="#exp" transform="translate(420,863)"/>
+<text x="440" y="867" class="ts" text-anchor="start">expanzní nádoba</text>
+<use href="#sv" transform="translate(420,887)"/>
+<text x="440" y="891" class="ts" text-anchor="start">pojistný ventil</text>
+<use href="#mix" transform="translate(420,911)"/>
+<text x="440" y="915" class="ts" text-anchor="start">směšovací ventil</text>
+<use href="#ts" transform="translate(420,935)"/>
+<text x="440" y="939" class="ts" text-anchor="start">teplotní čidlo</text>
+<path d="M570.0,863 l3.3333333333333335,-11 l3.3333333333333335,11 l3.3333333333333335,11 l3.3333333333333335,-11 l3.3333333333333335,-11 l3.3333333333333335,11 l3.3333333333333335,11 l3.3333333333333335,-11 l3.3333333333333335,-11 l3.3333333333333335,11 l3.3333333333333335,11 l3.3333333333333335,-11" fill="none" stroke="#D62828" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="620" y="867" class="ts" text-anchor="start">topný had v zásobníku TUV</text>
+<path d="M572.0,887 l5.040000000000001,-9 l5.040000000000001,18 l5.040000000000001,-18 l5.040000000000001,18 l5.040000000000001,-18 l5.040000000000001,18 l5.040000000000001,-9" fill="none" stroke="#DA8718" stroke-width="2.6" stroke-linejoin="round"/>
+<line x1="564.0" y1="887" x2="572.0" y2="887" stroke="#DA8718" stroke-width="2.6"/>
+<line x1="608.0" y1="887" x2="616.0" y2="887" stroke="#DA8718" stroke-width="2.6"/>
+<text x="620" y="891" class="ts" text-anchor="start">el. patrona — dokrytí špiček</text>
+<text x="572" y="919" class="ts" text-anchor="start">Ohřev TUV topným hadem přímo</text>
+<text x="572" y="935" class="tx" text-anchor="start">z okruhu tepelných čerpadel</text>
+<text x="30" y="990" class="tx" text-anchor="start">ThermaVera Energy · koncepční schéma k nabídce malé zelené kotelny</text>
+<text x="845" y="990" class="tx" text-anchor="end">rev. 0 · 10/2026</text>
+</svg>
+<!--/SCHEMA:1-->
+  <figcaption><strong>Malá zelená kotelna</strong> — dvě tepelná čerpadla REO RH060 v kaskádě
+  nabíjejí akumulaci 1 000 l a přes topný had zásobník teplé vody 1 000 l. Regulace jednotky
+  střídá v provozu a při poruše jedné převezme provoz druhá. Elektrická patrona v akumulaci
+  slouží jako rezerva. Koncepční schéma — dimenze a rozsah měření a regulace upřesní prováděcí projekt.</figcaption>
+</figure>
+
+<!-- ====================== 9 ROZSAH ====================== -->
+<h2>9 · Co je a co není v ceně</h2>
+<table>
+  <thead><tr><th>V ceně je</th><th>V ceně není</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul style="margin:0;padding-left:16px">
+          <li>Dodávka a montáž 2 × REO RH060</li>
+          <li>Akumulace 1 000 l a zásobník TUV 1 000 l s topným hadem</li>
+          <li>Čerpadla, armatury, expanzní a pojistné prvky</li>
+          <li>Propojovací potrubí ve strojovně včetně izolace</li>
+          <li>Elektroinstalace a rozvaděč v kotelně</li>
+          <li>Regulace kaskády, měření a vzdálený dohled</li>
+          <li>Uvedení do provozu, zaškolení obsluhy, revize</li>
+          <li>Dokumentace skutečného provedení</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0;padding-left:16px">
+          <li>Stavební úpravy a základ pro venkovní jednotky</li>
+          <li>Případné posílení elektrické přípojky a hlavního jističe</li>
+          <li>Odpojení od CZT včetně poplatků dodavateli</li>
+          <li>Demontáž a likvidace stávajícího zdroje</li>
+          <li>Úpravy otopné soustavy v bytech</li>
+          <li>Projektová dokumentace nad rámec dílenské</li>
+          <li>Administrace dotace (zajistíme samostatně)</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ====================== 10 PODKLADY ====================== -->
+<h2>10 · Co potřebujeme pro nabídku na váš dům</h2>
+<ul>
+  <li><strong>Vyúčtování tepla za 1–3 roky</strong> — ideálně vytápění a teplá voda zvlášť.</li>
+  <li><strong>Počet bytových jednotek</strong> a roční odběr teplé vody v m³.</li>
+  <li><strong>Tepelná ztráta nebo PENB</strong>, pokud jsou k dispozici — jinak ztrátu odhadneme ze spotřeby.</li>
+  <li><strong>Teplotní spád otopné soustavy</strong> a informace o zateplení domu.</li>
+  <li><strong>Rezervovaný příkon a hlavní jistič</strong> objektu.</li>
+  <li><strong>Fotografie kotelny</strong> a místa pro venkovní jednotky.</li>
+  <li>Při zájmu o biomasu: <strong>prostor pro sklad paliva</strong> a možnost příjezdu zásobování.</li>
+</ul>
+
+<!-- ====================== 11 DALŠÍ POSTUP ====================== -->
+<h2>11 · Jak postupovat dál</h2>
+<ol style="font-size:14.5px">
+  <li><strong>Úvodní propočet</strong> z vašich podkladů — sestava, cena a modelová úspora pro váš dům.</li>
+  <li><strong>Prohlídka objektu a kotelny</strong> — zaměření, umístění venkovních jednotek, akustika vůči okolní zástavbě.</li>
+  <li><strong>Ověření tepelné ztráty výpočtem</strong>, kontrola otopné soustavy a elektrické přípojky.</li>
+  <li><strong>Prověření dotačních možností</strong> pro bytové domy.</li>
+  <li><strong>Finální nabídka a smlouva</strong> s pevnou cenou a termínem.</li>
+  <li><strong>Realizace</strong> — od podpisu obvykle 6 až 10 týdnů, s přepojením mimo topnou sezónu.</li>
+</ol>
+
+<!-- ====================== 12 SHRNUTÍ ====================== -->
+<div class="page-break"></div>
+<h2>12 · Shrnutí</h2>
+<table>
+  <thead><tr><th>Tepelná ztráta při −15 °C</th><th class="num">Sestava</th><th class="num">Výkon −15 °C / 45 °C</th><th class="num">Cena, bez DPH</th><th class="num">Modelová úspora*</th></tr></thead>
+  <tbody>
+    <tr><td>12 – 23 kW</td><td class="num">2 × REO RH060</td><td class="num">23,6 kW</td><td class="num"><span class="tbd">doplní se</span></td><td class="num">130 – 184 tis. Kč/rok</td></tr>
+    <tr><td>Vnitřní část kotelny</td><td class="num">AKU + TUV 1 000 l</td><td class="num">—</td><td class="num"><span class="tbd">doplní se</span></td><td class="num">—</td></tr>
+    <tr class="total"><td>Celkem</td><td class="num">&nbsp;</td><td class="num">23,6 kW</td><td class="num"><span class="tbd">doplní se</span></td><td class="num">návratnost <span class="tbd">doplní se</span></td></tr>
+  </tbody>
+</table>
+<p class="small">* Modelový dům s tepelnou ztrátou 18 kW ze sekce 5 při ceně tepla z CZT 967–1 209 Kč/GJ bez DPH.
+U domů s vlastní plynovou kotelnou vychází úspora nižší.</p>
+<p>Malá zelená kotelna přináší menším bytovým domům stejný princip jako naše větší kotelny:
+tepelná čerpadla v kaskádě, akumulaci a ohřev teplé vody bez elektrického dotápění. Dvě jednotky
+REO RH060 pokryjí dům s tepelnou ztrátou kolem 18 kW s rezervou a navzájem se zálohují. Na přání
+tepelná čerpadla doplníme nebo nahradíme kotlem na biomasu včetně dodávek paliva — nebo kotelnu
+sami provozujeme a dodáváme vám teplo jako službu.</p>
+
+<div class="callout green">
+  <h3>Další krok</h3>
+  <p>Pošlete nám vyúčtování tepla a počet bytů — do týdne vám připravíme úvodní propočet pro váš
+  dům s orientační cenou a úsporou. Propočet i prohlídka jsou zdarma a nezavazují k objednávce.
+  Řešení rádi osobně představíme i výboru a shromáždění vlastníků.</p>
+</div>
+
+<div class="sign">
+  <p>S pozdravem</p>
+  <div class="brand-name">ThermaVera Energy</div>
+  <div class="contact">
+    <span><span class="lbl">E‑mail</span> info@thermavera.cz</span>
+    <span><span class="lbl">Telefon</span> +420 774 872 467</span>
+    <span><span class="lbl">Web</span> <span class="web">www.thermavera.cz</span></span>
+  </div>
+</div>
+
+<div class="footnote">
+  Vzorová nabídka je orientační a nenahrazuje individuální nabídku ani projektovou dokumentaci.
+  Modelový propočet je výpočtem podle předpokladů v sekci 5, nejde o referenci realizace ani
+  o záruku úspory či návratnosti. ThermaVera Energy · TV-MALA-BD-2026 · 10/2026.
+</div>
+
+</div><!-- /doc -->
+</div><!-- /wrap -->
+</body>
+</html>
