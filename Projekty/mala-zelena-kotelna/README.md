@@ -22,14 +22,13 @@ příkon obou ≈ 11,4 kW.
   servis 15 000 Kč). Čísla v sekcích 2, 5 a 12 přepsaná ručně.
 
 ## Otevřené body
-1. **Ceny dodá uživatel** — vnitřní část kotelny a 2 × RH060. Pole `doplní se` (sekce 4, 5, 12) nahradit,
-   do `model.py` zadat `PRICE_IN`, `PRICE_TC` a doplnit návratnost.
-2. Splátky pro RH060 (sekce 6) zatím bez čísel.
+1. **Ceny** (12. 10. 2026, bez DPH): vnitřní část 300 000 Kč, 2 × RH060 à 160 000 Kč → celkem 620 000 Kč; návratnost modelového domu 3,4 r (Ostrava) / 4,7 r (průměr ČR).
+2. Splátky (sekce 6): předem vnitřní kotelna 300 000 Kč, jednotky 320 000 Kč dle splátkového kalendáře; měsíční splátka a odkupní cena zatím chybí.
 
 ## Artefakt „Malá zelená kotelna“
 https://claude.ai/artifact/FP1LcxrM6Kn4XJaaHVnahK (soukromý, sdílí se přes Share). Stejné řešení jako u vzoru:
 obsah `nabidka.html` bez interní poznámky + tlačítko **„Stáhnout nabídku v PDF“** (`capabilities: {"downloads": true}`,
 PDF vložené jako base64 `PDF_B64`). Po každé změně nabídky: 1) vytisknout PDF headless Chromem (viz `vzor-bytove-domy/README.md`),
-2) složit stránku artefaktu (title + style + `<div class="doc">…` + skript s PDF), 3) publikovat na stejnou URL.
+2) `python3 mala-zelena-kotelna/src/build_artefakt.py <pdf> <výstup.html>`, 3) publikovat na stejnou URL.
 Grafický design = „Zelená kotelna – vzor“ (`ThermaVera nabídky/Zelená kotelna - Thermavera.pdf`): karty sestav, odznaky, callouty.
 

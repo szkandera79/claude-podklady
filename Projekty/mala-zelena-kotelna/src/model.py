@@ -23,8 +23,8 @@ TUV_RATIO = 0.7
 SCOP_UT, SCOP_TUV = 3.5, 2.8   # RH060: SCOP CZ klima W45 4,01 / W55 3,63 → konzervativně
 EL = 3500               # Kč/MWh
 SERVICE = 15_000        # Kč/rok za 2 menší jednotky
-PRICE_IN = None         # vnitřní část kotelny bez DPH — dodá uživatel
-PRICE_TC = None         # 2 × RH060 bez DPH — dodá uživatel
+PRICE_IN = 300_000      # vnitřní část kotelny bez DPH (uživatel 12. 10. 2026)
+PRICE_TC = 320_000      # 2 × RH060 à 160 000 Kč bez DPH (uživatel 12. 10. 2026)
 GJ = (1209, 967)        # CZT Ostrava / průměr ČR, Kč/GJ bez DPH
 
 

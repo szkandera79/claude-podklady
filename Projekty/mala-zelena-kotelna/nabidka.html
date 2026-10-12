@@ -140,10 +140,10 @@ figcaption{font-size:12px;color:var(--muted);margin-top:7px}
 <div class="internal no-print" id="int">
   <h4>Interní — malá zelená kotelna, před rozesláním doplnit a ověřit</h4>
   <ol>
-    <li><strong>Ceny chybí</strong> — vnitřní část kotelny (AKU 1 000 l, TUV 1 000 l, strojovna, regulace, montáž) a 2 × venkovní jednotka RH060 dodá Jindřich. Všechna pole <span class="tbd">doplní se</span> v sekcích 4, 5, 6 (splátky) a 12 nahradit; návratnost pak spočítá <code>src/model.py</code> (proměnné <code>PRICE_IN</code>, <code>PRICE_TC</code>).</li>
+    <li><strong>Ceny</strong> (Jindřich, 12. 10. 2026, bez DPH): vnitřní část kotelny 300 000 Kč, venkovní jednotky 2 × 160 000 Kč, celkem 620 000 Kč. Návratnost spočítána v <code>src/model.py</code>.</li>
     <li><strong>Výkony RH060</strong> jsou maximální výkony z výkonové mapy (technický list SVT, <code>REO/R290-datove-listy/src/data.js</code>). ErP list EN 14825 uvádí Prated 13,5 kW (W55) — to je výkon při dílčí zátěži, ne maximum. Pro pojistku výkonu v mrazu proměřit při první realizaci.</li>
     <li>Ekonomika modelového domu: 18 kW × 2 000 h, TUV 70 %, SCOP 3,5 (ÚT) / 2,8 (TUV) — konzervativně pod SCOP RH060 pro české klima (W45 4,01, W55 3,63), elektřina 3 500 Kč/MWh, servis 15 000 Kč/rok.</li>
-    <li>Splátky pro RH060 zatím nejsou — v sekci 6 jsou pole k doplnění, odkupní podmínky převzaty z X50.</li>
+    <li>Splátky: SVJ platí předem vnitřní kotelnu 300 000 Kč, jednotky 320 000 Kč splácí dle kalendáře (uživatel 12. 10. 2026). Výše měsíční splátky a odkupní cena zatím nejsou — po potvrzení financující stranou doplnit.</li>
   </ol>
 </div>
 
@@ -290,7 +290,7 @@ v akumulaci.</p>
       </ul>
     </div>
     <div class="price">
-      <div class="c"><span class="tbd">doplní se</span></div>
+      <div class="c">300 000 Kč</div>
       <div class="n">bez DPH · AKU 1 000 l + TUV 1 000 l</div>
     </div>
   </div>
@@ -310,14 +310,14 @@ v akumulaci.</p>
       </ul>
     </div>
     <div class="price">
-      <div class="c"><span class="tbd">doplní se</span></div>
-      <div class="n">bez DPH · 23,6 kW při −15 °C</div>
+      <div class="c">320 000 Kč</div>
+      <div class="n">bez DPH · 2 × 160 000 Kč · 23,6 kW při −15 °C</div>
     </div>
   </div>
 </div>
 
 <div class="callout green">
-  <h3>Malá zelená kotelna celkem: <span class="tbd">doplní se</span> bez DPH</h3>
+  <h3>Malá zelená kotelna celkem: 620 000 Kč bez DPH</h3>
   <p>Vnitřní část kotelny a dvě tepelná čerpadla REO RH060 v kaskádě — kompletní zdroj tepla
   pro vytápění i ohřev teplé vody menšího bytového domu.</p>
 </div>
@@ -363,8 +363,8 @@ ale o výpočet podle předpokladů uvedených pod tabulkou.</p>
     <tr><td>Servis a údržba</td><td class="num">15 000 Kč</td><td class="num">15 000 Kč</td></tr>
     <tr class="total"><td>Roční provozní náklady</td><td class="num">82 500 Kč</td><td class="num">82 500 Kč</td></tr>
     <tr class="hl"><td>Roční úspora</td><td class="num">183 900 Kč (69 %)</td><td class="num">130 500 Kč (61 %)</td></tr>
-    <tr><td>Investice</td><td class="num" colspan="2"><span class="tbd">doplní se</span></td></tr>
-    <tr class="total"><td>Prostá návratnost</td><td class="num"><span class="tbd">doplní se</span></td><td class="num"><span class="tbd">doplní se</span></td></tr>
+    <tr><td>Investice</td><td class="num" colspan="2">620 000 Kč</td></tr>
+    <tr class="total"><td>Prostá návratnost</td><td class="num">3,4 roku</td><td class="num">4,7 roku</td></tr>
   </tbody>
 </table>
 <p class="small">Předpoklady: potřeba tepla na vytápění = tepelná ztráta × 2 000 plných hodin,
@@ -384,21 +384,22 @@ není potřeba — kaskáda pokryje ztrátu celou.</p>
 <!-- ====================== 6 FINANCOVÁNÍ ====================== -->
 <h2>6 · Nemusíte platit všechno najednou</h2>
 <p>Pokud pro společenství není průchodné uvolnit celou částku z fondu oprav, nabízíme
-<strong>pronájem tepelných čerpadel se splátkovým kalendářem</strong>. Společenství hradí
-vnitřní část kotelny — nádrže, strojovnu, rozvody a instalaci — a samotná tepelná čerpadla
-se splácejí měsíčně. <strong>Servis a údržba jsou po dobu pronájmu zahrnuty ve splátce.</strong>
-Po skončení sjednané doby zařízení přechází do majetku společenství za odkupní cenu.</p>
+<strong>pronájem tepelných čerpadel se splátkovým kalendářem</strong>. Společenství předem uhradí
+jen vnitřní část kotelny — nádrže, strojovnu, rozvody a instalaci — a obě venkovní jednotky
+REO RH060 splácí měsíčně podle kalendáře. <strong>Servis a údržba jsou po dobu pronájmu zahrnuty
+ve splátce.</strong> Po skončení sjednané doby zařízení přechází do majetku společenství za odkupní cenu.</p>
 
 <table>
-  <caption>Orientační splátka za jednu jednotku REO RH060</caption>
-  <thead><tr><th>&nbsp;</th><th class="num">60 měsíců</th><th class="num">120 měsíců</th></tr></thead>
+  <caption>Rozložení platby při splátkách (bez DPH)</caption>
+  <thead><tr><th>&nbsp;</th><th class="num">Částka</th><th>Jak se platí</th></tr></thead>
   <tbody>
-    <tr><td>Měsíční splátka za jednotku</td><td class="num"><span class="tbd">doplní se</span></td><td class="num"><span class="tbd">doplní se</span></td></tr>
-    <tr><td>Odkupní cena po skončení</td><td class="num">15 % z ceny</td><td class="num">1 Kč</td></tr>
+    <tr><td>Vnitřní část kotelny</td><td class="num">300 000 Kč</td><td>jednorázově, při realizaci</td></tr>
+    <tr><td>Venkovní jednotky 2 × REO RH060</td><td class="num">320 000 Kč</td><td>splátky podle splátkového kalendáře</td></tr>
+    <tr class="total"><td>Celkem</td><td class="num">620 000 Kč</td><td>&nbsp;</td></tr>
   </tbody>
 </table>
-<p class="small">Splátka se násobí počtem jednotek. Uvedené splátky a odkupní ceny jsou orientační
-a podléhají potvrzení financující stranou a schválení žádosti. Ceny jsou bez DPH.</p>
+<p class="small">Délku splácení, výši měsíční splátky a odkupní cenu sjednáme individuálně; podléhají
+potvrzení financující stranou a schválení žádosti. Ceny jsou bez DPH.</p>
 
 <!-- ====================== 7 BIOMASA A TEPLO JAKO SLUŽBA ====================== -->
 <div class="page-break"></div>
@@ -678,9 +679,9 @@ Z ní se zásobuje ústřední topení domu a přes topný had i zásobník tepl
 <table>
   <thead><tr><th>Tepelná ztráta při −15 °C</th><th class="num">Sestava</th><th class="num">Výkon −15 °C / 45 °C</th><th class="num">Cena, bez DPH</th><th class="num">Modelová úspora*</th></tr></thead>
   <tbody>
-    <tr><td>12 – 23 kW</td><td class="num">2 × REO RH060</td><td class="num">23,6 kW</td><td class="num"><span class="tbd">doplní se</span></td><td class="num">130 – 184 tis. Kč/rok</td></tr>
-    <tr><td>Vnitřní část kotelny</td><td class="num">AKU + TUV 1 000 l</td><td class="num">—</td><td class="num"><span class="tbd">doplní se</span></td><td class="num">—</td></tr>
-    <tr class="total"><td>Celkem</td><td class="num">&nbsp;</td><td class="num">23,6 kW</td><td class="num"><span class="tbd">doplní se</span></td><td class="num">návratnost <span class="tbd">doplní se</span></td></tr>
+    <tr><td>12 – 23 kW</td><td class="num">2 × REO RH060</td><td class="num">23,6 kW</td><td class="num">320 000 Kč</td><td class="num">130 – 184 tis. Kč/rok</td></tr>
+    <tr><td>Vnitřní část kotelny</td><td class="num">AKU + TUV 1 000 l</td><td class="num">—</td><td class="num">300 000 Kč</td><td class="num">—</td></tr>
+    <tr class="total"><td>Celkem</td><td class="num">&nbsp;</td><td class="num">23,6 kW</td><td class="num">620 000 Kč</td><td class="num">návratnost 3,4 – 4,7 roku</td></tr>
   </tbody>
 </table>
 <p class="small">* Modelový dům s tepelnou ztrátou 18 kW ze sekce 5 při ceně tepla z CZT 967–1 209 Kč/GJ bez DPH.
