@@ -1,7 +1,7 @@
 # REO R290 Smart — návody a prezentace (REO HEATING)
 
 **Název řady:** REO R290 Smart (nová řada, odlišení od starší REO R290 RH030–RH060). Slovo „Helios“ (název řady výrobce)
-se nikde ve výstupech ani názvech souborů neuvádí. Modely: RH06–RH16 1F/3F, RHX30, RHX40.
+se nikde ve výstupech ani názvech souborů neuvádí. Modely: RH06–RH16 1F/3F, RHX20 Pro, RHX30 Pro.
 
 Rebranding originálního manuálu výrobce (`../aTechnical Manual Helios Residential and Commercial.pdf`,
 99 stran, anglicky) na značku **REO HEATING**.
@@ -10,8 +10,8 @@ Rebranding originálního manuálu výrobce (`../aTechnical Manual Helios Reside
 |---|---|
 | PW06/08/10/12/14/16-DKXLRE1-H8 (1f) | RH06 … RH16 (1-phase) |
 | PW08/10/12/14/16-DKXLRE3-H8 (3f) | RH08 … RH16 (3-phase) |
-| PW20-DKXLRE3-H8 | RHX30 |
-| PW30-DKXLRE3-H8 | RHX40 |
+| PW20-DKXLRE3-H8 | RHX20 Pro |
+| PW30-DKXLRE3-H8 | RHX30 Pro |
 | „Seeking power world’s services“ (tabulky chyb) | „Seeking REO HEATING services“ |
 
 Typový suffix výrobce (DKXLRE1/E3-H8) se neuvádí; 1f/3f varianty stejného výkonu rozlišuje „(1-phase)/(3-phase)“.
@@ -43,7 +43,7 @@ Artefakt s oběma verzemi: https://claude.ai/artifact/2DUqsPohBnVWECCKqTdYYu
 
 ## Prezentace — `prezentace/REO-R290-Smart_prezentace-CZ.pptx`
 Česká verze prezentace výrobce (`../Power World R290 Helios Series Introduction.pptx`, 50 snímků), přeznačená na REO HEATING.
-- Modely: PWxx-DKXLRE1/E3-H8 → RHxx 1F / 3F (1F = 230 V, 3F = 400 V); PW20/PW30 → RHX30/RHX40.
+- Modely: PWxx-DKXLRE1/E3-H8 → RHxx 1F / 3F (1F = 230 V, 3F = 400 V); PW20/PW30 → RHX20 Pro / RHX30 Pro.
 - Šablona: loga výrobce → logo REO HEATING, modrá → zelená #2E6B33, titulní pozadí přebarvené.
 - Snímek 2 (typové označení) a 4 (přehled vlastností) postaveny znovu — originál obsahoval rozklad kódu výrobce,
   čínský diagram řady a srovnání s jinými řadami výrobce. Vložené OLE objekty (Excel/PPT výrobce) odstraněny.
@@ -66,6 +66,6 @@ max. teplota vody 75 °C (prezentace výrobce uvádí 78 °C — nepoužívat).
 Prodej jen ve variantě výrobce „s integrovaným hydroboxem“ (= el. dohřev 3 kW + exp. nádoba 6 l + pojistný ventil 3 bar
 ve venkovní jednotce; čerpadlo má i varianta bez). Pro Smart NEpoužívat slovo „hydrobox“ (koliduje s vnitřním REO Hydroboxem
 REO-03H/05H) a netvrdit, že nahrazuje vnitřní hydraulické zapojení (trojcestný ventil TUV, filtr, armatury, zásobník, akumulace).
-Nabízí se RH06 1F (6 kW, jen jednofázový) + třífázové RH08–RH16 3F (+ RHX30/40); ostatní 1F verze se neuvádějí → max. SCOP 35 °C = 5,29 (RH14 3F).
+Nabízí se RH06 1F (6 kW, jen jednofázový) + třífázové RH08–RH16 3F (+ RHX20 Pro / RHX30 Pro); ostatní 1F verze se neuvádějí → max. SCOP 35 °C = 5,29 (RH14 3F).
 Artefakt Marketing REO HEATING (náhledy + PDF): https://claude.ai/artifact/8zGFmzL6gnPFsy8zTqRjGz — po změně letáků přenahrát (scratchpad/marketing nebo nová kopie).
 V zákaznické tabulce: jmenovitý výkon (≈ tepelná ztráta domu) + max. výkon A7/W35. Ilustrace „topí přímo ze slunce“ = `letaky/ilustrace.py` (SVG).

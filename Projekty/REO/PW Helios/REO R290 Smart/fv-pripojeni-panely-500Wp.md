@@ -33,4 +33,4 @@ Vždy 1 string, žádné paralelní řazení (Imax 13 A).
 - platí 310/550 V (schéma) nebo 400/600 V (tabulka)?
 - je 13 A limit provozního proudu, nebo i zkratového Isc? (panely 500 Wp mají Isc 13,5–15 A)
 - str. 42 prezentace (RH10–16 1F) obsahuje 3F schéma
-- RHX30/40 v tabulce FV chybí
+- RHX20 Pro / RHX30 Pro v tabulce FV chybí

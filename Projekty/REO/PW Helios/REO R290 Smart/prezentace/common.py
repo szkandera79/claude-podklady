@@ -14,13 +14,13 @@ def rename_models(t):
     """Typová označení výrobce → REO HEATING (1F/3F = počet fází)."""
     def full(m):
         nums, ph = m.group(1).split('/'), m.group(2)
-        big = {'20': 'RHX30', '30': 'RHX40'}
+        big = {'20': 'RHX20 Pro', '30': 'RHX30 Pro'}
         if all(n in big for n in nums):
             return '/'.join(big[n] for n in nums)
         return 'RH' + '/'.join(nums) + f' {ph}F'
     t = re.sub(r'PW(\d{2}(?:/\d{2})*)-DKXLRE(\d)-H8', full, t)
     t = re.sub(r'PW(\d{2}(?:/\d{2})*)\s*KW', lambda m: 'RH' + m.group(1), t)
-    t = re.sub(r'\bPW(\d{2})\b', lambda m: {'20': 'RHX30', '30': 'RHX40'}.get(m.group(1), 'RH' + m.group(1)), t)
+    t = re.sub(r'\bPW(\d{2})\b', lambda m: {'20': 'RHX20 Pro', '30': 'RHX30 Pro'}.get(m.group(1), 'RH' + m.group(1)), t)
     t = re.sub(r'Power\s*World', 'REO HEATING', t, flags=re.I)
     t = re.sub(r'Helios\s*Pro', 'REO R290 Smart', t, flags=re.I)
     return t

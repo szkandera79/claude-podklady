@@ -233,10 +233,10 @@ if not IDENTITY:
         toc.append([lvl, t, p])
     doc.set_toc(toc)
     doc.set_metadata({
-        'title': 'REO R290 Smart (RH06–RH16, RHX30, RHX40) — Návod k instalaci a obsluze',
+        'title': 'REO R290 Smart (RH06–RH16, RHX20 Pro, RHX30 Pro) — Návod k instalaci a obsluze',
         'author': 'REO HEATING',
         'subject': 'Invertorové tepelné čerpadlo vzduch–voda R290, návod k instalaci a obsluze',
-        'keywords': 'REO R290 Smart, RH06, RH08, RH10, RH12, RH14, RH16, RHX30, RHX40, REO HEATING, R290, tepelné čerpadlo',
+        'keywords': 'REO R290 Smart, RH06, RH08, RH10, RH12, RH14, RH16, RHX20 Pro, RHX30 Pro, REO HEATING, R290, tepelné čerpadlo',
         'creator': 'REO HEATING', 'producer': 'REO HEATING'})
 doc.save(OUT + '.tmp', garbage=4, deflate=True)   # garbage=4 sloučí stovky kopií Arialu
 doc.close()

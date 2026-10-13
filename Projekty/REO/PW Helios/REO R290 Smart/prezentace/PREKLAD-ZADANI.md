@@ -15,7 +15,7 @@ tabulky, funkce, ovladač, Wi-Fi, schémata zapojení. Text se vrací do stejný
    popiscích používej zkratky (např. „Topný výkon (kW)“, „Max. proud (A)“, „Hmotnost netto (kg)“).
 3. **Neměň:** čísla, jednotky, rozsahy, normy (EN14825:2022), kódy a zkratky (SCOP, COP, EER, ErP, DHW→ přelož jako TUV,
    MPPT, PV→FV jen v souvislém textu; SG, EVU, RS485, BMS, Modbus, AHS, IBH, TBH, P_O, P_M1, S3V1, SL1/SL2, TWout2 …),
-   názvy parametrů VELKÝMI_PÍSMENY, názvy modelů (RH06…RH16, RHX30, RHX40, 1F/3F), názvy dodavatelů komponent
+   názvy parametrů VELKÝMI_PÍSMENY, názvy modelů (RH06…RH16, RHX20 Pro, RHX30 Pro, 1F/3F), názvy dodavatelů komponent
    (MITSUBISHI, SHIMGE, SAGINOMIYA, ACOL…), aplikace „Huilian“, „§14a EnWG“, „SG-Ready“, „PV-Ready“.
 4. **Texty z displeje ovladače** (tlačítka a položky menu v uvozovkách nebo zjevně z UI, např. "MODE", "Timer On/Off",
    "Sterilization Timer", "Silent Timer", "Holiday Away", "Force ON TBH", "Floor Heat Dry", 1ZONE.TW, PANEL_CTRL)

@@ -253,7 +253,7 @@ text(s2, X0, Y0 + 1.75, 1.9, 0.95, ['REO R290', 'Smart'], 15, True, RGBColor(255
 branches = [
     (0.55, 'Rezidenční', '6–16 kW', 'RH06 – RH16', 'S vestavěným hydraulickým modulem · SCOP až 5,3'),
     (2.35, None, None, 'RH06 – RH16', 'Verze s vestavěným oběhovým čerpadlem · SCOP až 5,3'),
-    (4.15, 'Komerční', '20 / 30 kW', 'RHX30 / RHX40', 'Lehké komerční použití · A+++ · nízká hlučnost'),
+    (4.15, 'Komerční', '20 / 30 kW', 'RHX20 Pro / RHX30 Pro', 'Lehké komerční použití · A+++ · nízká hlučnost'),
 ]
 connector(s2, X0 + 1.9, Y0 + 2.22, X0 + 2.2, Y0 + 2.22)
 connector(s2, X0 + 2.2, Y0 + 0.95, X0 + 2.2, Y0 + 4.55)

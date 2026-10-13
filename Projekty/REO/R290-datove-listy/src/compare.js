@@ -28,7 +28,7 @@ function cmpLegend(items){
 
 function scopPage(ASSETS){
   const rows = Object.entries(MODELS).filter(([, M]) => M.scop);
-  const x50 = MODELS.RHX50.scop, x30 = MODELS.RHX40.scop;
+  const x50 = MODELS.RHX50.scop, x30 = MODELS.RHX30.scop;
   const pct = (a, b) => ((a / b - 1) * 100).toFixed(0);
   const less = (a, b) => ((1 - a / b) * 100).toFixed(0);
   const drop = (hi, lo) => ((1 - lo / hi) * 100).toFixed(0);
@@ -39,10 +39,10 @@ function scopPage(ASSETS){
   })), [0, 6, 1], v => (v % 1 ? f2c(v) : String(v)));
 
   const tiles = [
-    ['W35 — RH X40 proti RH X50', `+${pct(x30.en[35], x50.en[35])} %`, `o ${less(x50.en[35], x30.en[35])} % nižší spotřeba elektřiny`],
-    ['W55 — RH X40 proti RH X50', `+${pct(x30.en[55], x50.en[55])} %`, `o ${less(x50.en[55], x30.en[55])} % nižší spotřeba elektřiny`],
-    ['Propad SCOP W35 → W55', `RH X40 −${drop(x30.en[35], x30.en[55])} %`, `RH X50 −${drop(x50.en[35], x50.en[55])} %`],
-    ['Hlučnost v 1 m (W55)', `${MODELS.RHX40.noise.lp55} vs. ${MODELS.RHX50.noise.lp55} dB`, `RH X40 je o ${MODELS.RHX50.noise.lp55 - MODELS.RHX40.noise.lp55} dB tišší než RH X50`],
+    ['W35 — RHX30 Pro proti RH X50', `+${pct(x30.en[35], x50.en[35])} %`, `o ${less(x50.en[35], x30.en[35])} % nižší spotřeba elektřiny`],
+    ['W55 — RHX30 Pro proti RH X50', `+${pct(x30.en[55], x50.en[55])} %`, `o ${less(x50.en[55], x30.en[55])} % nižší spotřeba elektřiny`],
+    ['Propad SCOP W35 → W55', `RHX30 Pro −${drop(x30.en[35], x30.en[55])} %`, `RH X50 −${drop(x50.en[35], x50.en[55])} %`],
+    ['Hlučnost v 1 m (W55)', `${MODELS.RHX30.noise.lp55} vs. ${MODELS.RHX50.noise.lp55} dB`, `RHX30 Pro je o ${MODELS.RHX50.noise.lp55 - MODELS.RHX30.noise.lp55} dB tišší než RH X50`],
   ];
 
   return `
@@ -72,15 +72,15 @@ function scopPage(ASSETS){
     <div class="cmp-sum">
       <h3>Co z čísel plyne</h3>
       <ul>
-        <li><b>RH X40 je účinnější v obou režimech</b> a rozdíl roste s teplotou otopné vody: při W35 o ${pct(x30.en[35], x50.en[35])} %, při W55 o ${pct(x30.en[55], x50.en[55])} %. U radiátorových soustav je tedy jeho náskok větší než u podlahového vytápění.</li>
+        <li><b>RHX30 Pro je účinnější v obou režimech</b> a rozdíl roste s teplotou otopné vody: při W35 o ${pct(x30.en[35], x50.en[35])} %, při W55 o ${pct(x30.en[55], x50.en[55])} %. U radiátorových soustav je tedy jeho náskok větší než u podlahového vytápění.</li>
         <li><b>V mrazu jsou si jednotky blízko</b> — při −10 °C a W55 má RH X50 dokonce navrch (COP ${f2c(x50.cop[55][0])} vs. ${f2c(x30.cop[55][0])}). Sezónní rozdíl vzniká v přechodném období, kde jednotky běží nejvíc hodin (+7 °C: ${f2c(x30.cop[55][3])} vs. ${f2c(x50.cop[55][3])}).</li>
-        <li><b>RH X40 je zároveň tišší</b> — ${MODELS.RHX40.noise.lp55} dB v 1 m proti ${MODELS.RHX50.noise.lp55} dB u RH X50 (rozdíl ${MODELS.RHX50.noise.lp55 - MODELS.RHX40.noise.lp55} dB, tedy zhruba čtvrtinová hlasitost vnímaná sluchem). U zástavby s okny sousedů to bývá stejně důležité kritérium jako účinnost — podrobnosti na druhé straně.</li>
-        <li><b>Do zhruba 90–100 kW je volbou RH060</b> — při W55 má prakticky stejný SCOP jako RH X40 (${f2c(MODELS.RH060.scop.en[55])} vs. ${f2c(x30.en[55])}) a v českém klimatu i lepší (${f2c(MODELS.RH060.scop.cz[55])} vs. ${f2c(x30.cz[55])}). RH X40 dává smysl nad touto hranicí, RH X50 u velkých vysokoteplotních objektů.</li>
+        <li><b>RHX30 Pro je zároveň tišší</b> — ${MODELS.RHX30.noise.lp55} dB v 1 m proti ${MODELS.RHX50.noise.lp55} dB u RH X50 (rozdíl ${MODELS.RHX50.noise.lp55 - MODELS.RHX30.noise.lp55} dB, tedy zhruba čtvrtinová hlasitost vnímaná sluchem). U zástavby s okny sousedů to bývá stejně důležité kritérium jako účinnost — podrobnosti na druhé straně.</li>
+        <li><b>Do zhruba 90–100 kW je volbou RH060</b> — při W55 má prakticky stejný SCOP jako RHX30 Pro (${f2c(MODELS.RH060.scop.en[55])} vs. ${f2c(x30.en[55])}) a v českém klimatu i lepší (${f2c(MODELS.RH060.scop.cz[55])} vs. ${f2c(x30.cz[55])}). RHX30 Pro dává smysl nad touto hranicí, RH X50 u velkých vysokoteplotních objektů.</li>
       </ul>
     </div>
     <p class="cmp-note">Body COP jsou certifikované hodnoty při W55 a relativní zátěži dle EN 14825 (Tj = −10 / −7 / +2 / +7 / +12 °C).
       Přepočet na české klima interpoluje COP mezi těmito body, pod −10 °C extrapoluje z výkonových map výrobce — je to výpočet, ne certifikát.
-      * RH060 je uveden jako referenční jednotka domovní řady. Deklarovaný výkon RH X40 při −15 °C je podle výkonové mapy nižší,
+      * RH060 je uveden jako referenční jednotka domovní řady. Deklarovaný výkon RHX30 Pro při −15 °C je podle výkonové mapy nižší,
       než by odpovídalo certifikaci; u velkých kaskád doporučujeme ověřit měřením.</p>
   </div>`;
 }
@@ -111,7 +111,7 @@ function noisePage(ASSETS){
     <div class="cmp-sum">
       <h3>Co z čísel plyne</h3>
       <ul>
-        <li><b>Nejtišší je RH X40</b> (${MODELS.RHX40.noise.lp55} dB v 1 m) — a to při nejvyšším výkonu domovních i komerčních jednotek kromě RH X50. Z domovní řady je nejtišší RH030 (${MODELS.RH030.noise.lp55} dB), nejhlasitější RH040 (${MODELS.RH040.noise.lp55} dB).</li>
+        <li><b>Nejtišší je RHX30 Pro</b> (${MODELS.RHX30.noise.lp55} dB v 1 m) — a to při nejvyšším výkonu domovních i komerčních jednotek kromě RH X50. Z domovní řady je nejtišší RH030 (${MODELS.RH030.noise.lp55} dB), nejhlasitější RH040 (${MODELS.RH040.noise.lp55} dB).</li>
         <li><b>Domovní modely se pod noční limit 40 dB dostanou orientačně od 5 m</b> od jednotky; při 3 m jsou na hraně (${lpAt(MODELS.RH040.noise.lwa55, 3)}–${lpAt(MODELS.RH030.noise.lwa55, 3)} dB).</li>
         <li><b>RH X50 potřebuje odstup zhruba 10 m</b> (${lpAt(MODELS.RHX50.noise.lwa55, 10)} dB) — u zástavby s okny sousedů blíž je na místě umístění s protihlukovou clonou nebo akustická studie.</li>
       </ul>
@@ -120,7 +120,7 @@ function noisePage(ASSETS){
       (L<sub>p</sub> = L<sub>WA</sub> − 20·log₁₀ r − 8), ne měření — skutečnost ovlivní odrazy od stěn, protihlukové clony i umístění jednotky;
       pro konkrétní projekt nenahradí akustickou studii. Zvýrazněné hodnoty jsou do 40 dB, což je noční hygienický limit
       u chráněného venkovního prostoru staveb. * U RH X50 uvádějí podklady výrobce maximální akustický výkon ≤ 77 dB,
-      energetický štítek deklaruje 66 dB; v tabulce je hodnota ze štítku. RH X40 zatím nemá energetický štítek,
+      energetický štítek deklaruje 66 dB; v tabulce je hodnota ze štítku. RHX30 Pro zatím nemá energetický štítek,
       jeho hodnoty jsou z podkladů výrobce.</p>
   </div>`;
 }

@@ -25,8 +25,8 @@ M = [
  ("RH12",  "3F", 12, "6,3–17,0",  "5,03","3,35","5,11","3,94",(55,55),(40,40), 40, 178, "1,3", "1328×485×1065"),
  ("RH14",  "3F", 14, "6,6–19,3",  "4,80","3,22","5,29","3,91",(56,55),(41,40), 40, 182, "1,5", "1328×485×1065"),
  ("RH16",  "3F", 16, "7,8–22,0",  "4,90","3,16","5,09","3,88",(55,56),(39,41), 40, 190, "1,7", "1328×485×1065"),
- ("RHX30", "3F", 20, "10,2–28,0", "4,85","2,92","5,23","3,97",(50,56),(35,40), 32, 265, "2,2", "1375×532×1565"),
- ("RHX40", "3F", 30, "12,7–40,0", "4,60","2,80","5,25","3,90",(55,59),(39,42), 40, 328, "3,4", "1550×630×1708"),
+ ("RHX20 Pro", "3F", 20, "10,2–28,0", "4,85","2,92","5,23","3,97",(50,56),(35,40), 32, 265, "2,2", "1375×532×1565"),
+ ("RHX30 Pro", "3F", 30, "12,7–40,0", "4,60","2,80","5,25","3,90",(55,59),(39,42), 40, 328, "3,4", "1550×630×1708"),
 ]
 
 # --- ikony (stroke 24×24)
@@ -155,7 +155,7 @@ cust_p1 = f"""
 
 ROWS_C = [("RH06","6 kW","8,5 kW","cca 6 kW"),("RH08","8 kW","11,0 kW","cca 8 kW"),("RH10","10 kW","12,9 kW","cca 10 kW"),("RH12","12 kW","17,0 kW","cca 12 kW"),
           ("RH14","14 kW","19,3 kW","cca 14 kW"),("RH16","16 kW","22,0 kW","cca 16 kW"),
-          ("RHX30","20 kW","28,0 kW","cca 20 kW"),("RHX40","30 kW","40,0 kW","cca 30 kW")]
+          ("RHX20 Pro","20 kW","28,0 kW","cca 20 kW"),("RHX30 Pro","30 kW","40,0 kW","cca 30 kW")]
 
 cust_p2 = f"""
 <section class="page">
@@ -297,7 +297,7 @@ part_p1 = f"""
     <div>
       <div class="eyebrow">Nová řada · monoblok vzduch–voda R290</div>
       <h1>REO R290 Smart</h1>
-      <p class="plead">Monoblok 6–30 kW: RH06 1F 230 V, RH08–RH16 3F 400 V, RHX30 / RHX40 (20 / 30 kW) 3F. Integrovaný záložní dohřev 3 kW a pojistná výbava, SG Ready, Modbus.</p>
+      <p class="plead">Monoblok 6–30 kW: RH06 1F 230 V, RH08–RH16 3F 400 V, RHX20 Pro / RHX30 Pro (20 / 30 kW) 3F. Integrovaný záložní dohřev 3 kW a pojistná výbava, SG Ready, Modbus.</p>
     </div>
     <img src="{UNIT}" alt="REO R290 Smart">
   </div>
@@ -317,7 +317,7 @@ part_p1 = f"""
     <div class="pc mit">
       <div class="pt">{ic('cpu','ic')}<span>Renomovaný kompresor</span></div>
       <div class="big">Mitsubishi Electric</div>
-      <p>Kompresor japonské značky v celé řadě, DC inverter (RHX30/40: APB100 / APB119). Plynulá modulace, např. RH10 4,2–12,9 kW při A7/W35.</p>
+      <p>Kompresor japonské značky v celé řadě, DC inverter (RHX20 Pro / RHX30 Pro: APB100 / APB119). Plynulá modulace, např. RH10 4,2–12,9 kW při A7/W35.</p>
     </div>
   </div>
   <div class="facts"><span><b>A+++</b> 35 i 55 °C</span><span><b>75 °C</b> výstup topné vody</span><span><b>−25 °C</b> spodní mez provozu</span>
@@ -379,7 +379,7 @@ part_p2 = f"""
       <tr><th>A7/W35</th><th>A7/W55</th><th>35 °C</th><th>55 °C</th></tr></thead>
     <tbody>{''.join(trow(m) for m in M)}</tbody>
   </table>
-  <p class="tn">P<sub>jm</sub> = jmenovitý výkon (A7/W35), orientačně odpovídá tepelné ztrátě objektu; maximální výkon viz rozsah. Napájení RH06 1F 230 V, ostatní 400 V 3N~. Jištění 6–16 kW vč. el. dohřevu 3 kW (dohřev je jednofázový 230 V i u 3F modelů, cca 13,8 A). RHX30 / RHX40 = jmenovitě 20 / 30 kW (max. 28 / 40 kW), DN40,
+  <p class="tn">P<sub>jm</sub> = jmenovitý výkon (A7/W35), orientačně odpovídá tepelné ztrátě objektu; maximální výkon viz rozsah. Napájení RH06 1F 230 V, ostatní 400 V 3N~. Jištění 6–16 kW vč. el. dohřevu 3 kW (dohřev je jednofázový 230 V i u 3F modelů, cca 13,8 A). RHX20 Pro / RHX30 Pro = jmenovitě 20 / 30 kW (max. 28 / 40 kW), DN40,
   čerpadlo Shinhoo 13 / 15 m. Rozsah provozu: vytápění −25…35 °C, chlazení −5…43 °C, TUV −25…43 °C; voda: topení 25–75 °C, TUV 20–70 °C, chlazení 5–25 °C.
   TUV (A20, 15→55 °C): COP 4,3–5,3, 205–903 l/h. Chlazení A35/W18: EER 4,75–5,18.</p>
 

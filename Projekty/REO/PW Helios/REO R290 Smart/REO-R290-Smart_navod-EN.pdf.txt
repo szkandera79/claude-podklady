@@ -4,7 +4,7 @@
 DC Inverter Heat Pump
 REO R290 Smart
 OPERATING INSTRUCTION MANUAL
-RH06 – RH16 · RHX30 · RHX40
+RH06 – RH16 · RHX20 Pro · RHX30 Pro
 IMPORTANT SAFETY INSTRUCTIONS
 READ AND FOLLOW ALL INSTRUCTIONS
 SAVE THESE INSTRUCTIONS
@@ -491,7 +491,7 @@ temperature (℃) 25~75℃（Heating）
 Operating water
 temperature (℃) 5~25℃（Cooling）
 Model
-RHX30 RHX40
+RHX20 Pro RHX30 Pro
 Heating Condition - Ambient Temp.(DB/WB): 7/6℃，Water Temp.(In/Out):30/35℃
 Heating Capacity Range (kW) 10.2~28.0 12.7~40.0
 Heating Power Input Range(kW) 1.90~7.37 2.37~10.52
@@ -566,18 +566,18 @@ Inlet
 DN25
 - 14 -
 --- strana 16 ---
-RHX30
-RHX40
+RHX20 Pro
+RHX30 Pro
 - 15 -
 --- strana 17 ---
 2.3 Exploded view
 RH06/08/10/12/14/16 (1-phase) RH08/10/12/14/16 (3-phase)
 - 16 -
 --- strana 18 ---
-RHX30
+RHX20 Pro
 - 17 -
 --- strana 19 ---
-RHX40
+RHX30 Pro
 - 18 -
 --- strana 20 ---
 The following general information describes how to install the DC Inverter Air Source Heat Pump.
@@ -943,9 +943,9 @@ RH14
 380V/3Ph/50/60Hz 12.7+13.8 40 6mm²
 RH16
 380V/3Ph/50/60Hz 15.8+13.8 40 10mm²
-RHX30
+RHX20 Pro
 380V/3Ph/50-60Hz 19.7 32 6mm²
-RHX40
+RHX30 Pro
 380V/3Ph/50-60Hz 30.4 40 6mm²
 Single phase power input
 Three-phase power input
@@ -2676,7 +2676,7 @@ O N
 O FF
 O N
 O FF
-RHX30/RHX40
+RHX20 Pro/RHX30 Pro
 --- strana 40 ---
 803004-0722
 M PPT Board Optional

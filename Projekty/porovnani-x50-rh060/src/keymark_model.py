@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Srovnání RH X50 / RH X40 / RH X20 / RH060 na JEDNOTNÉM základě — certifikované body KEYMARK.
+"""Srovnání RH X50 / RHX30 Pro / RHX20 Pro / RH060 na JEDNOTNÉM základě — certifikované body KEYMARK.
 
 Všechny čtyři jednotky certifikovala stejná zkušebna stejnou metodou (EN 14825, certifikace 14. 8. 2026):
 COP při Tj = TOL(−10), −7, +2, +7, +12 °C při stejné relativní zátěži (průměrné klima, W35 a W55 s ekvitermou).
 Z nich:
   * SCOP pro české klima (výpočtová −15 °C) — COP interpolovaný v Tj, pod −10 °C extrapolace poměrem
-    COP(−15)/COP(−10) z výkonových map (X50, RH060; pro X40/X20 průměr obou),
-  * výkon při −15 °C: X50 a RH060 z výkonových map, X40/X20 = deklarovaný výkon KEYMARK při −10 °C/W55 ×
+    COP(−15)/COP(−10) z výkonových map (X50, RH060; pro X30/X20 průměr obou),
+  * výkon při −15 °C: X50 a RH060 z výkonových map, X30/X20 = deklarovaný výkon KEYMARK při −10 °C/W55 ×
     poměr výkonu −15/−10 z map (průměr X50 a RH060),
   * ekonomika bytových domů 25–150 kW při stejné zátěži (ÚT + TUV).
 Spouštět z kořene repa:  python3 porovnani-x50-rh060/src/keymark_model.py   → results2.json
@@ -27,14 +27,14 @@ U = {
                 rated={35: (49.41, 3.86), 55: (46.10, 2.62)},
                 cap15={35: 30.9, 45: 27.3, 55: 24.8}, cap15_src="výkonová mapa",
                 minA7=18.4, maxA7=49.3, lw=65, kg=370, amp=40, r290=4.0),
-    "X40": dict(name="RH X40", price=round(3_680 * FX["EUR"]), inst=50_000, service=5_000,
+    "X30": dict(name="RHX30 Pro", price=round(3_680 * FX["EUR"]), inst=50_000, service=5_000,
                 scop={35: 5.25, 55: 3.90},
                 cop={35: [2.31, 2.81, 5.18, 7.54, 9.87], 55: [1.70, 1.99, 3.88, 5.64, 7.81]},
                 pdh={35: [28.82, 27.05, 16.57, 10.69, 10.05], 55: [26.84, 27.11, 16.61, 10.63, 9.72]},
                 rated={35: (29.99, 4.64), 55: (29.97, 2.83)},
                 cap15=None, cap15_src="odvozeno z KEYMARK −10 °C",
                 minA7=12.7, maxA7=40.0, lw=59, kg=328, amp=40, r290=3.4),
-    "X20": dict(name="RH X20", price=round(2_940 * FX["EUR"]), inst=45_000, service=4_500,
+    "X20": dict(name="RHX20 Pro", price=round(2_940 * FX["EUR"]), inst=45_000, service=4_500,
                 scop={35: 5.23, 55: 3.97},
                 cop={35: [2.26, 2.59, 5.31, 7.61, 9.85], 55: [1.70, 2.06, 3.99, 5.62, 7.42]},
                 pdh={35: [17.61, 17.75, 10.97, 7.18, 6.32], 55: [18.44, 17.63, 10.80, 7.16, 6.02]},
@@ -51,8 +51,8 @@ U = {
 }
 # TUV 15→55 °C při max. výkonu (ceníky / protokol): COP při A7 a A20
 DHW = {"X50": {"A7": 3.43, "A20": 4.46, "src": "protokol RH X50"},
-       "X40": {"A7": 3.08, "A20": 4.10, "src": "výkonová mapa RH X40 (DHW MAX)"},
-       "X20": {"A7": 4.34 * 3.08 / 4.10, "A20": 4.34, "src": "ceník 2026 (A20), A7 poměrem z mapy RH X40"},
+       "X30": {"A7": 3.08, "A20": 4.10, "src": "výkonová mapa RHX30 Pro (DHW MAX)"},
+       "X20": {"A7": 4.34 * 3.08 / 4.10, "A20": 4.34, "src": "ceník 2026 (A20), A7 poměrem z mapy RHX30 Pro"},
        "RH060": {"A7": 3.51, "A20": None, "src": "ceník 10/2024 (A7)"}}
 _R20 = 4.46 / 3.43                                        # poměr A20/A7 z protokolu RH X50
 for k, v in DHW.items():
@@ -66,19 +66,19 @@ W65_CAP = 23.4 / 27.2   # výkon W65/W55 při −12 °C z mapy RH X50
 COP_R = {"X50": {35: 2.10 / 2.30, 55: 1.50 / 2.00}, "RH060": {35: 2.44 / 2.83, 55: 1.78 / 2.06}}
 CAP_R = {55: (24.8 / 31.05 + 11.4 / 13.4) / 2}          # výkon −15/−10 při W55
 W_R = (30.9 / 24.8 + 12.3 / 11.4) / 2                    # výkon W35/W55 při −15
-# RH X40: výkonová mapa výrobce (~/Claude/REO/PW Helios/…Performance curve.xls, 27. 9. 2026), MAX při −15 °C
-X40_MAP = {"cap15": {35: 22.4, 45: 20.8, 55: 19.0, 65: 16.1},
+# RHX30 Pro: výkonová mapa výrobce (~/Claude/REO/PW Helios/…Performance curve.xls, 27. 9. 2026), MAX při −15 °C
+X30_MAP = {"cap15": {35: 22.4, 45: 20.8, 55: 19.0, 65: 16.1},
            "cop15": {35: 2.13, 45: 1.75, 55: 1.50, 65: 1.23}, "cop10": {35: 2.39, 55: 1.68},
            "w65_cop": 1.374 / 1.676}                      # COP W65/W55 při −10 °C (při +7 °C 0,86)
-U["X40"]["cap15"] = dict(X40_MAP["cap15"])
-U["X40"]["cap15_src"] = "výkonová mapa"
-COP_R["X40"] = {w: X40_MAP["cop15"][w] / X40_MAP["cop10"][w] for w in (35, 55)}
-# RH X20: stejná řada — mapa RH X40 × poměr deklarovaných výkonů KEYMARK při −10 °C/W55 (18,44 / 26,84)
+U["X30"]["cap15"] = dict(X30_MAP["cap15"])
+U["X30"]["cap15_src"] = "výkonová mapa"
+COP_R["X30"] = {w: X30_MAP["cop15"][w] / X30_MAP["cop10"][w] for w in (35, 55)}
+# RHX20 Pro: stejná řada — mapa RHX30 Pro × poměr deklarovaných výkonů KEYMARK při −10 °C/W55 (18,44 / 26,84)
 K20 = 18.44 / 26.84
-U["X20"]["cap15"] = {w: round(c * K20, 1) for w, c in X40_MAP["cap15"].items()}
-U["X20"]["cap15_src"] = "odvozeno z mapy RH X40"
-COP_R["X20"] = dict(COP_R["X40"])
-W65 = {"X50": W65_COP, "RH060": W65_COP, "X40": X40_MAP["w65_cop"], "X20": X40_MAP["w65_cop"]}
+U["X20"]["cap15"] = {w: round(c * K20, 1) for w, c in X30_MAP["cap15"].items()}
+U["X20"]["cap15_src"] = "odvozeno z mapy RHX30 Pro"
+COP_R["X20"] = dict(COP_R["X30"])
+W65 = {"X50": W65_COP, "RH060": W65_COP, "X30": X30_MAP["w65_cop"], "X20": X30_MAP["w65_cop"]}
 for k in ("X50", "RH060"):
     U[k]["cap15"][65] = round(U[k]["cap15"][55] * W65_CAP, 1)
 

@@ -8,7 +8,7 @@
   --bg:#EEF2EF; --panel:#FFFFFF; --panel-2:#F4F8F5; --ink:#16201C; --ink-2:#2A3530; --muted:#5F6B64; --line:#DDE5DF;
   --accent:#1E8F5B; --accent-deep:#0F3D2E; --accent-bg:#E7F3EC;
   --amber:#DA8718; --amber-bg:#FFF4E3; --amber-ink:#80500F;
-  --x50:#C77712; --x50-bg:#FFF1DC; --x40:#2F6FB0; --x40-bg:#E4EEF8; --x20:#7A55A8; --x20-bg:#EFE8F7; --rh:#1E8F5B; --rh-bg:#E7F3EC;
+  --x50:#C77712; --x50-bg:#FFF1DC; --x30:#2F6FB0; --x30-bg:#E4EEF8; --x20:#7A55A8; --x20-bg:#EFE8F7; --rh:#1E8F5B; --rh-bg:#E7F3EC;
   --bad:#B4432F; --bad-bg:#FBECE8; --best:#F1F8F3;
   --head:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
   --body:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
@@ -19,7 +19,7 @@
     --bg:#0D1512; --panel:#15201B; --panel-2:#1B2822; --ink:#E6EEE9; --ink-2:#CBD6D0; --muted:#94A39B; --line:#2B3A33;
     --accent:#4CC08A; --accent-deep:#9FE0BE; --accent-bg:#1B3428;
     --amber:#F2A33A; --amber-bg:#33260F; --amber-ink:#F6C57F;
-    --x50:#F2A33A; --x50-bg:#3A2A12; --x40:#6FA8E6; --x40-bg:#17293C; --x20:#B596DE; --x20-bg:#2A2138; --rh:#4CC08A; --rh-bg:#1B3428;
+    --x50:#F2A33A; --x50-bg:#3A2A12; --x30:#6FA8E6; --x30-bg:#17293C; --x20:#B596DE; --x20-bg:#2A2138; --rh:#4CC08A; --rh-bg:#1B3428;
     --bad:#EE8A75; --bad-bg:#3A1F19; --best:#18291F;
   }
 }
@@ -28,7 +28,7 @@
   --bg:#0D1512; --panel:#15201B; --panel-2:#1B2822; --ink:#E6EEE9; --ink-2:#CBD6D0; --muted:#94A39B; --line:#2B3A33;
   --accent:#4CC08A; --accent-deep:#9FE0BE; --accent-bg:#1B3428;
   --amber:#F2A33A; --amber-bg:#33260F; --amber-ink:#F6C57F;
-  --x50:#F2A33A; --x50-bg:#3A2A12; --x40:#6FA8E6; --x40-bg:#17293C; --x20:#B596DE; --x20-bg:#2A2138; --rh:#4CC08A; --rh-bg:#1B3428;
+  --x50:#F2A33A; --x50-bg:#3A2A12; --x30:#6FA8E6; --x30-bg:#17293C; --x20:#B596DE; --x20-bg:#2A2138; --rh:#4CC08A; --rh-bg:#1B3428;
   --bad:#EE8A75; --bad-bg:#3A1F19; --best:#18291F;
 }
 *{box-sizing:border-box}
@@ -68,7 +68,7 @@ td .d{display:inline-block;min-width:62px;color:var(--muted);font-size:12px}
 tr.best td .d{color:var(--accent);font-weight:700}
 td.win{color:var(--accent);font-weight:700}
 .tag{display:inline-block;font-size:11.8px;font-weight:600;padding:1px 8px;border-radius:999px;white-space:nowrap}
-.tag.x{background:var(--x50-bg);color:var(--x50)} .tag.h{background:var(--x40-bg);color:var(--x40)}
+.tag.x{background:var(--x50-bg);color:var(--x50)} .tag.h{background:var(--x30-bg);color:var(--x30)}
 .tag.g{background:var(--x20-bg);color:var(--x20)} .tag.r{background:var(--rh-bg);color:var(--rh)}
 .tag.w{background:var(--bad-bg);color:var(--bad)}
 .unitcol{white-space:nowrap}
@@ -80,10 +80,10 @@ td.win{color:var(--accent);font-weight:700}
 .chart .tick{fill:var(--muted);font:11px var(--body)}
 .chart .ct{fill:var(--ink);font:600 12.5px var(--body)}
 .chart .ln{stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}
-.chart .ln.x{stroke:var(--x50)} .chart .ln.h{stroke:var(--x40)} .chart .ln.g{stroke:var(--x20)} .chart .ln.r{stroke:var(--rh)}
-.chart .dot.x{fill:var(--x50)} .chart .dot.h{fill:var(--x40)} .chart .dot.g{fill:var(--x20)} .chart .dot.r{fill:var(--rh)}
+.chart .ln.x{stroke:var(--x50)} .chart .ln.h{stroke:var(--x30)} .chart .ln.g{stroke:var(--x20)} .chart .ln.r{stroke:var(--rh)}
+.chart .dot.x{fill:var(--x50)} .chart .dot.h{fill:var(--x30)} .chart .dot.g{fill:var(--x20)} .chart .dot.r{fill:var(--rh)}
 .chart .ln.dash{stroke-dasharray:4 4;stroke-width:1.8}
-.chart .bar.x{fill:var(--x50)} .chart .bar.h{fill:var(--x40)} .chart .bar.g{fill:var(--x20)} .chart .bar.r{fill:var(--rh)}
+.chart .bar.x{fill:var(--x50)} .chart .bar.h{fill:var(--x30)} .chart .bar.g{fill:var(--x20)} .chart .bar.r{fill:var(--rh)}
 .chart .val{fill:var(--ink-2);font:600 10px var(--body)}
 .tag.o{background:var(--panel-2);color:var(--muted)}
 table.scen td{vertical-align:middle}
@@ -109,41 +109,41 @@ code{font-size:12.5px}
   <div class="logo" aria-hidden="true">7</div>
   <div>
     <div class="eyebrow">ThermaVera · interní technicko-ekonomická analýza</div>
-    <h1>Která jednotka do kaskády bytového domu: RH X50, RH X40, RH X20, nebo RH060?</h1>
+    <h1>Která jednotka do kaskády bytového domu: RH X50, RHX30 Pro, RHX20 Pro, nebo RH060?</h1>
     <div class="sub">Srovnání na jednotném základě: certifikované body KEYMARK při stejné relativní zátěži, nákupní ceny, výkon při −15 °C, sezónní účinnost pro čtyři teplotní spády a ohřev TUV, náklady za 15 let pro domy 25–150 kW.</div>
   </div>
   <div class="meta">27. 9. 2026<br>verze 5 · interní<br>ceny bez DPH, kurz ČNB 23. 9.</div>
 </header>
 
 <div class="verdict">
-  <h3>Doporučení v kostce <span class="small">(verze 4: přepočteno s výkonovou mapou RH X40 od výrobce)</span></h3>
+  <h3>Doporučení v kostce <span class="small">(verze 4: přepočteno s výkonovou mapou RHX30 Pro od výrobce)</span></h3>
   <ul>
     <li><strong>RH060 je nejlepší volba pro domy do ≈ 90–100 kW při všech teplotních spádech.</strong> Má nejvyšší COP v mrazu (1,92 při −15 °C/W55), nejlépe ohřívá TUV (3,42) a nejlepší zálohu (výpadek 1 z 3–8 ks). Konkurence je za 15 let obvykle o 1–6 % dražší.</li>
-    <li><strong>Velké domy nad ≈ 90–100 kW, kde RH060 přesáhne limit 8 kusů: RH X40</strong> při 45/38 až 65/50. RH X50 je o 3–5 % dražší. Při 35/30 vychází RH X40 a RH X50 nastejno. Při 65/50 nad ≈ 130 kW vychází jen RH X50, protože RH X40 by potřebovala víc než 8 kusů.</li>
-    <li><strong>RH X40 podle mapy výrobce dává v mrazu méně, než se čekalo:</strong> 19,0 kW při −15 °C/W55 (odhad byl 22,1 kW) a 22,4 kW při W35. Proto potřebuje víc kusů a ztrácí náskok, který měla díky vysoké účinnosti v mírném počasí. Mapa je přitom vůči certifikaci KEYMARK konzervativní (při −10 °C/W55 uvádí 21,8 kW, certifikát 26,8 kW). Skutečný výkon ověřit měřením.</li>
-    <li><strong>RH X20</strong> nikde jasně nevyhrává a má nejvyšší cenu za kW (≈ 5 500 Kč/kW při −15 °C). Do kaskád BD ji nedoporučuji.</li>
+    <li><strong>Velké domy nad ≈ 90–100 kW, kde RH060 přesáhne limit 8 kusů: RHX30 Pro</strong> při 45/38 až 65/50. RH X50 je o 3–5 % dražší. Při 35/30 vychází RHX30 Pro a RH X50 nastejno. Při 65/50 nad ≈ 130 kW vychází jen RH X50, protože RHX30 Pro by potřebovala víc než 8 kusů.</li>
+    <li><strong>RHX30 Pro podle mapy výrobce dává v mrazu méně, než se čekalo:</strong> 19,0 kW při −15 °C/W55 (odhad byl 22,1 kW) a 22,4 kW při W35. Proto potřebuje víc kusů a ztrácí náskok, který měla díky vysoké účinnosti v mírném počasí. Mapa je přitom vůči certifikaci KEYMARK konzervativní (při −10 °C/W55 uvádí 21,8 kW, certifikát 26,8 kW). Skutečný výkon ověřit měřením.</li>
+    <li><strong>RHX20 Pro</strong> nikde jasně nevyhrává a má nejvyšší cenu za kW (≈ 5 500 Kč/kW při −15 °C). Do kaskád BD ji nedoporučuji.</li>
     <li><strong>RH X50</strong> má nejnižší sezónní COP (−6 až −14 %), ale nejnižší cenu za kW (4 140 Kč/kW). Obstojí jako jedna jednotka pro malý dům bez požadavku na zálohu a u velkých domů s vysokou teplotou vody.</li>
   </ul>
 </div>
 
 <h2><span class="n">1</span>Cenová mapa (nákupní ceny)</h2>
-<p>Nákupní cena EXW Čína bez DPH, dopravy a cla, přepočtená kurzem ČNB z 23. 9. 2026. RH X50 a RH060 podle objednávek a faktur z let 2023 a 2025, RH X40/X20 podle ceníku 2026 (zatím nenakupováno) (1 € = 24,380 Kč, 1 US$ = 21,369 Kč). Cena za kW je uvedena pro výkon, který dům potřebuje ve výpočtovém mrazu −15 °C, zvlášť podle teploty topné vody.</p>
+<p>Nákupní cena EXW Čína bez DPH, dopravy a cla, přepočtená kurzem ČNB z 23. 9. 2026. RH X50 a RH060 podle objednávek a faktur z let 2023 a 2025, RHX30 Pro / RHX20 Pro podle ceníku 2026 (zatím nenakupováno) (1 € = 24,380 Kč, 1 US$ = 21,369 Kč). Cena za kW je uvedena pro výkon, který dům potřebuje ve výpočtovém mrazu −15 °C, zvlášť podle teploty topné vody.</p>
 <div class="tbl">
 <!--CENY-->
 <table><thead><tr><th>Model</th><th class="n">Ceník</th><th class="n">Nákup Kč<br>bez DPH</th><th class="n">Max. výkon<br>A7/W35</th><th class="n">Kč/kW<br>A7/W35</th><th class="n">Výkon<br>A−15/W35</th><th class="n">Výkon<br>A−15/W55</th><th class="n">Kč/kW<br>A−15/W55</th><th class="n">Výkon<br>A−15/W65</th><th class="n">Kč/kW<br>A−15/W65</th></tr></thead><tbody>
 <tr><td><span class="tag x">RH X50</span></td><td class="n">US$ 4 800</td><td class="n">102 600</td><td class="n">49,3 kW</td><td class="n">2 081</td><td class="n">30,9 kW</td><td class="n">24,8 kW</td><td class="n"><strong>4 136</strong></td><td class="n">21,3 kW</td><td class="n">4 816</td></tr>
-<tr><td><span class="tag h">RH X40</span></td><td class="n">3 680 €</td><td class="n">89 700</td><td class="n">40,0 kW</td><td class="n">2 243</td><td class="n">22,4 kW</td><td class="n">19,0 kW</td><td class="n"><strong>4 722</strong></td><td class="n">16,1 kW</td><td class="n">5 573</td></tr>
-<tr><td><span class="tag g">RH X20</span></td><td class="n">2 940 €</td><td class="n">71 700</td><td class="n">28,0 kW</td><td class="n">2 560</td><td class="n">≈ 15,4 kW</td><td class="n">≈ 13,1 kW</td><td class="n"><strong>5 472</strong></td><td class="n">≈ 11,1 kW</td><td class="n">6 457</td></tr>
+<tr><td><span class="tag h">RHX30 Pro</span></td><td class="n">3 680 €</td><td class="n">89 700</td><td class="n">40,0 kW</td><td class="n">2 243</td><td class="n">22,4 kW</td><td class="n">19,0 kW</td><td class="n"><strong>4 722</strong></td><td class="n">16,1 kW</td><td class="n">5 573</td></tr>
+<tr><td><span class="tag g">RHX20 Pro</span></td><td class="n">2 940 €</td><td class="n">71 700</td><td class="n">28,0 kW</td><td class="n">2 560</td><td class="n">≈ 15,4 kW</td><td class="n">≈ 13,1 kW</td><td class="n"><strong>5 472</strong></td><td class="n">≈ 11,1 kW</td><td class="n">6 457</td></tr>
 <tr><td><span class="tag r">RH060</span></td><td class="n">US$ 2 398</td><td class="n">51 200</td><td class="n">22,0 kW</td><td class="n">2 329</td><td class="n">12,3 kW</td><td class="n">11,4 kW</td><td class="n"><strong>4 495</strong></td><td class="n">≈ 9,8 kW</td><td class="n">5 229</td></tr>
 <tr><td><span class="tag o">RH070*</span></td><td class="n">US$ 2 530</td><td class="n">54 100</td><td class="n">24,0 kW</td><td class="n">2 253</td><td class="n" colspan="5">bez výkonové mapy a certifikace — neporovnáváno</td></tr>
 </tbody></table>
 <!--/CENY-->
 </div>
-<p class="small">Výkon z výkonových map výrobce (RH X50, RH X40 do W75, RH060 do W55). ≈ odvozeno: RH X20 = mapa RH X40 × poměr certifikovaných výkonů při −10 °C (0,69), W65 u RH060 z poměru W65/W55 mapy RH X50. * RH070 nemá výkonovou mapu ani certifikaci. Slabší modely (RH030–RH055, řada 6–16 kW) do kaskád nezařazujeme.</p>
+<p class="small">Výkon z výkonových map výrobce (RH X50, RHX30 Pro do W75, RH060 do W55). ≈ odvozeno: RHX20 Pro = mapa RHX30 Pro × poměr certifikovaných výkonů při −10 °C (0,69), W65 u RH060 z poměru W65/W55 mapy RH X50. * RH070 nemá výkonovou mapu ani certifikaci. Slabší modely (RH030–RH055, řada 6–16 kW) do kaskád nezařazujeme.</p>
 
 <h2><span class="n">2</span>Účinnost při jednotné zátěži (KEYMARK)</h2>
 <p>Srovnatelný základ: všechny čtyři jednotky certifikovala <strong>stejná zkušebna stejnou metodou</strong> (EN 14825, 14. 8. 2026) ve stejných bodech Tj = −10, −7, +2, +7 a +12 °C, <strong>při stejné relativní zátěži</strong> (88 % výkonu při −7 °C, 54 % při +2, 35 % při +7, 15 % při +12 °C). Graf ukazuje COP v těchto bodech. Úsek −15 až −10 °C (čárkovaně) je extrapolace podle výkonových map.</p>
-<div class="legend"><span><i style="background:var(--x50)"></i>RH X50</span><span><i style="background:var(--x40)"></i>RH X40</span><span><i style="background:var(--x20)"></i>RH X20</span><span><i style="background:var(--rh)"></i>RH060</span></div>
+<div class="legend"><span><i style="background:var(--x50)"></i>RH X50</span><span><i style="background:var(--x30)"></i>RHX30 Pro</span><span><i style="background:var(--x20)"></i>RHX20 Pro</span><span><i style="background:var(--rh)"></i>RH060</span></div>
 <div class="charts2">
 <div class="chartbox">
 <!--G35-->
@@ -252,10 +252,10 @@ code{font-size:12.5px}
 <!--/G55-->
 </div>
 </div>
-<p><strong>Co z grafů plyne:</strong> RH X40 a RH X20 mají výrazně nejvyšší COP při částečném zatížení v mírném počasí (+2 až +12 °C), kde dům stráví většinu sezóny. V mrazu (−7 až −10 °C) jsou naopak nejslabší. Pod −10 °C je jejich pokles podle mapy RH X40 mírnější (čárkovaně), takže při −15 °C se srovnají s RH X50. <strong>RH060 je nejlepší v mrazu</strong>, zvlášť při 55 °C. RH X50 je v mírném počasí nejslabší a v mrazu průměrná.</p>
+<p><strong>Co z grafů plyne:</strong> RHX30 Pro a RHX20 Pro mají výrazně nejvyšší COP při částečném zatížení v mírném počasí (+2 až +12 °C), kde dům stráví většinu sezóny. V mrazu (−7 až −10 °C) jsou naopak nejslabší. Pod −10 °C je jejich pokles podle mapy RHX30 Pro mírnější (čárkovaně), takže při −15 °C se srovnají s RH X50. <strong>RH060 je nejlepší v mrazu</strong>, zvlášť při 55 °C. RH X50 je v mírném počasí nejslabší a v mrazu průměrná.</p>
 
 <div class="tbl"><table>
-  <thead><tr><th>Certifikované hodnoty (KEYMARK)</th><th class="n"><span class="tag x">RH X50</span></th><th class="n"><span class="tag h">RH X40</span></th><th class="n"><span class="tag g">RH X20</span></th><th class="n"><span class="tag r">RH060</span></th></tr></thead>
+  <thead><tr><th>Certifikované hodnoty (KEYMARK)</th><th class="n"><span class="tag x">RH X50</span></th><th class="n"><span class="tag h">RHX30 Pro</span></th><th class="n"><span class="tag g">RHX20 Pro</span></th><th class="n"><span class="tag r">RH060</span></th></tr></thead>
   <tbody>
     <tr><td>SCOP 35 °C · 55 °C (průměrné klima)</td><td class="n">4,57 · 3,21</td><td class="n">5,25 · 3,90</td><td class="n">5,23 · 3,97</td><td class="n">4,80 · 3,89</td></tr>
     <tr><td>COP při −7 °C: W35 · W55 (88 % zátěž)</td><td class="n"><b>3,28</b> · 2,28</td><td class="n">2,81 · 1,99</td><td class="n">2,59 · 2,06</td><td class="n">2,97 · <b>2,51</b></td></tr>
@@ -270,11 +270,11 @@ code{font-size:12.5px}
   </tbody>
 </table></div>
 
-<div class="note"><strong>Ověření COP A7/W35 (3,86 vs. 4,63).</strong> Hodnota 3,86 u RH X50 odpovídá KEYMARK. Hodnota 4,63 u RH060 je ze staršího protokolu ErP z roku 2023, stejně jako SCOP 4,69 / 3,55. Aktuální KEYMARK (14. 8. 2026) uvádí COP 4,67 a SCOP 4,80 / 3,89. Jmenovitý bod si ale výrobce deklaruje při zvoleném výkonu: RH X50 byla změřena na 100 % výkonu, RH060 na 64 % a RH X40 na 75 %. Na nižším výkonu je COP přirozeně vyšší, proto tato čísla nejsou srovnatelná. Při plném výkonu podle výkonových map je to 3,80 (X50) vs. 4,16 (RH060). Srovnávat je proto potřeba body EN 14825 výše, které jsou při stejné relativní zátěži.</div>
+<div class="note"><strong>Ověření COP A7/W35 (3,86 vs. 4,63).</strong> Hodnota 3,86 u RH X50 odpovídá KEYMARK. Hodnota 4,63 u RH060 je ze staršího protokolu ErP z roku 2023, stejně jako SCOP 4,69 / 3,55. Aktuální KEYMARK (14. 8. 2026) uvádí COP 4,67 a SCOP 4,80 / 3,89. Jmenovitý bod si ale výrobce deklaruje při zvoleném výkonu: RH X50 byla změřena na 100 % výkonu, RH060 na 64 % a RHX30 Pro na 75 %. Na nižším výkonu je COP přirozeně vyšší, proto tato čísla nejsou srovnatelná. Při plném výkonu podle výkonových map je to 3,80 (X50) vs. 4,16 (RH060). Srovnávat je proto potřeba body EN 14825 výše, které jsou při stejné relativní zátěži.</div>
 
 <h2><span class="n">3</span>Sezónní účinnost podle teplotního spádu a ohřevu TUV</h2>
 <p>Přepočet certifikovaných bodů na české klima (výpočtová −15 °C) při stejné relativní zátěži (100 % při −15 °C, 0 % při +16 °C). Pro každý režim zvlášť, TUV samostatně.</p>
-<div class="legend"><span><i style="background:var(--x50)"></i>RH X50</span><span><i style="background:var(--x40)"></i>RH X40</span><span><i style="background:var(--x20)"></i>RH X20</span><span><i style="background:var(--rh)"></i>RH060</span></div>
+<div class="legend"><span><i style="background:var(--x50)"></i>RH X50</span><span><i style="background:var(--x30)"></i>RHX30 Pro</span><span><i style="background:var(--x20)"></i>RHX20 Pro</span><span><i style="background:var(--rh)"></i>RH060</span></div>
 <div class="chartbox">
 <!--GSEZ-->
 <svg viewBox="0 0 700 280" class="chart" role="img" aria-label="Sezónní COP podle teplotního režimu">
@@ -339,18 +339,18 @@ code{font-size:12.5px}
 <!--/GSEZ-->
 </div>
 <ul>
-  <li><strong>35/30 (podlahové):</strong> nejlepší RH X40 (4,74) a X20 (4,70), RH060 a X50 o 6 % horší.</li>
-  <li><strong>45/38:</strong> X20, X40 a RH060 prakticky shodně (4,01–4,05), RH X50 o 9 % horší.</li>
-  <li><strong>55/45:</strong> vede RH060 (3,63) díky výkonu v mrazu, X20 3,57, X40 3,51 (−3 %), RH X50 3,12 (−14 %).</li>
-  <li><strong>65/50 (velký spád):</strong> pořadí jako u 55/45: RH060 3,09, X20 2,93, X40 2,87, X50 2,66. Poměr W65/W55 je u RH X50 a RH X40 z jejich map, u RH060 a X20 převzatý. Mapu pro W65–W75 mají jen RH X50 a RH X40.</li>
-  <li><strong>TUV na 55 °C:</strong> RH060 3,42, X20 3,18, X40 3,05, X50 3,05. Počítáno jako 50 % ohřev studené vody 15→55 °C (ceníkové a protokolové body při A7 a A20) a 50 % cirkulace a udržování 55 °C (jmenovitý bod A7/W55). U bytových domů je TUV 40–50 % roční potřeby tepla, takže rozdíl v TUV má velkou váhu.</li>
+  <li><strong>35/30 (podlahové):</strong> nejlepší RHX30 Pro (4,74) a X20 (4,70), RH060 a X50 o 6 % horší.</li>
+  <li><strong>45/38:</strong> X20, X30 a RH060 prakticky shodně (4,01–4,05), RH X50 o 9 % horší.</li>
+  <li><strong>55/45:</strong> vede RH060 (3,63) díky výkonu v mrazu, X20 3,57, X30 3,51 (−3 %), RH X50 3,12 (−14 %).</li>
+  <li><strong>65/50 (velký spád):</strong> pořadí jako u 55/45: RH060 3,09, X20 2,93, X30 2,87, X50 2,66. Poměr W65/W55 je u RH X50 a RHX30 Pro z jejich map, u RH060 a X20 převzatý. Mapu pro W65–W75 mají jen RH X50 a RHX30 Pro.</li>
+  <li><strong>TUV na 55 °C:</strong> RH060 3,42, X20 3,18, X30 3,05, X50 3,05. Počítáno jako 50 % ohřev studené vody 15→55 °C (ceníkové a protokolové body při A7 a A20) a 50 % cirkulace a udržování 55 °C (jmenovitý bod A7/W55). U bytových domů je TUV 40–50 % roční potřeby tepla, takže rozdíl v TUV má velkou váhu.</li>
 </ul>
 
 <h2><span class="n">4</span>Ekonomika při stejné zátěži domu</h2>
 <p>Náklady za 15 let (technologie + elektřina + servis) v mil. Kč bez DPH. Pro každý dům je osazen nejmenší počet kusů, který při −15 °C pokryje ≥ 95 % tepelné ztráty v daném režimu (uvedeno jako „n×“). Zelená = nejnižší náklady mezi variantami do 8 kusů.</p>
 <div class="tbl">
 <!--SCEN-->
-<table class="scen"><thead><tr><th>Tepelná ztráta</th><th class="n"><span class="tag x">RH X50</span></th><th class="n"><span class="tag h">RH X40</span></th><th class="n"><span class="tag g">RH X20</span></th><th class="n"><span class="tag r">RH060</span></th></tr></thead><tbody>
+<table class="scen"><thead><tr><th>Tepelná ztráta</th><th class="n"><span class="tag x">RH X50</span></th><th class="n"><span class="tag h">RHX30 Pro</span></th><th class="n"><span class="tag g">RHX20 Pro</span></th><th class="n"><span class="tag r">RH060</span></th></tr></thead><tbody>
 <tr class="grp"><td colspan="5">Teplotní spád 35/30 podlahové</td></tr>
 <tr><td>25 kW</td><td class="n"><b>1,62</b> <span class="k">1×</span><br><span class="d">+1,0 %</span></td><td class="n"><b>1,79</b> <span class="k">2×</span><br><span class="d">+11,8 %</span></td><td class="n"><b>1,71</b> <span class="k">2×</span><br><span class="d">+6,5 %</span></td><td class="n bestc"><b>1,60</b> <span class="k">2×</span><br><span class="d">nejnižší</span></td></tr>
 <tr><td>50 kW</td><td class="n"><b>3,28</b> <span class="k">2×</span><br><span class="d">+3,0 %</span></td><td class="n"><b>3,34</b> <span class="k">3×</span><br><span class="d">+4,9 %</span></td><td class="n"><b>3,39</b> <span class="k">4×</span><br><span class="d">+6,6 %</span></td><td class="n bestc"><b>3,18</b> <span class="k">4×</span><br><span class="d">nejnižší</span></td></tr>
@@ -378,12 +378,12 @@ code{font-size:12.5px}
 </tbody></table>
 <!--/SCEN-->
 </div>
-<p class="small">Předpoklady: ÚT 2 000 h plného výkonu, TUV = 70 % ÚT, elektřina 4 Kč/kWh bez DPH (sazba pro TČ vč. distribuce), montáž a připojení na kus X50 60 / X40 50 / X20 45 / RH060 35 tis. Kč, regulace kaskády 25 tis. + 8 tis./ks, servis 6 / 5 / 4,5 / 3,5 tis. Kč/ks/rok. Společná část kotelny (AKU, TUV, rozvaděč) je u všech variant stejná a není započtena. Rozdíly do ≈ 2 % jsou v mezích nejistoty.</p>
+<p class="small">Předpoklady: ÚT 2 000 h plného výkonu, TUV = 70 % ÚT, elektřina 4 Kč/kWh bez DPH (sazba pro TČ vč. distribuce), montáž a připojení na kus X50 60 / X30 50 / X20 45 / RH060 35 tis. Kč, regulace kaskády 25 tis. + 8 tis./ks, servis 6 / 5 / 4,5 / 3,5 tis. Kč/ks/rok. Společná část kotelny (AKU, TUV, rozvaděč) je u všech variant stejná a není započtena. Rozdíly do ≈ 2 % jsou v mezích nejistoty.</p>
 
 <h3>Citlivost na cenu elektřiny (dům 50 kW, spád 55/45)</h3>
 <div class="tbl">
 <!--TARIF-->
-<table><thead><tr><th>Cena elektřiny</th><th class="n"><span class="tag x">RH X50</span></th><th class="n"><span class="tag h">RH X40</span></th><th class="n"><span class="tag g">RH X20</span></th><th class="n"><span class="tag r">RH060</span></th></tr></thead><tbody>
+<table><thead><tr><th>Cena elektřiny</th><th class="n"><span class="tag x">RH X50</span></th><th class="n"><span class="tag h">RHX30 Pro</span></th><th class="n"><span class="tag g">RHX20 Pro</span></th><th class="n"><span class="tag r">RH060</span></th></tr></thead><tbody>
 <tr><td>3 Kč/kWh</td><td class="n">3,02 mil.</td><td class="n">3,01 mil.</td><td class="n">3,04 mil.</td><td class="n win">2,92 mil.</td></tr>
 <tr><td>4 Kč/kWh</td><td class="n">3,85 mil.</td><td class="n">3,78 mil.</td><td class="n">3,79 mil.</td><td class="n win">3,64 mil.</td></tr>
 <tr><td>5 Kč/kWh</td><td class="n">4,67 mil.</td><td class="n">4,55 mil.</td><td class="n">4,54 mil.</td><td class="n win">4,36 mil.</td></tr>
@@ -401,29 +401,29 @@ code{font-size:12.5px}
       <td><div class="rec"><span><span class="tag r">2× RH060</span></span><small>1× X50 +1 %, bez zálohy</small></div></td>
       <td><div class="rec"><span><span class="tag x">1× RH X50</span></span><small>bez zálohy; se zálohou 3× RH060 (+4 %)</small></div></td>
       <td><div class="rec"><span><span class="tag r">3× RH060</span></span><small>1× X50 stejně drahá (−0,1 %), ale bez zálohy</small></div></td>
-      <td><div class="rec"><span><span class="tag r">3× RH060</span></span><small>X40 2× +7 %</small></div></td></tr>
+      <td><div class="rec"><span><span class="tag r">3× RH060</span></span><small>X30 2× +7 %</small></div></td></tr>
     <tr><td>Střední, 35–90 kW</td>
-      <td><div class="rec"><span><span class="tag r">4–6× RH060</span></span><small>X40/X50 +2–5 %</small></div></td>
-      <td><div class="rec"><span><span class="tag r">5–7× RH060</span></span><small>X40/X50 +1,5–4 %</small></div></td>
-      <td><div class="rec"><span><span class="tag r">5–7× RH060</span></span><small>X40 +3–4 %</small></div></td>
-      <td><div class="rec"><span><span class="tag r">5–8× RH060</span></span><small>X40 +6 %</small></div></td></tr>
+      <td><div class="rec"><span><span class="tag r">4–6× RH060</span></span><small>X30/X50 +2–5 %</small></div></td>
+      <td><div class="rec"><span><span class="tag r">5–7× RH060</span></span><small>X30/X50 +1,5–4 %</small></div></td>
+      <td><div class="rec"><span><span class="tag r">5–7× RH060</span></span><small>X30 +3–4 %</small></div></td>
+      <td><div class="rec"><span><span class="tag r">5–8× RH060</span></span><small>X30 +6 %</small></div></td></tr>
     <tr><td>Velký, nad ≈ 90–100 kW</td>
-      <td><div class="rec"><span><span class="tag h">RH X40</span> = <span class="tag x">RH X50</span></span><small>100 kW ještě 8× RH060 (−1,4 %)</small></div></td>
-      <td><div class="rec"><span><span class="tag h">5–7× RH X40</span></span><small>X50 +3–4 %</small></div></td>
-      <td><div class="rec"><span><span class="tag h">5–8× RH X40</span></span><small>X50 +3,5–5 %</small></div></td>
-      <td><div class="rec"><span><span class="tag h">6–8× RH X40</span> do ≈ 130 kW</span><small>nad tím 7× RH X50 (X40 by potřebovala 9 ks)</small></div></td></tr>
+      <td><div class="rec"><span><span class="tag h">RHX30 Pro</span> = <span class="tag x">RH X50</span></span><small>100 kW ještě 8× RH060 (−1,4 %)</small></div></td>
+      <td><div class="rec"><span><span class="tag h">5–7× RHX30 Pro</span></span><small>X50 +3–4 %</small></div></td>
+      <td><div class="rec"><span><span class="tag h">5–8× RHX30 Pro</span></span><small>X50 +3,5–5 %</small></div></td>
+      <td><div class="rec"><span><span class="tag h">6–8× RHX30 Pro</span> do ≈ 130 kW</span><small>nad tím 7× RH X50 (X30 by potřebovala 9 ks)</small></div></td></tr>
   </tbody>
 </table></div>
-<p class="small">Rozdíly do ≈ 3 % jsou v mezích nejistoty modelu. Při nich rozhodují místo, hluk, záloha a počet kusů v servisu. Počty kusů vychází z pravidla ≥ 95 % ztráty při −15 °C. Kdo přijme větší podíl patrony (≈ 90 %), ušetří u malých domů kus (např. 25 kW při 35/30 = 1× RH X40).</p>
+<p class="small">Rozdíly do ≈ 3 % jsou v mezích nejistoty modelu. Při nich rozhodují místo, hluk, záloha a počet kusů v servisu. Počty kusů vychází z pravidla ≥ 95 % ztráty při −15 °C. Kdo přijme větší podíl patrony (≈ 90 %), ušetří u malých domů kus (např. 25 kW při 35/30 = 1× RHX30 Pro).</p>
 
 <h3>Hodnotově a ekonomicky v kostce</h3>
 <div class="tbl"><table>
   <thead><tr><th>Jednotka</th><th>Kdy se hodí víc</th><th>Kdy se hodí méně</th></tr></thead>
   <tbody>
     <tr><td><span class="tag r">RH060</span></td><td>Většina bytových domů do ≈ 90–100 kW při jakémkoli spádu. Nejvyšší COP v mrazu a na TUV, nejnižší minimum výkonu (letní TUV), nejtišší, nejlehčí, nejlepší záloha.</td><td>Nad 8 kusů (≈ 91 kW při W55). Místa s málo prostorem pro venkovní jednotky. Vysokoteplotní soustavy bez ověřených dat nad W55.</td></tr>
-    <tr><td><span class="tag h">RH X40</span></td><td>Velké domy nad ≈ 90–100 kW při 45/38 až 65/50 (do 8 ks ≈ 150 kW při W55). Má mapu až do 75 °C a nejvyšší účinnost v mírném počasí.</td><td>Malé a střední domy: v mrazu slabší výkon (19 kW při W55), proto víc kusů a dražší kW (4 720 Kč/kW) než RH060.</td></tr>
-    <tr><td><span class="tag x">RH X50</span></td><td>Nejlevnější kW (4 140 Kč/kW). Jedna jednotka pro malý dům bez požadavku na zálohu. Velké vysokoteplotní domy nad ≈ 130 kW, kde RH X40 přesáhne 8 kusů.</td><td>Všude, kde rozhoduje provoz: nejnižší sezónní COP (−6 až −14 %), velké minimum (18 kW) pro letní TUV, nejhlučnější.</td></tr>
-    <tr><td><span class="tag g">RH X20</span></td><td>Jen okrajově: malé domy, kde by RH060 vyšla na 3 kusy a stačí 2 jednotky.</td><td>Nejvyšší cena za kW (≈ 5 500 Kč/kW), nikde nevyhrává. Do kaskád BD nedoporučuji.</td></tr>
+    <tr><td><span class="tag h">RHX30 Pro</span></td><td>Velké domy nad ≈ 90–100 kW při 45/38 až 65/50 (do 8 ks ≈ 150 kW při W55). Má mapu až do 75 °C a nejvyšší účinnost v mírném počasí.</td><td>Malé a střední domy: v mrazu slabší výkon (19 kW při W55), proto víc kusů a dražší kW (4 720 Kč/kW) než RH060.</td></tr>
+    <tr><td><span class="tag x">RH X50</span></td><td>Nejlevnější kW (4 140 Kč/kW). Jedna jednotka pro malý dům bez požadavku na zálohu. Velké vysokoteplotní domy nad ≈ 130 kW, kde RHX30 Pro přesáhne 8 kusů.</td><td>Všude, kde rozhoduje provoz: nejnižší sezónní COP (−6 až −14 %), velké minimum (18 kW) pro letní TUV, nejhlučnější.</td></tr>
+    <tr><td><span class="tag g">RHX20 Pro</span></td><td>Jen okrajově: malé domy, kde by RH060 vyšla na 3 kusy a stačí 2 jednotky.</td><td>Nejvyšší cena za kW (≈ 5 500 Kč/kW), nikde nevyhrává. Do kaskád BD nedoporučuji.</td></tr>
   </tbody>
 </table></div>
 
@@ -433,7 +433,7 @@ code{font-size:12.5px}
   <thead><tr><th>Jednotka</th><th class="n">Nákup</th><th class="n">Prodej</th><th class="n">Marže</th><th class="n">Marže z prodeje</th><th class="n">Zákazník platí<br>Kč/kW (−15/W55)</th><th class="n">Naše marže<br>Kč/kW (−15/W55)</th></tr></thead>
   <tbody>
     <tr><td><span class="tag x">RH X50</span></td><td class="n">102 571</td><td class="n">430 000</td><td class="n">327 429</td><td class="n">76 %</td><td class="n">17 340</td><td class="n">13 200</td></tr>
-    <tr><td><span class="tag h">RH X40</span></td><td class="n">89 718</td><td class="n">350 000</td><td class="n">260 282</td><td class="n">74 %</td><td class="n">18 420</td><td class="n">13 700</td></tr>
+    <tr><td><span class="tag h">RHX30 Pro</span></td><td class="n">89 718</td><td class="n">350 000</td><td class="n">260 282</td><td class="n">74 %</td><td class="n">18 420</td><td class="n">13 700</td></tr>
     <tr><td><span class="tag r">RH060</span></td><td class="n">51 243</td><td class="n">150 000</td><td class="n">98 757</td><td class="n">66 %</td><td class="n win">13 160</td><td class="n">8 660</td></tr>
     <tr class="grp"><td colspan="7">Mimo kaskády BD (pro úplnost)</td></tr>
     <tr><td>RH050</td><td class="n">41 883</td><td class="n">125 000</td><td class="n">83 117</td><td class="n">66 %</td><td class="n">—</td><td class="n">—</td></tr>
@@ -441,7 +441,7 @@ code{font-size:12.5px}
     <tr><td>RH030</td><td class="n">28 036</td><td class="n">95 000</td><td class="n">66 964</td><td class="n">70 %</td><td class="n">—</td><td class="n">—</td></tr>
   </tbody>
 </table></div>
-<p><strong>Střet zájmů:</strong> RH060 je za kW výkonu v mrazu o 24–29 % levnější pro zákazníka než RH X50 a RH X40, a zároveň nejúspornější v provozu. Pro zákazníka je tedy jasně nejlepší. Nám ale na kW nese o 34–37 % menší marži. Doporučení „kaskáda RH060“ tak při dnešním ceníku snižuje marži na zakázku zhruba o čtvrtinu až třetinu.</p>
+<p><strong>Střet zájmů:</strong> RH060 je za kW výkonu v mrazu o 24–29 % levnější pro zákazníka než RH X50 a RHX30 Pro, a zároveň nejúspornější v provozu. Pro zákazníka je tedy jasně nejlepší. Nám ale na kW nese o 34–37 % menší marži. Doporučení „kaskáda RH060“ tak při dnešním ceníku snižuje marži na zakázku zhruba o čtvrtinu až třetinu.</p>
 
 <h3>Zakázka v prodejních cenách (spád 55/45)</h3>
 <div class="tbl"><table>
@@ -449,38 +449,38 @@ code{font-size:12.5px}
   <tbody>
     <tr class="grp"><td colspan="6">50 kW</td></tr>
     <tr><td><span class="tag x">2× RH X50</span></td><td class="n">205 tis.</td><td class="n">860 tis.</td><td class="n">655 tis.</td><td class="n">76 %</td><td class="n">4,50 mil.</td></tr>
-    <tr><td><span class="tag h">3× RH X40</span></td><td class="n">269 tis.</td><td class="n">1 050 tis.</td><td class="n">781 tis.</td><td class="n">74 %</td><td class="n">4,56 mil.</td></tr>
+    <tr><td><span class="tag h">3× RHX30 Pro</span></td><td class="n">269 tis.</td><td class="n">1 050 tis.</td><td class="n">781 tis.</td><td class="n">74 %</td><td class="n">4,56 mil.</td></tr>
     <tr><td><span class="tag r">5× RH060 za 150 tis.</span></td><td class="n">256 tis.</td><td class="n">750 tis.</td><td class="n">494 tis.</td><td class="n">66 %</td><td class="n">4,13 mil.</td></tr>
     <tr class="best"><td><span class="tag r">5× RH060 za 195 tis.</span></td><td class="n">256 tis.</td><td class="n">975 tis.</td><td class="n">719 tis.</td><td class="n">74 %</td><td class="n">4,36 mil.</td></tr>
     <tr class="grp"><td colspan="6">75 kW</td></tr>
     <tr><td><span class="tag x">3× RH X50</span></td><td class="n">308 tis.</td><td class="n">1 290 tis.</td><td class="n">982 tis.</td><td class="n">76 %</td><td class="n">6,74 mil.</td></tr>
-    <tr><td><span class="tag h">4× RH X40</span></td><td class="n">359 tis.</td><td class="n">1 400 tis.</td><td class="n">1 041 tis.</td><td class="n">74 %</td><td class="n">6,59 mil.</td></tr>
+    <tr><td><span class="tag h">4× RHX30 Pro</span></td><td class="n">359 tis.</td><td class="n">1 400 tis.</td><td class="n">1 041 tis.</td><td class="n">74 %</td><td class="n">6,59 mil.</td></tr>
     <tr><td><span class="tag r">7× RH060 za 150 tis.</span></td><td class="n">359 tis.</td><td class="n">1 050 tis.</td><td class="n">691 tis.</td><td class="n">66 %</td><td class="n">6,06 mil.</td></tr>
     <tr class="best"><td><span class="tag r">7× RH060 za 195 tis.</span></td><td class="n">359 tis.</td><td class="n">1 365 tis.</td><td class="n">1 006 tis.</td><td class="n">74 %</td><td class="n">6,38 mil.</td></tr>
     <tr class="grp"><td colspan="6">100 kW (RH060 by potřebovala 9 ks, nad limit kaskády)</td></tr>
     <tr><td><span class="tag x">4× RH X50</span></td><td class="n">410 tis.</td><td class="n">1 720 tis.</td><td class="n">1 310 tis.</td><td class="n">76 %</td><td class="n">8,98 mil.</td></tr>
-    <tr><td><span class="tag h">5× RH X40</span></td><td class="n">449 tis.</td><td class="n">1 750 tis.</td><td class="n">1 301 tis.</td><td class="n">74 %</td><td class="n">8,62 mil.</td></tr>
+    <tr><td><span class="tag h">5× RHX30 Pro</span></td><td class="n">449 tis.</td><td class="n">1 750 tis.</td><td class="n">1 301 tis.</td><td class="n">74 %</td><td class="n">8,62 mil.</td></tr>
   </tbody>
 </table></div>
-<p class="small">Nákup = nákupní cena jednotek EXW Čína bez dopravy a cla (RH X50 102 571, RH X40 89 718, RH060 51 243 Kč/ks). * Zákazník za 15 let = prodejní cena jednotek + montáž a regulace kaskády (zatím v našich nákladech, prodejní cenu montáže doplnit) + elektřina a servis 15 let. Marže je jen na jednotkách, bez montáže, dopravy a cla.</p>
+<p class="small">Nákup = nákupní cena jednotek EXW Čína bez dopravy a cla (RH X50 102 571, RHX30 Pro 89 718, RH060 51 243 Kč/ks). * Zákazník za 15 let = prodejní cena jednotek + montáž a regulace kaskády (zatím v našich nákladech, prodejní cenu montáže doplnit) + elektřina a servis 15 let. Marže je jen na jednotkách, bez montáže, dopravy a cla.</p>
 
 <h3>Doporučení k ceníku</h3>
 <ul>
-  <li><strong>Zavést B2B cenu RH060 pro kaskády BD ≈ 190–200 tis. Kč</strong> (dnes 150 tis. je cena pro rodinné domy). Při 195 tis. má zakázka s RH060 marži srovnatelnou s RH X50 a RH X40 (≈ 13 tis. Kč/kW) a zákazník přesto zaplatí za 15 let o 3–5 % méně než u RH X50. Doporučení „nejlepší varianta pro zákazníka“ a „nejlepší marže“ se tím sjednotí.</li>
-  <li><strong>RH X40 za 350 tis. je nejdražší kW pro zákazníka</strong> (18 420 Kč/kW, o 6 % víc než RH X50). Pro velké domy, kde je RH X40 technicky nejlepší, zvážit ≈ 330 tis. (stejná cena za kW jako RH X50). Marže zůstane ≈ 73 %.</li>
+  <li><strong>Zavést B2B cenu RH060 pro kaskády BD ≈ 190–200 tis. Kč</strong> (dnes 150 tis. je cena pro rodinné domy). Při 195 tis. má zakázka s RH060 marži srovnatelnou s RH X50 a RHX30 Pro (≈ 13 tis. Kč/kW) a zákazník přesto zaplatí za 15 let o 3–5 % méně než u RH X50. Doporučení „nejlepší varianta pro zákazníka“ a „nejlepší marže“ se tím sjednotí.</li>
+  <li><strong>RHX30 Pro za 350 tis. je nejdražší kW pro zákazníka</strong> (18 420 Kč/kW, o 6 % víc než RH X50). Pro velké domy, kde je RHX30 Pro technicky nejlepší, zvážit ≈ 330 tis. (stejná cena za kW jako RH X50). Marže zůstane ≈ 73 %.</li>
   <li><strong>Cenotvorbu kaskád stavět na Kč/kW při −15 °C</strong>, ne na kus. Jinak menší jednotky v kaskádě vycházejí systematicky levněji než velké a ceník tlačí obchod k variantám s nižší marží.</li>
   <li>Doplnit: prodejní cenu montáže a regulace na kus a skutečné náklady na dopravu a clo (% k nákupu). Pak lze spočítat čistou marži zakázky.</li>
 </ul>
 
 <h2><span class="n">7</span>Rizika a otevřené body</h2>
 <ul>
-  <li><strong>RH X40: mapa výrobce vs. certifikace.</strong> Mapa uvádí při −10 °C/W55 výkon 21,8 kW, certifikát KEYMARK 26,8 kW (COP shodně ≈ 1,7). Mapa je zřejmě dopočtená škálováním jedné křivky (MIN = 32 % MAX, W45/W55 konstantním poměrem). Pokud má jednotka reálně výkon blíž certifikátu, potřebuje méně kusů a vrací se na první místo u nízkoteplotních domů (verze 3 analýzy). Doporučuji pilotní instalaci s měřením (kalorimetr + elektroměr) nebo dotaz na výrobce.</li>
-  <li><strong>RH X20</strong> mapu nemá, výkon je odvozený z mapy RH X40.</li>
+  <li><strong>RHX30 Pro: mapa výrobce vs. certifikace.</strong> Mapa uvádí při −10 °C/W55 výkon 21,8 kW, certifikát KEYMARK 26,8 kW (COP shodně ≈ 1,7). Mapa je zřejmě dopočtená škálováním jedné křivky (MIN = 32 % MAX, W45/W55 konstantním poměrem). Pokud má jednotka reálně výkon blíž certifikátu, potřebuje méně kusů a vrací se na první místo u nízkoteplotních domů (verze 3 analýzy). Doporučuji pilotní instalaci s měřením (kalorimetr + elektroměr) nebo dotaz na výrobce.</li>
+  <li><strong>RHX20 Pro</strong> mapu nemá, výkon je odvozený z mapy RHX30 Pro.</li>
   <li><strong>RH060 nad W55</strong> nemá data. Pro nezateplené domy 65/50 je výkon a COP odhad (poměr z mapy RH X50). Před nabídkou ověřit u výrobce.</li>
-  <li><strong>TUV:</strong> COP ohřevu z bodů map a ceníků (X40 z mapy A7/A20, RH060 A7, X20 A20) a podíl cirkulace 50 % jsou předpoklady. Legionella patronou není započtena.</li>
-  <li><strong>Ceny</strong> jsou nákupní EXW Čína bez dopravy a cla: RH X50 US$ 4 800 a RH060 US$ 2 398 podle faktur 2025, RH X40/X20 jen ceník. Dopravu a clo doplnit procentem.</li>
+  <li><strong>TUV:</strong> COP ohřevu z bodů map a ceníků (X30 z mapy A7/A20, RH060 A7, X20 A20) a podíl cirkulace 50 % jsou předpoklady. Legionella patronou není započtena.</li>
+  <li><strong>Ceny</strong> jsou nákupní EXW Čína bez dopravy a cla: RH X50 US$ 4 800 a RH060 US$ 2 398 podle faktur 2025, RHX30 Pro / RHX20 Pro jen ceník. Dopravu a clo doplnit procentem.</li>
   <li><strong>Klima</strong> je orientační (průměrná česká lokalita). Pro konkrétní dům použít teplotní četnosti lokality.</li>
 </ul>
 
-<footer class="small">Výpočet: <code>porovnani-x50-rh060/src/keymark_model.py</code> (výsledky v <code>results2.json</code>), grafy a tabulky <code>src/gen_doc.py</code>. Zdroje: databáze KEYMARK (certifikace 14. 8. 2026, body EN 14825 a EN 14511), výkonové mapy RH X50 a RH X40, technický list RH060, objednávky a faktury 2023/2025, ceníky výrobce 10/2024 a 2026, kurz ČNB 23. 9. 2026. Orientační technicko-ekonomický podklad, ne garance spotřeby ani návratnosti.</footer>
+<footer class="small">Výpočet: <code>porovnani-x50-rh060/src/keymark_model.py</code> (výsledky v <code>results2.json</code>), grafy a tabulky <code>src/gen_doc.py</code>. Zdroje: databáze KEYMARK (certifikace 14. 8. 2026, body EN 14825 a EN 14511), výkonové mapy RH X50 a RHX30 Pro, technický list RH060, objednávky a faktury 2023/2025, ceníky výrobce 10/2024 a 2026, kurz ČNB 23. 9. 2026. Orientační technicko-ekonomický podklad, ne garance spotřeby ani návratnosti.</footer>
 </article></div>

@@ -57,45 +57,47 @@ RH060-PW22 *4,80
 3,89
 RH X504,57
 3,21
-RH X40 5,25
+RHX30 Pro
 3,90
+5,25
+4 5 6
 0 1 2
 3
-4 5 6
-W35 — RH X40 pro
+W35 — RHX30 Pro pro
 t
-i RH X50
+i RH
+W55 — RHX30 Pro pro
+t
+i RH
+Propad SC
+OP W35 → W55
+Hlučnost v 1 m (W55)
+X50
+X50
+RHX30 Pro −26
+42 vs. 62 dB
 +15 %
++21 %
+%
 o 13 % nižší spo
 elekt
 iny
 ř
 t
 řeba
-W55 — RH X40 pro
-t
-i RH X50
-+21 %
 o 18 % nižší spo
 elekt
 iny
 ř
 t
 řeba
-Propad SC
-OP W35 → W55
-RH X40 −26 %
-RH X50
-−30 %
-Hlučnost v 1 m (W55)
-42 vs. 62 dB
-RH X40
-RH X50
-je o 2
+RHX30 Pro je o 2
 0 dB
 t
+než RH X50
 išší
-než
+RH X50
+−30 %
 Model SC
 OP W35 SC
 OP W55 ČR W35 ČR W45 ČR W55 ČR W65 Hluk
@@ -123,13 +125,12 @@ RH X50
 4,57 3,214,44
 3,67 3,12 2,66 62 66 1,98 2,28 3,19 4,10 6,0
 2
-RH X4
-0 5,25 3,90
+RHX3
+0 Pro 5,25 3,90
 4,74 4,0
 3 3,51 2,8742 59 1,70 1,99 3,88 5,64 7,81
 Co z čísel plyne
-RH X40
-je
+RHX30 Pro je
 účinn
 jší v obo
 ě
@@ -180,8 +181,7 @@ tky b
 ě
 nejví
 c hodin (+7 °C: 5,64 vs. 4,10).
-RH X40
-je zároveň t
+RHX30 Pro je zároveň t
 išší — 42 dB v 1 m pro
 t
 i 62 dB
@@ -194,8 +194,8 @@ t
 inová hlasi
 ost vn
 ímaná slu
-chem). U
-zástavby s o
+chem).
+U zástavby s o
 kny so
 usedů t
 o bývá st
@@ -222,9 +222,8 @@ i W55 má prakt
 icky st
 ejný SC
 OP jak
-o RH X40 (3,89 vs. 3,90) a v českém klimatu
-i
-lepší (3,63 vs. 3,51). RH X40 dává smysl nad
+o RHX30 Pro (3,89 vs. 3,90) a v českém klimatu
+lepší (3,63 vs. 3,51). RHX30 Pro dává smysl nad
 t
 ut
 o
@@ -241,6 +240,7 @@ n
 í
 ch objektů.
 í
+i
 Body C
 OP jso
 u
@@ -256,6 +256,10 @@ ivn
 ě
 i dle EN 14825 (Tj = −10 / −7 / +2 / +7 / +12 °C). Přepoče
 t
+na české klima in
+t
+erpo
+lu
 mezi
 t
 t
@@ -270,28 +274,25 @@ o výpoče
 t, ne cert
 ifikát. * RH060
 je
+uveden jak
+o referenčn
+jedno
 řady. Deklarovaný výk
-on RH X40 př
+on RHX30 Pro př
 i −15 °C je podle výk
 onové mapy nižší, než
 by odpovídal
 o cert
 ifikaci; u velkých
-na české klima in
-t
-erpo
-lu
-je C
-OP
-uveden jak
-o referenčn
-jedno
-tka domovn
 kaskád doporuču
 jeme ov
+je C
+OP
+tka domovn
+t
 i
 ěř
-t m
+m
 ěřen
 ím.
 í
@@ -304,8 +305,8 @@ ický výk
 on a akust
 ický tlak · aplikace 55 °C · t
 epelná čerpadla vzd
-u
 R290
+u
 ch–voda
 A
 kust
@@ -343,12 +344,13 @@ RH060-PW22 62
 46
 RH X50 66
 62
-RH X40 59
+59
+RHX30 Pro
 42
-A
 35 4
 0
 45 50 55 60 65 70
+A
 Model LWA
 35 °C LWA
 55 °C Energe
@@ -374,20 +376,20 @@ RH060-PW22 60 62 62 4644 4
 4
 RH X50 — 66 * 66 62 48 44
 38
-RH X4
-0 55 59 —42 4137 31
+RHX3
+0 Pro 55 59 —42 4137 31
 Co z čísel plyne
 t
 Nej
 išší
-je RH X40 (42 dB v 1 m) — a t
+je RHX30 Pro (42 dB v 1 m) — a t
 o př
 i nejvyšším výk
 u
 on
 t
+je nej
 t
-nej
 išší RH030 (44 dB), nejhlasi
 ě
 jší RH040 (47 dB).
@@ -408,18 +410,18 @@ ba 10 m (38 dB) — u zástavby s o
 nebo akust
 ická stu
 die.
+í
 domovn
+í
 ch i k
 omerčn
-í
 í
 ch jedno
 t
 ek krom
 ě
 RH X50. Z domovn
-í řady je
-í
+í řady
 od 5 m od jedno
 kny so
 usedů bl
@@ -520,7 +522,7 @@ je 66 dB; v tab
 ulce je hodno
 ta ze št
 í
-tku. RH X40 zat
+tku. RHX30 Pro zat
 ím nemá energe
 t
 ický št

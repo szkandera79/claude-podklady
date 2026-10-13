@@ -12,9 +12,9 @@ Jednotný set datových listů tepelných čerpadel REO HEATING R290 ve stylu vz
 | RH050-PW15 | RH050-PW15-A3 | 14,8 kW |
 | RH060-PW22 | RH060-PW22-A3 | 22,0 kW |
 | RH X50 | RH X50 | 49,3 kW |
-| RH X40 | – (štítek zatím nedodán) | 40,0 kW |
+| RHX30 Pro | – (štítek zatím nedodán) | 40,0 kW |
 
-Komerční modely **RH X50** a **RH X40** mají navíc stranu s vysokoteplotním provozem
+Komerční modely **RH X50** a **RHX30 Pro** mají navíc stranu s vysokoteplotním provozem
 60/65/70/75 °C (`DHi` v datech); chybějící body mimo pracovní rozsah se v tabulce tisknou
 jako „–" a křivku přeruší.
 
@@ -29,14 +29,14 @@ jako „–" a křivku přeruší.
   RH040 ověřeno proti `~/Downloads/RH040 heating.jpg`)
 - RH050: beze změny z hotového `RH050-PW15-heating.html`
 - RH X50: `../RH X50 komerční/DATA.json` (výkonový protokol výrobce), štítek z `RH X50 - REO HEATING/RH-X50-energeticky-stitek.pdf`
-- RH X40: výkonová mapa `../PW Helios/PW30-DKXLRE3-H8 Performance curve.xls`; energetický štítek zatím není k dispozici
+- RHX30 Pro: výkonová mapa `../PW Helios/PW30-DKXLRE3-H8 Performance curve.xls`; energetický štítek zatím není k dispozici
   (řada Helios 6–16 kW a 20 kW zatím nemá plné výkonové mapy — jen nominální body a KEYMARK)
 
-**Značení:** ve výstupech se uvádí jen REO označení (RH X50, RH X40) — typové označení
+**Značení:** ve výstupech se uvádí jen REO označení (RH X50, RHX30 Pro) — typové označení
 původního výrobce ani název jeho řady se nikde neobjevuje.
 
 ## Srovnávací sekce v artefaktu
-- **SCOP** (RH X40 vs. RH X50, RH060 referenčně): KEYMARK EN 14825 + přepočet na české klima —
+- **SCOP** (RHX30 Pro vs. RH X50, RH060 referenčně): KEYMARK EN 14825 + přepočet na české klima —
   data převzata z `~/Claude/Projekty/porovnani-x50-rh060/src/keymark_model.py`.
 - **Hlučnost** (všech 6 modelů): L_WA z ErP dat / štítků, akustický tlak z ceníků výrobce,
   odhad tlaku v odstupu 3/5/10 m dopočtený (volné pole).

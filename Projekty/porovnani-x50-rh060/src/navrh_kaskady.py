@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Návrh kaskády TČ pro bytový dům: RH X50 / RH X40 (i smíšené) a pro srovnání RH060.
+"""Návrh kaskády TČ pro bytový dům: RH X50 / RHX30 Pro (i smíšené) a pro srovnání RH060.
 
 Vstup: tepelná ztráta domu (kW, pro spotřebu energie) a potřebný výkon při A−15/W55 (kW, pro dimenzování).
 Výstup: varianty seřazené podle výhodnosti — nákup, prodej, marže, náklady zákazníka za 15 let, SPF, záloha.
@@ -19,14 +19,14 @@ import keymark_model as km
 # Ceny za kus bez DPH — nákup (vstup uživatele 27. 9. 2026) a prodej (ceník)
 PRICE = {
     "X50":   {"nakup": 110_000, "prodej": 430_000},
-    "X40":   {"nakup": 100_000, "prodej": 330_000},
+    "X30":   {"nakup": 100_000, "prodej": 330_000},
     "RH060": {"nakup": 55_000,  "prodej": 150_000},   # faktura US$ 2 398 + ≈7 % doprava a clo (jako u X50)
 }
 CAP55 = {u: km.U[u]["cap15"][55] for u in PRICE}      # výkon A−15/W55 z výkonových map: 24,8 / 19,0 / 11,4 kW
-LW = {"X50": 65, "X40": 59, "RH060": 54}               # akustický výkon dB(A) při 55 °C
-AREA = {"X50": 1.195 * 0.98, "X40": 1.55 * 0.63, "RH060": 1.08 * 0.48}   # půdorys m²
-KG = {"X50": 370, "X40": 328, "RH060": 170}
-NAME = {"X50": "RH X50", "X40": "RH X40", "RH060": "RH060"}
+LW = {"X50": 65, "X30": 59, "RH060": 54}               # akustický výkon dB(A) při 55 °C
+AREA = {"X50": 1.195 * 0.98, "X30": 1.55 * 0.63, "RH060": 1.08 * 0.48}   # půdorys m²
+KG = {"X50": 370, "X30": 328, "RH060": 170}
+NAME = {"X50": "RH X50", "X30": "RHX30 Pro", "RH060": "RH060"}
 MAX_N = 8
 
 
@@ -37,9 +37,9 @@ def variants(need, tol=0.02):
     out = []
     for a, b in itertools.product(range(MAX_N + 1), repeat=2):
         if 0 < a + b <= MAX_N:
-            cap = a * CAP55["X50"] + b * CAP55["X40"]
-            if cap >= need and all(cap - CAP55[u] < need for u, k in (("X50", a), ("X40", b)) if k):
-                out.append({"X50": a, "X40": b})
+            cap = a * CAP55["X50"] + b * CAP55["X30"]
+            if cap >= need and all(cap - CAP55[u] < need for u, k in (("X50", a), ("X30", b)) if k):
+                out.append({"X50": a, "X30": b})
     n = math.ceil(need / CAP55["RH060"] - 1e-9)
     out.append({"RH060": n})
     return out
@@ -111,7 +111,7 @@ def main():
     xx = [r for r in ok if "RH060" not in r["mix"]]
     if xx and "RH060" in rec["mix"]:
         bx = min(xx, key=lambda r: r["zakaznik15"])
-        print(f"Nejlepší jen z RH X50/RH X40: {label(bx['mix'])} — marže {fmt(bx['marze'])} Kč, "
+        print(f"Nejlepší jen z RH X50/RHX30 Pro: {label(bx['mix'])} — marže {fmt(bx['marze'])} Kč, "
               f"zákazník za 15 let {fmt(bx['zakaznik15'])} Kč (+{100*(bx['zakaznik15']/best_c-1):.1f} %).")
     print("Pravidlo: nejvyšší marže mezi variantami do +3 % od nejlevnější pro zákazníka, se zálohou ≥ 50 %.")
 

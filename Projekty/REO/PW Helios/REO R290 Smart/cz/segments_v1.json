@@ -55,7 +55,7 @@
 "lh": 1.15,
 "align": "left",
 "color": 3042099,
-"html": "<b>RH06 – RH16  ·  RHX30  ·  RHX40</b>"
+"html": "<b>RH06 – RH16  ·  RHX20 Pro  ·  RHX30 Pro</b>"
 },
 {
 "id": "0_2",
@@ -8156,7 +8156,7 @@
 "lh": 1.15,
 "align": "center",
 "color": 0,
-"html": "RHX30"
+"html": "RHX20 Pro"
 },
 {
 "id": "11_103",
@@ -8185,7 +8185,7 @@
 "lh": 1.15,
 "align": "center",
 "color": 0,
-"html": "RHX40"
+"html": "RHX30 Pro"
 },
 {
 "id": "11_104",
@@ -10147,7 +10147,7 @@
 "lh": 1.15,
 "align": "left",
 "color": 0,
-"html": "<b>RHX30</b>"
+"html": "<b>RHX20 Pro</b>"
 },
 {
 "id": "15_1",
@@ -10176,7 +10176,7 @@
 "lh": 1.15,
 "align": "left",
 "color": 0,
-"html": "<b>RHX40</b>"
+"html": "<b>RHX30 Pro</b>"
 },
 {
 "id": "16_0",
@@ -10292,7 +10292,7 @@
 "lh": 1.15,
 "align": "left",
 "color": 0,
-"html": "<b>RHX30</b>"
+"html": "<b>RHX20 Pro</b>"
 },
 {
 "id": "18_0",
@@ -10321,7 +10321,7 @@
 "lh": 1.15,
 "align": "left",
 "color": 0,
-"html": "<b>RHX40</b>"
+"html": "<b>RHX30 Pro</b>"
 },
 {
 "id": "19_0",
@@ -15349,7 +15349,7 @@
 "lh": 1.15,
 "align": "center",
 "color": 0,
-"html": "RHX30"
+"html": "RHX20 Pro"
 },
 {
 "id": "30_64",
@@ -15378,7 +15378,7 @@
 "lh": 1.15,
 "align": "center",
 "color": 0,
-"html": "RHX40"
+"html": "RHX30 Pro"
 },
 {
 "id": "30_69",
@@ -15911,7 +15911,7 @@
 "lh": 1.15,
 "align": "left",
 "color": 0,
-"html": "<b>RHX30/RHX40</b>"
+"html": "<b>RHX20 Pro / RHX30 Pro</b>"
 },
 {
 "id": "40_0",

@@ -14,8 +14,8 @@ návodu k invertorovému tepelnému čerpadlu vzduch–voda s chladivem R290. Č
    používej krátké odborné tvary a běžné zkratky (např. „Topný výkon (kW)", „Max. proud (A)").
 3. **Neměň:** čísla, jednotky, rozsahy, kódy chyb (Er.ocb, E1…), názvy parametrů VELKÝMI_PÍSMENY
    s podtržítky (HOT_WATER_TEMP_SET, ZONE_A_HEAT_CURVE…), zkratky signálů a komponent (TWout2, T1S, AHS, IBH, TBH,
-   PUMPo, S3V1, SV1, SG, EVU, MPPT, PFC, PWM, IPM, EEV, SCBA, ATEX, Uoc, Vmpp, DN25), názvy modelů (RH06…RH16, RHX30,
-   RHX40, R290, PZ46M), názvy aplikací (Huilian Smart, Tuya, APP STORE, GOOGLE PLAY).
+   PUMPo, S3V1, SV1, SG, EVU, MPPT, PFC, PWM, IPM, EEV, SCBA, ATEX, Uoc, Vmpp, DN25), názvy modelů (RH06…RH16, RHX20 Pro,
+   RHX30 Pro, R290, PZ46M), názvy aplikací (Huilian Smart, Tuya, APP STORE, GOOGLE PLAY).
 4. **Texty z displeje ovladače a aplikace** (tlačítka a položky menu v uvozovkách nebo zjevně z UI, např. "SET", "OK",
    "Display Settings", "Force ON TBH", "Smart mode", "Add Device", "Home", "Logout", "Sterilization Timer") ponech
    **anglicky v uvozovkách**, protože displej je anglicky; kolem nich přelož větu. Cesty v menu

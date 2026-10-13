@@ -116,7 +116,7 @@ if "--no-pdf" not in sys.argv:
 # --- artefakt (PDF k tisku vložené jako base64, stahují se přes capability `downloads`)
 def pdfs_js():
     out = {}
-    # artefakt REO R290 = jen domovní řada (RH X40/X50 a jejich srovnání SCOP do něj nepatří)
+    # artefakt REO R290 = jen domovní řada (RHX30 Pro / RH X50 a jejich srovnání SCOP do něj nepatří)
     for key, name, slug in [m for m in models if not m[0].startswith("RHX")]:
         f = ROOT / "pdf" / (f"{slug}_REO-HEATING.pdf" if key == "_cmp" else f"{slug}_Heating_REO-HEATING.pdf")
         if f.exists():

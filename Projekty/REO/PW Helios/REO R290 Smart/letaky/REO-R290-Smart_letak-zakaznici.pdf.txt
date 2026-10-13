@@ -336,22 +336,24 @@ o
 So
 lárn
 í panely
-Tepl
-o do domu
 Přímo do čerpadla – bez st
 řídače a bat
 erie
-SC
-můž
-OP 5,29 = z 1 kWh elekt
-ř
-iny až 5,29 kWh
+Tepl
+o do domu
 t
 epla. Zby
 t
 ek bere čerpadl
 o zdarma ze vzd
 u
+u
+ch
+SC
+můž
+OP 5,29 = z 1 kWh elekt
+ř
+iny až 5,29 kWh
 e dodat slu
 nce.
 Velké značky
@@ -396,16 +398,14 @@ t
 ovo
 ltaick
 o
-u
 t
 li
 elné, zapoj
 í
 je elektriká
 ř.
-u
-ch
 – a tu 1 kWh mu
+u
 elektrárn
 u se
 Výb
@@ -434,12 +434,12 @@ kW cca 12 kW
 RH14 14 kW 19,3 kW cca 14 kW
 RH16 16 kW22,0
 kW cca 16 kW
-RHX30
-2
+RHX2
+0 Pro 2
 kW28,0
 kW cca 2
 kW
-RHX40 30
+RHX30 Pro 30
 kW 40,0
 kW cca 30
 kW

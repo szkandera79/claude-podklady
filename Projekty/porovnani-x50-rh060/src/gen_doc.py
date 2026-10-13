@@ -14,8 +14,8 @@ sys.path.insert(0, str(HERE))
 import keymark_model as km
 
 R = json.loads((HERE / "results2.json").read_text())
-ORDER = ["X50", "X40", "X20", "RH060"]
-CLS = {"X50": "x", "X40": "h", "X20": "g", "RH060": "r"}
+ORDER = ["X50", "X30", "X20", "RH060"]
+CLS = {"X50": "x", "X30": "h", "X20": "g", "RH060": "r"}
 NAME = {u: km.U[u]["name"] for u in ORDER}
 fmt = lambda v: f"{v:,.0f}".replace(",", " ")
 dec = lambda v, d=2: f"{v:.{d}f}".replace(".", ",")
@@ -77,12 +77,12 @@ def price_table():
             '<th class="n">Max. výkon<br>A7/W35</th><th class="n">Kč/kW<br>A7/W35</th>'
             '<th class="n">Výkon<br>A−15/W35</th><th class="n">Výkon<br>A−15/W55</th><th class="n">Kč/kW<br>A−15/W55</th>'
             '<th class="n">Výkon<br>A−15/W65</th><th class="n">Kč/kW<br>A−15/W65</th></tr></thead><tbody>']
-    lst = {"X50": "US$ 4 800", "X40": "3 680 €", "X20": "2 940 €", "RH060": "US$ 2 398"}
+    lst = {"X50": "US$ 4 800", "X30": "3 680 €", "X20": "2 940 €", "RH060": "US$ 2 398"}
     for u in ORDER:
         d = km.U[u]
         c = d["cap15"]
         est = "≈ " if u == "X20" else ""
-        est65 = "" if u in ("X50", "X40") else "≈ "
+        est65 = "" if u in ("X50", "X30") else "≈ "
         rows.append(f'<tr><td>{tag(u)}</td><td class="n">{lst[u]}</td><td class="n">{fmt(round(d["price"], -2))}</td>'
                     f'<td class="n">{dec(d["maxA7"],1)} kW</td><td class="n">{fmt(d["price"]/d["maxA7"])}</td>'
                     f'<td class="n">{est}{dec(c[35],1)} kW</td><td class="n">{est}{dec(c[55],1)} kW</td>'

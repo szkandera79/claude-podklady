@@ -4,7 +4,7 @@
 Invertorové tepelné čerpadlo
 REO R290 Smart
 NÁVOD K INSTALACI A OBSLUZE
-RH06 – RH16 · RHX30 · RHX40
+RH06 – RH16 · RHX20 Pro · RHX30 Pro
 DŮLEŽITÉ BEZPEČNOSTNÍ POKYNY
 PŘEČTĚTE SI A DODRŽUJTE VŠECHNY POKYNY
 TYTO POKYNY USCHOVEJTE
@@ -469,7 +469,7 @@ vody (℃) 25~75℃ (vytápění)
 Provozní teplota
 vody (℃) 5~25℃ (chlazení)
 Model
-RHX30 RHX40
+RHX20 Pro RHX30 Pro
 Vytápění – venk. teplota (DB/WB): 7/6℃, teplota vody (vstup/výstup): 30/35℃
 Topný výkon – rozsah (kW)
 10.2~28.0 12.7~40.0
@@ -575,8 +575,8 @@ Vstup
 DN25
 - 14 -
 --- strana 16 ---
-RHX30
-RHX40
+RHX20 Pro
+RHX30 Pro
 - 15 -
 --- strana 17 ---
 2.3 Rozpad dílů
@@ -601,7 +601,7 @@ Sběrač kapaliny Oběžné kolo ventilátoru
 Čtyřcestný ventil Přední panel
 - 16 -
 --- strana 18 ---
-RHX30
+RHX20 Pro
 Č. Náhradní díl Přední mřížka Vodicí deska vzduchu Držák motoru Základový rám Střední přepážka Tlumicí deska Kryt kompresoru Deskový výměník Kompresor Odlučovač kapaliny v sání Sběrač kapaliny Pravý boční panel Oběhové čerpadlo Odvzdušňovací ventil Čtyřcestný ventil Tlumič Elektronický expanzní ventil Filtr Vysokotlaký spínač Nízkotlaký spínač Servisní ventilek Snímač úniku chladiva Průtokový spínač
 Měděná přípojka s úchytem
 Č. - 17 -
@@ -629,7 +629,7 @@ Motor ventilátoru
 Oběžné kolo ventilátoru
 Levý boční panel
 --- strana 19 ---
-RHX40
+RHX30 Pro
 Č. Náhradní díl Přední mřížka Vodicí deska vzduchu Držák motoru Základový rám Střední přepážka Tlumicí deska Kryt kompresoru Držák deskového výměníku Deskový výměník Kompresor Odlučovač kapaliny v sání Sběrač kapaliny Pravý boční panel Oběhové čerpadlo Odvzdušňovací ventil Čtyřcestný ventil Tlumič Elektronický expanzní ventil Filtr Vysokotlaký spínač Nízkotlaký spínač Servisní ventilek Snímač úniku chladiva Průtokový spínač
 Č. - 18 -
 Náhradní díl
@@ -1016,9 +1016,9 @@ RH14
 380V/3Ph/50/60Hz 12.7+13.8 40 6mm²
 RH16
 380V/3Ph/50/60Hz 15.8+13.8 40 10mm²
-RHX30
+RHX20 Pro
 380V/3Ph/50-60Hz 19.7 32 6mm²
-RHX40
+RHX30 Pro
 380V/3Ph/50-60Hz 30.4 40 6mm²
 1fázové napájení
 3fázové napájení
@@ -2743,7 +2743,7 @@ O N
 O FF
 O N
 O FF
-RHX30/RHX40
+RHX20 Pro/RHX30 Pro
 --- strana 40 ---
 803004-0722
 M PPT Board Optional

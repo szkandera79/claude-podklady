@@ -57,7 +57,7 @@ final class SpeechRecognizerService {
         // Odborné a vlastní výrazy uživatele — zvyšují šanci, že je rozpoznávání zachytí správně.
         req.contextualStrings = [
             "Claude", "Claude Code", "GitHub", "Anthropic", "ThermaVera", "REO HEATING", "REO", "R290 Smart",
-            "RH X50", "RH X40", "RH060", "tepelné čerpadlo", "tepelná čerpadla", "kotelna", "zelená kotelna",
+            "RH X50", "RHX30 Pro", "RH060", "tepelné čerpadlo", "tepelná čerpadla", "kotelna", "zelená kotelna",
             "kaskáda", "akumulace", "akumulační nádrž", "ohřev teplé vody", "TUV", "ÚT", "SVJ", "bytový dům",
             "bytové družstvo", "CZT", "teplárna", "fotovoltaika", "bivalence", "topná křivka", "COP", "SCOP",
             "kilowatt", "megawatthodina", "návratnost", "dotace", "Nová zelená úsporám", "ETS2", "Veolia",

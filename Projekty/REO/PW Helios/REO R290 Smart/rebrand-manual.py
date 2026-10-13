@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Rebranding návodu výrobce na řadu REO R290 Smart: PW06–PW16 / PW20 / PW30 → REO HEATING RH06–RH16 / RHX30 / RHX40.
+"""Rebranding návodu výrobce na řadu REO R290 Smart: PW06–PW16 / PW20 / PW30 → REO HEATING RH06–RH16 / RHX20 Pro / RHX30 Pro.
 
 Spouštět odkudkoli:
     python3 "REO R290 Smart/rebrand-manual.py"
 
 Co skript dělá:
   * modelové kódy PWxx-DKXLRE1-H8 / -DKXLRE3-H8 → RHxx (1-phase) / RHxx (3-phase),
-    PW20 → RHX30, PW30 → RHX40 (typový suffix výrobce se neuvádí; RHX30/RHX40 jsou jen 3f),
+    PW20 → RHX20 Pro, PW30 → RHX30 Pro (typový suffix výrobce se neuvádí; RHX20 Pro / RHX30 Pro jsou jen 3f),
   * „power world’s services“ v tabulkách chyb → „REO HEATING services“,
   * každý dotčený span se vyredaguje a vysází znovu (Helvetica = metricky Arial,
     Times Bold v nadpisech schémat), v tabulkách centrovaně na původní střed buňky,
@@ -26,9 +26,9 @@ LOGO = os.path.join(DIR, 'logo-reoheating.png')
 GREEN = (0x2E / 255, 0x6B / 255, 0x33 / 255)
 SERIES = 'REO R290 Smart'
 COVER_LINE = SERIES                                   # zelený řádek pod nadpisem
-MODELS_LINE = 'RH06 – RH16  ·  RHX30  ·  RHX40'          # modely pod logem
+MODELS_LINE = 'RH06 – RH16  ·  RHX20 Pro  ·  RHX30 Pro'          # modely pod logem
 TABLE_PAGES = {9, 10, 11, 30}  # 0-based: specifikace + tabulka napájení → centrovat
-BIG = {'20': 'RHX30', '30': 'RHX40'}
+BIG = {'20': 'RHX20 Pro', '30': 'RHX30 Pro'}
 
 
 def rename(text):
@@ -81,6 +81,8 @@ for pno, bbox, origin, new, font, size, rgb, center in jobs:
     if not new:
         continue
     x = origin.x
+    if pno == 30:  # tabulka napájení: úzký sloupec modelu (≈ 52 pt) → „RHX20 Pro“ zmenšit, ať nepřeteče
+        size = min(size, size * 46 / fitz.get_text_length(new, fontname=font, fontsize=size))
     if center:
         x = (bbox.x0 + bbox.x1) / 2 - fitz.get_text_length(new, fontname=font, fontsize=size) / 2
     doc[pno].insert_text((x, origin.y), new, fontname=font, fontsize=size, color=rgb)
@@ -100,10 +102,10 @@ cover.insert_text((56.6, 172.0 + w * 582 / 1610 + 22), MODELS_LINE, fontname='ar
 doc.set_toc([[lvl, rename(t) or t, p] for lvl, t, p in doc.get_toc()])
 
 doc.set_metadata({
-    'title': 'REO R290 Smart (RH06–RH16, RHX30, RHX40) — Operating Instruction Manual',
+    'title': 'REO R290 Smart (RH06–RH16, RHX20 Pro, RHX30 Pro) — Operating Instruction Manual',
     'author': 'REO HEATING',
     'subject': 'DC inverter air-to-water heat pump R290, operating instruction manual',
-    'keywords': 'REO R290 Smart, RH06, RH08, RH10, RH12, RH14, RH16, RHX30, RHX40, REO HEATING, R290, heat pump',
+    'keywords': 'REO R290 Smart, RH06, RH08, RH10, RH12, RH14, RH16, RHX20 Pro, RHX30 Pro, REO HEATING, R290, heat pump',
     'creator': 'REO HEATING',
     'producer': 'REO HEATING',
 })
