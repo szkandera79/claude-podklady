@@ -411,7 +411,7 @@ function labelPage(M, ASSETS){
 
 function renderSheet(root, key, ASSETS){
   const M = MODELS[key];
-  const pages = [{ data:M.D, temps:[35,45,55], series:SERIES, yCap:M.yCap, yCop:[1,7,1],
+  const pages = [{ data:M.D, temps:[35,45,55], series:SERIES, yCap:M.yCap, yCop:M.yCop || [1,7,1],
                    head:['Heating','Heating performance data · air-to-water heat pump'] }];
   if (M.DHi) pages.push({ data:M.DHi, temps:[60,65,70,75], series:SERIES_HI, yCap:M.yCapHi, yCop:M.yCopHi,
                           head:['Heating 60–75 °C','High-temperature performance data · air-to-water heat pump'] });

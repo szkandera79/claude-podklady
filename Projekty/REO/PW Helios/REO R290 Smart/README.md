@@ -69,3 +69,16 @@ REO-03H/05H) a netvrdit, že nahrazuje vnitřní hydraulické zapojení (trojces
 Nabízí se RH06 1F (6 kW, jen jednofázový) + třífázové RH08–RH16 3F (+ RHX20 Pro / RHX30 Pro); ostatní 1F verze se neuvádějí → max. SCOP 35 °C = 5,29 (RH14 3F).
 Artefakt Marketing REO HEATING (náhledy + PDF): https://claude.ai/artifact/8zGFmzL6gnPFsy8zTqRjGz — po změně letáků přenahrát (scratchpad/marketing nebo nová kopie).
 V zákaznické tabulce: jmenovitý výkon (≈ tepelná ztráta domu) + max. výkon A7/W35. Ilustrace „topí přímo ze slunce“ = `letaky/ilustrace.py` (SVG).
+
+## Výkonové mapy a datové listy (13. 10. 2026)
+Výrobce dodal výkonové mapy (`../R290 Helios Performance Curve/*.xls`, část i PDF): 7 teplot vody 35–75 °C ×
+15 venkovních teplot −25…+20/21 °C, MAX/MIN (RHX i „Standard“), + chlazení W7/W18 a ohřev TUV.
+- `data/parse_maps.py` → `data/vykonove-mapy.json` (všechny mapy, REO označení). Mapy 1F a 3F jsou u RH08/RH10
+  společné; RH16 1F vs 3F se liší jen u W55+ při nízkých teplotách (< 1 kW).
+- `datove-listy/build.py` → `datove-listy/pdf/<model>_Heating_REO-R290-Smart.pdf` (2 strany A4, anglicky:
+  35/45/55 °C + 60–75 °C). Vzhled sdílí `../../R290-datove-listy/src` (sheet.js, sheet.css, logo).
+  Modely: RH06 1F, RH08–RH16 3F, RHX20 Pro, RHX30 Pro. Publikováno v artefaktu Manuály.
+- Chybí mapy RH12 1F a **RH14 3F** (datový list RH14 3F zatím z mapy RH14 1F) a RH08/14 v PDF.
+- Anomálie v datech výrobce (ponecháno 1:1): RH10 W45 MAX při +21 °C příkon 2,78 kW → COP 4,78 (při +15 °C 3,69).
+- Energetické štítky v listech zatím nejsou (štítky výrobce v `../Helios Energy Label and ERP report.zip` nesou
+  jeho značku a kódy → nutný rebrand jako u RH X50).

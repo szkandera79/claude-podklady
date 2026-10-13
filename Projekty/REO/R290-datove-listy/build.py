@@ -40,7 +40,7 @@ CHECK_JS = """
 %s
 let bad = [];
 for (const [key, M] of Object.entries(MODELS)) {
-  const pages = [[M.D, [35,45,55], M.yCap, [1,7,1]]];
+  const pages = [[M.D, [35,45,55], M.yCap, M.yCop || [1,7,1]]];
   if (M.DHi) pages.push([M.DHi, [60,65,70,75], M.yCapHi, M.yCopHi]);
   for (const [D, temps, yCap, yCop] of pages)
     for (const w of temps) for (const m of ['MAX','MIN'])
