@@ -1,0 +1,78 @@
+[Text vytažený z PW20-DKXLRE3-H8 SVT_EU Regulation 811 2013(Avg.33C&55C).xlsx]
+
+--- list sheet1 ---
+Technical parameters for heat pump space heaters and heat pump combination heaters
+Model(s):    | PW20-DKXLRE3-H8
+Air-to-water heat pump: | YES
+Water-to-water heat pump:  | NO
+Brine-to-water heat pump:  | NO
+Low-temperature heat pump:  | NO
+Equipped with a supplementary heater:  | NO
+Heat pump combination heater:  | NO
+Parameters shall be declared for medium-temperature application, except for low-temperature heat pumps. For low-temperature heat pumps, parameters shall be declared for low-temperature application.
+Parameters shall be declared for average, colder and warmer climate conditions.
+Item | Symbol | Value | Unit | Item | Symbol | Value | Unit
+Rated heat output  (3) | Prated | 20 | kW | Seasonal space heating energy efficiency | ηs  | 206.3 | %
+Declared capacity for heating for part load at indoor temperature 20 °C and outdoor temperature Tj  | Declared coefficient of performance or primary energy ratio for part load at indoor temperature 20 °C and outdoor temperature Tj 
+Tj = – 7 °C | Pdh | 17.746 | kW | Tj = – 7 °C | COPd or PERd | 2.59 | – 
+Tj = + 2 °C | Pdh | 10.802 | kW | Tj = + 2 °C | COPd or PERd | 5.31 | –
+Tj = + 7 °C | Pdh | 6.944 | kW | Tj = + 7 °C | COPd or PERd | 7.61 | –
+Tj = + 12 °C | Pdh | 3.086 | kW | Tj = + 12 °C | COPd or PERd | 8.92 | – 
+Tj = bivalent temperature | Pdh | 17.746 | kW | Tj = bivalent temperature | COPd or PERd | 2.59 | – 
+Tj = operation limit temperature | Pdh | 20.061 | kW | Tj = operation limit temperature | COPd or PERd | 2.26 | – 
+For air-to-water heat pumps: Tj = – 15 °C (if TOL < – 20 °C) | Pdh | _ | kW | For air-to-water heat pumps: Tj = – 15 °C (if TOL < – 20 °C) | COPd or PERd | –  | – 
+Bivalent temperature | Tbiv  | -7 | °C | For air-to-water heat pumps: Operation limit temperature | TOL | -10 | °C
+Cycling interval capacity for heating | Pcych | _ | kW | Cycling interval efficiency | COPcyc or PERcyc | –  |  %
+Degradation co-efficient (4) | Cdh | 0.9 | — | Heating water operating limit temperature | WTOL | 55 | °C
+Power consumption in modes other than active mode | Supplementary heater
+Off mode | POFF  | 0.015 | kW | Rated heat output (4) | Psup | –  | kW
+Thermostat-off mode | PTO  | 0.015 | kW | Type of energy input | – 
+Standby mode | PSB  | 0.015 | kW
+Crankcase heater mode | PCK  | 0.058 | kW
+Other items
+Capacity control | variable | For air-to-water heat pumps: Rated air flow rate, outdoors | — | — | m3/h
+Sound power level, indoors/outdoors | LWA  | 00/50 | dB | For water- or brine-to-water heat pumps: Rated brine or water flow rate, outdoor heat exchanger | — | — | m3/h
+Annual energy consumption | QHE  | 7922 | kWh or GJ
+For heat pump combination heater:
+Declared load profile | - | Water heating energy efficiency | ηwh  | - | %
+Daily electricity consumption | Qelec  | - | kWh | Daily fuel consumption | Qfuel  | - | kWh
+Annual electricity consumption | AEC | - | kWh | Annual fuel consumption | AFC | - | GJ
+Contact details | Ria Trade, s.r.o. Korunní 2569/108, 101 00, Czech Republic www.reoheating.cz
+--- list sheet2 ---
+Technical parameters for heat pump space heaters and heat pump combination heaters
+Model(s):    | PW20-DKXLRE3-H8
+Air-to-water heat pump: | YES
+Water-to-water heat pump:  | NO
+Brine-to-water heat pump:  | NO
+Low-temperature heat pump:  | NO
+Equipped with a supplementary heater:  | NO
+Heat pump combination heater:  | NO
+Parameters shall be declared for medium-temperature application, except for low-temperature heat pumps. For low-temperature heat pumps, parameters shall be declared for low-temperature application.
+Parameters shall be declared for average, colder and warmer climate conditions.
+Item | Symbol | Value | Unit | Item | Symbol | Value | Unit
+Rated heat output  (3) | Prated | 20 | kW | Seasonal space heating energy efficiency | ηs  | 156 | %
+Declared capacity for heating for part load at indoor temperature 20 °C and outdoor temperature Tj  | Declared coefficient of performance or primary energy ratio for part load at indoor temperature 20 °C and outdoor temperature Tj 
+Tj = – 7 °C | Pdh | 17.628 | kW | Tj = – 7 °C | COPd or PERd | 2.06 | – 
+Tj = + 2 °C | Pdh | 10.73 | kW | Tj = + 2 °C | COPd or PERd | 3.99 | –
+Tj = + 7 °C | Pdh | 6.898 | kW | Tj = + 7 °C | COPd or PERd | 5.62 | –
+Tj = + 12 °C | Pdh | 3.066 | kW | Tj = + 12 °C | COPd or PERd | 6.78 | – 
+Tj = bivalent temperature | Pdh | 17.628 | kW | Tj = bivalent temperature | COPd or PERd | 2.06 | – 
+Tj = operation limit temperature | Pdh | 19.927 | kW | Tj = operation limit temperature | COPd or PERd | 1.7 | – 
+For air-to-water heat pumps: Tj = – 15 °C (if TOL < – 20 °C) | Pdh | _ | kW | For air-to-water heat pumps: Tj = – 15 °C (if TOL < – 20 °C) | COPd or PERd | –  | – 
+Bivalent temperature | Tbiv  | -7 | °C | For air-to-water heat pumps: Operation limit temperature | TOL | -10 | °C
+Cycling interval capacity for heating | Pcych | _ | kW | Cycling interval efficiency | COPcyc or PERcyc | –  |  %
+Degradation co-efficient (4) | Cdh | 0.9 | — | Heating water operating limit temperature | WTOL | 70 | °C
+Power consumption in modes other than active mode | Supplementary heater
+Off mode | POFF  | 0.015 | kW | Rated heat output (4) | Psup | –  | kW
+Thermostat-off mode | PTO  | 0.015 | kW | Type of energy input | – 
+Standby mode | PSB  | 0.015 | kW
+Crankcase heater mode | PCK  | 0.058 | kW
+Other items
+Capacity control | variable | For air-to-water heat pumps: Rated air flow rate, outdoors | — | — | m3/h
+Sound power level, indoors/outdoors | LWA  | 00/56 | dB | For water- or brine-to-water heat pumps: Rated brine or water flow rate, outdoor heat exchanger | — | — | m3/h
+Annual energy consumption | QHE  | 10358 | kWh or GJ
+For heat pump combination heater:
+Declared load profile | - | Water heating energy efficiency | ηwh  | - | %
+Daily electricity consumption | Qelec  | - | kWh | Daily fuel consumption | Qfuel  | - | kWh
+Annual electricity consumption | AEC | - | kWh | Annual fuel consumption | AFC | - | GJ
+Contact details | Ria Trade, s.r.o. Korunní 2569/108, 101 00, Czech Republic www.reoheating.cz
