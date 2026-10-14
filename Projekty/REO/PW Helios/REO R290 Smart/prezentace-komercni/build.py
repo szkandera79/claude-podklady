@@ -199,37 +199,128 @@ for sh in prs.slides[43].shapes:
         sh.left = int(cx - sh.width / 2)
         sh.text_frame.word_wrap = False
 
-# ---------------------------------------------------------------- snímek 1: bílé pozadí, zelené písmo
+# ---------------------------------------------------------------- snímky 1 a 44: bílé pozadí, zelené písmo
 # skryje grafiku layoutu (zelená mapa + bílé logo), nastaví bílé pozadí a vloží barevné logo REO HEATING
-s1 = prs.slides[0]
-s1._element.set('showMasterSp', '0')
-s1.background.fill.solid()
-s1.background.fill.fore_color.rgb = RGBColor(255, 255, 255)
-logo = os.path.join(DIR, 'media_out', 'image3.png')
-lw = Emu(1588444)
-pic = s1.shapes.add_picture(logo, Emu(10051576), Emu(344557), width=lw)
-pic._element.getparent().remove(pic._element)
-s1.shapes._spTree.insert(2, pic._element)                  # za kořen stromu, pod texty
-for sh in s1.shapes:
-    if not sh.has_text_frame:
-        continue
-    for rpr in sh._element.iter(A('rPr'), A('endParaRPr')):
-        for el in rpr.findall(A('solidFill')) + rpr.findall(A('effectLst')):
-            rpr.remove(el)
-        fill = etree.SubElement(rpr, A('solidFill'))
-        etree.SubElement(fill, A('srgbClr')).set('val', GREEN_HEX)
-        rpr.insert(0, fill)                                # solidFill musí být v rPr před latin/ea/cs
-for el in s1._element.iter(qn('p:cNvPr')):
-    if el.get('descr') is None and el.getparent().tag == qn('p:nvPicPr'):
-        el.set('descr', 'Logo REO HEATING')
+def white_slide(s1):
+    s1._element.set('showMasterSp', '0')
+    s1.background.fill.solid()
+    s1.background.fill.fore_color.rgb = RGBColor(255, 255, 255)
+    logo = os.path.join(DIR, 'media_out', 'image3.png')
+    lw = Emu(1588444)
+    pic = s1.shapes.add_picture(logo, Emu(10051576), Emu(344557), width=lw)
+    pic._element.getparent().remove(pic._element)
+    s1.shapes._spTree.insert(2, pic._element)                  # za kořen stromu, pod texty
+    for sh in s1.shapes:
+        if not sh.has_text_frame:
+            continue
+        for rpr in sh._element.iter(A('rPr'), A('endParaRPr')):
+            for el in rpr.findall(A('solidFill')) + rpr.findall(A('effectLst')):
+                rpr.remove(el)
+            fill = etree.SubElement(rpr, A('solidFill'))
+            etree.SubElement(fill, A('srgbClr')).set('val', GREEN_HEX)
+            rpr.insert(0, fill)                                # solidFill musí být v rPr před latin/ea/cs
+    for el in s1._element.iter(qn('p:cNvPr')):
+        if el.get('descr') is None and el.getparent().tag == qn('p:nvPicPr'):
+            el.set('descr', 'Logo REO HEATING')
+
+
+for sl in (prs.slides[0], prs.slides[43]):          # titulní a závěrečný snímek
+    white_slide(sl)
 
 # ---------------------------------------------------------------- snímek 4: hodnoty v ikonách infografiky
-# max. teplota vody: výrobce v ikoně uvádí 78 °C, v tabulce 25~75 °C → jednotně 75 (pravidlo REO R290 Smart)
-for t in prs.slides[3]._element.iter(A('t')):
-    if t.text and t.text.strip() == '78':
-        t.text = t.text.replace('78', '75')
-    elif t.text and t.text.strip() == '5.0':
-        t.text = t.text.replace('5.0', '5,0')
+# max. teplota vody: výrobce v ikoně uvádí 78 °C, v tabulce 25~75 °C → jednotně 75 (pravidlo REO R290 Smart); řeší images.py
+for grp in prs.slides[3]._element.iter(P('grpSp')):
+    if next(grp.iter(P('pic')), None) is None or grp.getparent().tag != P('spTree'):
+        continue
+    for sp in list(grp.iter(P('sp'))):                      # překryvy „78“/„5.0“: hodnoty jsou nově přímo v obrázku
+        sp.getparent().remove(sp)
+
+def text(slide, x, y, w, h, s, size=14, bold=False, color=INK, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP):
+    tb = slide.shapes.add_textbox(Inches(x), Inches(y), Inches(w), Inches(h))
+    tf = tb.text_frame
+    tf.word_wrap = True
+    tf.vertical_anchor = anchor
+    for side in ('left', 'right', 'top', 'bottom'):
+        setattr(tf, 'margin_' + side, Inches(0.04))
+    lines = s if isinstance(s, list) else [s]
+    for i, line in enumerate(lines):
+        para = tf.paragraphs[0] if i == 0 else tf.add_paragraph()
+        para.alignment = align
+        parts = line if isinstance(line, list) else [(line, bold)]
+        for t, b in parts:
+            r = para.add_run()
+            r.text = t
+            r.font.size = Pt(size)
+            r.font.bold = b
+            r.font.name = 'Arial'
+            r.font.color.rgb = color
+    return tb
+
+
+# ---------------------------------------------------------------- nový snímek 5: výkon při −15 °C (výkonové mapy výrobce)
+# vkládá se až po všech úpravách podle čísel snímků; fix_icons.py proto počítá s posunem o +1 od snímku 5
+MAPS = json.load(open(os.path.join(DIR, '..', 'data', 'vykonove-mapy.json')))
+ns = prs.slides.add_slide(prs.slides[3].slide_layout)
+for ph in list(ns.placeholders):
+    if ph.placeholder_format.type != 1:                     # ponechat jen nadpis
+        remove_shape(ph)
+ns.shapes.title.text = 'Výkon při −15 °C'
+for r in ns.shapes.title.text_frame.paragraphs[0].runs:
+    r.font.name = 'Times New Roman'
+t4 = next(sh for sh in prs.slides[3].shapes if sh.has_text_frame and sh.top < Inches(0.5))
+tt = ns.shapes.title
+tt.left, tt.top, tt.width, tt.height = t4.left, t4.top, Inches(10), t4.height
+fmt = lambda v, d=1: f'{v:.{d}f}'.replace('.', ',')
+# jednotný přehled: max. topný výkon a COP při A−15 pro W35 (podlahovka) a W55 (radiátory)
+HDR1 = ['Model', 'A−15 / W35', '', 'A−15 / W55', '']
+HDR2 = ['', 'Topný výkon', 'COP', 'Topný výkon', 'COP']
+rows = []
+for m in ('RHX20 Pro', 'RHX30 Pro'):
+    h = MAPS[m]['heating']
+    i = h['amb'].index(-15.0)
+    r = [m]
+    for w in ('35', '55'):
+        mx = h[w]['max']
+        r += [f'{fmt(mx["cap"][i])} kW', fmt(mx['cop'][i], 2)]
+    rows.append(r)
+W = [2.6, 2.3, 1.5, 2.3, 1.5]
+gt = ns.shapes.add_table(len(rows) + 2, len(W), Inches(1.55), Inches(1.6), Inches(sum(W)), Inches(2.6)).table
+for j, w in enumerate(W):
+    gt.columns[j].width = Inches(w)
+for i, row in enumerate([HDR1, HDR2] + rows):
+    for j, t in enumerate(row):
+        c = gt.cell(i, j)
+        c.fill.solid()
+        hdr = i < 2
+        c.fill.fore_color.rgb = GREEN if hdr else (TINT if j == 0 else RGBColor(255, 255, 255))
+        c.vertical_anchor = MSO_ANCHOR.MIDDLE
+        para = c.text_frame.paragraphs[0]
+        para.text = ''
+        para.alignment = PP_ALIGN.CENTER
+        r = para.add_run()
+        r.text = t
+        r.font.size = Pt(16 if hdr else 22 if j in (1, 3) else 18)
+        r.font.name = 'Arial'
+        r.font.bold = hdr or j in (0, 1, 3)
+        r.font.color.rgb = RGBColor(255, 255, 255) if hdr else (GREEN if j in (1, 3) else INK)
+gt.cell(0, 0).merge(gt.cell(1, 0))
+gt.cell(0, 1).merge(gt.cell(0, 2))
+gt.cell(0, 3).merge(gt.cell(0, 4))
+tblpr = gt._tbl.tblPr
+tblpr.set('firstRow', '0')
+tblpr.set('bandRow', '0')
+text(ns, 1.55, 4.4, 10.3, 0.75, [[('Číslo v označení (20 / 30) je jmenovitý výkon při A7/W35, ne výkon v mrazu. ', True),
+                                    ('Pro dimenzování podle tepelné ztráty používejte hodnoty z tabulky.', False)]],
+     15, color=GREEN)
+text(ns, 1.55, 5.3, 10.3, 1.2, [
+    'A−15 = venkovní vzduch −15 °C · W35 = výstupní voda 35 °C (podlahové vytápění) · '
+    'W55 = výstupní voda 55 °C (radiátory). Uveden maximální topný výkon jednotky.',
+    'Zdroj: výkonové mapy výrobce. Hodnoty jsou orientační; skutečný výkon závisí na podmínkách instalace.'],
+    12, color=GREY)
+lst = prs.slides._sldIdLst                                  # přesunout za snímek 4 (technické údaje)
+el = lst[-1]
+lst.remove(el)
+lst.insert(4, el)
 
 # ---------------------------------------------------------------- barvy, písma, alt texty
 def recolor(root, sno=0):

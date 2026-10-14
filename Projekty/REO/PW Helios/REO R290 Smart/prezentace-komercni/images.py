@@ -13,7 +13,7 @@ import shutil
 import zipfile
 
 import numpy as np
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from common import DIR, PREV, SRC
 
@@ -171,31 +171,69 @@ bar_logo('image4.png', tight_box(load('image4.png'), (262, 18, 368, 32), 40), (2
 bar_logo('image82.png', tight_box(load('image82.png'), (388, 16, 518, 31), 40), (232, 232, 234), (110, 110, 112))
 bar_logo('image86.png', tight_box(load('image86.png'), (510, 12, 645, 28), 40), (232, 232, 234), (110, 110, 112))
 
-# ---------------------------------------------------------------- 3) infografika R290 (image5)
-im = load('image5.png').convert('RGB')
-px = im.load()
-for x in range(175, 236):                       # logo výrobce v obláčku ikony IoT → bílá
+# ---------------------------------------------------------------- 3) infografika R290 (image5) – zelená varianta
+# velké R290: modrá → zelená (posun odstínu); štítky vpravo: zelené s bílým textem;
+# dlaždice dole: bílé pozadí, zelený okraj, piktogram zeleně, popisek černě; modrý pás pod dlaždicemi pryč
+GREEN_RGB = (46, 107, 51)
+src = load('image5.png').convert('RGB')
+px = src.load()
+for x in range(175, 236):                       # logo výrobce v obláčku ikony IoT → bílá (= součást obláčku)
     for y in range(383, 397):
         r, g, b = px[x, y]
         if b > r + 25:
             px[x, y] = (255, 255, 255)
-# modré štítky vpravo: HEATING / COOLING / DHW
-for (y0, y1), t in zip(((30, 101), (117, 187), (204, 273)), ('VYTÁPĚNÍ', 'CHLAZENÍ', 'TUV')):
-    tb = tight_box(im, (965, y0 + 8, 1175, y1 - 8), 120)
-    col = px[tb[0] - 6, (y0 + y1) // 2]
-    ImageDraw.Draw(im).rectangle((tb[0] - 3, tb[1] - 3, tb[2] + 3, tb[3] + 3), fill=col)
-    f = ImageFont.truetype(F['arial'], 10)
-    f = fit_font(F['arial'], t, 200, tb[3] - tb[1])
-    put_text(im, (952, tb[1] - 3, 1190, tb[3] + 4), t, f, (255, 255, 255))
-# popisky ikon dole
-for approx, t in (((440, 405, 522, 425), 'Třída ErP'), ((580, 405, 663, 426), 'Výstup vody'),
-                  ((718, 405, 800, 428), 'Nízký hluk')):
-    tb = tight_box(im, approx, 150)
+# popisky a hodnoty v dlaždicích: vymazat (interpolace podkladu) a vysázet česky bíle → pak se převezmou jako piktogram
+for approx, t, fnt in (((440, 405, 522, 425), 'Třída ErP', F['narrowb']), ((580, 405, 663, 426), 'Výstup vody', F['narrowb']),
+                       ((718, 405, 800, 428), 'Nízký hluk', F['narrowb']), ((595, 362, 634, 401), '75', F['narrowb']),
+                       ((855, 345, 935, 392), '5,0', F['narrowb'])):
+    tb = tight_box(src, approx, 150)
     x0, y0, x1, y1 = tb
-    fill_horizontal(im, (x0 - 1, y0 - 1, x1 + 1, y1 + 1), gap=2)
-    f = fit_font(F['narrowb'], t, x1 - x0 + 4, y1 - y0)
-    put_text(im, (x0 - 6, y0 - 3, x1 + 6, y1 + 4), t, f, (255, 255, 255))
-save(im, 'image5.png')
+    fill_horizontal(src, (x0 - 1, y0 - 1, x1 + 1, y1 + 1), gap=2)
+    f = fit_font(fnt, t, x1 - x0 + 4, y1 - y0)
+    put_text(src, (x0 - 6, y0 - 3, x1 + 6, y1 + 4), t, f, (255, 255, 255))
+a = np.asarray(src).astype(float)
+a_src = a
+W5, H5 = src.size
+out = np.full_like(a, 255.0)
+# a) velké R290 (x < 900, y < 300): modré pixely → zelené se zachovaným jasem (stín zůstane tmavší)
+reg = a[:300, :900]
+mx, mn = reg.max(2), reg.min(2)
+blue = (reg[..., 2] > reg[..., 0] + 40) & (mx > 40)
+lum = 0.3 * reg[..., 0] + 0.59 * reg[..., 1] + 0.11 * reg[..., 2]          # jas původní modré
+k = np.clip(lum / 110.0, 0.25, 1.35)[..., None]
+green = np.array([52, 130, 58], float)[None, None, :] * k
+alpha = np.clip((reg[..., 2] - reg[..., 0] - 20) / 60.0, 0, 1)[..., None]   # vyhlazené hrany písmen
+out[:300, :900] = np.where(blue[..., None], green * alpha + 255 * (1 - alpha), 255)
+img = Image.fromarray(out.clip(0, 255).astype('uint8'))
+d = ImageDraw.Draw(img)
+# b) štítky vpravo
+for (y0, y1), t in zip(((30, 101), (117, 187), (204, 273)), ('VYTÁPĚNÍ', 'CHLAZENÍ', 'TUV')):
+    d.rounded_rectangle((948, y0, 1182, y1), radius=8, fill=GREEN_RGB)
+    f = fit_font(F['arial'], t, 200, 26)
+    put_text(img, (948, y0, 1182, y1), t, f, (255, 255, 255))
+# c) dlaždice
+TILES = [(14, 117), (152, 256), (291, 394), (429, 533), (569, 673), (706, 810), (844, 948), (985, 1090), (1120, 1223)]
+TY0, TY1 = 333, 440
+LABELS = ['WI-FI', 'IoT', 'TEPELNÉ ČERPADLO', 'Třída ErP', 'Výstup vody', 'Nízký hluk', 'COP', None, None]
+for (x0, x1), lab in zip(TILES, LABELS):
+    t = a_src[TY0 + 6:TY1 - 5, x0 + 6:x1 - 5]
+    tmx, tmn = t.max(2), t.min(2)
+    sat = (tmx - tmn) / np.maximum(tmx, 1)
+    glyph = (tmn > 175) & (sat < 0.16)                     # bílé písmo a piktogramy na barevném podkladu
+    m = Image.fromarray((glyph * 255).astype('uint8'))
+    d.rounded_rectangle((x0, TY0, x1, TY1), radius=14, fill=(255, 255, 255), outline=GREEN_RGB, width=4)
+    if lab:                                                 # piktogram zeleně, popisek nově černě
+        split = int(m.height * 0.66)
+        top = Image.new('L', m.size, 0)
+        top.paste(m.crop((0, 0, m.width, split)), (0, 0))
+        img.paste(Image.new('RGB', m.size, GREEN_RGB), (x0 + 6, TY0 + 6), top)
+        f = fit_font(F['arialb'], lab, x1 - x0 - 18, 15)
+        put_text(img, (x0 + 5, TY0 + 6 + split, x1 - 5, TY1 - 6), lab, f, (25, 25, 25))
+    else:                                                   # SG Ready, PV-Ready: celé logo zeleně
+        img.paste(Image.new('RGB', m.size, GREEN_RGB), (x0 + 6, TY0 + 6), m)
+d.rectangle((582, 352, 634, 404), fill=(255, 255, 255))        # „75“ výrazněji (původní 85 bylo tučné)
+put_text(img, (578, 352, 638, 404), '75', ImageFont.truetype(F['arialb'], 38), GREEN_RGB)
+save(img, 'image5.png')
 
 # ---------------------------------------------------------------- 4) tabulka ikon ovladače (image34)
 im = load('image34.png').convert('RGB')

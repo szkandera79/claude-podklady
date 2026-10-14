@@ -16,7 +16,7 @@ from export_pdf import export
 DIR = os.path.dirname(os.path.abspath(__file__))
 PPTX = os.path.join(DIR, 'REO-R290-Smart_RHX20-RHX30-Pro_prezentace-CZ.pptx')
 TMP = os.path.join(DIR, '_icons_check.pdf')
-SLIDES = (21, 27, 28, 30)       # snímky s ikonami v řádku textu
+SLIDES = (22, 28, 29, 31)       # snímky s ikonami v řádku textu (po vložení snímku 5)
 EMU_PER_PT = 12700                   # PDF z PowerPointu: 960 × 540 pt = 13,333 × 7,5 in
 
 
