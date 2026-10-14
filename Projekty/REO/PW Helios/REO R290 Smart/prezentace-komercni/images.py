@@ -335,4 +335,33 @@ save(im, 'image30.png')
 im = load('image83.png').convert('RGB')
 ImageDraw.Draw(im).rectangle((68, 22, 295, 58), fill=(255, 255, 255))
 save(im, 'image83.png')
+# ---------------------------------------------------------------- 10) popis displeje ovladače (image35): modré pozadí → bílé
+# pixely na přímce modrá (0,162,233) → bílá = pozadí a bílé popisky/čáry: pozadí bílé, popisky tmavě šedé.
+# Displej a ikony v černých čtvercích (převažuje černé okolí) zůstávají beze změny.
+im = load('image35.png').convert('RGB')
+a = np.asarray(im).astype(float)
+BG = np.array([0, 162, 233], float)
+t = np.clip(a[..., 0] / 255.0, 0, 1)                       # 0 = modrá, 1 = bílá
+line = BG[None, None, :] * (1 - t[..., None]) + 255 * t[..., None]
+on_line = np.abs(a - line).sum(2) < 60
+# rozhoduje okolí pixelu (okno ~11 px): víc modrého pozadí než černé → popisek na pozadí (převést),
+# jinak bílé písmo/ikona na černém displeji nebo v černém čtverci (ponechat)
+box = lambda m: np.asarray(Image.fromarray((m * 255).astype('uint8')).filter(ImageFilter.BoxBlur(5))).astype(float)
+n_bg = box(np.abs(a - BG).sum(2) < 45)
+n_dark = box(a.max(2) < 70)
+sel = on_line & (n_bg > n_dark)
+g = 255 - t * (255 - 45)
+a[sel] = np.repeat(g[sel][:, None], 3, axis=1)
+# modrý lem kolem displeje a černých čtverců s ikonami: čistá modrá + přechod modrá→černá (do 4 px od pozadí)
+pure = np.abs(np.asarray(im).astype(float) - BG).sum(2) < 45
+edge = np.asarray(Image.fromarray((pure * 255).astype('uint8')).filter(ImageFilter.MaxFilter(9))) > 0
+inner = np.zeros_like(edge)
+inner[281:871, 281:1297] = True                             # vnitřek displeje se nemění
+b0 = np.asarray(im).astype(float)
+ratio_ok = (b0[..., 0] < 40) & (b0[..., 2] > 25) & (np.abs(b0[..., 1] / np.maximum(b0[..., 2], 1) - 162 / 233) < 0.12)
+blk = edge & ~inner & ratio_ok
+sv = np.clip(b0[..., 2] / 233.0, 0, 1)                      # podíl modré v přechodu do černé → podíl bílé
+a[blk] = np.repeat((255 * sv[blk])[:, None], 3, axis=1)
+a[:3] = a[-3:] = a[:, :3] = a[:, -3:] = 255            # okraj obrázku (zbytek modrého lemu)
+save(Image.fromarray(a.clip(0, 255).astype('uint8')), 'image35.png')
 print('ok', sorted(os.listdir(OUT)))

@@ -110,6 +110,7 @@ Výrobce dodal výkonové mapy (`../R290 Helios Performance Curve/*.xls`, část
 - Titulní a závěrečný snímek (přání uživatele 14. 10.): bílé pozadí, zelené písmo, barevné logo.
 - Infografika R290 (sn. 4) v zelené: zelené R290 a štítky, dlaždice bílé se zeleným okrajem, piktogram zeleně, popisek černě;
   hodnoty 75 °C a COP 5,0 jsou přímo v obrázku (překryvy výrobce odstraněny).
+- Popis displeje ovladače (sn. 20, image35): modré pozadí → bílé, popisky tmavě šedé, displej a ikony beze změny.
 - Fotky jednotek (snímky 3, 7, 31, 32): nápis výrobce na horní liště → „REO HEATING“ (Exo 2 Black Italic, kovový přechod).
 - Infografika R290 (sn. 4): logo výrobce v ikoně IoT odstraněno, popisky česky; ikona teploty vody 78 → **75 °C**.
 - Česky přesázené obrázky: tabulka ikon ovladače, legenda hydraulického schématu, Modbus diagramy, SG schéma, popisky schématu aplikace.
