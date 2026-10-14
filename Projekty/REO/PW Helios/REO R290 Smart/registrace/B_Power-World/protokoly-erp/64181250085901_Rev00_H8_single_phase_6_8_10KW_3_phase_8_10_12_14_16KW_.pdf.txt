@@ -1,0 +1,5476 @@
+[Text vytažený z 64181250085901_Rev00_H8_single_phase_6_8_10KW_3_phase_8_10_12_14_16KW_.pdf]
+
+--- strana 1 ---
+Technical Report
+Client: Name:
+Address:
+Contact person:
+Manufacturer: Name:
+Address:
+Factory: Name:
+Address:
+Test object: Product:
+Model:
+Trade mark:
+Test specification:
+Technical Report No.: 64.181.25.00859.01 Rev.00
+Date: 2025-12-08
+POWER WORLD MACHINERY EQUIPMENT CO., LTD
+No.24, the fourth industrial zone, HouTing Street, ShaJing
+Town, BaoAn District, Shenzhen China.
+Mr. Dragon Wu
+POWER WORLD MACHINERY EQUIPMENT CO., LTD
+No.24, the fourth industrial zone, HouTing Street, ShaJing
+Town, BaoAn District, Shenzhen China.
+POWER WORLD MACHINERY EQUIPMENT CO., LTD
+No.1, Zhenxing South 1st Road, Shiwan Town, Boluo County,
+Huizhou City, Guangdong Province, China
+DC Inverter Heat Pump
+PW06-DKXLRE1-H8, PW08-DKXLRE1-H8,
+PW10-DKXLRE1-H8, PW08-DKXLRE3-H8,
+PW10-DKXLRE3-H8, PW12-DKXLRE3-H8,
+PW14-DKXLRE3-H8, PW16-DKXLRE3-H8
+--
+EN 14825:2022
+EN 14511-3:2022
+EN 12102-1:2022
+EN 14511-4:2022 Clause 4
+Purpose of
+examination:
+• Testing and evaluation (□ visual / □ partial) according to the test specification
+(EU) No 813/2013
+EU 2016/2282:2016-11-30
+Doc No.: ITC-TTW0902.02E – Rev.17
+Test result:
+The test results show that the presented product is in compliance with the above
+listed test specifications.
+Any use for advertising purposes must be granted in writing. This technical report may only be quoted in full. This report is the result
+of a single examination of the object in question. It does not imply a general statement regarding the quality of products from regular
+production. For further details please see Testing, Certification, Validation and Verification Regulations, chapter A-3.3.
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 1 of 121
+--- strana 2 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+1
+1.1
+1.2
+1.3
+Description of the test object
+Function
+Manufacturer’s specification for intended use:
+The appliance is air to water heat pump.
+Manufacturer’s specification for predictive use:
+According to user manual
+Consideration of the foreseeable use
+Not applicable
+Covered through the applied standard
+Covered by the following comment
+Covered by attached risk analysis
+Technical Data
+Model :
+Rated Voltage (V) :
+Rated Frequency (Hz) :
+Rated Power (W) :
+Rated Current (A) :
+Protection Class :
+Protection Against Moisture :
+Construction :
+Supply connection :
+Operation mode:
+Refrigerant/charge (kg) :
+PW06-DKXLRE1-H8, PW08-DKXLRE1-H8,
+PW10-DKXLRE1-H8, PW08-DKXLRE3-H8,
+PW10-DKXLRE3-H8, PW12-DKXLRE3-H8,
+PW14-DKXLRE3-H8, PW16-DKXLRE3-H8
+220-240V~ for PW06-DKXLRE1-H8, PW08-DKXLRE1-H8,
+PW10-DKXLRE1-H8;
+380-415V，3N~ for PW08-DKXLRE3-H8,
+PW10-DKXLRE3-H8, PW12-DKXLRE3-H8,
+PW14-DKXLRE3-H8, PW16-DKXLRE3-H8
+50/60
+see the nameplate
+see the nameplate
+Class I
+IP X4
+Stationary
+Non detachable cord
+Permanent connection to fixed wiring
+Continuous operation;
+Intermittent operation;
+Short time operation;
+R290 / 0.60kg for PW06-DKXLRE1-H8,
+0.90kg for PW08-DKXLRE1-H8,
+1.20kg for PW10-DKXLRE1-H8,
+0.90kg for PW08-DKXLRE3-H8,
+1.15kg for PW10-DKXLRE3-H8,
+1.30kg for PW12-DKXLRE3-H8,
+1.50kg for PW14-DKXLRE3-H8,
+1.70kg for PW16-DKXLRE3-H8
+Average
+Warmer
+Colder
+Declared parameters :
+Sound power level dB(A) : Series No :
+N/A
+PPAS00302509200329 for PW06-DKXLRE1-H8,
+PPAS00402508280016 for PW08-DKXLRE1-H8,
+PPAS00502508280011 for PW10-DKXLRE1-H8,
+PPAS00402508280017 for PW08-DKXLRE3-H8,
+PPAS00502508280012 for PW10-DKXLRE3-H8,
+PPAS00552508280010 for PW12-DKXLRE3-H8,
+PPAS00602508280015 for PW14-DKXLRE3-H8,
+PPAS00702508190095 for PW16-DKXLRE3-H8
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 2 of 121
+--- strana 3 ---
+Technical Report
+2
+2.1
+2.2
+2.3
+Order
+Date of Purchase Order, Customer’s Reference
+Date of Purchase Order:
+2025-09-04
+Customer’s Reference:
+POWER WORLD MACHINERY EQUIPMENT CO., LTD
+Test Sample(s)
+• Reception date(s): 2025-09-18
+• Location(s) of reception:
+For Energy test:
+POWER WORLD MACHINERY EQUIPMENT CO., LTD
+Address: No.1, Zhenxing South 1st Road, Shiwan Town, Boluo County, Huizhou City,
+Guangdong Province, China
+For Noise tests:
+Guangzhou Customs District Technology Center
+Address: No.3, Desheng East Road, Daliang, Shunde District, Foshan, Guangdong, China
+• Condition of test sample(s): completed and can be normal operation
+Date(s) of Testing
+2025-09-18 to 2025-12-02
+2.4
+2.5
+3
+Doc No.: ITC-TTW0902.02E – Rev.17
+Location(s) of Testing
+Same as 2.2
+Points of Non-compliance or Exceptions of the Test Procedure
+N/A
+Test Results
+☒ Decision rule according to ILAC-G8:09/2019 clause 4.2.1 Binary statement for simple
+acceptance rule or IEC Guide 115:2023, clause 4.3 Simple acceptance was applied.
+☐ Decision rule according to customer’s requirements was applied. It is:
+☐ Decision rule according to ILAC-G8:09/2019 clause 4.2.2 Binary statement with guard band -
+guard band length = 95 % extended measurement uncertainty, was applied.
+☐ Decision rule (based on ILAC-G8:09/2019 clause 4.2.3 Non-binary statement with guard
+band, guard band length = 95 % extended measurement uncertainty) for an upper specification
+limit (A lower limit or specification with an up-per and a lower limit is treated similarly.):
+• Compliance with the requirement: If a specification limit is not breached by a measurement
+result plus the expanded uncertainty with a 95% coverage probability, then compliance with the
+specification will be stated (e. g. Pass).
+• Non-compliance with the requirement: If a specification limit is exceeded by the measurement
+result minus the expanded uncertainty with a 95% coverage probability, then non-compliance
+with the specification will be stated (e. g. Fail).
+• Inconclusive result: If a measurement result plus/minus the expanded uncertainty with a 95 %
+coverage probability overlaps the limit it will be stated that it is not possible to state compliance
+or non-compliance.
+☐ There are no statements to conformity or no results with measurand stated in this report, no
+decision rule has been applied.
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 3 of 121
+--- strana 4 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+3.1
+4
+4.1
+4.2
+5
+6
+1)
+2)
+3)
+4)
+5)
+6)
+7)
+Positive Test Results
+See Appendix I
+Remarks
+General
+The user manual has been examined according to the minimum requirements described in the
+product standard. The manufacturer is responsible for the accuracy of further particulars as well
+as of the composition and layout.
+When the product is placed on the market, it must be accompanied with safety Instructions
+written in official language of the country. The instructions shall give information regarding safe
+operation, installation and maintenance.
+Documentation
+• Appendix I: Test results
+• Appendix II: Marking plate
+• Appendix III: photo documentation
+• Appendix IV: Construction data form
+• Appendix V: Test equipment list
+Test History
+These appliances are Air To Water Heat Pump Unit, each one including a whole compression
+type refrigerant circuit to heat water in another circuit. These appliances were for cooling and
+heating water function, this report only for heating capacity test.
+The main power for models PW06-DKXLRE1-H8, PW08-DKXLRE1-H8, PW10-DKXLRE1-H8 is
+supplied by a 3-pole supply cord connecting to fixed wiring.
+The main power for models PW08-DKXLRE3-H8, PW10-DKXLRE3-H8, PW12-DKXLRE3-H8,
+PW14-DKXLRE3-H8, PW16-DKXLRE3-H8 is supplied by a 5-pole supply cord connecting to
+fixed wiring.
+Water enthalpy method was adopted in this report.
+Standby mode power, off mode power and thermostat-off mode power were tested according to
+clause 12 of standard EN 14825:2022.
+According to the manufacturer's requirements, the test voltage is 230V~, 50Hz for models
+PW06-DKXLRE1-H8, PW08-DKXLRE1-H8, PW10-DKXLRE1-H8.
+According to the manufacturer's requirements, the test voltage is 400V~, 50Hz for models
+PW08-DKXLRE3-H8, PW10-DKXLRE3-H8, PW12-DKXLRE3-H8, PW14-DKXLRE3-H8, PW16-
+DKXLRE3-H8.
+TÜV SÜD Certification and Testing (China) Co., Ltd. Guangzhou Branch
+TÜV SÜD Group
+Tested by: Yongxin Huang, Project Handler
+Approved by: printed name, function & signature
+Plum Li, Designated Reviewer
+printed name, function & signature
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 4 of 121
+--- strana 5 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 1.
+Heating mode (Low temperature application): P
+Model
+PW06-DKXLRE1-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 34
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 30
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 27
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 24
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 35.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 34
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 30/35
+conditions, the capacity is 6.007kW, the power is 1.180kW, the COP is 5.09kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W34
+(88%)
+A2/W30
+(54%)
+A7/W27
+(35%)
+A12/W24
+(15%)
+A(-10)/
+W35.3
+(100%)
+A(-7)/ W34
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 228.5 229.7 230.0 230.1
+V 228.4 228.5
+Current input of
+the unit 7.40 3.06 1.79 1.26
+A 9.13 7.40
+Power input of
+the unit kW 1.685 0.664 0.341 0.200
+2.083 1.685
+Compressor
+frequency Hz 82 39 23 15
+95 82
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 5 of 121
+--- strana 6 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 1.03 Inlet Water
+temperature °C 29.47 Outlet Water
+temperature °C 34.00 Test conditions Source Side
+Barometric
+pressure
+kPa 101.02 Air inlet
+temperature,
+DB
+°C -6.99 Air inlet
+temperature,
+WB
+°C -8.00 Summary of the results
+Total heating
+capacity kW 5.386 Effective power
+input kW 1.677 Coefficient of
+performance
+(COP)
+kW/kW 3.21 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 6 of 121
+1.03 27.22 29.94 101.01 2.02 1.00 3.225 0.653 4.94 Unit kW kW kW kW 1.03 25.21 27.06 101.01 7.04 6.01 2.195 0.327 6.71 1.03
+23.25
+24.68
+101.02
+12.01
+11.01
+1.692
+0.186
+9.10
+Value
+0.011
+0.011
+0.033
+0.011
+1.03 30.39 35.31 101.01 -9.99 -11.05 5.854 2.075 2.82 1.03
+29.47
+34.00
+101.02
+-6.99
+-8.00
+5.386
+1.677
+3.21
+--- strana 7 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+6.089 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 6.089
+5.854 2.82 0.90 F 5.386
+5.386 3.21 0.90 A 5.386
+5.386 3.21 0.90 B 3.278
+3.225 4.94 0.90 C 2.108
+2.195 6.71 0.90 D 0.937
+1.692 9.10 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 5.02
+SCOP: kWh/kWh 5.00
+QH: kWh/year 12579
+QHE: kWh/year 2514
+ηs,h % 197.1
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 2)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 7 of 121
+CR
+1.00 1.00 1.00 1.00 0.96 0.55 COP
+at part load
+2.82
+3.21
+3.21
+4.94
+6.71
+8.42
+--- strana 8 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 2.
+Heating mode (Medium temperature application): P
+Model
+PW06-DKXLRE1-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 52
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 42
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 36
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 30
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 55.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 52
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 47/55
+conditions, the capacity is 6.088kW, the power is 1.896kW, the COP is 3.21kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W52
+(88%)
+A2/W42
+(54%)
+A7/W36
+(35%)
+A12/W30
+(15%)
+A(-10)/
+W55.3
+(100%)
+A(-7)/ W52
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 228.4 229.3 229.9 230.1
+V 228.7 228.4
+Current input of
+the unit 9.82 3.99 2.24 1.44
+A 12.52 9.82
+Power input of
+the unit kW 2.240 0.889 0.458 0.249
+2.859 2.240
+Compressor
+frequency Hz 86 43 25 15
+100 86
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 8 of 121
+--- strana 9 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 0.65 Inlet Water
+temperature °C 44.83 Outlet Water
+temperature °C 51.98 Test conditions Source Side
+Barometric
+pressure
+kPa 99.85
+Air inlet
+temperature,
+DB
+°C -6.99 Air inlet
+temperature,
+WB
+°C -7.99 Summary of the results
+Total heating
+capacity kW 5.330 Effective power
+input kW 2.236 Coefficient of
+performance
+(COP)
+kW/kW 2.38 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 9 of 121
+0.64 37.42 41.96 99.85 2.06 1.00 3.340 0.887 3.76 Unit kW kW kW kW 0.64 32.95 36.04 99.85 7.08 6.01 2.280 0.457 4.99 0.64
+28.82
+31.04
+99.80
+12.01
+11.00
+1.643
+0.247
+6.65
+Value
+0.011
+0.011
+0.033
+0.011
+0.64 47.45 55.34 99.75 -9.99 -11.05 5.800 2.864 2.03 0.65
+44.83
+51.98
+99.85
+-6.99
+-7.99
+5.330
+2.236
+2.38
+--- strana 10 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+6.025 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 6.025
+5.800 2.03 0.90 F 5.330
+5.330 2.38 0.90 A 5.330
+5.330 2.38 0.90 B 3.244
+3.340 3.76 0.90 C 2.086
+2.280 4.99 0.90 D 0.927
+1.643 6.65 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 3.85
+SCOP: kWh/kWh 3.84
+QH: kWh/year 12448
+QHE: kWh/year 3239
+ηs,h % 150.7
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 1)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 10 of 121
+CR 1.00 1.00 1.00 0.97 0.91
+0.56 COP
+at part load
+2.03
+2.38
+2.38
+3.76
+4.99
+6.17
+--- strana 11 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 3.
+Heating mode (Low temperature application): P
+Model
+PW08-DKXLRE1-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 34
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 30
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 27
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 24
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 35.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 34
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 30/35
+conditions, the capacity is 7.990kW, the power is 1.545kW, the COP is 5.17kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W34
+(88%)
+A2/W30
+(54%)
+A7/W27
+(35%)
+A12/W24
+(15%)
+A(-10)/
+W35.3
+(100%)
+A(-7)/ W34
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 228.3 229.6 230.2 230.3
+V 228.4 228.3
+Current input of
+the unit 9.73 4.25 2.34 1.82
+A 12.05 9.73
+Power input of
+the unit kW 2.193 0.879 0.407 0.280
+2.737 2.193
+Compressor
+frequency Hz 76 35 20 15
+89 76
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 11 of 121
+--- strana 12 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 1.38 Inlet Water
+temperature °C 29.55 Outlet Water
+temperature °C 34.02 Test conditions Source Side
+Barometric
+pressure
+kPa 101.02 Air inlet
+temperature,
+DB
+°C -7.00 Air inlet
+temperature,
+WB
+°C -7.95 Summary of the results
+Total heating
+capacity kW 7.114 Effective power
+input kW 2.183 Coefficient of
+performance
+(COP)
+kW/kW 3.26 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 12 of 121
+1.38 27.28 30.04 101.01 2.00 1.00 4.399 0.865 5.09 Unit kW kW kW kW 1.38 25.15 26.93 101.01 7.04 6.00 2.846 0.391 7.28 1.38
+23.26
+24.85
+101.02
+12.00
+11.00
+2.541
+0.264
+9.63
+Value
+0.012
+0.012
+0.049
+0.012
+1.38 30.53 35.31 101.01 -9.99 -11.00 7.617 2.728 2.79 1.38
+29.55
+34.02
+101.02
+-7.00
+-7.95
+7.114
+2.183
+3.26
+--- strana 13 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+8.042 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 8.042
+7.617 2.79 0.90 F 7.114
+7.114 3.26 0.90 A 7.114
+7.114 3.26 0.90 B 4.331
+4.399 5.09 0.90 C 2.784
+2.846 7.28 0.90 D 1.237
+2.541 9.63 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 5.32
+SCOP: kWh/kWh 5.30
+QH: kWh/year 16616
+QHE: kWh/year 3135
+ηs,h % 209.0
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 2)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 13 of 121
+CR
+1.00 1.00 1.00 0.98 0.98 0.49 COP
+at part load
+2.79
+3.26
+3.26
+5.09
+7.28
+8.72
+--- strana 14 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 4.
+Heating mode (Medium temperature application): P
+Model
+PW08-DKXLRE1-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 52
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 42
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 36
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 30
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 55.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 52
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 47/55
+conditions, the capacity is 8.046kW, the power is 2.662kW, the COP is 3.02kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W52
+(88%)
+A2/W42
+(54%)
+A7/W36
+(35%)
+A12/W30
+(15%)
+A(-10)/
+W55.3
+(100%)
+A(-7)/ W52
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 228.5 229.1 230.1 230.3
+V 228.8 228.5
+Current input of
+the unit 12.97 5.31 2.86 2.07
+A 15.80 12.97
+Power input of
+the unit kW 2.951 1.137 0.533 0.340
+3.610 2.951
+Compressor
+frequency Hz 82 38 21 15
+95 82
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 14 of 121
+--- strana 15 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 0.86 Inlet Water
+temperature °C 44.80 Outlet Water
+temperature °C 52.03 Test conditions Source Side
+Barometric
+pressure
+kPa 99.85
+Air inlet
+temperature,
+DB
+°C -6.99 Air inlet
+temperature,
+WB
+°C -8.00 Summary of the results
+Total heating
+capacity kW 7.140 Effective power
+input kW 2.949 Coefficient of
+performance
+(COP)
+kW/kW 2.42 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 15 of 121
+0.86 37.53 41.98 99.85 2.02 1.00 4.415 1.135 3.89 Unit kW kW kW kW 0.86 33.18 36.03 99.85 7.03 6.01 2.820 0.531 5.31 0.86
+28.85
+31.32
+99.80
+12.01
+11.00
+2.455
+0.338
+7.26
+Value
+0.012
+0.012
+0.049
+0.012
+0.86 47.70 55.37 99.75 -10.00 -11.00 7.564 3.607 2.10 0.86
+44.80
+52.03
+99.85
+-6.99
+-8.00
+7.140
+2.949
+2.42
+--- strana 16 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+8.071 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 8.071
+7.564 2.10 0.90 F 7.140
+7.140 2.42 0.90 A 7.140
+7.140 2.42 0.90 B 4.346
+4.415 3.89 0.90 C 2.794
+2.820 5.31 0.90 D 1.242
+2.455 7.26 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 4.00
+SCOP: kWh/kWh 3.99
+QH: kWh/year 16675
+QHE: kWh/year 4177
+ηs,h % 156.7
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 1)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 16 of 121
+CR 1.00 1.00 1.00 0.98 0.99
+0.51 COP
+at part load
+2.10
+2.42
+2.42
+3.89
+5.31
+6.62
+--- strana 17 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 5.
+Heating mode (Low temperature application): P
+Model
+PW10-DKXLRE1-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 34
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 30
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 27
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 24
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 35.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 34
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 30/35
+conditions, the capacity is 9.907kW, the power is 2.022kW, the COP is 4.90kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W34
+(88%)
+A2/W30
+(54%)
+A7/W27
+(35%)
+A12/W24
+(15%)
+A(-10)/
+W35.3
+(100%)
+A(-7)/ W34
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 232.0 231.4 231.7 230.5
+V 231.7 232.0
+Current input of
+the unit 13.33 5.16 2.75 2.09
+A 15.67 13.33
+Power input of
+the unit kW 3.072 1.144 0.553 0.384
+3.605 3.072
+Compressor
+frequency Hz 89 43 25 20
+103 89
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 17 of 121
+--- strana 18 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 1.72 Inlet Water
+temperature °C 29.58 Outlet Water
+temperature °C 34.09 Test conditions Source Side
+Barometric
+pressure
+kPa 101.02 Air inlet
+temperature,
+DB
+°C -7.00 Air inlet
+temperature,
+WB
+°C -8.03 Summary of the results
+Total heating
+capacity kW 8.904 Effective power
+input kW 3.013 Coefficient of
+performance
+(COP)
+kW/kW 2.95 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 18 of 121
+1.72 27.29 30.05 101.01 2.00 0.97 5.437 1.086 5.01 Unit kW kW kW kW 1.72 25.21 27.05 101.01 7.00 6.00 3.618 0.494 7.33 1.72
+23.24
+24.96
+101.02
+12.00
+11.00
+3.368
+0.324
+10.41
+Value
+0.012
+0.012
+0.052
+0.012
+1.72 30.56 35.28 101.01 -10.00 -11.02 9.336 3.541 2.64 1.72
+29.58
+34.09
+101.02
+-7.00
+-8.03
+8.904
+3.013
+2.95
+--- strana 19 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+10.066 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 10.066
+9.336 2.64 0.90 F 8.904
+8.904 2.95 0.90 A 8.904
+8.904 2.95 0.90 B 5.420
+5.437 5.01 0.90 C 3.484
+3.618 7.33 0.90 D 1.549
+3.368 10.41 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 5.20
+SCOP: kWh/kWh 5.19
+QH: kWh/year 20795
+QHE: kWh/year 4008
+ηs,h % 204.5
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 2)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 19 of 121
+CR
+1.00 1.00 1.00 1.00 0.96 0.46 COP
+at part load
+2.64
+2.95
+2.95
+5.01
+7.33
+9.31
+--- strana 20 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 6.
+Heating mode (Medium temperature application): P
+Model
+PW10-DKXLRE1-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 52
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 42
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 36
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 30
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 55.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 52
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 47/55
+conditions, the capacity is 9.647kW, the power is 3.060kW, the COP is 3.15kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W52
+(88%)
+A2/W42
+(54%)
+A7/W36
+(35%)
+A12/W30
+(15%)
+A(-10)/
+W55.3
+(100%)
+A(-7)/ W52
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 230.4 231.6 230.3 230.4
+V 231.2 230.4
+Current input of
+the unit 17.26 6.25 3.35 2.46
+A 21.97 17.26
+Power input of
+the unit kW 3.945 1.408 0.699 0.477
+5.019 3.945
+Compressor
+frequency Hz 95 44 25 20
+110 95
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 20 of 121
+--- strana 21 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 1.08 Inlet Water
+temperature °C 44.88 Outlet Water
+temperature °C 51.89 Test conditions Source Side
+Barometric
+pressure
+kPa 99.85
+Air inlet
+temperature,
+DB
+°C -7.00 Air inlet
+temperature,
+WB
+°C -8.05 Summary of the results
+Total heating
+capacity kW 8.614 Effective power
+input kW 3.820 Coefficient of
+performance
+(COP)
+kW/kW 2.25 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 21 of 121
+1.08 37.69 41.96 99.85 2.00 1.00 5.292 1.385 3.82 Unit kW kW kW kW 1.08 33.25 36.04 99.85 7.00 6.00 3.463 0.676 5.13 1.08
+28.84
+31.50
+99.80
+12.00
+11.00
+3.301
+0.453
+7.28
+Value
+0.012
+0.012
+0.052
+0.012
+1.08 47.55 55.22 99.75 -9.99 -11.04 9.421 4.895 1.92 1.08
+44.88
+51.89
+99.85
+-7.00
+-8.05
+8.614
+3.820
+2.25
+--- strana 22 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+9.737 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 9.737
+9.421 1.92 0.90 F 8.614
+8.614 2.25 0.90 A 8.614
+8.614 2.25 0.90 B 5.243
+5.292 3.82 0.90 C 3.371
+3.463 5.13 0.90 D 1.498
+3.301 7.28 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 3.88
+SCOP: kWh/kWh 3.87
+QH: kWh/year 20117
+QHE: kWh/year 5200
+ηs,h % 151.7
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 1)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 22 of 121
+CR 1.00 1.00 1.00 0.99 0.97
+0.45 COP
+at part load
+1.92
+2.25
+2.25
+3.82
+5.13
+6.50
+--- strana 23 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 7.
+Heating mode (Low temperature application): P
+Model
+PW08-DKXLRE3-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 34
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 30
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 27
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 24
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 35.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 34
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 30/35
+conditions, the capacity is 7.977kW, the power is 1.621kW, the COP is 4.92kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W34
+(88%)
+A2/W30
+(54%)
+A7/W27
+(35%)
+A12/W24
+(15%)
+A(-10)/
+W35.3
+(100%)
+A(-7)/ W34
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 397.2 398.1 398.3 398.3
+V 396.9 397.2
+Current input of
+the unit 3.76 1.69 0.97 0.84
+A 4.20 3.76
+Power input of
+the unit kW 2.173 0.863 0.433 0.360
+2.501 2.173
+Compressor
+frequency Hz 79 36 21 20
+88 79
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 23 of 121
+--- strana 24 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 1.38 Inlet Water
+temperature °C 29.55 Outlet Water
+temperature °C 34.02 Test conditions Source Side
+Barometric
+pressure
+kPa 101.02 Air inlet
+temperature,
+DB
+°C -7.00 Air inlet
+temperature,
+WB
+°C -8.03 Summary of the results
+Total heating
+capacity kW 7.118 Effective power
+input kW 2.146 Coefficient of
+performance
+(COP)
+kW/kW 3.32 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 24 of 121
+1.38 27.31 29.99 101.01 2.04 1.02 4.263 0.836 5.10 Unit kW kW kW kW 1.38 25.18 26.99 101.01 7.05 6.04 2.862 0.404 7.09 1.38
+23.26
+25.29
+101.02
+12.00
+11.00
+3.213
+0.330
+9.73
+Value
+0.016
+0.016
+0.046
+0.016
+1.38 30.82 35.29 101.01 -9.99 -11.00 7.113 2.474 2.88 1.38
+29.55
+34.02
+101.02
+-7.00
+-8.03
+7.118
+2.146
+3.32
+--- strana 25 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+8.046 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 8.046
+7.113 2.88 0.90 F 7.118
+7.118 3.32 0.90 A 7.118
+7.118 3.32 0.90 B 4.333
+4.263 5.10 0.90 C 2.785
+2.862 7.09 0.90 D 1.238
+3.213 9.73 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 5.17
+SCOP: kWh/kWh 5.15
+QH: kWh/year 16624
+QHE: kWh/year 3229
+ηs,h % 202.9
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 2)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 25 of 121
+CR
+1.00 1.00 1.00 1.00 0.97 0.39 COP
+at part load
+2.88
+3.32
+3.32
+5.10
+7.09
+8.39
+--- strana 26 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 8.
+Heating mode (Medium temperature application): P
+Model
+PW08-DKXLRE3-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 52
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 42
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 36
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 30
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 55.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 52
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 47/55
+conditions, the capacity is 7.966kW, the power is 2.624kW, the COP is 3.04kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W52
+(88%)
+A2/W42
+(54%)
+A7/W36
+(35%)
+A12/W30
+(15%)
+A(-10)/
+W55.3
+(100%)
+A(-7)/ W52
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 396.8 397.9 398.2 398.3
+V 396.7 396.8
+Current input of
+the unit 4.83 2.16 1.21 0.99
+A 5.40 4.83
+Power input of
+the unit kW 2.950 1.136 0.569 0.449
+3.344 2.950
+Compressor
+frequency Hz 86 38 22 20
+94 86
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 26 of 121
+--- strana 27 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 0.86 Inlet Water
+temperature °C 44.71 Outlet Water
+temperature °C 51.89 Test conditions Source Side
+Barometric
+pressure
+kPa 99.85
+Air inlet
+temperature,
+DB
+°C -6.99 Air inlet
+temperature,
+WB
+°C -8.00 Summary of the results
+Total heating
+capacity kW 7.082 Effective power
+input kW 2.942 Coefficient of
+performance
+(COP)
+kW/kW 2.41 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 27 of 121
+0.86 37.54 41.91 99.85 2.02 1.01 4.331 1.127 3.84 Unit kW kW kW kW 0.86 33.09 35.97 99.85 7.04 6.03 2.851 0.561 5.08 0.86
+28.79
+31.94
+99.80
+12.00
+11.00
+3.120
+0.440
+7.09
+Value
+0.016
+0.016
+0.046
+0.016
+0.86 48.02 55.23 99.75 -9.99 -10.99 7.101 3.336 2.13 0.86
+44.71
+51.89
+99.85
+-6.99
+-8.00
+7.082
+2.942
+2.41
+--- strana 28 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+8.006 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 8.006
+7.101 2.13 0.90 F 7.082
+7.082 2.41 0.90 A 7.082
+7.082 2.41 0.90 B 4.311
+4.331 3.84 0.90 C 2.771
+2.851 5.08 0.90 D 1.232
+3.120 7.09 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 3.91
+SCOP: kWh/kWh 3.90
+QH: kWh/year 16541
+QHE: kWh/year 4242
+ηs,h % 153.0
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 1)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 28 of 121
+CR 1.00 1.00 1.00 1.00 0.97
+0.39 COP
+at part load
+2.13
+2.41
+2.41
+3.84
+5.08
+6.15
+--- strana 29 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 9.
+Heating mode (Low temperature application): P
+Model
+PW10-DKXLRE3-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16) 88
+-7(-8)
+a / 34
+B
+(+2-16)/ (Tdesignh-16) 54
+2(1)
+a / 30
+C
+(+7-16)/(Tdesignh-16) 35
+7(6)
+a / 27
+D
+(+12-16)/(Tdesignh-16) 15
+12(11)
+a / 24
+E
+(TOL-16)/ (Tdesignh-16)
+TOL
+a / 35.3
+F
+(Tbivalent-16)/(Tdesignh-16)
+Tbiv
+a / 34
+G
+(-15-16)/(Tdesignh-16)
+N/A -15
+N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 30/35
+conditions, the capacity is 9.894kW, the power is 1.982kW, the COP is 4.99kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W34
+(88%)
+A2/W30
+(54%)
+A7/W27
+(35%)
+A12/W24
+(15%)
+A(-10)/
+W35.3
+(100%)
+A(-7)/ W34
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 399.7 399.6 399.6 400.0
+V 399.9 399.7
+Current input of
+the unit 4.83 2.11 1.02 0.78
+A 5.04 4.83
+Power input of
+the unit kW 2.987 1.146
+0.504
+0.366
+3.155 2.987
+Compressor
+frequency Hz 93 45 25 20
+100 93
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 29 of 121
+--- strana 30 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 1.72 Inlet Water
+temperature °C 29.52 Outlet Water
+temperature °C 33.99
+Test conditions Source Side
+Barometric
+pressure
+kPa 101.02 Air inlet
+temperature,
+DB
+°C -7.00 Air inlet
+temperature,
+WB
+°C -8.00 Summary of the results
+Total heating
+capacity kW 8.880 Effective power
+input kW 2.971 Coefficient of
+performance
+(COP)
+kW/kW 2.99 Remark: -
+Electric power consumptions
+Thermostat-off mode [PTO]
+Standby mode [PSB]
+Crankcase heater [PCK]
+Off mode [POFF]
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 30 of 121
+1.72 27.24 30.02
+101.01 2.01 1.02 5.500 1.105 4.98 Unit kW kW kW
+kW 1.72 25.26 27.02 101.01 7.00 6.00 3.476
+0.462 7.53 1.72
+23.23
+24.93
+101.02
+12.00
+11.01
+3.358
+0.322
+10.42
+Value
+0.015
+0.015
+0.040
+0.015
+1.72 30.97 35.28 101.01 -10.00 -11.00 8.542 3.138 2.72 1.72
+29.52
+33.99
+101.02
+-7.00
+-8.00
+8.880
+2.971
+2.99
+--- strana 31 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+10.038 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 10.038
+8.542 2.72 0.90
+F 8.880
+8.880 2.99 0.90 A 8.880
+8.880 2.99 0.90 B 5.405
+5.500 4.98 0.90
+C 3.475
+3.476 7.53 0.90 D 1.544
+3.358 10.42 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon:
+kWh/kWh 5.22
+SCOP:
+kWh/kWh 5.20
+QH: kWh/year 20739
+QHE: kWh/year 3987
+ηs,h % 205.1
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 2)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 31 of 121
+CR 1.00
+1.00 1.00 0.98 1.00 0.46 COP
+at part load
+2.72
+2.99
+2.99
+4.98
+7.53
+9.33
+--- strana 32 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 10.
+Heating mode (Medium temperature application): P
+Model
+PW10-DKXLRE3-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula
+Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88
+-7(-8)
+a / 52
+B
+(+2-16)/ (Tdesignh-16)
+54
+2(1)
+a / 42
+C
+(+7-16)/(Tdesignh-16)
+35
+7(6)
+a / 36
+D
+(+12-16)/(Tdesignh-16)
+15
+12(11)
+a / 30
+E
+(TOL-16)/ (Tdesignh-16)
+TOL
+a / 55.3
+F
+(Tbivalent-16)/(Tdesignh-16)
+Tbiv
+a / 52
+G
+(-15-16)/(Tdesignh-16) N/A
+-15
+N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 47/55
+conditions, the capacity is 9.897kW, the power is 3.103kW, the COP is 3.19kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W52
+(88%)
+A2/W42
+(54%)
+A7/W36
+(35%)
+A12/W30
+(15%)
+A(-10)/
+W55.3
+(100%)
+A(-7)/ W52
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 400.0 399.9 399.6 399.9
+V 398.3 400.0
+Current input of
+the unit 6.07 2.54 1.36 0.97
+A 6.71 6.07
+Power input of
+the unit kW 3.835 1.449 0.673 0.448
+4.268 3.835
+Compressor
+frequency Hz 100 47 26 20
+106 100
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 32 of 121
+--- strana 33 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 1.08 Inlet Water
+temperature °C 44.93 Outlet Water
+temperature °C 52.03
+Test conditions Source Side
+Barometric
+pressure
+kPa 99.85 Air inlet
+temperature,
+DB
+°C -7.00
+Air inlet
+temperature,
+WB
+°C -8.00 Summary of the results
+Total heating
+capacity kW 8.795 Effective power
+input kW 3.825 Coefficient of
+performance
+(COP)
+kW/kW 2.30 Remark: -
+Electric power consumptions
+Thermostat-off mode [PTO]
+Standby mode [PSB]
+Crankcase heater [PCK]
+Off mode [POFF]
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 33 of 121
+1.08
+37.63 42.03 99.85 2.00
+1.00 5.469 1.439 3.80 Unit kW kW kW kW 1.08 33.24 36.05 99.85 7.00
+6.00 3.502 0.663 5.29 1.08
+28.83
+31.48
+99.80
+12.00
+11.01
+3.304
+0.438
+7.55
+Value
+0.015
+0.015
+0.040
+0.015
+1.08 48.42 55.35 99.75 -10.00 -11.00 8.568 4.256 2.01 1.08
+44.93
+52.03
+99.85
+-7.00
+-8.00
+8.795
+3.825
+2.30
+--- strana 34 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+9.942 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 9.942
+8.568 2.01 0.90 F 8.795
+8.795 2.30 0.90 A 8.795
+8.795 2.30 0.90 B 5.353
+5.469 3.80 0.90 C 3.441
+3.502 5.29 0.90 D 1.530
+3.304 7.55 0.90 CR: part load divided by capacity;
+Conclusions:
+Unit Value
+SCOPon: kWh/kWh 3.91
+SCOP: kWh/kWh 3.90
+QH: kWh/year 20540
+QHE: kWh/year 5264
+ηs,h % 153.1
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 1)
+--
+A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 34 of 121
+CR 1.00 1.00 1.00 0.98 0.98 0.46 COP
+at part load
+2.01
+2.30
+2.30
+3.80
+5.29
+6.77
+--- strana 35 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 11.
+Heating mode (Low temperature application): P
+Model
+PW12-DKXLRE3-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 34
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 30
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 27
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 24
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 35.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 34
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 30/35
+conditions, the capacity is 12.102kW, the power is 2.384kW, the COP is 5.08kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W34
+(88%)
+A2/W30
+(54%)
+A7/W27
+(35%)
+A12/W24
+(15%)
+A(-10)/
+W35.3
+(100%)
+A(-7)/ W34
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 399.4 399.7 399.4 399.5
+V 399.2 399.4
+Current input of
+the unit 5.38 2.49 1.34 1.26
+A 6.63 5.38
+Power input of
+the unit kW 3.328 1.356 0.657 0.606
+4.186 3.328
+Compressor
+frequency Hz 75 34 20 20
+90 75
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 35 of 121
+--- strana 36 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 2.06 Inlet Water
+temperature °C 29.45 Outlet Water
+temperature °C 33.99 Test conditions Source Side
+Barometric
+pressure
+kPa 101.02 Air inlet
+temperature,
+DB
+°C -6.99 Air inlet
+temperature,
+WB
+°C -7.99 Summary of the results
+Total heating
+capacity kW 10.801 Effective power
+input kW 3.299 Coefficient of
+performance
+(COP)
+kW/kW 3.27 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 36 of 121
+2.06 27.23 29.99 101.01 2.00 1.00 6.573 1.323 4.97 Unit kW kW kW kW 2.06 25.28 27.09 101.01 7.00 6.00 4.296 0.629 6.83 2.06
+23.21
+25.23
+101.02
+12.00
+11.00
+4.791
+0.573
+8.37
+Value
+0.015
+0.015
+0.055
+0.015
+2.06 30.30 35.30 101.01 -10.00 -11.00 11.891 4.155 2.86 2.06
+29.45
+33.99
+101.02
+-6.99
+-7.99
+10.801
+3.299
+3.27
+--- strana 37 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+12.210 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 12.210
+11.891 2.86 0.90 F 10.801
+10.801 3.27 0.90 A 10.801
+10.801 3.27 0.90 B 6.575
+6.573 4.97 0.90 C 4.227
+4.296 6.83 0.90 D 1.878
+4.791 8.37 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 5.13
+SCOP: kWh/kWh 5.11
+QH: kWh/year 25226
+QHE: kWh/year 4934
+ηs,h % 201.5
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 2)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 37 of 121
+CR
+1.00 1.00 1.00 1.00 0.98 0.39 COP
+at part load
+2.86
+3.27
+3.27
+4.97
+6.83
+7.24
+--- strana 38 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 12.
+Heating mode (Medium temperature application): P
+Model
+PW12-DKXLRE3-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 52
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 42
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 36
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 30
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 55.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 52
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 47/55
+conditions, the capacity is 12.050kW, the power is 3.581kW, the COP is 3.36kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W52
+(88%)
+A2/W42
+(54%)
+A7/W36
+(35%)
+A12/W30
+(15%)
+A(-10)/
+W55.3
+(100%)
+A(-7)/ W52
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 399.2 399.2 399.4 399.5
+V 399.0 399.2
+Current input of
+the unit 6.82 3.20 1.59 1.41
+A 8.38 6.82
+Power input of
+the unit kW 4.342 1.749 0.797 0.694
+5.407 4.342
+Compressor
+frequency Hz 80 36 20 20
+95 80
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 38 of 121
+--- strana 39 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 1.29 Inlet Water
+temperature °C 44.70 Outlet Water
+temperature °C 52.00 Test conditions Source Side
+Barometric
+pressure
+kPa 99.85
+Air inlet
+temperature,
+DB
+°C -6.99 Air inlet
+temperature,
+WB
+°C -8.00 Summary of the results
+Total heating
+capacity kW 10.825 Effective power
+input kW 4.334 Coefficient of
+performance
+(COP)
+kW/kW 2.50 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 39 of 121
+1.29 37.57 42.00 99.85 2.01 0.99 6.580 1.739 3.78 Unit kW kW kW kW 1.29 33.17 36.01 99.85 7.02 6.01 4.222 0.788 5.36 1.29
+28.75
+32.10
+99.80
+12.00
+11.00
+4.994
+0.683
+7.31
+Value
+0.015
+0.015
+0.055
+0.015
+1.29 47.46 55.29 99.75 -10.00 -11.00 11.616 5.399 2.15 1.29
+44.70
+52.00
+99.85
+-6.99
+-8.00
+10.825
+4.334
+2.50
+--- strana 40 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+12.238 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 12.238
+11.616 2.15 0.90 F 10.825
+10.825 2.50 0.90 A 10.825
+10.825 2.50 0.90 B 6.589
+6.580 3.78 0.90 C 4.236
+4.222 5.36 0.90 D 1.883
+4.994 7.31 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 3.95
+SCOP: kWh/kWh 3.94
+QH: kWh/year 25283
+QHE: kWh/year 6410
+ηs,h % 154.8
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 1)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 40 of 121
+CR 1.00 1.00 1.00 1.00 1.00
+0.38 COP
+at part load
+2.15
+2.50
+2.50
+3.78
+5.36
+6.27
+--- strana 41 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 13.
+Heating mode (Low temperature application): P
+Model
+PW14-DKXLRE3-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 34
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 30
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 27
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 24
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 35.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 34
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 30/35
+conditions, the capacity is 14.135kW, the power is 2.907kW, the COP is 4.86kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W34
+(88%)
+A2/W30
+(54%)
+A7/W27
+(35%)
+A12/W24
+(15%)
+A(-10)/
+W35.3
+(100%)
+A(-7)/ W34
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 396.0 397.4 397.8 397.9
+V 396.1 396.0
+Current input of
+the unit 6.77 2.82 1.42 0.94
+A 7.90 6.77
+Power input of
+the unit kW 4.234 1.586 0.722 0.433
+4.985 4.234
+Compressor
+frequency Hz 85 40 22 15
+100 85
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 41 of 121
+--- strana 42 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 2.41 Inlet Water
+temperature °C 29.46 Outlet Water
+temperature °C 33.94 Test conditions Source Side
+Barometric
+pressure
+kPa 101.02 Air inlet
+temperature,
+DB
+°C -6.99 Air inlet
+temperature,
+WB
+°C -8.06 Summary of the results
+Total heating
+capacity kW 12.482 Effective power
+input kW 4.219 Coefficient of
+performance
+(COP)
+kW/kW 2.96 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 42 of 121
+2.41 27.28 30.08 101.01 2.01 1.00 7.758 1.520 5.11 Unit kW kW kW kW 2.41 25.24 27.00 101.01 7.00 6.03 4.877 0.653 7.47 2.40
+23.23
+24.64
+101.02
+12.01
+11.10
+3.888
+0.363
+10.70
+Value
+0.015
+0.015
+0.053
+0.015
+2.41 30.41 35.26 101.01 -9.99 -11.00 13.493 4.970 2.71 2.41
+29.46
+33.94
+101.02
+-6.99
+-8.06
+12.482
+4.219
+2.96
+--- strana 43 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+14.110 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 14.110
+13.493 2.71 0.90 F 12.482
+12.482 2.96 0.90 A 12.482
+12.482 2.96 0.90 B 7.597
+7.758 5.11 0.90 C 4.884
+4.877 7.47 0.90 D 2.171
+3.888 10.70 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 5.31
+SCOP: kWh/kWh 5.29
+QH: kWh/year 29150
+QHE: kWh/year 5506
+ηs,h % 208.8
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 2)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 43 of 121
+CR
+1.00 1.00 1.00 0.98 1.00 0.56 COP
+at part load
+2.71
+2.96
+2.96
+5.11
+7.47
+9.92
+--- strana 44 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 14.
+Heating mode (Medium temperature application): P
+Model
+PW14-DKXLRE3-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 52
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 42
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 36
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 30
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 55.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 52
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 47/55
+conditions, the capacity is 14.001kW, the power is 4.324kW, the COP is 3.24kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W52
+(88%)
+A2/W42
+(54%)
+A7/W36
+(35%)
+A12/W30
+(15%)
+A(-10)/
+W55.3
+(100%)
+A(-7)/ W52
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 396.0 397.2 397.7 397.9
+V 395.9 396.0
+Current input of
+the unit 8.48 3.38 1.84 1.11
+A 9.45 8.48
+Power input of
+the unit kW 5.393 1.976 0.975 0.530
+6.045 5.393
+Compressor
+frequency Hz 92 42 24 15
+100 92
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 44 of 121
+--- strana 45 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 1.50 Inlet Water
+temperature °C 44.76 Outlet Water
+temperature °C 51.99 Test conditions Source Side
+Barometric
+pressure
+kPa 99.85
+Air inlet
+temperature,
+DB
+°C -7.00 Air inlet
+temperature,
+WB
+°C -8.00 Summary of the results
+Total heating
+capacity kW 12.450 Effective power
+input kW 5.386 Coefficient of
+performance
+(COP)
+kW/kW 2.31 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 45 of 121
+1.50 37.60 41.98 99.85 2.02 1.00 7.558 1.969 3.84 Unit kW kW kW kW 1.50 33.15 36.06 99.85 7.00 6.00 5.042 0.965 5.22 1.50
+28.82
+31.00
+99.80
+12.10
+11.00
+3.774
+0.520
+7.25
+Value
+0.015
+0.015
+0.053
+0.015
+1.50 47.95 55.31 99.75 -10.00 -11.00 12.646 6.037 2.09 1.50
+44.76
+51.99
+99.85
+-7.00
+-8.00
+12.450
+5.386
+2.31
+--- strana 46 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+14.074 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 14.074
+12.646 2.09 0.90 F 12.450
+12.450 2.31 0.90 A 12.450
+12.450 2.31 0.90 B 7.578
+7.558 3.84 0.90 C 4.872
+5.042 5.22 0.90 D 2.165
+3.774 7.25 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 3.92
+SCOP: kWh/kWh 3.91
+QH: kWh/year 29076
+QHE: kWh/year 7428
+ηs,h % 153.6
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 1)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 46 of 121
+CR 1.00 1.00 1.00 1.00 0.97
+0.57 COP
+at part load
+2.09
+2.31
+2.31
+3.84
+5.22
+6.75
+--- strana 47 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 15.
+Heating mode (Low temperature application): P
+Model
+PW16-DKXLRE3-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 34
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 30
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 27
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 24
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 35.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 34
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 30/35
+conditions, the capacity is 16.154kW, the power is 3.235kW, the COP is 4.99kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W34
+(88%)
+A2/W30
+(54%)
+A7/W27
+(35%)
+A12/W24
+(15%)
+A(-10)/
+W35.3
+(100%)
+A(-7)/ W34
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 4:00:00 1:10:00 1:10:00 1:10:00
+4:00:00 4:00:00
+The heat pump
+defrosts
+-- Yes No No No
+Yes Yes
+Electrical Properties
+Voltage 399.0 399.6 399.4 399.5
+V 399.0 399.0
+Current input of
+the unit 8.20 3.27 1.65 1.08
+A 8.98 8.20
+Power input of
+the unit kW 5.252 1.837 0.844 0.511
+5.786 5.252
+Compressor
+frequency Hz 92 36 21 15
+100 92
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 47 of 121
+--- strana 48 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 2.75 Inlet Water
+temperature °C 28.68 Outlet Water
+temperature °C 33.16 Test conditions Source Side
+Barometric
+pressure
+kPa 101.02 Air inlet
+temperature,
+DB
+°C -6.95 Air inlet
+temperature,
+WB
+°C -7.93 Summary of the results
+Total heating
+capacity kW 14.227 Effective power
+input kW 5.187 Coefficient of
+performance
+(COP)
+kW/kW 2.74 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 48 of 121
+2.75 27.25 30.01 101.01 2.01 1.00 8.717 1.770 4.92 Unit kW kW kW kW 2.75 25.22 27.00 101.01 7.00 6.00 5.638 0.776 7.27 2.75
+23.23
+24.82
+101.02
+12.00
+11.00
+5.022
+0.446
+11.25
+Value
+0.016
+0.016
+0.063
+0.016
+2.75 30.05 34.67 101.01 -9.94 -10.91 14.673 5.721 2.56 2.75
+28.68
+33.16
+101.02
+-6.95
+-7.93
+14.227
+5.187
+2.74
+--- strana 49 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+16.082 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 16.082
+14.673 2.56 0.90 F 14.227
+14.227 2.74 0.90 A 14.227
+14.227 2.74 0.90 B 8.660
+8.717 4.92 0.90 C 5.567
+5.638 7.27 0.90 D 2.474
+5.022 11.25 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 5.10
+SCOP: kWh/kWh 5.09
+QH: kWh/year 33226
+QHE: kWh/year 6527
+ηs,h % 200.6
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 2)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 49 of 121
+CR
+1.00 1.00 1.00 0.99 0.99 0.49 COP
+at part load
+2.56
+2.74
+2.74
+4.92
+7.27
+10.20
+--- strana 50 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 16.
+Heating mode (Medium temperature application): P
+Model
+PW16-DKXLRE3-H8
+Product
+type Air to Water Heating
+season
+Average
+Warmer Colder
+1. Test conditions:
+Part Load Ratio
+in %
+Outdoor
+heat exchanger
+Indoor heat
+exchanger
+Condition
+Formula Average
+climates
+Inlet dry (wet) bulb
+temperature (°C)
+Inlet/outlet water
+temperatures (°C)
+A
+(-7-16)/(Tdesignh-16)
+88 -7(-8) a / 52
+B
+(+2-16)/ (Tdesignh-16) 54 2(1)
+a / 42
+C
+(+7-16)/(Tdesignh-16) 35 7(6) a / 36
+D
+(+12-16)/(Tdesignh-16) 15 12(11) a / 30
+E
+(TOL-16)/ (Tdesignh-16) TOL a / 55.3
+F
+(Tbivalent-16)/(Tdesignh-16) Tbiv a / 52
+G
+(-15-16)/(Tdesignh-16) N/A -15 N/A
+Remark: a) With the water flow rate as determined at the standard rating conditions given in EN14511-2 at 47/55
+conditions, the capacity is 15.631kW, the power is 4.901kW, the COP is 3.19kW/kW.
+2.Tested data/correction data(Average):
+General test
+conditions/
+Part-Load
+Unit A(-7)/W52
+(88%)
+A2/W42
+(54%)
+A7/W36
+(35%)
+A12/W30
+(15%)
+A(-10)/
+W55.3
+(100%)
+A(-7)/ W52
+(88%)
+-- A B C D
+E F
+Data collection
+period hh: min:sec 1:10:00 1:10:00 1:10:00 1:10:00
+1:10:00 1:10:00
+The heat pump
+defrosts
+-- No No No No
+No No
+Electrical Properties
+Voltage 399.0 399.5 399.3 399.4
+V 398.9 399.0
+Current input of
+the unit 9.46 3.85 2.16 1.34
+A 11.51 9.46
+Power input of
+the unit kW 6.072 2.283 1.147 0.658
+7.494 6.072
+Compressor
+frequency Hz 83 38 23 15
+100 83
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 50 of 121
+--- strana 51 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Test conditions User Side
+Water flow m³/h 1.72 Inlet Water
+temperature °C 44.98 Outlet Water
+temperature °C 52.00 Test conditions Source Side
+Barometric
+pressure
+kPa 99.85
+Air inlet
+temperature,
+DB
+°C -6.99 Air inlet
+temperature,
+WB
+°C -8.10 Summary of the results
+Total heating
+capacity kW 13.883 Effective power
+input kW 6.049 Coefficient of
+performance
+(COP)
+kW/kW 2.30 Remark: -
+Electric power consumptions Thermostat-off mode [PTO] Standby mode [PSB] Crankcase heater [PCK] Off mode [POFF] Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 51 of 121
+1.72 37.66 42.00 99.85 2.01 0.99 8.622 2.277 3.79 Unit kW kW kW kW 1.72 33.04 36.00 99.85 7.00 6.00 5.885 1.140 5.16 1.72
+28.81
+31.21
+99.80
+12.00
+11.00
+4.770
+0.655
+7.28
+Value
+0.016
+0.016
+0.063
+0.016
+1.72 47.62 55.30 99.75 -10.00 -11.20 15.164 7.469 2.03 1.72
+44.98
+52.00
+99.85
+-6.99
+-8.10
+13.883
+6.049
+2.30
+--- strana 52 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+3.Calculation/conclusion for SCOP:
+Tdesignh(°C):
+-10 Tbiv(°C) : -7
+Pdesignh(kW):
+15.694 TOL(°C) : -10
+Test result A, B, C, D, E, F conditions:
+Condition Part load
+Measured
+capacity
+Measured
+COP
+Cdh E 15.694
+15.164 2.03 0.90 F 13.883
+13.883 2.30 0.90 A 13.883
+13.883 2.30 0.90 B 8.451
+8.622 3.79 0.90 C 5.433
+5.885 5.16 0.90 D 2.414
+4.770 7.28 0.90 CR: part load divided by capacity;
+Conclusions: Unit Value
+SCOPon: kWh/kWh 3.89
+SCOP: kWh/kWh 3.88
+QH: kWh/year 32424
+QHE: kWh/year 8357
+ηs,h % 152.2
+Seasonal space heating energy
+efficiency classes: (According (EU)
+No 811/2013 Table 1)
+-- A+++
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 52 of 121
+CR 1.00 1.00 1.00 0.98 0.92
+0.51 COP
+at part load
+2.03
+2.30
+2.30
+3.79
+5.16
+6.63
+--- strana 53 ---
+Technical Report
+Appendix I Test results
+Table 17a.
+Sound power level measurement (Low temperature application) P
+Model
+PW06-DKXLRE1-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 35.0
+Voltage (V): 230
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 38 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 52 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 53 of 121
+--- strana 54 ---
+Technical Report
+Appendix I Test results
+Table 17b.
+Sound power level measurement (Medium temperature application) P
+Model
+PW06-DKXLRE1-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 55.0
+Voltage (V): 230
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 38 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 53 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 54 of 121
+--- strana 55 ---
+Technical Report
+Appendix I Test results
+Table 18a.
+Sound power level measurement (Low temperature application) P
+Model
+PW08-DKXLRE1-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 35.0
+Voltage (V): 230
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 36 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 51 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 55 of 121
+--- strana 56 ---
+Technical Report
+Appendix I Test results
+Table 18b.
+Sound power level measurement (Medium temperature application) P
+Model
+PW08-DKXLRE1-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 55.0
+Voltage (V): 230
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 38 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 54 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 56 of 121
+--- strana 57 ---
+Technical Report
+Appendix I Test results
+Table 19a.
+Sound power level measurement (Low temperature application) P
+Model
+PW10-DKXLRE1-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 35.0
+Voltage (V): 230
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 39 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 54 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 57 of 121
+--- strana 58 ---
+Technical Report
+Appendix I Test results
+Table 19b.
+Sound power level measurement (Medium temperature application) P
+Model
+PW10-DKXLRE1-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 55.0
+Voltage (V): 230
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 40 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 55 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 58 of 121
+--- strana 59 ---
+Technical Report
+Appendix I Test results
+Table 20a.
+Sound power level measurement (Low temperature application) P
+Model
+PW08-DKXLRE3-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 35.0
+Voltage (V): 400
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 35 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 50 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 59 of 121
+--- strana 60 ---
+Technical Report
+Appendix I Test results
+Table 20b.
+Sound power level measurement (Medium temperature application) P
+Model
+PW08-DKXLRE3-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 55.0
+Voltage (V): 400
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 34 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 50 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 60 of 121
+--- strana 61 ---
+Technical Report
+Appendix I Test results
+Table 21a.
+Sound power level measurement (Low temperature application) P
+Model
+PW10-DKXLRE3-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C):
+7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C):
+35.0
+Voltage (V): 400
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment : Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 39 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 54
+--
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 61 of 121
+--- strana 62 ---
+Model
+PW10-DKXLRE3-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C):
+7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C):
+55.0
+Voltage (V):
+400
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 40
+--
+Measurement distance d * --
+1.0m --
+Sound power level LwA
+****
+-- 55 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix I Test results
+Table 21b.
+Sound power level measurement (Medium temperature application)
+P
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 62 of 121
+--- strana 63 ---
+Technical Report
+Appendix I Test results
+Table 22a.
+Sound power level measurement (Low temperature application) P
+Model
+PW12-DKXLRE3-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 35.0
+Voltage (V): 400
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 40 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 55 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 63 of 121
+--- strana 64 ---
+Technical Report
+Appendix I Test results
+Table 22b.
+Sound power level measurement (Medium temperature application) P
+Model
+PW12-DKXLRE3-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 55.0
+Voltage (V): 400
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 40 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 55 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 64 of 121
+--- strana 65 ---
+Technical Report
+Appendix I Test results
+Table 23a.
+Sound power level measurement (Low temperature application) P
+Model
+PW14-DKXLRE3-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 35.0
+Voltage (V): 400
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 41 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 56 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 65 of 121
+--- strana 66 ---
+Technical Report
+Appendix I Test results
+Table 23b.
+Sound power level measurement (Medium temperature application) P
+Model
+PW14-DKXLRE3-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 55.0
+Voltage (V): 400
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 40 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 55 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 66 of 121
+--- strana 67 ---
+Technical Report
+Appendix I Test results
+Table 24a.
+Sound power level measurement (Low temperature application) P
+Model
+PW16-DKXLRE3-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 35.0
+Voltage (V): 400
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 39 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 55 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 67 of 121
+--- strana 68 ---
+Technical Report
+Appendix I Test results
+Table 24b.
+Sound power level measurement (Medium temperature application) P
+Model
+PW16-DKXLRE3-H8
+Product type : Air to Water
+Outdoor heat exchanger, Air temperature DB/WB (°C): 7.0 / 6.0
+Indoor heat exchanger, Water outlet temperature (°C): 55.0
+Voltage (V): 400
+Frequency (Hz): 50
+Working condition class : Class A
+Acoustical environment :
+Hemi-anechoic room
+Windshield type : Sponge
+Measured position amount : 9
+Measured quantity LWA,indoors (dB(A)) LWA,outdoors (dB(A)) Remark
+Sound pressure level `Lp(ST)
+****
+-- 41 --
+Measurement distance d * -- 1.0m --
+Sound power level LwA
+****
+-- 56 --
+Setting of controls: according to user manual.
+Duct connection:--
+Rounding to: *) 1 decimal places; **) 2 decimal places; ***) 3 decimal places; ****) nearest integer
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 68 of 121
+--- strana 69 ---
+Technical Report
+Appendix I Test results
+Clause 4 of EN 14511-4:2022
+Table 25. P
+Model:
+PW06-DKXLRE1-H8
+TEST 1
+STARTING TEST (§4.2.1.2 Table 3)
+Requirement: The "lower" starting operating conditions declared by the manufacturer for the heating mode- i.e.
+Tair= -24.99 °C, T in water = 9.98 °C, Flow rate 0.64 m³/h have been set and obtained. At those conditions, the
+machine was switched on.
+Observation/ Evaluation: It started without any problem and worked for 30 minutes without showing any
+warning or alarm. During the test the machine operated in auto mode. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 2
+OPERATING TEST (§4.2.1.2 Table 3)
+Requirement: From the machine "lower" starting conditions - i.e. - the machine was brought to the lower
+operating conditions declared by the manufacturer for the heating mode- i.e. Tair= -25.02 °C, T in water = 55.05
+°C, Flow rate 0.64 m³/h. Once these conditions were obtained, the machine was let operate for over 1 hour in
+auto mode.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 3
+SHUTTING OFF WATER FLOW (§ 4.5)
+Requirement: The water flow rate was shuted off through manual and automatic valves of the test rig. The
+machine switched off and only the flow switch Protection appeared on the user interface of indoor unit.
+Observation/ Evaluation: Perform error reset operation, once the water flow rate was restored, the machine
+restarted automatically and worked for 30 minutes normally. No damage was recorded on the machine during
+and after the test.
+Test Response: Pass
+TEST 4
+SHUTTING OFF AIR FLOW (§ 4.5)
+Requirement: The air flow rate was shutted off through a plastic sheet and a panel. The machine never turned
+off. It continued to operate with continuous frosting and defrosting cycles. After more than half an hour, the air
+flow rate was restored and the machine started to operate normally.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Doc No.: ITC-TTW0902.02E – Rev.17
+Test Response: Pass
+TEST 5
+COMPLETE POWER SUPPLY FAILURE (§ 4.6)
+Requirement: The power supply was cut off for about 5 seconds.
+Observation/ Evaluation: The unit restarted automatically within about 3 minutes after the power supply was
+reactivated.
+Test Response: Pass
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 69 of 121
+--- strana 70 ---
+Technical Report
+Appendix I Test results
+Clause 4 of EN 14511-4:2022
+Table 26. P
+Model:
+PW08-DKXLRE1-H8
+TEST 1
+STARTING TEST (§4.2.1.2 Table 3)
+Requirement: The "lower" starting operating conditions declared by the manufacturer for the heating mode- i.e.
+Tair= -25.22 °C, T in water = 10.18 °C, Flow rate 0.86 m³/h have been set and obtained. At those conditions,
+the machine was switched on.
+Observation/ Evaluation: It started without any problem and worked for 30 minutes without showing any
+warning or alarm. During the test the machine operated in auto mode. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 2
+OPERATING TEST (§4.2.1.2 Table 3)
+Requirement: From the machine "lower" starting conditions - i.e. - the machine was brought to the lower
+operating conditions declared by the manufacturer for the heating mode- i.e. Tair= -25.01 °C, T in water = 54.80
+°C, Flow rate 0.86 m³/h. Once these conditions were obtained, the machine was let operate for over 1 hour in
+auto mode.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 3
+SHUTTING OFF WATER FLOW (§ 4.5)
+Requirement: The water flow rate was shuted off through manual and automatic valves of the test rig. The
+machine switched off and only the flow switch Protection appeared on the user interface of indoor unit.
+Observation/ Evaluation: Perform error reset operation, once the water flow rate was restored, the machine
+restarted automatically and worked for 30 minutes normally. No damage was recorded on the machine during
+and after the test.
+Test Response: Pass
+TEST 4
+SHUTTING OFF AIR FLOW (§ 4.5)
+Requirement: The air flow rate was shutted off through a plastic sheet and a panel. The machine never turned
+off. It continued to operate with continuous frosting and defrosting cycles. After more than half an hour, the air
+flow rate was restored and the machine started to operate normally.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Doc No.: ITC-TTW0902.02E – Rev.17
+Test Response: Pass
+TEST 5
+COMPLETE POWER SUPPLY FAILURE (§ 4.6)
+Requirement: The power supply was cut off for about 5 seconds.
+Observation/ Evaluation: The unit restarted automatically within about 3 minutes after the power supply was
+reactivated.
+Test Response: Pass
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 70 of 121
+--- strana 71 ---
+Technical Report
+Appendix I Test results
+Clause 4 of EN 14511-4:2022
+Table 27. P
+Model:
+PW10-DKXLRE1-H8
+TEST 1
+STARTING TEST (§4.2.1.2 Table 3)
+Requirement: The "lower" starting operating conditions declared by the manufacturer for the heating mode- i.e.
+Tair= -25.01 °C, T in water = 9.86 °C, Flow rate 0.90 m³/h have been set and obtained. At those conditions, the
+machine was switched on.
+Observation/ Evaluation: It started without any problem and worked for 30 minutes without showing any
+warning or alarm. During the test the machine operated in auto mode. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 2
+OPERATING TEST (§4.2.1.2 Table 3)
+Requirement: From the machine "lower" starting conditions - i.e. - the machine was brought to the lower
+operating conditions declared by the manufacturer for the heating mode- i.e. Tair= -25.00 °C, T in water = 54.93
+°C, Flow rate 0.90 m³/h. Once these conditions were obtained, the machine was let operate for over 1 hour in
+auto mode.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 3
+SHUTTING OFF WATER FLOW (§ 4.5)
+Requirement: The water flow rate was shuted off through manual and automatic valves of the test rig. The
+machine switched off and only the flow switch Protection appeared on the user interface of indoor unit.
+Observation/ Evaluation: Perform error reset operation, once the water flow rate was restored, the machine
+restarted automatically and worked for 30 minutes normally. No damage was recorded on the machine during
+and after the test.
+Test Response: Pass
+TEST 4
+SHUTTING OFF AIR FLOW (§ 4.5)
+Requirement: The air flow rate was shutted off through a plastic sheet and a panel. The machine never turned
+off. It continued to operate with continuous frosting and defrosting cycles. After more than half an hour, the air
+flow rate was restored and the machine started to operate normally.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Doc No.: ITC-TTW0902.02E – Rev.17
+Test Response: Pass
+TEST 5
+COMPLETE POWER SUPPLY FAILURE (§ 4.6)
+Requirement: The power supply was cut off for about 5 seconds.
+Observation/ Evaluation: The unit restarted automatically within about 3 minutes after the power supply was
+reactivated.
+Test Response: Pass
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 71 of 121
+--- strana 72 ---
+Technical Report
+Appendix I Test results
+Clause 4 of EN 14511-4:2022
+Table 28. P
+Model:
+PW08-DKXLRE3-H8
+TEST 1
+STARTING TEST (§4.2.1.2 Table 3)
+Requirement: The "lower" starting operating conditions declared by the manufacturer for the heating mode- i.e.
+Tair= -25.03 °C, T in water = 10.51 °C, Flow rate 0.86 m³/h have been set and obtained. At those conditions,
+the machine was switched on.
+Observation/ Evaluation: It started without any problem and worked for 30 minutes without showing any
+warning or alarm. During the test the machine operated in auto mode. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 2
+OPERATING TEST (§4.2.1.2 Table 3)
+Requirement: From the machine "lower" starting conditions - i.e. - the machine was brought to the lower
+operating conditions declared by the manufacturer for the heating mode- i.e. Tair= -25.00 °C, T in water = 50.80
+°C, Flow rate 0.86 m³/h. Once these conditions were obtained, the machine was let operate for over 1 hour in
+auto mode.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 3
+SHUTTING OFF WATER FLOW (§ 4.5)
+Requirement: The water flow rate was shuted off through manual and automatic valves of the test rig. The
+machine switched off and only the flow switch Protection appeared on the user interface of indoor unit.
+Observation/ Evaluation: Perform error reset operation, once the water flow rate was restored, the machine
+restarted automatically and worked for 30 minutes normally. No damage was recorded on the machine during
+and after the test.
+Test Response: Pass
+TEST 4
+SHUTTING OFF AIR FLOW (§ 4.5)
+Requirement: The air flow rate was shutted off through a plastic sheet and a panel. The machine never turned
+off. It continued to operate with continuous frosting and defrosting cycles. After more than half an hour, the air
+flow rate was restored and the machine started to operate normally.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Doc No.: ITC-TTW0902.02E – Rev.17
+Test Response: Pass
+TEST 5
+COMPLETE POWER SUPPLY FAILURE (§ 4.6)
+Requirement: The power supply was cut off for about 5 seconds.
+Observation/ Evaluation: The unit restarted automatically within about 3 minutes after the power supply was
+reactivated.
+Test Response: Pass
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 72 of 121
+--- strana 73 ---
+Technical Report
+Appendix I Test results
+Clause 4 of EN 14511-4:2022
+Table 29. P
+Model:
+PW10-DKXLRE3-H8
+TEST 1
+STARTING TEST (§4.2.1.2 Table 3)
+Requirement: The "lower" starting operating conditions declared by the manufacturer for the heating mode- i.e.
+Tair= -25.01 °C, T in water = 10.33 °C, Flow rate 0.90 m³/h have been set and obtained. At those conditions,
+the machine was switched on.
+Observation/ Evaluation: It started without any problem and worked for 30 minutes without showing any
+warning or alarm. During the test the machine operated in auto mode. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 2
+OPERATING TEST (§4.2.1.2 Table 3)
+Requirement: From the machine "lower" starting conditions - i.e. - the machine was brought to the lower
+operating conditions declared by the manufacturer for the heating mode- i.e. Tair= -25.02 °C, T in water = 54.16
+°C, Flow rate 0.90 m³/h. Once these conditions were obtained, the machine was let operate for over 1 hour in
+auto mode.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 3
+SHUTTING OFF WATER FLOW (§ 4.5)
+Requirement: The water flow rate was shuted off through manual and automatic valves of the test rig. The
+machine switched off and only the flow switch Protection appeared on the user interface of indoor unit.
+Observation/ Evaluation: Perform error reset operation, once the water flow rate was restored, the machine
+restarted automatically and worked for 30 minutes normally. No damage was recorded on the machine during
+and after the test.
+Test Response: Pass
+TEST 4
+SHUTTING OFF AIR FLOW (§ 4.5)
+Requirement: The air flow rate was shutted off through a plastic sheet and a panel. The machine never turned
+off. It continued to operate with continuous frosting and defrosting cycles. After more than half an hour, the air
+flow rate was restored and the machine started to operate normally.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Doc No.: ITC-TTW0902.02E – Rev.17
+Test Response: Pass
+TEST 5
+COMPLETE POWER SUPPLY FAILURE (§ 4.6)
+Requirement: The power supply was cut off for about 5 seconds.
+Observation/ Evaluation: The unit restarted automatically within about 3 minutes after the power supply was
+reactivated.
+Test Response: Pass
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 73 of 121
+--- strana 74 ---
+Technical Report
+Appendix I Test results
+Clause 4 of EN 14511-4:2022
+Table 30. P
+Model:
+PW12-DKXLRE3-H8
+TEST 1
+STARTING TEST (§4.2.1.2 Table 3)
+Requirement: The "lower" starting operating conditions declared by the manufacturer for the heating mode- i.e.
+Tair= -24.99 °C, T in water = 9.98 °C, Flow rate 1.30 m³/h have been set and obtained. At those conditions, the
+machine was switched on.
+Observation/ Evaluation: It started without any problem and worked for 30 minutes without showing any
+warning or alarm. During the test the machine operated in auto mode. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 2
+OPERATING TEST (§4.2.1.2 Table 3)
+Requirement: From the machine "lower" starting conditions - i.e. - the machine was brought to the lower
+operating conditions declared by the manufacturer for the heating mode- i.e. Tair= -25.38 °C, T in water = 54.99
+°C, Flow rate 1.30 m³/h. Once these conditions were obtained, the machine was let operate for over 1 hour in
+auto mode.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 3
+SHUTTING OFF WATER FLOW (§ 4.5)
+Requirement: The water flow rate was shuted off through manual and automatic valves of the test rig. The
+machine switched off and only the flow switch Protection appeared on the user interface of indoor unit.
+Observation/ Evaluation: Perform error reset operation, once the water flow rate was restored, the machine
+restarted automatically and worked for 30 minutes normally. No damage was recorded on the machine during
+and after the test.
+Test Response: Pass
+TEST 4
+SHUTTING OFF AIR FLOW (§ 4.5)
+Requirement: The air flow rate was shutted off through a plastic sheet and a panel. The machine never turned
+off. It continued to operate with continuous frosting and defrosting cycles. After more than half an hour, the air
+flow rate was restored and the machine started to operate normally.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Doc No.: ITC-TTW0902.02E – Rev.17
+Test Response: Pass
+TEST 5
+COMPLETE POWER SUPPLY FAILURE (§ 4.6)
+Requirement: The power supply was cut off for about 5 seconds.
+Observation/ Evaluation: The unit restarted automatically within about 3 minutes after the power supply was
+reactivated.
+Test Response: Pass
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 74 of 121
+--- strana 75 ---
+Technical Report
+Appendix I Test results
+Clause 4 of EN 14511-4:2022
+Table 31. P
+Model:
+PW14-DKXLRE3-H8
+TEST 1
+STARTING TEST (§4.2.1.2 Table 3)
+Requirement: The "lower" starting operating conditions declared by the manufacturer for the heating mode- i.e.
+Tair= -25.03 °C, T in water = 10.44 °C, Flow rate 1.40 m³/h have been set and obtained. At those conditions,
+the machine was switched on.
+Observation/ Evaluation: It started without any problem and worked for 30 minutes without showing any
+warning or alarm. During the test the machine operated in auto mode. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 2
+OPERATING TEST (§4.2.1.2 Table 3)
+Requirement: From the machine "lower" starting conditions - i.e. - the machine was brought to the lower
+operating conditions declared by the manufacturer for the heating mode- i.e. Tair= -24.91 °C, T in water = 53.24
+°C, Flow rate 1.40 m³/h. Once these conditions were obtained, the machine was let operate for over 1 hour in
+auto mode.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 3
+SHUTTING OFF WATER FLOW (§ 4.5)
+Requirement: The water flow rate was shuted off through manual and automatic valves of the test rig. The
+machine switched off and only the flow switch Protection appeared on the user interface of indoor unit.
+Observation/ Evaluation: Perform error reset operation, once the water flow rate was restored, the machine
+restarted automatically and worked for 30 minutes normally. No damage was recorded on the machine during
+and after the test.
+Test Response: Pass
+TEST 4
+SHUTTING OFF AIR FLOW (§ 4.5)
+Requirement: The air flow rate was shutted off through a plastic sheet and a panel. The machine never turned
+off. It continued to operate with continuous frosting and defrosting cycles. After more than half an hour, the air
+flow rate was restored and the machine started to operate normally.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Doc No.: ITC-TTW0902.02E – Rev.17
+Test Response: Pass
+TEST 5
+COMPLETE POWER SUPPLY FAILURE (§ 4.6)
+Requirement: The power supply was cut off for about 5 seconds.
+Observation/ Evaluation: The unit restarted automatically within about 3 minutes after the power supply was
+reactivated.
+Test Response: Pass
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 75 of 121
+--- strana 76 ---
+Technical Report
+Appendix I Test results
+Clause 4 of EN 14511-4:2022
+Table 32. P
+Model:
+PW16-DKXLRE3-H8
+TEST 1
+STARTING TEST (§4.2.1.2 Table 3)
+Requirement: The "lower" starting operating conditions declared by the manufacturer for the heating mode- i.e.
+Tair= -25.02 °C, T in water = 10.02 °C, Flow rate 1.50 m³/h have been set and obtained. At those conditions,
+the machine was switched on.
+Observation/ Evaluation: It started without any problem and worked for 30 minutes without showing any
+warning or alarm. During the test the machine operated in auto mode. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 2
+OPERATING TEST (§4.2.1.2 Table 3)
+Requirement: From the machine "lower" starting conditions - i.e. - the machine was brought to the lower
+operating conditions declared by the manufacturer for the heating mode- i.e. Tair= -24.99 °C, T in water = 54.99
+°C, Flow rate 1.50 m³/h. Once these conditions were obtained, the machine was let operate for over 1 hour in
+auto mode.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Test Response: Pass
+TEST 3
+SHUTTING OFF WATER FLOW (§ 4.5)
+Requirement: The water flow rate was shuted off through manual and automatic valves of the test rig. The
+machine switched off and only the flow switch Protection appeared on the user interface of indoor unit.
+Observation/ Evaluation: Perform error reset operation, once the water flow rate was restored, the machine
+restarted automatically and worked for 30 minutes normally. No damage was recorded on the machine during
+and after the test.
+Test Response: Pass
+TEST 4
+SHUTTING OFF AIR FLOW (§ 4.5)
+Requirement: The air flow rate was shutted off through a plastic sheet and a panel. The machine never turned
+off. It continued to operate with continuous frosting and defrosting cycles. After more than half an hour, the air
+flow rate was restored and the machine started to operate normally.
+Observation/ Evaluation: During the test, no waring or alarm were showed. No damage was recorded on the
+machine during and after the test.
+Doc No.: ITC-TTW0902.02E – Rev.17
+Test Response: Pass
+TEST 5
+COMPLETE POWER SUPPLY FAILURE (§ 4.6)
+Requirement: The power supply was cut off for about 5 seconds.
+Observation/ Evaluation: The unit restarted automatically within about 3 minutes after the power supply was
+reactivated.
+Test Response: Pass
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 76 of 121
+--- strana 77 ---
+Technical Report
+Appendix II Marking plate
+Nameplate
+Model: PW06-DKXLRE1-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 77 of 121
+--- strana 78 ---
+Technical Report
+Appendix II Marking plate
+Nameplate
+Model: PW08-DKXLRE1-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 78 of 121
+--- strana 79 ---
+Technical Report
+Appendix II Marking plate
+Nameplate
+Model: PW10-DKXLRE1-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 79 of 121
+--- strana 80 ---
+Technical Report
+Appendix II Marking plate
+Nameplate
+Model: PW08-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 80 of 121
+--- strana 81 ---
+Technical Report
+Appendix II Marking plate
+Nameplate
+Model: PW10-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 81 of 121
+--- strana 82 ---
+Technical Report
+Appendix II Marking plate
+Nameplate
+Model: PW12-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 82 of 121
+--- strana 83 ---
+Technical Report
+Appendix II Marking plate
+Nameplate
+Model: PW14-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 83 of 121
+--- strana 84 ---
+Technical Report
+Appendix II Marking plate
+Nameplate
+Model: PW16-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 84 of 121
+--- strana 85 ---
+Overall view for PW06-DKXLRE1-H8
+Compressor for PW06-DKXLRE1-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 85 of 121
+--- strana 86 ---
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 86 of 121
+Fan Motor for PW06-DKXLRE1-H8
+Main Control Board for PW06-DKXLRE1-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+--- strana 87 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 87 of 121
+Water Pump for PW06-DKXLRE1-H8
+--- strana 88 ---
+Overall view for PW08-DKXLRE1-H8
+Compressor for PW08-DKXLRE1-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 88 of 121
+--- strana 89 ---
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 89 of 121
+Fan Motor for PW08-DKXLRE1-H8
+Main Control Board for PW08-DKXLRE1-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+--- strana 90 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 90 of 121
+Water Pump for PW08-DKXLRE1-H8
+--- strana 91 ---
+Overall view for PW10-DKXLRE1-H8
+Compressor for PW10-DKXLRE1-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 91 of 121
+--- strana 92 ---
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 92 of 121
+Fan Motor for PW10-DKXLRE1-H8
+Main Control Board for PW10-DKXLRE1-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+--- strana 93 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 93 of 121
+Water Pump for PW10-DKXLRE1-H8
+--- strana 94 ---
+Overall view for PW08-DKXLRE3-H8
+Compressor for PW08-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 94 of 121
+--- strana 95 ---
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 95 of 121
+Fan Motor for PW08-DKXLRE3-H8
+Main Control Board for PW08-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+--- strana 96 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 96 of 121
+Water Pump for PW08-DKXLRE3-H8
+--- strana 97 ---
+Overall view for PW10-DKXLRE3-H8
+Compressor for PW10-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 97 of 121
+--- strana 98 ---
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 98 of 121
+Fan Motor for PW10-DKXLRE3-H8
+Main Control Board for PW10-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+--- strana 99 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 99 of 121
+Water Pump for PW10-DKXLRE3-H8
+--- strana 100 ---
+Overall view for PW12-DKXLRE3-H8
+Compressor for PW12-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 100 of 121
+--- strana 101 ---
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 101 of 121
+Fan Motor for PW12-DKXLRE3-H8
+Main Control Board for PW12-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+--- strana 102 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 102 of 121
+Water Pump for PW12-DKXLRE3-H8
+--- strana 103 ---
+Overall view for PW14-DKXLRE3-H8
+Compressor for PW14-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 103 of 121
+--- strana 104 ---
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 104 of 121
+Fan Motor for PW14-DKXLRE3-H8
+Main Control Board for PW14-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+--- strana 105 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 105 of 121
+Water Pump for PW14-DKXLRE3-H8
+--- strana 106 ---
+Overall view for PW16-DKXLRE3-H8
+Compressor for PW16-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 106 of 121
+--- strana 107 ---
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 107 of 121
+Fan Motor for PW16-DKXLRE3-H8
+Main Control Board for PW16-DKXLRE3-H8
+Doc No.: ITC-TTW0902.02E – Rev.17
+--- strana 108 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix III photo documentation
+Details of: View:
+General
+Front
+Rear
+Right
+Left
+Top
+Bottom
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 108 of 121
+Water Pump for PW16-DKXLRE3-H8
+--- strana 109 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix IV Construction data form
+Model：
+PW06-DKXLRE1-H8
+Part
+1. Compressor
+Manufacture: Type: Serial-number: Specification: 2. Condenser
+Manufacture: Type: Heat exchanger: Dimension(mm): 3. Evaporator
+Manufacture: Type: Heat exchanger: Dimension(mm): 4. Fan motor
+Manufacture: Type: Fan type: Specification: 5. Main control board
+Manufacture: Type: Specification: 6. Water pump
+Manufacture: Type: Specification: Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 109 of 121
+Technical data
+MITSUBISHI ELECTRIC (GUANGZHOU)
+COMPRESSOR CO.,LTD
+SPB280FHJMC
+20250612-9004827739
+DC50-200V; 45-360Hz; R290
+Ningbo Hrale Plate Heat Exchanger Co., Ltd.
+B3-40-40-4.5
+Plate heat exchanger
+120(L)mmX333(H)mmX72.2(D)mm
+Guangzhou AOTAI Refrigeration Equipment Co., LTD
+801002-0875
+Finned heat exchanger
+700*300*700mm
+Jiangmen LT Motor Co., Ltd
+RD170HA1
+3 blade
+DC310V; 170W
+GUANGZHOU PUNP ELECTRONICS CO., LTD.
+K.LK050097A.01
+220-240V~; 50Hz
+SHIMGE PUMP INDUSTRY(JIANGSU)CO.,LTD.
+APM25-9-130 PWM1
+230V~; 50/60Hz
+--- strana 110 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix IV Construction data form
+Model：
+PW08-DKXLRE1-H8
+Part
+1. Compressor
+Manufacture: Type: Serial-number: Specification: 2. Condenser
+Manufacture: Type: Heat exchanger: Dimension(mm): 3. Evaporator
+Manufacture: Type: Heat exchanger: Dimension(mm): 4. Fan motor
+Manufacture: Type: Fan type: Specification: 5. Main control board
+Manufacture: Type: Specification: 6. Water pump
+Manufacture: Type: Specification: Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 110 of 121
+Technical data
+MITSUBISHI ELECTRIC (GUANGZHOU)
+COMPRESSOR CO.,LTD
+MPB42FJDMC-L
+20250717-4009342635
+DC45-415V; 30-360Hz; R290
+Ningbo Hrale Plate Heat Exchanger Co., Ltd.
+B3-40-52-4.5
+Plate heat exchanger
+120(L)mmX333(H)mmX90.6(D)mm
+Guangzhou AOTAI Refrigeration Equipment Co., LTD
+801002-1052
+Finned heat exchanger
+850*320*1000
+Jiangmen LT Motor Co., Ltd
+RD200HC1
+3 blade
+DC310V; 200W
+GUANGZHOU PUNP ELECTRONICS CO., LTD.
+K.LK050097A.01
+220-240V~; 50Hz
+SHIMGE PUMP INDUSTRY(JIANGSU)CO.,LTD.
+APM25-9-130 PWM1
+230V~; 50/60Hz
+--- strana 111 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix IV Construction data form
+Model：
+PW10-DKXLRE1-H8
+Part
+1. Compressor
+Manufacture: Type: Serial-number: Specification: 2. Condenser
+Manufacture: Type: Heat exchanger: Dimension(mm): 3. Evaporator
+Manufacture: Type: Heat exchanger: Dimension(mm): 4. Fan motor
+Manufacture: Type: Fan type: Specification: 5. Main control board
+Manufacture: Type: Specification: 6. Water pump
+Manufacture: Type: Specification: Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 111 of 121
+Technical data
+MITSUBISHI ELECTRIC (GUANGZHOU)
+COMPRESSOR CO.,LTD
+MPB42FJDMC-L
+20250624-4009289338
+DC45-415V; 30-360Hz; R290
+Ningbo Hrale Plate Heat Exchanger Co., Ltd.
+B3-40-56-4.5
+Plate heat exchanger
+120×96.6×333 mm
+Guangzhou AOTAI Refrigeration Equipment Co., LTD
+801002-1180
+Finned heat exchanger
+850*320*1000 mm
+Jiangmen LT Motor Co., Ltd
+RD200HC1
+3 blade
+DC310V; 200W
+GUANGZHOU PUNP ELECTRONICS CO., LTD.
+K.LK050097A.01
+220-240V~; 50Hz
+SHIMGE PUMP INDUSTRY(JIANGSU)CO.,LTD.
+APM25-9-130 PWM1
+230V~; 50/60Hz
+--- strana 112 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix IV Construction data form
+Model：
+PW08-DKXLRE3-H8
+Part
+1. Compressor
+Manufacture: Type: Serial-number: Specification: 2. Condenser
+Manufacture: Type: Heat exchanger: Dimension(mm): 3. Evaporator
+Manufacture: Type: Heat exchanger: Dimension(mm): 4. Fan motor
+Manufacture: Type: Fan type: Specification: 5. Main control board
+Manufacture: Type: Specification: 6. Water pump
+Manufacture: Type: Specification: Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 112 of 121
+Technical data
+MITSUBISHI ELECTRIC (GUANGZHOU)
+COMPRESSOR CO.,LTD
+MPB42FJDMC-L
+20250624-4009289335
+DC45-415V; 30-360Hz; R290
+Ningbo Hrale Plate Heat Exchanger Co., Ltd.
+B3-40-52-4.5
+Plate heat exchanger
+120(L)mmX333(H)mmX90.6(D)mm
+Guangzhou AOTAI Refrigeration Equipment Co., LTD
+801002-1052
+Finned heat exchanger
+850*320*1000mm
+Jiangmen LT Motor Co., Ltd
+RD200HC1
+3 blade
+DC310V; 200W
+GUANGZHOU PUNP ELECTRONICS CO., LTD.
+K.LK050097A.01
+220-240V~; 50Hz
+SHIMGE PUMP INDUSTRY(JIANGSU)CO.,LTD.
+APM25-9-130 PWM1
+230V~; 50/60Hz
+--- strana 113 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix IV Construction data form
+Model：
+PW10-DKXLRE3-H8
+Part
+1. Compressor
+Manufacture: Type: Serial-number: Specification: 2. Condenser
+Manufacture: Type: Heat exchanger: Dimension(mm): 3. Evaporator
+Manufacture: Type: Heat exchanger: Dimension(mm): 4. Fan motor
+Manufacture: Type: Fan type: Specification: 5. Main control board
+Manufacture: Type: Specification: 6. Water pump
+Manufacture: Type: Specification: Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 113 of 121
+Technical data
+MITSUBISHI ELECTRIC (GUANGZHOU)
+COMPRESSOR CO.,LTD
+MPB42FJDMC-L
+20250624-4009289334
+DC45-415V; 30-360Hz; R290
+Ningbo Hrale Plate Heat Exchanger Co., Ltd.
+B3-40-56-4.5
+Plate heat exchanger
+120×96.6×333 mm
+Guangzhou AOTAI Refrigeration Equipment Co., LTD
+801002-1180
+Finned heat exchanger
+850*320*1000 mm
+Jiangmen LT Motor Co., Ltd
+RD200HC1
+3 blade
+DC310V; 200W
+GUANGZHOU PUNP ELECTRONICS CO., LTD.
+K.LK050097A.01
+220-240V~; 50Hz
+SHIMGE PUMP INDUSTRY(JIANGSU)CO.,LTD.
+APM25-9-130 PWM1
+230V~; 50/60Hz
+--- strana 114 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix IV Construction data form
+Model：
+PW12-DKXLRE3-H8
+Part
+1. Compressor
+Manufacture: Type: Serial-number: Specification: 2. Condenser
+Manufacture: Type: Heat exchanger: Dimension(mm): 3. Evaporator
+Manufacture: Type: Heat exchanger: Dimension(mm): 4. Fan motor
+Manufacture: Type: Fan type: Specification: 5. Main control board
+Manufacture: Type: Specification: 6. Water pump
+Manufacture: Type: Specification: Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 114 of 121
+Technical data
+MITSUBISHI ELECTRIC (GUANGZHOU)
+COMPRESSOR CO.,LTD
+LPB65FHCMC
+20250709-1008211610
+DC58-415V; 30-360Hz; R290
+Ningbo Hrale Plate Heat Exchanger Co., Ltd.
+B3-40-60-4.5(T40RD-155)
+Plate heat exchanger
+120×102.7×333 mm
+Guangzhou AOTAI Refrigeration Equipment Co., LTD
+801002-1180
+Finned heat exchanger
+850*320*1000 mm
+Jiangmen LT Motor Co., Ltd
+RD200HC1
+3 blade
+DC310V; 200W
+GUANGZHOU PUNP ELECTRONICS CO., LTD.
+K.LK055845A.01
+220-240V~; 50Hz
+SHIMGE PUMP INDUSTRY(JIANGSU)CO.,LTD.
+APF25-12-130E FPWM1
+230V~; 50/60Hz
+--- strana 115 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix IV Construction data form
+Model：
+PW14-DKXLRE3-H8
+Part
+1. Compressor
+Manufacture: Type: Serial-number: Specification: 2. Condenser
+Manufacture: Type: Heat exchanger: Dimension(mm): 3. Evaporator
+Manufacture: Type: Heat exchanger: Dimension(mm): 4. Fan motor
+Manufacture: Type: Fan type: Specification: 5. Main control board
+Manufacture: Type: Specification: 6. Water pump
+Manufacture: Type: Specification: Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 115 of 121
+Technical data
+MITSUBISHI ELECTRIC (GUANGZHOU)
+COMPRESSOR CO.,LTD
+LPB65FHCMC
+20250709-1008211570
+DC58-415V; 30-360Hz; R290
+ZHEJIANG SANHUA BPHE TECHNOLOGY CO.,LTD
+JX-060B-48HZ-4.5
+Plate heat exchanger
+119X526X102mm
+Guangzhou AOTAI Refrigeration Equipment Co., LTD
+801002-1454
+Finned heat exchanger
+850*320*1000
+Jiangmen LT Motor Co., Ltd
+RD400HB10
+3 blade
+DC310V; 400W
+GUANGZHOU PUNP ELECTRONICS CO., LTD.
+K.LK050097A.01
+380-415V, 3N~, 50/60Hz
+SHIMGE PUMP INDUSTRY(JIANGSU)CO.,LTD.
+APF25-12-130E FPWM1
+230V~; 50/60Hz
+--- strana 116 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix IV Construction data form
+Model：
+PW16-DKXLRE3-H8
+Part
+1. Compressor
+Manufacture: Type: Serial-number: Specification: 2. Condenser
+Manufacture: Type: Heat exchanger: Dimension(mm): 3. Evaporator
+Manufacture: Type: Heat exchanger: Dimension(mm): 4. Fan motor
+Manufacture: Type: Fan type: Specification: 5. Main control board
+Manufacture: Type: Specification: 6. Water pump
+Manufacture: Type: Specification: Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 116 of 121
+Technical data
+MITSUBISHI ELECTRIC (GUANGZHOU)
+COMPRESSOR CO.,LTD
+LPB80FHCMC
+20250613-1008174631
+DC58-415V; 30-360Hz; R290
+Ningbo Hrale Plate Heat Exchanger Co., Ltd.
+B3-68-60-4.5-V079
+Plate heat exchanger
+119X526X124.4mm
+Guangzhou AOTAI Refrigeration Equipment Co., LTD
+801002-1623
+Finned heat exchanger
+850*320*1010
+Jiangmen LT Motor Co., Ltd
+RD400HB10
+3 blade
+DC310V; 400W
+GUANGZHOU PUNP ELECTRONICS CO., LTD.
+K.LK050097A.01
+380-415V, 3N~, 50/60Hz
+SHIMGE PUMP INDUSTRY(JIANGSU)CO.,LTD.
+APF25-12-130E FPWM1
+230V~; 50/60Hz
+--- strana 117 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix V Equipment List
+Model：
+PW10-DKXLRE1-H8
+No. Type 1 Platinum resistance 2 Electromagnetic
+flowmeter 3 Current transformer 4 AC Digital Power Meter 5 Pressure Transmitter 6 Noise Meter and
+PULSE Sound Power
+7 Power Analyzer 8 Atmospheric Pressure
+Meter
+9 1/2" Free-field
+Microphone
+10 Hygrometer 11 Tape Measure Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 117 of 121
+Manufacture CHINO YOKOGAWA bhelectric qingzhi MICROSENSOR B&K / Brüel & Kjæ
+r Sound &
+Vibration
+Measurement A/S.
+HIOKI/ HIOKI E.E.
+CORPORATION FENGYANG/TIAN
+JIN FENGYANG
+INSTRUMENT
+INDUSTRIAL
+AND TRADING
+CO. LTD
+B&K / Brüel & Kjæ
+r Sound &
+Vibration
+Measurement A/S.
+UNI-T 0-3000mm Model Pt100
+SF0015 BH-0.66CT(30IIIG)
+8904F2 (0~400) kPa 3560-B-010
+PULSE 3334 DYM3 4190-L-001
+UT332 3m Equipment ID TS-0233C0313
+TS-0233C0312
+TS-0233C0314
+TS-0233C0310
+S5Y810445 234 076453
+079908
+076450
+8923050049 2305-318-005-1-008 202444CK0032-3 200844CK0084 200944BK0273 202444CK0032-4
+202444CK0032-5
+202444CK0032-6
+202444CK0032-7
+202444CK0032-8
+202444CK0032-9
+202444CK0032-10
+202444CK0032-11
+202444CK0032-12
+201444CK0004SD 201444CK0026SD Calibration Due
+Date
+2026-09-28
+2026-09-28
+2026-09-28
+2026-09-28
+2026-09-28
+2026-06-26
+2026-06-26
+2026-11-11
+2026-06-26
+2026-11-10
+2026-11-21
+--- strana 118 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix V Equipment List
+Model：
+PW10-DKXLRE3-H8
+No. Type 1 Platinum resistance 2 Electromagnetic
+flowmeter 3 Current transformer 4 AC Digital Power Meter 5 Pressure Transmitter 6 Noise Meter and
+PULSE Sound Power
+7 Power Analyzer 8 Atmospheric Pressure
+Meter
+9 1/2" Free-field
+Microphone
+10 Hygrometer 11 Tape Measure Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 118 of 121
+Manufacture CHINO YOKOGAWA bhelectric qingzhi MICROSENSOR B&K / Brüel & Kjæ
+r Sound &
+Vibration
+Measurement A/S.
+HIOKI/ HIOKI E.E.
+CORPORATION FENGYANG/TIAN
+JIN FENGYANG
+INSTRUMENT
+INDUSTRIAL
+AND TRADING
+CO. LTD
+B&K / Brüel & Kjæ
+r Sound &
+Vibration
+Measurement A/S.
+UNI-T 0-3000mm Model Pt100
+SF0015
+SF0032
+BH-0.66CT(30IIIG)
+8904F2 (0~400) kPa 3560-B-010
+PULSE 3334 DYM3 4190-L-001
+UT332 3m Equipment ID TS-0233C0311
+TS-0233C0308
+TS-0233C0316
+TS-0233C0315
+S5Y810455 235
+S5YB11842 245 076454
+079907
+076452
+8923050048 2305-318-005-1-005 202444CK0032-3 200844CK0084 200944BK0273 202444CK0032-4
+202444CK0032-5
+202444CK0032-6
+202444CK0032-7
+202444CK0032-8
+202444CK0032-9
+202444CK0032-10
+202444CK0032-11
+202444CK0032-12
+201444CK0004SD 201444CK0026SD Calibration Due
+Date
+2026-09-28
+2026-09-28
+2026-09-28
+2026-09-28
+2026-09-28
+2026-06-26
+2026-06-26
+2026-11-11
+2026-06-26
+2026-11-10
+2026-11-21
+--- strana 119 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix V Equipment List
+Model：
+PW12-DKXLRE3-H8, PW16-DKXLRE3-H8
+No. Type Manufacture 1 Platinum resistance CHINO 2 Electromagnetic
+flowmeter YOKOGAWA 3 Current transformer
+China Wenzhou
+Precision
+Transformer
+Manufacturing
+Co., Ltd.
+4 AC Digital Power Meter qingzhi 5 Pressure Transmitter MICROSENSOR 6 Noise Meter and
+PULSE Sound Power
+B&K / Brüel & Kjæ
+r Sound &
+Vibration
+Measurement A/S.
+7 Power Analyzer HIOKI/ HIOKI E.E.
+CORPORATION 8 Atmospheric Pressure
+Meter
+FENGYANG/TIAN
+JIN FENGYANG
+INSTRUMENT
+INDUSTRIAL
+AND TRADING
+CO. LTD
+9 1/2" Free-field
+Microphone
+B&K / Brüel & Kjæ
+r Sound &
+Vibration
+Measurement A/S.
+10 Hygrometer UNI-T 11 Tape Measure 0-3000mm Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 119 of 121
+Model Pt100
+AXG025
+AXG015
+BH-0.66A
+8904F2 (0~500) kPa 3560-B-010
+PULSE 3334 DYM3 4190-L-001
+UT332 3m Equipment ID TS-0246C0573
+TS-0246C0576
+TS-0246C0574
+TS-0246C0575
+S5Z506432
+S5Z506426 2406412
+2406414
+2406415
+8924050032 90Z338196 202444CK0032-3 200844CK0084 200944BK0273 202444CK0032-4
+202444CK0032-5
+202444CK0032-6
+202444CK0032-7
+202444CK0032-8
+202444CK0032-9
+202444CK0032-10
+202444CK0032-11
+202444CK0032-12
+201444CK0004SD 201444CK0026SD Calibration Due
+Date
+2026-09-28
+2026-09-28
+2026-09-28
+2026-09-28
+2026-09-28
+2026-06-26
+2026-06-26
+2026-11-11
+2026-06-26
+2026-11-10
+2026-11-21
+--- strana 120 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix V Equipment List
+Model：
+PW08-DKXLRE3-H8
+No. Type 1 Platinum resistance 2 Electromagnetic
+flowmeter 3 Current transformer 4 AC Digital Power Meter 5 Pressure Transmitter 6 Noise Meter and
+PULSE Sound Power
+7 Power Analyzer 8 Atmospheric Pressure
+Meter
+9 1/2" Free-field
+Microphone
+10 Hygrometer 11 Tape Measure Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 120 of 121
+Manufacture CHINO YOKOGAWA bhelectric qingzhi MICROSENSOR B&K / Brüel & Kjæ
+r Sound &
+Vibration
+Measurement A/S.
+HIOKI/ HIOKI E.E.
+CORPORATION FENGYANG/TIAN
+JIN FENGYANG
+INSTRUMENT
+INDUSTRIAL
+AND TRADING
+CO. LTD
+B&K / Brüel & Kjæ
+r Sound &
+Vibration
+Measurement A/S.
+UNI-T 0-3000mm Model Pt100
+SF0025
+SF0015
+BH-0.66CT(30IIIG)
+8904F2 (0~250) kPa 3560-B-010
+PULSE 3334 DYM3 4190-L-001
+UT332 3m Equipment ID TS-0247C0324
+TS-0247C0320
+TS-0247C0323
+TS-0247C0322
+S5ZA16447
+S51213537 096265
+096267
+096269
+8924050026 2408-318-052-1-002
+2404-318-036-1-002 202444CK0032-3 200844CK0084 200944BK0273 202444CK0032-4
+202444CK0032-5
+202444CK0032-6
+202444CK0032-7
+202444CK0032-8
+202444CK0032-9
+202444CK0032-10
+202444CK0032-11
+202444CK0032-12
+201444CK0004SD 201444CK0026SD Calibration Due
+Date
+2026-09-28
+2026-09-28
+2026-09-28
+2026-09-28
+2026-09-28
+2026-06-26
+2026-06-26
+2026-11-11
+2026-06-26
+2026-11-10
+2026-11-21
+--- strana 121 ---
+Doc No.: ITC-TTW0902.02E – Rev.17
+Technical Report
+Appendix V Equipment List
+Model：
+PW06-DKXLRE1-H8, PW08-DKXLRE1-H8, PW14-DKXLRE3-H8
+No. Type Manufacture Model Equipment ID 1 Platinum resistance CHINO Pt100
+TS-0247C0326
+TS-0247C0325
+TS-0247C0321
+TS-0247C0327
+2 Electromagnetic
+flowmeter YOKOGAWA SF0025
+SF0015
+S5ZA12921
+S51213531 3 Current transformer bhelectric BH-0.66CT(30IIIG)
+096264
+096266
+096268
+4 AC Digital Power Meter qingzhi 8904F2 8924050022 5 Pressure Transmitter MICROSENSOR (0~250) kPa 2404-318-036-1-004 6 Noise Meter and
+PULSE Sound Power
+B&K / Brüel & Kjæ
+r Sound &
+Vibration
+Measurement A/S.
+3560-B-010
+PULSE 202444CK0032-3 7 Power Analyzer HIOKI/ HIOKI E.E.
+CORPORATION 3334 200844CK0084 8 Atmospheric Pressure
+Meter
+FENGYANG/TIAN
+JIN FENGYANG
+INSTRUMENT
+INDUSTRIAL
+AND TRADING
+CO. LTD
+DYM3 200944BK0273 9 1/2" Free-field
+Microphone
+B&K / Brüel & Kjæ
+r Sound &
+Vibration
+Measurement A/S.
+4190-L-001
+202444CK0032-4
+202444CK0032-5
+202444CK0032-6
+202444CK0032-7
+202444CK0032-8
+202444CK0032-9
+202444CK0032-10
+202444CK0032-11
+202444CK0032-12
+10 Hygrometer UNI-T UT332 201444CK0004SD 11 Tape Measure 0-3000mm 3m 201444CK0026SD -- End of Report --
+Project No: 64.181.25.00859.01
+Rev.: 00
+Date: 2025-12-08
+Page: 121 of 121
+Calibration Due
+Date
+2026-09-28
+2026-09-28
+2026-09-28
+2026-09-28
+2026-09-28
+2026-06-26
+2026-06-26
+2026-11-11
+2026-06-26
+2026-11-10
+2026-11-21

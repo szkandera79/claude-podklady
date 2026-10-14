@@ -1,0 +1,178 @@
+[Text vytažený z RH14-1F_EU-811-2013_parametry-35-55C.pdf]
+
+--- strana 1 ---
+Technical parameters for heat pump space heaters and heat pump combination heaters
+Model(s):
+RH14 1F
+Air-to-water heat pump:
+YES
+Water-to-water heat pump:
+NO
+Brine-to-water heat pump:
+NO
+Low-temperature heat pump:
+NO
+Equipped with a supplementary heater:
+NO
+Heat pump combination heater:
+NO
+Parameters shall be declared for medium-temperature application, except for low-temperature heat pumps. For low-temperature heat pumps, parameters shall be
+declared for low-temperature application.
+Parameters shall be declared for average, colder and warmer climate conditions.
+Item Symbol Value Unit Item Symbol Value Unit
+Rated heat output (3) Prated 14,000 kW Seasonal space heating
+energy efficiency ηs 204,1 %
+Declared capacity for heating for part load at indoor temperature 20 °C and outdoor
+temperature Tj
+Declared coefficient of performance or primary energy ratio
+for part load at indoor temperature 20 °C and outdoor
+temperature Tj
+Tj = – 7 °C Pdh 12,483 kW Tj = – 7 °C COPd or
+PERd 2,86 –
+Tj = + 2 °C Pdh 7,598 kW Tj = + 2 °C COPd or
+PERd 4,95 –
+Tj = + 7 °C Pdh 4,885 kW Tj = + 7 °C COPd or
+PERd 7,66 –
+Tj = + 12 °C Pdh 2,171 kW Tj = + 12 °C COPd or
+PERd 9,48 –
+Tj = bivalent temperature Pdh 12,483 kW Tj = bivalent temperature COPd or
+PERd 2,86 –
+Tj = operation limit temperature Pdh 14,111 kW Tj = operation limit
+temperature
+COPd or
+PERd 2,59 –
+For air-to-water heat pumps: Tj = – 15 °C (if TOL <
+– 20 °C) Pdh
+kW _
+For air-to-water heat pumps:
+Tj = – 15 °C (if TOL < – 20 °C)
+COPd or
+PERd – –
+Bivalent temperature Tbiv -7 °C For air-to-water heat pumps:
+Operation limit temperature TOL -10 °C
+Cycling interval capacity for heating Pcych _
+kW Cycling interval efficiency COPcyc or
+PERcyc
+– %
+Degradation co-efficient (4) Cdh 0,90 —
+Heating water operating
+limit temperature
+WTOL 55 °C
+Power consumption in modes other than active mode
+Supplementary heater
+Off mode POFF 0,013 kW Rated heat output (4) Psup – kW
+Thermostat-off mode PTO 0,013 kW
+Standby mode PSB 0,013 kW
+Type of energy input
+–
+Crankcase heater mode PCK 0,053 kW
+Other items
+Capacity control variable
+For air-to-water heat pumps:
+Rated air flow rate, outdoors
+— — m3/h
+Sound power level, indoors/outdoors LWA 00/55 dB
+Annual energy consumption QHE 5632 kWh or GJ
+For water- or brine-to-water
+heat pumps: Rated brine or
+water flow rate, outdoor
+heat exchanger
+—
+—
+m3/h
+For heat pump combination heater:
+Declared load profile -
+Water heating energy
+efficiency ηwh - %
+Daily electricity consumption Qelec - kWh Daily fuel consumption Qfuel - kWh
+Annual electricity consumption AEC - kWh Annual fuel consumption AFC - GJ
+Contact details
+Ria Trade, s.r.o., Korunní 2569/108, 101 00 Praha 10, Czech Republic, www.reoheating.cz
+--- strana 2 ---
+Technical parameters for heat pump space heaters and heat pump combination heaters
+Model(s):
+RH14 1F
+Air-to-water heat pump:
+YES
+Water-to-water heat pump:
+NO
+Brine-to-water heat pump:
+NO
+Low-temperature heat pump:
+NO
+Equipped with a supplementary heater:
+NO
+Heat pump combination heater:
+NO
+Parameters shall be declared for medium-temperature application, except for low-temperature heat pumps. For low-temperature heat pumps, parameters
+shall be declared for low-temperature application.
+Parameters shall be declared for average, colder and warmer climate conditions.
+Item Symbol Value Unit Item Symbol Value Unit
+Rated heat output (3) Prated 14,000 kW Declared capacity for heating for part load at indoor temperature 20 °C and outdoor
+temperature Tj
+Tj = – 7 °C Pdh 12,435 kW Seasonal space heating
+energy efficiency ηs 152,1 %
+Declared coefficient of performance or primary energy ratio
+for part load at indoor temperature 20 °C and outdoor
+temperature Tj
+Tj = – 7 °C COPd or
+PERd 2,26 –
+Tj = + 2 °C Pdh 7,569 kW Tj = + 2 °C COPd or
+PERd 3,77 –
+Tj = + 7 °C Pdh 4,866 kW Tj = + 7 °C COPd or
+PERd 5,30 –
+Tj = + 12 °C Pdh 2,163 kW Tj = + 12 °C COPd or
+PERd 6,75 –
+Tj = bivalent temperature Pdh 12,435 kW Tj = bivalent temperature COPd or
+PERd 2,26 –
+Tj = operation limit temperature Pdh 14,057 kW Tj = operation limit
+temperature
+COPd or
+PERd 1,96 –
+For air-to-water heat pumps: Tj = – 15 °C (if TOL <
+– 20 °C) Pdh
+kW _
+For air-to-water heat pumps:
+Tj = – 15 °C (if TOL < – 20 °C)
+COPd or
+PERd – –
+Bivalent temperature Tbiv -7 °C For air-to-water heat pumps:
+Operation limit temperature TOL -10 °C
+Cycling interval capacity for heating Pcych _
+kW Cycling interval efficiency COPcyc or
+PERcyc
+– %
+Degradation co-efficient (4) Cdh 0,9 —
+Heating water operating
+limit temperature
+WTOL 70 °C
+Power consumption in modes other than active mode
+Supplementary heater
+Off mode POFF 0,013 kW Rated heat output (4) Psup – kW
+Thermostat-off mode PTO 0,013 kW
+Standby mode PSB 0,013 kW
+Type of energy input
+–
+Crankcase heater mode PCK 0,053 kW
+Other items
+Capacity control variable
+For air-to-water heat pumps:
+Rated air flow rate, outdoors
+— — m3/h
+Sound power level, indoors/outdoors LWA 00/56 dB
+Annual energy consumption QHE 7490 kWh or GJ
+For water- or brine-to-water
+heat pumps: Rated brine or
+water flow rate, outdoor
+heat exchanger
+—
+—
+m3/h
+For heat pump combination heater:
+Declared load profile -
+Water heating energy
+efficiency ηwh - %
+Daily electricity consumption Qelec - kWh Daily fuel consumption Qfuel - kWh
+Annual electricity consumption AEC - kWh Annual fuel consumption AFC - GJ
+Contact details
+Ria Trade, s.r.o., Korunní 2569/108, 101 00 Praha 10, Czech Republic, www.reoheating.cz

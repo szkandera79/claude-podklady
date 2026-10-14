@@ -122,3 +122,7 @@ Výrobce dodal výkonové mapy (`../R290 Helios Performance Curve/*.xls`, část
   `build.py && fix_icons.py && check.py REO-…-CZ.pptx && export_pdf.py REO-…-CZ.pptx REO-…-CZ.pdf`
 - Ponecháno z originálu: názvy dodavatelů komponent (Mitsubishi, Sensata, SANHUA, SAGINOMIYA, ACOL, Shinhoo, YuanZhuo, SUN WILL),
   SG ovladač Ecosoft (třetí strana), „Manufacturer Cloud Console“ v IoT diagramu (obecně „výrobce“).
+
+## Registrace (SVT / NZÚ, EPREL) — `registrace/`
+Formuláře dle (EU) 811/2013, energetické štítky a přehled modelů ve dvou variantách: **A** REO HEATING (RHxx) a **B** Power World
+(PWxx, Ria Trade jako dovozce, certifikáty HP KEYMARK 041-K032-23…31). Podrobnosti a otevřené body v `registrace/README.md`.
