@@ -199,6 +199,30 @@ for sh in prs.slides[43].shapes:
         sh.left = int(cx - sh.width / 2)
         sh.text_frame.word_wrap = False
 
+# ---------------------------------------------------------------- snímek 1: bílé pozadí, zelené písmo
+# skryje grafiku layoutu (zelená mapa + bílé logo), nastaví bílé pozadí a vloží barevné logo REO HEATING
+s1 = prs.slides[0]
+s1._element.set('showMasterSp', '0')
+s1.background.fill.solid()
+s1.background.fill.fore_color.rgb = RGBColor(255, 255, 255)
+logo = os.path.join(DIR, 'media_out', 'image3.png')
+lw = Emu(1588444)
+pic = s1.shapes.add_picture(logo, Emu(10051576), Emu(344557), width=lw)
+pic._element.getparent().remove(pic._element)
+s1.shapes._spTree.insert(2, pic._element)                  # za kořen stromu, pod texty
+for sh in s1.shapes:
+    if not sh.has_text_frame:
+        continue
+    for rpr in sh._element.iter(A('rPr'), A('endParaRPr')):
+        for el in rpr.findall(A('solidFill')) + rpr.findall(A('effectLst')):
+            rpr.remove(el)
+        fill = etree.SubElement(rpr, A('solidFill'))
+        etree.SubElement(fill, A('srgbClr')).set('val', GREEN_HEX)
+        rpr.insert(0, fill)                                # solidFill musí být v rPr před latin/ea/cs
+for el in s1._element.iter(qn('p:cNvPr')):
+    if el.get('descr') is None and el.getparent().tag == qn('p:nvPicPr'):
+        el.set('descr', 'Logo REO HEATING')
+
 # ---------------------------------------------------------------- snímek 4: hodnoty v ikonách infografiky
 # max. teplota vody: výrobce v ikoně uvádí 78 °C, v tabulce 25~75 °C → jednotně 75 (pravidlo REO R290 Smart)
 for t in prs.slides[3]._element.iter(A('t')):

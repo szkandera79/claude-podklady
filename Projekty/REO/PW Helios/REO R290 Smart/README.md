@@ -103,6 +103,7 @@ Výrobce dodal výkonové mapy (`../R290 Helios Performance Curve/*.xls`, část
 44 snímků), přeznačená na REO HEATING. Název řady výrobce („Cleanlife Ultra“) se nikde neuvádí.
 - Modely: PW20/PW30-DKXLRE3-H8 → RHX20 Pro / RHX30 Pro; snímky 37–38 (vnitřní deska menších jednotek) → RH06–RH16.
 - Šablona, pozadí, §14a infografika a IoT diagram převzaty z prezentace RH06–RH16 (`../prezentace/media_out`).
+- Titulní snímek (přání uživatele 14. 10.): bílé pozadí, zelené písmo #2E6B33, barevné logo; závěrečný „Děkujeme!“ zůstává zelený.
 - Fotky jednotek (snímky 3, 7, 31, 32): nápis výrobce na horní liště → „REO HEATING“ (Exo 2 Black Italic, kovový přechod).
 - Infografika R290 (sn. 4): logo výrobce v ikoně IoT odstraněno, popisky česky; ikona teploty vody 78 → **75 °C**.
 - Česky přesázené obrázky: tabulka ikon ovladače, legenda hydraulického schématu, Modbus diagramy, SG schéma, popisky schématu aplikace.
