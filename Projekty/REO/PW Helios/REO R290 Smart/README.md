@@ -82,3 +82,18 @@ Výrobce dodal výkonové mapy (`../R290 Helios Performance Curve/*.xls`, část
 - Anomálie v datech výrobce (ponecháno 1:1): RH10 W45 MAX při +21 °C příkon 2,78 kW → COP 4,78 (při +15 °C 3,69).
 - Energetické štítky v listech zatím nejsou (štítky výrobce v `../Helios Energy Label and ERP report.zip` nesou
   jeho značku a kódy → nutný rebrand jako u RH X50).
+
+## Video — `video/REO-R290-Smart_video-CZ.mp4`
+Česká verze produktového videa výrobce (`../Power World Helios Video.mp4`, 1:50, 1080p60), přeznačená na REO HEATING.
+- Logo výrobce vlevo nahoře → bílá deska s AI logem REO HEATING; nápis na horní liště jednotky → „REO HEATING“;
+  logo vyražené na vzornících panelů zakryto; závěrečná karta vlastní (logo, „REO R290 Smart“, www.reoheating.cz).
+- Titulky → spodní lišta (zelený proužek, česky). Infografiky (Proč R290, únik chladiva, ekvitermní křivky, FV schéma,
+  řízení odběru) přestavěny česky ze statických snímků originálu. Snímek „§14a EnWG“ (německý předpis) nahrazen
+  českým obsahem o napájení ze sluníčka / doplnění ze sítě / Smart Grid Ready.
+- Obsahové úpravy proti originálu: „built-in hydraulic module“ → „integrovaný záložní dohřev 3 kW a pojistná výbava“;
+  „SCOP > 5.3“ → „SCOP až 5,29 (35 °C)“; doplněny 3 pilíře (kompresor Mitsubishi Electric, „topí přímo ze sluníčka“).
+- Komentář: anglický hlas odstraněn (demucs, hudba zachována), český namluven Gemini TTS (hlas Charon) po větách
+  podle střihů (`vo.json`: začátek, konec, text), zrychlení max. 1,15×.
+- Postup (scratch adresář s `ffmpeg` z pip `imageio-ffmpeg`, `src/in.mp4`, stillsy `still/s<čas>.png`):
+  `tts.py` → `render.py <scratch>` (obraz; `--preview 12,50` = náhledové snímky) → mix zvuku a mux přes ffmpeg.
+  `track.json` = sledovaná poloha popisků přípojek (49–54 s).

@@ -1,0 +1,840 @@
+[Text vytažený z R290 Cleanlife Ultra- Light Commercial HP Introduction 20kw 30kw.pptx]
+
+--- snímek 1 ---
+R290 Light
+ Commercial 
+Heat Pump
+Introduction to Structure and Key Functions
+20/30KW(3-Zone Contol)
+Updating date: 20260929
+--- snímek 2 ---
+1
+Key Features Introduction
+--- snímek 3 ---
+Basic Information-
+New Light Commercial
+Model
+PW20-DKXLRE3-H8
+PW30-DKXLRE3-H8
+R290 
+DC Inverter Heat Pump
+Heating/Cooling/DHW
+ERP  A+++(35&55℃)
+Mitsubishi  
+Inverter Compressor
+Refrigerant leakage sensor
+Water Pump
+Antifreeze drain valve
+Power Supply
+380V/3Ph/50Hz-60Hz
+380V/3Ph/50Hz-60Hz
+Smart Controller(inch)
+7-inch color touch screen
+7-inch color touch screen
+Body Size(W*D*H)/mm
+1380
+×
+530
+×
+1550
+1550
+×
+630
+×
+1708
+Remote Control
+WiFi APP and IoT              Modbus and BMS
+Operation Ambinet Temp(℃)
+-25~35 (Heating)                         
+-5~43 (Cooling)                          -25~43 
+(DHW)
+--- snímek 4 ---
+Product Data-
+Three-phase
+78
+5.0
+Note:
+ 
+T
+he parameters of some products are changed in the process of 
+continuous optimization. Please refer to the actual products
+ in the future
+.
+Model
+PW20-DKXLRE3-H8
+PW30-DKXLRE3-H8
+Heating Condition - Ambient Temp.(DB/WB): 7/6℃
+，
+Water Temp.(In/Out):30/35℃
+Heating Capacity Range (kW)
+10.2~28.0
+12.7~40.0
+Heating Power  Input Range(kW)
+1.90~7.37
+2.37~10.52
+COP Range
+3.80~5.37
+3.80~5.36
+DHW Condition-Ambient Temp.(DB/WB): 20/15℃
+，
+Water Temp.(In/Out):15/55℃
+Heating Capacity Range (kW)
+12.8~29.0
+16.0~42.0
+Heating Power  Input Range(kW)
+2.33~6.68
+2.91~10.24
+COP Range
+4.34~5.49
+4.10~5.50
+Cooling Condition - Ambient Temp.(DB/WB):35/24℃
+，
+Water Temp.(In/Out):12/7℃
+Cooling Capacity Range (kW)
+8.2~21.0
+10.0~30.0
+Cooling Power  Input Range(kW)
+2.11~6.76
+2.66~9.74
+EER Range
+3.11~3.89
+3.08~3.76
+Cooling Condition - Ambient Temp.(DB/WB):35/24℃
+，
+Water Temp.(In/Out):23/18℃
+Cooling Capacity (kW)
+11.8~26.6
+14.5~38.0
+Cooling Power  Input (kW)
+2.08~6.16
+2.55~8.94
+EER 
+4.32~5.67
+4.25~5.69
+Space 
+Heating 
+(According to 
+EN14825:2022)
+Average Climate Water Outlet 35°C
+Rated heat output  (kW) 
+20.06 
+30.579
+Seasonal Space Heating Energy Efficiency (ηs) 
+206.3%
+206.8%
+SCOP
+5.23 
+5.25 
+ErP Level 
+A+++
+A+++
+Sound pressure level (dB(A)) at 1 meter
+35
+39
+Sound power level (dB(A))
+50
+55
+Space 
+Heating 
+(According to 
+EN14825:2022)
+Average Climate Water Outlet 55°C
+Rated heat output  (kW) 
+19.93 
+30.641
+Seasonal Space Heating Energy Efficiency (ηs) 
+156.0%
+153.1%
+SCOP
+3.97 
+3.90 
+ErP Level 
+A+++
+A+++
+Sound pressure level (dB(A)) at 1 meter
+40
+42
+Sound power level (dB(A))
+56
+59
+Power supply
+380V/3Ph/50/60Hz
+Max. power input(kW)
+11
+16
+Max. current (A)
+19.7 
+30.4 
+Fuse or circuit breaker (A)
+32
+40
+Wire diameter mm²
+6mm²
+6mm²
+Diameter of pipe (mm)
+DN40
+DN40
+Water Flow(m3/h)
+4.82
+6.88
+Water Pressure Drop (max) kPa
+55
+60
+Net Weight (kg)
+265
+328
+Body size(W*D*H) (mm)
+1375×532×1565
+1550*630*1708
+IP Grade (Level of protection)
+IPX4
+IPX4
+Refrigerant
+R290/2.2kg
+R290/3.4kg
+Compressor
+SCI (Mitsubishi Thailand)
+DC Inverter Water Pump
+Shinhoo
+Operation Ambient Temp. (℃)
+ -25~43℃
+Operating water temperature (℃) 
+20~70℃(DHW)       25~75℃(Heating)       5~25℃(Cooling)
+--- snímek 5 ---
+Strong Configuration
+Mitsubishi 
+Compressor
+Plate heat exchanger
+Sensata
+Low pressure sensor
+High detection accuracy
+Outdoor electrical control box
+Model
+20KW/30KW
+Compressor
+Mitsubishi Inverter
+Refrigerant
+R290
+Power supply
+380V3Ph/50Hz/60Hz
+Condensor
+YuanZhuo      Plate heat exchanger/material 316L 
+Evaporator
+Golden hydrophilic fin heat exchanger
+Four way valve
+SANHUA
+EEV
+SAGINOMIYA
+Low pressure sensor
+Sensata
+Water flow switch
+ACOL
+Fan motor
+LT DC motor
+Fan blade
+SUN WILL
+Electric control
+Main control board (externalpart+internal part), compressor inverter drive board, filter board, etc
+Smart control display
+7-inch color touch screen
+Water pump
+Shinhoo DC
+Microbubble exhaust valve
+ACOL 
+Refrigerant leakage sensor
+ CE&UL certification
+Antifreeze drain valve
+Standard brass material
+Water pressure gauge
+For water system
+High pressure gauge
+For refrigerant system
+Exhaust valve
+--- snímek 6 ---
+Strong Configuration
+Water pressure gauge
+Electrical wiring holes
+Inlet and outlet pipes
+High pressure gauge for refrigerant
+User electronic main board
+It integrated with user end connection ports, can be wired by simply opening the side panel for easy installation
+Exhaust valve
+Real time automatic air removal ensures system stability and reliability
+Refrigerant leakage sensor
+Detect refrigerant leakage concentration to ensure safe system operation
+--- snímek 7 ---
+Noise Reduction Design
+Refrigerant flow silent technology
+Optimize throttling technology by optimizing valve core structure and flow channel design to effectively suppress high-frequency fluid noise.
+Optimize exhaust airflow buffering and guidance to reduce vortex noise. Reduce vibration transmission and improve stability of the system.
+3D fan noise reduction
+DC motor paired with large diameter axial flow fan blades has excellent air flow performance, high efficiency and energy saving, low noise and low speed, and high stability.
+PU
++PVC+PU
+ Wave-Absorbing Cotton
+The unit sheet metal uses environmentally friendly and safe Three layer soundproof cotton, which efficiently absorbs mid to high frequency sound waves and reduces noise
+Air flow silent technology
+The air guide is stamped and designed with a horn mouth, with rounded corners to prevent vortex wind noise.
+Insert the fan blades into the air guide ring and adjust them to the optimal air outlet distance to ensure smooth airflow.
+--- snímek 8 ---
+Compressor design with 3-level noise reduction
+：
+Noise Reduction Structure Design
+-Compressor
+①
+The compressor installation adopts soft connection, d
+esign a thickened base with 3 bolts to secure the compressor and 
+Vibration soft contact, reduce vibration transmission
+③
+Design a high-density 
+insulation sealing cover (with sound-dampening cotton)
+wrapped around the compressor to isolate sound propagation
+②
+It’s wrapped with PVC damping and soundproofing cotton, effectively reducing the noise and vibration generated during compressor operation
+--- snímek 9 ---
+Chassis & Antifreezing
+High strength thickened chassis, designed with reinforced ribs penetrating the installation base, overall reinforcement to avoid high and low frequency resonance noise.
+The chassis comes standard with 
+chassis electric heating
+ to prevent condensation water from freezing in winter, ensuring reliable operation of the unit.
+--- snímek 10 ---
+Antifreeze Drain Protection(Optional)
+The heat pump is standard with an 
+antifreeze drain valve
+, it can automatically judge the operation state of the system. When the system is shut down or power off unexpectedly, the antifreeze mode can be opened in time:when the valve sense the temp drops to 
+3
+°
+C
+, 
+the valve will drain water to prevent system freezing.
+With the decrease of water temperature, the antifreeze valve can automatically increase the drainage speed, effectively balance the heat loss in the system. The valve will be automatically closed when the water temperature rises to 4 
+°
+C.
+In the event of a malfunction or maintainance, the Freeze Protection Valve (1) can be replaced. 
+An automatic shut-off cock (2) prevents the water from draining while the cartridge is being replaced, thereby keeping the system pressurised.
+When maintaining the vacumm breaker(3), remove the breaker cap, clean the internal float and sealing pad, and then reinstall them in order.
+--- snímek 11 ---
+R290 Refrigerant Leakage Protection
+The unit is equipped with a 
+2-level refrigerant leakage protection design
+, which prevents refrigerant leakage from entering the room and ensures safe operation of the unit.
+①
+ 
+Standard refrigerant leakage sensor
+, when the 
+leakage concentration exceeds 15% LFL
+, the system will sound an alarm and di
+splay fault code, r
+eminding users to handle it in a timely manner to ensure saf
+e use. The compressor and all electric heating will stop, and the fan is running at the lowest speed.
+②
+ Standard 
+microbubble exhaust valve, 
+when the refrigerant inside the plate heat exchanger leaks and mixes into the water pipe, the exhaust valve can promptly release the refrigerant, preventing it from entering the room and ensuring system safety.
+R290 Refrigerant Leakage Sensor
+Microbubble exhaust valve
+--- snímek 12 ---
+§
+14a EnWG-Make HP More Energy-efficient
+“
+§
+14a EnWG” is Germany’s regulation for controllable energy devices — helping the grid stay stable, and helping you save money.
+Customers can connect the unit to the energy management system via 
+RS485 Modbus
+. During peak electricity consumption periods, the unit's power can be remotely temporarily reduced or suspended to help stabilize the power grid operation.
+Users can choose whether to enable the power limit function on the Modbus control system and set the power limit value to control the reduction of compressor power during peak power consumption, 
+ensuring that the unit reduces power to 4.2 kW 
+without shutting down and can still operate at a lower power. 
+On the one hand, it ensures a certain capacity supply indoors and ensures comfort; On the other hand, it can reduce energy consumption and maintain the stability of the power grid.
+--- snímek 13 ---
+SG-Ready & PV-Ready(With 
+§
+14a EnWG
+)
+This Heat Pump supports connect smart grid and photovoltaic system to store energy. The heat pump determines the power status through the SG and EVU signal status, and adjusts the operating mode according to different power grid statuses.
+When connecting the SG and EVU signal, the heat pump will run in hot water mode priority to heat the water, then, according to peak electricity consumption or other conditions, provide hot water to users. 
+It can store energy well, monitor energy use and allocate it reasonably, and reduce energy consumption.
+EVU: Power grid signal from power supply company
+SG: Smart grid, connect with smart meter, use the electricity from PV
+GND
+GND
+Mainboard
+--- snímek 14 ---
+SG-Ready & PV-Ready
+(With 
+§
+14a EnWG)
+EVU: Power grid signal from power supply company
+SG: Smart grid, connect with smart meter, use the electricity from PV
+Status
+EVU
+SG
+Display 
+Icon
+Control Logic
+SG 
+Status 1
+1 (ON)
+0 (OFF)/
+1 (ON)
+Peak Period
+In this status, the unit operates in power-limited mode with maximum output restricted per [Unit Power Limitation]
+SG 
+Status 2
+0 (OFF)
+0 (OFF)
+Off-peak Period
+In this status, the unit operates under normal control logic
+SG 
+Status 3
+0 (OFF)
+1 (ON)
+Free Period
+1. If [Power Mode] is set to Auto, the unit forcibly operates in strong mode
+2. Forced priority to hot water heating
+3. The target temperature of hot water mode can be automatically set to MIN (Hot Water Setting Temperature+Smart Grid Temperature 1), and the upper limit of the hot water setting temperature is determined by the upper limit of the heating return temperature.
+1.The smart grid configuration defaults to Configuration 7.
+2.The smart grid function will only activate if enabled.
+3.
+Unit Power Limitation
+ Setting: 
+Advanced Settings→Parameters→
+22 Inverter Control
+→
+5 Unit Power Limit, set the expected power limit value.
+--- snímek 15 ---
+Application
+The unit can be paired with different terminals to achieve heating, cooling, and domestic hot water functions. And it can be used with gas boilers at low ambient temperatures to provide sufficient heat supply and maintain reliable and comfortable needs.
+--- snímek 16 ---
+Cascade Multi Units Control-Wiring
+③
+ 
+Max 8 heat pumps can be connected together through the RS485 communication port(A1, B1) and controlled on the same wired controller. 
+A1
+B1
+A1
+B1
+The heat pump support cascading up to 8 units, which meets large residential and commercial needs. 
+①
+ It’s equipped with 
+intelligent energy level adjustment based on water temp difference and supports backup operation function.  
+②
+ When one of the units fails, the other units can still continue to operate, ensuring a stable and continuous heat supply.
+--- snímek 17 ---
+Cascade Multi Units Control-Setting
+1.The #1 heat pump is set as the master, and the #2~#8 are slave units. 
+2.The three-way valve is connected to the water circuit of the master unit and the hot water mode is controlled by the master unit. 
+3. After finishing the above installation steps, please go to the wired controller to set the numbers of cascade.
+Advanced setting---Parameters config.-- 09 Engineering Setting I---UNIT_MAX & DHW_UNIT_NUM
+, set sets the number of cascading units and hot water units. 
+09 Engineering Setting I
+1
+Number of modules
+1...8
+2
+Number of hot water modules
+1...8
+3
+00#Module Settings
+[0]Disable;[1]Enable
+4
+01#Module Settings
+[0]Disable;[1]Enable
+5
+02#Module Settings
+[0]Disable;[1]Enable
+6
+03#Module Settings
+[0]Disable;[1]Enable
+7
+04#Module Settings
+[0]Disable;[1]Enable
+8
+05#Module Settings
+[0]Disable;[1]Enable
+9
+06#Module Settings
+[0]Disable;[1]Enable
+10
+07#Module Settings
+[0]Disable;[1]Enable
+--- snímek 18 ---
+2
+Wired Controller Operation
+--- snímek 19 ---
+7-inch Wired Controller
+Three
+-zone Temperature Control
+      Connect the underfloor heating to achieve 2 temp zones, and connect radiator to achieve 1 temp zone
+ 
+,total
+ 
+can
+ 
+achieve 3 zones;
+Built in temperature sensor, real time detection of room temperature.
+Support multi languages(
+Chinese
+、
+English
+、
+German
+、
+Czech
+、
+Bulgarian
+、
+Hungarian
+、
+Spanish
+、
+Turkish
+、
+Russian
+、
+Slovak, French, Dutch
+) Other languages can be customized
+--- snímek 20 ---
+Main Control Interface
+1ZONE.TA
+ (single zone room temp+DHW)
+2ZONE.TW&TA
+ 
+(Dual zone mixing)
+1ZONE.TW
+ (single zone water temp+hot water)
+3ZONE.TW
+ (Three zone water temp +hot water)
+3ZONE.TW&TA
+ 
+(
+Three zone water temp
+)
+Target water temp
+Hot water current temp
+Target room temp
+Hot water current temp
+Zone A
+Target water temp
+Zone B
+Target room temp
+35 PANEL_CTRL is used for selecting whether the water flow temperature or room temperature is used to control the ON/OFF of the heat pump.
+Advanced setting>Paraments config>03 System Parameters 
+Ⅱ
+>02 PANEL_CTRL
+2ZONE.TW
+ (Dual zone water temp +hot water)
+Zone B1
+Target room temp
+--- snímek 21 ---
+Basic Operation
+Mode setting:
+ Click the "MODE" button on the main interface to pop up the space mode setting window, as shown in the figure:
+Auto mode: Unit will detect the current water temperature and ambient temperature status, and automatically switch between cooling or heating mode.
+Lock and Unlock:
+ Click the "       " button, the lock screen icon will disappear, and the remote control can be operated, as shown in the figure:
+--- snímek 22 ---
+Timer Setting
+Timer ON/OFF: 
+On the timer interface, click on "Timer On/Off" to enter the timer on/off settings interface;
+Sterilization Timer: 
+On the timer interface, click on "Sterilization Timer" to enter the timer settings interface;
+Manually start sterilization:
+ If the current status is 'off ', clicking the 'OK' button will manually activate the sterilization function (the set timed sterilization is still effective).
+Silent timer: 
+On the timer interface, click on "Silent Timer" to enter the timer on/off settings interface;
+There are two levels in silent mode, 
+level 1 and level 2
+. The maximum speed of fan and compressor in level 2 mode is smaller than that in level 1.
+--- snímek 23 ---
+Main Function Setting
+1. Floor Heat Dry: used for underfloor heating and drying function;
+2. Force ON AEH: used for electric heating;
+3. Force ON TBH: 
+used for 
+water tank E-heater;
+4. Force ON DHW: forced turn on hot water mode;
+5. Force ON EHS: 
+used for 
+external heat source(boiler)
+Set language switching, 
+adjust screen brightness, 
+lock screen setting, alarm sound setting
+Display system schematic
+and real-time temp, low pressure and opening of EEV
+--- snímek 24 ---
+User Parameters
+Main interface→User parameters      
+For more user parameters, please
+ check the table on the installation manual.
+ 
+User parameters List 
+--- snímek 25 ---
+Holiday Function
+Enter the holiday  mode setting interface, set the start and end time, heating mode, hot water mode, and whether automatic sterilization is enabled. After setting, set "Function Use" to "use" to enable it, and set it to "unused" to cancel or disable the function;
+User parameter 18 HOLIDAY_AWAY_ThS sets the heat pump’s water set temp for space heating mode when in holiday away mode.
+User parameter 
+19 HOLIDAY_AWAY_ThwS sets the heat pump’s water set temp for DHW mode when in holiday away mode.
+Remark: Holiday Home has the same setting as above.
+--- snímek 26 ---
+Error Code Querying
+Right swipe the main interface >click Error >view current errors, historical faults, clear error, etc
+。
+Remark: Click on the icon on the right side of the fault to view detailed fault information description.
+--- snímek 27 ---
+Operating Status Query
+Left swipe the main interface→view current temperatures, main components output, main board version, etc.
+"DO" indicates the output status of the load, "       " indicates that the load has output, and "       " indicates that the load has no output.
+"AI" indicates the real time operating parameters
+Wired controller control version
+Inverter module version
+Internal mainboard version
+External mainboard version
+--- snímek 28 ---
+Power Statistics Function
+From the main interface,click "         " to access the function menu.
+You can select and click"Last 24 hours", " Last 30 days", " Last 12 months" and " Last 10 years"to view the electricity statistics, energy consumption and energy efficiency of the corresponding period.
+--- snímek 29 ---
+Advanced Settings
+For installation, service, and other needs, authorized engineers or service personnel can modify the parameters of the controller through the following path and enter a password.
+Main interface→Right swipe page→Advanced setting, enter the correct password in the following interface and click the "OK" button to enter the advanced settings.
+In the parameter configuration, we can set electric heating control parameters, SG function, underfloor heating, solar water pump, terminal water pump, etc. 
+--- snímek 30 ---
+Advanced Settings-Initial Start Test
+14 Advanced setting
+→
+02 Mnl test.
+It is used to 
+check the operation of individual components, when the bulb on the right side of the component lights up, it indicates that the component has an normal output.
+Click " Auto " to switch to "Manual” ,  "        " shows that the function is on,"        "shows that the function is off.
+If these components don’t operate when turned on, please check the component’s connection to the main PCB.
+14 Advanced setting
+→
+04 Function Debug.
+Enter Pump/Cool/Heat/Hot water test, run each mode for more than 30 minutes and observe whether the voltage, current, pressure, exhaust temperature, and other operating parameters are normal.
+If these components don’t operate when turned on, please check the component’s connection to the main PCB.
+--- snímek 31 ---
+IoT Operation
+Real-time monitoring, data operation and maintance, saving time and costs for users, dealers and manufactures.
+The main focus of IOT analysis is on parameters such as 
+compressor frequency, exhaust gas temp, suction gas temp, evaporator coil temp, inlet and outlet water temp, ambient temp, fan speed and electronic expansion valve opening and son on.
+Historical Parameter Curve
+--- snímek 32 ---
+Modbus/BMS Control
+ 
+Support Modbus RTU protocol access to customer control systems, monitor multiple heat pumps, obtain real-time operating parameters (such as temperature, pressure, power, start stop status, etc.), and support remote start stop, mode switching, parameter setting, etc. Better compatibility.
+The default communication data format for Modbus/BMS control is (8, N, 1) with a baud rate of 9600bps. 
+In addition, other communication data formats are also supported. The setting methods are as follows: set 
+【
+ BMS data format 
+】
+, 
+【
+ BMS baud rate 
+】
+, 
+【
+ BMS communication address 
+】
+Heat Pump
+Other device
+--- snímek 33 ---
+3
+Electrical Wiring
+--- snímek 34 ---
+Mainboard    
+PW20-DKXLRE3-H8  
+Electrical Wiring
+--- snímek 35 ---
+Mainboard    
+PW30-DKXLRE3-H8  
+Electrical Wiring
+--- snímek 36 ---
+Indoor Mainboard     
+PW20/30KW
+Electrical Wiring
+SL1/SL2: Solar kit
+P_O: Zone A water pump
+P_M1: Zone B1 water pump
+P_M2: Zone B2 water pump
+P_S: Solar water pump
+IBH1: Internal electric heater
+TBH: Water tank heater 
+1/2/3/4ON/OFF: SV1/SV2/SV3/SV4
+AHS1/AHS2: Additional
+ 
+heat source
+DFR1/DFR2: Defrosting 
+singal
+ERR1/ERR2
+: Error singal
+HT: Anti-freeze heater
+P_R: DHW water pump
+--- snímek 37 ---
+Indoor Mainboard     
+PW06/08/10/12/14/16KW
+Electrical Wiring
+SL1/SL2: Solar kit
+P_O: Zone A water pump
+P_M1: Zone B1 water pump
+P_M2: Zone B2 water pump
+P_S: Solar water pump
+IBH1: Internal electric heater
+TBH: Water tank heater 
+1/2/3/4ON/OFF: SV1/SV2/SV3/SV4
+AHS1/AHS2: Additional
+ 
+heat source
+DFR1/DFR2: Defrosting 
+singal
+ERR1/ERR2
+: Error singal
+HT: Anti-freeze heater
+P_R: DHW water pump
+--- snímek 38 ---
+Indoor Mainboard     
+PW06/08/10/12/14/16KW
+Electrical Wiring
+No.
+Description
+No.
+Description
+1
+Reserved
+20
+Additional heat source
+2
+RS485 communicate with ODU mainboard
+21
+Passive switch output
+3
+BMS(SG B2 A2) and Cascade(B1 A1)
+22
+DHW pipe pump(Field supply)
+4
+Reserved
+23
+Anti-freeze Electric heating
+5
+Reserved
+24
+Internal e-heater1
+6
+Reserved
+25
+Internal e-heater1/Water tank e-heater
+7
+Reserved
+26
+Solar pump
+8
+Reserved
+27
+Zoom pump
+9
+Reserved
+28
+Outside circulation pump or zone A pump
+10
+Reserved
+29
+Solar signal input
+11
+SG
+30
+Electric heater 1/2 feedback
+12
+EVU
+31
+Water tank e-heating feedback
+13
+Reserved
+32
+Reserved
+14
+Reserved
+33
+Power supply port(L N)AC220V
+15
+Floor water temp.2
+34
+Reserved
+16
+Reserved
+35
+Display screen
+17
+Thermostatic mixing Valve singal feedback 
+36
+Reserved
+18
+Thermostatic mixing Valve singal feedback 
+37
+Temp sensor
+19
+Three way valve power port(SV1/SV2/SV3/SV4)
+38
+Dip switch for unit type selection
+Cascading address setting
+--- snímek 39 ---
+Additional
+ 
+heat source wiring
+This heat pump supports connecting 
+Additional
+ 
+heat source (such as boilers)
+, it is used to 
+supplement heat
+ when the total outlet temp of the system cannot reach the target temperature at low ambient temps.
+(1) AHS1 and AHS2 wiring ports provide only the switch signal.
+(2) AHS parameters setting: Advanced setting 
+→
+01 Parameters config. 
+→
+17 Auxiliary Heat Setting 
+→
+setting the 12/13/14/15/16 parameters.
+--- snímek 40 ---
+(1)
+ P_O: User side A zone water pump         P_R: Hot water tank return pump      P_S: Solar circulating water pump          
+      P_M1: B1 zone underfloor heating mixed water pump        P_M2: B2 zone underfloor heating mixed water pump
+(2) Go to Advanced setting---Parameters config.--16 Hydraulic Component - --- PUMPret, set P_R ON, set the parameters.
+Water Pump Wiring
+--- snímek 41 ---
+IBH1: Electric heater wiring
+Please setting internal electric heater parameters: Advanced setting 
+→
+ Parameters config. 
+→
+ 17 Auxiliary Heat Setting 
+→
+ active IBH, setting IBH the parameters.
+Auxiliary
+ Electric Heating Wiring
+--- snímek 42 ---
+Three Way Valve Wiring
+This heat pump can control 4 three way valves. 
+1ON 1OFF:
+ 
+S3V1  Main pipeline three way valve       2ON 2OFF:
+ 
+S3V2   A
+ 
+zone
+ 
+valve to switch between radiator and fan coil     
+3ON 3OFF:
+ 
+S3V3  B1 zone mixing valve
+ 
+                   4ON 4OFF:
+ 
+S3V4   B2 zone mixing valve
+ 
+  
+--- snímek 43 ---
+Water tank sensor wiring: The heat pump is standard with a water tank sensor(T9) from factory, the length is about 12m, users can directly install the sensor probe to the corresponding position in the hot water tank.
+Electrical Wiring-- Water tank sensor wiring
+--- snímek 44 ---
+Thanks!
