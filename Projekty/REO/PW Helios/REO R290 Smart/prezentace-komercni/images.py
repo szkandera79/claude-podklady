@@ -174,7 +174,7 @@ bar_logo('image86.png', tight_box(load('image86.png'), (510, 12, 645, 28), 40), 
 # ---------------------------------------------------------------- 3) infografika R290 (image5) – zelená varianta
 # velké R290: modrá → zelená (posun odstínu); štítky vpravo: zelené s bílým textem;
 # dlaždice dole: bílé pozadí, zelený okraj, piktogram zeleně, popisek černě; modrý pás pod dlaždicemi pryč
-GREEN_RGB = (46, 107, 51)
+GREEN_RGB = (52, 162, 99)                     # #34A263 = světlejší varianta --brand z webu
 src = load('image5.png').convert('RGB')
 px = src.load()
 for x in range(175, 236):                       # logo výrobce v obláčku ikony IoT → bílá (= součást obláčku)
@@ -201,7 +201,7 @@ mx, mn = reg.max(2), reg.min(2)
 blue = (reg[..., 2] > reg[..., 0] + 40) & (mx > 40)
 lum = 0.3 * reg[..., 0] + 0.59 * reg[..., 1] + 0.11 * reg[..., 2]          # jas původní modré
 k = np.clip(lum / 110.0, 0.25, 1.35)[..., None]
-green = np.array([52, 130, 58], float)[None, None, :] * k
+green = np.array([55, 170, 104], float)[None, None, :] * k
 alpha = np.clip((reg[..., 2] - reg[..., 0] - 20) / 60.0, 0, 1)[..., None]   # vyhlazené hrany písmen
 out[:300, :900] = np.where(blue[..., None], green * alpha + 255 * (1 - alpha), 255)
 img = Image.fromarray(out.clip(0, 255).astype('uint8'))

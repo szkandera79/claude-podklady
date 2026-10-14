@@ -88,13 +88,14 @@ Provozní venkovní teplota (℃) Provozní teplota vody (℃) -25~43℃
 Výkon při −15 °C
 A−15 / W35 A−15 / W55
 Model
-Topný výkon COP Topný výkon COP
-RHX20 Pro 16,0 kW 2,03 14,0 kW 1,42
-RHX30 Pro 22,4 kW 2,13 19,0 kW 1,50
-Číslo v označení (20 / 30) je jmenovitý výkon při A7/W35, ne výkon v mrazu. Pro dimenzování podle
-tepelné ztráty používejte hodnoty z tabulky.
-A−15 = venkovní vzduch −15 °C · W35 = výstupní voda 35 °C (podlahové vytápění) · W55 = výstupní voda 55 °C (radiátory). Uveden
-maximální topný výkon jednotky.
+Max. topný výkon COP min – max Max. topný výkon COP min – max
+RHX20 Pro 16,0 kW 2,03 – 2,87 14,0 kW 1,42 – 2,01
+RHX30 Pro 22,4 kW 2,13 – 3,00 19,0 kW 1,50 – 2,11
+Číslo v označení (20 / 30) je jmenovitý výkon při A7/W35, ne výkon v mrazu. Pro dimenzování podle tepelné
+ztráty používejte hodnoty z tabulky.
+A−15 = venkovní vzduch −15 °C · W35 = výstupní voda 35 °C (podlahové vytápění) · W55 = výstupní voda 55 °C (radiátory). Uveden maximální
+topný výkon jednotky.
+COP min = při maximálním výkonu, COP max = při nejnižším modulovaném výkonu (částečná zátěž).
 Zdroj: výkonové mapy výrobce. Hodnoty jsou orientační; skutečný výkon závisí na podmínkách instalace.
 --- strana 6 ---
 Kvalitní výbava

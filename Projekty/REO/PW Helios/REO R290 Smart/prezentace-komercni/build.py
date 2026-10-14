@@ -28,12 +28,12 @@ from pptx.util import Emu, Inches, Pt
 from common import *
 
 OUT = os.path.join(DIR, 'REO-R290-Smart_RHX20-RHX30-Pro_prezentace-CZ.pptx')
-GREEN = RGBColor(0x2E, 0x6B, 0x33)
-GREEN_HEX = '2E6B33'
+GREEN = RGBColor(0x34, 0xA2, 0x63)                  # světlejší varianta --brand z webu reoheating.cz (#26804B)
+GREEN_HEX = '34A263'
 BLUES = {'00A2E9', '00B0F0', '0090E7', '0F9FE1', '1067A9'}       # modré barvy výrobce → zelená REO HEATING
 INK = RGBColor(0x1F, 0x2A, 0x22)
 GREY = RGBColor(0x5C, 0x6B, 0x60)
-TINT = RGBColor(0xE7, 0xF1, 0xE6)
+TINT = RGBColor(0xE9, 0xF6, 0xEE)                   # --brand-light z webu
 
 tr = json.load(open(os.path.join(DIR, 'reused.json')))
 for f in sorted(glob.glob(os.path.join(DIR, 'cs', 'chunk_*.json'))):
@@ -273,7 +273,7 @@ tt.left, tt.top, tt.width, tt.height = t4.left, t4.top, Inches(10), t4.height
 fmt = lambda v, d=1: f'{v:.{d}f}'.replace('.', ',')
 # jednotný přehled: max. topný výkon a COP při A−15 pro W35 (podlahovka) a W55 (radiátory)
 HDR1 = ['Model', 'A−15 / W35', '', 'A−15 / W55', '']
-HDR2 = ['', 'Topný výkon', 'COP', 'Topný výkon', 'COP']
+HDR2 = ['', 'Max. topný výkon', 'COP min – max', 'Max. topný výkon', 'COP min – max']
 rows = []
 for m in ('RHX20 Pro', 'RHX30 Pro'):
     h = MAPS[m]['heating']
@@ -281,10 +281,11 @@ for m in ('RHX20 Pro', 'RHX30 Pro'):
     r = [m]
     for w in ('35', '55'):
         mx = h[w]['max']
-        r += [f'{fmt(mx["cap"][i])} kW', fmt(mx['cop'][i], 2)]
+        mn = h[w]['min']
+        r += [f'{fmt(mx["cap"][i])} kW', f'{fmt(mx["cop"][i], 2)} – {fmt(mn["cop"][i], 2)}']
     rows.append(r)
-W = [2.6, 2.3, 1.5, 2.3, 1.5]
-gt = ns.shapes.add_table(len(rows) + 2, len(W), Inches(1.55), Inches(1.6), Inches(sum(W)), Inches(2.6)).table
+W = [2.3, 2.2, 2.0, 2.2, 2.0]
+gt = ns.shapes.add_table(len(rows) + 2, len(W), Inches(1.3), Inches(1.6), Inches(sum(W)), Inches(2.6)).table
 for j, w in enumerate(W):
     gt.columns[j].width = Inches(w)
 for i, row in enumerate([HDR1, HDR2] + rows):
@@ -309,12 +310,13 @@ gt.cell(0, 3).merge(gt.cell(0, 4))
 tblpr = gt._tbl.tblPr
 tblpr.set('firstRow', '0')
 tblpr.set('bandRow', '0')
-text(ns, 1.55, 4.4, 10.3, 0.75, [[('Číslo v označení (20 / 30) je jmenovitý výkon při A7/W35, ne výkon v mrazu. ', True),
+text(ns, 1.3, 4.4, 10.8, 0.75, [[('Číslo v označení (20 / 30) je jmenovitý výkon při A7/W35, ne výkon v mrazu. ', True),
                                     ('Pro dimenzování podle tepelné ztráty používejte hodnoty z tabulky.', False)]],
      15, color=GREEN)
-text(ns, 1.55, 5.3, 10.3, 1.2, [
+text(ns, 1.3, 5.3, 10.8, 1.3, [
     'A−15 = venkovní vzduch −15 °C · W35 = výstupní voda 35 °C (podlahové vytápění) · '
     'W55 = výstupní voda 55 °C (radiátory). Uveden maximální topný výkon jednotky.',
+    'COP min = při maximálním výkonu, COP max = při nejnižším modulovaném výkonu (částečná zátěž).',
     'Zdroj: výkonové mapy výrobce. Hodnoty jsou orientační; skutečný výkon závisí na podmínkách instalace.'],
     12, color=GREY)
 lst = prs.slides._sldIdLst                                  # přesunout za snímek 4 (technické údaje)

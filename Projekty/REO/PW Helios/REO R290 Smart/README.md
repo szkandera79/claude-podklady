@@ -103,9 +103,11 @@ Výrobce dodal výkonové mapy (`../R290 Helios Performance Curve/*.xls`, část
 44 snímků), přeznačená na REO HEATING. Název řady výrobce („Cleanlife Ultra“) se nikde neuvádí.
 - Modely: PW20/PW30-DKXLRE3-H8 → RHX20 Pro / RHX30 Pro; snímky 37–38 (vnitřní deska menších jednotek) → RH06–RH16.
 - Šablona, pozadí, §14a infografika a IoT diagram převzaty z prezentace RH06–RH16 (`../prezentace/media_out`).
-- Nový snímek 5 „Výkon při −15 °C“: max. topný výkon a COP RHX20 Pro / RHX30 Pro při A−15/W35 a A−15/W55 z `../data/vykonove-mapy.json`
+- Nový snímek 5 „Výkon při −15 °C“: max. topný výkon a COP min–max (při max. / min. výkonu) RHX20 Pro / RHX30 Pro při A−15/W35 a A−15/W55 z `../data/vykonove-mapy.json`
   + upozornění, že číslo v označení není výkon v mrazu (vkládá se na konci build.py → `fix_icons.py` má čísla snímků +1).
-- Titulní a závěrečný snímek (přání uživatele 14. 10.): bílé pozadí, zelené písmo #2E6B33, barevné logo.
+- Barvy (14. 10.): zelená **#34A263** = světlejší varianta `--brand #26804B` z webu reoheating.cz (uživatel chtěl světlejší),
+  podklad `--brand-light #E9F6EE` (dříve #2E6B33).
+- Titulní a závěrečný snímek (přání uživatele 14. 10.): bílé pozadí, zelené písmo, barevné logo.
 - Infografika R290 (sn. 4) v zelené: zelené R290 a štítky, dlaždice bílé se zeleným okrajem, piktogram zeleně, popisek černě;
   hodnoty 75 °C a COP 5,0 jsou přímo v obrázku (překryvy výrobce odstraněny).
 - Fotky jednotek (snímky 3, 7, 31, 32): nápis výrobce na horní liště → „REO HEATING“ (Exo 2 Black Italic, kovový přechod).
