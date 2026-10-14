@@ -97,3 +97,20 @@ Výrobce dodal výkonové mapy (`../R290 Helios Performance Curve/*.xls`, část
 - Postup (scratch adresář s `ffmpeg` z pip `imageio-ffmpeg`, `src/in.mp4`, stillsy `still/s<čas>.png`):
   `tts.py` → `render.py <scratch>` (obraz; `--preview 12,50` = náhledové snímky) → mix zvuku a mux přes ffmpeg.
   `track.json` = sledovaná poloha popisků přípojek (49–54 s).
+
+## Prezentace RHX20 Pro / RHX30 Pro — `prezentace-komercni/REO-R290-Smart_RHX20-RHX30-Pro_prezentace-CZ.pptx` (+ PDF)
+Česká verze prezentace výrobce pro lehké komerční použití (`../R290 Cleanlife Ultra- Light Commercial HP Introduction 20kw 30kw.pptx`,
+44 snímků), přeznačená na REO HEATING. Název řady výrobce („Cleanlife Ultra“) se nikde neuvádí.
+- Modely: PW20/PW30-DKXLRE3-H8 → RHX20 Pro / RHX30 Pro; snímky 37–38 (vnitřní deska menších jednotek) → RH06–RH16.
+- Šablona, pozadí, §14a infografika a IoT diagram převzaty z prezentace RH06–RH16 (`../prezentace/media_out`).
+- Fotky jednotek (snímky 3, 7, 31, 32): nápis výrobce na horní liště → „REO HEATING“ (Exo 2 Black Italic, kovový přechod).
+- Infografika R290 (sn. 4): logo výrobce v ikoně IoT odstraněno, popisky česky; ikona teploty vody 78 → **75 °C**.
+- Česky přesázené obrázky: tabulka ikon ovladače, legenda hydraulického schématu, Modbus diagramy, SG schéma, popisky schématu aplikace.
+- OLE: schémata zapojení (ZWCAD, sn. 34–35) → statický obrázek; Excel se seznamem parametrů (sn. 24) odstraněn (odkaz na návod).
+- Náhled IoT portálu: název zařízení cizího zákazníka odstraněn. Metadata, alt texty, app.xml přepsány.
+- Texty z displeje (UI), detailní popisky ve schématech zapojení a IoT diagramu zůstávají anglicky (jako u RH06–RH16).
+- Postup (složka `prezentace-komercni/`, sdílí funkce s `../prezentace/common.py`):
+  `extract.py` → `reused.json` (shodné texty přeložené u RH06–RH16) + `cs/chunk_*.json` (nové / opravy) → `images.py` →
+  `build.py && fix_icons.py && check.py REO-…-CZ.pptx && export_pdf.py REO-…-CZ.pptx REO-…-CZ.pdf`
+- Ponecháno z originálu: názvy dodavatelů komponent (Mitsubishi, Sensata, SANHUA, SAGINOMIYA, ACOL, Shinhoo, YuanZhuo, SUN WILL),
+  SG ovladač Ecosoft (třetí strana), „Manufacturer Cloud Console“ v IoT diagramu (obecně „výrobce“).

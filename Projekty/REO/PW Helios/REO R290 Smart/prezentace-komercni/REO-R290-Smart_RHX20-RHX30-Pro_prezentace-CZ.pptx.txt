@@ -1,0 +1,697 @@
+[Text vytažený z REO-R290-Smart_RHX20-RHX30-Pro_prezentace-CZ.pptx]
+
+--- snímek 1 ---
+Tepelné čerpadlo REO R290 Smart
+Konstrukce a klíčové funkce
+RHX20 Pro / RHX30 Pro · lehké komerční použití
+Aktualizace: 20260929
+--- snímek 2 ---
+1
+Přehled hlavních vlastností
+--- snímek 3 ---
+Základní informace – 
+nová řada pro lehké komerční použití
+Model
+RHX20 Pro
+RHX30 Pro
+TČ R290 s DC invertorem
+Vytápění/chlazení/TUV
+ERP  A+++(35&55℃)
+Mitsubishi  
+Invertorový kompresor
+Snímač úniku chladiva
+Oběhové čerpadlo
+Protizámrazový ventil
+Napájení
+380V/3f/50Hz-60Hz
+380V/3f/50Hz-60Hz
+Chytrý ovladač (palce)
+7" barevný dotykový displej
+7" barevný dotykový displej
+Rozměry (Š*H*V)/mm
+1380
+×
+530
+×
+1550
+1550
+×
+630
+×
+1708
+Dálkové ovládání
+Wi-Fi aplikace a IoT              Modbus a BMS
+Provozní venkovní teplota (℃)
+-25~35 (vytápění)                         
+-5~43 (chlazení)                          -25~43 
+(TUV)
+--- snímek 4 ---
+Technické údaje – 
+třífázové
+75
+5,0
+Pozn.:
+ Parametry některých výrobků se mohou v průběhu 
+neustálého vývoje měnit. Rozhodující jsou údaje na dodaném výrobku.
+Model
+RHX20 Pro
+RHX30 Pro
+Podmínky vytápění – venk. tepl. (DB/WB): 7/6℃，tepl. vody (vstup/výstup): 30/35℃
+Rozsah topného výkonu (kW)
+10.2~28.0
+12.7~40.0
+Rozsah příkonu – vytápění (kW)
+1.90~7.37
+2.37~10.52
+Rozsah COP
+3.80~5.37
+3.80~5.36
+Podmínky TUV – venk. tepl. (DB/WB): 20/15℃，tepl. vody (vstup/výstup): 15/55℃
+Rozsah topného výkonu (kW)
+12.8~29.0
+16.0~42.0
+Rozsah příkonu – vytápění (kW)
+2.33~6.68
+2.91~10.24
+Rozsah COP
+4.34~5.49
+4.10~5.50
+Podmínky chlazení – venk. tepl. (DB/WB): 35/24℃，tepl. vody (vstup/výstup): 12/7℃
+Rozsah chladicího výkonu (kW)
+8.2~21.0
+10.0~30.0
+Rozsah příkonu – chlazení (kW)
+2.11~6.76
+2.66~9.74
+Rozsah EER
+3.11~3.89
+3.08~3.76
+Podmínky chlazení – venk. tepl. (DB/WB): 35/24℃，tepl. vody (vstup/výstup): 23/18℃
+Chladicí výkon (kW)
+11.8~26.6
+14.5~38.0
+Příkon – chlazení (kW)
+2.08~6.16
+2.55~8.94
+EER 
+4.32~5.67
+4.25~5.69
+Vytápění 
+prostoru 
+(dle 
+EN14825:2022)
+Průměrné klima, výstup vody 35°C
+Jmenovitý topný výkon (kW)
+20.06 
+30.579
+Sezónní energ. účinnost vytápění (ηs)
+206.3%
+206.8%
+SCOP
+5.23 
+5.25 
+Třída ErP
+A+++
+A+++
+Hladina akust. tlaku (dB(A)) v 1 m
+35
+39
+Hladina akustického výkonu (dB(A))
+50
+55
+Vytápění 
+prostoru 
+(dle 
+EN14825:2022)
+Průměrné klima, výstup vody 55°C
+Jmenovitý topný výkon (kW)
+19.93 
+30.641
+Sezónní energ. účinnost vytápění (ηs)
+156.0%
+153.1%
+SCOP
+3.97 
+3.90 
+Třída ErP
+A+++
+A+++
+Hladina akust. tlaku (dB(A)) v 1 m
+40
+42
+Hladina akustického výkonu (dB(A))
+56
+59
+Napájení
+380V/3f/50/60Hz
+Max. příkon (kW)
+11
+16
+Max. proud (A)
+19.7 
+30.4 
+Pojistka nebo jistič (A)
+32
+40
+Průřez vodiče mm²
+6mm²
+6mm²
+Průměr potrubí (mm)
+DN40
+DN40
+Průtok vody (m3/h)
+4.82
+6.88
+Tlaková ztráta vody (max.) kPa
+55
+60
+Hmotnost netto (kg)
+265
+328
+Rozměry (Š*H*V) (mm)
+1375×532×1565
+1550*630*1708
+Stupeň krytí IP
+IPX4
+IPX4
+Chladivo
+R290/2,2kg
+R290/3,4kg
+Kompresor
+SCI (Mitsubishi Thajsko)
+Invertorové (DC) oběhové čerpadlo
+Shinhoo
+Provozní venkovní teplota (℃)
+ -25~43℃
+Provozní teplota vody (℃)
+20~70℃ (TUV)       25~75℃ (vytápění)       5~25℃ (chlazení)
+--- snímek 5 ---
+Kvalitní výbava
+Mitsubishi  
+Kompresor
+Deskový výměník
+Sensata
+Snímač nízkého tlaku
+Vysoká přesnost měření
+Venkovní elektrorozvaděč
+Model
+20 kW / 30 kW
+Kompresor
+Mitsubishi, invertorový
+Chladivo
+R290
+Napájení
+380V/3f/50Hz/60Hz
+Kondenzátor
+YuanZhuo      deskový výměník, materiál 316L 
+Výparník
+Lamelový výměník se zlatou hydrofilní úpravou
+Čtyřcestný ventil
+SANHUA
+El. expanzní ventil
+SAGINOMIYA
+Snímač nízkého tlaku
+Sensata
+Průtokový spínač
+ACOL
+Motor ventilátoru
+DC motor LT
+Lopatky ventilátoru
+SUN WILL
+Elektronika řízení
+Hlavní řídicí deska (venkovní + vnitřní část), deska měniče kompresoru, filtrační deska aj.
+Chytrý ovládací displej
+7" barevný dotykový displej
+Oběhové čerpadlo
+Shinhoo DC
+Odvzdušňovací ventil
+ACOL
+Snímač úniku chladiva
+ Certifikace CE a UL
+Protizámrazový ventil
+Standardně, mosaz
+Tlakoměr vody
+Pro vodní okruh
+Vysokotlaký manometr
+Pro chladivový okruh
+Odvzdušňovací ventil
+--- snímek 6 ---
+Kvalitní výbava
+Tlakoměr vody
+Kabelové průchodky
+Vstupní a výstupní potrubí
+Vysokotlaký manometr chladiva
+Uživatelská řídicí deska
+Obsahuje svorky pro připojení na straně uživatele; zapojení stačí po sejmutí bočního panelu – snadná instalace
+Odvzdušňovací ventil
+Průběžné automatické odvzdušnění zajišťuje stabilní a spolehlivý provoz
+Snímač úniku chladiva
+Sleduje koncentraci uniklého chladiva a zajišťuje bezpečný provoz systému
+--- snímek 7 ---
+Konstrukce pro snížení hluku
+Tichý průtok chladiva
+Optimalizovaná konstrukce jádra ventilu a průtočných kanálů škrticího prvku účinně potlačuje vysokofrekvenční hluk proudění.
+Usměrnění a tlumení výtlačného proudu omezuje vírový hluk, snižuje přenos vibrací a zvyšuje stabilitu systému.
+3D ventilátor se sníženou hlučností
+DC motor s axiálním ventilátorem velkého průměru: vysoký průtok vzduchu při nízkých otáčkách, nízká spotřeba a hlučnost, stabilní chod.
+Třívrstvá izolace PU+PVC+PU
+Plechové panely jednotky jsou obloženy ekologickou třívrstvou zvukově izolační vatou, která účinně pohlcuje středo- a vysokofrekvenční hluk
+Tiché proudění vzduchu
+Lisovaný difuzor s nálevkovitým vstupem a zaoblenými hranami brání vzniku vírového hluku.
+Lopatky ventilátoru zasahují do prstence difuzoru v optimální vzdálenosti pro plynulé proudění vzduchu.
+--- snímek 8 ---
+Kompresor s 3stupňovým snížením hluku：
+Konstrukce pro snížení hluku
+ – kompresor
+①
+Pružné uložení kompresoru, 
+zesílená základna s upevněním 3 šrouby a 
+pružné kontakty omezují přenos vibrací
+③
+Kompresor obepíná hutný 
+izolační kryt (se zvukově izolační vatou)
+, který brání šíření hluku
+②
+Obal z PVC tlumicí a zvukově izolační vaty účinně snižuje hluk a vibrace kompresoru za provozu
+--- snímek 9 ---
+Základový rám a protizámrazová ochrana
+Pevný zesílený základový rám s výztužnými žebry přes celou montážní základnu; vyztužení zabraňuje rezonančnímu hluku nízkých i vysokých frekvencí.
+Základový rám má standardně 
+elektrický ohřev rámu
+, který v zimě brání zamrzání kondenzátu a zajišťuje spolehlivý provoz jednotky.
+--- snímek 10 ---
+Protizámrazové vypouštění (volitelně)
+Tepelné čerpadlo má 
+protizámrazový vypouštěcí ventil
+, který sám vyhodnocuje stav systému. Při odstavení nebo nečekaném výpadku napájení se včas aktivuje protizámrazová ochrana: když ventil zaznamená pokles teploty na 
+3°C
+, 
+vypustí vodu, aby systém nezamrzl.
+Se snižující se teplotou vody ventil automaticky zrychluje vypouštění a vyrovnává tepelné ztráty systému. Při vzestupu teploty vody na 4 °C se ventil automaticky uzavře.
+Při poruše nebo údržbě lze protizámrazový ventil (1) vyměnit. 
+Automatický uzavírací kohout (2) brání vytečení vody při výměně vložky, takže systém zůstane pod tlakem.
+Při údržbě zavzdušňovacího ventilu (3) sejměte jeho víčko, vyčistěte vnitřní plovák a těsnění a znovu je v pořadí nasaďte.
+--- snímek 11 ---
+Ochrana proti úniku chladiva R290
+Jednotka má 
+2stupňovou ochranu proti úniku chladiva
+, která brání průniku chladiva do místnosti a zajišťuje bezpečný provoz.
+① 
+Standardní snímač úniku chladiva
+: když 
+koncentrace úniku překročí 15% LFL
+, systém spustí alarm a zo
+brazí kód poruchy, 
+aby uživatel mohl včas zasáhnout a zajistit bezpečn
+ý provoz. Kompresor i veškerý el. ohřev se zastaví a ventilátor běží na nejnižší otáčky.
+② Standardní 
+odvzdušňovací ventil: 
+pokud chladivo v deskovém výměníku unikne do vodního okruhu, ventil je včas vypustí, takže se nedostane do místnosti a systém zůstane bezpečný.
+Snímač úniku chladiva R290
+Odvzdušňovací ventil
+--- snímek 12 ---
+§14a EnWG – úspornější provoz TČ
+„§14a EnWG“ je německý předpis pro řiditelná energetická zařízení – pomáhá stabilitě sítě a snižuje vaše náklady.
+Jednotku lze připojit k systému energetického managementu přes 
+RS485 Modbus
+. Ve špičkách spotřeby lze její příkon dálkově dočasně snížit nebo přerušit a pomoci tak stabilitě sítě.
+V řídicím systému Modbus lze zapnout omezení příkonu a nastavit limit, na který se ve špičce sníží příkon kompresoru – 
+jednotka sníží příkon na 4,2 kW 
+bez vypnutí a dál pracuje se sníženým výkonem. 
+Zajišťuje tak potřebný výkon a komfort v interiéru a zároveň snižuje spotřebu a podporuje stabilitu sítě.
+--- snímek 13 ---
+SG-Ready a PV-Ready (s §14a EnWG)
+Tepelné čerpadlo lze propojit se Smart Grid a FV systémem pro akumulaci energie. Stav sítě vyhodnocuje ze signálů SG a EVU a podle něj upravuje provozní režim.
+Při připojení signálů SG a EVU jednotka přednostně ohřívá TUV, kterou pak podle špiček spotřeby či jiných podmínek dodává uživatelům. 
+Umožňuje akumulovat energii, sledovat a rozumně rozdělovat její využití a snižovat spotřebu.
+EVU: signál od dodavatele elektřiny
+SG: Smart Grid, připojení k chytrému elektroměru, využití elektřiny z FV
+GND
+GND
+Řídicí deska
+--- snímek 14 ---
+SG-Ready a PV-Ready (s §14a EnWG)
+EVU: signál od dodavatele elektřiny
+SG: Smart Grid, připojení k chytrému elektroměru, využití elektřiny z FV
+Stav
+EVU
+SG
+Ikona na displeji
+Logika řízení
+Stav SG 1
+1 (ZAP)
+0 (VYP)/
+1 (ZAP)
+Špička
+Jednotka pracuje v režimu omezeného příkonu, max. výkon je omezen dle [Unit Power Limitation]
+Stav SG 2
+0 (VYP)
+0 (VYP)
+Mimo špičku
+Jednotka pracuje podle běžné logiky řízení
+Stav SG 3
+0 (VYP)
+1 (ZAP)
+Levná elektřina
+1. Je-li [Power Mode] nastaven na Auto, jednotka běží nuceně v silném režimu
+2. Nucená priorita ohřevu TUV
+3. Cílová teplota TUV se automaticky nastaví na MIN (nastavená teplota TUV + Smart Grid Temperature 1); horní mez žádané teploty TUV je dána horní mezí teploty zpátečky vytápění.
+1. Výchozí konfigurace Smart Grid je Configuration 7.
+2. Funkce Smart Grid funguje, jen pokud je povolena.
+3. Nastavení omezení příkonu: 
+Advanced Settings → Parameters → 22 Inverter Control → 5 Unit Power Limit, nastavte požadovaný limit příkonu.
+--- snímek 15 ---
+Aplikace
+Jednotku lze kombinovat s různými otopnými a chladicími soustavami pro vytápění, chlazení a ohřev TUV. Při nízkých venkovních teplotách ji lze provozovat s plynovým kotlem jako doplňkovým zdrojem pro spolehlivou dodávku tepla.
+--- snímek 16 ---
+Kaskáda jednotek – zapojení řízení
+③ Až 8 tepelných čerpadel lze propojit přes komunikační port RS485 (A1, B1) a ovládat jedním kabelovým ovladačem. 
+A1
+B1
+A1
+B1
+Tepelná čerpadla lze řadit do kaskády až 8 jednotek pro velké bytové a komerční objekty. 
+① Kaskáda nabízí 
+inteligentní řízení výkonových stupňů podle rozdílu teplot vody a podporuje záložní provoz.  
+② Při poruše jedné jednotky ostatní pokračují v provozu a zajistí stabilní, nepřerušenou dodávku tepla.
+--- snímek 17 ---
+Kaskáda jednotek – nastavení
+1. Tepelné čerpadlo č. 1 je řídicí jednotka (master), č. 2–8 jsou podřízené jednotky (slave). 
+2. Trojcestný ventil je zapojen do vodního okruhu řídicí jednotky, která také řídí režim TUV. 
+3. Po dokončení instalace nastavte na kabelovém ovladači počet jednotek v kaskádě.
+Advanced setting---Parameters config.-- 09 Engineering Setting I---UNIT_MAX & DHW_UNIT_NUM
+: nastavte počet jednotek v kaskádě a jednotek pro TUV. 
+09 Engineering Setting I
+1
+Počet modulů
+1...8
+2
+Počet modulů pro TUV
+1...8
+3
+00# modul – nastavení
+[0] vypnuto; [1] zapnuto
+4
+01# modul – nastavení
+[0] vypnuto; [1] zapnuto
+5
+02# modul – nastavení
+[0] vypnuto; [1] zapnuto
+6
+03# modul – nastavení
+[0] vypnuto; [1] zapnuto
+7
+04# modul – nastavení
+[0] vypnuto; [1] zapnuto
+8
+05# modul – nastavení
+[0] vypnuto; [1] zapnuto
+9
+06# modul – nastavení
+[0] vypnuto; [1] zapnuto
+10
+07# modul – nastavení
+[0] vypnuto; [1] zapnuto
+--- snímek 18 ---
+2
+Ovládání kabelovým ovladačem
+--- snímek 19 ---
+7palcový kabelový ovladač
+Regulace tří teplotních zón
+      Podlahové vytápění tvoří 2 teplotní zóny a radiátory 1 zónu – celkem lze regulovat 3 zóny;
+Vestavěný snímač teploty, průběžné měření teploty v místnosti.
+Více jazyků (
+čínština, angličtina, němčina, čeština, bulharština, maďarština, španělština, turečtina, ruština, slovenština, francouzština, nizozemština
+), další jazyky na přání
+--- snímek 20 ---
+Hlavní obrazovka ovladače
+1ZONE.TA
+ (1 zóna, teplota místnosti + TUV)
+2ZONE.TW&TA 
+(2 zóny, směšování)
+1ZONE.TW
+ (1 zóna, teplota vody + TUV)
+3ZONE.TW
+ (3 zóny, teplota vody + TUV)
+3ZONE.TW&TA
+ (3 zóny, teplota vody)
+Požad. teplota vody
+Aktuální teplota TUV
+Požad. teplota místnosti
+Aktuální teplota TUV
+Zóna A
+Požad. teplota vody
+Zóna B
+Požad. teplota místnosti
+Parametr 35 PANEL_CTRL určuje, zda se tepelné čerpadlo zapíná/vypíná podle teploty výstupní vody, nebo podle teploty v místnosti.
+Advanced setting>Paraments config>03 System Parameters Ⅱ>02 PANEL_CTRL
+2ZONE.TW
+ (2 zóny, teplota vody + TUV)
+Zóna B1
+Požad. teplota místnosti
+--- snímek 21 ---
+Základní ovládání
+Nastavení režimu:
+ Klepnutím na „MODE“ na hlavní obrazovce otevřete okno nastavení režimu vytápění/chlazení (viz obrázek):
+Režim Auto: jednotka vyhodnocuje aktuální teplotu vody a venkovní teplotu a automaticky přepíná mezi chlazením a vytápěním.
+Zamknutí a odemknutí:
+ Po klepnutí na „       “ zmizí ikona zámku a ovladač lze ovládat (viz obrázek):
+--- snímek 22 ---
+Časovače
+Časovač zap./vyp.: 
+Na obrazovce časovačů klepněte na „Timer On/Off“ a otevřete nastavení časovače zapnutí/vypnutí;
+Časovač sterilizace: 
+Na obrazovce časovačů klepněte na „Sterilization Timer“ a otevřete nastavení časovače;
+Ruční spuštění sterilizace:
+ Je-li stav „off“, klepnutím na „OK“ ručně spustíte sterilizaci (nastavená časovaná sterilizace zůstává v platnosti).
+Časovač tichého režimu: 
+Na obrazovce časovačů klepněte na „Silent Timer“ a otevřete nastavení časovače;
+Tichý režim má dvě úrovně, 
+úroveň 1 a úroveň 2
+. V úrovni 2 jsou max. otáčky ventilátoru a kompresoru nižší než v úrovni 1.
+--- snímek 23 ---
+Nastavení hlavních funkcí
+1. „Floor Heat Dry“: vysoušení podlahového vytápění;
+2. „Force ON AEH“: vynucené zapnutí elektrického ohřevu;
+3. „Force ON TBH“: topná vložka zásobníku;
+4. „Force ON DHW“: vynucené zapnutí ohřevu TUV;
+5. „Force ON EHS“: externí zdroj tepla (kotel)
+Přepínání jazyka, 
+jas displeje, 
+zámek obrazovky, zvuk alarmu
+Zobrazení schématu systému
+a aktuálních teplot, nízkého tlaku a otevření EEV
+--- snímek 24 ---
+Uživatelské parametry
+Hlavní obrazovka → User parameters      Kompletní seznam uživatelských parametrů je v instalačním návodu. 
+--- snímek 25 ---
+Režim dovolená
+Na obrazovce nastavení režimu dovolená zadejte začátek a konec, režim vytápění, režim TUV a zda je zapnuta automatická sterilizace. Poté nastavte „Function Use“ na „use“ pro zapnutí, nebo na „unused“ pro zrušení či vypnutí funkce;
+Uživatelský parametr 18 HOLIDAY_AWAY_ThS nastavuje požadovanou teplotu vody pro vytápění v režimu „Holiday Away“.
+Uživatelský parametr 19 HOLIDAY_AWAY_ThwS nastavuje požadovanou teplotu vody pro TUV v režimu „Holiday Away“.
+Pozn.: „Holiday Home“ se nastavuje stejně.
+--- snímek 26 ---
+Zobrazení chybových kódů
+Hlavní obrazovku přetáhněte doprava > klepněte na „Error“ > aktuální chyby, historie poruch, smazání chyb apod.
+Pozn.: Klepnutím na ikonu vpravo od poruchy zobrazíte podrobný popis poruchy.
+--- snímek 27 ---
+Zobrazení provozního stavu
+Hlavní obrazovku přetáhněte doleva → aktuální teploty, výstupy hlavních komponent, verze řídicí desky apod.
+„DO“ udává stav výstupů na zátěže, „       “ = výstup sepnut, „       “ = výstup rozepnut.
+„AI“ udává aktuální provozní parametry
+Verze kabelového ovladače
+Verze invertorového modulu
+Verze vnitřní řídicí desky
+Verze venkovní řídicí desky
+--- snímek 28 ---
+Statistika spotřeby
+Na hlavní obrazovce klepněte na „         “ a otevřete menu funkcí.
+Volbou „Last 24 hours“, „Last 30 days“, „Last 12 months“ nebo „Last 10 years“ zobrazíte spotřebu elektřiny, energie a energetickou účinnost za dané období.
+--- snímek 29 ---
+Pokročilá nastavení
+Pro instalaci, servis apod. mohou oprávnění technici měnit parametry ovladače přes následující cestu po zadání hesla.
+Hlavní obrazovka → přetáhnout doprava → Advanced setting, zadejte správné heslo a klepnutím na „OK“ vstoupíte do pokročilých nastavení.
+V konfiguraci parametrů lze nastavit řízení elektrického ohřevu, funkci SG, podlahové vytápění, solární čerpadlo, čerpadlo otopné soustavy apod. 
+--- snímek 30 ---
+Pokročilá nastavení – test při uvedení do provozu
+14 Advanced setting→02 Mnl test.
+Slouží ke 
+kontrole funkce jednotlivých komponent; rozsvícená kontrolka vpravo od komponenty znamená, že výstup funguje správně.
+Klepnutím na „Auto“ přepnete na „Manual“, „        “ = funkce zapnuta, „        “ = funkce vypnuta.
+Pokud komponenty po zapnutí nepracují, zkontrolujte jejich připojení k řídicí desce.
+14 Advanced setting→04 Function Debug.
+Spusťte test čerpadla/chlazení/vytápění/TUV, každý režim nechte běžet přes 30 minut a sledujte, zda jsou napětí, proud, tlak, teplota výtlaku a další parametry v normě.
+Pokud komponenty po zapnutí nepracují, zkontrolujte jejich připojení k řídicí desce.
+--- snímek 31 ---
+Vzdálená správa (IoT)
+Monitoring v reálném čase, datový provoz a údržba – úspora času a nákladů pro uživatele, prodejce i výrobce.
+IoT analýza se zaměřuje zejména na 
+frekvenci kompresoru, teplotu výtlaku a sání, teplotu výparníku, teplotu vstupní a výstupní vody, venkovní teplotu, otáčky ventilátoru, otevření el. expanzního ventilu aj.
+Historie parametrů (graf)
+--- snímek 32 ---
+Řízení Modbus/BMS
+ 
+Protokol Modbus RTU umožňuje připojení k nadřazenému řídicímu systému zákazníka: sledování více tepelných čerpadel, provozní data v reálném čase (teploty, tlaky, příkon, stav chodu aj.), dálkové zapnutí/vypnutí, přepínání režimů a nastavení parametrů.
+Výchozí formát dat pro Modbus/BMS je (8, N, 1), přenosová rychlost 9600 bps. 
+Podporovány jsou i jiné formáty dat. Nastavení: 【 BMS data format 】, 【 BMS baud rate 】, 【 BMS communication address 】
+Tepelné čerpadlo
+Jiné zařízení
+--- snímek 33 ---
+3
+Elektrické zapojení
+--- snímek 34 ---
+Řídicí deska    
+RHX20 Pro  
+Elektrické zapojení
+--- snímek 35 ---
+Řídicí deska    
+RHX30 Pro  
+Elektrické zapojení
+--- snímek 36 ---
+Vnitřní řídicí deska     
+RHX20 Pro / RHX30 Pro
+Elektrické zapojení
+SL1/SL2: solární sada
+P_O: čerpadlo zóny A
+P_M1: čerpadlo zóny B1
+P_M2: čerpadlo zóny B2
+P_S: solární čerpadlo
+IBH1: vestavěný el. ohřev
+TBH: topná vložka zásobníku 
+1/2/3/4ON/OFF: SV1/SV2/SV3/SV4
+AHS1/AHS2: přídavný zdroj tepla
+DFR1/DFR2: signál odtávání
+ERR1/ERR2: signál poruchy
+HT: protizámrazový ohřev
+P_R: čerpadlo TUV
+--- snímek 37 ---
+Vnitřní řídicí deska     
+RH06–RH16
+Elektrické zapojení
+SL1/SL2: solární sada
+P_O: čerpadlo zóny A
+P_M1: čerpadlo zóny B1
+P_M2: čerpadlo zóny B2
+P_S: solární čerpadlo
+IBH1: vestavěný el. ohřev
+TBH: topná vložka zásobníku 
+1/2/3/4ON/OFF: SV1/SV2/SV3/SV4
+AHS1/AHS2: přídavný zdroj tepla
+DFR1/DFR2: signál odtávání
+ERR1/ERR2: signál poruchy
+HT: protizámrazový ohřev
+P_R: čerpadlo TUV
+--- snímek 38 ---
+Vnitřní řídicí deska     
+RH06–RH16
+Elektrické zapojení
+Č.
+Popis
+Č.
+Popis
+1
+Rezerva
+20
+Přídavný zdroj tepla
+2
+RS485 komunikace s venkovní deskou
+21
+Beznapěťový spínací výstup
+3
+BMS (SG B2 A2) a kaskáda (B1 A1)
+22
+Cirkulační čerpadlo TUV (dodávka stavby)
+4
+Rezerva
+23
+Protizámrazový el. ohřev
+5
+Rezerva
+24
+Vestavěný el. ohřev 1
+6
+Rezerva
+25
+Vestavěný el. ohřev 1 / topná vložka zásobníku
+7
+Rezerva
+26
+Solární čerpadlo
+8
+Rezerva
+27
+Čerpadlo zóny
+9
+Rezerva
+28
+Externí oběhové čerpadlo nebo čerpadlo zóny A
+10
+Rezerva
+29
+Vstup solárního signálu
+11
+SG
+30
+Zpětná vazba el. ohřevu 1/2
+12
+EVU
+31
+Zpětná vazba topné vložky zásobníku
+13
+Rezerva
+32
+Rezerva
+14
+Rezerva
+33
+Napájení (L N) AC220V
+15
+Teplota vody podlahy 2
+34
+Rezerva
+16
+Rezerva
+35
+Displej
+17
+Zpětná vazba termostat. směš. ventilu 
+36
+Rezerva
+18
+Zpětná vazba termostat. směš. ventilu 
+37
+Snímač teploty
+19
+Napájení trojcestných ventilů (SV1/SV2/SV3/SV4)
+38
+DIP přepínač typu jednotky
+Nastavení adresy v kaskádě
+--- snímek 39 ---
+Zapojení přídavného zdroje tepla
+Tepelné čerpadlo umožňuje připojit 
+přídavný zdroj tepla (např. kotel)
+, který slouží k 
+dohřevu
+, když výstupní teplota systému při nízkých venkovních teplotách nedosahuje požadované hodnoty.
+(1) Svorky AHS1 a AHS2 poskytují pouze spínací signál.
+(2) Nastavení AHS: Advanced setting → 01 Parameters config. → 17 Auxiliary Heat Setting → parametry 12/13/14/15/16.
+--- snímek 40 ---
+(1)
+ P_O: čerpadlo zóny A         P_R: vratné čerpadlo zásobníku TUV      P_S: solární oběhové čerpadlo          
+      P_M1: směšovací čerpadlo podlahového vytápění zóny B1        P_M2: směšovací čerpadlo podlahového vytápění zóny B2
+(2) Advanced setting → Parameters config. → 16 Hydraulic Component → PUMPret: nastavte P_R na ON a dále parametry.
+Zapojení oběhových čerpadel
+--- snímek 41 ---
+IBH1: zapojení elektrického ohřevu
+Nastavení vestavěného el. ohřevu: Advanced setting → Parameters config. → 17 Auxiliary Heat Setting → aktivujte IBH a nastavte jeho parametry.
+Zapojení přídavného elektrického ohřevu
+--- snímek 42 ---
+Zapojení trojcestných ventilů
+Tepelné čerpadlo může řídit 4 trojcestné ventily. 
+1ON 1OFF: S3V1  hlavní trojcestný ventil       2ON 2OFF: S3V2   ventil zóny A – přepínání radiátory/fancoily     
+3ON 3OFF: S3V3  směšovací ventil zóny B1                    4ON 4OFF: S3V4   směšovací ventil zóny B2   
+--- snímek 43 ---
+Zapojení čidla zásobníku: tepelné čerpadlo se dodává se snímačem teploty zásobníku (T9), délka kabelu cca 12 m; čidlo se osadí přímo do jímky v zásobníku TUV.
+Elektrické zapojení – čidlo zásobníku TUV
+--- snímek 44 ---
+Děkujeme!
