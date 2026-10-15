@@ -75,3 +75,10 @@ za nové vždy zkontrolovat, zda na plášti nezůstal štítek.
 - Doplnit reálnou fotku instalované nádrže v kotelně REO (místo studiové fotky
   výrobce) — až bude k dispozici.
 - Zvážit anglickou mutaci pro export.
+
+## Webová verze (artefakt)
+- `web/build_web.py` + `web/web.css` — z `letak.html` udělá jednu responzivní stránku
+  (fotky jako JPEG data URI, bez tiskových patiček). Spuštění z této složky:
+  `python3 web/build_web.py . /cesta/katalog-nadrzi.html`
+- Publikováno jako artefakt https://claude.ai/artifact/EPYT2QCFdGPg3cduyU1vGL (2026-10-15).
+  Po změně `letak.html` přegenerovat a znovu publikovat na stejnou URL.
