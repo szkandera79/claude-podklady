@@ -28,6 +28,7 @@ CLAUDE.md** a drž se pravidel tam uvedených.
 | `bd-michal-nabidka/` | cenová nabídka BD u Dolu Michal (24 b.j.), varianty A/B, podklady pro společníky |
 | `porovnani-x50-2-3/` | porovnání 2× vs. 3× REO X50 (podklad pro výbor SVJ) |
 | `konkurence-tc-smart/` | konkurenční srovnání REO R290 Smart / REO R290 vs. 10 značek R290 monobloků (cena, COP/SCOP, hluk, výbava) |
+| `audit-akustika-rh030-rh060/` | audit akustické dokumentace RH030–RH060 (LWA/LpA z protokolů TÜV SÜD, chybějící podklady, NV 272/2011) |
 | `porovnani-x50-rh060/` | srovnání jednotek pro kaskády BD: RH X50 / X40 / X20 / RH060 |
 | `mobilni-kotelna-tc/` | podnikatelský a technický model pronájmu mobilních kotelen s TČ v kontejneru |
 | `reo-iot-cz/` | rozšíření Chrome nad IOT Power World (CZ překlad, encyklopedie parametrů, chyby, diagnostika); vlastní **CLAUDE.md** (read-only, `podklady/` mimo git) |
