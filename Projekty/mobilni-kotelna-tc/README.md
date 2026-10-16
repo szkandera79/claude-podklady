@@ -67,3 +67,7 @@ Další fáze: 2 hydraulika a regulace, 3 konstrukce a kotvení, 4 rešerše trh
   ekonomická nula ≈ 69 tis./měs. Smlouva o nájmu (Claude Docs): https://claude.ai/code/artifact/4ab9fbf4-395c-48f0-97e0-f627aa43c372 — ke kontrole advokátem.
 - **Rozhodnutí uživatele 16. 10. 2026:** bez hydraulického separátoru a deskového výměníku; jednotky přímo na AKU, soustava na vodu
   s protimrazovými ventily, uzávěry s pružinovým návratem a UPS. Vychází finančně zhruba stejně jako glykol; riziko vůči návodu RH X50 trvá.
+
+## Zakázky
+- **`mm-holz/`**: MM Holz / Alignum Paskov — návrh 2 × RH X50 ze skladu (výkony při 55/60/70 °C, limit jednotek Sahara, otevřené body). Výpočty `python3 mobilni-kotelna-tc/mm-holz/src/sestavy.py`.
+- **`univerzalni/`**: studie univerzální mobilní kotelny (fáze 1), artefakt https://claude.ai/artifact/28JzYEi6eUNqyWW4CAkjcM.
