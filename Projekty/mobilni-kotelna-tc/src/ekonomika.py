@@ -7,6 +7,31 @@ Přímé náklady zakázky jsou vlastní odhady [O], ceny dopravy vycházejí z 
 from pathlib import Path
 import rozpocet as R
 import studie_calc as C
+import model as M
+
+# --- celkové náklady zákazníka: nájem + energie (orientačně, bez DPH) ---
+DESIGN_KW = 50
+SEASON_SHARE = 0.80          # podíl říjen–březen na roční potřebě tepla [ODHAD]
+Q6 = sum(DESIGN_KW * min(1, max(0, (20 - t) / 35)) * h for t, h in M.bins().items()) / 1000 * SEASON_SHARE  # MWh
+SPF_HI, SPF_LO = M.SPF_CALC, M.SPF_W55                       # ekviterm 50/35 vs. trvale 55 °C
+# Tržní ceny k 16. 10. 2026, bez DPH (zdroje v SOURCES):
+#  nafta: ČSÚ 41. týden 47,74 Kč/l s DPH → 39,5 bez DPH
+#  LTO: nafta − spotřební daň 8,01 + daň LTO po vrácení 0,66 ≈ 32 Kč/l (koncové ceny 32–38 s DPH, nedatované)
+#  LPG pro vytápění (propan): 2,4–2,9 Kč/kWh s DPH → ≈ 2,2 bez DPH × 6,6 kWh/l ≈ 15 Kč/l (autoplyn 21,75 s DPH neplatí)
+#  elektřina pro firmy: jednotarif 5,6–6,6 Kč/kWh s DPH (E.ON, PRE, ČEZ 2026) → ≈ 5,0 bez DPH; rozpětí 4,5–5,5
+PRICES = dict(el=5.0, diesel=39.5, lto=32.0, lpg=15.0)  # Kč/kWh, Kč/l
+SOURCES = [
+    ('ČSÚ přes wattbox.cz: nafta 47,74 Kč/l s DPH, 41. týden 2026', 'https://wattbox.cz/ceny-paliv'),
+    ('TZB-info: ceny elektřiny 2026 (E.ON, PRE, ČEZ)', 'https://www.tzb-info.cz/ceny-paliv-a-energii/14-ceny-elektriny'),
+    ('CALPG: propan pro vytápění ≈ 2,90 Kč/kWh s DPH', 'https://calpg.cz/kolik-stoji-prechod-na-propanove-vytapeni/'),
+    ('NRG: koncová cena LTO ≈ 38 Kč/l (nedatováno)', 'https://www.nrg.cz/nebojme-se-lehkych-topnych-oleju/'),
+    ('e-genergie: spotřební daň a vratka u LTO', 'https://www.egenergie.com/ropne-produkty/extra-lehky-topny-olej/'),
+]
+ALTS = [  # (název, Kč za kWh paliva, kWh v litru, účinnost, nájem/měs nízký–vysoký, jednorázově)
+    ('Nafta, mobilní kotelna', 39.5, M.OIL_KWH_L, M.OIL_EFF, (35_000, 60_000), 25_000),
+    ('LTO, mobilní kotelna', 32.0, M.OIL_KWH_L, M.OIL_EFF, (35_000, 60_000), 25_000),
+    ('LPG, kontejner + nádrž', 15.0, M.LPG_KWH_L, M.GAS_EFF, (35_000, 60_000), 35_000),
+]
 
 MONTHS = 6
 INSTALL_FEE, REMOVAL_FEE = 50_000, 40_000     # zadavatel
@@ -125,6 +150,8 @@ def html():
     b2 = breakeven('U', 'B-2')
     return f'''<h2><span class="no">15</span>Ekonomika zakázky</h2>
 <p>Jedna zakázka = šestiměsíční pronájem v topné sezóně, tedy zpravidla jedna zakázka za rok. Elektřinu hradí zákazník. Rozpočet a opotřebení z kap. 14 (hydraulika bez separátoru a výměníku), přímé náklady zakázky jsou vlastní odhad do 100 km. Kladná čísla zeleně, záporná červeně.</p>
+{tco_html()}
+<h3>Ekonomika pro REO HEATING</h3>
 {direct}
 {blocks}
 <h3>Bod zvratu</h3>
@@ -146,6 +173,64 @@ def html():
 </ul></div>
 </div>
 '''
+
+
+def tco_html():
+    q = Q6 * 1000                                   # kWh tepla za 6 měsíců
+    hp_kwh = (q / SPF_HI, q / SPF_LO)
+    hp_cost = tuple(x * PRICES['el'] for x in hp_kwh)
+    ours = MONTHS * 70_000 + INSTALL_FEE + REMOVAL_FEE
+    rows = (f'<tr class="grp"><th scope="row" class="l">TČ REO HEATING (nájem 70 tis.)</th><td>{f0(hp_kwh[0])}–{f0(hp_kwh[1])} kWh el.</td>'
+            f'<td>{f1(1 / SPF_HI)}–{f1(1 / SPF_LO)}</td><td>{f0(hp_cost[0])}–{f0(hp_cost[1])}</td><td>{f0(ours)}</td>'
+            f'<td class="hl">{f0(ours + hp_cost[0])}–{f0(ours + hp_cost[1])}</td></tr>')
+    alt_lines = []
+    for name, price, kwh_l, eff, (rlo, rhi), once in ALTS:
+        litres = q / (kwh_l * eff)
+        cost = litres * price
+        rent = (MONTHS * rlo + once, MONTHS * rhi + once)
+        save = (cost - hp_cost[1], cost - hp_cost[0])
+        alt_lines.append((name, cost, save))
+        rows += (f'<tr><th scope="row" class="l">{name}</th><td>{f0(litres)} l</td><td>{f1(1 / eff)}</td><td>{f0(cost)}</td>'
+                 f'<td>{f0(rent[0])}–{f0(rent[1])}</td><td class="hl">{f0(rent[0] + cost)}–{f0(rent[1] + cost)}</td></tr>')
+    d = alt_lines[0]
+    be_rows = ''
+    BE = {}
+    for name, price, kwh_l, eff, (rlo, rhi), once in ALTS:
+        cost = q / (kwh_l * eff) * price
+        cells = ''
+        for r in (rlo, rhi):
+            alt_total = MONTHS * r + once + cost
+            lo = (alt_total - INSTALL_FEE - REMOVAL_FEE - hp_cost[1]) / MONTHS
+            hi = (alt_total - INSTALL_FEE - REMOVAL_FEE - hp_cost[0]) / MONTHS
+            BE[(name.split(',')[0], r)] = (lo, hi)
+            cells += f'<td class="{"ok" if hi >= 70_000 else ("warn" if hi >= 55_000 else "bad")}">{f0(lo)}–{f0(hi)}</td>'
+        be_rows += f'<tr><th scope="row" class="l">{name}</th>{cells}</tr>'
+    be = f'''<div class="tbl"><table><thead><tr><th class="l">Konkurence</th><th>její nájem 35 tis./měs.</th><th>její nájem 60 tis./měs.</th></tr></thead>
+<tbody>{be_rows}</tbody></table></div>'''
+    per_h_el = (DESIGN_KW / SPF_HI, DESIGN_KW / SPF_LO)
+    per_h_l = DESIGN_KW / (M.OIL_KWH_L * M.OIL_EFF)
+    return f'''<h3>Hlavní prodejní argument: celkové náklady zákazníka (nájem + energie)</h3>
+<p>Olejovou nebo plynovou kotelnu nelze srovnávat jen nájmem: zákazník u ní platí i palivo, a to je největší položka. Modelový objekt se ztrátou {DESIGN_KW} kW při −15 °C potřebuje za 6 měsíců topné sezóny ≈ {f0(Q6)} MWh tepla [ODHAD]. Ceny bez DPH: elektřina {f1(PRICES["el"])} Kč/kWh, nafta {f1(PRICES["diesel"])} Kč/l (ČSÚ 47,74 Kč/l s DPH), LTO {f0(PRICES["lto"])} Kč/l, propan pro vytápění {f0(PRICES["lpg"])} Kč/l; tržní ceny k 16. 10. 2026, zdroje pod tabulkou. V nabídce vždy nahradit cenami z faktur zákazníka. Sezónní topný faktor TČ {f1(SPF_LO)} (trvale 55 °C) až {f1(SPF_HI)} (ekvitermně 50/35 °C), vypočtený z výkonových map RH X50.</p>
+<div class="tbl"><table><thead><tr><th class="l">6 měsíců, Kč bez DPH</th><th>Spotřeba energie</th><th>kWh vstupu na 1 kWh tepla</th><th>Náklady na energii</th><th>Nájem + doprava a montáž</th><th>Celkem</th></tr></thead>
+<tbody>{rows}</tbody></table></div>
+<p class="note">Zdroje cen: {" · ".join(f'<a href="{u}">{t}</a>' for t, u in SOURCES)}.</p>
+<h3>Do jakého nájmu jsme pro zákazníka celkově levnější</h3>
+<p>Měsíční nájem TČ (Kč bez DPH, s poplatky 50 + 40 tis.), při kterém jsou celkové náklady zákazníka za 6 měsíců stejné jako u konkurenční kotelny včetně paliva. Rozpětí odpovídá topnému faktoru {f1(SPF_LO)}–{f1(SPF_HI)}. Zelená: 70 tis. Kč je pod hranicí, takže TČ vyjde levněji.</p>
+{be}
+<div class="cols">
+<div><h3>Co říct zákazníkovi předem</h3><ul class="plain">
+<li><b>Nájem je vyšší, provoz levnější.</b> Při výkonu {DESIGN_KW} kW spotřebuje TČ ≈ {f0(per_h_el[0])}–{f0(per_h_el[1])} kWh elektřiny za hodinu (≈ {f0(per_h_el[0] * PRICES["el"])}–{f0(per_h_el[1] * PRICES["el"])} Kč), naftová kotelna ≈ {f1(per_h_l)} l nafty (≈ {f0(per_h_l * PRICES['diesel'])} Kč).</li>
+<li>Na 1 kWh tepla potřebuje TČ {f1(1 / SPF_HI)}–{f1(1 / SPF_LO)} kWh elektřiny, naftová kotelna {f1(1 / M.OIL_EFF)} kWh v naftě. <b>Energie spotřebuje 2–3× méně.</b></li>
+<li>Protože kWh elektřiny je dražší než kWh v naftě, je úspora v penězích menší než úspora energie: za sezónu ≈ {f0(d[2][0])}–{f0(d[2][1])} Kč proti naftě, tedy o ≈ {f0((1 - hp_cost[1] / d[1]) * 100)}–{f0((1 - hp_cost[0] / d[1]) * 100)} % nižší náklady na energii.</li>
+<li>Další výhody bez paliva: žádné dovozy nafty a hlídání nádrže, žádné spaliny a zápach u budovy, nižší hluk, žádné riziko úniku paliva.</li>
+</ul></div>
+<div><h3>Kde jsou meze argumentu</h3><ul class="plain">
+<li>Proti <b>naftě</b> za 60 tis. Kč/měs. obstojí nájem 70 tis. Kč vždy (hranice {f0(BE[('Nafta', 60_000)][0])}–{f0(BE[('Nafta', 60_000)][1])} Kč). Proti levné naftové kotelně za 35 tis. Kč/měs. je hranice {f0(BE[('Nafta', 35_000)][0])}–{f0(BE[('Nafta', 35_000)][1])} Kč, tam je potřeba jít s nájmem k 55–65 tis.</li>
+<li>Proti <b>LTO</b> jen proti dražší konkurenci ({f0(BE[('LTO', 60_000)][0])}–{f0(BE[('LTO', 60_000)][1])} Kč). Nejtěžším soupeřem je <b>propan</b> ve vlastní nádrži: hranice jen {f0(BE[('LPG', 35_000)][0])}–{f0(BE[('LPG', 60_000)][1])} Kč, tam úspora na energii vyšší nájem nevyrovná.</li>
+<li>Úspora silně závisí na teplotě vody: při soustavě 90/70, kde TČ jede trvale na 55 °C a výš, se blíží spodní hranici.</li>
+<li>Úsporu nabízet jen „orientačně, podle cen energie zákazníka“, ne jako garanci. Do každé nabídky dosadit skutečné ceny elektřiny a paliva zákazníka.</li>
+</ul></div>
+</div>'''
 
 
 def build():

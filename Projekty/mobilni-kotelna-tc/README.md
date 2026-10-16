@@ -74,3 +74,5 @@ Další fáze: 2 hydraulika a regulace, 3 konstrukce a kotvení, 4 rešerše trh
 - **Artefakt „Mobilní kotelna“** (16. 10. 2026) = https://claude.ai/artifact/28JzYEi6eUNqyWW4CAkjcM, záložky Studie a ekonomika /
   Nabídky / Smlouva. Nové nabídky: řádek v `src/nabidky.py` + složka `nabidky/<slug>/` (fragment `nabidka.html`), pak
   `python3 mobilni-kotelna-tc/src/build_studie.py` a publikovat `studie.html` na stejnou URL. Rozpracováno: MM Holz.
+- **Ceny energií 16. 10. 2026** (ekonomika.py, bez DPH): nafta 39,5 Kč/l (ČSÚ 47,74 s DPH), LTO ≈ 32 Kč/l, propan pro vytápění ≈ 15 Kč/l,
+  elektřina pro firmy ≈ 5,0 Kč/kWh. Úspora energie proti naftě ≈ 40–57 % (≈ 180–260 tis. Kč za sezónu u 50 kW).
