@@ -30,6 +30,8 @@ body{ color:var(--ink); font-family:Inter, "Helvetica Neue", Arial, sans-serif; 
 .eyebrow{ font-size:12px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
 
 .models{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+.grp-h{ grid-column:1/-1; font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:8px 0 -2px; }
+.grp-h:first-child{ margin-top:0; }
 .model{ appearance:none; font:inherit; color:inherit; text-align:left; cursor:pointer;
         background:var(--surface); border:1px solid var(--line); border-radius:10px;
         padding:12px 14px; display:grid; gap:2px; transition:border-color .15s, background .15s; }
@@ -149,9 +151,9 @@ table.ntable .ok{ color:var(--s-lwa); font-weight:600; }
 <div class="wrap">
   <div class="top">
     <div>
-      <div class="eyebrow">REO HEATING · tepelná čerpadla vzduch–voda RH030 – RH060, chladivo R290</div>
+      <div class="eyebrow">REO HEATING · tepelná čerpadla vzduch–voda s chladivem R290</div>
       <h1>REO R290</h1>
-      <p>Dokumentace k jednotkám: datové listy, energetické štítky a návod k instalaci a obsluze. Topné výkony, příkon a COP pro výstupní vodu 35 / 45 / 55 °C v rozsahu venkovních teplot −25 až 21 °C, křivky výkonu a COP a energetický štítek ErP.</p>
+      <p>Dokumentace k jednotkám řad REO R290 (RH030–RH060), REO R290 Smart (RH06–RH16) a komerčních jednotek pro kaskády (RH X50, RHX20 Pro, RHX30 Pro): datové listy, energetické štítky, návody a prezentace. Topné výkony, příkon a COP pro výstupní vodu 35 / 45 / 55 °C (u řady Smart a komerčních jednotek i 60–75 °C) v rozsahu venkovních teplot −25 až 21 °C.</p>
     </div>
   </div>
 
@@ -171,8 +173,8 @@ table.ntable .ok{ color:var(--s-lwa); font-weight:600; }
   </section>
 
   <section class="docs" id="navody" aria-labelledby="docs-h">
-    <h2 id="docs-h">Návody k instalaci a obsluze</h2>
-    <p class="sub">Český návod pro montážní firmy a zákazníky: bezpečnost, technické údaje, rozměry, rozpad dílů, instalace, schémata zapojení, obsluha ovladače, chybové kódy, údržba a připojení přes aplikaci Smart Life.</p>
+    <h2 id="docs-h">Návody a prezentace</h2>
+    <p class="sub">České podklady pro montážní firmy, projektanty a zákazníky: návod k instalaci a obsluze (bezpečnost, technické údaje, instalace, schémata zapojení, ovladač, chybové kódy, údržba) a produktová prezentace komerčních jednotek.</p>
     <div class="doclist">
       <div class="doc">
         <div class="di"><b>RH030 · RH040 · RH050 · RH060</b><span>Jednotky se starším ovladačem · 50 stran A4 · PDF /*MAN_SIZE*/</span></div>
@@ -181,6 +183,15 @@ table.ntable .ok{ color:var(--s-lwa); font-weight:600; }
           <button class="btn" id="manBtn" type="button">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v8M4.5 6.8 8 10.3l3.5-3.5M2.5 13.5h11"/></svg>
             Stáhnout návod</button>
+        </div>
+      </div>
+      <div class="doc">
+        <div class="di"><b>Tepelné čerpadlo REO R290 Smart – konstrukce a klíčové funkce</b><span>RHX20 Pro / RHX30 Pro · lehké komerční použití · prezentace 45 snímků · PDF /*PRES_SIZE*/</span></div>
+        <div class="act">
+          <span class="status" id="presStatus" role="status"></span>
+          <button class="btn" id="presBtn" type="button">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v8M4.5 6.8 8 10.3l3.5-3.5M2.5 13.5h11"/></svg>
+            Stáhnout prezentaci</button>
         </div>
       </div>
       <div class="doc soon">
@@ -204,13 +215,16 @@ table.ntable .ok{ color:var(--s-lwa); font-weight:600; }
 
   <div class="stage" id="stage" role="tabpanel" aria-live="polite"><div class="sheet" id="sheet"></div></div>
 
-  <div class="foot">Hodnoty datových listů 1:1 z podkladů výrobce (MAX = maximální, MIN = minimální otáčky kompresoru). PDF k tisku (2 strany A4: Heating + energetický štítek) stáhnete tlačítkem nad náhledem; zdrojové soubory jsou ve složce <code>~/Claude/REO/R290-datove-listy/pdf/</code>.</div>
+  <div class="foot">Hodnoty datových listů 1:1 z podkladů výrobce (MAX = maximální, MIN = minimální otáčky kompresoru). Hlučnost a energetické třídy řady Smart a RHX podle formulářů EU 811/2013. PDF k tisku stáhnete tlačítkem nad náhledem; zdrojové soubory jsou ve složce <code>~/Claude/REO/R290-datove-listy/pdf/</code>.</div>
 </div>
 
 <script>
 /*DATA_JS*/
-// Artefakt REO R290 = domovní řada RH030–RH060. RHX30 Pro / RH X50 (kaskády, bytové domy) zůstávají v data.js pro vlastní podklady.
-for (const k of Object.keys(MODELS)) if (k.startsWith('RHX')) delete MODELS[k];
+// skupiny modelů v přepínači (pořadí = pořadí zobrazení)
+const GROUPS = [['dom','REO R290 · rodinné domy',['RH030','RH040','RH050','RH060']],
+  ['smart','REO R290 Smart · rodinné domy',['RH06','RH08','RH10','RH12','RH14','RH16']],
+  ['com','Komerční jednotky · kaskády pro bytové domy',['RHX20','RHX30','RHX50']]];
+const grpOf = k => (GROUPS.find(g => g[2].includes(k)) || GROUPS[0])[0];
 /*SHEET_JS*/
 /*ASSETS_JS*/
 /*PDFS_JS*/
@@ -220,12 +234,13 @@ const sheetEl = document.getElementById('sheet'), stage = document.getElementByI
 const tabs = document.getElementById('models'), facts = document.getElementById('facts');
 const f1 = v => v.toFixed(1).replace('.', ','), f2 = v => v.toFixed(2).replace('.', ',');
 
-tabs.innerHTML = Object.entries(MODELS).map(([k,M]) =>
-  `<button class="model" role="tab" id="tab-${k}" data-k="${k}" aria-selected="false">
+tabs.innerHTML = GROUPS.map(([g, title, keys]) =>
+  `<div class="grp-h">${title}</div>` + keys.filter(k => MODELS[k]).map(k => { const M = MODELS[k], c = M.cls || ['A+++','A++'];
+  return `<button class="model" role="tab" id="tab-${k}" data-k="${k}" aria-selected="false">
      <span class="nm">${M.name}</span>
-     <span class="kw">${f1(M.D[35].MAX.cap[iA7])} kW · A7/W35 max</span>
-     <span class="cls${M.label ? '' : ' na'}">${M.label ? 'A+++ / A++' : 'štítek zatím nedodán'}</span>
-   </button>`).join('');
+     <span class="kw">${f1(M.D[35].MAX.cap[iA7])} kW · A7/W35 max · ${f1(M.D[55].MAX.cap[iM15])} kW A−15/W55</span>
+     <span class="cls${M.label ? '' : ' na'}">${M.label ? c[0] + ' / ' + c[1] : 'štítek zatím nedodán'}</span>
+   </button>`; }).join('')).join('');
 
 function fit(){
   const cols = stage.clientWidth >= 860 ? 2 : 1;
@@ -241,7 +256,7 @@ const pos = v => ((v - AX[0]) / (AX[1] - AX[0])) * 100;
 const lpAt = (lwa, r) => Math.round(lwa - 20 * Math.log10(r) - 8);
 
 function renderNoise(sel){
-  const rows = Object.entries(MODELS).filter(([,M]) => M.noise);
+  const rows = Object.entries(MODELS).filter(([k,M]) => M.noise && grpOf(k) === grpOf(sel));
   document.getElementById('bars').innerHTML = rows.map(([k,M]) => {
     const n = M.noise, bar = (cls, v, note) => v == null ? '' :
       `<div class="bar ${cls}" title="${M.name} — ${note}: ${v} dB"><i style="width:${pos(v)}%"></i><b>${v}</b></div>`;
@@ -284,7 +299,7 @@ function show(key){
 tabs.addEventListener('click', e => { const b = e.target.closest('.model'); if (b) show(b.dataset.k); });
 tabs.addEventListener('keydown', e => {
   if (!['ArrowLeft','ArrowRight'].includes(e.key)) return;
-  const ks = Object.keys(MODELS), cur = tabs.querySelector('[aria-selected="true"]').dataset.k;
+  const ks = [...tabs.querySelectorAll('.model')].map(b => b.dataset.k), cur = tabs.querySelector('[aria-selected="true"]').dataset.k;
   const nx = ks[(ks.indexOf(cur) + (e.key === 'ArrowRight' ? 1 : ks.length - 1)) % ks.length];
   show(nx); document.getElementById('tab-' + nx).focus();
 });
@@ -299,13 +314,14 @@ const kb = n => Math.round(n/1024).toLocaleString('cs-CZ') + ' kB';
 function updatePrintbar(){
   const P = PDFS[current];
   document.getElementById('pdfName').textContent = P ? P.file : 'PDF k tisku';
-  document.getElementById('pdfMeta').textContent = '2 strany A4 · Heating + energetický štítek' + (P ? ' · ' + kb(P.size) : '');
+  document.getElementById('pdfMeta').textContent = 'Datový list A4 · výkonová data, křivky' + (MODELS[current].label ? ' a energetický štítek' : '') + (P ? ' · ' + kb(P.size) : '');
   pdfStatus.textContent = ''; pdfStatus.classList.remove('err');
 }
-function bytes(b64){ const s = atob(b64), u = new Uint8Array(s.length); for (let i=0;i<s.length;i++) u[i]=s.charCodeAt(i); return u; }
 async function savePdf(key){
   const P = PDFS[key];
-  await downloads.save({ filename: P.file, data: new Blob([bytes(P.b64)]) });
+  const r = await fetch(P.path);
+  if (!r.ok) throw { code:'fetch' };
+  await downloads.save({ filename: P.file, data: await r.blob() });
 }
 function setStatus(t, err){ pdfStatus.textContent = t; pdfStatus.classList.toggle('err', !!err); }
 function explain(e){
@@ -333,21 +349,26 @@ pdfAll.addEventListener('click', async () => {
   catch(e){ const [t, err] = explain(e); setStatus((n ? 'Staženo ' + n + ' z ' + Object.keys(PDFS).length + '. ' : '') + t, err); }
   finally { pdfAll.disabled = false; }
 });
-// --- návod: PDF je publikovaný jako samostatný soubor artefaktu (do stránky by se nevešel)
-const MANUAL = { path:'navody/RH030-RH060-navod-CZ_REO-HEATING.pdf', file:'RH030-RH060-navod-CZ_REO-HEATING.pdf' };
-const manBtn = document.getElementById('manBtn'), manStatus = document.getElementById('manStatus');
-const manSet = (t, err) => { manStatus.textContent = t; manStatus.classList.toggle('err', !!err); };
-manBtn.addEventListener('click', async () => {
-  if (!downloads) { manSet('Stažení tu není k dispozici. Návod je ve složce ~/Claude/REO/PW R290/RH030-RH060 - REO HEATING/', true); return; }
-  manBtn.disabled = true; manSet('Načítám návod…');
-  try {
-    const r = await fetch(MANUAL.path);
-    if (!r.ok) throw { code:'fetch' };
-    await downloads.save({ filename: MANUAL.file, data: await r.blob() });
-    manSet('Staženo: ' + MANUAL.file);
-  } catch(e){ manSet(...explain(e)); }
-  finally { manBtn.disabled = false; }
-});
+// --- návod a prezentace: PDF jsou publikované jako samostatné soubory artefaktu (do stránky by se nevešly)
+const DOCS = [
+  { btn:'manBtn', st:'manStatus', path:'navody/RH030-RH060-navod-CZ_REO-HEATING.pdf', file:'RH030-RH060-navod-CZ_REO-HEATING.pdf' },
+  { btn:'presBtn', st:'presStatus', path:'navody/REO-R290-Smart_RHX20-RHX30-Pro_prezentace-CZ.pdf', file:'REO-R290-Smart_RHX20-RHX30-Pro_prezentace-CZ.pdf' },
+];
+for (const D of DOCS) {
+  const btn = document.getElementById(D.btn), st = document.getElementById(D.st);
+  const set = (t, err) => { st.textContent = t; st.classList.toggle('err', !!err); };
+  btn.addEventListener('click', async () => {
+    if (!downloads) { set('Stažení tu teď není k dispozici.', true); return; }
+    btn.disabled = true; set('Načítám…');
+    try {
+      const r = await fetch(D.path);
+      if (!r.ok) throw { code:'fetch' };
+      await downloads.save({ filename: D.file, data: await r.blob() });
+      set('Staženo: ' + D.file);
+    } catch(e){ set(...explain(e)); }
+    finally { btn.disabled = false; }
+  });
+}
 (async () => {
   downloads = window.claude && window.claude.use ? await window.claude.use('downloads') : null;
   if (downloads && Object.keys(PDFS).length) {

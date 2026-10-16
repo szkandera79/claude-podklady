@@ -305,8 +305,8 @@ ický výk
 on a akust
 ický tlak · aplikace 55 °C · t
 epelná čerpadla vzd
-R290
 u
+R290
 ch–voda
 A
 kust
@@ -319,7 +319,6 @@ i provozu s výstupn
 ta z energe
 t
 ického št
-í
 tku, resp. z podkladů výrobce) a akust
 ický tlak ve vzdálenost
 i 1
@@ -329,6 +328,8 @@ edy v nejhlasi
 ě
 jším rež
 imu.
+í
+A
 kust
 ický výk
 on (LWA)A
@@ -347,10 +348,32 @@ RH X50 66
 59
 RHX30 Pro
 42
+53
+RH06 1F
+38
+RH08 3F 50
+3
+4
+55
+RH10 3F
+0
+4
+RH12 3F 55
+0
+4
+55
+RH14 3F
+0
+4
+RH16 3F 56
+41
+56
+RHX20 Pro
+0
+4
 35 4
 0
 45 50 55 60 65 70
-A
 Model LWA
 35 °C LWA
 55 °C Energe
@@ -377,7 +400,35 @@ RH060-PW22 60 62 62 4644 4
 RH X50 — 66 * 66 62 48 44
 38
 RHX3
-0 Pro 55 59 —42 4137 31
+0 Pro 55 59 5942 4137 31
+RH06 1F 52 53 53 38 35 31 25
+RH08 3F 50 50 50
+3
+3
+4
+2 28 22
+RH10
+3F 54 55 554
+0
+37 33
+27
+RH12
+3F 55 55 554
+0
+37 33
+27
+RH14
+3F 56 55 554
+0
+37 33
+27
+RH16 3F 55 56 5641 38 3
+4 28
+RHX2
+0 Pro 50 56 564
+0
+38 3
+4 28
 Co z čísel plyne
 t
 Nej
@@ -385,32 +436,8 @@ išší
 je RHX30 Pro (42 dB v 1 m) — a t
 o př
 i nejvyšším výk
-u
 on
-t
-je nej
-t
-išší RH030 (44 dB), nejhlasi
-ě
-jší RH040 (47 dB).
-Domovn
-í modely se pod nočn
-limi
-t 40 dB dostano
 u
-orien
-tačn
-ě
-RH X50 po
-t
-u
-řeb
-je odstup zhru
-ba 10 m (38 dB) — u zástavby s o
-nebo akust
-ická stu
-die.
-í
 domovn
 í
 ch i k
@@ -419,119 +446,6 @@ omerčn
 ch jedno
 t
 ek krom
-ě
 RH X50. Z domovn
+ě
 í řady
-od 5 m od jedno
-kny so
-usedů bl
-ž
-í
-tky; př
-i 3 m jso
-u
-na hran
-ě
-je na míst
-umíst
-n
-í s pro
-ě
-ě
-(43–40 dB).
-t
-ihluk
-ovo
-u
-cl
-ono
-u
-Hodno
-t
-y v dB, resp. dB(A).
-O
-dstup 3–10 m je orien
-tačn
-í výpoče
-t pro vo
-lné po
-le nad odrazivo
-u pl
-ocho
-u (Lp = LWA
-− 2
-0·l
-og₁₀ r − 8), ne m
-ěřen
-í — skut
-ečnost
-ovlivn
-odrazy od st
-n, pro
-t
-ihluk
-ě
-ové cl
-ony i
-umíst
-n
-jedno
-tky; pro
-k
-ě
-onkrét
-n
-í projekt
-nenahradí akust
-ick
-o
-u stu
-dii. Zvýrazn
-ě
-né hodno
-t
-y jso
-u
-do 40 dB, co
-ž
-je
-nočn
-hygienický limi
-t u
-chrán
-ě
-ného venk
-ovn
-í
-ho prost
-oru staveb. * U RH X50
-uvád
-j
-ě
-í podklady výrobce maximáln
-í akust
-ický výk
-on ≤ 77 dB, energe
-t
-ický
-št
-t
-í
-ek deklaru
-je 66 dB; v tab
-ulce je hodno
-ta ze št
-í
-tku. RHX30 Pro zat
-ím nemá energe
-t
-ický št
-t
-í
-ek, jeho hodno
-t
-y jso
-u z podkladů výrobce.
-í
-í
-í

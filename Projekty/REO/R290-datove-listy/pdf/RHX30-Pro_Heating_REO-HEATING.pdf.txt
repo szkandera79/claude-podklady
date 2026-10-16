@@ -410,3 +410,14 @@ emp. (°C)
 0 °C MAX75 °C MAX 0 °C MIN 75 °C MIN
 60 °C MIN 65 °C MIN
 0
+--- strana 3 ---
+RHX30 Pro Energy label
+EU energy label · Reg
+ulat
+ion (EU) 811/2
+013
+Model: RHX30 Pro · air-t
+o-wat
+er heat pump, refrigeran
+t R290 Space heat
+ing class: A+++ at 35 °C · A+++ at 55 °C

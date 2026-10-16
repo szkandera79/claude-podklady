@@ -55,3 +55,6 @@ Hlavní zjištění: dimenzovat podle výkonu při −15 °C/W55, ne podle nomin
 návod RH X50 požaduje pod 0 °C glykol → doporučen glykolový primár + deskový výměník, rozdělovač/separátor uvnitř kontejneru;
 RH050 ohřeje TUV přes výměník jen na ≈ 52 °C → topná vložka na sterilizaci; zásadní neznámá = teplotní spád soustavy zákazníka (CZT 90/70).
 Další fáze: 2 hydraulika a regulace, 3 konstrukce a kotvení, 4 rešerše trhu a rozpočet, 5 ekonomika a smlouva.
+- **Rešerše trhu (fáze 4, 16. 10. 2026)**: `src/market.html` (vkládá se do studie jako kap. 13). Kontejner: nový 20′ one-trip ≈ 62 500 Kč
+  (kontik), 10′ není levnější; doprava rukou ≈ 5–12 tis./cesta. Sada hadic 2× 20 m: DN50 ≈ 45–50 tis., DN65 ≈ 60–70 tis. (CALORTEC 100 + Camlock GMS, těsnění EPDM).
+  Pronájmy: v ČR žádné mobilní TČ s cenou; ENERENT TČ 105 kW ≈ 46–51 tis. Kč/měs. + 65 tis. paušál; olej/LPG 50–110 kW 35–67 tis./měs.

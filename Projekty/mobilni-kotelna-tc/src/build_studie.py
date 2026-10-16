@@ -257,7 +257,7 @@ DOCS_NEEDED = [
 NEXT = [
     ('Fáze 2 · varianty a hydraulika', 'Po obhlídce nebo s modelovými daty: výběr sestavy, hydraulické schéma s dimenzemi, výběr čerpadel, separátoru, výměníku, expanze a pojistných prvků; regulační koncept a seznam signálů.'),
     ('Fáze 3 · konstrukce', 'Půdorys a 3D koncept, nosný rám z profilů, kotvení zásobníků (provozní vs. přepravní zatížení, EN 12195-1: 0,8 g vpřed, 0,5 g do stran), výpis hutního materiálu, rámy jednotek; seznam částí pro autorizovaného statika.'),
-    ('Fáze 4 · trh a rozpočet', 'Rešerše kontejnerů 10′/20′, hadic, rychlospojek a armatur u českých dodavatelů s odkazy a cenami; položkový rozpočet A/B/C; cenová mapa pronájmů mobilních kotelen.'),
+    ('Fáze 4 · rozpočet', 'Rešerše trhu hotová (kap. 13). Zbývá položkový rozpočet A/B/C (nové výdaje, skladové díly, celková ekonomická hodnota) a poptávky u konkurence a dodavatelů.'),
     ('Fáze 5 · ekonomika a smlouva', 'Ekonomika zakázky 50/70/90 tis. Kč/měsíc, bod zvratu, 2. a 3. pronájem; návrh nájemní smlouvy B2B s vypořádáním předčasného ukončení a jistotou.'),
 ]
 
@@ -431,11 +431,15 @@ ul.plain{padding-left:18px} ul.plain li{margin:4px 0}
 .phases b{font-family:var(--f-head)}
 code,.mono{font-family:var(--f-mono);font-size:.88em}
 .formula{font-family:var(--f-mono);font-size:.85rem;background:var(--panel);border:1px solid var(--line);padding:10px 12px;overflow-x:auto;white-space:pre}
+table.mk td{font-family:var(--f-body);vertical-align:top}
+table.mk td.l a{color:var(--accent)}
+table.mk tr.grp th{background:var(--bg);font-family:var(--f-head);font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2)}
 footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--line);font-size:.8rem;color:var(--ink-2)}
 '''
 
 
 def build():
+    MARKET = Path(__file__).with_name("market.html").read_text(encoding="utf-8")
     r55 = {r['code']: r for r in C.cascade_rows(55)}
     b2 = r55['B-2']
     a50 = r55['A-50']
@@ -446,7 +450,7 @@ def build():
 <style>{CSS}</style>
 <div class="wrap">
 <header class="doc-head">
-<div class="eyebrow">REO HEATING · interní podklad · fáze 1 ze 5</div>
+<div class="eyebrow">REO HEATING · interní podklad · fáze 1 a rešerše fáze 4</div>
 <h1>Univerzální mobilní kotelna s tepelnými čerpadly</h1>
 <div class="meta"><span>Studie proveditelnosti a kritická rizika</span><span>16. 10. 2026</span><span>Data: výkonové mapy a návody výrobce, výpočty <code>studie_calc.py</code></span></div>
 </header>
@@ -581,7 +585,8 @@ se sprchami: 20 × 40 l (40 °C) na konci směny
 <h2><span class="no">12</span>Co potřebuji od výrobce a ze skladu</h2>
 <ul class="plain">{"".join(f"<li>{d}</li>" for d in DOCS_NEEDED)}</ul>
 
-<h2><span class="no">13</span>Další postup</h2>
+{MARKET}
+<h2><span class="no">14</span>Další postup</h2>
 <div class="phases">{"".join(f"<div><b>{t}</b><br>{d}</div>" for t, d in NEXT)}</div>
 
 <footer>Výkony jednotek z výkonových map výrobce; elektro RH X50 z návodu k použití. Vše označené [OVĚŘIT] nebo [ODHAD] je předpoklad, ne údaj výrobce ani tržní cena. Konstrukční a statické části bude posuzovat autorizovaný projektant. Zdroj výpočtů: <code>Projekty/mobilni-kotelna-tc/src/studie_calc.py</code>.</footer>

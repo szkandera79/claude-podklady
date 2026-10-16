@@ -87,11 +87,14 @@ ul.plain{padding-left:18px} ul.plain li{margin:4px 0}
 .phases b{font-family:var(--f-head)}
 code,.mono{font-family:var(--f-mono);font-size:.88em}
 .formula{font-family:var(--f-mono);font-size:.85rem;background:var(--panel);border:1px solid var(--line);padding:10px 12px;overflow-x:auto;white-space:pre}
+table.mk td{font-family:var(--f-body);vertical-align:top}
+table.mk td.l a{color:var(--accent)}
+table.mk tr.grp th{background:var(--bg);font-family:var(--f-head);font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2)}
 footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--line);font-size:.8rem;color:var(--ink-2)}
 </style>
 <div class="wrap">
 <header class="doc-head">
-<div class="eyebrow">REO HEATING · interní podklad · fáze 1 ze 5</div>
+<div class="eyebrow">REO HEATING · interní podklad · fáze 1 a rešerše fáze 4</div>
 <h1>Univerzální mobilní kotelna s tepelnými čerpadly</h1>
 <div class="meta"><span>Studie proveditelnosti a kritická rizika</span><span>16. 10. 2026</span><span>Data: výkonové mapy a návody výrobce, výpočty <code>studie_calc.py</code></span></div>
 </header>
@@ -326,8 +329,120 @@ se sprchami: 20 × 40 l (40 °C) na konci směny
 <h2><span class="no">12</span>Co potřebuji od výrobce a ze skladu</h2>
 <ul class="plain"><li>RH050 a RH060: typové štítky (max. proud, rozběhový proud), zda máte RH050 v 1f nebo 3f provedení, křivky vestavěných čerpadel, min. průtok a nastavení průtokového spínače, vodní objem jednotky.</li><li>RH050/RH060: význam parametrů „Jednotky online“ a „Řídicí adresa“ (vestavěná kaskáda?), počet propojitelných jednotek, protokol (RS485/Modbus) a mapa registrů, vstup pro externí povolení chodu, výstup poruchy.</li><li>RH X50: tlaková ztráta deskového výměníku při jmenovitém průtoku, min./max. průtok, vodní objem, kaskádní řízení „modulů“ (počet, propojení), Modbus mapa, řízení externího čerpadla.</li><li>Pro všechny modely: podpora IoT platformy výrobce, víceuživatelský přístup a poruchová hlášení; povolená koncentrace propylenglykolu a korekce výkonu; zda výkonové mapy zahrnují odtávání.</li><li>Hluk při max. výkonu a při nízkých venkovních teplotách (u RH050/060 chybí, viz audit akustiky).</li><li>Zásobníky TUV 300 l: výkres (rozměry, hrdla, nátrubek pro topnou vložku, kotevní body), max. tlak, hmotnost, údaje výměníku (objem, tlaková ztráta, výkon dle výrobce).</li><li>AKU 300/500 l a nabízená 1 000 l: rozměry s izolací, klopná výška, max. tlak, hrdla, cena a co zahrnuje.</li></ul>
 
-<h2><span class="no">13</span>Další postup</h2>
-<div class="phases"><div><b>Fáze 2 · varianty a hydraulika</b><br>Po obhlídce nebo s modelovými daty: výběr sestavy, hydraulické schéma s dimenzemi, výběr čerpadel, separátoru, výměníku, expanze a pojistných prvků; regulační koncept a seznam signálů.</div><div><b>Fáze 3 · konstrukce</b><br>Půdorys a 3D koncept, nosný rám z profilů, kotvení zásobníků (provozní vs. přepravní zatížení, EN 12195-1: 0,8 g vpřed, 0,5 g do stran), výpis hutního materiálu, rámy jednotek; seznam částí pro autorizovaného statika.</div><div><b>Fáze 4 · trh a rozpočet</b><br>Rešerše kontejnerů 10′/20′, hadic, rychlospojek a armatur u českých dodavatelů s odkazy a cenami; položkový rozpočet A/B/C; cenová mapa pronájmů mobilních kotelen.</div><div><b>Fáze 5 · ekonomika a smlouva</b><br>Ekonomika zakázky 50/70/90 tis. Kč/měsíc, bod zvratu, 2. a 3. pronájem; návrh nájemní smlouvy B2B s vypořádáním předčasného ukončení a jistotou.</div></div>
+<h2><span class="no">13</span>Rešerše trhu (fáze 4)</h2>
+<p>Stav webů k 16. 10. 2026, ceny bez DPH (kde web uvádí jen s DPH, přepočteno / 1,21). Ceny označené ✓ jsem ověřil přímo na stránce prodejce, ostatní pocházejí z rešerše a před nákupem je potřeba je potvrdit. Dostupnost konkrétních kusů se rychle mění.</p>
+
+<h3>Kontejnery</h3>
+<div class="tbl"><table class="mk"><thead><tr><th class="l">Prodejce</th><th class="l">Nabídka</th><th>Cena bez DPH</th><th class="l">Poznámka</th></tr></thead><tbody>
+<tr class="grp"><th scope="row" colspan="4" class="l">20′ použitý (těsný, suchý)</th></tr>
+<tr><td class="l"><a href="https://www.novak-container.cz/bazarove-kontejnery/">NOVAK CONTAINER</a></td><td class="l">20′ použitý, výběr barvy</td><td>od 38 500</td><td class="l">více kusů</td></tr>
+<tr><td class="l"><a href="https://www.lodnikontejnery.cz/kontejnery/">Locont</a></td><td class="l">20′ DV, středně opotřebený</td><td>38 000–42 000</td><td class="l">e-shop, konkrétní čísla kontejnerů</td></tr>
+<tr><td class="l"><a href="https://www.hz-containers.com/">HZ Kontejnery</a> (Dobříš)</td><td class="l">20′ 22G1, „vyřazený“, 2 180 kg</td><td>42 500</td><td class="l">doprava do 20′ po ČR 3 500 Kč</td></tr>
+<tr><td class="l"><a href="https://www.caru.cz/akce-2/">CARU Praha</a></td><td class="l">20′ použitý</td><td>35 000–45 000</td><td class="l">8 dep v ČR</td></tr>
+<tr><td class="l"><a href="https://www.mystorage.cz/prodej-lodnich-kontejneru/">MyStorage</a></td><td class="l">20′ použitý, povrchová koroze</td><td>od 49 500</td><td class="l"></td></tr>
+<tr class="grp"><th scope="row" colspan="4" class="l">20′ nový (one-trip)</th></tr>
+<tr><td class="l"><a href="https://www.kontejnery-kontik.cz/nabidka-kontejneru/">kontik</a> ✓</td><td class="l">20′ DV, Corten, CSC 5 let</td><td>62 500</td><td class="l">akce, dříve 69 900</td></tr>
+<tr><td class="l">kontik ✓</td><td class="l">20′ DV Double Door (dveře na obou čelech)</td><td>83 000</td><td class="l">servisní přístup z obou stran</td></tr>
+<tr><td class="l">kontik ✓</td><td class="l">20′ HC (vnější výška 2 891 mm)</td><td>85 000</td><td class="l">+30 cm výšky pro nádrž 1 000 l</td></tr>
+<tr><td class="l">NOVAK CONTAINER / CARU</td><td class="l">20′ po jedné cestě</td><td>62 000–62 500</td><td class="l">skladem</td></tr>
+<tr><td class="l">Locont</td><td class="l">20′ DV one-way</td><td>65 000–69 000</td><td class="l">varianta s dopravou po ČR zdarma</td></tr>
+<tr class="grp"><th scope="row" colspan="4" class="l">10′</th></tr>
+<tr><td class="l">Locont / CARU</td><td class="l">10′ skladový nový, plech 2 mm, ne Corten</td><td>68 000–69 000</td><td class="l">obvykle bez CSC</td></tr>
+<tr><td class="l">HZ Kontejnery</td><td class="l">3 m ze zkráceného použitého 20′</td><td>64 500</td><td class="l">bez platného CSC</td></tr>
+<tr><td class="l">HZ Kontejnery</td><td class="l">10′ ISO IICL6</td><td>94 500</td><td class="l">doprava zdarma</td></tr>
+</tbody></table></div>
+<div class="cols">
+<div><h3>Závěr ke kontejneru</h3><ul class="plain">
+<li><b>10′ není levnější než 20′.</b> Nový 20′ stojí stejně nebo méně než 10′ a je běžně skladem. Tím odpadá i ekonomický důvod pro 10′.</li>
+<li>Doporučení: <b>nový 20′ one-trip ≈ 62 500 Kč</b> (platný CSC, nepoškozená podlaha, rohy na opakované zvedání). Použitý 38–42 tis. ušetří ≈ 20 tis., ale nese riziko koroze rohů, příčníků a prahu dveří.</li>
+<li>Zvážit 20′ HC (85 000 Kč): o 30 cm vyšší strop vyřeší klopnou výšku nádrže 1 000 l (kap. 09). Double Door (83 000 Kč) dá přístup k technologii z obou konců.</li>
+<li>Technologické úpravy (izolace, prostupy, větrání, elektro) nabízejí NOVAK CONTAINER, Kontejnery Ostrava, Locont a STG trade; ceny všude na dotaz.</li>
+</ul></div>
+<div><h3>Doprava hydraulickou rukou</h3><ul class="plain">
+<li>HZ Kontejnery: 1 kontejner do 20′ po ČR 3 500 Kč (u nabídky kontejneru).</li>
+<li>Kontejnery Ostrava: 25 km, naložení a složení rukou 3 719 Kč.</li>
+<li>Kontejner Zlín: 40 Kč/km; KEPRT 30 Kč/km s DPH + ruka 1 450–2 350 Kč (z vyhledávání).</li>
+<li><b>Odhad:</b> 30–50 Kč/km tam i zpět + 1–2 tis. Kč za manipulaci, tedy ≈ 5–12 tis. Kč za cestu do 100 km. Celá souprava ≈ 4–4,7 t (kontejner 2,2 t + technologie bez vody) a jednotky RH X50 (370 kg) zvládne běžná ruka; ověřit dosah na místě.</li>
+</ul></div>
+</div>
+
+<h3>Hadice, rychlospojky a izolace</h3>
+<div class="tbl"><table class="mk"><thead><tr><th class="l">Dodavatel</th><th class="l">Produkt</th><th class="l">Parametry</th><th>Cena bez DPH</th></tr></thead><tbody>
+<tr class="grp"><th scope="row" colspan="4" class="l">Hadice na topnou vodu a glykol</th></tr>
+<tr><td class="l"><a href="https://www.hadice.info/hadice-pro-horkou-vodu/calortec-100/">hadice.info</a> ✓</td><td class="l">CALORTEC 100, EPDM, skladem</td><td class="l">−40/+120 °C, 10 bar</td><td>32/42: 284,60 · 40/54: 412,70 · <b>51/63: 465,20</b> · <b>63/77: 634,20</b> Kč/m</td></tr>
+<tr><td class="l"><a href="https://www.kompresory-vzduchotechnika.cz/hadice-heat-profi-120--pro-horkou-vodu/">kompresory-vzduchotechnika.cz</a></td><td class="l">Heat Profi 120</td><td class="l">+120 °C, 10 bar</td><td>40: 570 · 50: 642 · 63: 876 Kč/m</td></tr>
+<tr><td class="l">agrozet.cz</td><td class="l">Tubi Gomma, horká voda + nemrznoucí směsi</td><td class="l">45/61, +120 °C, 10 bar</td><td>428,90 Kč/m</td></tr>
+<tr class="grp"><th scope="row" colspan="4" class="l">Rychlospojky Camlock (EN 14420-7) a příslušenství</th></tr>
+<tr><td class="l"><a href="https://www.gms.cz/">GMS</a> (Lanškroun)</td><td class="l">Camlock C s trnem, AISI 316, 16 bar</td><td class="l">standardně těsnění NBR do +95 °C; EPDM na dotaz</td><td>DN40: 1 207 · DN50: 1 538 · DN65: 1 972 Kč</td></tr>
+<tr><td class="l">GMS</td><td class="l">Camlock E s trnem, AISI 316</td><td class="l"></td><td>DN40: 742 · DN50: 1 044 · DN65: 1 313 Kč</td></tr>
+<tr><td class="l">GMS</td><td class="l">Bezpečnostní spona EN 14420-3, nerez</td><td class="l">61–63 / 64–67 / 78–82 mm</td><td>793 / 827 / 995 Kč</td></tr>
+<tr><td class="l">hpcontrol.cz</td><td class="l">Camlock nerez typ A, B, C, E</td><td class="l">jakost SS304/316 ověřit</td><td>DN50: 361–558 Kč</td></tr>
+<tr><td class="l">topenilevne.cz</td><td class="l">Kulový kohout Giacomini R250D 2″</td><td class="l">PN35, 185 °C</td><td>1 264 Kč</td></tr>
+<tr class="grp"><th scope="row" colspan="4" class="l">Izolace</th></tr>
+<tr><td class="l">esinop.cz</td><td class="l">K-Flex ST, stěna 19 mm</td><td class="l">ID 64 / 89; <b>bez UV odolnosti</b></td><td>207 / 221 Kč/m</td></tr>
+<tr><td class="l">als.cz</td><td class="l">Armaflex HT, EPDM, UV odolný</td><td class="l">jen malé průměry</td><td>DN64–77 na dotaz</td></tr>
+</tbody></table></div>
+<div class="cols">
+<div><h3>Odhad sady přívod + zpátečka 2× 20 m</h3>
+<div class="tbl"><table><thead><tr><th class="l">Položka</th><th>DN50</th><th>DN65</th></tr></thead><tbody>
+<tr><td class="l">Hadice CALORTEC 100, 40 m</td><td>18 608</td><td>25 368</td></tr>
+<tr><td class="l">4× Camlock C nerez</td><td>6 153</td><td>7 888</td></tr>
+<tr><td class="l">4× protikus typ A</td><td>1 444</td><td>≈ 2 000</td></tr>
+<tr><td class="l">4× bezpečnostní spona</td><td>3 172</td><td>≈ 4 000</td></tr>
+<tr><td class="l">4× kulový kohout</td><td>5 056</td><td>≈ 8 000</td></tr>
+<tr><td class="l">Izolace 19 mm, 40 m</td><td>8 298</td><td>≈ 9 520</td></tr>
+<tr><th scope="row" class="l">Celkem (odhad)</th><td class="hl">≈ 43 000</td><td class="hl">≈ 57 000</td></tr>
+</tbody></table></div>
+<p class="note">S rezervou na těsnění EPDM, UV ochranu izolace a koncovky počítat 45–50 tis. (DN50) a 60–70 tis. Kč (DN65). Hadice pro jednotky (glykol, DN32/DN50, 2–5 m) vyjdou na 285–465 Kč/m plus koncovky.</p></div>
+<div><h3>Co z rešerše plyne</h3><ul class="plain">
+<li>CALORTEC 100 vyhovuje teplotou (120 °C) i tlakem (10 bar) a výrobce ho uvádí i pro nemrznoucí směsi. Snášenlivost s propylenglykolem potvrdit u výrobce.</li>
+<li>Nerezové Camlocky mají standardně těsnění NBR do 95 °C, což je pro topnou vodu na hraně. Objednávat s těsněním EPDM.</li>
+<li>K-Flex ST a Armaflex XG venku bez UV ochrany degradují. Pro opakované použití buď UV odolná izolace (Armaflex HT, ceny na dotaz), nebo ochranný návlek či nátěr.</li>
+<li>Hotovou „připojovací sadu pro mobilní kotelnu“ v ČR nikdo nenabízí; sestavit z dílů. Samouzavírací (dry-break) spojky pro glykolový primár jsou jen na dotaz.</li>
+<li>Hadici na teplou pitnou vodu s certifikací pro pitnou vodu a 70 °C se s cenou najít nepodařilo. TUV a cirkulaci řešit pevným potrubím u zákazníka nebo poptat u Semperitu a Rehau.</li>
+</ul></div>
+</div>
+
+<h3>Cenová mapa pronájmů mobilních zdrojů tepla</h3>
+<p>Mobilní tepelné čerpadlo k pronájmu s veřejnou cenou v ČR ani na Slovensku nikdo nenabízí. Pro 50–100 kW jsou proto použitelné hlavně ceníky z Německa a Rakouska. Kurz 25 Kč/€. Měsíční částky jsou dlouhodobá sazba × 30 dní, bez paliva a elektřiny.</p>
+<div class="tbl"><table class="mk"><thead><tr><th class="l">Poskytovatel</th><th class="l">Typ</th><th>kW</th><th class="l">Cena podle webu</th><th>≈ Kč/měsíc</th><th>Kč/kW/měs.</th><th class="l">Jednorázové poplatky a podmínky</th></tr></thead><tbody>
+<tr class="grp"><th scope="row" colspan="7" class="l">Tepelná čerpadla</th></tr>
+<tr><td class="l"><a href="https://www.enerent.de/de/heizen/produkte/waermepumpe/erwlw100m-100kw">ENERENT</a> (DE) ✓</td><td class="l">TČ vzduch–voda, R32</td><td>105</td><td class="l">68,60 €/den od 7 dní, 61,60 €/den od 30 dní + 6,23 €/den povinné položky</td><td>46 000–51 000</td><td>440–490</td><td class="l">servisní paušál 2 590 € (≈ 65 tis. Kč), přípojka CEE 125 A / 91 A, doprava zvlášť, DPH neuvedeno</td></tr>
+<tr><td class="l">Zeppelin Rental, Hanse-Wärme (DE)</td><td class="l">TČ 50–160 kW</td><td>50–160</td><td class="l">na dotaz</td><td>—</td><td>—</td><td class="l">Zeppelin: přípojka 125 A, povinný servisní paušál</td></tr>
+<tr class="grp"><th scope="row" colspan="7" class="l">Olej, nafta, LPG (přívěs nebo kontejner)</th></tr>
+<tr><td class="l">ENERENT (DE)</td><td class="l">Heizmobil olej / HVO</td><td>60 / 100</td><td class="l">44,80 / 46,90 €/den od 30 dní</td><td>33 600 / 35 200</td><td>560 / 350</td><td class="l">servisní paušál 693 / 822,50 €</td></tr>
+<tr><td class="l">ENERENT (DE)</td><td class="l">kontejner LPG</td><td>60</td><td class="l">44,80 €/den od 30 dní</td><td>33 600</td><td>560</td><td class="l">servisní paušál 693 €</td></tr>
+<tr><td class="l"><a href="https://www.deutsche-thermo.de/mobile-heizzentrale-mieten/">Deutsche Thermo</a> (DE)</td><td class="l">kotelna na přívěsu, orientačně</td><td>≤ 80 / ≤ 110</td><td class="l">1 900–2 400 / 2 200–2 700 €/měs.</td><td>47 500–67 500</td><td>500–750</td><td class="l">doprava obvykle v ceně, připojení zvlášť</td></tr>
+<tr><td class="l">Deutsche Thermo (DE)</td><td class="l">kontejner, orientačně</td><td>≤ 150</td><td class="l">2 900–3 500 €/měs.</td><td>72 500–87 500</td><td>480–580</td><td class="l"></td></tr>
+<tr><td class="l">mobile-heizung-mieten.de</td><td class="l">olej / plyn, orientačně</td><td>≤ 70 / ≤ 100</td><td class="l">75 / 80 €/den při měsíční sazbě</td><td>56 000 / 60 000</td><td>800 / 600</td><td class="l">dlouhodobě vč. dodávky, montáže, servisu a demontáže</td></tr>
+<tr><td class="l">mobiheat (DE)</td><td class="l">Heizmobil olej</td><td>100</td><td class="l">2 647 € / 30 dní (jen z náhledu vyhledávání)</td><td>≈ 66 000</td><td>≈ 660</td><td class="l">neověřeno, web blokuje přístup</td></tr>
+<tr><td class="l">HeizMax (DE)</td><td class="l">přívěs</td><td>150</td><td class="l">65–75 €/den</td><td>49 000–56 000</td><td>325–375</td><td class="l">logistika a zprovoznění navíc</td></tr>
+<tr><td class="l">HeizRent (AT)</td><td class="l">Heizmobil olej</td><td>50–600</td><td class="l">od 60 €/den</td><td>od 45 000</td><td>—</td><td class="l">v ceně hadice, expanze, čerpadlo, SMS dohled, dodávka a zprovoznění</td></tr>
+<tr class="grp"><th scope="row" colspan="7" class="l">Česká republika a velké zdroje (jen pro srovnání)</th></tr>
+<tr><td class="l"><a href="https://www.mobilnikotelna.eu/mobilni-kotelna/">mobilnikotelna.eu</a> (CZ) ✓</td><td class="l">přívěs LTO / nafta</td><td>610</td><td class="l">7 000 / 5 000 / 4 000 Kč/den (do 7 / 7–21 / od 21 dní)</td><td>120 000</td><td>≈ 200</td><td class="l">doprava 15 Kč/km, napojení a odpojení 1 500 Kč/h, DPH neuvedeno</td></tr>
+<tr><td class="l">Free heating, České teplo, Selo Energie, Mobilenergy (SK), Boels CZ</td><td class="l">teplovodní a parní kotelny 100 kW–3,5 MW</td><td>—</td><td class="l">na dotaz</td><td>—</td><td>—</td><td class="l">doporučeno poptat</td></tr>
+</tbody></table></div>
+<div class="cols">
+<div><h3>Srovnání s pracovním modelem za 6 měsíců</h3>
+<div class="tbl"><table><thead><tr><th class="l">Varianta (bez DPH a energie)</th><th>Nájem</th><th>Jednorázově</th><th>Celkem</th></tr></thead><tbody>
+<tr><th scope="row" class="l">Pracovní model REO HEATING</th><td>420 000</td><td>90 000</td><td class="hl">510 000</td></tr>
+<tr><th scope="row" class="l">ENERENT TČ 105 kW</td><td>≈ 308 000</td><td>≈ 65 000 + doprava</td><td class="hl">≈ 373 000+</td></tr>
+<tr><th scope="row" class="l">Deutsche Thermo olej ≤ 110 kW</td><td>330 000–405 000</td><td>připojení zvlášť</td><td class="hl">330–405 tis. + palivo</td></tr>
+<tr><th scope="row" class="l">ENERENT Heizmobil 100 kW</td><td>≈ 220 000</td><td>≈ 21 000</td><td class="hl">≈ 240 tis. + palivo</td></tr>
+</tbody></table></div></div>
+<div><h3>Hodnocení ceny 70 000 Kč/měsíc</h3><ul class="plain">
+<li>U kotelny kolem <b>100 kW</b> vychází ≈ 700 Kč/kW/měs., tedy horní okraj trhu a ≈ 35–50 % nad jediným veřejným ceníkem TČ (ENERENT).</li>
+<li>U kotelny kolem <b>50 kW</b> je to ≈ 1 400 Kč/kW/měs., 2–3× nad trhem. Pro sestavu 1× RH X50 nebo malou kaskádu je cena obhajitelná jen tím, že v ČR přímá konkurence s TČ chybí.</li>
+<li>Pozor na srovnávání kW: konkurence uvádí nominální výkon (ENERENT 105 kW při jmenovitých podmínkách). Při −15 °C bude i jejich TČ mít zhruba polovinu. Nabídku REO HEATING je výhodné stavět na garantovaném výkonu v mrazu a konkurenci se ptát na totéž.</li>
+<li>Montáž a demontáž 90 000 Kč je víc než servisní paušál ENERENT (≈ 65 tis.), ale ten nezahrnuje dopravu ani přípojku 125 A. U olejových kotelen bývá doprava a montáž v ceně dlouhodobého nájmu.</li>
+<li>Elektřinu hradí zákazník: to odpovídá trhu, palivo ani energie nejsou v ceně nikde.</li>
+<li>Slevu za 6 měsíců nikdo veřejně neuvádí; nad 30 dní je sazba všude lineární.</li>
+</ul></div>
+</div>
+<p class="note">Slabá místa dat: nájem TČ má jediný veřejný ceník, z ČR je s cenou jen zdroj 610 kW, u německých ceníků není vždy uvedena DPH a doprava. Před stanovením ceny poptat Free heating, Mobilenergy, Boels CZ, Zeppelin a Hanse-Wärme (ideálně jako modelovou poptávku 60 kW na 6 měsíců).</p>
+
+<h2><span class="no">14</span>Další postup</h2>
+<div class="phases"><div><b>Fáze 2 · varianty a hydraulika</b><br>Po obhlídce nebo s modelovými daty: výběr sestavy, hydraulické schéma s dimenzemi, výběr čerpadel, separátoru, výměníku, expanze a pojistných prvků; regulační koncept a seznam signálů.</div><div><b>Fáze 3 · konstrukce</b><br>Půdorys a 3D koncept, nosný rám z profilů, kotvení zásobníků (provozní vs. přepravní zatížení, EN 12195-1: 0,8 g vpřed, 0,5 g do stran), výpis hutního materiálu, rámy jednotek; seznam částí pro autorizovaného statika.</div><div><b>Fáze 4 · rozpočet</b><br>Rešerše trhu hotová (kap. 13). Zbývá položkový rozpočet A/B/C (nové výdaje, skladové díly, celková ekonomická hodnota) a poptávky u konkurence a dodavatelů.</div><div><b>Fáze 5 · ekonomika a smlouva</b><br>Ekonomika zakázky 50/70/90 tis. Kč/měsíc, bod zvratu, 2. a 3. pronájem; návrh nájemní smlouvy B2B s vypořádáním předčasného ukončení a jistotou.</div></div>
 
 <footer>Výkony jednotek z výkonových map výrobce; elektro RH X50 z návodu k použití. Vše označené [OVĚŘIT] nebo [ODHAD] je předpoklad, ne údaj výrobce ani tržní cena. Konstrukční a statické části bude posuzovat autorizovaný projektant. Zdroj výpočtů: <code>Projekty/mobilni-kotelna-tc/src/studie_calc.py</code>.</footer>
 </div>

@@ -1,4 +1,4 @@
-# REO R290 – datové listy (RH030 / RH040 / RH050 / RH060)
+# REO R290 – datové listy (RH030–RH060, REO R290 Smart RH06–RH16, RH X50, RHX20 Pro, RHX30 Pro)
 
 Jednotný set datových listů tepelných čerpadel REO HEATING R290 ve stylu vzoru
 `../RH050-datovy-list/RH050-PW15-heating.html`. Každý model = 2 strany A4:
@@ -47,3 +47,12 @@ V artefaktu se stahuje tlačítkem „Srovnání SCOP + hlučnost".
 ## Build
     python3 build.py            # vše vč. PDF (build ověří, že žádná hodnota nepřesahuje osu grafu)
     python3 build.py --no-pdf   # jen HTML
+
+## Rozšíření 16. 10. 2026 (artefakt REO R290 = všechny řady)
+- Artefakt má 3 skupiny modelů: REO R290 (RH030–RH060), REO R290 Smart (RH06 1F, RH08–RH16 3F), komerční (RHX20 Pro,
+  RHX30 Pro, RH X50). Hlučnost se zobrazuje pro skupinu vybraného modelu.
+- Smart + RHX20 Pro: data generuje `build.py` z `../PW Helios/REO R290 Smart/data/vykonove-mapy.json` (pole `SMART`,
+  hluk z formulářů EU 811/2013 a technického listu 10/2026); RHX30 Pro zůstává v `src/data.js`.
+- Štítky Smart/RHX (`src/assets/label-RH06…RHX30.png`) = PNG z `../PW Helios/REO R290 Smart/registrace/A_REO-HEATING/energeticke-stitky/`.
+- PDF datových listů a dokumenty (`navody/` – návod RH030–RH060, prezentace RHX20/30 Pro) se publikují jako samostatné
+  soubory artefaktu (`files`), stránka je stahuje přes `fetch` + capability downloads.

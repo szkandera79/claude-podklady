@@ -74,7 +74,7 @@ function labelPage(M, ASSETS){
     ${header(M, ASSETS.logo, ['Energy label','EU energy label · Regulation (EU) 811/2013'])}
     <div class="label-wrap"><img src="${ASSETS.labels[M.label]}" alt="Energy label ${M.erp}"></div>
     <div class="label-note"><span>Model: <b>${M.erp}</b> · air-to-water heat pump, refrigerant R290</span>
-      <span>Space heating class: <b>A+++</b> at 35 °C · <b>A++</b> at 55 °C</span></div>
+      <span>Space heating class: <b>${(M.cls||['A+++','A++'])[0]}</b> at 35 °C · <b>${(M.cls||['A+++','A++'])[1]}</b> at 55 °C</span></div>
   </div>`;
 }
 
