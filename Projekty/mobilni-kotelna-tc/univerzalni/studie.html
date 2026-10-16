@@ -1,0 +1,430 @@
+<title>Mobilní kotelna REO</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+:root{
+/* Layout: technická zpráva — úzký sloupec textu, široké tabulky v posuvných rámech, zelená REO jen jako značka a stav */
+--bg:#f6f8f6;--paper:#ffffff;--ink:#14201a;--muted:#55645c;--line:#d5ddd8;--accent:#26804b;--accent-soft:#e9f6ee;
+--warn:#a35f00;--warn-soft:#fff3df;--bad:#b3261e;--bad-soft:#fdeceb;--ok:#26804b;
+--hot:#c4472f;--cold:#2f6fb0;--tuv:#b07a12;
+--f-display:"Barlow Condensed","Arial Narrow",sans-serif;--f-body:"IBM Plex Sans",system-ui,sans-serif;--f-mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1512;--paper:#161e1a;--ink:#e3ebe6;--muted:#9aaba1;--line:#2c3832;--accent:#5cc488;--accent-soft:#1b2c22;
+--warn:#f0b35a;--warn-soft:#2e2414;--bad:#f2867e;--bad-soft:#331a19;--ok:#5cc488;--hot:#ef7d66;--cold:#6fa8e3;--tuv:#e0b04e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1512;--paper:#161e1a;--ink:#e3ebe6;--muted:#9aaba1;--line:#2c3832;--accent:#5cc488;--accent-soft:#1b2c22;
+--warn:#f0b35a;--warn-soft:#2e2414;--bad:#f2867e;--bad-soft:#331a19;--ok:#5cc488;--hot:#ef7d66;--cold:#6fa8e3;--tuv:#e0b04e;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--f-body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+main{max-width:1040px;margin:0 auto}
+header{padding-block:40px 24px;border-bottom:2px solid var(--ink);margin-bottom:8px}
+.eyebrow{font:600 12px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font:600 clamp(34px,6vw,56px)/1 var(--f-display);margin:10px 0 12px;text-wrap:balance;letter-spacing:.005em}
+h2{font:600 28px/1.1 var(--f-display);margin:0 0 12px;text-wrap:balance;display:flex;gap:12px;align-items:baseline}
+h2 .n{font:500 14px var(--f-mono);color:var(--accent)}
+h3{font:600 17px/1.3 var(--f-body);margin:22px 0 8px}
+p,li{max-width:70ch}
+.lead{font-size:17px;color:var(--muted);max-width:68ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font:13px var(--f-mono);color:var(--muted);margin-top:16px}
+section{padding-block:28px;border-bottom:1px solid var(--line)}
+nav.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font:13px var(--f-mono);padding-block:14px}
+nav.toc a{color:var(--muted);text-decoration:none}nav.toc a:hover,nav.toc a:focus-visible{color:var(--accent);text-decoration:underline}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tw{overflow-x:auto;margin:12px 0 6px;border:1px solid var(--line);background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{font:600 11.5px/1.3 var(--f-mono);text-transform:uppercase;letter-spacing:.04em;color:var(--muted);text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);background:var(--accent-soft);white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+table.num td{font-variant-numeric:tabular-nums}
+table.num td:not(:first-child):not(:nth-child(2)){font-family:var(--f-mono);font-size:13px;white-space:nowrap}
+table.cfg td:nth-child(2){font-family:var(--f-body);white-space:normal;min-width:190px}
+table.cfg td:nth-child(3){font-family:var(--f-mono)}
+td small{display:block;color:var(--muted);font:11.5px var(--f-mono);white-space:nowrap}
+table.cfg td:nth-child(2) small{white-space:normal;font-family:var(--f-body)}
+.cap{font-size:13px;color:var(--muted);margin:4px 0 0}
+.tag{display:inline-block;font:600 10.5px/1 var(--f-mono);padding:3px 5px;border-radius:3px;vertical-align:1px;border:1px solid currentColor}
+.tD{color:var(--accent)}.tZ{color:var(--cold)}.tO{color:var(--warn)}.t\?{color:var(--bad)}
+.ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad);font-weight:600}
+.verdict{display:grid;gap:10px;margin:8px 0 0;padding:0;list-style:none}
+.verdict li{max-width:none;padding:12px 14px 12px 16px;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--line)}
+.verdict li.r{border-left-color:var(--bad)}.verdict li.y{border-left-color:var(--warn)}.verdict li.g{border-left-color:var(--ok)}
+.verdict b{display:block;margin-bottom:2px}
+.risk td:first-child{font:600 12px var(--f-mono);white-space:nowrap}
+.sev{font:600 11px var(--f-mono);padding:2px 6px;border-radius:3px;white-space:nowrap}
+.sev.r{background:var(--bad-soft);color:var(--bad)}.sev.y{background:var(--warn-soft);color:var(--warn)}.sev.g{background:var(--accent-soft);color:var(--ok)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:18px}
+.grid2>*{min-width:0}
+.box{background:var(--paper);border:1px solid var(--line);padding:14px 16px}
+.box h3{margin-top:0}
+.formula{font:13.5px var(--f-mono);background:var(--accent-soft);padding:8px 12px;display:block;margin:8px 0;overflow-x:auto;white-space:nowrap}
+.fig{overflow-x:auto;background:var(--paper);border:1px solid var(--line);padding:10px;margin:12px 0}
+.fig svg{min-width:720px;width:100%;height:auto;display:block}
+.fig.plan svg{min-width:600px}
+svg text{font:12px var(--f-body);fill:var(--ink)}svg text.s{font-size:10.5px;fill:var(--muted)}svg text.lbl{font:600 11px var(--f-mono);letter-spacing:.08em;fill:var(--muted)}
+svg text.c{text-anchor:middle}svg .unit text{text-anchor:middle}svg text.fut{fill:var(--accent)}
+.zone{fill:var(--bg);stroke:var(--line)}.zone2{fill:var(--accent-soft);stroke:var(--line)}
+.unit rect{fill:var(--paper);stroke:var(--ink);stroke-width:1.4}.unit rect.tuvunit{stroke:var(--tuv)}
+.pipe-h{fill:none;stroke:var(--hot);stroke-width:3}.pipe-c{fill:none;stroke:var(--cold);stroke-width:3}
+.pipe-t{fill:none;stroke:var(--tuv);stroke-width:2.5}.pipe-tc{fill:none;stroke:var(--tuv);stroke-width:2.5;stroke-dasharray:6 4}
+.pipe-x{fill:none;stroke:var(--muted);stroke-width:2;stroke-dasharray:3 3}
+.dev circle{fill:var(--paper);stroke:var(--ink)}.hdr{fill:var(--paper);stroke:var(--ink);stroke-width:1.4}
+.phe{fill:var(--paper);stroke:var(--accent);stroke-width:2}.phe2{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:5 4}
+.tank{fill:var(--paper);stroke:var(--ink);stroke-width:1.4}.pump{fill:var(--paper);stroke:var(--ink);stroke-width:1.4}
+.cust{fill:var(--bg);stroke:var(--ink)}.dev2{fill:var(--paper);stroke:var(--muted)}.f-ink{fill:var(--ink)}
+.cont{fill:var(--paper);stroke:var(--ink);stroke-width:2}.door{fill:var(--muted)}.future{fill:none;stroke:var(--accent);stroke-width:1.5;stroke-dasharray:6 4}
+.frame{fill:var(--muted)}.el{fill:var(--warn-soft);stroke:var(--warn)}.hyd{fill:var(--accent-soft);stroke:var(--accent)}.pan{fill:var(--bg);stroke:var(--ink)}
+.aisle{stroke:var(--line);stroke-width:1;stroke-dasharray:4 4}
+ol.check{padding-left:20px}ol.check li{margin:4px 0}
+.cols{columns:2 320px;column-gap:28px}.cols>div{break-inside:avoid;margin-bottom:14px}
+.cols h3{margin-top:0}
+ul.tight li{margin:3px 0}
+footer{padding-block:24px;color:var(--muted);font-size:13px}
+@media (max-width:560px){h2{font-size:24px}body{font-size:14.5px}}
+</style>
+<main>
+<header>
+<div class="eyebrow">REO HEATING · studie proveditelnosti · fáze 1 z 3</div>
+<h1>Univerzální mobilní kotelna s tepelnými čerpadly</h1>
+<p class="lead">Technická koncepce a kritická rizika pro opakovaně pronajímanou kotelnu 50–100 kW: výkonové konfigurace, hydraulika, ochrana proti zamrznutí, TUV, elektro, kontejner a kotvení. Rozpočet, cenová mapa pronájmů, ekonomika a smlouva navazují ve fázích 2 a 3 po rozhodnutí o konceptu.</p>
+<div class="meta"><span>16. 10. 2026</span><span>podklad k rozhodnutí, ne prováděcí ani statický projekt</span>
+<span><span class="tag tD">D</span> dokument výrobce</span><span><span class="tag tZ">Z</span> zadavatel</span><span><span class="tag tO">O</span> odborný odhad</span><span><span class="tag t?">?</span> nutno ověřit</span></div>
+</header>
+<nav class="toc" aria-label="Obsah">
+<a href="#verdikt">Verdikt</a><a href="#rizika">Rizika</a><a href="#vykony">Výkony</a><a href="#konfigurace">Konfigurace</a><a href="#teplota">Teplota vody</a>
+<a href="#zatez">Odhad zátěže</a><a href="#hydraulika">Hydraulika</a><a href="#mraz">Mráz</a><a href="#tuv">TUV</a><a href="#regulace">Regulace</a>
+<a href="#elektro">Elektro</a><a href="#kontejner">Kontejner</a><a href="#hluk">Hluk</a><a href="#overit">Ověřit</a><a href="#obhlidka">Obhlídka</a><a href="#dalsi">Další postup</a>
+</nav>
+
+<section id="verdikt">
+<h2><span class="n">00</span>Verdikt technického oponenta</h2>
+<ul class="verdict">
+<li class="r"><b>Varianta A z RH050/RH060 je pro 50–70 kW skutečného výkonu nevhodná.</b>Pro ≈ 50 kW při −15 °C nestačí ani 5 jednotek pro vytápění (47,6 kW při W45, 45,6 kW při W55) + 1 pro TUV — tedy 6 venkovních jednotek, 6 větví a 6 přívodů. Smysl má jen pro malé objekty do ≈ 30 kW nebo jako doplněk RH X50.</li>
+<li class="g"><b>Jádrem flotily má být RH X50.</b>Ověřeno z výkonové tabulky výrobce: 49,3 kW při A7/W35, 24,8 kW při A−15/W55 a 20,8 kW při A−20/W55. Vaše hodnoty „50 / 25 kW“ odpovídají. RH X50 navíc umí výstup až 78 °C a nativní kaskádu.</li>
+<li class="y"><b>Druhá RH X50 je hlavně výkonová, ne záložní.</b>2 × RH X50 = 49,6 kW při A−15/W55. Redundance N+1 platí jen při zátěži do ≈ 25 kW, tedy za běžných zimních teplot, ne v návrhovém mrazu.</li>
+<li class="r"><b>Voda bez glykolu je u nehlídané pronajaté technologie nejslabší místo návrhu.</b>Doporučuji glykolový primár venku a deskový výměník v kontejneru; ztráta ≈ 2–3 K na výměníku stojí řádově 5–7 % COP, ale odstraní riziko zamrznutí jednotek, rozdělovače i kmene při výpadku proudu.</li>
+<li class="y"><b>TUV pro ≈ 20 zaměstnanců je malá úloha.</b>Bez sprch ≈ 200–400 l/den, se sprchami po směně až ≈ 1 000 l/den. Stačí 2 × 300 l ze skladu, třetí jen při sprchách. RH050 ohřeje 600 l za ≈ 4 h i při −15 °C. Nová TUV 1 000 l za 65 000 Kč se pro první zakázku nevyplatí; rám ji ale má umožnit.</li>
+<li class="y"><b>Rozhoduje teplota, kterou budova potřebuje.</b>Náhrada CZT znamená často radiátory 90/70 nebo 80/60. Při 55/45 dodají jen 41–52 % výkonu. Bez tohoto údaje z obhlídky nelze kotelnu ani nacenit.</li>
+<li class="g"><b>Kontejner 20' je správná volba, 10' jen pro malou verzi.</b>10' (vnitřní ≈ 2,83 m) pojme AKU a 2 × TUV 300 l, ale bez servisního přístupu a bez možnosti 1 000 l TUV. Pro univerzální kotelnu 20', ideálně High Cube.</li>
+</ul>
+</section>
+
+<section id="rizika">
+<h2><span class="n">01</span>Kritická rizika</h2>
+<div class="tw"><table class="risk"><thead><tr><th></th><th>Závažnost</th><th>Riziko a důvod</th><th>Opatření</th></tr></thead><tbody><tr><td>R1</td><td><span class="sev r">kritické</span></td><td><b>Nominální výkon ≠ výkon v mrazu</b><br>RH050/RH060 dávají při A−15/W55 jen 51–52 % výkonu A7/W35, RH X50 50 %. Sestava „50 kW nominálně“ z RH0x dodá v mrazu ≈ 30 kW.</td><td>Navrhovat a nabízet výhradně výkon při návrhové teplotě a skutečné teplotě vody; nominál uvádět jen informativně.</td></tr><tr><td>R2</td><td><span class="sev r">kritické</span></td><td><b>Teplota topné vody u stávající soustavy CZT</b><br>Soustavy navržené na 90/70 nebo 80/60 předají při 55/45 jen 41–52 % výkonu. Hala s teplovzdušnými jednotkami může být ještě citlivější.</td><td>Na obhlídce zjistit typ a počet otopných těles a skutečnou teplotu v mrazu z historie CZT; u vysokoteplotních soustav jen RH X50 (do 70–75 °C) a s nižším výkonem.</td></tr><tr><td>R3</td><td><span class="sev r">kritické</span></td><td><b>Voda bez glykolu ve venkovních jednotkách</b><br>Návod RH X50 výslovně doporučuje glykol; protimrazová funkce jednotek funguje jen pod napětím a s běžícím čerpadlem. Mechanické protimrazové ventily chrání jen jednotku, ne rozdělovač a kmen; při dlouhém výpadku mohou vypustit velkou část soustavy.</td><td>Doporučeno: glykolový primár (jednotky, rozdělovač, kmen) + deskový výměník VS1 v kontejneru. Varianta jen s vodou viz kap. 7 a vyžaduje přijetí zbytkového rizika.</td></tr><tr><td>R4</td><td><span class="sev r">kritické</span></td><td><b>Redundance N+1 platí jen při malé zátěži</b><br>2 × RH X50 = 49,6 kW při A−15/W55. Skutečná N+1 jen do ≈ 25 kW zátěže. Společné prvky (rozdělovač, kmen, VS1, AKU, rozvaděč, přívod) zůstávají jednoduchým místem poruchy.</td><td>Nabízet „provozní rezervu za běžných teplot“, ne garantovanou N+1 v návrhovém mrazu; zdvojit čerpadla, nouzový režim jednotek bez kaskádového řízení.</td></tr><tr><td>R5</td><td><span class="sev r">kritické</span></td><td><b>Neznámá tepelná ztráta a teplotní spád zákazníka</b><br>Bez dat nelze rozhodnout mezi variantami A a B; výrobní hala může mít i přes temperování výkon násobně vyšší než administrativa.</td><td>Výkon odvodit z fakturace CZT (kap. 5) a z obhlídky; do té doby nenabízet výkon ani teplotu.</td></tr><tr><td>R6</td><td><span class="sev y">významné</span></td><td><b>Smíšená kaskáda RH0x + RH X50</b><br>RH X50 má nativní kaskádu až 8 jednotek (adresy, společné čidlo, RS485). U RH030–RH060 kaskáda doložena není (jen Wi‑Fi Tuya, parametry „jednotky online / řídicí adresa“). Smíšená kaskáda v jednom řízení výrobce je neověřená.</td><td>Externí kaskádový regulátor (PLC) s povolením a žádanou teplotou pro každou jednotku; od výrobce vyžádat Modbus mapu RS485 pro obě řady.</td></tr><tr><td>R7</td><td><span class="sev y">významné</span></td><td><b>Elektrický příkon zákazníka</b><br>2 × RH X50 + TUV = ≈ 47 kW, tj. hlavní jistič 3 × 80 A. Objekt dosud vytápěný CZT takovou rezervu často nemá.</td><td>Na obhlídce zjistit hlavní jistič a rezervovaný příkon; regulace s omezením počtu běžících kompresorů podle dostupného proudu.</td></tr><tr><td>R8</td><td><span class="sev y">významné</span></td><td><b>Hluk RH X50</b><br>LWA 66 dB při W55, až 77 dB při maximu. Dvě jednotky na plný výkon dávají ve 20 m ≈ 46 dB(A) – nad nočním limitem 40 dB pro chráněný venkovní prostor staveb.</td><td>Zjistit vzdálenost nejbližší obytné zástavby; noční omezení výkonu, umístění, případně posouzení hlukovou studií.</td></tr><tr><td>R9</td><td><span class="sev y">významné</span></td><td><b>Legionella a teplota TUV</b><br>RH050 ohřeje vodu přes výměník reálně na 50–53 °C (teplota vody z TČ max. 60–65 °C a výpočet přenosu výměníku). Termickou dezinfekci 65–70 °C sama nezvládne.</td><td>Dezinfekce přes přepínací ventil z RH X50 (výstup až 78 °C) nebo malá elektrická vložka jen pro dezinfekci; pravidelný cyklus v regulaci.</td></tr><tr><td>R10</td><td><span class="sev y">významné</span></td><td><b>Přeprava a manipulace</b><br>Nádrže se smí převážet jen vypuštěné včetně výměníků; zbytková voda v zimě zamrzne. Plná AKU 1 000 l zatíží každou nohu ≈ 3,8 kN – bodově do podlahy kontejneru nelze.</td><td>Roznášecí rám na příčníky, kotvení dole i nahoře, přepravní postup s profouknutím výměníků; statické posouzení autorizovanou osobou.</td></tr><tr><td>R11</td><td><span class="sev y">významné</span></td><td><b>Rozměr nádrže 1 000 l vs. kontejner</b><br>Klopná výška nádrže 1 000 l (Ø 790–1 000 × ≈ 2 050 mm) je 2,20–2,28 m; standardní kontejner má dveře ≈ 2,28 m a vnitřní výšku 2,39 m.</td><td>Ověřit výkres nádrže; izolaci montovat až po usazení, případně kontejner High Cube.</td></tr><tr><td>R12</td><td><span class="sev g">k ověření</span></td><td><b>Ceny a podklady zadavatele</b><br>Nová AKU 1 000 l za 5 000 Kč bez DPH je výrazně pod obvyklou cenou; tabulky RH050/RH060 mají v každém bodě konstantní poměr 1,48–1,50, jsou tedy pravděpodobně odvozené, ne měřené.</td><td>Potvrdit, co cena AKU zahrnuje (izolace, nátrubky, tlak). Výkony RH0x ověřit protokolem nebo měřením jedné jednotky.</td></tr></tbody></table></div>
+</section>
+
+<section id="vykony">
+<h2><span class="n">02</span>Výkony jednotek: nominální vs. dostupný</h2>
+<p>Topný výkon při maximálních otáčkách kompresoru (kW) podle výkonových tabulek výrobce <span class="tag tD">D</span>. Hodnoty zahrnují odtávání tak, jak je uvádí výrobce; u RH0x jde o tabulky dodané k datovým listům.</p>
+<div class="tw"><table class="num"><thead><tr><th>Jednotka</th><th>Voda</th><th>A+7</th><th>A+2</th><th>A−7</th><th>A−15</th><th>A−20</th><th>A−15 / nominál</th></tr></thead><tbody><tr><td><b>RH050</b></td><td>W35</td><td>14,8</td><td>13,2</td><td>10,6</td><td>8,3</td><td>6,9</td><td>56 %</td></tr><tr><td></td><td>W45</td><td>14,3</td><td>12,7</td><td>10,3</td><td>8,0</td><td>6,7</td><td>54 %</td></tr><tr><td></td><td>W55</td><td>13,7</td><td>12,2</td><td>9,8</td><td>7,6</td><td>6,4</td><td>51 %</td></tr><tr><td><b>RH060</b></td><td>W35</td><td>22,0</td><td>19,6</td><td>15,8</td><td>12,3</td><td>10,3</td><td>56 %</td></tr><tr><td></td><td>W45</td><td>21,2</td><td>18,9</td><td>15,3</td><td>11,8</td><td>10,0</td><td>54 %</td></tr><tr><td></td><td>W55</td><td>20,4</td><td>18,1</td><td>14,6</td><td>11,4</td><td>9,5</td><td>52 %</td></tr><tr><td><b>RH X50</b></td><td>W35</td><td>49,3</td><td>42,8</td><td>37,4</td><td>30,9</td><td>27,0</td><td>63 %</td></tr><tr><td></td><td>W45</td><td>47,7</td><td>41,3</td><td>35,8</td><td>27,3</td><td>23,2</td><td>55 %</td></tr><tr><td></td><td>W55</td><td>41,7</td><td>38,4</td><td>33,1</td><td>24,8</td><td>20,8</td><td>50 %</td></tr></tbody></table></div>
+<p class="cap">„Nominál“ = A7/W35 při max. výkonu. Tabulky RH060 a RH050 mají v každém bodě poměr 1,48–1,50 — pravděpodobně jsou odvozené jedna z druhé <span class="tag t?">?</span>.</p>
+<h3>RH X50 při vyšších teplotách vody</h3>
+<div class="tw"><table class="num"><thead><tr><th>RH X50, voda</th><th>A+7</th><th>A+2</th><th>A−7</th><th>A−15</th><th>A−20</th></tr></thead><tbody><tr><td>W60</td><td>37,2</td><td>33,4</td><td>28,5</td><td>22,2</td><td>17,0</td></tr><tr><td>W65</td><td>34,2</td><td>31,5</td><td>27,7</td><td>—</td><td>—</td></tr><tr><td>W70</td><td>32,3</td><td>29,9</td><td>24,2</td><td>—</td><td>—</td></tr></tbody></table></div>
+<p class="cap">RH030–RH060: vytápění do 70 °C, TUV do 65 °C <span class="tag tD">D</span>, výkonová data ale jen do W55. Pro W60–W65 nemáme od výrobce žádná čísla <span class="tag t?">?</span>.</p>
+<h3>Parametry pro návrh</h3>
+<div class="tw"><table class=""><thead><tr><th>Jednotka</th><th>Oběhové čerpadlo</th><th>Připojení</th><th>Jm. průtok m³/h</th><th>Max. příkon / proud</th><th>Jištění</th><th>Hmotnost</th><th>Rozměry mm</th></tr></thead><tbody><tr><td>RH050</td><td>ano, výtlak max. 9 m [D]</td><td>DN25 [D]</td><td>2,5 <span class="tag tO">O</span></td><td>5 kW / 9 A <span class="tag tO">O</span></td><td>C16 (3f) / C25 (1f)</td><td>160 kg <span class="tag tD">D</span></td><td>1080 × 480 × 1060</td></tr><tr><td>RH060</td><td>ano, výtlak max. 12 m [D]</td><td>DN25 [D]</td><td>3,8 <span class="tag tO">O</span></td><td>8 kW / 13 A <span class="tag tO">O</span></td><td>C20 [O]</td><td>165 kg <span class="tag tD">D</span></td><td>1080 × 480 × 1372</td></tr><tr><td>RH X50</td><td>ne – externí čerpadlo ≥ 1,1–1,2 × jm. průtoku [D]</td><td>G 1½" [D]</td><td>10,3 <span class="tag tD">D</span></td><td>20 kW / 32 A <span class="tag tD">D</span></td><td>40 A s RCD [D]</td><td>370 kg <span class="tag tD">D</span></td><td>1195 × 980 × 1900</td></tr></tbody></table></div>
+<p class="cap">Elektrické hodnoty RH050/RH060 jsou odhad z tabulky příkonu; závazné jsou typové štítky <span class="tag t?">?</span>. Ve skladu je potřeba rozlišit RH050 1f a 3f — 1fázové jednotky do třífázové kaskády nesymetricky zatěžují přívod.</p>
+</section>
+
+<section id="konfigurace">
+<h2><span class="n">03</span>Výkonové konfigurace pro vytápění</h2>
+<p>Součet výkonů jednotek pro vytápění (kW) a pod ním výkon po výpadku největší jednotky (N−1). Jednotka TUV se do vytápění nepočítá.</p>
+<div class="tw"><table class="num cfg"><thead><tr><th></th><th>Sestava (jen vytápění)</th><th>Voda</th><th>A+7</th><th>A+2</th><th>A−7</th><th>A−15</th><th>A−20</th></tr></thead><tbody><tr><td><b>A1</b></td><td>2 × RH060 + 1 × RH050<small>3 ks ÚT + RH050 TUV · nominál 58,8 kW</small></td><td>W45</td><td>56,7<small>N−1&nbsp;35,5</small></td><td>50,5<small>N−1&nbsp;31,6</small></td><td>40,9<small>N−1&nbsp;25,6</small></td><td>31,6<small>N−1&nbsp;19,8</small></td><td>26,7<small>N−1&nbsp;16,7</small></td></tr><tr><td></td><td></td><td>W55</td><td>54,5<small>N−1&nbsp;34,1</small></td><td>48,4<small>N−1&nbsp;30,3</small></td><td>39,0<small>N−1&nbsp;24,4</small></td><td>30,4<small>N−1&nbsp;19,0</small></td><td>25,4<small>N−1&nbsp;15,9</small></td></tr><tr><td><b>A2</b></td><td>2 × RH060 + 2 × RH050<small>4 ks ÚT + RH050 TUV · nominál 73,6 kW</small></td><td>W45</td><td>71,0<small>N−1&nbsp;49,8</small></td><td>63,2<small>N−1&nbsp;44,3</small></td><td>51,2<small>N−1&nbsp;35,9</small></td><td>39,6<small>N−1&nbsp;27,8</small></td><td>33,4<small>N−1&nbsp;23,4</small></td></tr><tr><td></td><td></td><td>W55</td><td>68,2<small>N−1&nbsp;47,8</small></td><td>60,6<small>N−1&nbsp;42,5</small></td><td>48,8<small>N−1&nbsp;34,2</small></td><td>38,0<small>N−1&nbsp;26,6</small></td><td>31,8<small>N−1&nbsp;22,3</small></td></tr><tr><td><b>A3</b></td><td>2 × RH060 + 3 × RH050<small>5 ks ÚT + RH050 TUV · nominál 88,4 kW</small></td><td>W45</td><td>85,3<small>N−1&nbsp;64,1</small></td><td>75,9<small>N−1&nbsp;57,0</small></td><td>61,5<small>N−1&nbsp;46,2</small></td><td>47,6<small>N−1&nbsp;35,8</small></td><td>40,1<small>N−1&nbsp;30,1</small></td></tr><tr><td></td><td></td><td>W55</td><td>81,9<small>N−1&nbsp;61,5</small></td><td>72,8<small>N−1&nbsp;54,7</small></td><td>58,6<small>N−1&nbsp;44,0</small></td><td>45,6<small>N−1&nbsp;34,2</small></td><td>38,2<small>N−1&nbsp;28,7</small></td></tr><tr><td><b>B1</b></td><td>1 × RH X50<small>1 ks ÚT + RH050 TUV · nominál 49,3 kW</small></td><td>W45</td><td>47,7<small>N−1&nbsp;0,0</small></td><td>41,3<small>N−1&nbsp;0,0</small></td><td>35,8<small>N−1&nbsp;0,0</small></td><td>27,3<small>N−1&nbsp;0,0</small></td><td>23,2<small>N−1&nbsp;0,0</small></td></tr><tr><td></td><td></td><td>W55</td><td>41,7<small>N−1&nbsp;0,0</small></td><td>38,4<small>N−1&nbsp;0,0</small></td><td>33,1<small>N−1&nbsp;0,0</small></td><td>24,8<small>N−1&nbsp;0,0</small></td><td>20,8<small>N−1&nbsp;0,0</small></td></tr><tr><td><b>B2</b></td><td>2 × RH X50<small>2 ks ÚT + RH050 TUV · nominál 98,6 kW</small></td><td>W45</td><td>95,4<small>N−1&nbsp;47,7</small></td><td>82,6<small>N−1&nbsp;41,3</small></td><td>71,6<small>N−1&nbsp;35,8</small></td><td>54,6<small>N−1&nbsp;27,3</small></td><td>46,4<small>N−1&nbsp;23,2</small></td></tr><tr><td></td><td></td><td>W55</td><td>83,4<small>N−1&nbsp;41,7</small></td><td>76,8<small>N−1&nbsp;38,4</small></td><td>66,2<small>N−1&nbsp;33,1</small></td><td>49,6<small>N−1&nbsp;24,8</small></td><td>41,6<small>N−1&nbsp;20,8</small></td></tr><tr><td><b>B3</b></td><td>1 × RH X50 + 2 × RH060<small>3 ks ÚT + RH050 TUV · nominál 93,3 kW</small></td><td>W45</td><td>90,1<small>N−1&nbsp;42,4</small></td><td>79,1<small>N−1&nbsp;37,8</small></td><td>66,4<small>N−1&nbsp;30,6</small></td><td>50,9<small>N−1&nbsp;23,6</small></td><td>43,2<small>N−1&nbsp;20,0</small></td></tr><tr><td></td><td></td><td>W55</td><td>82,5<small>N−1&nbsp;40,8</small></td><td>74,6<small>N−1&nbsp;36,2</small></td><td>62,3<small>N−1&nbsp;29,2</small></td><td>47,6<small>N−1&nbsp;22,8</small></td><td>39,8<small>N−1&nbsp;19,0</small></td></tr></tbody></table></div>
+<div class="grid2">
+<div class="box"><h3>Varianta A — RH050 / RH060</h3>
+<ul class="tight"><li><b>A1</b> „50 kW“ nominálně dá při −15 °C / W55 jen 30 kW.</li>
+<li><b>A2</b> „70 kW“ nominálně dá 38 kW, N−1 27 kW.</li>
+<li><b>A3</b> s 5 jednotkami pro ÚT dosáhne jen 47,6 kW při W45 a 45,6 kW při W55.</li>
+<li>Výhoda: jemná modulace od ≈ 3 kW, levné náhradní jednotky, vestavěná čerpadla.</li>
+<li>Nevýhoda: 6 větví, 6 přívodů, 6 × odtávání, kaskáda RH0x nedoložená, nejvyšší pracnost montáže na každé zakázce.</li></ul></div>
+<div class="box"><h3>Varianta B — RH X50</h3>
+<ul class="tight"><li><b>B1</b> stačí na ≈ 25 kW při −15 °C / W55 (např. jen administrativa).</li>
+<li><b>B2</b> = 49,6 kW při −15 °C / W55, 66 kW při −7 °C. Pro první zákazníka pravděpodobná sestava.</li>
+<li><b>B3</b> (X50 + 2 × RH060) dává podobný výkon jako B2, jemnější modulaci od ≈ 4 kW, ale nižší N−1 v mrazu (22,8 vs. 24,8 kW) a smíšené řízení.</li>
+<li>Minimální výkon RH X50 je 17,8 kW (A7/W45); v přechodném období bude cyklovat bez dostatečné akumulace (kap. 6).</li>
+<li>Bez vestavěného čerpadla → vlastní čerpadlo a zpětná klapka v každé větvi.</li></ul></div>
+</div>
+<h3>Doporučení</h3>
+<p>Flotilu stavět na RH X50 (B2 jako standard, B1 pro malé objekty). Pro TUV použít RH050 3f. Druhou RH X50 nepovažovat za rezervu, ale za druhý výkonový stupeň. Pokud je redundance v mrazu podmínkou zákazníka, nabídnout třetí jednotku (RH X50 nebo 2 × RH060) jako příplatkovou výbavu.</p>
+</section>
+
+<section id="teplota">
+<h2><span class="n">04</span>Teplota topné vody u stávající soustavy</h2>
+<p>Výkon otopných těles při nižší teplotě vody, vnitřní teplota 20 °C, exponent n = 1,3 <span class="tag tO">O</span>:</p>
+<code class="formula">Φ / Φn = (ΔT_ln,provoz / ΔT_ln,návrh)^n,   ΔT_ln = (t_př − t_zp) / ln((t_př − t_i) / (t_zp − t_i))</code>
+<div class="tw"><table class="num"><thead><tr><th>Návrh soustavy</th><th>provoz 55/45</th><th>50/42</th><th>60/50 (jen X50)</th><th>70/60 (jen X50)</th></tr></thead><tbody><tr><td>90/70 °C</td><td>41 %</td><td>34 %</td><td>50 %</td><td>69 %</td></tr><tr><td>80/60 °C</td><td>52 %</td><td>43 %</td><td>63 %</td><td>88 %</td></tr><tr><td>75/65 °C</td><td>51 %</td><td>42 %</td><td>63 %</td><td>87 %</td></tr><tr><td>70/55 °C</td><td>64 %</td><td>53 %</td><td>78 %</td><td>109 %</td></tr><tr><td>55/45 °C</td><td>100 %</td><td>83 %</td><td>—</td><td>—</td></tr></tbody></table></div>
+<p>Budova, která v mrazu skutečně potřebovala 85–90 °C z CZT, se s tepelným čerpadlem při 55 °C nevytopí, i když má kotelna „dost kW“. Soustavy bývají předimenzované, proto rozhoduje skutečná teplota přívodu z historie výměníkové stanice v posledních mrazech, ne projektovaný spád. Hala, která je jen temperovaná na 12–15 °C, je na tom lépe (větší rozdíl teplot vzduch–voda).</p>
+</section>
+
+<section id="zatez">
+<h2><span class="n">05</span>Odhad potřebného výkonu z odběru tepla</h2>
+<p>Dokud neznáme tepelnou ztrátu, nejspolehlivější je zpětný přepočet z vyúčtování CZT (GJ za rok, ideálně měsíční hodnoty):</p>
+<code class="formula">H = Q_ÚT / (D × 24 h),   P_návrh = H × (t_i − t_e)   · D ≈ 3 500 K·den, t_i = 19 °C, t_e = −15 °C, TUV ≈ 15 % odběru <span class="tag tO">O</span></code>
+<div class="tw"><table class="num"><thead><tr><th>Roční odběr CZT</th><th>z toho ÚT (85 %)</th><th>Měrná ztráta H</th><th>Výkon při −15 °C</th><th>Hala jen temperovaná (orient.)</th></tr></thead><tbody><tr><td>300 GJ</td><td>71 MWh</td><td>0,84 kW/K</td><td><b>29 kW</b></td><td>16–20 kW</td></tr><tr><td>500 GJ</td><td>118 MWh</td><td>1,41 kW/K</td><td><b>48 kW</b></td><td>26–33 kW</td></tr><tr><td>800 GJ</td><td>189 MWh</td><td>2,25 kW/K</td><td><b>76 kW</b></td><td>42–54 kW</td></tr><tr><td>1200 GJ</td><td>283 MWh</td><td>3,37 kW/K</td><td><b>115 kW</b></td><td>63–80 kW</td></tr></tbody></table></div>
+<p class="cap">Měsíční odběry v nejchladnějším měsíci zpřesní výsledek nejvíc: P ≈ Q_měsíc / (dní × 24 h) × (t_i − t_e) / (t_i − t_e,měsíc).</p>
+</section>
+
+<section id="hydraulika">
+<h2><span class="n">06</span>Hydraulické řešení</h2>
+<div class="fig">
+<svg viewBox="0 0 980 440" role="img" aria-label="Koncepční hydraulické schéma mobilní kotelny">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" class="f-ink"/></marker></defs>
+<rect x="10" y="20" width="300" height="400" class="zone"/><text x="22" y="40" class="lbl">VENKU · rámy TČ</text>
+<rect x="340" y="20" width="460" height="400" class="zone2"/><text x="352" y="40" class="lbl">KONTEJNER 20'</text>
+<rect x="830" y="20" width="140" height="400" class="zone"/><text x="842" y="40" class="lbl">ZÁKAZNÍK</text>
+<g class="unit"><rect x="30" y="62" width="74" height="46"/><text x="67" y="83">TČ 1</text><text x="67" y="99" class="s">RH X50</text></g>
+<g class="unit"><rect x="30" y="132" width="74" height="46"/><text x="67" y="153">TČ 2</text><text x="67" y="169" class="s">RH X50 / RH060</text></g>
+<g class="unit"><rect x="30" y="202" width="74" height="46"/><text x="67" y="223">TČ n</text><text x="67" y="239" class="s">rezerva N+1</text></g>
+<g class="pipe-h"><path d="M104 74H170V300" /><path d="M104 144H170"/><path d="M104 214H170"/></g>
+<g class="pipe-c"><path d="M104 96H200V330"/><path d="M104 166H200"/><path d="M104 236H200"/></g>
+<g class="dev"><circle cx="128" cy="74" r="6"/><circle cx="128" cy="144" r="6"/><circle cx="128" cy="214" r="6"/></g>
+<text x="118" y="60" class="s">K · UV · FV</text>
+<rect x="160" y="290" width="50" height="50" class="hdr"/><text x="185" y="318" class="s c">rozdělovač</text>
+<text x="22" y="372" class="s">K zpětná klapka · UV uzávěry · FV filtr</text>
+<text x="22" y="388" class="s">každá větev: čerpadlo (X50), vypouštění, odvzdušnění</text>
+<text x="22" y="404" class="s">primár: glykol 30–35 % (doporučeno, kap. 7)</text>
+<path d="M210 300H390" class="pipe-h" marker-end="url(#ar)"/><path d="M390 330H210" class="pipe-c" marker-end="url(#ar)"/>
+<text x="232" y="292" class="s">2 potrubí DN65–80</text>
+<rect x="390" y="280" width="44" height="70" class="phe"/><text x="412" y="368" class="s c">VS1</text><text x="412" y="382" class="s c">glykol/voda</text>
+<path d="M434 292H500V110H520" class="pipe-h"/><path d="M520 250H470V338H434" class="pipe-c"/>
+<rect x="520" y="80" width="70" height="190" rx="30" class="tank"/><text x="555" y="170" class="c">AKU</text><text x="555" y="188" class="s c">600–1 000 l</text>
+<text x="555" y="204" class="s c">hydr. oddělení</text>
+<path d="M590 110H700" class="pipe-h"/><path d="M700 250H590" class="pipe-c"/>
+<circle cx="640" cy="110" r="9" class="pump"/><text x="640" y="96" class="s c">Č sek.</text>
+<rect x="700" y="90" width="40" height="180" class="phe2"/><text x="720" y="288" class="s c">VS2</text><text x="720" y="302" class="s c">volitelně</text>
+<path d="M740 110H880" class="pipe-h" marker-end="url(#ar)"/><path d="M880 250H740" class="pipe-c" marker-end="url(#ar)"/>
+<text x="770" y="100" class="s">hadice DN50–65</text>
+<rect x="880" y="80" width="70" height="190" class="cust"/><text x="915" y="170" class="c">otopná</text><text x="915" y="186" class="c">soustava</text>
+<rect x="400" y="60" width="58" height="34" class="dev2"/><text x="429" y="81" class="s c">EN + PV</text>
+<g class="unit"><rect x="30" y="300" width="74" height="40" class="tuvunit"/><text x="67" y="318">TČ TUV</text><text x="67" y="332" class="s">RH050</text></g>
+<path d="M104 312H130V410H620V395" class="pipe-t"/><path d="M104 328H120V418H660V395" class="pipe-tc"/>
+<rect x="600" y="330" width="90" height="62" rx="18" class="tank"/><text x="645" y="358" class="c">TUV</text><text x="645" y="374" class="s c">2–3 × 300 l / 1 000 l</text>
+<path d="M690 345H880" class="pipe-t" marker-end="url(#ar)"/><text x="760" y="338" class="s">TV · C · SV</text>
+<path d="M540 300V330" class="pipe-x"/><text x="470" y="318" class="s">přepínací ventil ÚT→TUV (záloha, dezinfekce)</text>
+</svg></div>
+<p class="cap">Koncept. Primár: jednotky → venkovní rozdělovač → 2 potrubí → VS1 → AKU. Sekundár: AKU → zákazník, volitelně přes VS2. TUV: samostatná jednotka a okruh, přepínací ventil z ÚT jako záloha a pro dezinfekci.</p>
+<div class="grid2">
+<div class="box"><h3>Průtoky</h3>
+<code class="formula">V̇ [m³/h] = P [kW] / (1,163 × ΔT [K])</code>
+<div class="tw"><table class="num"><thead><tr><th>Výkon</th><th>ΔT 5 K (primár TČ)</th><th>ΔT 10 K</th><th>ΔT 15 K</th></tr></thead><tbody><tr><td>50 kW</td><td>8,6</td><td>4,3</td><td>2,9</td></tr><tr><td>70 kW</td><td>12,0</td><td>6,0</td><td>4,0</td></tr><tr><td>100 kW</td><td>17,2</td><td>8,6</td><td>5,7</td></tr></tbody></table></div>
+<p class="cap">RH X50 jmenovitě 10,32 m³/h, tlaková ztráta jednotky až 80 kPa <span class="tag tD">D</span>; čerpadlo dimenzovat na 1,1–1,2 × jm. průtoku <span class="tag tD">D</span>.</p></div>
+<div class="box"><h3>Kmen mezi rozdělovačem a kontejnerem</h3>
+<div class="tw"><table class="num"><thead><tr><th>Primár (kmen rozdělovač → kontejner, 2 × 6 m)</th><th>Průtok m³/h (+15 %)</th><th>DN50</th><th>DN65</th><th>DN80</th></tr></thead><tbody><tr><td>1 × RH X50</td><td>11,9</td><td><span class="bad">1,68 m/s</span><small>12,8 kPa</small></td><td><span class="ok">0,99 m/s</span><small>3,9 kPa</small></td><td><span class="ok">0,66 m/s</span><small>1,5 kPa</small></td></tr><tr><td>2 × RH X50</td><td>23,7</td><td><span class="bad">3,36 m/s</span><small>50,0 kPa</small></td><td><span class="bad">1,99 m/s</span><small>15,0 kPa</small></td><td><span class="warn">1,31 m/s</span><small>5,9 kPa</small></td></tr><tr><td>2 × RH060 + 3 × RH050</td><td>17,4</td><td><span class="bad">2,46 m/s</span><small>27,0 kPa</small></td><td><span class="warn">1,45 m/s</span><small>8,1 kPa</small></td><td><span class="ok">0,96 m/s</span><small>3,2 kPa</small></td></tr><tr><td>RH X50 + 2 × RH060</td><td>20,6</td><td><span class="bad">2,92 m/s</span><small>37,8 kPa</small></td><td><span class="bad">1,73 m/s</span><small>11,4 kPa</small></td><td><span class="warn">1,14 m/s</span><small>4,5 kPa</small></td></tr></tbody></table></div>
+<p class="cap">Ocel / nerez, ε 0,05 mm, ζ = 4. Cíl ≤ 1,0–1,2 m/s. Pro 2 × RH X50 je kmen <b>DN80</b>, DN65 jen do ≈ 6 m.</p></div>
+</div>
+<h3>Je společný rozdělovač problém?</h3>
+<p>Ne, pokud je navržen jako <b>nízkoztrátový</b> a každá větev má vlastní čerpadlo. Problém nastává, když:</p>
+<ul class="tight">
+<li>jednotky bez zpětné klapky — stojící jednotka se protéká zpětně a míchá přívod se zpátečkou. <b>Zpětná klapka v každé větvi je povinná.</b></li>
+<li>kmen má vyšší ztrátu než větve — čerpadla jednotek se navzájem ovlivňují a malá jednotka (RH050 s vestavěným čerpadlem 9 m) nedosáhne průtoku. Proto kmen DN65–80 a AKU / VS1 jako hydraulický oddělovač.</li>
+<li>pracuje jen jedna malá jednotka ve velkém objemu — teplota v rozdělovači reaguje pomalu, kaskádová regulace musí řídit podle čidla v AKU, ne podle výstupu jednotky.</li>
+<li>průtok primáru je nižší než sekundáru — AKU pak míchá zpátečku do přívodu k zákazníkovi. Primární průtok ≥ 1,1 × sekundární, nebo regulovat sekundár podle teploty v AKU.</li>
+</ul>
+<h3>Akumulace a expanze</h3>
+<code class="formula">V_min = P_min × t_běh / (c × ΔT) = 17,8 kW × 600 s / (4,18 × 5 K) = 511 l</code>
+<p>Pro RH X50 na minimální výkon a 10 min běhu kompresoru je potřeba ≈ 511 l (RH050: 164 l). Dvě skladové AKU 300 l (600 l) jsou pro jednu RH X50 na hraně, pro dvě a pro odtávání doporučuji AKU 1 000 l. Expanze vlastního okruhu kontejneru (≈ 1 300 l, 10 → 60 °C, p₀ 1,0 bar, pojistný ventil 3 bar): roztažnost ≈ 22 l, nádoba ≈ 69 l → <b>80 l</b> <span class="tag tO">O</span>. Glykolový primár má vlastní expanzi 25–35 l.</p>
+<h3>Hadice k zákazníkovi</h3>
+<p>Rychlost a tlaková ztráta přívod + zpátečka pro délky 5 / 10 / 20 / 30 m (hladká EPDM hadice, 2 rychlospojky na hadici, ζ = 8) <span class="tag tO">O</span>:</p>
+<div class="tw"><table class="num hose"><thead><tr><th>Výkon</th><th>Průtok</th><th>DN40 (vnitřní 40 mm)</th><th>DN50 (50 mm)</th><th>DN65 (65 mm)</th></tr></thead><tbody><tr><td>50 kW</td><td>ΔT 5 K · 8,6 m³/h</td><td><span class="bad">1,90 m/s</span><small>23 / 32 / 49 / 67 kPa</small></td><td><span class="warn">1,22 m/s</span><small>9 / 12 / 17 / 23 kPa</small></td><td><span class="ok">0,72 m/s</span><small>3 / 4 / 5 / 7 kPa</small></td></tr><tr><td></td><td>ΔT 10 K · 4,3 m³/h</td><td><span class="ok">0,95 m/s</span><small>6 / 8 / 13 / 18 kPa</small></td><td><span class="ok">0,61 m/s</span><small>2 / 3 / 5 / 6 kPa</small></td><td><span class="ok">0,36 m/s</span><small>1 / 1 / 1 / 2 kPa</small></td></tr><tr><td>70 kW</td><td>ΔT 5 K · 12,0 m³/h</td><td><span class="bad">2,66 m/s</span><small>45 / 61 / 94 / 128 kPa</small></td><td><span class="bad">1,70 m/s</span><small>17 / 22 / 33 / 44 kPa</small></td><td><span class="warn">1,01 m/s</span><small>5 / 7 / 10 / 13 kPa</small></td></tr><tr><td></td><td>ΔT 10 K · 6,0 m³/h</td><td><span class="warn">1,33 m/s</span><small>11 / 16 / 25 / 34 kPa</small></td><td><span class="ok">0,85 m/s</span><small>4 / 6 / 9 / 12 kPa</small></td><td><span class="ok">0,50 m/s</span><small>1 / 2 / 3 / 3 kPa</small></td></tr><tr><td>100 kW</td><td>ΔT 5 K · 17,2 m³/h</td><td><span class="bad">3,80 m/s</span><small>90 / 123 / 189 / 255 kPa</small></td><td><span class="bad">2,43 m/s</span><small>34 / 45 / 66 / 87 kPa</small></td><td><span class="warn">1,44 m/s</span><small>11 / 14 / 20 / 25 kPa</small></td></tr><tr><td></td><td>ΔT 10 K · 8,6 m³/h</td><td><span class="bad">1,90 m/s</span><small>23 / 32 / 49 / 67 kPa</small></td><td><span class="warn">1,22 m/s</span><small>9 / 12 / 17 / 23 kPa</small></td><td><span class="ok">0,72 m/s</span><small>3 / 4 / 5 / 7 kPa</small></td></tr></tbody></table></div>
+<p class="cap"><span class="ok">zeleně</span> ≤ 1,0 m/s, <span class="warn">oranžově</span> 1,0–1,5 m/s, <span class="bad">červeně</span> &gt; 1,5 m/s. Za AKU je ΔT dané soustavou zákazníka (obvykle 10–15 K), proto pro 50–70 kW stačí <b>DN50</b>, pro 100 kW a delší trasy <b>DN65</b>. DN40 jen do 50 kW a 10 m. Vlnovcové nerezové hadice mají ztrátu 2–3× vyšší.</p>
+<h3>Vodní a TUV přípojky</h3>
+<p>Studená voda DN25 (PE nebo pitná hadice s atestem), výstup TUV DN25, cirkulace DN20; všechny izolované, s uzávěry na panelu kontejneru. U pitné vody pouze materiály s atestem pro styk s pitnou vodou a zpětný ventil / oddělovač na přívodu <span class="tag t?">?</span>.</p>
+</section>
+
+<section id="mraz">
+<h2><span class="n">07</span>Ochrana proti zamrznutí</h2>
+<div class="grid2">
+<div class="box"><h3>M1 — jen voda (váš záměr)</h3>
+<ul class="tight">
+<li>Mechanické protimrazové ventily na přívodu i zpátečce každé jednotky, v nejnižším bodě, s volným odtokem (otevírají ≈ 3 °C, údaj výrobce ventilu <span class="tag t?">?</span>).</li>
+<li>Další ventily na nejnižších bodech rozdělovače a kmene — jednotky samotné nestačí.</li>
+<li>Zpětné klapky tak, aby ventil nevypouštěl celou AKU a soustavu zákazníka: oddělit venkovní část motorovými uzávěry bez proudu zavřenými (NC).</li>
+<li>Záložní zdroj (UPS) pro čerpadla primáru a regulaci, alarm výpadku a teploty přes vzdálený monitoring.</li>
+<li>Jednotky trvale pod napětím (jejich vlastní protimrazová funkce), topné kabely na venkovním potrubí.</li>
+<li><b>Zbytkové riziko:</b> při výpadku proudu na hodiny v mrazu ventily pouští vodu, automatické doplňování vypouští dál, bez doplňování klesne tlak a jednotky se nespustí. Po obnovení proudu je nutný výjezd servisu.</li></ul></div>
+<div class="box"><h3>M2 — glykolový primár (doporučuji)</h3>
+<ul class="tight">
+<li>Jednotky, rozdělovač a kmen naplněné propylenglykolem 30–35 % (ochrana do −15 až −18 °C), ≈ 150–250 l <span class="tag tO">O</span>.</li>
+<li>Deskový výměník VS1 v kontejneru; AKU, TUV a zákazník zůstávají na vodě.</li>
+<li>Výpadek proudu, porucha čerpadla ani odstavení jednotky nehrozí zamrznutím. Při přepravě se primár nemusí vypouštět.</li>
+<li>Ztráta: ≈ 2–3 K na VS1 a nižší tepelná kapacita směsi → ≈ 5–7 % COP, vyšší příkon čerpadel <span class="tag tO">O</span>.</li>
+<li>Návod RH X50 glykol výslovně doporučuje <span class="tag tD">D</span>.</li>
+<li>TUV jednotka RH050: buď také glykol a vlastní malý výměník, nebo M1 s ventily (malý objem, oddělená větev).</li></ul></div>
+</div>
+<p><b>Závěr:</b> samotné protimrazové ventily nepovažuji pro pronajímanou kotelnu bez trvalé obsluhy za dostatečně bezpečné řešení. Pokud zůstane M1, musí smlouva řešit odpovědnost za výpadek napájení na straně zákazníka a zákazník musí mít povinnost okamžitě hlásit výpadek.</p>
+</section>
+
+<section id="tuv">
+<h2><span class="n">08</span>Příprava TUV</h2>
+<div class="grid2">
+<div class="box"><h3>Doba ohřevu</h3>
+<code class="formula">t = V × 1,163 × (t₂ − t₁) / P</code>
+<div class="tw"><table class="num"><thead><tr><th>Objem 10 → 55 °C</th><th>Energie</th><th>5,5 kW</th><th>7,6 kW (RH050 A−15/W55)</th><th>9,8 kW (A−7/W55)</th><th>13,7 kW (A+7/W55)</th></tr></thead><tbody><tr><td>300 l</td><td>15,7 kWh</td><td>2,9 h</td><td>2,1 h</td><td>1,6 h</td><td>1,1 h</td></tr><tr><td>600 l</td><td>31,4 kWh</td><td>5,7 h</td><td>4,1 h</td><td>3,2 h</td><td>2,3 h</td></tr><tr><td>900 l</td><td>47,1 kWh</td><td>8,6 h</td><td>6,2 h</td><td>4,8 h</td><td>3,4 h</td></tr><tr><td>1000 l</td><td>52,3 kWh</td><td>9,5 h</td><td>6,9 h</td><td>5,3 h</td><td>3,8 h</td></tr></tbody></table></div></div>
+<div class="box"><h3>Přenos výměníku (kW)</h3>
+<code class="formula">Q = U × A × ΔT_ln,  voda z TČ 60/55 °C</code>
+<div class="tw"><table class="num"><thead><tr><th>Teplota v zásobníku</th><th>1 × 3,3 m², U 300</th><th>1 × 3,3 m², U 500</th><th>2 × 3,3 m², U 400</th><th>3 × 3,3 m², U 400</th></tr></thead><tbody><tr><td>15 °C</td><td>42,0</td><td>70,0</td><td>112,1</td><td>168,1</td></tr><tr><td>30 °C</td><td>27,1</td><td>45,2</td><td>72,4</td><td>108,6</td></tr><tr><td>40 °C</td><td>17,2</td><td>28,7</td><td>45,9</td><td>68,8</td></tr><tr><td>45 °C</td><td>12,2</td><td>20,3</td><td>32,6</td><td>48,8</td></tr><tr><td>50 °C</td><td>7,1</td><td>11,9</td><td>19,0</td><td>28,6</td></tr><tr><td>53 °C</td><td>4,0</td><td>6,6</td><td>10,5</td><td>15,8</td></tr></tbody></table></div>
+<p class="cap">U = 300–500 W/m²K pro hladkou trubkovou spirálu s přirozenou konvekcí <span class="tag tO">O</span>; přesné hodnoty a tlakovou ztrátu musí dát výkres výměníku.</p></div>
+</div>
+<p><b>Plocha 3,2–3,4 m² není limitem na začátku ohřevu, ale na jeho konci.</b> Při 60 °C z TČ dodá jeden výměník při 50 °C v zásobníku ≈ 7–12 kW, při 53 °C už jen ≈ 4–7 kW. RH050 (7,6 kW při −15 °C / W55) tedy zásobník ohřeje, ale rozumně jen na 50–53 °C. Při zapojení 2–3 zásobníků paralelně (Tichelmann) se plocha sčítá a cílová teplota se zvedne o 1–3 K. Sériové zapojení zvyšuje tlakovou ztrátu nad výtlak vestavěného čerpadla RH050 (9 m) <span class="tag t?">?</span>.</p>
+<p><b>RH050 a TUV 1 000 l:</b> ohřev 10 → 55 °C trvá 6,9 h při −15 °C a 3,8 h při +7 °C. Energeticky to zvládne, ale pouze s výměníkem ≥ 4 m² a teplotou vody z TČ ≥ 60 °C, kterou RH050 při nízkých venkovních teplotách nemá ve výkonových tabulkách doložitelnou.</p>
+<p><b>Hygiena:</b> vyhláška č. 252/2004 Sb. požaduje teplotu teplé vody v místě odběru 50–70 °C <span class="tag t?">?</span> ověřit aktuální znění. Navrhuji udržovat 55 °C, cirkulaci jen pokud ji objekt má, a týdenní termickou dezinfekci na 65–70 °C: buď přepnutím RH X50 na výměníky TUV (výstup až 78 °C <span class="tag tD">D</span>), nebo elektrickou vložkou 3 kW, která slouží jen k dezinfekci a jako nouzový ohřev TUV — nejde o bivalentní zdroj vytápění.</p>
+<h3>Konfigurace nádrží</h3>
+<div class="tw"><table class=""><thead><tr><th></th><th>A — max. sklad</th><th>B — AKU 1 000 + 2–3 × 300 TUV</th><th>C — AKU 1 000 + TUV 1 000</th></tr></thead><tbody><tr><td>Sestava</td><td>AKU 2 × 300 (+ 500) l, TUV 3 × 300 l</td><td>AKU 1 000 l nová, TUV 2–3 × 300 l sklad</td><td>AKU 1 000 l + TUV 1 000 l nové</td></tr><tr><td>Akumulace ÚT</td><td>600–1 100 l, sériově / paralelně</td><td>1 000 l, jedna nádoba</td><td>1 000 l</td></tr><tr><td>Výměník TUV</td><td>3 × 3,3 = 9,9 m²</td><td>6,6–9,9 m²</td><td>dle výrobce, typicky 3–5 m² <span class="tag t?">?</span></td></tr><tr><td>Půdorys (s izolací)</td><td>≈ 5 nádob, nejvíc místa</td><td>4 nádoby</td><td>2 nádoby, nejméně místa</td></tr><tr><td>Hydraulika</td><td>nejsložitější, mnoho přírub a vyvažování</td><td>střední</td><td>nejjednodušší</td></tr><tr><td>Tepelné ztráty nádob</td><td>≈ 6–7 kWh/den <span class="tag tO">O</span></td><td>≈ 5–6 kWh/den</td><td>≈ 4–5 kWh/den</td></tr><tr><td>Nové výdaje (zadavatel)</td><td>0 Kč</td><td>5 000 Kč <span class="tag tZ">Z</span> <span class="tag t?">?</span></td><td>70 000 Kč <span class="tag tZ">Z</span></td></tr><tr><td>Univerzálnost</td><td>nízká</td><td>dobrá, rám připraven na 1 000 l TUV</td><td>dobrá, ale TUV 1 000 l pro malé odběry stagnuje</td></tr><tr><td>Doporučení</td><td>jen jako nouzová sestava</td><td><b>doporučeno pro první zakázku</b></td><td>až pro objekty se sprchami / velkým odběrem</td></tr></tbody></table></div>
+<p class="cap">Skladové zásobníky použité v pronájmu už nepůjdou prodat jako nové — tato ztráta hodnoty patří do ekonomiky ve fázi 2.</p>
+</section>
+
+<section id="regulace">
+<h2><span class="n">09</span>Regulace, kaskáda a vzdálený dohled</h2>
+<div class="grid2">
+<div class="box"><h3>Co umí jednotky podle dokumentace</h3>
+<ul class="tight">
+<li><b>RH X50</b> <span class="tag tD">D</span>: kaskáda až 8 jednotek (adresa přepínači, společné čidlo výstupní teploty), port RS485, port čerpadla, výstup pro pomocný zdroj, SG/EVU vstupy, Wi‑Fi aplikace a IoT monitorovací platforma výrobce.</li>
+<li><b>RH030–RH060</b> <span class="tag tD">D</span>: vestavěné čerpadlo, Wi‑Fi přes aplikaci Tuya/Smart Life, v parametrech „jednotky online“ a „řídicí adresa“. Kaskádové řízení ani Modbus protokol v návodu popsány nejsou <span class="tag t?">?</span>.</li>
+<li>Zda se RH0x připojí na stejnou IoT platformu jako RH X50, není doloženo <span class="tag t?">?</span>.</li></ul></div>
+<div class="box"><h3>Navržené řízení</h3>
+<ul class="tight">
+<li>Nadřazený kaskádový regulátor (PLC s Modbus RTU/TCP, 4G router) řídí podle teploty v AKU: povolení jednotek, žádané teploty, ekvitermní křivka.</li>
+<li>Spínání podle potřeby výkonu s hysterezí a minimální dobou běhu; max. 4 starty/h na jednotku <span class="tag tD">D</span>.</li>
+<li>Střídání podle provozních hodin, rezervní jednotka se přiřadí při deficitu (teplota v AKU klesá při všech běžících).</li>
+<li>Při poruše: ztráta komunikace / alarm jednotky → okamžité povolení další.</li>
+<li><b>Nouzový režim:</b> při výpadku PLC běží jednotky samostatně na pevnou žádanou teplotu z vlastního ovladače.</li>
+<li>Omezení počtu kompresorů podle dostupného proudu zákazníka.</li></ul></div>
+</div>
+<p><b>Skutečná N+1</b> vyžaduje, aby zbylé jednotky pokryly návrhový výkon a aby nebyl jediný společný prvek bez zálohy. Rozdělovač, kmen, VS1, AKU a přívod budou vždy jednoduché; zálohovat lze čerpadla (zdvojené / sklad), regulaci (nouzový režim) a jednotky. Prakticky reálné je „N+1 do −5 až −7 °C“, ne do −15 °C.</p>
+</section>
+
+<section id="elektro">
+<h2><span class="n">10</span>Elektrické připojení</h2>
+<div class="tw"><table class="num"><thead><tr><th></th><th>Sestava</th><th>Max. soudobý příkon</th><th>Proud (cos φ 0,95)</th><th>Hlavní jistič</th><th>Kabel H07RN-F do 25 m</th><th>Připojení</th></tr></thead><tbody><tr><td><b>A1</b></td><td>2 × RH060 + 1 × RH050 + RH050 TUV</td><td>27 kW</td><td>41 A</td><td>3 × 50 A</td><td>5 × 10 mm² Cu</td><td>CEE 63 A</td></tr><tr><td><b>A2</b></td><td>2 × RH060 + 2 × RH050 + RH050 TUV</td><td>32 kW</td><td>49 A</td><td>3 × 63 A</td><td>5 × 16 mm² Cu</td><td>CEE 63 A</td></tr><tr><td><b>A3</b></td><td>2 × RH060 + 3 × RH050 + RH050 TUV</td><td>37 kW</td><td>56 A</td><td>3 × 63 A</td><td>5 × 16 mm² Cu</td><td>CEE 63 A</td></tr><tr><td><b>B1</b></td><td>1 × RH X50 + RH050 TUV</td><td>27 kW</td><td>41 A</td><td>3 × 50 A</td><td>5 × 10 mm² Cu</td><td>CEE 63 A</td></tr><tr><td><b>B2</b></td><td>2 × RH X50 + RH050 TUV</td><td>47 kW</td><td>71 A</td><td>3 × 80 A</td><td>5 × 25 mm² Cu</td><td>CEE 125 A</td></tr><tr><td><b>B3</b></td><td>1 × RH X50 + 2 × RH060 + RH050 TUV</td><td>42 kW</td><td>64 A</td><td>3 × 80 A</td><td>5 × 25 mm² Cu</td><td>CEE 125 A</td></tr></tbody></table></div>
+<p class="cap">Soudobost 1,0 (v mrazu běží vše), +2 kW čerpadla, regulace, osvětlení a temperování kontejneru <span class="tag tO">O</span>. Kabel orientačně pro uložení na povrchu do 25 m; úbytek napětí a selektivitu jištění ověří projektant elektro <span class="tag t?">?</span>.</p>
+<ul class="tight">
+<li>Rozvaděč: hlavní vypínač, přepěťová ochrana T1+T2, samostatné vývody pro každou jednotku s jističem a proudovým chráničem dle návodu jednotek, hlídač fází, UPS pro regulaci a primární čerpadla, 4G router.</li>
+<li>Příprava pro podružné měření: místo na DIN liště a průvlaky pro elektroměr (MID, Modbus) a kalorimetry primáru i TUV.</li>
+<li>R290 venku: rozvaděč, zásuvky ani větrací otvory kontejneru nesmí být v ochranné zóně jednotek; minimální odstupy dle návodu výrobce <span class="tag t?">?</span>.</li>
+</ul>
+</section>
+
+<section id="kontejner">
+<h2><span class="n">11</span>Kontejner, uspořádání a kotvení</h2>
+<div class="grid2">
+<div class="box"><h3>10' — ekonomická varianta</h3>
+<p>Vnitřní ≈ 2,83 × 2,35 m. Pojme AKU 1 000 l, 2 × TUV 300 l a hydraulickou stěnu, rozvaděč u dveří. Ulička pod 600 mm, výměna nádoby jen vyklopením ven, žádná rezerva pro 1 000 l TUV ani VS2. Vhodné jen pro B1 / malé objekty.</p></div>
+<div class="box"><h3>20' — univerzální varianta (doporučuji)</h3>
+<p>Vnitřní 5,90 × 2,35 m. Všechny konfigurace nádrží, servisní ulička ≥ 800 mm, místo pro VS1/VS2, skladovou polici a hadice na přepravu. Těžiště lze držet u středu. High Cube (světlá výška 2,70 m) odstraní problém klopné výšky nádrží 1 000 l.</p></div>
+</div>
+<div class="fig plan">
+<svg viewBox="0 0 640 320" role="img" aria-label="Půdorys kontejneru 20 stop, měřítko 1 px = 10 mm">
+<rect x="20" y="30" width="590" height="235" class="cont"/>
+<text x="20" y="20" class="s">vnitřní 5 898 × 2 352 mm · světlá výška 2 393 mm (HC 2 698 mm)</text>
+<rect x="602" y="34" width="8" height="227" class="door"/><text x="575" y="290" class="s">dveře</text>
+<circle cx="80" cy="90" r="50" class="tank"/><text x="80" y="88" class="c">AKU</text><text x="80" y="102" class="s c">1 000 l Ø 1 000</text>
+<circle cx="167" cy="72" r="33" class="tank"/><circle cx="237" cy="72" r="33" class="tank"/><circle cx="307" cy="72" r="33" class="tank"/>
+<text x="237" y="122" class="s c">TUV 3 × 300 l (Ø ≈ 650 s izolací)</text>
+<circle cx="190" cy="90" r="50" class="future"/><text x="190" y="156" class="s c fut">budoucí TUV 1 000 l</text>
+<rect x="30" y="35" width="320" height="10" class="frame"/><text x="360" y="44" class="s">zadní kotevní rám (svislé sloupky)</text>
+<rect x="470" y="35" width="110" height="40" class="el"/><text x="525" y="60" class="c">rozvaděč</text>
+<rect x="50" y="215" width="380" height="45" class="hyd"/><text x="240" y="242" class="c">hydraulická stěna: VS1, čerpadla, expanze, filtry, měření</text>
+<rect x="440" y="225" width="100" height="35" class="pan"/><text x="490" y="247" class="s c">přípojný panel</text>
+<path d="M30 170H595" class="aisle"/><text x="380" y="165" class="s">servisní ulička ≥ 800 mm</text>
+<text x="20" y="300" class="s">Těžké nádrže u uzavřeného čela a nad příčníky podlahy; těžiště ≤ ± 10 % délky od středu</text>
+</svg></div>
+<p class="cap">Koncepční půdorys 20'. Prostorový 3D model a výkresy rámů ve fázi 2 po potvrzení konfigurace nádrží.</p>
+<h3>Konstrukční koncept kotvení</h3>
+<ul class="tight">
+<li><b>Svařovaný nosný rám</b> na podlaze z uzavřených profilů (např. 80 × 80 × 4) a U-profilů, přenáší zatížení na příčníky podlahy a spodní podélníky kontejneru, ne do překližky ani do vlnitých stěn (corten ≈ 1,6–2 mm).</li>
+<li><b>Šroubované vyměnitelné konzole</b> pro každou nádrž: patky nádrží na roznášecí desky s drážkovými otvory (M12–M16), horní obvodový třmen nebo konzola do zadních kotevních bodů zásobníku napojená na svislé sloupky rámu.</li>
+<li>Rozteč kotevních bodů navržena pro 3 × Ø 650 i 1 × Ø 1 000 — výměna bez svařování.</li>
+<li>Rám napojit na rohové sloupky a horní podélníky jen přes šroubované spoje; svary na kontejneru a výřezy pro průchody posoudí statik.</li>
+<li>Stavy zatížení: <b>provoz</b> (plné nádrže, svislé zatížení), <b>přeprava</b> (prázdné, 0,8 g vpřed, 0,5 g do stran a vzad dle ČSN EN 12195-1, svisle 1,0 g + rázy), <b>zdvih</b> jeřábem (dynamický součinitel 1,2–1,5, zvedání za rohové prvky, těžiště).</li>
+</ul>
+<div class="tw"><table class="num"><thead><tr><th>Nádrž</th><th>Prázdná <span class="tag tO">O</span></th><th>Plná</th><th>Na 1 nohu (3 nohy, plná)</th><th>Přeprava 0,8 g vpřed</th><th>0,5 g bok</th><th>Klopení / stabilita (prázdná)</th></tr></thead><tbody><tr><td>TUV 300 l (sklad, 1 ks)</td><td>95 kg</td><td>395 kg</td><td>1,3 kN</td><td>0,75 kN</td><td>0,47 kN</td><td><span class="bad">0,56 / 0,20 kNm</span></td></tr><tr><td>AKU 300 l (sklad, 1 ks)</td><td>60 kg</td><td>360 kg</td><td>1,2 kN</td><td>0,47 kN</td><td>0,29 kN</td><td><span class="bad">0,35 / 0,12 kNm</span></td></tr><tr><td>AKU 1 000 l (nová)</td><td>160 kg</td><td>1160 kg</td><td>3,8 kN</td><td>1,26 kN</td><td>0,78 kN</td><td><span class="bad">1,26 / 0,47 kNm</span></td></tr><tr><td>TUV 1 000 l (nová)</td><td>260 kg</td><td>1260 kg</td><td>4,1 kN</td><td>2,04 kN</td><td>1,28 kN</td><td><span class="bad">2,04 / 0,77 kNm</span></td></tr></tbody></table></div>
+<p class="cap">Hmotnosti a výšky těžiště prázdných nádrží jsou odhad <span class="tag tO">O</span> — nutné výkresy zásobníků. Prázdná nádrž se při brzdění 0,8 g bez kotvení převrátí (červeně), proto kotvení nahoře i dole.</p>
+<p><b>Před výrobou musí posoudit autorizovaný statik / konstruktér:</b> nosný rám a jeho napojení na kontejner, kotvení nádrží pro přepravní zatížení, únosnost podlahy pod plnými nádržemi, oslabení kontejneru výřezy a průchodkami, způsob zdvihu soupravy s technologií (smí se kontejner zvedat s nádržemi uvnitř a do jaké hmotnosti), přepravní rámy venkovních jednotek (370 kg RH X50, těžiště ve výšce) a jejich kotvení na místě proti větru.</p>
+</section>
+
+<section id="hluk">
+<h2><span class="n">12</span>Hluk venkovních jednotek</h2>
+<code class="formula">L_pA = L_WA − 20 log r − 8 dB   (bodový zdroj nad odrazivou plochou, bez stínění)</code>
+<div class="tw"><table class="num"><thead><tr><th>Zdroj (LWA)</th><th>LWA</th><th>5 m</th><th>10 m</th><th>20 m</th><th>30 m</th><th>50 m</th></tr></thead><tbody><tr><td>RH050 (W55)</td><td>59 dB</td><td>37</td><td>31</td><td>25</td><td>21</td><td>17</td></tr><tr><td>RH060 (W55)</td><td>62 dB</td><td>40</td><td>34</td><td>28</td><td>24</td><td>20</td></tr><tr><td>RH X50 (W55)</td><td>66 dB</td><td>44</td><td>38</td><td>32</td><td>28</td><td>24</td></tr><tr><td>RH X50 max.</td><td>77 dB</td><td>55</td><td>49</td><td>43</td><td>39</td><td>35</td></tr><tr><td>2 × RH X50 max.</td><td>80 dB</td><td>58</td><td>52</td><td>46</td><td>42</td><td>38</td></tr><tr><td>2 × RH060 + 3 × RH050 (W55)</td><td>67 dB</td><td>45</td><td>39</td><td>33</td><td>30</td><td>25</td></tr></tbody></table></div>
+<p class="cap">LWA z protokolů a dokumentace výrobce <span class="tag tD">D</span>; maximum RH X50 77 dB. Hygienický limit pro chráněný venkovní prostor staveb dle NV 272/2011 Sb. obvykle 50 dB den / 40 dB noc <span class="tag t?">?</span>. Při obytné zástavbě do ≈ 40 m od RH X50 je nutné noční omezení výkonu nebo posouzení.</p>
+</section>
+
+<section id="overit">
+<h2><span class="n">13</span>Předpoklady k ověření a potřebné dokumenty</h2>
+<div class="cols">
+<div><h3>Od výrobce jednotek</h3><ol class="check">
+<li>Výkonová data RH050/RH060 pro W60–W65 a potvrzení, zda tabulky RH050/060 jsou měřené.</li>
+<li>Typové štítky: max. proud a doporučené jištění RH050 (1f/3f) a RH060.</li>
+<li>Jmenovitý průtok, tlaková ztráta a křivka vestavěného čerpadla RH050/RH060.</li>
+<li>Modbus RTU mapa registrů RS485 pro RH X50 a pro řídicí jednotku RH0x.</li>
+<li>Kaskáda RH0x: podporovaná, kolik jednotek, s jakým ovladačem.</li>
+<li>Připojení RH0x na IoT platformu výrobce.</li>
+<li>Souhlas s glykolem v RH0x a doporučená koncentrace; min. průtok při glykolu.</li>
+<li>Odstupy R290 od otvorů, elektrických zařízení a kanalizace.</li>
+<li>Hluk RH X50 při max. výkonu a v tichém režimu, spektrum.</li></ol></div>
+<div><h3>K vlastním zásobníkům</h3><ol class="check">
+<li>Výkres TUV 300 l: průměr s izolací, výška, klopná výška, poloha nožiček a zadních kotevních bodů, hmotnost prázdná.</li>
+<li>Výměník: plocha, objem, materiál, tlaková ztráta při 2–3 m³/h, max. tlak.</li>
+<li>AKU 300 l a 500 l: nátrubky, tlak, izolace, hmotnost.</li>
+<li>Nová AKU 1 000 l za 5 000 Kč: co zahrnuje (izolace, nátrubky, tlak 3/6 bar, nová/použitá).</li>
+<li>Nová TUV 1 000 l za 65 000 Kč: výrobce, plocha výměníku, vložka, rozměry.</li></ol>
+<h3>Interně</h3><ol class="check">
+<li>Kolik RH050 je skladem, 1f nebo 3f, stav té použité jednotky.</li>
+<li>Které konfigurace chcete nabízet jako standard (B1/B2).</li>
+<li>Zda přijímáte glykolový primár (M2).</li></ol></div>
+</div>
+</section>
+
+<section id="obhlidka">
+<h2><span class="n">14</span>Kontrolní seznam technické obhlídky</h2>
+<div class="cols">
+<div><h3>Potřeba tepla</h3><ol class="check">
+<li>Vyúčtování CZT za 2–3 roky po měsících (GJ), podíl TUV.</li>
+<li>Smluvní / rezervovaný výkon CZT, projekt výměníkové stanice.</li>
+<li>Vytápěná plocha a objem: administrativa, hala (výška), požadované teploty a provozní doba.</li>
+<li>Stav obálky, vrata haly (četnost otevírání), vzduchotechnika.</li>
+<li>Zda lze v hale snížit teplotu nebo vytápět jen část.</li></ol></div>
+<div><h3>Otopná soustava</h3><ol class="check">
+<li>Projektovaný spád a skutečná teplota přívodu v posledních mrazech (záznam regulátoru VS).</li>
+<li>Typ těles: radiátory, konvektory, teplovzdušné jednotky, podlahové; počet a výkon.</li>
+<li>Objem soustavy, výška budovy, provozní tlak, expanze a pojistný ventil.</li>
+<li>Oběhová čerpadla a jejich ovládání, směšovací okruhy, regulace.</li>
+<li>Kvalita vody (kal, magnetit), poslední proplach; zda je nutný VS2.</li>
+<li>Místo napojení: dimenze, uzávěry, vzdálenost od kontejneru, průchod zdí.</li></ol></div>
+<div><h3>Teplá voda</h3><ol class="check">
+<li>Počet osob na směnu, sprchy, kuchyňka, technologický odběr.</li>
+<li>Špičkový odběr (po směně), stávající zásobník / ohřev v CZT.</li>
+<li>Cirkulace TUV, délka rozvodu, tlak studené vody, tvrdost.</li>
+<li>Místo napojení SV, TUV, C.</li></ol></div>
+<div><h3>Elektro</h3><ol class="check">
+<li>Hlavní jistič a rezervovaný příkon, typ sazby, odběrné místo.</li>
+<li>Volná kapacita v rozvaděči, vzdálenost k místu kontejneru.</li>
+<li>Typ přípojky (CEE 63/125 A), možnost dočasného navýšení příkonu u distributora.</li>
+<li>Kvalita sítě, stávající odběry technologie haly ve špičce.</li></ol></div>
+<div><h3>Umístění a doprava</h3><ol class="check">
+<li>Plocha pro kontejner 20' + jednotky: rozměry, únosnost, rovinnost, odvodnění kondenzátu.</li>
+<li>Příjezd pro HDS / hákový nosič, poloměr zatáčení, výška a hmotnost na komunikacích, stání jeřábu.</li>
+<li>Volný prostor kolem jednotek (sání, výfuk vzhůru), sníh, padající led ze střechy.</li>
+<li>Vzdálenost obytné zástavby, okna, noční provoz — hluk.</li>
+<li>Zabezpečení proti vandalismu a krádeži, osvětlení.</li>
+<li>Pokrytí 4G pro dálkový dohled.</li>
+<li>Povolení: vlastnictví pozemku, dočasné umístění, požární a hygienické požadavky.</li></ol></div>
+<div><h3>Provozní a smluvní</h3><ol class="check">
+<li>Termín nutnosti tepla, předpokládaná doba nájmu, riziko prodloužení.</li>
+<li>Kdo bude kontaktní osoba a kdo hlídá výpadky.</li>
+<li>Pojištění objektu a možnost připojištění technologie.</li>
+<li>Fotodokumentace všech míst napojení a trasy hadic.</li></ol></div>
+</div>
+</section>
+
+<section id="dalsi">
+<h2><span class="n">15</span>Další postup</h2>
+<ol class="check">
+<li><b>Rozhodnutí ke konceptu</b> (vy): B2 jako standard, glykolový primár M2, nádrže varianta B, kontejner 20' (HC?).</li>
+<li><b>Fáze 2</b>: 3D koncept, výkresy rámů a seznam hutního materiálu, hydraulické schéma s dimenzemi a armaturami, položkový seznam komponent, konkrétní čeští dodavatelé s cenami (kontejnery, hadice, rychlospojky, čerpadla, VS1), investiční rozpočet.</li>
+<li><b>Fáze 3</b>: cenová mapa pronájmů mobilních kotelen v ČR, ekonomika zakázky (nájem 50 / 70 / 90 tis. Kč, druhý a třetí pronájem), návrh nájemní smlouvy B2B ke kontrole advokátem.</li>
+</ol>
+</section>
+<footer>Výpočty: <code>mobilni-kotelna-tc/univerzalni/src/vypocty.py</code> · generátor <code>gen_studie.py</code>. Výsledky jsou orientační a nenahrazují projektovou dokumentaci.</footer>
+</main>

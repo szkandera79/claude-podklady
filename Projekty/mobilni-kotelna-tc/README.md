@@ -38,3 +38,6 @@ ceny konverze kontejneru; nájmy konkurence; ceny energií.
 
 ## Artefakt
 Webová verze: https://claude.ai/artifact/WbSF8WZjZjJNdHwNKWWNHc (soukromá). Po přegenerování `model.html` publikovat na stejnou URL.
+
+## Univerzální kotelna (studie 10/2026)
+Samostatná studie pro pronájem s RH X50 / RH050–060, jednotky venku: `univerzalni/` (viz její README).
