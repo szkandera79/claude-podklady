@@ -5,6 +5,7 @@ Spuštění z kořene repozitáře: python3 mobilni-kotelna-tc/src/build_studie.
 """
 from pathlib import Path
 import studie_calc as C
+import nabidky
 
 OUT = Path(__file__).resolve().parent.parent / 'studie.html'
 
@@ -438,8 +439,34 @@ table.mk tr.grp th{background:var(--bg);font-family:var(--f-head);font-size:.82r
 .src.t{color:var(--ok)} .src.z{color:var(--cold)} .src.o{color:var(--high)}
 tr.sum th,tr.sum td{border-top:2px solid var(--ink);font-weight:600}
 td.note{font-size:.8rem;color:var(--ink-2)}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;border-bottom:2px solid var(--ink)}
+.tabs a{font-family:var(--f-head);font-weight:600;font-size:.95rem;padding:8px 14px;color:var(--ink-2);text-decoration:none;border:1px solid transparent;border-bottom:none;margin-bottom:-2px}
+.tabs a[aria-current="page"]{color:var(--ink);background:var(--panel);border-color:var(--line);border-bottom:2px solid var(--panel)}
+.tabs a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tabs .count{font-family:var(--f-mono);font-size:.75rem;color:var(--accent)}
+.studie-meta{margin-top:18px}
+.offers{display:grid;gap:12px;margin-top:14px}
+.offer{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);padding:14px 16px;min-width:0}
+.offer header{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.offer .pill{background:var(--high-bg);color:var(--high)}
+.btn{display:inline-block;background:var(--accent);color:var(--panel);padding:9px 16px;text-decoration:none;font-weight:600}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--line);font-size:.8rem;color:var(--ink-2)}
 '''
+
+
+TABS_JS = '''<script>
+(function(){
+  var tabs=['studie','nabidky','smlouva'];
+  function show(){
+    var h=(location.hash||'#studie').slice(1);
+    var t=tabs.indexOf(h)>=0?h:(h.indexOf('nabidka-')===0?'nabidky':'studie');
+    tabs.forEach(function(id){document.getElementById(id).hidden=(id!==t);});
+    document.querySelectorAll('.tabs a').forEach(function(a){a.setAttribute('aria-current',a.dataset.tab===t?'page':'false');});
+  }
+  window.addEventListener('hashchange',show);show();
+})();
+</script>'''
 
 
 def build():
@@ -451,17 +478,37 @@ def build():
     r55 = {r['code']: r for r in C.cascade_rows(55)}
     b2 = r55['B-2']
     a50 = r55['A-50']
-    html = f'''<title>Univerzální mobilní kotelna</title>
+    html = f'''<title>Mobilní kotelna</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap">
 <style>{CSS}</style>
 <div class="wrap">
 <header class="doc-head">
-<div class="eyebrow">REO HEATING · interní podklad · fáze 1, 4 a 5</div>
-<h1>Univerzální mobilní kotelna s tepelnými čerpadly</h1>
-<div class="meta"><span>Studie proveditelnosti a kritická rizika</span><span>16. 10. 2026</span><span>Data: výkonové mapy a návody výrobce, výpočty <code>studie_calc.py</code></span></div>
+<div class="eyebrow">REO HEATING · interní podklad</div>
+<h1>Mobilní kotelna</h1>
+<div class="meta"><span>Pronájem mobilní kotelny s tepelnými čerpadly</span><span>aktualizováno 16. 10. 2026</span></div>
+<nav class="tabs" aria-label="Části">
+<a href="#studie" data-tab="studie">Studie a ekonomika</a>
+<a href="#nabidky" data-tab="nabidky">Nabídky <span class="count">{len(nabidky.NABIDKY)}</span></a>
+<a href="#smlouva" data-tab="smlouva">Smlouva</a>
+</nav>
 </header>
+
+<section id="nabidky" class="tab" hidden>
+<h2>Nabídky</h2>
+{nabidky.html()}
+</section>
+
+<section id="smlouva" class="tab" hidden>
+<h2>Nájemní smlouva B2B</h2>
+<p>Návrh smlouvy o nájmu mobilní kotelny mezi podnikateli: pevná doba 6 měsíců, nájemné předem, předčasné ukončení za odstupné 85 % zbývajícího nájemného, jistota jeden měsíční nájem, garantovaný výkon při −15 °C. Text je v samostatném upravitelném dokumentu, odkud jde exportovat do Wordu nebo PDF pro advokáta.</p>
+<p><a class="btn" href="https://claude.ai/code/artifact/4ab9fbf4-395c-48f0-97e0-f627aa43c372">Otevřít Smlouvu o nájmu mobilní kotelny</a></p>
+<p class="note">Před použitím musí smlouvu zkontrolovat český advokát; body ke kontrole jsou na konci dokumentu.</p>
+</section>
+
+<section id="studie" class="tab">
+<div class="meta studie-meta"><span>Studie proveditelnosti, rešerše trhu, rozpočet a ekonomika</span><span>Data: výkonové mapy a návody výrobce, výpočty <code>studie_calc.py</code></span></div>
 
 <section class="verdict">
 <p><b>Závěr fáze 1:</b> mobilní kotelnu z vlastních jednotek a zásobníků postavit lze. Ve stávající podobě zadání ale má tři zásadní slabiny: dimenzování podle nominálního výkonu, provoz bez glykolu a neznámou teplotu otopné soustavy zákazníka. Všechny tři mohou způsobit, že kotelna v mrazu nedodá slíbené teplo.</p>
@@ -600,8 +647,10 @@ se sprchami: 20 × 40 l (40 °C) na konci směny
 <h2><span class="no">16</span>Další postup</h2>
 <div class="phases">{"".join(f"<div><b>{t}</b><br>{d}</div>" for t, d in NEXT)}</div>
 
+</section>
 <footer>Výkony jednotek z výkonových map výrobce; elektro RH X50 z návodu k použití. Vše označené [OVĚŘIT] nebo [ODHAD] je předpoklad, ne údaj výrobce ani tržní cena. Konstrukční a statické části bude posuzovat autorizovaný projektant. Zdroj výpočtů: <code>Projekty/mobilni-kotelna-tc/src/studie_calc.py</code>.</footer>
-</div>'''
+</div>
+{TABS_JS}'''
     OUT.write_text(html, encoding='utf-8')
     print('zapsáno', OUT)
 

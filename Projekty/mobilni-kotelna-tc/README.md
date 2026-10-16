@@ -71,3 +71,6 @@ Další fáze: 2 hydraulika a regulace, 3 konstrukce a kotvení, 4 rešerše trh
 ## Zakázky
 - **`mm-holz/`**: MM Holz / Alignum Paskov — návrh 2 × RH X50 ze skladu (výkony při 55/60/70 °C, limit jednotek Sahara, otevřené body). Výpočty `python3 mobilni-kotelna-tc/mm-holz/src/sestavy.py`.
 - **`univerzalni/`**: studie univerzální mobilní kotelny (fáze 1), artefakt https://claude.ai/artifact/28JzYEi6eUNqyWW4CAkjcM.
+- **Artefakt „Mobilní kotelna“** (16. 10. 2026) = https://claude.ai/artifact/28JzYEi6eUNqyWW4CAkjcM, záložky Studie a ekonomika /
+  Nabídky / Smlouva. Nové nabídky: řádek v `src/nabidky.py` + složka `nabidky/<slug>/` (fragment `nabidka.html`), pak
+  `python3 mobilni-kotelna-tc/src/build_studie.py` a publikovat `studie.html` na stejnou URL. Rozpracováno: MM Holz.
