@@ -41,3 +41,17 @@ Webová verze: https://claude.ai/artifact/WbSF8WZjZjJNdHwNKWWNHc (soukromá). Po
 
 ## Univerzální kotelna (studie 10/2026)
 Samostatná studie pro pronájem s RH X50 / RH050–060, jednotky venku: `univerzalni/` (viz její README).
+
+## Univerzální mobilní kotelna — studie proveditelnosti (od 16. 10. 2026)
+Zadání: kotelna k opakovanému pronájmu (první zákazník: administrativa + hala, ~20 osob, 6 měsíců, ÚT + TUV),
+varianta A = RH050/RH060 v kaskádě, varianta B = RH X50 (+ RH050 pro TUV), kontejner 10′/20′, skladové zásobníky.
+Postup v 5 fázích; **hotová fáze 1** (technická studie, kritická rizika, kontrolní seznam obhlídky).
+- `src/studie_calc.py`: výkony jednotek z map (data.js), kaskády vč. N−1, bod rovnováhy, potřebná teplota otopné
+  soustavy, ohřev TUV přes výměník, tlakové ztráty hadic, min. AKU, elektro, doba vychladnutí hadic.
+- `src/build_studie.py` → `studie.html`: `python3 mobilni-kotelna-tc/src/build_studie.py`
+- Artefakt: https://claude.ai/artifact/28JzYEi6eUNqyWW4CAkjcM (republikovat stejný soubor / přes `url`).
+
+Hlavní zjištění: dimenzovat podle výkonu při −15 °C/W55, ne podle nominálu (2× RH X50 = 49,6 kW, po výpadku 24,8 kW);
+návod RH X50 požaduje pod 0 °C glykol → doporučen glykolový primár + deskový výměník, rozdělovač/separátor uvnitř kontejneru;
+RH050 ohřeje TUV přes výměník jen na ≈ 52 °C → topná vložka na sterilizaci; zásadní neznámá = teplotní spád soustavy zákazníka (CZT 90/70).
+Další fáze: 2 hydraulika a regulace, 3 konstrukce a kotvení, 4 rešerše trhu a rozpočet, 5 ekonomika a smlouva.
