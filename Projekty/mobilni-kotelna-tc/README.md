@@ -58,3 +58,12 @@ Další fáze: 2 hydraulika a regulace, 3 konstrukce a kotvení, 4 rešerše trh
 - **Rešerše trhu (fáze 4, 16. 10. 2026)**: `src/market.html` (vkládá se do studie jako kap. 13). Kontejner: nový 20′ one-trip ≈ 62 500 Kč
   (kontik), 10′ není levnější; doprava rukou ≈ 5–12 tis./cesta. Sada hadic 2× 20 m: DN50 ≈ 45–50 tis., DN65 ≈ 60–70 tis. (CALORTEC 100 + Camlock GMS, těsnění EPDM).
   Pronájmy: v ČR žádné mobilní TČ s cenou; ENERENT TČ 105 kW ≈ 46–51 tis. Kč/měs. + 65 tis. paušál; olej/LPG 50–110 kW 35–67 tis./měs.
+- **Rozpočet (fáze 4, 16. 10. 2026)**: `src/rozpocet.py` (položky se zdrojem T/Z/O, varianty Ekonomická/Univerzální × sestavy B-2/A-50,
+  skladové díly, ztráta prodejní hodnoty, opotřebení za sezónu, nádrže A/B/C) → vkládá se jako kap. 14.
+  Nové výdaje ≈ 1,10–1,36 mil. Kč (vč. 10 % rezervy); skladové díly účetně ≈ 0,29–0,33 mil.; ztráta prodejní hodnoty 2× RH X50 ≈ 0,48 mil.
+  K doplnění od uživatele: účetní a prodejní hodnoty zásobníků TUV 300 l a skladových AKU (nyní odhad).
+- **Fáze 5 (16. 10. 2026)**: `src/ekonomika.py` → kap. 15 (přímé náklady zakázky ≈ 186 tis., scénáře 50/70/90 tis., bod zvratu).
+  Při 70 tis./měs. hrubý příspěvek ≈ 324 tis./zakázku, návratnost nových výdajů ≈ 4,2 zakázky (univerzální), 3,5 (ekonomická);
+  ekonomická nula ≈ 69 tis./měs. Smlouva o nájmu (Claude Docs): https://claude.ai/code/artifact/4ab9fbf4-395c-48f0-97e0-f627aa43c372 — ke kontrole advokátem.
+- **Rozhodnutí uživatele 16. 10. 2026:** bez hydraulického separátoru a deskového výměníku; jednotky přímo na AKU, soustava na vodu
+  s protimrazovými ventily, uzávěry s pružinovým návratem a UPS. Vychází finančně zhruba stejně jako glykol; riziko vůči návodu RH X50 trvá.

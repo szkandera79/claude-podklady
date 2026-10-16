@@ -257,8 +257,8 @@ DOCS_NEEDED = [
 NEXT = [
     ('Fáze 2 · varianty a hydraulika', 'Po obhlídce nebo s modelovými daty: výběr sestavy, hydraulické schéma s dimenzemi, výběr čerpadel, separátoru, výměníku, expanze a pojistných prvků; regulační koncept a seznam signálů.'),
     ('Fáze 3 · konstrukce', 'Půdorys a 3D koncept, nosný rám z profilů, kotvení zásobníků (provozní vs. přepravní zatížení, EN 12195-1: 0,8 g vpřed, 0,5 g do stran), výpis hutního materiálu, rámy jednotek; seznam částí pro autorizovaného statika.'),
-    ('Fáze 4 · rozpočet', 'Rešerše trhu hotová (kap. 13). Zbývá položkový rozpočet A/B/C (nové výdaje, skladové díly, celková ekonomická hodnota) a poptávky u konkurence a dodavatelů.'),
-    ('Fáze 5 · ekonomika a smlouva', 'Ekonomika zakázky 50/70/90 tis. Kč/měsíc, bod zvratu, 2. a 3. pronájem; návrh nájemní smlouvy B2B s vypořádáním předčasného ukončení a jistotou.'),
+    ('Fáze 4 · rozpočet', 'Rešerše trhu (kap. 13) a rozpočet (kap. 14) hotové. Zbývá zpřesnit odhady poptávkami: technologie u montážní firmy, kontejnerové úpravy, ceny konkurence; doplnit hodnoty skladových nádrží.'),
+    ('Fáze 5 · ekonomika a smlouva', 'Ekonomika zakázky v kap. 15. Návrh nájemní smlouvy B2B je samostatný dokument (Smlouva o nájmu mobilní kotelny) a čeká na kontrolu advokátem.'),
 ]
 
 
@@ -434,12 +434,20 @@ code,.mono{font-family:var(--f-mono);font-size:.88em}
 table.mk td{font-family:var(--f-body);vertical-align:top}
 table.mk td.l a{color:var(--accent)}
 table.mk tr.grp th{background:var(--bg);font-family:var(--f-head);font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2)}
+.src{display:inline-block;font-family:var(--f-mono);font-size:.7rem;padding:0 5px;border:1px solid currentColor}
+.src.t{color:var(--ok)} .src.z{color:var(--cold)} .src.o{color:var(--high)}
+tr.sum th,tr.sum td{border-top:2px solid var(--ink);font-weight:600}
+td.note{font-size:.8rem;color:var(--ink-2)}
 footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--line);font-size:.8rem;color:var(--ink-2)}
 '''
 
 
 def build():
     MARKET = Path(__file__).with_name("market.html").read_text(encoding="utf-8")
+    import rozpocet
+    BUDGET = rozpocet.html()
+    import ekonomika
+    ECON = ekonomika.html()
     r55 = {r['code']: r for r in C.cascade_rows(55)}
     b2 = r55['B-2']
     a50 = r55['A-50']
@@ -450,7 +458,7 @@ def build():
 <style>{CSS}</style>
 <div class="wrap">
 <header class="doc-head">
-<div class="eyebrow">REO HEATING · interní podklad · fáze 1 a rešerše fáze 4</div>
+<div class="eyebrow">REO HEATING · interní podklad · fáze 1, 4 a 5</div>
 <h1>Univerzální mobilní kotelna s tepelnými čerpadly</h1>
 <div class="meta"><span>Studie proveditelnosti a kritická rizika</span><span>16. 10. 2026</span><span>Data: výkonové mapy a návody výrobce, výpočty <code>studie_calc.py</code></span></div>
 </header>
@@ -522,6 +530,7 @@ se sprchami: 20 × 40 l (40 °C) na konci směny
 </div>
 
 <h2><span class="no">07</span>Hydraulika a ochrana proti zamrznutí</h2>
+<p class="verdict"><b>Rozhodnutí zadavatele 16. 10. 2026:</b> bez hydraulického separátoru a deskového výměníku. Jednotky se napojí přímo na AKU (ta slouží jako separátor) a soustava bude na vodu s jištěním podle odstavce „Varianta jen s vodou“ níže. Rozpočet v kap. 14 s tím počítá. Schéma níže ukazuje původní doporučenou variantu s glykolem.</p>
 <div class="fig">{SCHEMA}</div>
 <p class="note">Koncepční schéma bez armatur v detailu. V každé větvi jednotky: kulové kohouty, filtr (návod RH X50 požaduje filtr ve zpátečce), zpětná klapka, vypouštění a odvzdušnění v nejvyšším bodě.</p>
 <div class="cols">
@@ -586,7 +595,9 @@ se sprchami: 20 × 40 l (40 °C) na konci směny
 <ul class="plain">{"".join(f"<li>{d}</li>" for d in DOCS_NEEDED)}</ul>
 
 {MARKET}
-<h2><span class="no">14</span>Další postup</h2>
+{BUDGET}
+{ECON}
+<h2><span class="no">16</span>Další postup</h2>
 <div class="phases">{"".join(f"<div><b>{t}</b><br>{d}</div>" for t, d in NEXT)}</div>
 
 <footer>Výkony jednotek z výkonových map výrobce; elektro RH X50 z návodu k použití. Vše označené [OVĚŘIT] nebo [ODHAD] je předpoklad, ne údaj výrobce ani tržní cena. Konstrukční a statické části bude posuzovat autorizovaný projektant. Zdroj výpočtů: <code>Projekty/mobilni-kotelna-tc/src/studie_calc.py</code>.</footer>
