@@ -6,8 +6,8 @@ Dobrý den, pane inženýre,
 děkuji za zaslané podklady k vytápění objektu Alignum. Prošli jsme projekt ÚT (ESL, 2005) a schéma výměníkové stanice.
 
 Výchozí údaje z projektu:
-- výrobní hala vytápěná 5 teplovzdušnými jednotkami SAHARA W3634 na spád 80/60 °C (projekt počítá s halou na 20 °C),
-- administrativa s deskovými otopnými tělesy na spád 75/60 °C,
+- výrobní hala vytápěná 5 teplovzdušnými jednotkami SAHARA W3634 navrženými na přívod topné vody 80 °C a zpátečku 60 °C (projekt počítá s halou na 20 °C),
+- administrativa s deskovými otopnými tělesy navrženými na přívod 75 °C a zpátečku 60 °C,
 - ohřev TUV v zásobníku ACV Smart Line 320 l,
 - výměníková stanice 200 kW,
 - výpočtová venkovní teplota −12 °C.
@@ -22,7 +22,7 @@ Mobilní kotelnu bychom připojili za výměníkovou stanici, tedy přímo na ro
 
 **Navržená sestava – kaskáda 2 × REO RH X50 (nominálně ≈ 100 kW)**
 - Výkon orientačně 54 kW při −12 °C a 55 °C, 50 kW při −15 °C.
-- Dodá vyšší teplotu topné vody, blíže projektovým 80/60 °C:
+- Dodá vyšší teplotu topné vody, blíže projektovému přívodu 80 °C:
   - **70 °C do venkovní teploty −10 °C** (≈ 44 kW),
   - **60 °C do −25 °C** (≈ 51 kW při −12 °C).
 - Elektrické připojení: max. příkon 42 kW, hlavní jistič **3 × 80 A**, přívod 5 × 25 mm² Cu, zásuvka CEE 125 A.
