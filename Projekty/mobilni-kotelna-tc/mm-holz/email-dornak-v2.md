@@ -3,12 +3,15 @@
 
 Dobrý den, pane inženýre,
 
-děkuji za zaslané podklady a za statistiku dodávky tepla. Prošli jsme projekt vytápění, schéma výměníkové stanice a měsíční odběry tepla za poslední roky. Rádi Vám potvrzujeme, že kotelnu pro objekt Alignum dokážeme dodat.
+děkuji za zaslané podklady, statistiku dodávky tepla a za možnost prohlédnout si objekt na místě. Na základě obhlídky, projektu vytápění, schématu výměníkové stanice a měsíčních odběrů tepla za poslední roky Vám rádi potvrzujeme, že kotelnu pro objekt Alignum dokážeme dodat.
 
 Naše stávající mobilní kotelna je v současnosti pronajatá. Pro Vás proto postavíme novou kotelnu, navrženou přímo na potřebu objektu.
 
 **Navržené řešení**
-- Kontejnerová kotelna 20′ (akumulace 2 × 1 000 l, výměník, čerpadla, rozvaděč a řízení) a vedle ní dvě venkovní tepelná čerpadla **REO HEATING RH X50** v kaskádě.
+- Dvě venkovní tepelná čerpadla **REO HEATING RH X50** v kaskádě a technologie kotelny: akumulace 2 × 1 000 l, výměník, čerpadla, rozvaděč a řízení.
+- **Technologii umíme dodat dvěma způsoby, podle dohody:**
+  - v kontejneru 20′ postaveném vedle objektu,
+  - nebo nainstalovanou přímo do Vaší stávající kotelny.
 - Záložní a doplňkový zdroj: **kaskáda elektrokotlů 72 kW**, řízená postupně po 6 kW.
 - Kotelnu připojíme na sekundární stranu Vaší výměníkové stanice, tedy na stávající rozdělovač topné soustavy. Rozvody, čerpadla jednotlivých větví i jednotky Sahara zůstávají beze změny. Výměníková stanice zůstane osazená, takže kdykoli lze přejít zpět na teplovod.
 - Venkovní okruh tepelných čerpadel je plněn nemrznoucí směsí. Provoz hlídá nadřazená regulace s dálkovým dohledem a hlášením poruch.
@@ -29,8 +32,8 @@ Výpočty vycházejí z naměřené spotřeby. Při změně provozu (např. vyš
 
 **Co potřebujeme z Vaší strany**
 - Elektrický přívod **3 × 160 A** pro kotelnu (souběžný provoz tepelných čerpadel a elektrokotlů hlídá omezovač příkonu).
-- Zpevněnou plochu pro kontejner 20′ (cca 6,1 × 2,5 m) a místo pro dvě venkovní jednotky v blízkosti výměníkové stanice.
-- Přístup k napojovacím místům topné soustavy a součinnost při obhlídce a uvádění do provozu.
+- Místo pro dvě venkovní jednotky v blízkosti výměníkové stanice. U kontejnerového řešení navíc zpevněnou plochu pro kontejner 20′ (cca 6,1 × 2,5 m).
+- Přístup k napojovacím místům topné soustavy a součinnost při instalaci a uvádění do provozu.
 
 **Teplá voda:** TUV se dál připravuje ve stávajícím nepřímotopném zásobníku z topné vody, takže ji kotelna zajistí automaticky přes stávající větev. Při ohřevu TUV a při pravidelné tepelné dezinfekci regulace dočasně zvýší teplotu topné vody (na 65–70 °C).
 
@@ -46,7 +49,7 @@ Elektrickou energii spotřebovanou kotelnou hradí nájemce. Kotelna má vlastn�
 
 Po skončení pronájmu je možné kotelnu za zvýhodněnou cenu odkoupit. Podmínky rádi dohodneme a zapracujeme přímo do smlouvy.
 
-Jako další krok navrhujeme krátkou obhlídku na místě: umístění kontejneru, místo napojení, elektrický přívod. Poté zašleme návrh smlouvy a termín dodání.
+Jako další krok navrhujeme dohodnout variantu umístění (kontejner, nebo instalace do Vaší kotelny). Poté Vám zašleme návrh smlouvy a termín dodání.
 
 S pozdravem
 

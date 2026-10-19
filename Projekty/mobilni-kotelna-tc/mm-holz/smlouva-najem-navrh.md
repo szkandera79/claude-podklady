@@ -17,10 +17,10 @@ uzavřená podle § 2201 a násl. zákona č. 89/2012 Sb., občanský zákoník
 1.1 Pronajímatel přenechává nájemci k dočasnému užívání mobilní kotelnu s tepelnými čerpadly (dále jen „kotelna“) a nájemce se zavazuje platit nájemné a další platby podle této smlouvy.
 
 1.2 Kotelnu tvoří zejména:
-- kontejner 20′ s technologií (akumulace 2 × 1 000 l, deskový výměník, oběhová čerpadla, expanzní a pojistná zařízení, rozvaděč, řídicí systém s dálkovým dohledem, podružný elektroměr a kalorimetr),
+- technologie kotelny – podle dohody stran umístěná v kontejneru 20′, nebo instalovaná přímo v kotelně objektu (akumulace 2 × 1 000 l, deskový výměník, oběhová čerpadla, expanzní a pojistná zařízení, rozvaděč, řídicí systém s dálkovým dohledem, podružný elektroměr a kalorimetr),
 - 2 × venkovní tepelné čerpadlo REO HEATING RH X50,
 - kaskáda elektrokotlů o celkovém výkonu 72 kW,
-- propojovací potrubí a kabeláž mezi kontejnerem a jednotkami.
+- propojovací potrubí a kabeláž mezi technologií kotelny a venkovními jednotkami.
 
 Podrobná specifikace a výrobní čísla jsou uvedeny v příloze č. 1.
 
@@ -77,7 +77,7 @@ Podrobná specifikace a výrobní čísla jsou uvedeny v příloze č. 1.
 ## 6. Povinnosti nájemce
 
 6.1 Nájemce zajistí na vlastní náklady:
-- a) zpevněnou plochu pro kontejner a venkovní jednotky podle přílohy č. 2,
+- a) plochu pro venkovní jednotky a u kontejnerového řešení zpevněnou plochu pro kontejner, případně prostor ve stávající kotelně objektu, vše podle přílohy č. 2,
 - b) vyhrazený elektrický přívod 3 × 160 A ukončený u kotelny včetně revize,
 - c) přístup k místům napojení topné soustavy, přístup pronajímatele ke kotelně a součinnost při instalaci a servisu.
 
@@ -119,7 +119,7 @@ Kotelna zůstává po celou dobu nájmu ve vlastnictví pronajímatele. Není so
 
 9.3 Kupní smlouva bude uzavřena do 30 dnů od uplatnění opce. Vlastnické právo přechází úplným zaplacením kupní ceny. Platba podle čl. 3.2 c) se v tom případě neúčtuje.
 
-9.4 Na žádost nájemce lze technologii před převodem přemístit z kontejneru do kotelny objektu za úplatu podle samostatné nabídky. Kupní cena se pak sníží o hodnotu kontejneru [ ] Kč.
+9.4 Je-li technologie umístěna v kontejneru, lze ji na žádost nájemce před převodem přemístit z kontejneru do kotelny objektu za úplatu podle samostatné nabídky. Kupní cena se pak sníží o hodnotu kontejneru [ ] Kč.
 
 ## 10. Skončení nájmu a vrácení
 
