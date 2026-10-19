@@ -18,6 +18,7 @@
 | Z11 | Regulace | PLC kaskáda (studie) | kompletní algoritmus vč. bivalence, rotace, omezovače příkonu, režimů | zadání rev1 |
 | Z12 | Rozpočet | žádný | nový položkový rozpočet A/B, práce 50 000 Kč [Z]; nabídka CN26OV1321 zatím nezapracována | zadání rev1 |
 | Z13 | E‑mail p. Dorňákovi | koncept 2 × X50 + TUV | **neaktuální** – před odesláním přepracovat podle rev1 | rozpor se Z1, Z8 |
+| Z14 | Rozpočet AKU | 2 × 30 000 [O] | 2 × 19 850 + doprava = 42 700 [N] (Allegro PS-00, skutečný objem 843 l) | nabídka dodaná zadavatelem 19. 10. |
 
 Nové soubory:
 - `00-audit.md` … `09-otevrene-body.md`,

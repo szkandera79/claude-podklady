@@ -31,7 +31,7 @@ Ceny jsou v Kč bez DPH.
 | # | Položka | Množství | Cena | Typ |
 |---|---|---|---|---|
 | B1 | Tepelné čerpadlo REO RH X50 (sklad) | 2 ks | 2 × 110 000 = 220 000 | [Z] |
-| B2 | **Akumulační nádrž 1 000 l, jen pro topnou vodu** (bez výměníků a el. patron), izolovaná – **přednostně ze skladu**, pokud je dostupná; jinak nákup | 2 ks | 2 × 30 000 = 60 000 (při nákupu); ze skladu = skladová cena [CHYBÍ] | [O]* / [Z] |
+| B2 | **Akumulační nádrž 1 000 l, jen pro topnou vodu** (bez výměníků a el. patron) – přednostně ze skladu; jinak nákup: **Allegro „Tepelný pufr 1000 l“ PS-00, nabídka 16343165815**, 24 018 Kč s DPH = 19 850 Kč bez DPH/ks + doprava od 1 800 Kč s DPH (≈ 1 490 Kč bez DPH) | 2 ks | 2 × (19 850 + 1 490) = **42 700** | [N]** |
 | B3 | Deskový výměník VS-TČ 100 kW glykol/voda + náplň PG 35 % (≈ 200 l) | 1 | 52 000 | ⟲ [O] |
 | B4 | Čerpadlo P2 EC 17 m³/h, 5 m + P1a/P1b k X50 (≈ 11 m³/h, 12–13 m, glykol) | 3 ks | 60 000 | ⟲ [O] |
 | B5 | Hydraulika kotelny: potrubí DN65/DN80, armatury, filtr + magnetický odkalovač, expanze 200 l + 35 l, PV, manometry, izolace | 1 | 95 000 | ⟲ [O] |
@@ -41,9 +41,20 @@ Ceny jsou v Kč bez DPH.
 | B9 | PLC základ, HMI, 4G router, UPS 24 V, čidla (12 × Pt1000), tlaková čidla | 1 | 55 000 | [O] |
 | B10 | Venkovní část: patky, antivibrační uložení, izolované glykolové potrubí DN80, prostupy | 1 | 40 000 | [O] |
 | B11 | Projekt elektro, revize elektro, tlakové zkoušky, dokumentace pro předání a odkup | 1 | 35 000 | [O] |
-| | **Mezisoučet B** | | **≈ 689 000** | |
+| | **Mezisoučet B** | | **≈ 671 700** | |
 
-\* Ve studii `univerzalni/` zadavatel uvedl cenu AKU 1 000 l 5 000 Kč (pravděpodobně skladová nádrž bez izolace). Model `src/model.py` počítá s 52 000 Kč za AKU vč. 2 el. patron. Zde je odhad 30 000 Kč/ks za izolovanou nádrž bez patron. **Ověřit.**
+\*\* Cena z veřejné nabídky Allegro k 19. 10. 2026 (prodejce wise_solution, odeslání z Polska, dodání ≈ 14 dní, „S fakturou s DPH“). Přepočet na cenu bez DPH 21 % je náš.
+
+Parametry podle nabídky:
+- **skutečný objem 843 l**,
+- výška 199 cm, Ø 79 cm bez izolace / 96 cm s odnímatelnou izolací,
+- max. 95 °C, 5 bar,
+- 9 × 6/4″, možnost el. tělesa,
+- třída B, výrobce neuveden.
+
+Pokud budou nádrže ze skladu, platí skladová cena [Z].
+
+Změna proti předchozí verzi rozpočtu: B2 60 000 [O] → 42 700 [N], mezisoučet B 689 000 → 671 700.
 
 ## C. Práce
 
@@ -70,11 +81,11 @@ Ceny jsou převzaté z modelu `mobilni-kotelna-tc/src/model.py` [O]. X50 stojí 
 | | Stávající kotelna (A) | Kontejner (B) |
 |---|---|---|
 | A – elektrická bivalence | 239 000 | 239 000 |
-| B – ostatní technologie vč. 2 × X50 | 689 000 | 689 000 |
+| B – ostatní technologie vč. 2 × X50 | 671 700 | 671 700 |
 | C – práce | 50 000 | 50 000 |
 | D – kontejner | — | 203 000 |
-| Rezerva 7 % [O] | 68 000 | 83 000 |
-| **Celkem orientačně** | **≈ 1 046 000** | **≈ 1 264 000** |
+| Rezerva 7 % [O] | 67 300 | 81 500 |
+| **Celkem orientačně** | **≈ 1 028 000** | **≈ 1 245 000** |
 
 **Pro odkup Alignem po 6 měsících:**
 - Varianta A nevyžaduje přesun a je levnější.

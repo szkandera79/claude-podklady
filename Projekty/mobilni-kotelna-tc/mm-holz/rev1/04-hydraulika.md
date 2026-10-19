@@ -90,6 +90,12 @@ Ocel, ε 0,05 mm, ζ místních odporů podle počtu armatur.
   - Voda: kotelna (AKU 2 000 l + potrubí ≈ 300 l) ΔV ≈ 52 l → **EN ≥ 160 l, navrženo 200 l** [O].
   - Stávající Reflex N 32/3 pokryje jen původní soustavu. Musí se přepočítat na celek, protože objem soustavy, statická výška a nastavení PV jsou **[CHYBÍ]**.
   - PV 3 bar předpoklad: tlak sekundáru HV VS **[CHYBÍ]**.
+- **AKU – kandidát Allegro PS-00 1 000 l** (08, B2):
+  - skutečný objem jen **843 l** (2 × 843 = 1 686 l). Min. objem pro X50 ≈ 527 l/jednotku je splněn.
+  - **Hrdla 6/4″ (≈ DN40):** nabíjení při plném výkonu TČ (65 °C, A7 ≈ 68 kW, Δt 5 K → 11,7 m³/h, tj. 5,85 m³/h na nádrž) dává ve hrdle 1,23 m/s.
+  - Pro stratifikaci je to hodně. Připojit každý proud dvěma hrdly, nebo nabíjet s Δt 8 K (P2 na nižší průtok).
+  - Expanze s 1 990 l vody: ΔV ≈ 45 l → EN ≥ 140 l (navrženo 200 l zůstává).
+  - Klopná výška 2,14 m bez izolace (izolace je odnímatelná). Ø 0,96 m s izolací.
 - **Doplňování:** stávající úprava vody DETO KZV 100 zůstává. Plnění AKU upravenou vodou podle VDI 2035 / ČSN 07 7401 [O].
 
 ## 6. Glykol – zdůvodnění
