@@ -1,5 +1,7 @@
 # MM Holz / Alignum Paskov — mobilní kotelna (návrh sestavy)
 
+> **Aktuální je revize 1 → [`rev1/`](rev1/01-technicka-zprava.md)** (19. 10. 2026): 2 × RH X50 + elektrická bivalence 72 kW, AKU 2 × 1 000 l, potřeba z měření MM Holz 62–69 kW. Níže je rev0 (archiv, beze změn).
+
 Poptávka: Ing. Alan Dorňák, Mayr-Melnhof Holz Paskov s.r.o. (16. 10. 2026). Vytápěný objekt je firma **Alignum**
 (sousední areál, „Výroba palet Paskov“, k. ú. Paskov, Žabeň). Dnes ho zásobuje teplovod 95 °C / 0,5 MPa
 přes výměníkovou stanici HV VS 200 kW. Návrh vychází ze studie `../univerzalni/` (Mobilní kotelna REO HEATING – návrh).

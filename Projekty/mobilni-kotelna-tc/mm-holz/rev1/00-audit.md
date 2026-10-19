@@ -144,3 +144,7 @@ Zdroje:
 - Výkonová mapa X50 – `univerzalni/src/vykony.json` (z DATA.json výrobce).
 - Podklady klienta – `../podklady/`.
 - Protherm RAY – https://www.protherm.cz/files/downloads/prospekty/prospekt-ray-v-02022024-2855726.pdf a https://www.arecenze.cz/?p=152519.
+
+## Doplněk 19. 10. 2026 (po auditu)
+- R2 vyřešen novým podkladem: statistika dodávky tepla MM Holz 2006–2026 → skutečná potřeba 62 kW při −12 °C / 69 kW při −15 °C (viz `02-vykonova-bilance.md`). Číslo 88 kW se pro návrh nepoužívá.
+- Zadavatel rozhodl: připojení za výměník, sériový elektrický dohřev, bilance hala + administrativa, chybějící údaje označit.
