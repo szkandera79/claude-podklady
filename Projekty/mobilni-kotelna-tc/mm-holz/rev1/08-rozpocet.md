@@ -52,6 +52,14 @@ Parametry podle nabídky:
 - 9 × 6/4″, možnost el. tělesa,
 - třída B, výrobce neuveden.
 
+**Karta výrobce Lemet 16.1000 BN-0** (`../podklady/lemet-ps00-buffer-400-2000.pdf`, cena 24 000 Kč s DPH [Z]):
+- skutečný objem **952 l**,
+- **95 °C / 3 bar**, izolace PUR odnímatelná, třída C, 178 kg,
+- výška 2 087 mm, **Ø 800 mm bez izolace** / 1 000 mm s izolací,
+- hrdla G 6/4″, 4 mufy pro čidla.
+
+Údaje se liší od textu nabídky Allegro (843 l, 5 bar, Ø 79/96 cm, 199 cm, třída B). **Před objednáním potvrdit, který typ prodejce dodá.**
+
 Pokud budou nádrže ze skladu, platí skladová cena [Z].
 
 Změna proti předchozí verzi rozpočtu: B2 60 000 [O] → 42 700 [N], mezisoučet B 689 000 → 671 700.
