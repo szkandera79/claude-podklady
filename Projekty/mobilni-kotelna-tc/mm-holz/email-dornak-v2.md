@@ -32,7 +32,7 @@ Výpočty vycházejí z naměřené spotřeby. Při změně provozu (např. vyš
 - Zpevněnou plochu pro kontejner 20′ (cca 6,1 × 2,5 m) a místo pro dvě venkovní jednotky v blízkosti výměníkové stanice.
 - Přístup k napojovacím místům topné soustavy a součinnost při obhlídce a uvádění do provozu.
 
-Příprava teplé vody není součástí této nabídky. Pokud ji budete chtít zajistit z kotelny, rádi navrhneme doplnění.
+**Teplá voda:** TUV se dál připravuje ve stávajícím nepřímotopném zásobníku z topné vody, takže ji kotelna zajistí automaticky přes stávající větev. Při ohřevu TUV a při pravidelné tepelné dezinfekci regulace dočasně zvýší teplotu topné vody (na 65–70 °C).
 
 **Cenové podmínky (bez DPH)**
 

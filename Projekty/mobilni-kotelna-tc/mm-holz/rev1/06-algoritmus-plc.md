@@ -32,6 +32,17 @@ T_req = clamp( 38 − 1,4 × T_e + ΔT_korekce , 30 °C , T_max )      T_max = 7
 - Útlum: provoz je třísměnný, výchozí stav **bez útlumu**. O víkendu hala volitelně 15 °C (ΔT −6 K).
 - Nad otopnou hranicí (T_e,60min > 15,5 °C, nastavitelné) vytápění vypnuto. Čerpadla se protáčejí 1× denně 2 min.
 
+## 2a. Ohřev TUV (stávající zásobník ACV 320 l)
+
+- **Požadavek na ohřev TUV:** signál ze stávající regulace TUV (chod čerpadla větve TUV nebo kontakt termostatu zásobníku). Rozhraní **[CHYBÍ]**, ověřit na obhlídce. Náhrada: vlastní čidlo v jímce zásobníku.
+- **Během požadavku:** T_req,TUV = max(T_req, 65 °C) a T_AKU,set = 62 °C (TČ do 65 °C), max. 90 min.
+  - Zda má TUV přednost před vytápěním, řídí stávající regulace.
+- **Dezinfekce:** 1× týdně (neděle 2:00) T_req = 70 °C na 60 min.
+  - Teplotu nad možnosti TČ dodá elektrický dohřev.
+  - Při dezinfekci se blokace EK nad −5 °C neuplatní.
+  - Proudový limit platí.
+- **Léto (vytápění vypnuto):** TČ pracují jen pro TUV, AKU nabíjená na 62 °C, jedna TČ (rotace).
+
 ## 3. Tepelná čerpadla (priorita)
 
 **Žádaná teplota AKU pro TČ:**

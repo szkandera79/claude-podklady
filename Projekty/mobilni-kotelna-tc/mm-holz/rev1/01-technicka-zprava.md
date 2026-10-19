@@ -55,7 +55,10 @@ Projektových 88 kW **není** tepelná ztráta objektu. Skutečná potřeba je �
   - z měření vychází potřeba 55 °C při −12 °C a 59 °C při −15 °C (`03`),
   - TČ pracují do 65 °C (do −12 °C), resp. 60 °C (pod −12 °C), pro tyto rozsahy má výrobce data,
   - **70 °C zajišťuje elektrický dohřev, ne TČ.**
-- **TUV:** není součástí projektu (zadání). Větev ACV 320 l na RS Kombi zůstává bez zdroje. **Rozhodnutí o TUV [CHYBÍ]** – klient ji v poptávce uvádí.
+- **TUV (upřesnění zadavatele 19. 10.):** TUV se připravuje ve stávajícím nepřímotopném zásobníku ACV Smart Line 320 l z topné vody (větev TUV na RS Kombi, čerpadlo DAB A 50/180 XM). Kotelna ji proto zajišťuje automaticky.
+  - Během ohřevu TUV regulace zvýší přívod na 65 °C.
+  - 1× týdně proběhne dezinfekce 70 °C, kterou zajistí elektrický dohřev (06, kap. 2a).
+  - Průměrná potřeba TUV a ztrát ≈ 3,6 kW (31 MWh/rok, ze základu regrese) je v bilanci krytá s rezervou. Krátkodobé špičky dobíjení zásobníku pokryje AKU.
 
 ## 4. Výkon RH X50 při 70 °C [D – výkonová mapa výrobce, ne certifikace]
 

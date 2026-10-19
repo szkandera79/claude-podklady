@@ -12,7 +12,7 @@
 | O8 | Modbus mapa registrů RH X50 (žádaná teplota, výkon, stavy) | **[CHYBÍ]**; záloha: povolení kontaktem | dotaz výrobce | REO | kvalita řízení |
 | O9 | Elektrokotle: externí řízení po 6 kW, max. teplota a tlak, rozhraní, jištění, dostupnost, cena; Protherm RAY 24 KE | RAY má modulaci a vestavěné čerpadlo, řízení stupňů z PLC nedoloženo → doporučen stykačový výrobek | technické listy, poptávka (O1) | REO | počet stupňů, hydraulika O4 |
 | O10 | Prostor kotelny (půdorys, výška, dveře, únosnost podlahy) | výkres VS: délka ≈ 4,8 m, šířka **[CHYBÍ]**; **dveře 90 cm** [Z]; požadavek na AKU: Ø bez izolace ≤ 790 mm (Allegro PS-00 Ø 79 cm vyhovuje dle zadavatele), izolace odnímatelná; vyloučeno LU-MI KXT0 d850 | zaměření na obhlídce | REO | varianta A × kontejner |
-| O11 | TUV mimo projekt × poptávka klienta (12 zaměstnanců × 3 směny) | ACV 320 zůstane bez zdroje | rozhodnutí zadavatele, dotaz Alignum | zadavatel | TUV jednotka nebo el. ohřev |
+| O11 | TUV – vyřešeno: ohřev ve stávajícím ACV 320 l z topné vody (zadavatel 19. 10.) | zbývá ověřit rozhraní stávající regulace TUV (signál požadavku), nastavení zásobníku a přednost TUV | obhlídka | REO | regulace TUV a dezinfekce |
 | O12 | Objem soustavy, statická výška, nastavení PV sekundáru | **[CHYBÍ]**; EN 200 l, PV 3 bar předpoklad | obhlídka, štítky | REO | expanze, pojištění |
 | O13 | Rozdělení potřeby hala / administrativa | předpoklad podle projektu (82 / 18 %) | podružné měření, případně odhad z provozu | Alignum | potřebná teplota přívodu |
 | O14 | Příčina poklesu spotřeby po roce 2016 (≈ −20 %) | návrh z let 2021–2025, starší roky = horní mez (P(−15) 75–82 kW) | dotaz Alignum (provoz, regulace, úpravy objektu) | Alignum | dimenze bivalence |

@@ -26,7 +26,7 @@ Podrobná specifikace a výrobní čísla jsou uvedeny v příloze č. 1.
 
 1.3 Kotelna slouží k vytápění objektu [adresa], k. ú. Paskov (dále jen „objekt“). Připojí se na sekundární stranu stávající výměníkové stanice objektu.
 
-1.4 Příprava teplé vody není předmětem této smlouvy.
+1.4 Kotelna zajišťuje vytápění a zároveň ohřev teplé užitkové vody ve stávajícím nepřímotopném zásobníku objektu, který je napojen na topnou soustavu. Zásobník a rozvody TUV nejsou předmětem nájmu a odpovídá za ně nájemce.
 
 ## 2. Místo instalace, doba nájmu
 

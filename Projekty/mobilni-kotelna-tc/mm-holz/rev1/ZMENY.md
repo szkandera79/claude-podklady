@@ -19,6 +19,7 @@
 | Z12 | Rozpočet | žádný | nový položkový rozpočet A/B, práce 50 000 Kč [Z]; nabídka CN26OV1321 zatím nezapracována | zadání rev1 |
 | Z13 | E‑mail p. Dorňákovi | koncept 2 × X50 + TUV | **neaktuální** – před odesláním přepracovat podle rev1 | rozpor se Z1, Z8 |
 | Z14 | Rozpočet AKU | 2 × 30 000 [O] | 2 × 19 850 + doprava = 42 700 [N] (Allegro PS-00, skutečný objem 843 l) | nabídka dodaná zadavatelem 19. 10. |
+| Z15 | TUV | mimo projekt (Z8) | **TUV zajištěna**: stávající ACV 320 l ohřívaná z topné vody přes stávající větev; PLC zvyšuje přívod na 65 °C, dezinfekce 70 °C z el. dohřevu | upřesnění zadavatele 19. 10. |
 
 Nové soubory:
 - `00-audit.md` … `09-otevrene-body.md`,
