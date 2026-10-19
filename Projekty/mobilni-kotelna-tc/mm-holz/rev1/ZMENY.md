@@ -9,7 +9,7 @@
 | Z2 | Návrhový výkon | projektový odhad 88 kW hala + 17 kW administrativa; skutečná ztráta neznámá | **z měření MM Holz 2021–2025: 62 kW (−12 °C), 69 kW (−15 °C); návrh × 1,10 = 68 / 76 kW** | nový podklad: statistika dodávky tepla |
 | Z3 | Umístění | kontejner 20′ (studie) | stávající kotelna (varianta A), kontejner jako varianta B | zadání rev1 + možný odkup Alignem |
 | Z4 | Připojení | za výměník (doporučení rev0) | za výměník HV VS – potvrzeno | rozhodnutí z auditu |
-| Z5 | Akumulace | AKU 1 000 l nebo 2 × 300 l | AKU 2 × 1 000 l paralelně, čidla nahoře / uprostřed / dole | zadání rev1 |
+| Z5 | Akumulace | AKU 1 000 l nebo 2 × 300 l | AKU 2 × 1 000 l **jen pro topnou vodu** (bez výměníků a patron), přednostně ze skladu; paralelně, čidla nahoře / uprostřed / dole | zadání rev1, upřesnění zadavatele 19. 10. |
 | Z6 | Bivalence – zapojení | — | sériový dohřev přívodu za AKU (vstřikovací okruh, P4), obtok AKU V3 | audit: paralelní zapojení ohřívá vstup do TČ |
 | Z7 | Max. teplota | 70 °C z X50 do −10 °C, 60 °C do −25 °C | max. 70 °C, ale TČ jen do 65/60 °C, 70 °C z EK; potřeba z měření 55–63 °C | výkonová mapa + měření |
 | Z8 | TUV | ACV 320 ohřívaná z kaskády X50 | mimo projekt (zadání) – otevřeno O11 | zadání rev1 |

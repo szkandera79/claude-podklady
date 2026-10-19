@@ -31,7 +31,7 @@ Ceny jsou v Kč bez DPH.
 | # | Položka | Množství | Cena | Typ |
 |---|---|---|---|---|
 | B1 | Tepelné čerpadlo REO RH X50 (sklad) | 2 ks | 2 × 110 000 = 220 000 | [Z] |
-| B2 | **Akumulační nádrž 1 000 l, izolovaná, 6/3 bar** | 2 ks | 2 × 30 000 = 60 000 | [O]* |
+| B2 | **Akumulační nádrž 1 000 l, jen pro topnou vodu** (bez výměníků a el. patron), izolovaná – **přednostně ze skladu**, pokud je dostupná; jinak nákup | 2 ks | 2 × 30 000 = 60 000 (při nákupu); ze skladu = skladová cena [CHYBÍ] | [O]* / [Z] |
 | B3 | Deskový výměník VS-TČ 100 kW glykol/voda + náplň PG 35 % (≈ 200 l) | 1 | 52 000 | ⟲ [O] |
 | B4 | Čerpadlo P2 EC 17 m³/h, 5 m + P1a/P1b k X50 (≈ 11 m³/h, 12–13 m, glykol) | 3 ks | 60 000 | ⟲ [O] |
 | B5 | Hydraulika kotelny: potrubí DN65/DN80, armatury, filtr + magnetický odkalovač, expanze 200 l + 35 l, PV, manometry, izolace | 1 | 95 000 | ⟲ [O] |

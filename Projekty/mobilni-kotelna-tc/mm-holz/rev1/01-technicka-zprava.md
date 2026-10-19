@@ -41,7 +41,7 @@ Projektových 88 kW **není** tepelná ztráta objektu. Skutečná potřeba je �
   - 2 × REO RH X50, kaskáda řízená PLC, venku na patkách,
   - primár s propylenglykolem 35 % [D: návod požaduje nemrznoucí směs pod 0 °C],
   - deskový výměník VS-TČ 100 kW.
-- **Akumulace:** 2 × 1 000 l paralelně (Tichelmann), čidla nahoře, uprostřed a dole. AKU slouží zároveň jako hydraulický oddělovač.
+- **Akumulace:** 2 × 1 000 l jen pro topnou vodu (bez výměníků a el. patron), přednostně ze skladu, paralelně (Tichelmann), čidla nahoře, uprostřed a dole. AKU slouží zároveň jako hydraulický oddělovač.
 - **Zdroj 2 – elektrická bivalence a záloha:**
   - 72 kW = 3 bloky × 4 stupně po 6 kW,
   - **zapojená sériově na přívodu za AKU** jako vstřikovací okruh s čerpadlem P4,

@@ -18,6 +18,6 @@
 | O14 | Příčina poklesu spotřeby po roce 2016 (≈ −20 %) | návrh z let 2021–2025, starší roky = horní mez (P(−15) 75–82 kW) | dotaz Alignum (provoz, regulace, úpravy objektu) | Alignum | dimenze bivalence |
 | O15 | Přívod 3 × 160 A – existence, délka, selektivita, hlavní jistič objektu | podle zadání „vyhrazený“ | projekt elektro, revize | Alignum / projektant | omezovač příkonu |
 | O16 | Umístění X50 venku: plocha, odstupy (sání 4 strany ≥ 0,5 m, výfuk nahoru ≥ 2 m [D]), hluk k okolní zástavbě, kondenzát | **[CHYBÍ]** | obhlídka | REO | dispozice |
-| O17 | Cena AKU 1 000 l (dříve 5 000 Kč [Z] vs. odhad 30 000 Kč) | 30 000 Kč/ks [O] | poptávka / sklad | REO | rozpočet |
+| O17 | AKU 2 × 1 000 l jen pro topnou vodu – dostupnost ve skladu, skladová cena, provedení (tlak, nátrubky pro 3 čidla, izolace, rozměry) | ze skladu, pokud jsou k dispozici [Z]; jinak nákup ≈ 30 000 Kč/ks [O] | kontrola skladu | REO | rozpočet, prostor kotelny |
 | O18 | Cena tepla, výše nájmu, odkupní cena | cena tepla neznámá [Z]; odkup po ≈ 6 měsících pravděpodobný | obchodní rozhodnutí | REO | ekonomika, varianta A/B |
 | O19 | Statické posouzení venkovních patek, revize, projekt elektro a ÚT pro realizaci | mimo tento koncept | autorizovaná osoba | REO | — |
