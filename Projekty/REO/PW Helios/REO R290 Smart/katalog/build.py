@@ -867,24 +867,29 @@ ul.chk li:before{content:"";position:absolute;left:0;top:1.3mm;width:2.4mm;heigh
 .dealer{width:48mm;height:22mm;border:1.5px dashed rgba(255,255,255,.55);border-radius:2.5mm;font-size:7pt;text-transform:uppercase;letter-spacing:.08em;padding:1.5mm 2.5mm;opacity:.85}
 """
 
-SLUG = "REO-R290-Smart_katalog"
-html = (f'<!doctype html><html lang="cs"><head><meta charset="utf-8"><title>REO R290 Smart – katalog a ceník | REO HEATING</title>'
-        f'{FONTS}<style>{CSS}</style></head><body>{p1+p2+p3+p4+p5+p6+p7+p8}</body></html>')
-out = ROOT / f"{SLUG}.html"
-out.write_text(html, encoding="utf-8")
-pdf = ROOT / f"{SLUG}.pdf"
-subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--no-pdf-header-footer", "--virtual-time-budget=8000",
-                f"--print-to-pdf={pdf}", out.as_uri()], check=True, capture_output=True)
-print("PDF", pdf)
+def main():
+    SLUG = "REO-R290-Smart_katalog"
+    html = (f'<!doctype html><html lang="cs"><head><meta charset="utf-8"><title>REO R290 Smart – katalog a ceník | REO HEATING</title>'
+            f'{FONTS}<style>{CSS}</style></head><body>{p1+p2+p3+p4+p5+p6+p7+p8}</body></html>')
+    out = ROOT / f"{SLUG}.html"
+    out.write_text(html, encoding="utf-8")
+    pdf = ROOT / f"{SLUG}.pdf"
+    subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--no-pdf-header-footer", "--virtual-time-budget=8000",
+                    f"--print-to-pdf={pdf}", out.as_uri()], check=True, capture_output=True)
+    print("PDF", pdf)
 
-hero_html = ROOT / "hero-smart-watertank.html"
-hero_html.write_text(f'<!doctype html><html><head><meta charset="utf-8">{FONTS}<style>html,body{{margin:0}}'
-                     f'.hero{{position:relative;width:1186px}}.hero img{{display:block;width:100%}}'
-                     f'.hero-ov{{position:absolute;inset:0;width:100%;height:100%}}</style></head>'
-                     f'<body><div class="hero"><img src="{HERO}">{hero_overlay()}</div></body></html>', encoding="utf-8")
-png = ROOT / "hero-smart-watertank.png"
-subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=2",
-                "--window-size=1186,838", "--virtual-time-budget=8000", f"--screenshot={png}", hero_html.as_uri()],
-               check=True, capture_output=True)
-hero_html.unlink()
-print("PNG", png)
+    hero_html = ROOT / "hero-smart-watertank.html"
+    hero_html.write_text(f'<!doctype html><html><head><meta charset="utf-8">{FONTS}<style>html,body{{margin:0}}'
+                         f'.hero{{position:relative;width:1186px}}.hero img{{display:block;width:100%}}'
+                         f'.hero-ov{{position:absolute;inset:0;width:100%;height:100%}}</style></head>'
+                         f'<body><div class="hero"><img src="{HERO}">{hero_overlay()}</div></body></html>', encoding="utf-8")
+    png = ROOT / "hero-smart-watertank.png"
+    subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=2",
+                    "--window-size=1186,838", "--virtual-time-budget=8000", f"--screenshot={png}", hero_html.as_uri()],
+                   check=True, capture_output=True)
+    hero_html.unlink()
+    print("PNG", png)
+
+
+if __name__ == "__main__":
+    main()
