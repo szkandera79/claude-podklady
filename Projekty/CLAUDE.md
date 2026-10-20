@@ -32,8 +32,10 @@ CLAUDE.md** a drž se pravidel tam uvedených.
 | `porovnani-x50-rh060/` | srovnání jednotek pro kaskády BD: RH X50 / X40 / X20 / RH060 |
 | `mobilni-kotelna-tc/` | podnikatelský a technický model pronájmu mobilních kotelen s TČ v kontejneru; `univerzalni/` = studie univerzální kotelny (fáze 1 hotová) |
 | `reo-iot-cz/` | rozšíření Chrome nad IOT Power World (CZ překlad, encyklopedie parametrů, chyby, diagnostika); vlastní **CLAUDE.md** (read-only, `podklady/` mimo git) |
+| `eko4home-web/` | návrh redesignu eko4home.cz (Riva Trade): design dle klimatizacekasparek.vercel.app, produkty REO RH030–RH060, Smart, RHX Pro, nádrže s cenami |
 | `marketing/` | oslovení SVJ (e‑maily, leady CZT, tracker), Google Ads / PPC, grafika |
 | `claude-voice-cz/` | **kopie** projektu hlasového asistenta pro iPhone; hlavní verze je v `~/Developer/ClaudeVoiceCZ` |
+| `reo-crm/` | vlastní CRM REO HEATING (leady FB/IG z Google Drive, fáze, schůzky, faktury); artefakt LnRFiysRw114a2LJbqid6P; vlastní **CLAUDE.md** (data = osobní údaje, mimo git) |
 | `REO/` | značka REO HEATING — návody, datové listy, katalogy, letáky, prezentace, web `reoheating-web/` |
 | `banner-generator/` | generátor reklamních bannerů (ThermaVera / REO HEATING / SuperHeating), Gemini API — klíč jen v `.env.local` (není v gitu) |
 | `BD Michal Claude/` | podklady k bytovému domu Michal (PDF, smlouvy) |
