@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Eko4home – tepelná čerpadla a fotovoltaika | Třinec</title>
-<meta name="description" content="Tepelná čerpadla REO HEATING R290, akumulační nádrže a fotovoltaika na klíč. Regionální firma z Třince – Třinecko, Těšínsko, Jablunkovsko.">
+<meta name="description" content="Tepelná čerpadla REO HEATING R290, akumulační nádrže a fotovoltaika na klíč pro rodinné domy, bytové domy i komerční objekty. Sídlo v Třinci, realizace po celé České republice a na Slovensku.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@ h2{font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:800;margin-bottom:14px}
 .lead{color:var(--muted);font-size:1.08rem;max-width:640px}
 section{padding:96px 0}
 .center{text-align:center}.center .lead{margin:0 auto}
-.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;padding:14px 26px;border-radius:999px;transition:.2s;border:2px solid transparent;cursor:pointer;font-size:1rem}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;padding:14px 26px;border-radius:999px;transition:.2s;border:2px solid transparent;cursor:pointer;font-size:1rem;white-space:nowrap}
 .btn-primary{background:var(--brand);color:#fff}.btn-primary:hover{background:var(--brand-dark)}
 .btn-ghost{border-color:var(--brand);color:var(--brand)}.btn-ghost:hover{background:var(--brand-light)}
 .btn-amber{background:var(--amber);color:var(--brand-dark)}.btn-amber:hover{filter:brightness(.95)}
@@ -38,7 +38,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.35rem;color:var(--brand-dark)}
 .logo-mark{width:38px;height:38px;border-radius:12px;background:var(--brand);display:grid;place-items:center}
 .logo b{color:var(--brand)}
-.menu{display:flex;gap:24px;font-weight:500;font-size:.95rem;white-space:nowrap}
+.menu{display:flex;gap:20px;font-weight:500;font-size:.95rem;white-space:nowrap}
 .menu a:hover{color:var(--brand)}
 .nav-right{display:flex;align-items:center;gap:18px}
 .phone{font-weight:700;color:var(--brand-dark);white-space:nowrap}
@@ -55,8 +55,11 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .stat strong{display:block;font-size:1.8rem;font-weight:800;color:var(--brand-dark)}
 .stat span{color:var(--muted);font-size:.9rem}
 .hero-img{position:relative}
-.hero-img img{border-radius:28px;box-shadow:var(--shadow);aspect-ratio:4/3.6;object-fit:cover;width:100%}
-.badge{position:absolute;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center;font-size:.9rem}
+.hero-unit{border-radius:28px;box-shadow:var(--shadow);aspect-ratio:4/3.6;width:100%;background:radial-gradient(circle at 50% 45%,#fff 0,var(--brand-light) 45%,#cfe6d7 100%);display:grid;place-items:center;position:relative;overflow:hidden}
+.hero-unit::after{content:"";position:absolute;left:15%;right:15%;bottom:7%;height:22px;background:radial-gradient(ellipse,rgba(18,56,33,.28),transparent 70%)}
+.hero-unit img{position:absolute;inset:7% 0 9%;margin:auto;height:84%;width:auto;max-width:80%;object-fit:contain;z-index:1}
+.hero-label{position:absolute;left:22px;top:20px;font-family:Kalam,cursive;font-weight:700;color:var(--brand);font-size:1.15rem}
+.badge{position:absolute;z-index:2;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center;font-size:.9rem}
 .badge .ic{width:42px;height:42px;border-radius:12px;background:var(--brand-light);display:grid;place-items:center;font-size:1.3rem}
 .badge b{display:block;color:var(--brand-dark)}
 .badge.b1{left:-24px;bottom:36px}.badge.b2{right:-18px;top:28px}
@@ -69,6 +72,19 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .card h3{font-size:1.15rem;margin-bottom:8px}
 .card p{color:var(--muted);font-size:.95rem}
 
+/* segments */
+.segs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.seg{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;flex-direction:column}
+.seg.featured{background:var(--brand);color:#fff;border-color:var(--brand)}
+.seg .ic{width:56px;height:56px;border-radius:16px;background:var(--brand-light);display:grid;place-items:center;font-size:1.6rem;margin-bottom:18px}
+.seg.featured .ic{background:rgba(255,255,255,.15)}
+.seg h3{font-size:1.3rem;margin-bottom:8px}
+.seg p{color:var(--muted);font-size:.95rem;flex:1;margin-bottom:16px}
+.seg.featured p{color:#d6eadc}
+.seg .fit{font-size:.82rem;font-weight:600;color:var(--brand);background:var(--brand-light);padding:6px 12px;border-radius:999px;align-self:flex-start;margin-bottom:16px}
+.seg.featured .fit{background:rgba(255,255,255,.15);color:#fff}
+.seg a{font-weight:700;color:var(--brand)}
+.seg.featured a{color:var(--amber)}
 /* products */
 #produkty{background:var(--bg-soft)}
 .tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:40px 0 36px}
@@ -180,12 +196,14 @@ footer a:hover{color:#fff}
 footer .logo{color:#fff;margin-bottom:12px}
 .fbottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:.82rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
-@media (max-width:1100px){
+@media (max-width:1320px){.phone{display:none}}
+@media (max-width:1180px){
   .menu{display:none}.burger{display:block}
   .menu.open{display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px 24px;border-bottom:1px solid var(--line)}
   .hero-grid,.how,.contact,.band{grid-template-columns:1fr}
   .series{grid-template-columns:1fr;padding:24px}
   .why-grid,.services,.posts,.process{grid-template-columns:repeat(2,1fr)}
+  .segs{grid-template-columns:1fr}
   .badge.b1{left:12px}.badge.b2{right:12px}
   .fgrid{grid-template-columns:1fr 1fr}
 }
@@ -193,7 +211,7 @@ footer .logo{color:#fff;margin-bottom:12px}
   .wrap{padding:0 16px}
   section{padding:64px 0}
   .why-grid,.services,.posts,.process,.reviews,.pillars{grid-template-columns:1fr}
-  .phone,.nav-right .btn{display:none}
+  .phone,.nav-right .btn,.badge{display:none}
   form{grid-template-columns:1fr;padding:22px}
   .band{padding:36px 24px}
   .fgrid{grid-template-columns:1fr}
@@ -208,6 +226,7 @@ footer .logo{color:#fff;margin-bottom:12px}
     <a href="#" class="logo"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span><span>eko<b>4</b>home</span></a>
     <nav class="menu" id="menu">
       <a href="#produkty">Tepelná čerpadla</a>
+      <a href="#pro-koho">Bytové domy a firmy</a>
       <a href="#nadrze" data-tab="nadrze">Nádrže</a>
       <a href="#fotovoltaika">Fotovoltaika</a>
       <a href="#postup">Jak to probíhá</a>
@@ -224,23 +243,23 @@ footer .logo{color:#fff;margin-bottom:12px}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Třinecko · Těšínsko · Jablunkovsko</span>
+      <span class="eyebrow">Česká republika · Slovensko</span>
       <h1>Teplo, které <span class="hand">šetří</span> váš rozpočet</h1>
-      <p>Tepelná čerpadla REO HEATING s ekologickým chladivem R290, akumulační nádrže a fotovoltaika. Navrhneme, dodáme, namontujeme vlastními lidmi a vyřídíme dotaci.</p>
+      <p>Tepelná čerpadla REO HEATING s ekologickým chladivem R290, akumulační nádrže a fotovoltaika. Pro rodinné domy, bytové domy i komerční objekty – navrhneme, dodáme, namontujeme vlastními lidmi a vyřídíme dotaci.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#produkty">Vybrat tepelné čerpadlo →</a>
         <a class="btn btn-ghost" href="#kontakt">Zdarma posoudíme váš dům</a>
       </div>
       <div class="stats">
-        <div class="stat"><strong>6–40 kW</strong><span>od novostavby po bytový dům</span></div>
+        <div class="stat"><strong>6–50 kW</strong><span>na jednotku, více v kaskádě</span></div>
         <div class="stat"><strong>R290</strong><span>přírodní chladivo</span></div>
         <div class="stat"><strong>A–Z</strong><span>vlastní montáž i elektro</span></div>
       </div>
     </div>
     <div class="hero-img">
-      <img src="assets/img/k-provozcerpadla.webp" alt="Tepelné čerpadlo vzduch–voda u rodinného domu">
+      <div class="hero-unit"><img src="assets/img/rh-velke.png" alt="Tepelné čerpadlo REO HEATING RH060"><span class="hero-label">REO R290 · RH060</span></div>
       <div class="badge b1"><span class="ic">☀️</span><div><b>Topí ze sluníčka</b>řada REO R290 Smart</div></div>
-      <div class="badge b2"><span class="ic">📍</span><div><b>Jsme z Třince</b>servis máme blízko</div></div>
+      <div class="badge b2"><span class="ic">📍</span><div><b>Celá ČR a Slovensko</b>sídlo a showroom v Třinci</div></div>
     </div>
   </div>
 </section>
@@ -251,12 +270,25 @@ footer .logo{color:#fff;margin-bottom:12px}
     <h2>Služby <span class="hand">do posledního wattu</span></h2>
     <p class="lead">Jsme nadšenci do udržitelné energie. Necílíme na kvantitu – proto stihneme rychlou realizaci i pružný servis.</p>
     <div class="why-grid" style="text-align:left">
-      <div class="card"><div class="ic">📍</div><h3>Regionální firma z Třince</h3><p>Máme to k vám blízko – a vy k nám do kanceláře taky.</p></div>
+      <div class="card"><div class="ic">📍</div><h3>Celá ČR a Slovensko</h3><p>Sídlíme v Třinci, ale realizujeme po celé České republice i na Slovensku.</p></div>
       <div class="card"><div class="ic">🔗</div><h3>Jeden výrobce, jeden kontakt</h3><p>Montujeme vyladěné systémy REO HEATING. Při servisu řešíte vše s jedním partnerem.</p></div>
       <div class="card"><div class="ic">🚐</div><h3>Dojedeme k vám</h3><p>Situaci posoudíme přímo u vás, vše spočítáme a vybrané řešení zrealizujeme.</p></div>
       <div class="card"><div class="ic">🛠️</div><h3>Montáž od A do Z</h3><p>Vlastní montážníci i elektrikáři, plné sklady. Další firmu nepotřebujete.</p></div>
       <div class="card"><div class="ic">💳</div><h3>Financování a dotace</h3><p>Pomůžeme s financováním a dotaci vyřídíme za vás na základě plné moci.</p></div>
       <div class="card"><div class="ic">⚖️</div><h3>Poměr cena / kvalita</h3><p>Vždy řešíme účinnost a provozní náklady, aby systém dával smysl dlouhodobě.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pro-koho" style="padding-top:0">
+  <div class="wrap center">
+    <span class="eyebrow">Pro koho</span>
+    <h2>Rodinné domy, bytové domy <span class="hand">i firmy</span></h2>
+    <p class="lead">Od jednoho čerpadla pro novostavbu po kaskádovou kotelnu pro bytový dům nebo komerční objekt.</p>
+    <div class="segs" style="text-align:left">
+      <div class="seg"><div class="ic">🏡</div><h3>Rodinné domy</h3><p>Novostavby i rekonstrukce. Jedno čerpadlo 6–22 kW, bojler nebo kombinovaný Watertank, volitelně fotovoltaika.</p><span class="fit">RH030–RH060 · Smart RH06–RH16</span><a href="#produkty" data-go="smart">Vybrat čerpadlo →</a></div>
+      <div class="seg featured"><div class="ic">🏢</div><h3>Bytové domy a SVJ</h3><p>Náhrada plynové kotelny nebo CZT. Kaskáda tepelných čerpadel s akumulací a ohřevem TUV, návrh pro výbor SVJ a pomoc s dotací.</p><span class="fit">RHX30 Pro · RH X50 · kaskády</span><a href="#produkty" data-go="pro">Zobrazit jednotky →</a></div>
+      <div class="seg"><div class="ic">🏭</div><h3>Komerční objekty</h3><p>Haly, kanceláře, provozovny, ubytování. Výkonné jednotky a kaskády na míru, kombinace s fotovoltaikou na střeše.</p><span class="fit">RHX30 Pro · RH X50 · kaskády</span><a href="#kontakt" data-pick="Komerční objekt">Poptat řešení →</a></div>
     </div>
   </div>
 </section>
@@ -271,7 +303,7 @@ footer .logo{color:#fff;margin-bottom:12px}
     <div class="tabs" role="tablist">
       <button class="tab active" data-tab="rh">REO R290 · RH030–RH060</button>
       <button class="tab" data-tab="smart">REO R290 Smart · RH06–RH16</button>
-      <button class="tab" data-tab="pro">RHX20 Pro · RHX30 Pro</button>
+      <button class="tab" data-tab="pro">Bytové domy a firmy · RHX30 Pro / RH X50</button>
       <button class="tab" data-tab="nadrze" id="nadrze">Akumulační nádrže a TUV</button>
     </div>
 
@@ -330,7 +362,19 @@ footer .logo{color:#fff;margin-bottom:12px}
             <div class="model"><span class="name">RHX20 Pro</span><span class="spec">jmenovitě 20 kW</span><span class="price">300 000 Kč <small>bez DPH</small></span></div>
             <div class="model"><span class="name">RHX30 Pro</span><span class="spec">jmenovitě 30 kW · až 40 kW při A7/W35</span><span class="price">350 000 Kč <small>bez DPH</small></span></div>
           </div>
-          <p class="note">Pro bytové domy připravíme návrh kotelny na míru vč. akumulace a ohřevu TUV.</p>
+        </div>
+      </div>
+      <div class="series" style="margin-top:24px">
+        <div class="series-img"><img src="assets/img/rh-x50.png" alt="Komerční tepelné čerpadlo REO RH X50"></div>
+        <div>
+          <h3>REO RH X50</h3>
+          <div class="tag">Komerční tepelné čerpadlo pro bytové domy a velké objekty</div>
+          <p>Výkonná jednotka R290 pro náhradu plynových kotelen a CZT. Topná voda až 75 °C – vhodné i pro starší radiátorové soustavy a ohřev TUV. Ve kaskádě pokryje potřebu celého bytového domu.</p>
+          <div class="pills"><span class="pill">R290</span><span class="pill">až 75 °C</span><span class="pill">A+++ (35 °C)</span><span class="pill">kaskády</span></div>
+          <div class="models">
+            <div class="model"><span class="name">RH X50</span><span class="spec">49,3 kW · COP 3,80 při A7/W35</span><span class="spec">24,8 kW při −15 °C / W55</span><span class="price">430 000 Kč <small>bez DPH</small></span></div>
+          </div>
+          <p class="note">Pro bytové domy a firmy připravíme návrh kotelny na míru – počet jednotek, akumulace, ohřev TUV, záloha.</p>
         </div>
       </div>
     </div>
@@ -373,7 +417,7 @@ footer .logo{color:#fff;margin-bottom:12px}
       <div class="pstep"><span class="n">01</span><h3>Schůzka u vás</h3><p>Zdarma posoudíme dům, otopnou soustavu a vaše požadavky.</p></div>
       <div class="pstep"><span class="n">02</span><h3>Návrh a nabídka</h3><p>Navrhneme výkon čerpadla, akumulaci a ohřev vody. Cenu dostanete předem.</p></div>
       <div class="pstep"><span class="n">03</span><h3>Montáž a dotace</h3><p>Vlastní montážníci a elektrikáři. Papírování k dotaci vyřídíme za vás.</p></div>
-      <div class="pstep"><span class="n">04</span><h3>Servis</h3><p>Pravidelná údržba a rychlá pomoc – jsme z regionu.</p></div>
+      <div class="pstep"><span class="n">04</span><h3>Servis</h3><p>Pravidelná údržba a rychlá pomoc po celé ČR i na Slovensku.</p></div>
     </div>
   </div>
 </section>
@@ -427,7 +471,7 @@ footer .logo{color:#fff;margin-bottom:12px}
     <div class="posts" style="text-align:left">
       <div class="post"><img src="assets/img/k-jak-vybrat.webp" alt=""><div><h3>Jak vybrat tepelné čerpadlo</h3><p>RH řada, Smart, nebo Pro? Podle čeho zvolit výkon a typ.</p><a href="#">Číst článek →</a></div></div>
       <div class="post"><img src="assets/img/k-naklady-na-provoz.webp" alt=""><div><h3>Kolik stojí provoz</h3><p>Co ovlivňuje spotřebu a jak pomůže fotovoltaika.</p><a href="#">Číst článek →</a></div></div>
-      <div class="post"><img src="assets/img/k-provozcerpadla.webp" alt=""><div><h3>Proč akumulační nádrž</h3><p>Delší běh kompresoru, odmrazování a připojení dalšího zdroje tepla.</p><a href="#">Číst článek →</a></div></div>
+      <div class="post"><img src="assets/img/k-naklady-na-provoz.webp" alt="" style="object-position:left"><div><h3>Proč akumulační nádrž</h3><p>Delší běh kompresoru, odmrazování a připojení dalšího zdroje tepla.</p><a href="#">Číst článek →</a></div></div>
     </div>
   </div>
 </section>
@@ -451,7 +495,7 @@ footer .logo{color:#fff;margin-bottom:12px}
         <label class="full">E-mail<input type="email"></label>
         <label class="full">Adresa realizace<input></label>
         <label class="full">Mám zájem o
-          <select><option>Tepelné čerpadlo RH030–RH060</option><option>REO R290 Smart (topí ze sluníčka)</option><option>RHX20 Pro / RHX30 Pro</option><option>Akumulační nádrž / TUV</option><option>Fotovoltaika</option><option>Fotovoltaika + tepelné čerpadlo</option></select>
+          <select><option>Tepelné čerpadlo RH030–RH060</option><option>REO R290 Smart (topí ze sluníčka)</option><option>Bytový dům / SVJ</option><option>Komerční objekt</option><option>RHX30 Pro / RH X50</option><option>Akumulační nádrž / TUV</option><option>Fotovoltaika</option><option>Fotovoltaika + tepelné čerpadlo</option></select>
         </label>
         <label class="full">Zpráva<textarea rows="4"></textarea></label>
         <div class="full"><button class="btn btn-primary" type="submit">Odeslat poptávku</button></div>
@@ -464,10 +508,10 @@ footer .logo{color:#fff;margin-bottom:12px}
 <footer>
   <div class="wrap">
     <div class="fgrid">
-      <div><div class="logo"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span>eko4home</div><p>Tepelná čerpadla, akumulační nádrže a fotovoltaika na klíč pro severní Moravu.</p></div>
-      <div><h4>Produkty</h4><a href="#produkty">REO R290 RH030–RH060</a><br><a href="#produkty">REO R290 Smart</a><br><a href="#produkty">RHX20 / RHX30 Pro</a><br><a href="#produkty">Nádrže</a></div>
+      <div><div class="logo"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span>eko4home</div><p>Tepelná čerpadla, akumulační nádrže a fotovoltaika na klíč po celé ČR a na Slovensku.</p></div>
+      <div><h4>Produkty</h4><a href="#produkty">REO R290 RH030–RH060</a><br><a href="#produkty">REO R290 Smart</a><br><a href="#produkty">RHX30 Pro / RH X50</a><br><a href="#produkty">Nádrže</a></div>
       <div><h4>Kontakt</h4><a href="tel:+420774872467">+420 774 872 467</a><br><a href="mailto:info@eko4home.cz">info@eko4home.cz</a><br>Třinec</div>
-      <div><h4>Působíme</h4>Třinecko, Těšínsko,<br>Jablunkovsko a okolí</div>
+      <div><h4>Působíme</h4>Celá Česká republika<br>a Slovensko</div>
     </div>
     <div class="fbottom"><span>© 2026 Riva Trade s.r.o. · IČ 08864811 · DIČ CZ08864811</span><a href="#">Podmínky ochrany osobních údajů</a></div>
   </div>
@@ -480,6 +524,8 @@ function showTab(id){
 }
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>showTab(t.dataset.tab)));
 document.querySelectorAll('.menu a[data-tab]').forEach(a=>a.addEventListener('click',()=>showTab(a.dataset.tab)));
+document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',()=>showTab(a.dataset.go)));
+document.querySelectorAll('[data-pick]').forEach(a=>a.addEventListener('click',()=>{const s=document.querySelector('form select');s.value=a.dataset.pick;}));
 document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
 </script>
 </body>
