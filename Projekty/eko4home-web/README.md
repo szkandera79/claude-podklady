@@ -26,7 +26,7 @@ Otevřít `eko4home-web/index.html` v prohlížeči, nebo konfigurace „projekt
 
 ## Obrázky s venkovními jednotkami
 Ilustrace z referenčního webu měly cizí bílé jednotky → nahrazeny vložením jednotky REO R290 (`rh-male.png`, logo REO HEATING)
-přes Pillow; originály v `assets/src-orig/`. `k-jak-vybrat.webp` = nově sestavená řada Smart / RH060 / RH030–RH050.
+přes Pillow; originály v `assets/src-orig/`. Obrázek „Jak funguje“ = schéma jednotka + Watertank (`src-orig/schema-reo-watertank.webp`) vložené do původní scény, potrubí dokreslené (`tools/schema_*.py`, cesty v nich ukazují do scratchpadu). `k-jak-vybrat.webp` = nově sestavená řada Smart / RH060 / RH030–RH050.
 
 ## Parametry na kartách (20. 10. 2026)
 - Smart / RHX Pro: max. výkon A7/W35 + modulace z `REO/PW Helios/REO R290 Smart/data/vykonove-mapy.json` (RH14 jen z 1F mapy — 3F chybí).
