@@ -94,6 +94,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .sun-list li{padding-left:30px;position:relative;color:var(--muted)}
 .sun-list li::before{content:"✓";position:absolute;left:0;top:0;width:22px;height:22px;border-radius:50%;background:var(--brand);color:#fff;font-size:.75rem;display:grid;place-items:center;font-weight:800}
 .sun-list b{color:var(--ink)}
+.hl-box{display:block;margin-top:8px;background:var(--yellow);color:var(--ink);font-weight:700;padding:10px 14px;border-radius:12px;box-shadow:0 6px 16px rgba(245,184,0,.35);font-size:1rem}
+.hl-box strong{font-weight:800}
+mark.hl{background:linear-gradient(transparent 45%,rgba(245,184,0,.55) 45%);color:var(--ink);font-weight:700;padding:0 2px}
 /* why */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.2s}
@@ -319,7 +322,7 @@ footer .logo{color:#fff;margin-bottom:12px}
         <li><b>Nemusíte pořizovat velkou a drahou domácí fotovoltaiku</b> – stačí několik panelů zapojených rovnou do čerpadla.</li>
         <li><b>Kompresor Mitsubishi Electric</b> – spolehlivé srdce celé jednotky.</li>
         <li><b>Topná voda až 75 °C</b> – zvládne i radiátory ve starších domech a ohřev teplé vody.</li>
-        <li><b>SCOP až 5,29 s podlahovým topením a 3,91 s radiátory</b> (RH14) – průměrný roční topný faktor – víc než většina značkových R290 monobloků.</li>
+        <li><b>SCOP až 5,29 s podlahovým topením a 3,91 s radiátory</b> (RH14)<span class="hl-box">průměrný roční topný faktor – <strong>víc než většina značkových R290 monobloků</strong></span></li>
       </ul>
       <a class="btn btn-primary" href="#produkty" data-go="smart">Chci topit ze sluníčka →</a>
     </div>
@@ -399,7 +402,7 @@ footer .logo{color:#fff;margin-bottom:12px}
           <div class="tag">Topí přímo ze sluníčka</div>
           <div class="pillars">
             <div class="pillar"><b>☀️ Topí ze sluníčka</b><span>Panely připojíte přímo k jednotce – bez střídače, baterie a další elektroniky. Co chybí, odebere ze sítě. Nepotřebujete velkou a drahou domácí FV.</span></div>
-            <div class="pillar"><b>📈 Vysoká účinnost</b><span>SCOP až 5,29 (35 °C) – víc než většina značkových R290 monobloků.</span></div>
+            <div class="pillar"><b>📈 Vysoká účinnost</b><span>SCOP až 5,29 (35 °C) – <mark class="hl">víc než většina značkových R290 monobloků</mark>.</span></div>
             <div class="pillar"><b>⚙️ Mitsubishi Electric</b><span>Kompresor Mitsubishi Electric – osvědčená spolehlivost.</span></div>
           </div>
           <div class="pills"><span class="pill">🌡️ topná voda až 75 °C</span><span class="pill">R290</span><span class="pill">kompresor Mitsubishi Electric</span><span class="pill">integrovaný dohřev 3 kW</span></div>
