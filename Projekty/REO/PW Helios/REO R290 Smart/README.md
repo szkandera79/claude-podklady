@@ -134,3 +134,6 @@ princip „topí přímo ze sluníčka“ (FV → MPPT → DC sběrnice ← sí�
 účinnost (SCOP 5,29 / 3,97) · modely a ceník · technické údaje + zapojení + ovládání · zásobníky + kontakt.
 Ceny = web eko4home (20. 10. 2026): RH06–RH16 129–189 tis., RHX20/30 Pro 300/350 tis. Kč bez DPH; zásobníky dle e-shopu.
 SCOP 55 °C: ERP protokol výrobce 3,87–4,00 (průměrné klima) → v katalogu „až 3,97“, údaj 4,9 nemá zdroj.
+Titulka (20. 10.): hero scéna jednotka Smart + REO Watertank 210/70 (`katalog/hero_scena.py` vloží Smart do předlohy
+`assets/src/hero-scena-orig.webp` → `assets/hero-scena.png`); popisky a symboly (kompresor Mitsubishi Electric, TUV nahoře,
+topná voda dole – podlaha/radiátory) jsou SVG v `hero_overlay()`. Build zároveň exportuje `hero-smart-watertank.png` (2×) pro web.

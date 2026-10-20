@@ -20,6 +20,7 @@ def uri(p):
     return f"data:{mime};base64," + base64.b64encode(p.read_bytes()).decode()
 
 
+HERO = uri("hero-scena.png")
 LOGO, UNIT, RHX = uri("logo-cut.png"), uri("smart-cut.png"), uri("rhx-pro-cut.png")
 QR = uri("qr-reoheating.svg")
 
@@ -307,6 +308,49 @@ def svg_hydraulics():
 </svg>"""
 
 
+
+def hero_overlay():
+    """Popisky a symboly přes hero scénu (souřadnice obrázku 1186×838)."""
+    def badge(cx, cy, path, fill="#EFB935", fg="#123D25", r=26):
+        return (f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="{fill}"/>'
+                f'<g transform="translate({cx-r*.72},{cy-r*.72}) scale({r*1.44/24})" fill="none" stroke="{fg}" stroke-width="1.9" '
+                f'stroke-linecap="round" stroke-linejoin="round"><path d="{path}"/></g>')
+    SHOWER = "M4 20V8a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4 M10 8h8 M12 12v1 M16 12v1 M20 12v1 M14 16v1 M18 16v1"
+    RAD = "M5 5v14 M9.5 5v14 M14 5v14 M18.5 5v14 M3 8h18 M3 16h18"
+    FLOOR = "M3 20h18 M4 15c2.5-5 4.5 5 7 0s4.5 5 7 0 M4 9c2.5-5 4.5 5 7 0s4.5 5 7 0"
+    CPU = IC["cpu"]
+    box = lambda x, y, w, h: f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="14" fill="#fff" fill-opacity=".94" filter="url(#sh)"/>'
+    dot = lambda x, y: f'<circle cx="{x}" cy="{y}" r="9" fill="#fff" stroke="#123D25" stroke-width="4"/>'
+    return f"""<svg class="hero-ov" viewBox="0 0 1186 838" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+  <defs><filter id="sh" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity=".22"/></filter></defs>
+  <!-- jednotka: kompresor Mitsubishi Electric -->
+  <path d="M232 418 V478" stroke="#123D25" stroke-width="4"/>{dot(232, 482)}
+  <rect x="22" y="322" width="420" height="98" rx="14" fill="#123D25" filter="url(#sh)"/>
+  {badge(72, 371, CPU, r=30)}
+  <text x="116" y="360" font-size="25" font-weight="800" fill="#fff">Kompresor</text>
+  <text x="116" y="390" font-size="25" font-weight="800" fill="#EFB935">Mitsubishi Electric</text>
+  <text x="116" y="410" font-size="15" font-weight="600" fill="#fff" opacity=".8">v jednotce REO R290 Smart</text>
+  <!-- TUV -->
+  <path d="M1012 380 H930" stroke="#123D25" stroke-width="4"/>{dot(926, 380)}
+  {box(1012, 292, 166, 176)}
+  {badge(1052, 334, SHOWER)}
+  <text x="1028" y="392" font-size="22" font-weight="800" fill="#123D25">Teplá voda</text>
+  <text x="1028" y="416" font-size="15.5" fill="#3E4A43">zásobník TUV</text>
+  <text x="1028" y="436" font-size="15.5" fill="#3E4A43">210 l s výměníkem</text>
+  <text x="1028" y="456" font-size="15.5" fill="#3E4A43">v horní části</text>
+  <!-- topení -->
+  <path d="M1012 690 H936" stroke="#123D25" stroke-width="4"/>{dot(932, 690)}
+  {box(1012, 586, 166, 196)}
+  {badge(1052, 628, FLOOR, fill="#D9622B", fg="#fff")}{badge(1112, 628, RAD, fill="#D9622B", fg="#fff")}
+  <text x="1028" y="686" font-size="22" font-weight="800" fill="#123D25">Topná voda</text>
+  <text x="1028" y="710" font-size="15.5" fill="#3E4A43">akumulace 70 l</text>
+  <text x="1028" y="730" font-size="15.5" fill="#3E4A43">ve spodní části –</text>
+  <text x="1028" y="750" font-size="15.5" fill="#3E4A43">podlaha i radiátory</text>
+  <!-- Watertank -->
+  <rect x="802" y="794" width="196" height="36" rx="18" fill="#34A263"/>
+  <text x="900" y="818" text-anchor="middle" font-size="17" font-weight="800" fill="#fff">REO Watertank 210/70</text>
+</svg>"""
+
 # ================================================================ STRANY
 ICONS = [("sun", "topí ze<br>sluníčka"), ("eff", "SCOP<br>až 5,29"), ("leaf", "chladivo<br>R290"), ("cert", "A+++<br>35 i 55 °C"),
          ("snow", "provoz<br>do −25 °C"), ("temp", "voda<br>až 75 °C"), ("wifi", "Wi-Fi<br>aplikace")]
@@ -320,11 +364,11 @@ p1 = f"""
     <h1>REO R290 <span>Smart</span></h1>
     <div class="cv-sub">Česká značka, český servis</div>
   </div>
+  <div class="hero"><img src="{HERO}" alt="REO R290 Smart a zásobník REO Watertank">{hero_overlay()}</div>
   <div class="cv-claim">
     <div class="cv-c sun">{ic('sun','ic')}<div><b>Topí přímo ze sluníčka</b><span>panely rovnou do jednotky – bez střídače a baterie</span></div></div>
     <div class="cv-c eff">{ic('eff','ic')}<div><b>SCOP až 5,29</b><span>vysoká účinnost, A+++ pro podlahu i radiátory</span></div></div>
   </div>
-  <img class="cv-unit" src="{UNIT}" alt="Tepelné čerpadlo REO R290 Smart">
   <div class="cv-icons">{''.join(f'<div>{ic(k)}<span>{t}</span></div>' for k,t in ICONS)}</div>
   <div class="cv-bot">
     <div><b>Katalog a ceník 2026</b><span>výkonové modely 6–40 kW · rodinné domy, bytové domy, firmy</span></div>
@@ -665,27 +709,29 @@ ul.chk li:before{content:"";position:absolute;left:0;top:1.3mm;width:2.4mm;heigh
 .cover{padding:0;background:linear-gradient(170deg,#F5FBF7 0%,#E9F6EE 55%,#D5EEDD 100%)}
 .cv-glow{position:absolute;right:-40mm;top:-40mm;width:150mm;height:150mm;border-radius:50%;
  background:radial-gradient(circle,rgba(255,215,90,.75) 0%,rgba(255,215,90,.25) 40%,rgba(255,215,90,0) 70%)}
-.cv-top{position:relative;display:flex;justify-content:space-between;align-items:flex-start;padding:12mm 14mm 0}
-.cv-top>img{height:19mm}
-.qr{background:#fff;padding:2.5mm;border-radius:3mm;box-shadow:0 1mm 4mm rgba(0,0,0,.08)}
-.qr img{width:20mm;height:20mm;display:block}
-.cv-head{position:relative;padding:12mm 14mm 0}
-.cv-head h1{font-size:46pt;font-weight:800;letter-spacing:-.03em;color:var(--darker);line-height:1;margin:2.5mm 0 2mm}
+.cv-top{position:relative;display:flex;justify-content:space-between;align-items:flex-start;padding:11mm 14mm 0}
+.cv-top>img{height:17mm}
+.qr{background:#fff;padding:2.2mm;border-radius:3mm;box-shadow:0 1mm 4mm rgba(0,0,0,.08)}
+.qr img{width:18mm;height:18mm;display:block}
+.cv-head{position:relative;padding:5mm 14mm 0}
+.cv-head h1{font-size:42pt;font-weight:800;letter-spacing:-.03em;color:var(--darker);line-height:1;margin:2mm 0 1.5mm}
 .cv-head h1 span{color:var(--brand)}
-.cv-sub{font-size:14pt;font-weight:600;color:var(--brand-600)}
-.cv-claim{position:relative;display:flex;flex-direction:column;gap:3mm;padding:8mm 0 0 14mm;width:112mm}
-.cv-c{display:flex;gap:3.5mm;align-items:center;border-radius:4mm;padding:3.5mm 4.5mm}
-.cv-c .ic{width:10mm;height:10mm;flex:none}
-.cv-c b{display:block;font-size:14pt;font-weight:800;letter-spacing:-.01em}
-.cv-c span{font-size:8.8pt;line-height:1.35}
+.cv-sub{font-size:13pt;font-weight:600;color:var(--brand-600)}
+.hero{position:relative;margin:6mm 10mm 0;border-radius:5mm;overflow:hidden;box-shadow:0 2mm 7mm rgba(18,61,37,.18)}
+.hero img{display:block;width:100%}
+.hero-ov{position:absolute;inset:0;width:100%;height:100%}
+.cv-claim{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:3.5mm;padding:5mm 10mm 0}
+.cv-c{display:flex;gap:3mm;align-items:center;border-radius:4mm;padding:3.2mm 4mm}
+.cv-c .ic{width:9mm;height:9mm;flex:none}
+.cv-c b{display:block;font-size:13pt;font-weight:800;letter-spacing:-.01em}
+.cv-c span{font-size:8.2pt;line-height:1.3}
 .cv-c.sun{background:var(--sun);color:var(--darker)}.cv-c.sun .ic{color:var(--darker)}
 .cv-c.eff{background:var(--darker);color:#fff}.cv-c.eff .ic{color:var(--sun)}
-.cv-unit{position:absolute;right:6mm;top:142mm;width:138mm;filter:drop-shadow(0 6mm 6mm rgba(0,0,0,.22))}
-.cv-icons{position:absolute;left:14mm;right:14mm;top:247mm;display:grid;grid-template-columns:repeat(7,1fr);gap:2.5mm}
-.cv-icons div{background:#fff;border-radius:3mm;padding:3mm 1mm 2.5mm;text-align:center;box-shadow:0 .6mm 2mm rgba(0,0,0,.06)}
-.cv-icons .ic{width:7.5mm;height:7.5mm;display:block;margin:0 auto 1.5mm}
-.cv-icons span{font-size:7.4pt;font-weight:700;line-height:1.2;color:var(--darker)}
-.cv-bot{position:absolute;left:0;right:0;bottom:0;background:var(--darker);color:#fff;padding:7mm 14mm;display:flex;justify-content:space-between;align-items:center}
+.cv-icons{position:relative;padding:4mm 10mm 0;display:grid;grid-template-columns:repeat(7,1fr);gap:2.5mm}
+.cv-icons div{background:#fff;border-radius:3mm;padding:2.3mm 1mm 2mm;text-align:center;box-shadow:0 .6mm 2mm rgba(0,0,0,.06)}
+.cv-icons .ic{width:6.5mm;height:6.5mm;display:block;margin:0 auto 1.2mm}
+.cv-icons span{font-size:7pt;font-weight:700;line-height:1.2;color:var(--darker)}
+.cv-bot{position:absolute;left:0;right:0;bottom:0;background:var(--darker);color:#fff;padding:6mm 14mm;display:flex;justify-content:space-between;align-items:center}
 .cv-bot b{display:block;font-size:13pt;font-weight:800}
 .cv-bot span{font-size:8.8pt;opacity:.85}
 .cv-web{font-size:13pt;font-weight:800;color:var(--sun)}
@@ -830,3 +876,15 @@ pdf = ROOT / f"{SLUG}.pdf"
 subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--no-pdf-header-footer", "--virtual-time-budget=8000",
                 f"--print-to-pdf={pdf}", out.as_uri()], check=True, capture_output=True)
 print("PDF", pdf)
+
+hero_html = ROOT / "hero-smart-watertank.html"
+hero_html.write_text(f'<!doctype html><html><head><meta charset="utf-8">{FONTS}<style>html,body{{margin:0}}'
+                     f'.hero{{position:relative;width:1186px}}.hero img{{display:block;width:100%}}'
+                     f'.hero-ov{{position:absolute;inset:0;width:100%;height:100%}}</style></head>'
+                     f'<body><div class="hero"><img src="{HERO}">{hero_overlay()}</div></body></html>', encoding="utf-8")
+png = ROOT / "hero-smart-watertank.png"
+subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=2",
+                "--window-size=1186,838", "--virtual-time-budget=8000", f"--screenshot={png}", hero_html.as_uri()],
+               check=True, capture_output=True)
+hero_html.unlink()
+print("PNG", png)
