@@ -126,3 +126,11 @@ Výrobce dodal výkonové mapy (`../R290 Helios Performance Curve/*.xls`, část
 ## Registrace (SVT / NZÚ, EPREL) — `registrace/`
 Formuláře dle (EU) 811/2013, energetické štítky a přehled modelů ve dvou variantách: **A** REO HEATING (RHxx) a **B** Power World
 (PWxx, Ria Trade jako dovozce, certifikáty HP KEYMARK 041-K032-23…31). Podrobnosti a otevřené body v `registrace/README.md`.
+
+## Katalog — `katalog/` (20. 10. 2026)
+8stránkový katalog a ceník A4 `REO-R290-Smart_katalog.pdf` = redesign letáku „REO R290“ (RH030–RH060, 10/26) na řadu Smart.
+`katalog/build.py` (HTML → PDF headless Chrome; ilustraci sdílí s `letaky/ilustrace.py`). Strany: titulka · 3 pilíře ·
+princip „topí přímo ze sluníčka“ (FV → MPPT → DC sběrnice ← síť) · sluníčko v praxi (ilustrační den, počet panelů, FAQ) ·
+účinnost (SCOP 5,29 / 3,97) · modely a ceník · technické údaje + zapojení + ovládání · zásobníky + kontakt.
+Ceny = web eko4home (20. 10. 2026): RH06–RH16 129–189 tis., RHX20/30 Pro 300/350 tis. Kč bez DPH; zásobníky dle e-shopu.
+SCOP 55 °C: ERP protokol výrobce 3,87–4,00 (průměrné klima) → v katalogu „až 3,97“, údaj 4,9 nemá zdroj.
