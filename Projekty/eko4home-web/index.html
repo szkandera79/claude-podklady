@@ -46,16 +46,17 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .burger{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--brand-dark)}
 
 /* hero */
-.hero{padding:64px 0 80px;background:linear-gradient(180deg,var(--bg-soft),#fff)}
-.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(2.4rem,5vw,3.9rem);font-weight:800;margin-bottom:20px}
+.hero{padding:48px 0 72px;background:linear-gradient(180deg,var(--bg-soft),#fff)}
+.hero .wrap{max-width:1400px}
+.hero-grid{display:grid;grid-template-columns:.82fr 1.35fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,4.2vw,3.6rem);font-weight:800;margin-bottom:20px}
 .hero h1 .yellow{color:var(--yellow)}
 .hero h1::after{content:"";display:block;width:72px;height:4px;border-radius:2px;background:var(--yellow);margin-top:22px}
 .hero h1 .hand{font-size:1.1em;display:inline-block;transform:rotate(-2deg)}
 .hero p{color:var(--muted);font-size:1.12rem;margin-bottom:30px;max-width:540px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
-.stats{display:flex;gap:36px;flex-wrap:wrap}
-.stat strong{display:block;font-size:1.8rem;font-weight:800;color:var(--brand-dark)}
+.stats{display:flex;gap:26px;flex-wrap:wrap}
+.stat strong{display:block;font-size:1.6rem;font-weight:800;color:var(--brand-dark)}
 .stat span{color:var(--muted);font-size:.9rem}
 .hero-img{position:relative}
 .hero-unit{border-radius:28px;box-shadow:var(--shadow);width:100%;background:radial-gradient(circle at 50% 40%,#fff 0,var(--brand-light) 50%,#cfe6d7 100%);display:grid;grid-template-columns:1.25fr 1fr;gap:12px;align-items:end;padding:56px 22px 22px}
@@ -259,7 +260,7 @@ footer .logo{margin-bottom:14px}
   section{padding:64px 0}
   .why-grid,.services,.posts,.process,.reviews,.pillars{grid-template-columns:1fr}
   .phone,.nav-right .btn,.badge{display:none}
-  .hero-cap{position:static;border-radius:0;box-shadow:none}.hero-unit{padding:24px 12px 14px;gap:8px}.hu img{height:190px}.hu-smart img{height:120px}.hu-pair img{height:170px}.hu-pair .hu-small{height:100px;margin-left:-20px}.scop{font-size:.9rem;padding:3px 7px}
+  .hero-photo{margin:0 -16px;border-radius:0;box-shadow:none}.hero-cap{position:static;border-radius:0;box-shadow:none;background:var(--bg-soft)}.hero-unit{padding:24px 12px 14px;gap:8px}.hu img{height:190px}.hu-smart img{height:120px}.hu-pair img{height:170px}.hu-pair .hu-small{height:100px;margin-left:-20px}.scop{font-size:.9rem;padding:3px 7px}
   form{grid-template-columns:1fr;padding:22px}
   .band{padding:36px 24px}
   .fgrid{grid-template-columns:1fr}
@@ -311,11 +312,6 @@ footer .logo{margin-bottom:14px}
     <div class="hero-img">
       <div class="hero-photo">
         <img src="assets/img/hero-schema.webp" alt="Tepelné čerpadlo REO HEATING RH060 napojené na zásobník Watertank">
-        <div class="hero-cap">
-          <b>REO R290 · RH060 + Watertank</b>
-          <small class="scop-h">SCOP – průměrný roční topný faktor</small>
-          <div class="hero-cap-row"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>4,80</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,89</span></span></div>
-        </div>
       </div>
       <div class="badge b2"><span class="ic">📍</span><div><b>Celá ČR a Slovensko</b>sídlo a showroom v Třinci</div></div>
     </div>
