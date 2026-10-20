@@ -21,7 +21,8 @@ CLAUDE.md** a drž se pravidel tam uvedených.
 | Složka | Obsah |
 |---|---|
 | `thermavera-web/` | web thermavera.cz („zelené kotelny na klíč“) + kalkulačka; vlastní **CLAUDE.md** (i18n, právní mantinely, build `dist/` pro web4u) |
-| `vzor-bytove-domy/` | obecná vzorová nabídka zelené kotelny pro SVJ / BD (25–100 kW) |
+| `vzor-bytove-domy/` | obecná vzorová nabídka zelené kotelny pro SVJ / BD (25–100 kW), jednotky RH X50 |
+| `vzor-bytove-domy-rhx30/` | tatáž nabídka ve verzi s jednotkami RHX30 Pro (tišší, vyšší SCOP, FV přímo do TČ) |
 | `mala-zelena-kotelna/` | malá zelená kotelna pro menší BD (≈ 12–22 kW): 2 × REO RH060, AKU 1 000 l, TUV 1 000 l; ceny k doplnění |
 | `bd-jandova/` | nabídka BD Jandova 7, Ostrava-Zábřeh (17 b.j., náhrada CZT tepelnými čerpadly) |
 | `bd-michal/` | BD Michal — koncepční schémata kotelny, PENB, smlouva o dílo |
