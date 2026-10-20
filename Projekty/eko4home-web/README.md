@@ -5,10 +5,10 @@ Jednostránkový návrh (statické HTML) nového webu eko4home.cz (Riva Trade s.
 - **Design** podle https://klimatizacekasparek.vercel.app — zelená `#1f6d3f` / tmavá `#123821` / světlá `#e8f3ec`,
   akcent `#fcbb00`, písmo Inter + ručně psaný Kalam. Ilustrační fotky `assets/img/k-*.webp` jsou odtud.
 - **Produkty** (ceny bez DPH, za zařízení bez montáže):
-  - REO R290 RH030–RH060 — ceny, COP a fotky z https://reoheating.cz/eshop/ (129/139/159/189 tis.)
+  - REO R290 RH030–RH060 — ceny 95/105/125/169 tis. Kč bez DPH (zadal uživatel 20. 10. 2026), COP a fotky z https://reoheating.cz/eshop/
   - REO R290 Smart RH06–RH16 (99–149 tis.) a RHX20 Pro / RHX30 Pro (300/350 tis.) a RH X50 (430 tis., prodejní cena z nástroje kaskád 27. 9. 2026) — záložka „Bytové domy a firmy“
   - Nádrže AKU 100/500, TUV 200/300, Watertank 210/70 a 330/120 — z e-shopu REO
-- Úvod: jednotka RH060 s logem REO HEATING (`rh-velke.png` z e-shopu). Sekce „Pro koho“: rodinné domy · bytové domy a SVJ · komerční objekty
+- Úvod: RH060 (`rh-velke.png` z e-shopu) + Smart RH14 se SCOP W35/W55 (RH060 KEYMARK 4,80/3,89; Smart dle výrobce, data z konkurence-tc-smart); pod úvodem pruh „Topí přímo ze sluníčka“. Sekce „Pro koho“: rodinné domy · bytové domy a SVJ · komerční objekty
   (BD a firmy = RHX30 Pro + RH X50). Působnost: celá ČR a Slovensko, sídlo Třinec.
 - Texty (Proč my, recenze, kontakt) převzaty ze současného eko4home.cz.
 
@@ -23,3 +23,7 @@ Jednostránkový návrh (statické HTML) nového webu eko4home.cz (Riva Trade s.
 
 ## Náhled
 Otevřít `eko4home-web/index.html` v prohlížeči, nebo konfigurace „projekty“ → http://localhost:8000/eko4home-web/
+
+## Obrázky s venkovními jednotkami
+Ilustrace z referenčního webu měly cizí bílé jednotky → nahrazeny vložením jednotky REO R290 (`rh-male.png`, logo REO HEATING)
+přes Pillow; originály v `assets/src-orig/`. `k-jak-vybrat.webp` = nově sestavená řada Smart / RH060 / RH030–RH050.

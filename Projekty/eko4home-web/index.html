@@ -10,8 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --brand:#1f6d3f; --brand-dark:#123821; --brand-light:#e8f3ec; --brand-mid:#2f8a55;
-  --amber:#fcbb00; --ink:#13201a; --muted:#5b6b62; --line:#dfe8e2; --bg:#ffffff; --bg-soft:#f6f9f7;
+  --brand:#34a263; --brand-dark:#1f4d33; --brand-light:#e9f6ee; --brand-mid:#2b8a52; --yellow:#f5b800;
+  --amber:#f5b800; --ink:#2d2f2e; --muted:#5f6662; --line:#dfe8e2; --bg:#ffffff; --bg-soft:#f6f9f7;
   --radius:20px; --shadow:0 10px 30px rgba(18,56,33,.08);
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -28,7 +28,7 @@ h2{font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:800;margin-bottom:14px}
 section{padding:96px 0}
 .center{text-align:center}.center .lead{margin:0 auto}
 .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;padding:14px 26px;border-radius:999px;transition:.2s;border:2px solid transparent;cursor:pointer;font-size:1rem;white-space:nowrap}
-.btn-primary{background:var(--brand);color:#fff}.btn-primary:hover{background:var(--brand-dark)}
+.btn-primary{background:var(--brand);color:#fff}.btn-primary:hover{background:var(--brand-mid)}
 .btn-ghost{border-color:var(--brand);color:var(--brand)}.btn-ghost:hover{background:var(--brand-light)}
 .btn-amber{background:var(--amber);color:var(--brand-dark)}.btn-amber:hover{filter:brightness(.95)}
 
@@ -48,6 +48,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .hero{padding:64px 0 80px;background:linear-gradient(180deg,var(--bg-soft),#fff)}
 .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
 .hero h1{font-size:clamp(2.4rem,5vw,3.9rem);font-weight:800;margin-bottom:20px}
+.hero h1 .yellow{color:var(--yellow)}
+.hero h1::after{content:"";display:block;width:72px;height:4px;border-radius:2px;background:var(--yellow);margin-top:22px}
 .hero h1 .hand{font-size:1.1em;display:inline-block;transform:rotate(-2deg)}
 .hero p{color:var(--muted);font-size:1.12rem;margin-bottom:30px;max-width:540px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
@@ -55,15 +57,30 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .stat strong{display:block;font-size:1.8rem;font-weight:800;color:var(--brand-dark)}
 .stat span{color:var(--muted);font-size:.9rem}
 .hero-img{position:relative}
-.hero-unit{border-radius:28px;box-shadow:var(--shadow);aspect-ratio:4/3.6;width:100%;background:radial-gradient(circle at 50% 45%,#fff 0,var(--brand-light) 45%,#cfe6d7 100%);display:grid;place-items:center;position:relative;overflow:hidden}
-.hero-unit::after{content:"";position:absolute;left:15%;right:15%;bottom:7%;height:22px;background:radial-gradient(ellipse,rgba(18,56,33,.28),transparent 70%)}
-.hero-unit img{position:absolute;inset:7% 0 9%;margin:auto;height:84%;width:auto;max-width:80%;object-fit:contain;z-index:1}
-.hero-label{position:absolute;left:22px;top:20px;font-family:Kalam,cursive;font-weight:700;color:var(--brand);font-size:1.15rem}
+.hero-unit{border-radius:28px;box-shadow:var(--shadow);width:100%;background:radial-gradient(circle at 50% 40%,#fff 0,var(--brand-light) 50%,#cfe6d7 100%);display:grid;grid-template-columns:1fr 1.15fr;gap:12px;align-items:end;padding:56px 22px 22px}
+.hu{display:flex;flex-direction:column;align-items:center;gap:14px}
+.hu img{height:300px;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 18px 18px rgba(18,56,33,.22))}
+.hu-smart img{height:230px}
+.hu figcaption{background:#fff;border-radius:16px;padding:12px 14px;width:100%;display:flex;flex-wrap:wrap;gap:6px 8px;justify-content:center;box-shadow:0 4px 14px rgba(18,56,33,.08)}
+.hu figcaption b{width:100%;text-align:center;color:var(--brand-dark);font-size:.92rem}
+.hu figcaption small{width:100%;text-align:center;color:var(--brand);font-weight:600;font-size:.76rem}
+.scop{background:var(--brand-light);border-radius:10px;padding:4px 10px;font-weight:800;color:var(--brand-dark);font-size:1.02rem;line-height:1.2;text-align:center}
+.scop i{display:block;font-style:normal;font-weight:600;font-size:.66rem;color:var(--muted);letter-spacing:.03em}
 .badge{position:absolute;z-index:2;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center;font-size:.9rem}
 .badge .ic{width:42px;height:42px;border-radius:12px;background:var(--brand-light);display:grid;place-items:center;font-size:1.3rem}
 .badge b{display:block;color:var(--brand-dark)}
-.badge.b1{left:-24px;bottom:36px}.badge.b2{right:-18px;top:28px}
+.badge.b2{right:-14px;top:-18px}
 
+/* sun band */
+.sunband{background:linear-gradient(135deg,#fffaf0,#fff 55%,var(--brand-light));padding:80px 0}
+.sun-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center}
+.sun-img{position:relative;display:grid;place-items:center}
+.sun-img img{max-height:340px;filter:drop-shadow(0 20px 22px rgba(18,56,33,.2))}
+.sun-img .sun{position:absolute;top:-20px;right:6%;font-size:4.2rem;filter:drop-shadow(0 0 22px rgba(252,187,0,.7))}
+.sun-list{list-style:none;display:grid;gap:12px;margin:22px 0 28px}
+.sun-list li{padding-left:30px;position:relative;color:var(--muted)}
+.sun-list li::before{content:"✓";position:absolute;left:0;top:0;width:22px;height:22px;border-radius:50%;background:var(--brand);color:#fff;font-size:.75rem;display:grid;place-items:center;font-weight:800}
+.sun-list b{color:var(--ink)}
 /* why */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.2s}
@@ -200,7 +217,7 @@ footer .logo{color:#fff;margin-bottom:12px}
 @media (max-width:1180px){
   .menu{display:none}.burger{display:block}
   .menu.open{display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px 24px;border-bottom:1px solid var(--line)}
-  .hero-grid,.how,.contact,.band{grid-template-columns:1fr}
+  .hero-grid,.how,.contact,.band,.sun-grid{grid-template-columns:1fr}
   .series{grid-template-columns:1fr;padding:24px}
   .why-grid,.services,.posts,.process{grid-template-columns:repeat(2,1fr)}
   .segs{grid-template-columns:1fr}
@@ -212,6 +229,7 @@ footer .logo{color:#fff;margin-bottom:12px}
   section{padding:64px 0}
   .why-grid,.services,.posts,.process,.reviews,.pillars{grid-template-columns:1fr}
   .phone,.nav-right .btn,.badge{display:none}
+  .hero-unit{padding:24px 12px 14px;gap:8px}.hu img{height:190px}.hu-smart img{height:140px}.scop{font-size:.9rem;padding:3px 7px}
   form{grid-template-columns:1fr;padding:22px}
   .band{padding:36px 24px}
   .fgrid{grid-template-columns:1fr}
@@ -244,7 +262,7 @@ footer .logo{color:#fff;margin-bottom:12px}
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">Česká republika · Slovensko</span>
-      <h1>Teplo, které <span class="hand">šetří</span> váš rozpočet</h1>
+      <h1><span class="yellow">Teplo</span>, které <span class="hand">šetří</span> váš rozpočet</h1>
       <p>Tepelná čerpadla REO HEATING s ekologickým chladivem R290, akumulační nádrže a fotovoltaika. Pro rodinné domy, bytové domy i komerční objekty – navrhneme, dodáme, namontujeme vlastními lidmi a vyřídíme dotaci.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#produkty">Vybrat tepelné čerpadlo →</a>
@@ -257,9 +275,28 @@ footer .logo{color:#fff;margin-bottom:12px}
       </div>
     </div>
     <div class="hero-img">
-      <div class="hero-unit"><img src="assets/img/rh-velke.png" alt="Tepelné čerpadlo REO HEATING RH060"><span class="hero-label">REO R290 · RH060</span></div>
-      <div class="badge b1"><span class="ic">☀️</span><div><b>Topí ze sluníčka</b>řada REO R290 Smart</div></div>
+      <div class="hero-unit">
+        <figure class="hu"><img src="assets/img/rh-velke.png" alt="Tepelné čerpadlo REO HEATING RH060"><figcaption><b>REO R290 · RH060</b><span class="scop"><i>SCOP W35</i>4,80</span><span class="scop"><i>SCOP W55</i>3,89</span></figcaption></figure>
+        <figure class="hu hu-smart"><img src="assets/img/smart.png" alt="Tepelné čerpadlo REO R290 Smart"><figcaption><b>REO R290 Smart · RH14</b><span class="scop"><i>SCOP W35</i>5,29</span><span class="scop"><i>SCOP W55</i>3,91</span><small>kompresor Mitsubishi Electric · ☀️ topí ze sluníčka</small></figcaption></figure>
+      </div>
       <div class="badge b2"><span class="ic">📍</span><div><b>Celá ČR a Slovensko</b>sídlo a showroom v Třinci</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sunband">
+  <div class="wrap sun-grid">
+    <div class="sun-img"><img src="assets/img/smart.png" alt="REO R290 Smart"><span class="sun">☀️</span></div>
+    <div>
+      <span class="eyebrow">REO R290 Smart</span>
+      <h2>Topí přímo <span class="hand">ze sluníčka</span></h2>
+      <p class="lead">Fotovoltaické panely připojíte přímo k jednotce – bez střídače, baterie a další elektroniky. Jednotka pak topí levně a úsporně ze sluníčka, a co sluníčko nepokryje, automaticky odebere ze sítě.</p>
+      <ul class="sun-list">
+        <li><b>Nemusíte pořizovat velkou a drahou domácí fotovoltaiku</b> – stačí několik panelů zapojených rovnou do čerpadla.</li>
+        <li><b>Kompresor Mitsubishi Electric</b> – spolehlivé srdce celé jednotky.</li>
+        <li><b>SCOP až 5,29 při W35 a 3,91 při W55</b> (RH14) – víc než většina značkových R290 monobloků.</li>
+      </ul>
+      <a class="btn btn-primary" href="#produkty" data-go="smart">Chci topit ze sluníčka →</a>
     </div>
   </div>
 </section>
@@ -316,12 +353,12 @@ footer .logo{color:#fff;margin-bottom:12px}
           <p>Monoblok vzduch–voda pro vytápění, chlazení i ohřev teplé vody s výstupní teplotou až 70 °C. Inverterový kompresor Highly, energetická třída A+++. RH060 zvládne i větší domy a v kaskádě bytové domy.</p>
           <div class="pills"><span class="pill">R290</span><span class="pill">A+++</span><span class="pill">až 70 °C</span><span class="pill">topení · chlazení · TUV</span><span class="pill">SCOP 4,8</span></div>
           <div class="models">
-            <div class="model"><span class="name">RH030</span><span class="spec">8,9 kW · COP 5,17</span><span class="spec">novostavby, menší domy</span><span class="price">129 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH040</span><span class="spec">11,4 kW · COP 5,29</span><span class="spec">středně velké domy</span><span class="price">139 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH050</span><span class="spec">14,8 kW · COP 5,22</span><span class="spec">větší zateplené domy</span><span class="price">159 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH060</span><span class="spec">22,0 kW · COP 5,22</span><span class="spec">velké domy, BD v kaskádě</span><span class="price">189 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH030</span><span class="spec">8,9 kW · COP 5,17</span><span class="spec">novostavby, menší domy</span><span class="price">95 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH040</span><span class="spec">11,4 kW · COP 5,29</span><span class="spec">středně velké domy</span><span class="price">105 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH050</span><span class="spec">14,8 kW · COP 5,22</span><span class="spec">větší zateplené domy</span><span class="price">125 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH060</span><span class="spec">22,0 kW · COP 5,22</span><span class="spec">SCOP W35 4,80 · W55 3,89</span><span class="spec">velké domy, BD v kaskádě</span><span class="price">169 000 Kč <small>bez DPH</small></span></div>
           </div>
-          <p class="note">Topný výkon max. při A7/W35. Akustický výkon L<sub>WA</sub> 58–62 dB(A) dle protokolů TÜV SÜD (EN 12102-1).</p>
+          <p class="note">Topný výkon max. při A7/W35. Akustický výkon L<sub>WA</sub> 58–62 dB(A) dle protokolů TÜV SÜD (EN 12102-1). SCOP RH060 dle KEYMARK (EN 14825, průměrné klima).</p>
         </div>
       </div>
     </div>
@@ -333,18 +370,19 @@ footer .logo{color:#fff;margin-bottom:12px}
           <h3>REO R290 Smart · RH06–RH16</h3>
           <div class="tag">Topí přímo ze sluníčka</div>
           <div class="pillars">
-            <div class="pillar"><b>☀️ Topí ze sluníčka</b><span>Panely připojíte rovnou k jednotce – bez střídače a baterie. Co sluníčko nepokryje, dobere ze sítě.</span></div>
+            <div class="pillar"><b>☀️ Topí ze sluníčka</b><span>Panely připojíte přímo k jednotce – bez střídače, baterie a další elektroniky. Co chybí, odebere ze sítě. Nepotřebujete velkou a drahou domácí FV.</span></div>
             <div class="pillar"><b>📈 Vysoká účinnost</b><span>SCOP až 5,29 (35 °C) – víc než většina značkových R290 monobloků.</span></div>
-            <div class="pillar"><b>⚙️ Mitsubishi Electric</b><span>Spolehlivý kompresor Mitsubishi Electric.</span></div>
+            <div class="pillar"><b>⚙️ Mitsubishi Electric</b><span>Kompresor Mitsubishi Electric – osvědčená spolehlivost.</span></div>
           </div>
+          <p class="note" style="margin:0 0 14px">SCOP dle EN 14825, průměrné klima, podklady výrobce.</p>
           <p>Jednotka má integrovaný elektrický dohřev 3 kW, oběhové čerpadlo i expanzní nádobu. Přímé napájení z fotovoltaiky využijete hlavně od jara do podzimu.</p>
           <div class="models">
-            <div class="model"><span class="name">RH06</span><span class="spec">6 kW · 1F</span><span class="price">99 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH08</span><span class="spec">8 kW · 3F</span><span class="price">109 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH10</span><span class="spec">10 kW · 3F</span><span class="price">119 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH12</span><span class="spec">12 kW · 3F</span><span class="price">129 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH14</span><span class="spec">14 kW · 3F</span><span class="price">139 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH16</span><span class="spec">16 kW · 3F</span><span class="price">149 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH06</span><span class="spec">6 kW · 1F</span><span class="spec">SCOP W35 5,00 · W55 3,84</span><span class="price">99 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH08</span><span class="spec">8 kW · 3F</span><span class="spec">SCOP W35 5,15 · W55 3,90</span><span class="price">109 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH10</span><span class="spec">10 kW · 3F</span><span class="spec">SCOP W35 5,20 · W55 3,90</span><span class="price">119 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH12</span><span class="spec">12 kW · 3F</span><span class="spec">SCOP W35 5,11 · W55 3,94</span><span class="price">129 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH14</span><span class="spec">14 kW · 3F</span><span class="spec">SCOP W35 5,29 · W55 3,91</span><span class="price">139 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH16</span><span class="spec">16 kW · 3F</span><span class="spec">SCOP W35 5,09 · W55 3,88</span><span class="price">149 000 Kč <small>bez DPH</small></span></div>
           </div>
         </div>
       </div>
@@ -508,7 +546,7 @@ footer .logo{color:#fff;margin-bottom:12px}
 <footer>
   <div class="wrap">
     <div class="fgrid">
-      <div><div class="logo"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span>eko4home</div><p>Tepelná čerpadla, akumulační nádrže a fotovoltaika na klíč po celé ČR a na Slovensku.</p></div>
+      <div><div class="logo"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span>eko4home</div><p>Úsporná řešení na míru pro Váš dům přímo od výrobce.</p></div>
       <div><h4>Produkty</h4><a href="#produkty">REO R290 RH030–RH060</a><br><a href="#produkty">REO R290 Smart</a><br><a href="#produkty">RHX30 Pro / RH X50</a><br><a href="#produkty">Nádrže</a></div>
       <div><h4>Kontakt</h4><a href="tel:+420774872467">+420 774 872 467</a><br><a href="mailto:info@eko4home.cz">info@eko4home.cz</a><br>Třinec</div>
       <div><h4>Působíme</h4>Celá Česká republika<br>a Slovensko</div>
