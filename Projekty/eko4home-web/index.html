@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Eko4home – tepelná čerpadla a fotovoltaika | Třinec</title>
+<title>Eko4Home – tepelná čerpadla a fotovoltaika | Třinec</title>
 <meta name="description" content="Tepelná čerpadla REO HEATING R290, akumulační nádrže a fotovoltaika na klíč pro rodinné domy, bytové domy i komerční objekty. Sídlo v Třinci, realizace po celé České republice a na Slovensku.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,9 +35,10 @@ section{padding:96px 0}
 /* header */
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.35rem;color:var(--brand-dark)}
-.logo-mark{width:38px;height:38px;border-radius:12px;background:var(--brand);display:grid;place-items:center}
-.logo b{color:var(--brand)}
+.logo{display:inline-flex;flex-direction:column;align-items:center;line-height:1;gap:2px}
+.logo img{height:36px;width:auto}
+.logo span{font-weight:800;font-size:1.5rem;letter-spacing:-.03em;color:#232323}
+.logo-light span{color:#fff}
 .menu{display:flex;gap:20px;font-weight:500;font-size:.95rem;white-space:nowrap}
 .menu a:hover{color:var(--brand)}
 .nav-right{display:flex;align-items:center;gap:18px}
@@ -97,6 +98,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .hl-box{display:block;margin-top:8px;background:var(--yellow);color:var(--ink);font-weight:700;padding:10px 14px;border-radius:12px;box-shadow:0 6px 16px rgba(245,184,0,.35);font-size:1rem}
 .hl-box strong{font-weight:800}
 mark.hl{background:linear-gradient(transparent 45%,rgba(245,184,0,.55) 45%);color:var(--ink);font-weight:700;padding:0 2px}
+.hero-photo{position:relative;border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
+.hero-photo img{width:100%;aspect-ratio:1186/838;object-fit:cover;display:block}
+.hero-cap{position:absolute;left:16px;top:16px;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-radius:16px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+.hero-cap b{color:var(--brand-dark);font-size:.92rem}
+.hero-cap .scop-h{font-size:.72rem;color:var(--muted);font-weight:700}
+.hero-cap-row{display:flex;gap:8px}
 /* why */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.2s}
@@ -233,7 +240,7 @@ footer{background:var(--brand-dark);color:#b9cfc1;padding:56px 0 28px;font-size:
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:36px}
 footer h4{color:#fff;margin-bottom:12px}
 footer a:hover{color:#fff}
-footer .logo{color:#fff;margin-bottom:12px}
+footer .logo{margin-bottom:14px}
 .fbottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:.82rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 @media (max-width:1320px){.phone{display:none}}
@@ -252,7 +259,7 @@ footer .logo{color:#fff;margin-bottom:12px}
   section{padding:64px 0}
   .why-grid,.services,.posts,.process,.reviews,.pillars{grid-template-columns:1fr}
   .phone,.nav-right .btn,.badge{display:none}
-  .hero-unit{padding:24px 12px 14px;gap:8px}.hu img{height:190px}.hu-smart img{height:120px}.hu-pair img{height:170px}.hu-pair .hu-small{height:100px;margin-left:-20px}.scop{font-size:.9rem;padding:3px 7px}
+  .hero-cap{position:static;border-radius:0;box-shadow:none}.hero-unit{padding:24px 12px 14px;gap:8px}.hu img{height:190px}.hu-smart img{height:120px}.hu-pair img{height:170px}.hu-pair .hu-small{height:100px;margin-left:-20px}.scop{font-size:.9rem;padding:3px 7px}
   form{grid-template-columns:1fr;padding:22px}
   .band{padding:36px 24px}
   .fgrid{grid-template-columns:1fr}
@@ -268,7 +275,7 @@ footer .logo{color:#fff;margin-bottom:12px}
 
 <header>
   <div class="wrap nav">
-    <a href="#" class="logo"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span><span>eko<b>4</b>home</span></a>
+    <a href="#" class="logo" aria-label="Eko4Home"><img src="assets/img/logo-icon.png" alt=""><span>Eko4Home</span></a>
     <nav class="menu" id="menu">
       <a href="#produkty">Tepelná čerpadla</a>
       <a href="#pro-koho">Bytové domy a firmy</a>
@@ -302,9 +309,13 @@ footer .logo{color:#fff;margin-bottom:12px}
       </div>
     </div>
     <div class="hero-img">
-      <div class="hero-unit">
-        <figure class="hu"><div class="hu-pair"><img src="assets/img/rh-velke.png" alt="Tepelné čerpadlo REO HEATING RH060"><img class="hu-small" src="assets/img/rh-male.png" alt="Tepelné čerpadlo REO HEATING RH030"></div><figcaption><b>REO R290 · RH030 – RH060</b><small class="scop-h">SCOP RH060 – průměrný roční topný faktor</small><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>4,80</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,89</span></span></figcaption></figure>
-        <figure class="hu hu-smart"><img src="assets/img/smart.png" alt="Tepelné čerpadlo REO R290 Smart"><figcaption><b>REO R290 Smart · RH14</b><small class="scop-h">SCOP – průměrný roční topný faktor</small><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>5,29</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,91</span></span><small>kompresor Mitsubishi Electric · až 75 °C · ☀️ topí ze sluníčka</small></figcaption></figure>
+      <div class="hero-photo">
+        <img src="assets/img/hero-schema.webp" alt="Tepelné čerpadlo REO HEATING RH060 napojené na zásobník Watertank">
+        <div class="hero-cap">
+          <b>REO R290 · RH060 + Watertank</b>
+          <small class="scop-h">SCOP – průměrný roční topný faktor</small>
+          <div class="hero-cap-row"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>4,80</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,89</span></span></div>
+        </div>
       </div>
       <div class="badge b2"><span class="ic">📍</span><div><b>Celá ČR a Slovensko</b>sídlo a showroom v Třinci</div></div>
     </div>
@@ -580,7 +591,7 @@ footer .logo{color:#fff;margin-bottom:12px}
 <footer>
   <div class="wrap">
     <div class="fgrid">
-      <div><div class="logo"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span>eko4home</div><p>Úsporná řešení na míru pro Váš dům přímo od výrobce.</p></div>
+      <div><div class="logo logo-light"><img src="assets/img/logo-icon-light.png" alt=""><span>Eko4Home</span></div><p>Úsporná řešení na míru pro Váš dům přímo od výrobce.</p></div>
       <div><h4>Produkty</h4><a href="#produkty">REO R290 RH030–RH060</a><br><a href="#produkty">REO R290 Smart</a><br><a href="#produkty">RHX30 Pro / RH X50</a><br><a href="#produkty">Nádrže</a></div>
       <div><h4>Kontakt</h4><a href="tel:+420774872467">+420 774 872 467</a><br><a href="mailto:info@eko4home.cz">info@eko4home.cz</a><br>Třinec</div>
       <div><h4>Působíme</h4>Celá Česká republika<br>a Slovensko</div>
