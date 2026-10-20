@@ -706,7 +706,7 @@ ul.chk li:before{content:"";position:absolute;left:0;top:1.3mm;width:2.4mm;heigh
 .legend i.ln.d{border-top:2px dashed #C98A0C}
 
 /* --- titulka */
-.cover{padding:0;background:linear-gradient(170deg,#F5FBF7 0%,#E9F6EE 55%,#D5EEDD 100%)}
+.cover{padding:0;background:#fff}
 .cv-glow{position:absolute;right:-40mm;top:-40mm;width:150mm;height:150mm;border-radius:50%;
  background:radial-gradient(circle,rgba(255,215,90,.75) 0%,rgba(255,215,90,.25) 40%,rgba(255,215,90,0) 70%)}
 .cv-top{position:relative;display:flex;justify-content:space-between;align-items:flex-start;padding:11mm 14mm 0}
@@ -728,7 +728,7 @@ ul.chk li:before{content:"";position:absolute;left:0;top:1.3mm;width:2.4mm;heigh
 .cv-c.sun{background:var(--sun);color:var(--darker)}.cv-c.sun .ic{color:var(--darker)}
 .cv-c.eff{background:var(--darker);color:#fff}.cv-c.eff .ic{color:var(--sun)}
 .cv-icons{position:relative;padding:4mm 10mm 0;display:grid;grid-template-columns:repeat(7,1fr);gap:2.5mm}
-.cv-icons div{background:#fff;border-radius:3mm;padding:2.3mm 1mm 2mm;text-align:center;box-shadow:0 .6mm 2mm rgba(0,0,0,.06)}
+.cv-icons div{background:#fff;border:1px solid var(--line);border-radius:3mm;padding:2.3mm 1mm 2mm;text-align:center}
 .cv-icons .ic{width:6.5mm;height:6.5mm;display:block;margin:0 auto 1.2mm}
 .cv-icons span{font-size:7pt;font-weight:700;line-height:1.2;color:var(--darker)}
 .cv-bot{position:absolute;left:0;right:0;bottom:0;background:var(--darker);color:#fff;padding:6mm 14mm;display:flex;justify-content:space-between;align-items:center}
