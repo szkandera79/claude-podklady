@@ -8,7 +8,7 @@ Jednostránkový návrh (statické HTML) nového webu eko4home.cz (Riva Trade s.
   - REO R290 RH030–RH060 — ceny 95/105/125/169 tis. Kč bez DPH (zadal uživatel 20. 10. 2026), COP a fotky z https://reoheating.cz/eshop/
   - REO R290 Smart RH06–RH16 (129/139/149/159/169/189 tis. Kč bez DPH, zadal uživatel 20. 10. 2026) a RHX20 Pro / RHX30 Pro (300/350 tis.) a RH X50 (430 tis., prodejní cena z nástroje kaskád 27. 9. 2026) — záložka „Bytové domy a firmy“
   - Nádrže AKU 100/500, TUV 200/300, Watertank 210/70 a 330/120 — z e-shopu REO
-- Úvod: schéma RH060 + Watertank (`hero-schema.webp`, dodal uživatel) se SCOP 4,80 / 3,89; pod úvodem pruh „Topí přímo ze sluníčka“ (Smart RH14). Sekce „Pro koho“: rodinné domy · bytové domy a SVJ · komerční objekty
+- Úvod přes celou šířku: schéma RH060 + Watertank (`hero-schema.webp`, dodal uživatel) vpravo dole, vlevo rozmazané pozadí (`hero-blur.webp`) + tmavý přechod, bílý text; varianty pozadí v `navrhy-hero/`; pod úvodem pruh „Topí přímo ze sluníčka“ (Smart RH14). Sekce „Pro koho“: rodinné domy · bytové domy a SVJ · komerční objekty
   (BD a firmy = RHX30 Pro + RH X50). Působnost: celá ČR a Slovensko, sídlo Třinec.
 - Texty (Proč my, recenze, kontakt) převzaty ze současného eko4home.cz.
 

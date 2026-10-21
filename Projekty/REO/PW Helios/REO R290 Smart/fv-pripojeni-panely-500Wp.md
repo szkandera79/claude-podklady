@@ -34,3 +34,10 @@ Vždy 1 string, žádné paralelní řazení (Imax 13 A).
 - je 13 A limit provozního proudu, nebo i zkratového Isc? (panely 500 Wp mají Isc 13,5–15 A)
 - str. 42 prezentace (RH10–16 1F) obsahuje 3F schéma
 - RHX20 Pro / RHX30 Pro v tabulce FV chybí
+
+## Předimenzování pole (více výkonu při slabém osvitu) – 2026-10-20
+- Napětí (počet panelů v sérii) se NEPŘEKRAČUJE – žádné zařízení mezi FV a TČ to bezpečně neřeší
+  (svodič přepětí je jen na blesk/přechodové jevy; přepěťové relé by odpojovalo právě za mrazivých slunečných rán).
+- Více výkonu jen přes proud: větší panely (vyšší Imp/Isc) při stejném počtu v sérii; MPPT v poledne výkon ořízne.
+  Podmínka: výrobce potvrdí, že vstup snese Isc nad 13 A (a jaké maximum). Do té doby ne.
+- Bez rizika hned: sklon 45–60° na jih (zimní zisk), panely TOPCon/HJT, bez stínění; optimizéry jen u stíněných panelů.

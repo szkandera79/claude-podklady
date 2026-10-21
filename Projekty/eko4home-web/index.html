@@ -46,9 +46,18 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .burger{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--brand-dark)}
 
 /* hero */
-.hero{padding:48px 0 72px;background:linear-gradient(180deg,var(--bg-soft),#fff)}
-.hero .wrap{max-width:1400px}
-.hero-grid{display:grid;grid-template-columns:.82fr 1.35fr;gap:44px;align-items:center}
+.hero{position:relative;overflow:hidden;color:#fff;min-height:min(80vh,720px);display:flex;align-items:center;padding:72px 0;background:#1d2a22 url(assets/img/hero-blur.webp) left center/cover}
+.hero::before{content:"";position:absolute;right:0;bottom:0;width:min(62%,980px);aspect-ratio:1186/838;background:url(assets/img/hero-schema.webp) center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%),linear-gradient(180deg,transparent 0,#000 14%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 16%),linear-gradient(180deg,transparent 0,#000 14%);mask-composite:intersect}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,36,24,.92) 0%,rgba(14,36,24,.78) 32%,rgba(14,36,24,.2) 46%,rgba(14,36,24,0) 55%)}
+.hero .wrap{position:relative;z-index:2;max-width:1400px;width:100%}
+.hero-grid{display:block}
+.hero-grid > div{max-width:560px}
+.hero h1{color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.hero h1 .hand{color:#8fd9a8}
+.hero .hero-grid p{color:#e3ece6}
+.hero .eyebrow{background:rgba(255,255,255,.14);color:#fff;backdrop-filter:blur(4px)}
+.hero .btn-ghost{border-color:#fff;color:#fff}.hero .btn-ghost:hover{background:rgba(255,255,255,.12)}
+.hero .stat strong{color:#fff}.hero .stat span{color:#c9d8ce}
 .hero h1{font-size:clamp(2.3rem,4.2vw,3.6rem);font-weight:800;margin-bottom:20px}
 .hero h1 .yellow{color:var(--yellow)}
 .hero h1::after{content:"";display:block;width:72px;height:4px;border-radius:2px;background:var(--yellow);margin-top:22px}
@@ -244,6 +253,11 @@ footer a:hover{color:#fff}
 footer .logo{margin-bottom:14px}
 .fbottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:.82rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
+@media (max-width:980px){
+  .hero{min-height:0;align-items:flex-start;padding:40px 0 calc(70.7vw + 10px);background-position:center top}
+  .hero::before{width:100%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%);mask-image:linear-gradient(180deg,transparent 0,#000 18%)}
+  .hero::after{background:linear-gradient(180deg,rgba(14,36,24,.95) 0%,rgba(14,36,24,.88) 55%,rgba(14,36,24,.2) 78%,rgba(14,36,24,0) 90%)}
+}
 @media (max-width:1320px){.phone{display:none}}
 @media (max-width:1180px){
   .menu{display:none}.burger{display:block}
@@ -293,7 +307,7 @@ footer .logo{margin-bottom:14px}
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" aria-label="Úvod">
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">Česká republika · Slovensko</span>
@@ -308,12 +322,6 @@ footer .logo{margin-bottom:14px}
         <div class="stat"><strong>R290</strong><span>přírodní chladivo</span></div>
         <div class="stat"><strong>A–Z</strong><span>vlastní montáž i elektro</span></div>
       </div>
-    </div>
-    <div class="hero-img">
-      <div class="hero-photo">
-        <img src="assets/img/hero-schema.webp" alt="Tepelné čerpadlo REO HEATING RH060 napojené na zásobník Watertank">
-      </div>
-      <div class="badge b2"><span class="ic">📍</span><div><b>Celá ČR a Slovensko</b>sídlo a showroom v Třinci</div></div>
     </div>
   </div>
 </section>
