@@ -100,8 +100,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .sunband{background:linear-gradient(135deg,#fffaf0,#fff 55%,var(--brand-light));padding:80px 0}
 .sun-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center}
 .sun-img{position:relative;display:grid;place-items:center}
-.sun-img img{max-height:420px;filter:drop-shadow(0 20px 22px rgba(18,56,33,.2))}
-.sun-img .sun{position:absolute;top:-62px;right:0;font-size:4.2rem;filter:drop-shadow(0 0 22px rgba(252,187,0,.7))}
+.sun-img img{max-height:560px;width:100%;object-fit:contain;filter:drop-shadow(0 20px 22px rgba(18,56,33,.2))}
+.sun-img .sun{position:absolute;top:-40px;right:-10px;font-size:4.2rem;filter:drop-shadow(0 0 22px rgba(252,187,0,.7))}
 .sun-list{list-style:none;display:grid;gap:12px;margin:22px 0 28px}
 .sun-list li{padding-left:30px;position:relative;color:var(--muted)}
 .sun-list li::before{content:"✓";position:absolute;left:0;top:0;width:22px;height:22px;border-radius:50%;background:var(--brand);color:#fff;font-size:.75rem;display:grid;place-items:center;font-weight:800}
@@ -147,6 +147,11 @@ mark.hl{background:linear-gradient(transparent 45%,rgba(245,184,0,.55) 45%);colo
 .series{display:grid;grid-template-columns:380px 1fr;gap:40px;background:#fff;border-radius:28px;padding:36px;box-shadow:var(--shadow);align-items:start}
 .series-img{background:radial-gradient(circle at 50% 60%,var(--brand-light),#fff 70%);border-radius:22px;padding:28px;display:grid;place-items:center;min-height:300px}
 .series-img img{max-height:300px;object-fit:contain}
+.series-img.stack{display:flex;flex-direction:column;justify-content:space-around;gap:28px;align-self:stretch}
+.series-img.stack figure{display:flex;flex-direction:column;align-items:center;gap:10px}
+.series-img.stack figure:first-child img{max-height:330px}
+.series-img.stack figure:last-child img{max-height:260px}
+.series-img.stack figcaption{font-size:.85rem;font-weight:700;color:var(--brand-dark);background:#fff;border-radius:999px;padding:4px 12px;box-shadow:0 3px 10px rgba(18,56,33,.08)}
 .series h3{font-size:1.7rem;margin-bottom:6px}
 .series .tag{color:var(--brand);font-weight:600;margin-bottom:14px}
 .series > div > p{color:var(--muted);margin-bottom:18px}
@@ -278,7 +283,7 @@ footer .logo img{height:63px}
   section{padding:64px 0}
   .why-grid,.services,.posts,.process,.reviews,.pillars{grid-template-columns:1fr}
   .phone,.nav-right .btn,.badge{display:none}
-  .sun-img img{max-height:300px}.sun-img .sun{font-size:3rem;top:-40px}
+  .sun-img img{max-height:340px}.series-img.stack figure:first-child img{max-height:240px}.series-img.stack figure:last-child img{max-height:190px}.sun-img .sun{font-size:3rem;top:-40px}
   .logo img{height:52px}
   .hero-photo{margin:0 -16px;border-radius:0;box-shadow:none}.hero-cap{position:static;border-radius:0;box-shadow:none;background:var(--bg-soft)}.hero-unit{padding:24px 12px 14px;gap:8px}.hu img{height:190px}.hu-smart img{height:120px}.hu-pair img{height:170px}.hu-pair .hu-small{height:100px;margin-left:-20px}.scop{font-size:.9rem;padding:3px 7px}
   form{grid-template-columns:1fr;padding:22px}
@@ -334,7 +339,7 @@ footer .logo img{height:63px}
 
 <section class="sunband">
   <div class="wrap sun-grid">
-    <div class="sun-img"><img src="assets/img/rhx-pro-alpha.png" alt="REO R290 Smart RHX30 Pro"><span class="sun">☀️</span><span class="sun-cap"><span class="new-tag">Novinka</span>REO R290 Smart</span></div>
+    <div class="sun-img"><img src="assets/img/rhx-pro-alpha.png" alt="REO R290 Smart RHX30 Pro"><span class="sun">☀️</span></div>
     <div>
       <span class="eyebrow"><span class="new-tag">Novinka</span>REO R290 Smart</span>
       <h2>Topí přímo <span class="hand">ze sluníčka</span></h2>
@@ -397,7 +402,7 @@ footer .logo img{height:63px}
 
     <div class="panel active" data-panel="rh">
       <div class="series">
-        <div class="series-img"><img src="assets/img/rh-male.png" alt="Tepelné čerpadlo REO R290 RH030–RH060"></div>
+        <div class="series-img stack"><figure><img src="assets/img/rh-rada-predni.png" alt="Tepelná čerpadla REO R290 RH060 a RH030–RH050 zepředu"><figcaption>RH060 · RH030–RH050</figcaption></figure><figure><img src="assets/img/rh-rada-zadni.png" alt="Tepelná čerpadla REO R290 zezadu s přípojkami"><figcaption>pohled zezadu – přípojky</figcaption></figure></div>
         <div>
           <h3>REO R290 · RH030–RH060</h3>
           <div class="tag">Osvědčená řada pro rodinné domy, 8–22 kW</div>
