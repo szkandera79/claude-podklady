@@ -146,3 +146,12 @@ Přeznačení produktového katalogu výrobce (vydání 10/2025, 14 stran) do de
   ze specifikace (uživatel 21. 10. 2026: „ponechej staré a lepší hodnoty“); jmenovitý příkon dopočten. Katalog i letáky mají stejně původní hodnoty (nová čísla výrobce nepoužívat). SCOP, hluk a jištění zůstávají z ERP protokolu. 
 - Vypuštěno: německý §14a EnWG (nahrazeno „omezení příkonu“), srovnávací stupnice hluku; přidány 3 pilíře, FV tabulka, umístění jednotky.
 - Fotky `brozura/assets/*.jpg` = výřezy z katalogu výrobce bez loga (zkontrolováno); jednotka a hero z `katalog/assets`.
+
+## Katalog výrobce přeznačený — `katalog-en/` (21. 10. 2026)
+Věrný rebrand produktového katalogu výrobce (`../Power World Helios Pro Series Catalog.pdf`, 14 stran na 8 dvojstranách, EN):
+`katalog-en/rebrand.py` → `REO-R290-Smart_catalogue-EN.pdf`. Obsah, fotky a sazba beze změny, mění se jen značka:
+logo v záhlaví (vektor) a na titulce, název řady „H8 Helios Pro“ (vektor + přechody Sh71/122/126) → „REO R290 Smart Series“,
+zadní strana (QR, firma, adresy, web) → kontakty REO HEATING, nápis na jednotce ve fotkách (titulka, str. 8) → „REO HEATING“,
+energetický štítek, hlavička cloudové konzole (vč. čínského názvu výrobce v obrázku), popisek v FV schématu,
+tabulky: modely RHxx (1-phase)/(3-phase), z 1F tabulky jen RH06. Metadata, záložky i odkazy přepsané; skript na konci kontroluje text, metadata a streamy.
+Data jsou výrobce beze změny (liší se od našeho katalogu – viz výše).

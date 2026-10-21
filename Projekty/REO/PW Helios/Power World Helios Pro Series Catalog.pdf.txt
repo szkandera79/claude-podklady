@@ -1,0 +1,580 @@
+[Text vytažený z Power World Helios Pro Series Catalog.pdf]
+
+--- strana 1 ---
+POWER WORLD
+POWER WORLD MACHINERY EQUIPMENT CO., LTD.
+Headquarters Add.:
+No.24, Fourth Industrial Zone, Houting Street, Shajing T own, Baoan District, Shenzhen, China.
+Huizhou Production Base.:
+No. 1, Zhenxing South 1st Road, Zhihuigu Industrial Park, Shiwan T own, Boluo County , Guangdong Province,China
+Website: www.powerworldhp.com
+E-mail: info@powerworldhp.com After-sales: technical@powerworld-e.com
+Disclaimer
+The information contained in this product brochure is for reference purposes only. While we strive to ensure the accuracy and timeliness of the content, we do not guarantee its
+completeness or applicability under specific conditions. Product specifications, features, images, colors, and configurations are subject to change without prior notice. The final interpretation
+rights are reserved by the company.Product performance may vary depending on usage conditions, materials, or operating methods. Please verify product suitability based on your actual
+needs before use. For the most up-to-date information, detailed technical data, or customized solutions, please contact our sales representatives or visit our official website. This brochure
+does not constitute a contractual offer or commitment of any kind, and we shall not be held liable for any direct or indirect loss or damage resulting from the use of this material.
+Heating Cooling 75℃ Max
+Water Output
+A+++ at
+35℃ / 55°C
+290
+Refrigerant
+Efficient Solutions for Heating, Cooling and DHW
+Ver . © 202501021 Standard
+--- strana 2 ---
+290
+Refrigerant
+99%
+Lower GWP
+32
+Refrigerant
+R290 Natural Refrigerant
+R290 (propane) is a widely used and renewable natural refrigerant.
+Compared to R32, R407C and R410A, R290 boasts a GWP of just 3
+and an ODP of 0, rendering it nearly neutral in terms of global
+warming impact. it meets increasingly strict global environmental
+regulations and is considered an eco-friendly , energy-efficient, and
+high-performance choice.
+R410A
+R407C
+R32
+R290
+1774
+675
+3
+01
+2088
+407C
+Refrigerant
+410A
+Refrigerant
+A+++ High Energy Efficiency
+Achieves the highest energy level A+++ at both 35°C and 55°C,
+and A high cooling EER COP >5, ensuring optimal efficiency
+across varying conditions.
+02
+--- strana 3 ---
+HIGH-TEMP
+WATER OUTLET
+75℃ Instant Hot Water, No Waiting
+Supports immediate heating, our heat pump delivers hot
+water instantly upon activation, eliminating cold delays
+while supporting outlet temperatures up to 75°C for
+seamless compatibility with diverse heating systems.
+COLD CLIMA TE
+OPERA TION
+-25℃ Cold Climate Operation
+Performs stably in environments ranging from
+-25°C to 43°C, ensuring year-round operation
+even in low-temperature environments.
+Freeze-proof chassis heating prevents
+condensation ice buildup, ensuring reliable
+winter operation.
+03
+Full DC Inverter Technology
+It perfectly combines eco-friendly R290 refrigerant and inverter technology to produce efficient house heating and hot water even
+under -25°C extreme cold climate.
+One System, Three Solutions
+Experience total home comfort with a single, efficient system that delivers heating, cooling, and domestic hot water .
+Heating DHW
+Cooling
+04
+--- strana 4 ---
+AI Intelligent Defrost Technology Noise Lower to 35 dB(A),
+5 Stage Noise Reduction
+Equipped with AI-powered defrost technology , our heat pump automatically detects frost buildup and initiates intelligent four-way
+valve reversal for rapid, efficient defrosting. By integrating multi-point temperature and timing control, it significantly reduces defrost
+duration while maximizing energy efficiency and heating stability.
+Achieve whisper-quiet comfort with our advanced 5-stage noise control system,
+Our heat pump delivers exceptional silent operation as low as 35 dB(A).
+35
+dB
+10dB 25dB 49dB 65dB
+Sound pressure
+Fully Enclosed Compressor Space
+with PU Wave-Absorbing Cotton
+Triple-layer PU sound-absorbing cotton
+on sheet metal for superior
+noise reduction.
+Large-angle 3D axial flow fan
+blades for smooth, quiet airflow
+Intelligent multi-speed fan control
+adapts to requirements
+Two-stage silent mode for
+day/night operation flexibility
+05
+06
+--- strana 5 ---
+15% LFL
+When refrigerant leakage exceeds
+Two-Level Refrigerant Leakage Protection
+Dual-layer mechanism keeps refrigerant out of indoor areas, delivering complete
+safety assurance.
+LEAKAGE SENSOR 15% LFL
+Alarms at , automatically
+stopping key components while
+maintaining minimal ventilation.
+MICROBUBBLE EXHAUST VAL VE
+Automatically vents refrigerant that
+leaks into the water circuit,
+preventing it from entering the room
+and ensuring operational safety.
+Smart Temperature Curve Control
+Select a pre-set curve and let the system do the rest. It automatically adjusts the water temperature based on real-time outdoor
+conditions, eliminating the need for manual setting changes.
+8 Pre-set & 1 Custom Curve
+for heating and cooling
+Auto-Adjusts target water
+temperature
+Perfect Fit for any local climate
+Water Inlet
+Water Outlet
+Centralized Connections
+Simplified Installation
+The water inlet and outlet are neatly grouped at
+the bottom, creating a professional appearance
+and enabling quick, easy installation and
+maintenance.
+07
+Intelligent 7-Inch Touchscreen Controller
+Command your heating and cooling system with elegance and ease through our expansive 7-inch high-end capacitive touchscreen.
+Designed for a superior user experience, it features a beautifully intuitive interface (UI) that puts comprehensive control at your
+fingertips.
+Multi-unit Control
+Seamlessly manage up to 8 cascaded
+units with independent three-zone
+temperature control.
+Smart Connectivity
+BMS (Modbus) integration, PV-ready ,
+and external heat source control.
+Data Insights
+Track energy use, heating output,
+and export history.
+Custom Automation
+Holiday mode, timers, sanitization,
+and power limits.
+08
+--- strana 6 ---
+PV Direct Drive
+Seamlessly integrates with solar photovoltaic systems for direct solar energy utilization, cutting grid reliance and costs.
+H 8 H e l i P V S y s t e m
+P V + P V -
+o s P r o
+SOLAR-POWERED OPERATION
+Uses solar energy to minimize
+grid power use
+CUT ENERGY BILLS
+Significantly reduces electricity
+consumption
+ECO-FRIENDLY
+Lowers your carbon footprint
+with clean energy
+EASY INTEGRATION
+Compatible with most existing
+PV systems
+H O M E & P O O L
+SG Ready & PV Ready
+Empower your heat pump to support grid stability ,
+slash carbon emissions, and reduce operating costs.
+Achieve the perfect balance of sustainability , savings,
+and reliability.
+Fan coil unit
+Radiator
+Floor heating
+DHW
+Boiler
+SG-Ready PV-Ready
+/
+09
+S m a r t G r i d
+§14a EnWG Grid-Compliant Operation
+"§14a EnWG" is Germany's regulation for controllable energy devices — helping the grid stay stable, and helping you save money
+without affecting your comfort.
+PREVENTS GRID OVERLOAD
+Supports community grid
+stability by avoiding peak-time strain.
+AVOIDS SHUTDOWNS
+Ensures continuous operation without
+triggering safety cut-offs.
+COST CONTROL
+Protects from peak-time tariffs.
+SEAMLESS & AUTOMATIC
+Intelligent power management requires
+no user intervention.
+10
+--- strana 7 ---
+Smart Control, Smart Home
+Smart Life/Tuya Smart App/Huilian APP
+WIFI remote control. Simple operation, easily check or control your heat pump from anywhere!
+Mode
+switching
+Energy consumption
+monitor and manage
+Real-time
+monitoring
+Smart loT Cloud Control
+Realtime monitoring, data operation and maintenance, saving time and costs for users, dealers, and manufacturers.
+History record
+10 Languages
+available
+Automatic
+fault diagnosis
+Various timing
+settings
+Operating parameters
+HOT WATER
+GENERAL SETTINGS
+LANGUAGE
+ST ART P AGE
+* Communication method: WIFI
+* For detailed function display , please log in or view the manual.
+English
+KITCHEN
+Language
+Router
+CDMA/GPRS/4G/5G
+Internet
+ADJUST THE
+TEMPERATURE
+Manufacturer
+Cloud Console
+Customer Sub-account
+Console IoT Cloud Console
+Cancel
+BIG DA T A MANAGEMENT
+Global device data collection, statistics,
+analysis and management.
+EQUIPMENT MANAGEMENT
+Information statistics/operation
+status/parameter viewing and setting/fault
+diagnosis report/operation log, etc.
+OT A UPGRADE
+Quickly fix code defects and remotely
+iteratively upgrade product mainboards.
+TUY A SMART APP
+SMART LIFE APP HUILIAN APP
+11
+12
+--- strana 8 ---
+Model
+PW06
+-DKXLRE1-H8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+PW08
+-DKXLRE3-H8
+PW10
+-DKXLRE3-H8
+PW12
+-DKXLRE3-H8
+PW14
+-DKXLRE3-H8
+PW16
+-DKXLRE3-H8
+Nominal Capacity (kW)
+6.0
+8.0
+10.0 12.0 14.0 16.0
+Nominal Capacity (kW)
+8.0
+10.0 12.0 14.0
+16.0
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+1.23
+1.64
+2.10 2.47 2.96 3.40
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+1.64
+2.10 2.47 2.96
+3.40
+COP
+4.88
+4.89
+4.76 4.86 4.73 4.70
+COP
+4.89
+4.76 4.86 4.73
+4.70
+Heating
+A7/6℃
+W47/55℃
+Nominal Capacity (kW)
+6.0
+8.0
+10.0 12.0 14.0 16.0
+Nominal Power Input (kW)
+1.98
+2.63
+3.44 3.99 4.75 5.46
+Heating
+A7/6℃
+W47/55℃
+Nominal Capacity (kW)
+8.0
+10.0 12.0 14.0
+16.0
+Nominal Power Input (kW)
+2.63
+3.44 3.99 4.75
+5.46
+COP
+3.03
+3.04
+2.91 3.01 2.95 2.93
+COP
+3.04
+2.91 3.01 2.95
+2.93
+Cooling
+A35/24℃
+W23/18℃
+Nominal Capacity (kW)
+6.0
+8.0
+10.0 12.0 14.0 16.0
+Nominal Power Input (kW)
+1.23
+1.64
+2.10 2.48 2.92 3.37
+Cooling
+A35/24℃
+W23/18℃
+Nominal Capacity (kW)
+8.0
+10.0 12.0 14.0
+16.0
+Nominal Power Input (kW)
+1.64
+2.10 2.48 2.92
+3.37
+EER
+4.86
+4.88
+4.76 4.84 4.80 4.75
+EER
+4.88
+4.76 4.84 4.80
+4.75
+Heating Condition - Ambient Temp.(DB/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Condition - Ambient Temp.(DB/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+3.4~8.5
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~22.0
+Heating Capacity Range (kW)
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+8.8~22.0
+Heating Power Input Range(kW)
+0.66~1.99
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5.47
+Heating Power Input Range(kW)
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+1.74~5.47
+COP Range
+4.27~5.13
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5.05
+COP Range
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+4.02~5.05
+DHW Condition-Ambient Temp.(DB/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+DHW Condition-Ambient Temp.(DB/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+4.0~9.0
+5.2~11.5
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~22.5
+Heating Capacity Range (kW)
+5.2~11.5
+5.3~13.2 6.6~17.5 7.8~19.5
+8.8~22.5
+Heating Power Input Range (kW)
+0.78~2.14
+1.035~2.76
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5.55
+Heating Power Input Range (kW)
+1.035~2.76
+1.05~3.28 1.37~3.98 1.54~4.64
+1.75~5.55
+COP Range
+4.20~5.13
+4.17~5.05
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5.03
+COP Range
+4.17~5.05
+4.02~5.04 4.39~4.81 4.20~5.06
+4.05~5.03
+Heated water output (L/H)
+194
+248
+284 376 419 484
+Heated water output (L/H)
+248
+284 376 419
+484
+Cooling Condition - Ambient Temp.(DB/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Condition - Ambient Temp.(DB/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+2.4~6.0
+3.5~8.0
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~16.5
+Cooling Capacity Range (kW)
+3.5~8.0
+4.0~9.8 5.0~13.2 5.6~14.5
+6.4~16.5
+Cooling Power Input Range(kW)
+0.68~1.99
+0.97~2.58
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5.79
+Cooling Power Input Range(kW)
+0.97~2.58
+1.24~3.60 1.49~4.52 1.67~5.00
+1.93~5.79
+EER Range
+3.01~3.51
+3.10~3.61
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~3.31
+EER Range
+3.10~3.61
+2.72~3.22 2.92~3.35 2.90~3.35
+2.85~3.31
+Cooling Condition - Ambient Temp.(DB/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Condition - Ambient Temp.(DB/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+3.5~8.0
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~20.5
+Cooling Capacity Range (kW)
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+8.2~20.5
+Cooling Power Input Range(kW)
+0.67~1.88
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5.02
+Cooling Power Input Range(kW)
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+1.59~5.02
+EER Range
+4.25~5.25
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~5.16
+EER Range
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+4.08~5.16
+ErP Level (35°C)
+A+++
+A+++ A+++ A+++ A+++ A+++
+ErP Level (35°C)
+A+++
+A+++ A+++ A+++ A+++
+ErP Level (55°C)
+A+++
+A+++ A+++ A+++ A+++ A+++
+ErP Level (55°C)
+A+++
+A+++ A+++ A+++ A+++
+Power supply
+230V/1Ph/50Hz/60Hz
+Power supply
+380V/3Ph/50/60Hz
+Max. power input(kW)
+3.3
+4.5
+5.5 6.3 6.6 8.1
+Max. power input(kW)
+4.5
+5.5 6.3 6.6
+8.1
+Max. current (A)
+15.1
+20.6
+25.2 28.6 30.2 37.1
+Max. current (A)
+8.6
+10.4
+12 12.5 15.4
+Diameter of pipe (mm)
+DN25
+DN32 Diameter of pipe (mm)
+DN25
+DN32
+Water Flow(m3/h)
+1.46
+1.89
+2.22 2.92 3.32 3.78
+Water Flow(m3/h)
+1.89
+2.24 2.92 3.32
+3.78
+Water Pressure Drop (max) kPa
+30
+35
+40 43 47 52
+Water Pressure Drop (max) kPa
+35
+40 43 47
+52
+Net Weight (kg)
+116
+120
+138 165 170 190
+Net Weight (kg)
+120
+138 165 170
+190
+Body size(W*D*H) (mm)
+1200×463×791
+1328×470×1065
+Body size(W*D*H) (mm)
+1328×470×1065
+IP Grade (Level of protection)
+IPX4
+IP Grade (Level of protection)
+IPX4
+Anti-electric shock Rate
+I
+Anti-electric shock Rate
+I
+Refrigerant
+R290
+Refrigerant
+R290
+Expansion Tank(L)
+6L
+Expansion Tank(L)
+6L
+Electric Heater
+3KW
+Electric Heater
+3KW
+Operation Ambient Temp. (℃)
+-25~43℃
+Operation Ambient Temp. (℃)
+-25~43℃
+Operating water temperature (℃)
+25~75℃(DHW)
+Operating water temperature (℃)
+25~75℃(DHW)
+Operating water temperature (℃)
+25~75℃(Heating)
+Operating water temperature (℃)
+25~75℃(Heating)
+Operating water temperature (℃)
+5~30℃(Cooling)
+Operating water temperature (℃)
+5~30℃(Cooling)
+Note: The data above is for reference only,please refer to the nameplate on the unit if for more specific data.
+13
+Note: The data above is for reference only,please refer to the nameplate on the unit if for more specific data.
+14
