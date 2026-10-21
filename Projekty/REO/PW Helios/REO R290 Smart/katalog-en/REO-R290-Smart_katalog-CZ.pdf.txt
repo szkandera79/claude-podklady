@@ -1,0 +1,8936 @@
+[Text vytažený z REO-R290-Smart_katalog-CZ.pdf]
+
+--- strana 1 ---
+reoheating.cz
+REO R290
+Smart
+Plně invertorové tepelné čerpadlo monoblok Plně invertorové tepelné čerpadlo monoblok
+Topení Chlazení Voda až 75 °C A+++ při 35 °C /
+55 °C
+REO HEATING
+Tepelná čerpadla · Riva Trade s.r.o., IČ 08864811
+Showroom, prodejna a sklad:
+Smetanova 555, 739 61 Třinec · Po–Pá 9:00–16:00 290
+chladivo
+Web: reoheating.cz E­mail: info@reoheating.cz Telefon: +420 774 872 467
+Upozornění
+Informace v tomto katalogu jsou pouze orientační. Přestože se snažíme o jejich přesnost a aktuálnost, nezaručujeme jejich úplnost ani použitelnost za konkrétních podmínek.
+Technické údaje, funkce, obrázky, barvy a provedení se mohou změnit bez předchozího upozornění. Výkon výrobku se může lišit podle podmínek použi, materiálů a způsobu
+provozu. Před použim si prosím ověřte vhodnost výrobku pro vaše potřeby. Aktuální informace, podrobné technické údaje nebo řešení na míru vám poskytnou naši
+obchodní zástupci nebo je najdete na našem webu. Tento katalog není závaznou nabídkou ani závazkem jakéhokoli druhu a neodpovídáme za přímé ani nepřímé škody vzniklé
+jeho použim.
+Efektivní řešení pro topení, chlazení a ohřev teplé vody
+REO HEATING · 10/2026
+--- strana 2 ---
+290
+chladivo
+99%
+32
+nižší GWP chladivo
+Přírodní chladivo R290 R290 (propan) je široce používané přírodní chladivo z
+obnovitelných zdrojů. Ve srovnání s R32, R407C a R410A má
+potenciál globálního oteplování (GWP) jen 3 a nulový vliv na
+ozonovou vrstvu (ODP 0), takže na oteplování planety nemá
+téměř žádný vliv. Splňuje stále přísnější ekologické předpisy a
+je šetrnou, energecky úspornou a výkonnou volbou.
+R410A
+R407C
+1774
+R32
+675
+R290
+3
+01
+2088
+407C
+chladivo
+410A
+chladivo
+REO HEATING
+Energetická třída A+++
+Nejvyšší energecká třída A+++ při 35 °C i 55 °C a vysoká
+účinnost i v chlazení (EER až přes 5) – opmální účinnost
+za různých podmínek.
+02
+--- strana 3 ---
+VODA AŽ
+75 °C
+Provoz do −25 °C
+Spolehlivě pracuje při venkovních
+teplotách od −25 °C do 43 °C – celoroční
+provoz i v mrazivém klimatu.
+Vyhřívání spodní vany brání namrzání
+kondenzátu a zajišťuje spolehlivý
+provoz v zimě.
+03
+Teplá voda až 75 °C bez čekání
+Okamžitý start ohřevu: tepelné čerpadlo dodává
+teplou vodu hned po zapnu, bez čekání na zahřá.
+Výstupní teplota až 75 °C umožňuje připojení k
+nejrůznějším otopným soustavám.
+PROVOZ
+V MRAZU
+Plně invertorová technologie DC
+Spojuje ekologické chladivo R290 s invertorovou technologií – účinně vytápí dům a ohřívá teplou vodu i v extrémních
+mrazech do −25 °C.
+Jeden systém, tři funkce
+Komfort pro celý dům s jedním úsporným systémem, který zajis topení, chlazení i ohřev teplé vody.
+Topení Chlazení TUV
+04
+--- strana 4 ---
+Inteligentní odmrazování s AI Hluk už od 35 dB(A),
+5 stupňů odhlučnění
+Inteligentní odmrazování s umělou inteligencí samo rozpozná námrazu a zahájí rychlé a účinné odmrazení přepnum
+čtyřcestného venlu. Díky vyhodnocení teplot v několika bodech a doby provozu výrazně zkracuje odmrazování a zároveň
+zvyšuje účinnost a stabilitu vytápění. Tichý komfort díky pokročilému pěstupňovému systému odhlučnění.
+Tepelné čerpadlo pracuje mimořádně še – už od 35 dB(A).
+35
+dB
+10dB 25dB 49dB 65dB
+Akustický tlak
+Plně uzavřený prostor kompresoru
+s vlnitou pohlvou PU pěnou
+Trojvrstvá zvukově pohlvá PU pěna
+na plechových panelech pro lepší
+útlum hluku
+Velkoúhlé 3D lopatky axiálního
+venlátoru pro plynulé a ché
+proudění vzduchu
+Inteligentní vícerychlostní řízení
+venlátoru podle potřeby
+Dvoustupňový chý režim
+pro denní i noční provoz
+05
+06
+--- strana 5 ---
+15% LFL
+při překročení úniku chladiva
+Dvoustupňová ochrana proti úniku chladiva Inteligentní dotykový ovladač 7″
+Dvojí ochrana drží chladivo mimo vnitřní prostory a zajišťuje plnou
+bezpečnost.
+Ovládejte topení i chlazení elegantně a snadno na velkém 7palcovém kapacitním dotykovém displeji. Přehledné a
+intuivní rozhraní vám dává veškeré ovládání na dosah ruky.
+Řízení více jednotek
+Kaskáda až 8 jednotek s nezávislým
+řízením teploty ve třech zónách.
+Chytré propojení
+Integrace do BMS (Modbus),
+připravenost na FV a řízení externího
+zdroje tepla.
+SNÍMAČ ÚNIKU MIKROBUBLINOVÝ ODVZDUŠŇOVACÍ VENTIL
+Při 15 % LFL spus alarm a
+automacky zastaví hlavní
+komponenty, minimální
+odvětrávání zůstává v provozu.
+Automacky vypus chladivo, které
+by proniklo do vodního okruhu,
+takže se nedostane do místnos –
+provoz zůstává bezpečný. Přehled o datech Vlastní automatika
+Sledování spotřeby, výroby
+Režim dovolená, časové programy,
+dezinfekce a omezení příkonu.
+tepla a export historie.
+Ekvitermní řízení teploty
+Zvolte přednastavenou křivku a o zbytek se postará regulace: teplotu vody automacky upravuje podle aktuální
+venkovní teploty, bez ručního přenastavování.
+8 přednastavených + 1 vlastní
+křivka pro topení i chlazení
+Automacká úprava
+cílové teploty vody
+Pro jakékoli místní klima
+Přípojky na jednom místě,
+snadná instalace
+Vstup a výstup vody jsou přehledně
+seskupené dole – profesionální vzhled, rychlá
+a snadná instalace i údržba.
+Vstup vody
+Výstup vody
+07
+08
+--- strana 6 ---
+Přímé napájení z FV
+§14a EnWG – provoz v souladu se sítí
+Snadno se propojí s fotovoltaikou a využívá sluneční energii přímo – méně elektřiny ze sítě a nižší náklady. „§14a EnWG“ je německý předpis pro řiditelná energecká zařízení – pomáhá udržet stabilitu sítě a šetřit peníze bez
+omezení vašeho komfortu.
+FV systém
+REO R290 Smart
+BRÁNÍ PŘETÍŽENÍ SÍTĚ
+Podporuje stabilitu místní sítě
+omezením odběru ve špičce.
+BEZ VÝPADKŮ
+Nepřetržitý provoz bez vypínání
+bezpečnostními prvky.
+PROVOZ ZE SLUNCE
+Využívá sluneční energii a snižuje
+odběr ze sítě.
+P V + NIŽŠÍ ÚČTY ZA ENERGII
+P V -
+Výrazně snižuje spotřebu
+elektřiny. KONTROLA NÁKLADŮ AUTOMATICKY A BEZ STAROSTÍ
+Chytrá síť
+Inteligentní řízení příkonu bez zásahu
+Chrání před tarify ve špičce.
+uživatele.
+ŠETRNÉ K PŘÍRODĚ
+Nižší uhlíková stopa díky
+čisté energii.
+SNADNÁ INTEGRACE
+Kompabilní s většinou
+stávajících FV systémů.
+DŮM A BAZÉN
+SG Ready a FV Ready Tepelné čerpadlo pomáhá stabilitě sítě, snižuje
+emise uhlíku i provozní náklady. Ideální
+rovnováha udržitelnos, úspor a spolehlivos.
+Fancoil
+Radiátor
+TUV
+Podlaha Kotel
+SG-Ready
+/
+FV­Ready
+09
+10
+--- strana 7 ---
+Chytré ovládání, chytrý dům Smart Life / Tuya Smart / Huilian
+Dálkové ovládání přes Wi‐Fi. Jednoduché ovládání – tepelné čerpadlo zkontrolujete a nastavíte odkudkoli!
+Chytrý cloudový dohled (IoT)
+Sledování v reálném čase, data, provoz a údržba – úspora času a nákladů pro uživatele, prodejce i servis.
+Přepínání
+režimů
+Sledování a řízení
+spotřeby
+Sledování v
+reálném čase Historie provozu
+REO HEATING
+Automacká
+Různá časová
+10 jazyků Provozní parametry
+diagnoska poruch
+nastavení
+TEPLÁ VODA
+GENERAL SETTINGS
+LANGUAGE
+ST ART P AGE
+* Komunikace: Wi‐Fi * Podrobný popis funkcí najdete po
+přihlášení nebo v návodu.
+English
+Router
+KUCHYNĚ
+Language
+CDMA/GPRS/4G/5G
+Internet
+NASTAVENÍ
+TEPLOTY
+Servisní
+cloudová konzole
+Konzole
+zákaznického účtu Cloudová konzole IoT
+Cancel
+SPRÁVA DAT SPRÁVA ZAŘÍZENÍ AKTUALIZACE NA DÁLKU
+Sběr dat ze zařízení, stasky,
+analýza a správa.
+Stasky, stav provozu, zobrazení a
+nastavení parametrů, diagnoska
+poruch, provozní záznam atd.
+Rychlá oprava chyb sowaru a
+vzdálená aktualizace řídicích desek.
+TUY A SMART APP
+SMART LIFE APP HUILIAN APP
+11
+12
+--- strana 8 ---
+COP
+COP
+EER
+6L
+-25~43℃
+R290
+DN25
+IPX4
+I
+COP
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+6L
+-25~43℃
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++ A+++
+A+++ A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5 15.4
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+16.0
+3.40
+4.70
+16.0
+16.0
+5.46
+3.37
+2.93
+4.75
+8.8~22.0
+1.74~5.47
+4.02~5.05
+8.8~22.5
+1.75~5.55
+4.05~5.03
+484
+6.4~16.5
+1.93~5.79
+2.85~3.31
+8.2~20.5
+1.59~5.02
+4.08~5.16
+8.1
+1.89
+35
+120
+3.78
+52
+190
+DN32
+14
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5.
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5.
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~16
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5.
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~3
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5.
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~5
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.78
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5.
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5.
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~16
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5.
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~3
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5.
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~5
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.78
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+el
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5.
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5.
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~16
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5.
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~3
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5.
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~5
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.78
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+el
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5.
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5.
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~16
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5.
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~3
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5.
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~5
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.78
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5.
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5.
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~16
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5.
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~3
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5.
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~5
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.78
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5.
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5.
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~16
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5.
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~3
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5.
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~5
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.78
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+el
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5.
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5.
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~16
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5.
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~3
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5.
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~5
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.78
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+el
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5.
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5.
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~16
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5.
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~3
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5.
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~5
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.78
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5.
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5.
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~16
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5.
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~3
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5.
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~5
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.78
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+el
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+eplate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+eplate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+eplate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+eplate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+eplate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+eplate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+eplate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+eplate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+eplate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+eplate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+eplate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+eplate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+eplate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+eplate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+eplate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+eplate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+eplate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+eplate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+eplate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+eplate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5.
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5.
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5.
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5.
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~16
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5.
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~3
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~20
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5.
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~5
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.78
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+el
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+eplate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+eplate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.7
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+plate on the unit if for more specific data.
+-D 8
+PW08
+-DKXLRE1-H8
+PW10
+-DKXLRE1-H8
+PW12
+-DKXLRE1-H8
+PW14
+-DKXLRE1-H8
+PW16
+-DKXLRE1-H8
+Model
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+6.0
+1.23
+4.88
+6.0
+6.0
+1.98
+1.23
+3.03
+4.86
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0 16.0
+2.10 2.47 2.96 3.40
+4.76 4.86 4.73 4.70
+10.0 12.0 14.0 16.0
+10.0 12.0 14.0 16.0
+3.44 3.99 4.75 5.46
+2.10 2.48 2.92 3.37
+2.91 3.01 2.95 2.93
+4.76 4.84 4.80 4.75
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+230V/1Ph/50Hz/60Hz
+3.4~8.5
+0.66~1.99
+4.27~5.13
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3 8.8~2
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62 1.74~5
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07 4.02~5
+4.0~9.0
+0.78~2.14
+4.20~5.13
+194
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5 8.8~2
+1.05~3.28 1.37~3.98 1.54~4.64 1.75~5
+4.02~5.04 4.39~4.81 4.20~5.06 4.05~5
+284 376 419 484
+2.4~6.0
+0.68~1.99
+3.01~3.51
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5 6.4~1
+1.24~3.60 1.49~4.52 1.67~5.00 1.93~5
+2.72~3.22 2.92~3.35 2.90~3.35 2.85~
+3.5~8.0
+0.67~1.88
+4.25~5.25
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5 8.2~2
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32 1.59~5
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15 4.08~5
+A+++ A+++ A+++ A+++ A++
+A+++ A+++ A+++ A+++ A++
+3.3
+15.1
+1.46
+30
+116
+1200×463×791
+R290
+4.5
+20.6
+1.89
+35
+120
+1328×470×1065
+5.5 6.3 6.6 8.1
+25.2 28.6 30.2 37.1
+2.22 2.92 3.32 3.78
+40 43 47 52
+138 165 170 190
+DN25
+IPX4
+I
+plate on the unit if for more specific data.
+8 0 2 PW14
+-DKXLRE3-H8
+e
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W30/35℃
+Nominal Power Input (kW)
+COP
+Nominal Capacity (kW)
+Nominal Capacity (kW)
+Heating
+A7/6℃
+W47/55℃
+Cooling
+A35/24℃
+W23/18℃
+Nominal Power Input (kW)
+Nominal Power Input (kW)
+COP
+EER
+8.0
+1.64
+4.89
+8.0
+8.0
+2.63
+1.64
+3.04
+4.88
+10.0 12.0 14.0
+2.10 2.47 2.96
+4.76 4.86 4.73
+10.0 12.0 14.0
+10.0 12.0 14.0
+3.44 3.99 4.75
+2.10 2.48 2.92
+2.91 3.01 2.95
+4.76 4.84 4.80
+B/WB): 7/6℃，Water Temp.(In/Out): 30/35℃
+Heating Capacity Range (kW)
+Heating Power Input Range(kW)
+COP Range
+/WB): 20/15℃，Water Temp.(In/Out): 15/55℃
+Heating Capacity Range (kW)
+Heating Power Input Range (kW)
+COP Range
+Heated water output (L/H)
+B/WB): 35/24℃，Water Temp.(In/Out): 12/7℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+/WB): 35/24℃，Water Temp.(In/Out): 23/18℃
+Cooling Capacity Range (kW)
+Cooling Power Input Range(kW)
+EER Range
+ErP Level (35°C)
+ErP Level (55°C)
+Power supply
+Max. power input(kW)
+Max. current (A)
+Diameter of pipe (mm)
+Water Flow(m3/h)
+Water Pressure Drop (max) kPa
+Net Weight (kg)
+Body size(W*D*H) (mm)
+IP Grade (Level of protection)
+Anti-electric shock Rate
+Refrigerant
+Expansion Tank(L)
+Electric Heater
+Operation Ambient Temp. (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+Operating water temperature (℃)
+6L
+3KW
+-25~43℃
+25~75℃(DHW)
+25~75℃(Heating)
+5~30℃(Cooling)
+380V/3Ph/50/60Hz
+4.5~11.0 5.2~12.9 7.0~17.0 7.6~19.3
+0.87~2.60 1.03~3.08 1.38~3.90 1.50~4.62
+4.23~5.15 4.19~5.05 4.35~5.07 4.18~5.07
+5.2~11.5
+1.035~2.76
+4.17~5.05
+248
+5.3~13.2 6.6~17.5 7.8~19.5
+1.05~3.28 1.37~3.98 1.54~4.64
+4.02~5.04 4.39~4.81 4.20~5.06
+284 376 419
+3.5~8.0
+0.97~2.58
+3.10~3.61
+4.0~9.8 5.0~13.2 5.6~14.5
+1.24~3.60 1.49~4.52 1.67~5.00
+2.72~3.22 2.92~3.35 2.90~3.35
+A+++
+A+++
+4.3~11.0 4.8~12.5 6.6~16.1 7.0~17.5
+0.81~2.56 0.94~3.00 1.28~3.96 1.36~4.32
+4.29~5.29 4.17~5.11 4.07~5.16 4.05~5.15
+A+++ A+++ A+++
+A+++ A+++ A+++
+8.6
+R290
+4.5
+10.4
+1328×470×1065
+5.5 6.3 6.6
+12 12.5
+2.24 2.92 3.32
+40 43 47
+138 165 170
+DN25
+IPX4
+I
+1.89
+35
+120
+DN32 D
+13
+RH06
+(1F)
+RH08
+(3F)
+RH10
+(3F)
+RH12
+(3F)
+RH14
+(3F)
+RH16
+(3F)
+Model Model
+Jmenovitý výkon (kW) Jmenovitý výkon (kW)
+Topení
+A7/6 °C
+W30/35 °C
+Topení
+A7/6 °C
+W30/35 °C
+Jmenovitý příkon (kW) Jmenovitý příkon (kW)
+Jmenovitý výkon (kW) Jmenovitý výkon (kW)
+Topení
+A7/6 °C
+W47/55 °C
+Topení
+A7/6 °C
+W47/55 °C
+Jmenovitý příkon (kW) Jmenovitý příkon (kW)
+Jmenovitý výkon (kW) Jmenovitý výkon (kW)
+Chlazení
+A35/24 °C
+W23/18 °C
+Chlazení
+A35/24 °C
+W23/18 °C
+Jmenovitý příkon (kW) Jmenovitý příkon (kW)
+Topení – venkovní teplota (DB/WB): 7/6 °C, teplota vody (vstup/výstup): 30/35 °C Topení – venkovní teplota (DB/WB): 7/6 °C, teplota vody (vstup/výstup): 30/35 °C
+Rozsah topného výkonu (kW) Rozsah topného výkonu (kW)
+Rozsah příkonu (kW) Rozsah příkonu (kW)
+Rozsah COP Rozsah COP
+Ohřev TUV – venkovní teplota (DB/WB): 20/15 °C, teplota vody (vstup/výstup): 15/55 °C Ohřev TUV – venkovní teplota (DB/WB): 20/15 °C, teplota vody (vstup/výstup): 15/55 °C
+Rozsah topného výkonu (kW) Rozsah topného výkonu (kW)
+Rozsah příkonu (kW) Rozsah příkonu (kW)
+Rozsah COP Rozsah COP
+Ohřev vody (l/h) Ohřev vody (l/h)
+Chlazení – venkovní teplota (DB/WB): 35/24 °C, teplota vody (vstup/výstup): 12/7 °C Chlazení – venkovní teplota (DB/WB): 35/24 °C, teplota vody (vstup/výstup): 12/7 °C
+Rozsah chladicího výkonu (kW) Rozsah chladicího výkonu (kW)
+Rozsah příkonu (kW) Rozsah příkonu (kW)
+Rozsah EER Rozsah EER
+Chlazení – venkovní teplota (DB/WB): 35/24 °C, teplota vody (vstup/výstup): 23/18 °C Chlazení – venkovní teplota (DB/WB): 35/24 °C, teplota vody (vstup/výstup): 23/18 °C
+Rozsah chladicího výkonu (kW) Rozsah chladicího výkonu (kW)
+Rozsah příkonu (kW) Rozsah příkonu (kW)
+Rozsah EER Rozsah EER
+Třída ErP (35 °C) Třída ErP (35 °C)
+Třída ErP (55 °C) Třída ErP (55 °C)
+Napájení 230 V / 1f / 50/60 Hz Napájení 400 V / 3f / 50/60 Hz
+Max. příkon (kW) Max. příkon (kW)
+Max. proud (A) Max. proud (A)
+Přípojky vody Přípojky vody
+Průtok vody (m³/h) Průtok vody (m³/h)
+Tlaková ztráta max. (kPa) Tlaková ztráta max. (kPa)
+Hmotnost netto (kg) Hmotnost netto (kg)
+Rozměry Š×H×V (mm) Rozměry Š×H×V (mm)
+Stupeň krytí IP Stupeň krytí IP
+Třída ochrany (el.) Třída ochrany (el.)
+Chladivo Chladivo
+Expanzní nádoba (l) Expanzní nádoba (l)
+Elektrický dohřev 3 kW Elektrický dohřev 3 kW
+Provozní venkovní teplota (°C) Provozní venkovní teplota (°C)
+Provozní teplota vody (°C) 25~75 °C (TUV) Provozní teplota vody (°C) 25~75 °C (TUV)
+Provozní teplota vody (°C) 25~75 °C (topení) Provozní teplota vody (°C) 25~75 °C (topení)
+Provozní teplota vody (°C) 5~30 °C (chlazení) Provozní teplota vody (°C) 5~30 °C (chlazení)
+Poznámka: Uvedené údaje jsou orientační, rozhodující jsou údaje na typovém štku jednotky. Poznámka: Uvedené údaje jsou orientační, rozhodující jsou údaje na typovém štku jednotky.

@@ -138,15 +138,6 @@ Titulka (20. 10.): hero scéna jednotka Smart + REO Watertank 210/70 (`katalog/h
 `assets/src/hero-scena-orig.webp` → `assets/hero-scena.png`); popisky a symboly (kompresor Mitsubishi Electric, TUV nahoře,
 topná voda dole – podlaha/radiátory) jsou SVG v `hero_overlay()`. Build zároveň exportuje `hero-smart-watertank.png` (2×) pro web.
 
-## Produktová brožura — `brozura/` (21. 10. 2026)
-Přeznačení produktového katalogu výrobce (vydání 10/2025, 14 stran) do designu katalogu REO HEATING: 8 stran A4,
-`brozura/build.py` → `REO-R290-Smart_brozura.pdf` (CSS, ikony, logo a schéma FV se berou z `katalog/build.py`).
-- Modely jen RH06 1F + RH08–RH16 3F (ostatní 1F vypuštěny); data tabulky = technické údaje z katalogu výrobce.
-  Data: tabulky katalogu výrobce, ale jmenovité COP A7/W35 a A7/W55, rozsah A7/W35, hmotnost a rozměry = původní (lepší) hodnoty
-  ze specifikace (uživatel 21. 10. 2026: „ponechej staré a lepší hodnoty“); jmenovitý příkon dopočten. Katalog i letáky mají stejně původní hodnoty (nová čísla výrobce nepoužívat). SCOP, hluk a jištění zůstávají z ERP protokolu. 
-- Vypuštěno: německý §14a EnWG (nahrazeno „omezení příkonu“), srovnávací stupnice hluku; přidány 3 pilíře, FV tabulka, umístění jednotky.
-- Fotky `brozura/assets/*.jpg` = výřezy z katalogu výrobce bez loga (zkontrolováno); jednotka a hero z `katalog/assets`.
-
 ## Katalog výrobce přeznačený — `katalog-en/` (21. 10. 2026)
 Věrný rebrand produktového katalogu výrobce (`../Power World Helios Pro Series Catalog.pdf`, 14 stran na 8 dvojstranách, EN):
 `katalog-en/rebrand.py` → `REO-R290-Smart_catalogue-EN.pdf`. Obsah, fotky a sazba beze změny, mění se jen značka:
@@ -154,4 +145,8 @@ logo v záhlaví (vektor) a na titulce, název řady „H8 Helios Pro“ (vektor
 zadní strana (QR, firma, adresy, web) → kontakty REO HEATING, nápis na jednotce ve fotkách (titulka, str. 8) → „REO HEATING“,
 energetický štítek, hlavička cloudové konzole (vč. čínského názvu výrobce v obrázku), popisek v FV schématu,
 tabulky: modely RHxx (1-phase)/(3-phase), z 1F tabulky jen RH06. Metadata, záložky i odkazy přepsané; skript na konci kontroluje text, metadata a streamy.
-Data jsou výrobce beze změny (liší se od našeho katalogu – viz výše).
+Data jsou výrobce beze změny – liší se od našeho katalogu a letáků (např. RH06 COP A7/W35 4,88 vs 5,04); v našich materiálech platí původní, lepší hodnoty.
+- **Česká verze** `katalog-en/REO-R290-Smart_katalog-CZ.pdf`: `katalog-en/translate.py extract` → `cz/segments.json`, překlad `cz/cs.json`
+  (null = nepřekládat, "" = text přesunut do sousedního segmentu), úpravy sazby `cz/override.json`, pak `translate.py build`.
+  Písma: Calibri z Microsoft Wordu (/Applications/Microsoft Word.app/…/DFonts), za OPPOSans Arial. Texty v obrázcích (displej, aplikace,
+  konzole) zůstávají anglicky; čísla v tabulkách s desetinnou tečkou jako v originálu. Po změně EN verze spustit `translate.py extract` znovu a zkontrolovat id.

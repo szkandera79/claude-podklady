@@ -1,0 +1,166 @@
+{
+ "p1_003": {
+  "align": "center",
+  "grow": 8
+ },
+ "p1_004": {
+  "align": "center",
+  "grow": 8
+ },
+ "p1_005": {
+  "grow": 8
+ },
+ "p1_006": {
+  "grow": 10
+ },
+ "p3_006": {
+  "align": "center",
+  "grow": 15
+ },
+ "p3_008": {
+  "align": "center",
+  "grow": 15
+ },
+ "p3_002": {
+  "grow": 8
+ },
+ "p4_010": {
+  "align": "center",
+  "grow": 10
+ },
+ "p5_007": {
+  "align": "right",
+  "grow": 40
+ },
+ "p5_016": {
+  "align": "right",
+  "grow": 40
+ },
+ "p6_013": {
+  "align": "right",
+  "grow": 40
+ },
+ "p6_016": {
+  "align": "right",
+  "grow": 40
+ },
+ "p5_008": {
+  "align": "right",
+  "merge": [
+   "p5_011"
+  ]
+ },
+ "p5_018": {
+  "align": "right",
+  "merge": [
+   "p5_019"
+  ]
+ },
+ "p6_006": {
+  "align": "right",
+  "merge": [
+   "p6_009"
+  ]
+ },
+ "p5_012": {
+  "align": "center",
+  "merge": [
+   "p5_013",
+   "p5_014"
+  ]
+ },
+ "p5_009": {
+  "align": "center",
+  "grow": 20
+ },
+ "p5_010": {
+  "align": "center",
+  "grow": 25
+ },
+ "p6_029": {
+  "align": "center",
+  "grow": 6
+ },
+ "p7_029": {
+  "grow": 40
+ },
+ "p7_030": {
+  "grow": 40
+ },
+ "p7_031": {
+  "grow": 50
+ },
+ "p7_026": {
+  "align": "center",
+  "grow": 12
+ },
+ "p7_027": {
+  "grow": 10
+ },
+ "p7_028": {
+  "align": "center",
+  "grow": 14
+ },
+ "p7_005": {
+  "grow": 30,
+  "dy1": 4
+ },
+ "p7_006": {
+  "grow": 30,
+  "dy1": 4
+ },
+ "p7_007": {
+  "grow": 30,
+  "dy1": 4
+ },
+ "p7_009": {
+  "grow": 30,
+  "dy1": 4
+ },
+ "p7_010": {
+  "grow": 30,
+  "dy1": 4
+ },
+ "p7_011": {
+  "grow": 30,
+  "dy1": 4
+ },
+ "p7_012": {
+  "grow": 30,
+  "dy1": 4
+ },
+ "p7_013": {
+  "grow": 30,
+  "dy1": 4
+ },
+ "p4_013": {
+  "dy1": 5
+ },
+ "p7_004": {
+  "grow": 60
+ },
+ "p8_292": {
+  "align": "center",
+  "grow": 40
+ },
+ "p8_294": {
+  "align": "center",
+  "grow": 40
+ },
+ "p8_296": {
+  "align": "center",
+  "grow": 40
+ },
+ "p8_298": {
+  "align": "center",
+  "grow": 40
+ },
+ "p8_300": {
+  "align": "center",
+  "grow": 40
+ },
+ "p8_302": {
+  "align": "center",
+  "grow": 40
+ }
+}
