@@ -203,7 +203,7 @@ ve stávajícím zásobníku. Stávající otopná soustava zůstává beze změ
 <table>
   <caption>Součást dodávky</caption>
   <tbody>
-    <tr><td><strong>Tepelná čerpadla</strong></td><td>2 × REO RH X50 (vzduch/voda, chladivo R290) v kaskádě, s řízením a střídáním jednotek. Venkovní okruh plněný nemrznoucí směsí a oddělený deskovým výměníkem — jednotky nezamrznou ani při výpadku proudu.</td></tr>
+    <tr><td><strong>Tepelná čerpadla</strong></td><td>2 × REO RH X50 (vzduch/voda, chladivo R290) v kaskádě, s řízením a střídáním jednotek. Jednotky jsou napojeny přímo do akumulace (bez mezivýměníku), s ochranou proti zamrznutí: protimrazové ventily u jednotek, záložní napájení oběhových čerpadel, topné kabely venkovního potrubí a hlášení výpadku.</td></tr>
     <tr><td><strong>Akumulace</strong></td><td>2 × 1 200 l. Vyrovnává výkon tepelných čerpadel a potřebu objektu, omezuje taktování a pokrývá odtávání jednotek.</td></tr>
     <tr><td><strong>Elektrokotel pro bivalenci</strong></td><td>Předběžně ≈ 50 kW, výkon ještě upřesníme. Řízení po stupních; zapíná se až při trvalém nedostatku výkonu tepelných čerpadel, nikoli při krátkém poklesu teploty.</td></tr>
     <tr><td><strong>Napojení</strong></td><td>Na primární stranu stávající výměníkové stanice. Rozvody, čerpadla jednotlivých větví, jednotky SAHARA i ohřev teplé vody zůstávají beze změny. Přípojka teplovodu zůstává zachována pro případný návrat.</td></tr>
@@ -351,26 +351,24 @@ a elektrokotle a v případě potřeby elektrický dohřev omezí — tepelná �
 <text x="110" y="198" text-anchor="middle" class="s">až 70 °C do −10 °C</text><text x="110" y="214" text-anchor="middle" class="s">pod −10 °C 60–65 °C</text><text x="110" y="229" text-anchor="middle" class="s">R290, jistič 40 A</text>
 <rect x="40" y="300" width="140" height="86" class="box"/><text x="110" y="330" text-anchor="middle" class="b">TČ2 RH X50</text>
 <text x="110" y="348" text-anchor="middle" class="s">až 70 °C do −10 °C</text><text x="110" y="364" text-anchor="middle" class="s">pod −10 °C 60–65 °C</text><text x="110" y="379" text-anchor="middle" class="s">R290, jistič 40 A</text>
-<path d="M180 168H330V205" class="g"/><path d="M180 318H330V235" class="g"/>
-<path d="M180 220H230V250H340" class="gc"/><path d="M180 370H230V250" class="gc"/>
+<path d="M180 168H330V318H180" class="h"/>
+<path d="M180 220H230V370H180" class="c"/>
 <circle cx="214" cy="168" r="11" class="pump"/><path d="M208 162L222 168L208 174z" fill="#222"/>
 <circle cx="214" cy="318" r="11" class="pump"/><path d="M208 312L222 318L208 324z" fill="#222"/>
 <rect x="40" y="420" width="140" height="80" fill="#fff" stroke="#2f8f58" stroke-width="2" stroke-dasharray="8 5"/>
 <text x="110" y="446" text-anchor="middle" class="b" fill="#2f7a4b">TČ3 RH X50</text>
 <text x="110" y="464" text-anchor="middle" class="s">alternativa – výkon</text><text x="110" y="479" text-anchor="middle" class="s">a záloha, stejný sběrač</text>
-<path d="M180 440H250V250" fill="none" stroke="#7a4ea3" stroke-width="3" stroke-dasharray="4 4"/>
-<text x="40" y="530" class="s">Primár: propylenglykol, čerpadlo,</text>
-<text x="40" y="546" class="s">filtr, zpětná klapka a uzávěry</text>
-<text x="40" y="562" class="s">u každé jednotky</text>
+<path d="M180 440H250V250" fill="none" stroke="#c4472f" stroke-width="3" stroke-dasharray="4 4"/>
+<text x="40" y="530" class="s">Přímo do AKU, bez výměníku:</text>
+<text x="40" y="546" class="s">čerpadlo, filtr, zpětná klapka,</text>
+<text x="40" y="562" class="s">uzávěry, protimrazové ventily</text>
 <text x="40" y="590" class="s">Výstup až 70 °C do −10 °C</text>
 <text x="40" y="606" class="s">(výkonová mapa výrobce)</text>
-<!-- VS-TČ -->
-<rect x="340" y="185" width="44" height="90" class="box"/><path d="M340 185L384 275M384 185L340 275" stroke="#777"/>
-<text x="362" y="296" text-anchor="middle" class="b">VS-TČ</text><text x="362" y="312" text-anchor="middle" class="s">deskový</text><text x="362" y="326" text-anchor="middle" class="s">glykol/voda</text>
-<path d="M330 205H340" class="g"/>
-<path d="M384 200H440V150H470" class="h" marker-end="url(#ah)"/>
-<path d="M480 470H420V255H384" class="c"/>
-<circle cx="420" cy="320" r="11" class="pump"/><path d="M426 314L412 320L426 326z" fill="#222"/><text x="436" y="324" class="s">P2</text>
+<!-- přímé napojení TČ do AKU (bez výměníku) -->
+
+<path d="M330 200H440V150H470" class="h" marker-end="url(#ah)"/>
+<path d="M480 470H420V250H230" class="c"/>
+
 
 <!-- AKU -->
 <rect x="470" y="130" width="100" height="350" rx="45" class="box"/><text x="520" y="295" text-anchor="middle" class="b">AKU 1</text><text x="520" y="312" text-anchor="middle" class="s">1 200 l</text>
@@ -402,7 +400,7 @@ a elektrokotle a v případě potřeby elektrický dohřev omezí — tepelná �
 <text x="312" y="610" class="s">• ohřev TUV 65 °C, dezinfekce 70 °C</text>
 <rect x="620" y="520" width="380" height="110" class="box"/>
 <text x="632" y="542" class="b">Pojištění a armatury kotelny</text>
-<text x="632" y="562" class="s">expanzní nádoby a pojistné ventily (voda i glykol)</text>
+<text x="632" y="562" class="s">expanzní nádoby, pojistné ventily, protimrazová ochrana TČ</text>
 <text x="632" y="578" class="s">filtr + magnetický odkalovač ve zpátečce, kalorimetr MID</text>
 <text x="632" y="594" class="s">uzávěry UZ-K1/K2 kotelny TČ (běžně OTEVŘENO)</text>
 <text x="632" y="610" class="s">zpětné klapky, odvzdušnění, vypouštění</text>
@@ -453,15 +451,15 @@ a elektrokotle a v případě potřeby elektrický dohřev omezí — tepelná �
 <text x="34" y="860"><tspan class="b">3 · Výpadek jedné jednotky TČ</tspan> – zbývající jednotka + elektrokotel; s alternativní 3. jednotkou běží dál dvě tepelná čerpadla.</text>
 <text x="34" y="884"><tspan class="b">4 · Výpadek všech jednotek TČ</tspan> – elektrokotel topí samostatně v rozsahu svého výkonu (pro plnou zálohu i v mrazu doporučujeme 3. jednotku TČ).</text>
 <text x="34" y="908"><tspan class="b">5 · Návrat na teplovod</tspan> – bude-li teplovod MM Holz znovu dostupný, lze po uzavření UZ-K1/K2 a otevření UZ-T1/T2 objekt na něj přepnout (ne současný provoz obou zdrojů).</text>
-<text x="34" y="936" fill="#8a3a1a"><tspan class="b">Poznámky:</tspan> Výměník mezi zdrojem a soustavou ubírá několik kelvinů (typ výměníku ověříme). TUV se dál ohřívá ve stávajícím zásobníku ACV 320 l z topné vody.</text>
-<text x="34" y="958" fill="#8a3a1a">Výkon elektrokotle bude upřesněn (předběžně ≈ 50 kW). Výkony jsou orientační – vycházejí z naměřené dodávky tepla a výkonové mapy výrobce.</text>
+<text x="34" y="936" fill="#8a3a1a"><tspan class="b">Poznámky:</tspan> TČ napojena přímo do AKU (bez výměníku), voda bez glykolu – protimrazové ventily u jednotek, záložní napájení čerpadel, topné kabely venkovního potrubí, alarm výpadku.</text>
+<text x="34" y="958" fill="#8a3a1a">Výměník HV VS ubírá několik kelvinů. TUV dál v ACV 320 l z topné vody. Výkon elektrokotle upřesníme (≈ 50 kW); výkony jsou orientační.</text>
 <text x="34" y="982">Koncepční schéma, nikoli prováděcí projekt. ThermaVera Energy · TV-ALIGNUM-2026-01.</text>
 </g>
 <!-- legenda -->
 <g transform="translate(34,1010)" class="s">
 <path d="M0 0H36" class="h"/><text x="42" y="4">přívod</text>
 <path d="M110 0H146" class="c"/><text x="152" y="4">zpátečka</text>
-<path d="M230 0H266" class="g"/><text x="272" y="4">glykol</text>
+
 <path d="M330 0H366" class="e"/><text x="372" y="4">okruh elektrokotlů</text>
 <path d="M500 0H536" class="tv"/><text x="542" y="4">teplovod MM Holz</text>
 <path d="M660 0H696" class="tuv"/><text x="702" y="4">TUV</text>
@@ -482,7 +480,7 @@ a elektrokotle a v případě potřeby elektrický dohřev omezí — tepelná �
       <td>
         <ul style="margin:0;padding-left:16px">
           <li>Dodávka a montáž 2 × REO RH X50</li>
-          <li>Akumulace 2 × 1 200 l, deskový výměník a náplň nemrznoucí směsi</li>
+          <li>Akumulace 2 × 1 200 l, přímé napojení jednotek s protimrazovou ochranou</li>
           <li>Elektrokotel pro bivalenci</li>
           <li>Čerpadla, armatury, expanzní a pojistné prvky, filtrace</li>
           <li>Napojení na stávající výměníkovou stanici</li>

@@ -21,6 +21,7 @@
 | Z14 | Rozpočet AKU | 2 × 30 000 [O] | 2 × 19 850 + doprava = 42 700 [N] (Allegro PS-00, skutečný objem 843 l) | nabídka dodaná zadavatelem 19. 10. |
 | Z15 | TUV | mimo projekt (Z8) | **TUV zajištěna**: stávající ACV 320 l ohřívaná z topné vody přes stávající větev; PLC zvyšuje přívod na 65 °C, dezinfekce 70 °C z el. dohřevu | upřesnění zadavatele 19. 10. |
 | Z16 | Připojení | za výměník HV VS (Z4) | **rev1-B (zadavatel 20. 10.): kotelna TČ napájí primár stávajícího výměníku HV VS, teplovod MM Holz zůstává připojen jako záloha (ruční přepnutí uzávěry, nikdy současně); TUV dál přes výměník.** Schéma `10-schema-zapojeni-vymenik.svg`. Dopad: ztráta 3–5 K na výměníku, tlakové oddělení od teplovodu (AKU max. 3 bar) | rozhodnutí zadavatele |
+| Z17 | Glykol / výměník TČ | glykolový primár + deskový výměník VS-TČ (Z10) | **bez výměníku: RH X50 přímo do AKU, voda bez glykolu** + protimrazové ventily, záložní napájení čerpadel, topné kabely, alarm (zadavatel 21. 10.). Úspora ≈ 70–100 tis. Kč a 2–3 K; riziko zamrznutí při dlouhém výpadku proudu | rozhodnutí zadavatele |
 
 Nové soubory:
 - `00-audit.md` … `09-otevrene-body.md`,

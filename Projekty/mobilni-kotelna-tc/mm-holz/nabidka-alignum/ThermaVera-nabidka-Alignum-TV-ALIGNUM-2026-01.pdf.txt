@@ -50,36 +50,41 @@ Podle měření MM Holz 140–193 MWh ročně v letech 2019–2025 (vytápění 
 --- strana 2 ---
 2 · Navržené řešení
 SOUČÁST DODÁVKY
-Tepelná čerpadla 2 × REO
-RH X50 (vzdu
-Venkovní okruh plněný nemrznou
-nezamrznou ani při výpadku
-ch/voda, chladivo R290) v kaskádě, s řízením a střídáním jednotek.
-cí směsí a oddělený deskovým výměníkem — jednotky
-proudu
-.
+Tepelná
+čerpadla
 Aku
 m
 ulace Elektrokotel pro
 bivalenci
 Napojení Regulace a
 dohled
-Umístění 2 × 1 200 l. Vyrovnává výkon tepelných čerpadel a potřebu objektu
+Umístění 2 × REO
+RH X50 (vzdu
+ch/voda, chladivo R290) v kaskádě, s řízením a střídáním jednotek. Jednotky
+jsou napojeny přímo do aku
+m
+ulace (bez mezivýměníku), s ochranou
+proti zamrznutí: protimrazové
+ventily
+u jednotek, záložní napájení oběhových čerpadel, topné kabely venkovního potrubí a hlášení
+výpadku
+.
+2 × 1 200 l. Vyrovnává výkon tepelných čerpadel a potřebu objektu
 odtávání jednotek.
 , omezuje taktování a pokrývá
 Předběžně ≈ 50 kW, výkon ještě u
 přesníme. Řízení po stu
-pních; zapíná se až při trvalém
-nedostatku výkonu tepelných čerpadel, nikoli při krátkém poklesu teploty.
+výkonu tepelných čerpadel, nikoli při krátkém poklesu teploty.
+pních; zapíná se až při trvalém nedostatku
 Na primární stranu stávající výměníkové stanice. Rozvody, čerpadla jednotlivých větví, jednotky
 SAHARA i ohřev teplé vody zůstávají beze změny. Přípojka teplovodu zůstává zachována pro
 případný návrat.
-Nadřazená regulace (PLC) s ekvitermním řízením, prioritou tepelných čerpadel, ohřevem a
-dezinfekcí teplé vody, hlídáním elektrického příkonu a vzdáleným dohledem s hlášením poru
+Nadřazená regulace (PLC) s ekvitermním řízením, prioritou tepelných čerpadel, ohřevem a dezinfekcí
+teplé vody, hlídáním elektrického příkonu a vzdáleným dohledem s hlášením poru
 ch.
 Technologie v kontejneru u objektu
-, nebo po dohodě přímo v technických prostorách
-společnosti Alignu
+, nebo po dohodě přímo v technických prostorách společnosti
+Alignu
 m. Venkovní jednotky na terénu v blízkosti kotelny.
 3 · Výkon a provoz
 Jednotky REO
@@ -199,14 +204,11 @@ R290, jistič 40 A
 TČ3 RH X50
 alternativa – výkon
 a záloha, stejný sběrač
-Primár: propylenglykol, čerpadlo,
-filtr, zpětná klapka a uzávěry
-u každé jednotky
+Přímo do AKU, bez výměníku:
+čerpadlo, filtr, zpětná klapka,
+uzávěry, protimrazové ventily
 Výstup až 70 °C do −10 °C
 (výkonová mapa výrobce)
-VS-TČ
-deskový
-glykol/voda P2
 AKU 1
 1 200 l
 AKU 2
@@ -226,7 +228,7 @@ zapíná se postupně při deficitu
 nebo při výpadku jednotky TČ
 F + mag.
 Pojištění a armatury kotelny
-expanzní nádoby a pojistné ventily (voda i glykol)
+expanzní nádoby, pojistné ventily, protimrazová ochrana TČ
 filtr + magnetický odkalovač ve zpátečce, kalorimetr MID
 uzávěry UZ-K1/K2 kotelny TČ (běžně OTEVŘENO)
 zpětné klapky, odvzdušnění, vypouštění
@@ -258,10 +260,10 @@ Provozní režimy
 3 · Výpadek jedné jednotky TČ – zbývající jednotka + elektrokotel; s alternativní 3. jednotkou běží dál dvě tepelná čerpadla.
 4 · Výpadek všech jednotek TČ – elektrokotel topí samostatně v rozsahu svého výkonu (pro plnou zálohu i v mrazu doporučujeme 3. jednotku TČ).
 5 · Návrat na teplovod – bude-li teplovod MM Holz znovu dostupný, lze po uzavření UZ-K1/K2 a otevření UZ-T1/T2 objekt na něj přepnout (ne současný provoz obou zdrojů).
-Poznámky: Výměník mezi zdrojem a soustavou ubírá několik kelvinů (typ výměníku ověříme). TUV se dál ohřívá ve stávajícím zásobníku ACV 320 l z topné vody.
-Výkon elektrokotle bude upřesněn (předběžně ≈ 50 kW). Výkony jsou orientační – vycházejí z naměřené dodávky tepla a výkonové mapy výrobce.
+Poznámky: TČ napojena přímo do AKU (bez výměníku), voda bez glykolu – protimrazové ventily u jednotek, záložní napájení čerpadel, topné kabely venkovního potrubí, alarm výpadku.
+Výměník HV VS ubírá několik kelvinů. TUV dál v ACV 320 l z topné vody. Výkon elektrokotle upřesníme (≈ 50 kW); výkony jsou orientační.
 Koncepční schéma, nikoli prováděcí projekt. ThermaVera Energy · TV-ALIGNUM-2026-01.
-přívod zpátečka glykol okruh elektrokotlů teplovod MM Holz TUV
+přívod zpátečka okruh elektrokotlů teplovod MM Holz TUV
 Koncepční schéma — tepelná čerpadla (třetí jednotka přerušovaně jako alternativa) nabíjejí aku
 m
 ulaci, elektrokotel dohřívá přívod při
@@ -277,9 +279,8 @@ Dodávka a montáž 2 × REO
 RH X50
 Aku
 m
-ulace 2 × 1 200 l, deskový výměník a náplň
-nemrznou
-cí směsi
+ulace 2 × 1 200 l, přímé napojení jednotek s
+protimrazovou ochranou
 Elektrokotel pro bivalenci
 Čerpadla, armatury, expanzní a pojistné prvky, filtrace
 Napojení na stávající výměníkovou stanici
@@ -287,15 +288,14 @@ Rozvaděč kotelny, regulace a vzdálený dohled
 Doprava, instalace, uvedení do provozu
 , revize
 Zaškolení obsluhy, doku
-mentace skutečného
-provedení
+mentace skutečného provedení
 Elektrický přívod 3 × 160 A k rozvaděči kotelny
 Stavební úpravy, zpevněná plocha a základy pro
 venkovní jednotky
 Úpravy stávající otopné soustavy a ohřevu vody
 Elektrická energie pro provoz
-Pravidelný servis po uvedení do provozu (nabídneme
-samostatně)
+Pravidelný servis po uvedení do provozu
+(nabídneme samostatně)
 Projektová doku
 mentace nad rámec dílenské
 --- strana 5 ---

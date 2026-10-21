@@ -1,7 +1,6 @@
 [Text vytažený z 10-schema-zapojeni-vymenik.pdf]
 
 --- strana 1 ---
-UZ-K1
 Alignum Paskov – schéma zapojení zdroje tepla (koncept, rev1-B)
 Tepelná čerpadla 2 × REO RH X50 + akumulace 2 × 1 000 l + kaskáda elektrokotlů 72 kW napájí primár stávajícího výměníku HV VS 200 kW. Teplovod MM Holz zůstává připojen jako záložní zdroj.
 Za výměníkem beze změny: rozdělovač RS Kombi 100 → hala (5 × SAHARA), administrativa (radiátory), ohřev TUV (ACV Smart Line 320 l).
@@ -11,27 +10,25 @@ TČ1 RH X50
 až 70 °C do −10 °C
 pod −10 °C 60–65 °C
 R290, jistič 40 A
-TČ2 RH X50
-až 70 °C do −10 °C
-pod −10 °C 60–65 °C
-R290, jistič 40 A
-Primár: propylenglykol 35 %
-čerpadlo, filtr, zpětná klapka,
-uzávěry u každé jednotky
-Výstup 70 °C: mapa výrobce
-do −10 °C (2 × 21,9 kW)
-Samy pokryjí potřebu objektu
-do ≈ −10 °C (denní průměr)
 STÁVAJÍCÍ VÝMĚNÍKOVÁ STANICE SPOTŘEBIČE ALIGNUM
 sekundár
+UZ-K1
 primár
-VS-TČ
-deskový
-glykol/voda P2
 AKU 1
 1 000 l
 AKU 2
 1 000 l
+TČ2 RH X50
+až 70 °C do −10 °C
+pod −10 °C 60–65 °C
+R290, jistič 40 A
+Přímo do AKU, bez výměníku
+čerpadlo, filtr, zpětná klapka,
+uzávěry, protimrazové ventily
+Výstup 70 °C: mapa výrobce
+do −10 °C (2 × 21,9 kW)
+Samy pokryjí potřebu objektu
+do ≈ −10 °C (denní průměr)
 Rozvaděč + PLC, dálkový dohled
 • priorita TČ, ekvitermní řízení
 • EK po 6 kW s prodlevou, ne při krátkém poklesu
@@ -45,14 +42,14 @@ sériový dohřev přívodu
 zapíná se postupně při deficitu
 nebo výpadku jednotky TČ
 F + mag.
+UZ-K2
 Pojištění a armatury kotelny
-expanze 200 l + PV 3 bar (AKU max. 3 bar), glykol: EN 35 l + PV
+expanze 200 l + PV 3 bar (AKU max. 3 bar), protimrazová ochrana TČ
 filtr + magnetický odkalovač ve zpátečce, kalorimetr MID
 uzávěry UZ-K1/K2 kotelny TČ (běžně OTEVŘENO)
 zpětné klapky, odvzdušnění, vypouštění
 staniční
 čerpadlo
-UZ-K2
 HV VS 200 kW
 stávající výměník
 primár ← TČ / teplovod
@@ -80,7 +77,7 @@ Provozní režimy
 3 · Výpadek jedné jednotky TČ – druhá X50 + elektrokotle (proudový limit ≈ 66 kW) pokryjí potřebu orientačně do ≈ −19 °C.
 4 · Výpadek obou jednotek TČ – vytápění převezme samostatně kaskáda elektrokotlů 72 kW: potřebu pokryje orientačně do ≈ −13,5 °C (s 10% rezervou), bez rezervy do ≈ −16 °C.
 5 · Záloha teplovodem MM Holz – po uzavření UZ-K1/K2 a otevření UZ-T1/T2 lze objekt kdykoli vrátit na teplovod (ruční přepnutí servisem, ne současný provoz obou zdrojů).
-Poznámky: Výměník HV VS mezi zdrojem a soustavou ubírá ≈ 3–5 K (typ a plocha výměníku dosud neověřeny) – při 70 °C na primáru ≈ 65–67 °C na sekundáru; podle měřené potřeby stačí v mrazu 55–63 °C.
-Akumulační nádrže (Lemet 16.1000 BN-0) mají max. 3 bar – proto oddělení od teplovodu (5 bar) uzávěry, pojistný ventil 3 bar na straně kotelny a zákaz současného provozu. TUV se dál ohřívá ve stávajícím ACV 320 l (65 °C, týdenní dezinfekce 70 °C).
+Poznámky: TČ napojena přímo do AKU (bez výměníku), voda bez glykolu – protimrazové ventily u jednotek, záložní napájení čerpadel, topné kabely venkovního potrubí, alarm výpadku.
+Výměník HV VS ubírá ≈ 3–5 K (70 °C na primáru ≈ 65–67 °C na sekundáru). AKU max. 3 bar → oddělení od teplovodu (5 bar), PV 3 bar. TUV dál v ACV 320 l (65 °C, dezinfekce 70 °C).
 Výkony orientačně podle naměřené dodávky tepla 2021–2025 a výkonové mapy výrobce; koncepční schéma, nikoli prováděcí projekt.
-přívod zpátečka glykol okruh elektrokotlů teplovod MM Holz TUV
+přívod zpátečka okruh elektrokotlů teplovod MM Holz TUV
