@@ -1,25 +1,38 @@
 [Text vytažený z ThermaVera-nabidka-Alignum-TV-ALIGNUM-2026-01.pdf]
 
 --- strana 1 ---
-7 N A B Í D K A
+7 N A B Í D K A O D K U P U
 Zelená kotelna s tepelnými čerpadly
 REO RH X50 pro areál Alignum Paskov
-Náhrada dodávky tepla z teplovodu — vytápění výrobní haly a správní budovy, ohřev teplé
-vody
+Odku
+p kotelny za zůstatkovou
+cenu
+po skončení pronájm
+u — vytápění výrobní haly a
+správní budovy, ohřev teplé vody
 č. TV-ALIGNU
 M-2026-01
 21. 10. 2026
 platnost 30 dní
 ceny bez DPH
-Vážený pane inženýre,
+Vážený pane Poloku
+,
 děkujeme za zaslané podklady, statistiku dodávky tepla a za možnost prohlédnout si objekt na místě. Na jejich
-základě předkládáme nabídku zelené kotelny s tepelnými čerpadly pro areál společnosti Alignu
-m v Paskově.
-Kotelna je náhradou za dodávku tepla teplovodem ze sousední společnosti MM Holz, který je po havárii
-momentálně nedostu
-pný. Zajistí vytápění výrobní haly i správní budovy a ohřev teplé vody ve stávajícím
-zásobníku
-. Stávající otopná soustava zůstává
+základě předkládáme nabídku na odku
+p zelené kotelny s tepelnými čerpadly pro areál společnosti Alignu
+m v
+Paskově. Kotelna je náhradou za dodávku tepla teplovodem ze sousední společnosti MM Holz, který je po
+havárii momentálně nedostu
+pný. Kotelnu nainstalujeme do Vašich technických prostor a po dobu
+pronájm
+u
+sjednaného se společností MM Holz zajistí vytápění výrobní haly i správní budovy a ohřev teplé vody ve
+stávajícím zásobníku
+. Po skončení pronájm
+u ji můžete odkou
+pit za zůstatkovou
+cenu uvedenou v této
+nabídce. Stávající otopná soustava zůstává
 beze změny.
 ZDR
 O
@@ -29,9 +42,11 @@ kaskáda + elektrokotel pro bivalenci
 TEPLOTA TOPNÉ VODY
 až 70 °C
 do venkovní teploty −10 °C
-CENA SESTAVY
+ZŮSTATKOVÁ CENA
 1 250 000 Kč
-bez DPH, včetně dopravy a instalace
+bez DPH, odku
+p po skončení pronájm
+u
 1 · Výchozí stav
 Výrobní hala 1 182 m², provozní teplota cca 17 °C, 5 teplovzdušných jednotek SAHARA W3634 (projektový spád
 80/60 °C).
@@ -73,18 +88,18 @@ výpadku
 odtávání jednotek.
 , omezuje taktování a pokrývá
 Předběžně ≈ 50 kW, výkon ještě u
-přesníme. Řízení po stu
-výkonu tepelných čerpadel, nikoli při krátkém poklesu teploty.
-pních; zapíná se až při trvalém nedostatku
+přesníme. Nahradí výpadek jedné jednotky tepelného čerpadla
+i pokryje výkonový deficit v mrazu
+. Řízení po stu
+pních; zapíná se až při trvalém nedostatku výkonu
+tepelných čerpadel, nikoli při krátkém poklesu teploty.
 Na primární stranu stávající výměníkové stanice. Rozvody, čerpadla jednotlivých větví, jednotky
 SAHARA i ohřev teplé vody zůstávají beze změny. Přípojka teplovodu zůstává zachována pro
 případný návrat.
 Nadřazená regulace (PLC) s ekvitermním řízením, prioritou tepelných čerpadel, ohřevem a dezinfekcí
 teplé vody, hlídáním elektrického příkonu a vzdáleným dohledem s hlášením poru
 ch.
-Technologie v kontejneru u objektu
-, nebo po dohodě přímo v technických prostorách společnosti
-Alignu
+V technických prostorách společnosti Alignu
 m. Venkovní jednotky na terénu v blízkosti kotelny.
 3 · Výkon a provoz
 Jednotky REO
@@ -128,7 +143,7 @@ podíl ročního tepla.
 Při výpadku jedné jednotky pokryje druhá jednotka s elektrokotlem potřebu orientačně do −15 °C.
 Při výpadku obou jednotek topí elektrokotel samostatně v rozsahu svého výkonu (≈ 50 kW pokryje potřebu
 orientačně do −5 °C). Plnou zálohu i v mrazu zajistí třetí jednotka — viz alternativa.
-4 · Cena
+4 · Zůstatková cena pro odkup
 Sestava
 2 × REO
 RH X50 + aku
@@ -147,7 +162,10 @@ výměníkovou stanici, regulace s dálkovým dohledem.
 Topná voda až 70 °C do −10 °C.
 Do −10 °C předpoklad provozu jen na tepelná
 čerpadla.
-Včetně dopravy, instalace a uvedení do provozu
+Elektrokotel nahradí výpadek jedné jednotky i deficit v
+mrazu
+.
+Kotelna již nainstalovaná a v provozu
 .
 VÝKONOVÁ REZERVA A ZÁLOHA
 + 1 × REO
@@ -160,27 +178,41 @@ Při výpadku jedné jednotky běží dál dvě tepelná
 čerpadla.
 Elektrokotel zůstává jako rezerva.
 1 250 000 Kč
-bez DPH · včetně dopravy a instalace
-+ 250 000 Kč
-bez DPH · zvýhodněná cena · sestava celkem 1 500 000 Kč
-Nejprve pronájem, potom odku
-p
-Kotelnu lze nejprve pronajmout a po úspěšném pronájm
-u odkou
-pit za cenu sestavy
-uvedenou výše (1 250 000
-Kč, s třetí jednotkou
-1 500 000 Kč
-bez DPH). Podmínky pronájm
+bez DPH · zůstatková cena po skončení pronájm
 u
-: 80 000 Kč měsíčně, minimálně 6 měsíců,
-instalace 50 000 Kč a doprava 30 000 Kč, vše bez DPH. Elektrickou energii hradí provozovatel objektu; kotelna
-má vlastní měření elektřiny i tepla.
++ 250 000 Kč
+bez DPH · zvýhodněná cena · zůstatková cena celkem 1 500 000
+Kč
+Pronájem nyní, odku
+p po jeho skončení
+Kotelna bude instalována ve Vašich technických prostorách již nyní a po dobu
+pronájm
+u sjednaného se
+společností MM Holz zajišťuje dodávku tepla po havárii teplovodu
+. Po skončení pronájm
+u ji můžete odkou
+pit za
+zůstatkovou
+cenu
+1 250 000 Kč, se třetí jednotkou
+1 500 000 Kč
+bez DPH. K
+u
+p
+ujete kotelnu
+, kterou už máte ve
+vlastních prostorách nainstalovanou a během pronájm
+u vyzkoušenou v provozu — bez další instalace. Odku
+p je
+možný i před skončením pronájm
+u
+.
 5 · Elektrické připojení
 Dvě jednotky RH X50 odebírají nejvýše 2 × 32 A, elektrokotel ≈ 50 kW přibližně 72 A na fázi. Kotelna potřebuje
-vyhrazený přívod 3 × 160 A. Regulace hlídá souběh tepelných čerpadel a elektrokotle a v případě potřeb
-dohřev omezí — tepelná čerpadla mají vždy přednost.
-y elektrický
+vyhrazený přívod 3 × 160 A a silový rozvaděč, které nejsou sou
+částí dodávky. Regulace hlídá souběh tepelných
+čerpadel a elektrokotle a v případě potřeb
+y elektrický dohřev omezí — tepelná čerpadla mají vždy přednost.
 --- strana 4 ---
 UZ-K1
 primár
@@ -188,7 +220,7 @@ primár
 Alignum Paskov – zelená kotelna s tepelnými čerpadly (koncepční schéma)
 Tepelná čerpadla 2 × REO RH X50 (+ volitelně 3. jednotka) + akumulace 2 × 1 200 l + elektrokotel pro bivalenci napájí primár stávajícího výměníku. Kotelna nahrazuje teplovod MM Holz, který je momentálně nedostupný; jeho přípojka zůstává zachována.
 Za výměníkem beze změny: rozdělovač RS Kombi 100 → hala (5 × SAHARA), administrativa (radiátory), ohřev TUV (ACV Smart Line 320 l).
-VENKU TECHNOLOGIE KOTELNY (kontejner / prostory Alignum) STÁVAJÍCÍ VÝMĚNÍKOVÁ STANICE SPOTŘEBIČE ALIGNUM
+VENKU KOTELNA – technické prostory Alignum STÁVAJÍCÍ VÝMĚNÍKOVÁ STANICE SPOTŘEBIČE ALIGNUM
 přívod max. 70 °C
 sekundár
 TČ1 RH X50
@@ -214,7 +246,7 @@ AKU 1
 AKU 2
 1 200 l
 paralelně, čidla nahoře / uprostřed / dole
-Rozvaděč + PLC, dálkový dohled
+Regulace (PLC), dálkový dohled
 • priorita TČ, ekvitermní řízení
 • elektrokotel po stupních, s prodlevou
 • hlídání elektrického příkonu
@@ -284,12 +316,13 @@ protimrazovou ochranou
 Elektrokotel pro bivalenci
 Čerpadla, armatury, expanzní a pojistné prvky, filtrace
 Napojení na stávající výměníkovou stanici
-Rozvaděč kotelny, regulace a vzdálený dohled
+Regulace (PLC) a vzdálený dohled
 Doprava, instalace, uvedení do provozu
 , revize
 Zaškolení obsluhy, doku
 mentace skutečného provedení
-Elektrický přívod 3 × 160 A k rozvaděči kotelny
+Silový rozvaděč kotelny a elektrický přívod 3 × 160
+A
 Stavební úpravy, zpevněná plocha a základy pro
 venkovní jednotky
 Úpravy stávající otopné soustavy a ohřevu vody
@@ -300,40 +333,38 @@ Projektová doku
 mentace nad rámec dílenské
 --- strana 5 ---
 8 · Další postup
-1. Potvrzení varianty — sestava, nebo se třetí jednotkou; u
-místění v kontejneru
-Alignu
-m.
+1. Potvrzení varianty — sestava se dvěma, nebo třemi jednotkami.
 2. Upřesnění výkonu elektrokotle a elektrického přívodu
 .
-3. Smlouva — pronájem s možností odku
+3. K
 u
-p
-, nebo přímý náku
-p.
-4. Dodání, instalace a uvedení do provozu
+pní smlouva za zůstatkovou
+cenu — po skončení pronájm
+u
+, případně dříve.
+4. Instalace do Vašich technických prostor a uvedení do provozu v rámci pronájm
+u
 , zaškolení obsluhy.
-, nebo v technických prostorách
 9 · Shrnutí
 Varianta Sestava — kaskáda, aku
-instalace
+instalovaná a v provozu
 m
-Alternativa — třetí jednotka (výkon a záloha) Sestava se třetí jednotkou Pronájem s možností odku
-p
-u za cenu sestavy ulace 2 × 1 200 l, elektrokotel ≈ 50 kW, doprava a
-Tepelná čerpadla Cena bez DPH
+Alternativa — třetí jednotka (výkon a záloha) Sestava se třetí jednotkou ulace 2 × 1 200 l, elektrokotel ≈ 50 kW,
+Tepelná čerpadla Zůstatková cena bez DPH
 2 × REO
 RH X50 1 250 000 Kč
 + 1 × REO
 3 × REO
-RH X50 RH X50 + 250 000 Kč
-1 500 000 Kč
-— 80 000 Kč / měsíc
+RH X50 + 250 000 Kč
+RH X50 1 500 000 Kč
 Další krok
-Potvrďte nám prosím preferovanou variantu a způsob u
-Rádi vše probereme i osobně.
-místění. O
-bratem připravíme smlouvu a termín dodání.
+Potvrďte nám prosím preferovanou variantu (se dvěma, nebo třemi jednotkami). K
+u
+konci pronájm
+u
+, případně dříve podle Vašeho přání. Rádi vše probereme i osobně.
+pní smlouvu
+připravíme ke
 S pozdravem
 ThermaVera Energy
 E‑MAIL
