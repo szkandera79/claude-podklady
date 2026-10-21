@@ -1,43 +1,48 @@
 # REO R290 Smart – přímé připojení FV panelů (pracovní podklad)
 
-Stav 2026-10-13. Zdroj: prezentace CZ str. 15 (tabulka FV), str. 41–43 (schémata), ERP report a energetické štítky výrobce.
-**Předběžné – napěťové a proudové limity čekají na potvrzení výrobcem.**
+Stav 2026-10-21. Zdroj: odpověď výrobce „Direct PV Drive – Point-by-Point Response“ (21. 10. 2026),
+prezentace CZ str. 15 a 41–43, ERP report. Výrobce **nepublikuje**: max. Isc, rozsah MPPT, počet MPPT vstupů,
+reakci na kolísání FV, specifikaci desky MPPT, požadavky na DC jištění, samostatný manuál.
 
 ## Nabízené varianty
-- RH06 – **pouze 1F** (ERP report: „single phase 6/8/10 kW, 3 phase 8/10/12/14/16 kW“; štítek PW06 existuje jen jednofázový)
-- RH08–RH16 – nabízíme **jen 3F**
+- RH06 – **pouze 1F** (ERP report a štítky: 1F 6/8/10 kW, 3F 8–16 kW)
+- RH08–RH16 – nabízíme **jen 3F**; RHX20 Pro / RHX30 Pro – 3F
+- Deska MPPT je **volitelná** u všech modelů (nutno objednat), nastavení DIP SW4.2.
 
-## Limity výrobce
-| Model | Uoc (tabulka) | Uoc (schéma) | Imax | Pmax DC |
+## Limity výrobce (odpověď 21. 10.)
+| Model | Tvrdý limit Uoc stringu | Okno Uoc | Imax | Pmax = max. kWp |
 |---|---|---|---|---|
-| RH06 1F | 200–400 V | max 310 V | 13 A | 3,5 kW |
-| RH08 3F | 250–600 V | < 550 V | 13 A | 4,5 kW |
-| RH10–16 3F | 250–600 V | < 550 V | 13 A | 5,5 kW |
+| RH06 1F | **< 311 V** | 200–400 V | 13 A | 3,5 kW |
+| RH08 3F | **< 537 V** | 250–600 V | 13 A | 4,5 kW |
+| RH10–16 3F | **< 537 V** | 250–600 V | 13 A | 5,5 kW |
+| RHX20 Pro / RHX30 Pro | **< 537 V** | 250–600 V | **20 A** | 11 kW |
 
-Návrhový limit = nižší hodnota ze schématu (310 V / 550 V), dokud výrobce nepotvrdí vyšší.
+- 311 V = 220 V × √2, 537 V = 380 V × √2 → špičkové napětí usměrněné sítě na DC sběrnici; FV nesmí být nad ním.
+- **Předimenzování výrobce nedoporučuje** – pole dimenzovat na Pmax.
+- Hybrid: FV + síť se sčítají na DC straně (ne přepínání); z FV jen kompresor (> 80 % příkonu jednotky),
+  ventilátory, čerpadla a řízení vždy ze sítě. Přechod automatický.
+- Výrobce uvádí „max. 6 ks (1F) / 10 ks (3F) při Uoc panelu 50 V“ – **bez teplotní korekce**.
+  10 × 50 V = 500 V při 25 °C, ale v mrazu ~570 V > 537 V → takto NEnavrhovat.
 
 ## Výpočet
-Uoc stringu při −25 °C = n × Voc(STC) × (1 + |β| × 50 K); β = 0,28 %/K (konzervativně).
-Panel 500 Wp: Voc 41–49 V dle typu → Voc za mrazu 46,7–55,9 V.
+Uoc stringu při −25 °C = n × Voc(STC) × 1,14 (β = 0,28 %/K, ΔT = 50 K).
 
-| Model | Doporučeno (500 Wp) | Podmínka | Uoc za mrazu | Nikdy víc než |
-|---|---|---|---|---|
-| RH06 1F | **5 ks = 2,5 kWp** | Voc ≤ 54 V | ≤ 280 V | 6 ks jen při Voc ≤ 45 V (308 V) |
-| RH08 3F | **9 ks = 4,5 kWp** | Voc ≤ 53 V | ≤ 503 V | 9 ks (= Pmax) |
-| RH10–16 3F | **10 ks = 5,0 kWp** | Voc ≤ 48 V | ≤ 551 V (při 49 V) | 11 ks jen při Voc ≤ 43 V a potvrzení 600 V |
+| Model | Panely 500 Wp | kWp | Podmínka: Voc panelu (STC) |
+|---|---|---|---|
+| RH06 1F | **6 ks** | 3,0 | Voc ≤ 45,5 V |
+|  | jinak **5 ks** | 2,5 | Voc ≤ 54,5 V (prakticky všechny) |
+| RH08 3F | **9 ks** | 4,5 | Voc ≤ 52,3 V |
+| RH10–16 3F | **10 ks** | 5,0 | Voc ≤ 47,1 V |
+|  | jinak **9 ks** | 4,5 | Voc ≤ 52,3 V |
+| RHX20/30 Pro | **1 × 10 ks** | 5,0 | Voc ≤ 47,1 V; 2 stringy jen s panely Imp ≤ 10 A |
 
-Minimum: RH06 5 ks, 3F 7 ks (spodní mez 200/250 V v létě).
-Vždy 1 string, žádné paralelní řazení (Imax 13 A).
+- Minimum: RH06 5 ks, 3F 7 ks (spodní mez okna 200/250 V v létě).
+- RH06 a 3F RH08–16: vždy **1 string** (13 A). Panel musí mít **Imp ≤ 13 A**.
+- RHX Pro: 2 paralelní stringy po 10 ks = 10 kWp jen pokud součet proudů ≤ 20 A
+  (běžné 500Wp panely mají Imp ~12,5–13 A → 2 stringy = 25 A, nad limitem).
 
-## Otevřené body pro výrobce
-- platí 310/550 V (schéma) nebo 400/600 V (tabulka)?
-- je 13 A limit provozního proudu, nebo i zkratového Isc? (panely 500 Wp mají Isc 13,5–15 A)
+## Stále otevřené (výrobce „not published“)
+- max. zkratový proud Isc (500Wp panely mají Isc 13,5–15 A > 13 A)
+- je 20 A u RHX celkový proud nebo na string; počet MPPT vstupů
+- doporučené DC jištění → navrhujeme dle ČSN 33 2000-7-712 (odpojovač, SPD DC, pojistky dle počtu stringů)
 - str. 42 prezentace (RH10–16 1F) obsahuje 3F schéma
-- RHX20 Pro / RHX30 Pro v tabulce FV chybí
-
-## Předimenzování pole (více výkonu při slabém osvitu) – 2026-10-20
-- Napětí (počet panelů v sérii) se NEPŘEKRAČUJE – žádné zařízení mezi FV a TČ to bezpečně neřeší
-  (svodič přepětí je jen na blesk/přechodové jevy; přepěťové relé by odpojovalo právě za mrazivých slunečných rán).
-- Více výkonu jen přes proud: větší panely (vyšší Imp/Isc) při stejném počtu v sérii; MPPT v poledne výkon ořízne.
-  Podmínka: výrobce potvrdí, že vstup snese Isc nad 13 A (a jaké maximum). Do té doby ne.
-- Bez rizika hned: sklon 45–60° na jih (zimní zisk), panely TOPCon/HJT, bez stínění; optimizéry jen u stíněných panelů.
