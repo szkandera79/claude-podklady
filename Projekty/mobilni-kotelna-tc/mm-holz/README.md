@@ -1,5 +1,7 @@
 # MM Holz / Alignum Paskov — mobilní kotelna (návrh sestavy)
 
+> **Nabídka pro Alignum (21. 10. 2026): [`nabidka-alignum/`](nabidka-alignum/README.md)** – 2 × RH X50 + AKU 2 × 1 200 l + EK ≈ 50 kW, 1 250 000 Kč; alternativa 3. jednotka +250 000 Kč.
+>
 > **Aktuální je revize 1 → [`rev1/`](rev1/01-technicka-zprava.md)** (19. 10. 2026): 2 × RH X50 + elektrická bivalence 72 kW, AKU 2 × 1 000 l, potřeba z měření MM Holz 62–69 kW. Níže je rev0 (archiv, beze změn).
 
 Poptávka: Ing. Alan Dorňák, Mayr-Melnhof Holz Paskov s.r.o. (16. 10. 2026). Vytápěný objekt je firma **Alignum**

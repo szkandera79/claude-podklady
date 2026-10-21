@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nabídka — zelená kotelna s tepelnými čerpadly, Alignum Paskov | ThermaVera Energy</title>
+<style>
+:root{
+  --bg:#eef1ee; --panel:#fff; --ink:#1b2420; --muted:#5d6b64; --line:#d8ded9;
+  --accent:#1E8F5B; --accent-2:#0F3D2E; --accent-bg:#E7F3EC;
+  --amber:#F2A33A; --amber-deep:#DA8718; --amber-bg:#FFF6E9; --amber-ink:#8A5312;
+  --radius:14px; --shadow:0 1px 2px rgba(20,40,30,.05), 0 6px 22px rgba(20,40,30,.07);
+  --serif:Georgia,"Times New Roman","Iowan Old Style",serif;
+  --sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:26px 20px 60px}
+.doc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:44px 52px}
+
+/* ---- interní blok (netiskne se) ---- */
+.internal{background:#fff8e6;border:2px dashed var(--amber-deep);border-radius:12px;padding:16px 20px;margin-bottom:22px}
+.internal h4{margin:0 0 8px;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;color:var(--amber-ink)}
+.internal ol{margin:6px 0 0;padding-left:20px;font-size:13.5px}
+.internal li{margin:4px 0}
+.toolbar{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.btn{font:600 13.5px var(--sans);border:1px solid var(--line);background:#fff;color:var(--ink);
+     padding:9px 14px;border-radius:10px;cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* ---- hlavička dokumentu ---- */
+.head{border-bottom:2px solid var(--accent);padding-bottom:16px;margin-bottom:6px;display:flex;gap:18px;align-items:flex-start}
+.logo{width:46px;height:46px;flex:none;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:grid;place-items:center;color:#fff;font-weight:700;font-size:20px}
+.head .eyebrow{font-size:11.5px;letter-spacing:2.4px;text-transform:uppercase;color:var(--accent);font-weight:700}
+.head h1{font-family:var(--serif);font-size:27px;margin:6px 0 4px;line-height:1.2}
+.head .sub{color:var(--muted);font-size:13.5px}
+.head .meta{margin-left:auto;text-align:right;font-size:12px;color:var(--muted);line-height:1.7;white-space:nowrap}
+
+h2{font-family:var(--serif);font-size:18px;margin:30px 0 8px;color:var(--accent-2);padding-left:12px;border-left:3px solid var(--accent)}
+h3{font-size:14.5px;margin:18px 0 4px}
+p{margin:9px 0;font-size:14.5px;color:#26302b}
+ul{margin:8px 0;padding-left:20px;font-size:14.5px}
+li{margin:4px 0}
+.lead{font-size:15.5px}
+.small{font-size:12.5px;color:var(--muted)}
+
+/* ---- metriky ---- */
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 6px}
+.metric{border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;position:relative;overflow:hidden;background:#fbfdfb}
+.metric::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--accent),var(--accent-2))}
+.metric .k{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.metric .v{font-family:var(--serif);font-size:25px;margin-top:5px;color:var(--accent-2);line-height:1.15}
+.metric .s{font-size:11.5px;color:var(--muted);margin-top:3px}
+
+/* ---- tabulky ---- */
+table{width:100%;border-collapse:collapse;margin:12px 0 6px;font-size:13.8px}
+caption{text-align:left;font-weight:700;padding:6px 0;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f4f7f4;font-weight:600;color:var(--muted)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700;background:var(--accent-bg);color:var(--accent-2);border-bottom:none}
+tr.hl td{font-weight:700}
+.tiers td:first-child{white-space:nowrap}
+.pill{display:inline-block;min-width:26px;text-align:center;background:var(--accent-2);color:#fff;border-radius:999px;font-weight:700;font-size:12px;padding:2px 8px}
+.pill.o{background:#fff;color:var(--accent-2);border:1.5px dashed var(--accent)}
+
+/* ---- karty variant ---- */
+.vars{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+.var{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fbfdfb;display:flex;flex-direction:column}
+.var.reco{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
+.var .vh{background:var(--accent-2);color:#fff;padding:12px 16px}
+.var .vh .t{font-family:var(--serif);font-size:16.5px}
+.var .vh .p{font-size:12.5px;color:#CFE6D9;margin-top:2px}
+.var .vb{padding:14px 16px;font-size:13.5px;flex:1}
+.var .vb .tagline{margin-bottom:4px}
+.var .vb ul{padding-left:18px;margin:6px 0;font-size:13.3px}
+.var .price{border-top:1px solid var(--line);padding:12px 16px;background:#fff}
+.var .price .c{font-family:var(--serif);font-size:21px;color:var(--accent-2)}
+.var .price .n{font-size:11.5px;color:var(--muted)}
+.tagline{display:inline-block;background:var(--accent-bg);color:var(--accent-2);font-size:11px;font-weight:700;
+         padding:3px 9px;border-radius:999px;letter-spacing:.4px;text-transform:uppercase}
+.pros{color:var(--accent-2);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.5px;margin-top:10px}
+.cons{color:var(--amber-ink);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.5px;margin-top:10px}
+
+/* ---- zvýrazněné bloky ---- */
+.callout{border-radius:12px;padding:16px 20px;margin:16px 0;border:1px solid transparent}
+.callout.green{background:var(--accent-bg);border-color:#bfe0cd}
+.callout.amber{background:var(--amber-bg);border-color:#f0d3bf}
+.callout h3{margin-top:0;color:var(--accent-2)}
+.callout.amber h3{color:var(--amber-ink)}
+.callout p:last-child{margin-bottom:0}
+
+figure{margin:16px 0 6px}
+figure img,figure svg{display:block;width:100%;height:auto;max-width:100%;border:1px solid var(--line);border-radius:10px;background:#fff}
+figcaption{font-size:12px;color:var(--muted);margin-top:7px}
+
+.footnote{margin-top:20px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted)}
+.sign{margin-top:26px;font-size:14px;page-break-inside:avoid}
+.sign .brand-name{font-family:var(--serif);font-size:20px;color:var(--accent-2);margin:10px 0 10px}
+.contact{display:flex;flex-wrap:wrap;gap:8px 30px;background:var(--accent-bg);border:1px solid #bfe0cd;
+         border-radius:12px;padding:15px 20px;font-size:15px;color:var(--accent-2);font-weight:600}
+.contact .lbl{display:block;font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;
+              color:var(--accent);font-weight:700;margin-bottom:1px}
+.contact .web{font-weight:700;border-bottom:2px solid var(--accent)}
+
+@media screen and (max-width:760px){
+  .doc{padding:26px 22px}
+  .metrics{grid-template-columns:1fr}
+  .vars{grid-template-columns:1fr}
+  .head{flex-wrap:wrap}
+  .head .meta{margin-left:0;text-align:left;white-space:normal}
+}
+@media print{
+  /* Tisk drží stejnou sazbu jako náhled: šířka obsahu 796 px (jako .doc v náhledu)
+     se poměrově zmenší na tiskovou šířku A4 (186 mm ≈ 703 px). Tím sedí zalomení
+     řádků, počet sloupců i vzájemné velikosti písma. */
+  @page{size:A4 portrait;margin:12mm}
+  html,body{background:#fff}
+  .wrap{max-width:none;margin:0;padding:0;width:796px;zoom:0.8825}
+  .doc{box-shadow:none;border:none;border-radius:0;padding:0;background:#fff}
+  .no-print{display:none !important}
+  h2{page-break-after:avoid}
+  table,.metric,.var,.callout,figure{page-break-inside:avoid}
+  ul,ol{page-break-inside:avoid}
+  .page-break{page-break-before:always}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="toolbar no-print">
+  <button class="btn primary" onclick="window.print()">Tisk / uložit jako PDF</button>
+  <button class="btn" onclick="document.getElementById('int').remove()">Skrýt interní poznámku</button>
+</div>
+<div class="internal no-print" id="int">
+  <h4>Interní — před odesláním ověřit</h4>
+  <ol>
+    <li><strong>Výkon elektrokotle</strong> — v nabídce předběžně ≈ 50 kW (bivalence). Samotný elektrokotel 50 kW pokryje potřebu objektu jen do ≈ −5 °C (odhad z měření); proto je v nabídce doporučena 3. jednotka jako záloha.</li>
+    <li><strong>AKU 2 × 1 200 l</strong> — nádrže 1 200 l mají obvykle průměr bez izolace 850–1 000 mm. Při instalaci do technických prostor Alignum (dveře 90 cm) ověřit průchod; v kontejneru bez omezení.</li>
+    <li><strong>Podmínky pronájmu</strong> (80 000 Kč/měsíc, min. 6 měsíců, instalace 50 000 Kč, doprava 30 000 Kč) převzaty z e‑mailu p. Dorňákovi (19. 10.). Odkup po pronájmu za cenu sestavy bez započtení nájemného — potvrdit.</li>
+    <li>Termín dodání a platnost nabídky doplnit; sazba DPH podle charakteru plnění.</li>
+    <li>Výpočty: <code>mobilni-kotelna-tc/mm-holz/rev1/src/rev1.py</code> (regrese spotřeby 2021–2025, výkonová mapa RH X50).</li>
+  </ol>
+</div>
+
+<div class="doc">
+
+<div class="head">
+  <div class="logo">7</div>
+  <div>
+    <div class="eyebrow">Nabídka</div>
+    <h1>Zelená kotelna s tepelnými čerpadly<br>REO RH X50 pro areál Alignum Paskov</h1>
+    <div class="sub">Náhrada dodávky tepla z teplovodu — vytápění výrobní haly a správní budovy, ohřev teplé vody</div>
+  </div>
+  <div class="meta">
+    č. <strong>TV-ALIGNUM-2026-01</strong><br>
+    21. 10. 2026<br>
+    platnost 30 dní<br>
+    ceny bez DPH
+  </div>
+</div>
+
+<p class="lead">Vážený pane inženýre,<br>
+děkujeme za zaslané podklady, statistiku dodávky tepla a za možnost prohlédnout si objekt na místě.
+Na jejich základě předkládáme nabídku zelené kotelny s tepelnými čerpadly pro areál společnosti
+Alignum v Paskově. <strong>Kotelna je náhradou za dodávku tepla teplovodem ze sousední společnosti MM Holz,
+který je po havárii momentálně nedostupný.</strong> Zajistí vytápění výrobní haly i správní budovy a ohřev teplé vody
+ve stávajícím zásobníku. Stávající otopná soustava zůstává beze změny.</p>
+
+<div class="metrics">
+  <div class="metric">
+    <div class="k">Zdroj tepla</div>
+    <div class="v">2 × REO RH X50</div>
+    <div class="s">kaskáda + elektrokotel pro bivalenci</div>
+  </div>
+  <div class="metric">
+    <div class="k">Teplota topné vody</div>
+    <div class="v">až 70 °C</div>
+    <div class="s">do venkovní teploty −10 °C</div>
+  </div>
+  <div class="metric">
+    <div class="k">Cena sestavy</div>
+    <div class="v">1 250 000 Kč</div>
+    <div class="s">bez DPH, včetně dopravy a instalace</div>
+  </div>
+</div>
+
+<h2>1 · Výchozí stav</h2>
+<table>
+  <tbody>
+    <tr><td><strong>Výrobní hala</strong></td><td>1 182 m², provozní teplota cca 17 °C, 5 teplovzdušných jednotek SAHARA W3634 (projektový spád 80/60 °C).</td></tr>
+    <tr><td><strong>Správní budova</strong></td><td>Kanceláře, šatny a sociální zázemí, desková otopná tělesa se směšováním (projektový spád 75/60 °C).</td></tr>
+    <tr><td><strong>Teplá voda</strong></td><td>Nepřímotopný zásobník ACV Smart Line 320 l ohřívaný z topné vody; 12 zaměstnanců ve 3 směnách.</td></tr>
+    <tr><td><strong>Dosavadní zdroj</strong></td><td>Teplovod ze sousední společnosti MM Holz přes výměníkovou stanici 200 kW a rozdělovač RS Kombi 100. <strong>Po havárii je teplovod momentálně nedostupný.</strong></td></tr>
+    <tr><td><strong>Spotřeba tepla</strong></td><td>Podle měření MM Holz 140–193 MWh ročně v letech 2019–2025 (vytápění a teplá voda).</td></tr>
+  </tbody>
+</table>
+
+<h2>2 · Navržené řešení</h2>
+<table>
+  <caption>Součást dodávky</caption>
+  <tbody>
+    <tr><td><strong>Tepelná čerpadla</strong></td><td>2 × REO RH X50 (vzduch/voda, chladivo R290) v kaskádě, s řízením a střídáním jednotek. Venkovní okruh plněný nemrznoucí směsí a oddělený deskovým výměníkem — jednotky nezamrznou ani při výpadku proudu.</td></tr>
+    <tr><td><strong>Akumulace</strong></td><td>2 × 1 200 l. Vyrovnává výkon tepelných čerpadel a potřebu objektu, omezuje taktování a pokrývá odtávání jednotek.</td></tr>
+    <tr><td><strong>Elektrokotel pro bivalenci</strong></td><td>Předběžně ≈ 50 kW, výkon ještě upřesníme. Řízení po stupních; zapíná se až při trvalém nedostatku výkonu tepelných čerpadel, nikoli při krátkém poklesu teploty.</td></tr>
+    <tr><td><strong>Napojení</strong></td><td>Na primární stranu stávající výměníkové stanice. Rozvody, čerpadla jednotlivých větví, jednotky SAHARA i ohřev teplé vody zůstávají beze změny. Přípojka teplovodu zůstává zachována pro případný návrat.</td></tr>
+    <tr><td><strong>Regulace a dohled</strong></td><td>Nadřazená regulace (PLC) s ekvitermním řízením, prioritou tepelných čerpadel, ohřevem a dezinfekcí teplé vody, hlídáním elektrického příkonu a vzdáleným dohledem s hlášením poruch.</td></tr>
+    <tr><td><strong>Umístění</strong></td><td>Technologie v kontejneru u objektu, nebo <strong>po dohodě přímo v technických prostorách společnosti Alignum</strong>. Venkovní jednotky na terénu v blízkosti kotelny.</td></tr>
+  </tbody>
+</table>
+
+<h2>3 · Výkon a provoz</h2>
+<p>Jednotky REO RH X50 jsou podle výkonové mapy výrobce schopny dodávat topnou vodu
+<strong>až 70 °C na výstupu do venkovní teploty −10 °C</strong>. Předpokládáme proto, že do −10 °C
+venkovní teploty kaskáda tepelných čerpadel <strong>objekt vytopí samotnými kompresory</strong>,
+bez elektrického dohřevu. Pod −10 °C nebo při výkonovém deficitu se postupně připíná elektrokotel.</p>
+
+<div class="callout amber">
+  <h3>Výkon negarantujeme</h3>
+  <p>Skutečnou potřebu tepla budovy neznáme — tepelná ztráta objektu ani ztráty otopné soustavy
+  nebyly stanoveny výpočtem. Uvedené výkony a teploty jsou proto orientační: vycházejí z naměřené
+  dodávky tepla v letech 2021–2025, z venkovních teplot v Paskově a z výkonové mapy výrobce.
+  Při změně provozu (např. vyšší teploty v hale) se mohou lišit.</p>
+</div>
+
+<table>
+  <caption>Orientační odhad z naměřené spotřeby (denní průměr venkovní teploty)</caption>
+  <thead><tr><th>Venkovní teplota</th><th class="num">Odhad potřeby objektu</th><th class="num">2 × RH X50 (55 °C)</th><th class="num">3 × RH X50 (55 °C)</th></tr></thead>
+  <tbody>
+    <tr><td>0 °C</td><td class="num">≈ 35 kW</td><td class="num">75 kW</td><td class="num">113 kW</td></tr>
+    <tr><td>−5 °C</td><td class="num">≈ 46 kW</td><td class="num">71 kW</td><td class="num">106 kW</td></tr>
+    <tr class="hl"><td>−10 °C</td><td class="num">≈ 57 kW</td><td class="num">62 kW</td><td class="num">93 kW</td></tr>
+    <tr><td>−12 °C</td><td class="num">≈ 62 kW</td><td class="num">54 kW</td><td class="num">82 kW</td></tr>
+    <tr><td>−15 °C</td><td class="num">≈ 69 kW</td><td class="num">50 kW</td><td class="num">74 kW</td></tr>
+  </tbody>
+</table>
+<p class="small">Výkon tepelných čerpadel klesá s rostoucí teplotou vody — při 70 °C a −10 °C dodá jedna jednotka
+21,9 kW. Podle odhadu však objekt při −10 °C vystačí s nižší teplotou topné vody (orientačně 50–55 °C),
+při které mají jednotky vyšší výkon. Regulace proto drží teplotu vody jen tak vysokou, jak je potřeba.</p>
+
+<ul>
+  <li><strong>Do ≈ −10 °C</strong> topí jen tepelná čerpadla.</li>
+  <li><strong>Pod −10 °C</strong> doplňuje chybějící výkon elektrokotel — při −15 °C orientačně 20–25 kW.
+  Elektřina tak dodá jen malý podíl ročního tepla.</li>
+  <li><strong>Při výpadku jedné jednotky</strong> pokryje druhá jednotka s elektrokotlem potřebu orientačně do −15 °C.</li>
+  <li><strong>Při výpadku obou jednotek</strong> topí elektrokotel samostatně v rozsahu svého výkonu
+  (≈ 50 kW pokryje potřebu orientačně do −5 °C). Plnou zálohu i v mrazu zajistí třetí jednotka — viz alternativa.</li>
+</ul>
+
+<h2>4 · Cena</h2>
+<div class="vars">
+  <div class="var reco">
+    <div class="vh">
+      <div class="t">Sestava</div>
+      <div class="p">2 × REO RH X50 + akumulace + elektrokotel</div>
+    </div>
+    <div class="vb">
+      <div class="tagline">Náhrada teplovodu</div>
+      <p><strong>2 × REO RH X50</strong> v kaskádě, akumulace 2 × 1 200 l, elektrokotel pro bivalenci (≈ 50 kW), napojení na výměníkovou stanici, regulace s dálkovým dohledem.</p>
+      <ul>
+        <li>Topná voda až 70 °C do −10 °C.</li>
+        <li>Do −10 °C předpoklad provozu jen na tepelná čerpadla.</li>
+        <li>Včetně dopravy, instalace a uvedení do provozu.</li>
+      </ul>
+    </div>
+    <div class="price">
+      <div class="c">1 250 000 Kč</div>
+      <div class="n">bez DPH · včetně dopravy a instalace</div>
+    </div>
+  </div>
+  <div class="var">
+    <div class="vh">
+      <div class="t">Alternativa</div>
+      <div class="p">Třetí jednotka REO RH X50</div>
+    </div>
+    <div class="vb">
+      <div class="tagline">Výkonová rezerva a záloha</div>
+      <p><strong>+ 1 × REO RH X50</strong> zapojená do stejné kaskády. Kryje výkonový deficit v nejchladnějších dnech a slouží jako záloha při výpadku kterékoli jednotky.</p>
+      <ul>
+        <li>Tři jednotky pokryjí potřebu orientačně do −15 °C bez elektřiny.</li>
+        <li>Při výpadku jedné jednotky běží dál dvě tepelná čerpadla.</li>
+        <li>Elektrokotel zůstává jako rezerva.</li>
+      </ul>
+    </div>
+    <div class="price">
+      <div class="c">+ 250 000 Kč</div>
+      <div class="n">bez DPH · zvýhodněná cena · sestava celkem 1 500 000 Kč</div>
+    </div>
+  </div>
+</div>
+
+<div class="callout green">
+  <h3>Nejprve pronájem, potom odkup</h3>
+  <p>Kotelnu lze nejprve pronajmout a po úspěšném pronájmu odkoupit <strong>za cenu sestavy uvedenou výše</strong>
+  (1 250 000 Kč, s třetí jednotkou 1 500 000 Kč bez DPH). Podmínky pronájmu: <strong>80 000 Kč měsíčně</strong>,
+  minimálně 6 měsíců, instalace 50 000 Kč a doprava 30 000 Kč, vše bez DPH. Elektrickou energii hradí
+  provozovatel objektu; kotelna má vlastní měření elektřiny i tepla.</p>
+</div>
+
+<h2>5 · Elektrické připojení</h2>
+<p>Dvě jednotky RH X50 odebírají nejvýše 2 × 32 A, elektrokotel ≈ 50 kW přibližně 72 A na fázi.
+Kotelna potřebuje <strong>vyhrazený přívod 3 × 160 A</strong>. Regulace hlídá souběh tepelných čerpadel
+a elektrokotle a v případě potřeby elektrický dohřev omezí — tepelná čerpadla mají vždy přednost.</p>
+
+<div class="page-break"></div>
+<h2>6 · Schéma kotelny</h2>
+<figure>
+<svg role="img" aria-label="Koncepční schéma zelené kotelny Alignum: tepelná čerpadla, akumulace, elektrokotel a napojení na stávající výměníkovou stanici" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1040" font-family="Arial, Helvetica, sans-serif" font-size="13">
+<title>Alignum Paskov – schéma zelené kotelny (nabídka TV-ALIGNUM-2026-01)</title>
+<defs>
+  <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c4472f"/></marker>
+  <marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2f6fb0"/></marker>
+  <style>
+    .h{fill:none;stroke:#c4472f;stroke-width:4}.c{fill:none;stroke:#2f6fb0;stroke-width:4}
+    .g{fill:none;stroke:#7a4ea3;stroke-width:4}.gc{fill:none;stroke:#7a4ea3;stroke-width:4;stroke-dasharray:10 6}
+    .e{fill:none;stroke:#b07a12;stroke-width:3.2}.tv{fill:none;stroke:#555;stroke-width:4}.tvc{fill:none;stroke:#555;stroke-width:4;stroke-dasharray:10 6}
+    .tuv{fill:none;stroke:#2f8f58;stroke-width:3}
+    .box{fill:#fff;stroke:#222;stroke-width:1.6}.ek{fill:#fff4dc;stroke:#b07a12;stroke-width:1.8}
+    .zone{fill:#f4f7f5;stroke:#9aa;stroke-dasharray:6 4}.zone2{fill:#fbf6ea;stroke:#c9b27a;stroke-dasharray:6 4}
+    .s{font-size:11.5px;fill:#333}.b{font-weight:bold}.lbl{font-size:13px;font-weight:bold;fill:#2f7a4b}
+    .pump{fill:#fff;stroke:#222;stroke-width:1.6}.valve{fill:#fff;stroke:#222;stroke-width:1.4}
+    .note{fill:#fff;stroke:#bbb}
+  </style>
+</defs>
+<rect width="1600" height="1040" fill="#fff"/>
+<text x="24" y="32" font-size="20" font-weight="bold">Alignum Paskov – zelená kotelna s tepelnými čerpadly (koncepční schéma)</text>
+<text x="24" y="54" class="s">Tepelná čerpadla 2 × REO RH X50 (+ volitelně 3. jednotka) + akumulace 2 × 1 200 l + elektrokotel pro bivalenci napájí primár stávajícího výměníku. Kotelna nahrazuje teplovod MM Holz, který je momentálně nedostupný; jeho přípojka zůstává zachována.</text>
+<text x="24" y="72" class="s">Za výměníkem beze změny: rozdělovač RS Kombi 100 → hala (5 × SAHARA), administrativa (radiátory), ohřev TUV (ACV Smart Line 320 l).</text>
+
+<!-- ZÓNY -->
+<rect x="18" y="92" width="250" height="560" class="zone"/><text x="30" y="114" class="lbl">VENKU</text>
+<rect x="282" y="92" width="740" height="560" class="zone"/><text x="294" y="114" class="lbl">TECHNOLOGIE KOTELNY (kontejner / prostory Alignum)</text>
+<rect x="1036" y="92" width="250" height="560" class="zone2"/><text x="1048" y="114" class="lbl" fill="#8a6a1a">STÁVAJÍCÍ VÝMĚNÍKOVÁ STANICE</text>
+<rect x="1300" y="92" width="282" height="560" class="zone"/><text x="1312" y="114" class="lbl">SPOTŘEBIČE ALIGNUM</text>
+
+<!-- TEPLOVOD MM HOLZ -->
+<rect x="1036" y="672" width="546" height="70" class="zone2"/>
+<text x="1112" y="694" class="lbl" fill="#555">TEPLOVOD MM HOLZ (přípojka 2 × DN65) – momentálně nedostupný</text>
+<path d="M1090 730V300" class="tv"/><path d="M1060 470V730" class="tvc"/>
+<rect x="1078" y="610" width="24" height="18" class="valve"/><path d="M1078 610L1102 628M1102 610L1078 628" stroke="#222"/>
+<rect x="1048" y="610" width="24" height="18" class="valve"/><path d="M1048 610L1072 628M1072 610L1048 628" stroke="#222"/>
+<text x="1110" y="606" class="s">UZ-T1/T2 teplovod</text>
+<text x="1110" y="620" class="s">ZAVŘENO</text>
+<text x="1112" y="728" class="s">Přípojka zůstává zachována pro případný návrat; nikdy současný provoz se zdrojem TČ.</text>
+
+<!-- TČ -->
+<rect x="40" y="150" width="140" height="86" class="box"/><text x="110" y="180" text-anchor="middle" class="b">TČ1 RH X50</text>
+<text x="110" y="198" text-anchor="middle" class="s">až 70 °C do −10 °C</text><text x="110" y="214" text-anchor="middle" class="s">pod −10 °C 60–65 °C</text><text x="110" y="229" text-anchor="middle" class="s">R290, jistič 40 A</text>
+<rect x="40" y="300" width="140" height="86" class="box"/><text x="110" y="330" text-anchor="middle" class="b">TČ2 RH X50</text>
+<text x="110" y="348" text-anchor="middle" class="s">až 70 °C do −10 °C</text><text x="110" y="364" text-anchor="middle" class="s">pod −10 °C 60–65 °C</text><text x="110" y="379" text-anchor="middle" class="s">R290, jistič 40 A</text>
+<path d="M180 168H330V205" class="g"/><path d="M180 318H330V235" class="g"/>
+<path d="M180 220H230V250H340" class="gc"/><path d="M180 370H230V250" class="gc"/>
+<circle cx="214" cy="168" r="11" class="pump"/><path d="M208 162L222 168L208 174z" fill="#222"/>
+<circle cx="214" cy="318" r="11" class="pump"/><path d="M208 312L222 318L208 324z" fill="#222"/>
+<rect x="40" y="420" width="140" height="80" fill="#fff" stroke="#2f8f58" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="110" y="446" text-anchor="middle" class="b" fill="#2f7a4b">TČ3 RH X50</text>
+<text x="110" y="464" text-anchor="middle" class="s">alternativa – výkon</text><text x="110" y="479" text-anchor="middle" class="s">a záloha, stejný sběrač</text>
+<path d="M180 440H250V250" fill="none" stroke="#7a4ea3" stroke-width="3" stroke-dasharray="4 4"/>
+<text x="40" y="530" class="s">Primár: propylenglykol, čerpadlo,</text>
+<text x="40" y="546" class="s">filtr, zpětná klapka a uzávěry</text>
+<text x="40" y="562" class="s">u každé jednotky</text>
+<text x="40" y="590" class="s">Výstup až 70 °C do −10 °C</text>
+<text x="40" y="606" class="s">(výkonová mapa výrobce)</text>
+<!-- VS-TČ -->
+<rect x="340" y="185" width="44" height="90" class="box"/><path d="M340 185L384 275M384 185L340 275" stroke="#777"/>
+<text x="362" y="296" text-anchor="middle" class="b">VS-TČ</text><text x="362" y="312" text-anchor="middle" class="s">deskový</text><text x="362" y="326" text-anchor="middle" class="s">glykol/voda</text>
+<path d="M330 205H340" class="g"/>
+<path d="M384 200H440V150H470" class="h" marker-end="url(#ah)"/>
+<path d="M480 470H420V255H384" class="c"/>
+<circle cx="420" cy="320" r="11" class="pump"/><path d="M426 314L412 320L426 326z" fill="#222"/><text x="436" y="324" class="s">P2</text>
+
+<!-- AKU -->
+<rect x="470" y="130" width="100" height="350" rx="45" class="box"/><text x="520" y="295" text-anchor="middle" class="b">AKU 1</text><text x="520" y="312" text-anchor="middle" class="s">1 200 l</text>
+<rect x="600" y="130" width="100" height="350" rx="45" class="box"/><text x="650" y="295" text-anchor="middle" class="b">AKU 2</text><text x="650" y="312" text-anchor="middle" class="s">1 200 l</text>
+<path d="M460 150H720" class="h"/><path d="M460 470H720" class="c"/>
+<g fill="#fff" stroke="#b3261e" stroke-width="1.5"><circle cx="585" cy="170" r="6"/><circle cx="585" cy="300" r="6"/><circle cx="585" cy="440" r="6"/></g>
+<text x="470" y="500" class="s">paralelně, čidla nahoře / uprostřed / dole</text>
+
+<!-- přívod z AKU, EK sériově -->
+<path d="M720 150H1000" class="h"/>
+<circle cx="770" cy="150" r="5" fill="#222"/><circle cx="880" cy="150" r="5" fill="#222"/>
+<path d="M770 150V215" class="e"/><path d="M880 215V150" class="e"/>
+<rect x="735" y="215" width="180" height="200" class="ek"/>
+<text x="825" y="238" text-anchor="middle" class="b">ELEKTROKOTEL</text>
+<text x="825" y="255" text-anchor="middle" class="s">cca 50 kW, řízení po stupních</text>
+<rect x="770" y="268" width="110" height="62" class="box"/><text x="825" y="303" text-anchor="middle" class="s">EK ≈ 50 kW</text>
+<text x="825" y="350" text-anchor="middle" class="s">sériový dohřev přívodu</text>
+<text x="825" y="366" text-anchor="middle" class="s">P4, STB, spínač průtoku</text>
+<text x="825" y="382" text-anchor="middle" class="s">zapíná se postupně při deficitu</text>
+<text x="825" y="398" text-anchor="middle" class="s">nebo při výpadku jednotky TČ</text>
+<text x="890" y="140" class="s">přívod max. 70 °C</text>
+
+<!-- PLC -->
+<rect x="300" y="520" width="300" height="110" class="box"/>
+<text x="312" y="542" class="b">Rozvaděč + PLC, dálkový dohled</text>
+<text x="312" y="562" class="s">• priorita TČ, ekvitermní řízení</text>
+<text x="312" y="578" class="s">• elektrokotel po stupních, s prodlevou</text>
+<text x="312" y="594" class="s">• hlídání elektrického příkonu</text>
+<text x="312" y="610" class="s">• ohřev TUV 65 °C, dezinfekce 70 °C</text>
+<rect x="620" y="520" width="380" height="110" class="box"/>
+<text x="632" y="542" class="b">Pojištění a armatury kotelny</text>
+<text x="632" y="562" class="s">expanzní nádoby a pojistné ventily (voda i glykol)</text>
+<text x="632" y="578" class="s">filtr + magnetický odkalovač ve zpátečce, kalorimetr MID</text>
+<text x="632" y="594" class="s">uzávěry UZ-K1/K2 kotelny TČ (běžně OTEVŘENO)</text>
+<text x="632" y="610" class="s">zpětné klapky, odvzdušnění, vypouštění</text>
+
+<!-- napojení na primár HV VS -->
+<rect x="988" y="141" width="24" height="18" class="valve"/><path d="M988 141L1012 159M1012 141L988 159" stroke="#222"/>
+<text x="984" y="178" class="s">UZ-K1</text>
+<path d="M1000 150H1090V300H1110" class="h" marker-end="url(#ah)"/>
+
+<!-- zpátečka primáru -->
+<path d="M1110 420H1060V470H720" class="c"/>
+<rect x="988" y="461" width="24" height="18" class="valve"/><path d="M988 461L1012 479M1012 461L988 479" stroke="#222"/>
+<text x="960" y="496" class="s">UZ-K2</text>
+<rect x="870" y="458" width="30" height="24" class="box"/><text x="885" y="500" text-anchor="middle" class="s">F + mag.</text>
+
+<!-- HV VS -->
+<rect x="1110" y="280" width="90" height="160" class="box"/><path d="M1110 280L1200 440M1200 280L1110 440" stroke="#777"/>
+<text x="1155" y="462" text-anchor="middle" class="b">HV VS 200 kW</text><text x="1155" y="478" text-anchor="middle" class="s">stávající výměník</text>
+<text x="1155" y="494" text-anchor="middle" class="s">primár ← TČ / teplovod</text>
+
+<text x="1100" y="200" class="s">primár</text><text x="1258" y="150" class="s">sekundár</text>
+
+<!-- sekundár → RS Kombi -->
+<path d="M1200 300H1250V160H1320" class="h" marker-end="url(#ah)"/>
+<path d="M1320 620H1250V420H1200" class="c"/>
+<circle cx="1250" cy="230" r="11" class="pump"/><path d="M1244 224L1256 230L1244 236" fill="#222"/><text x="1212" y="262" class="s">staniční</text><text x="1212" y="276" class="s">čerpadlo</text>
+<rect x="1320" y="140" width="34" height="500" class="box"/><text x="1337" y="400" text-anchor="middle" class="s" transform="rotate(-90 1337 400)">RS Kombi 100 – rozdělovač / sběrač</text>
+
+<!-- spotřebiče -->
+<path d="M1354 190H1400" class="h"/><path d="M1400 250H1354" class="c"/>
+<rect x="1400" y="160" width="170" height="110" class="box"/><text x="1485" y="186" text-anchor="middle" class="b">HALA 1 182 m²</text>
+<text x="1485" y="204" text-anchor="middle" class="s">5 × SAHARA W3634</text><text x="1485" y="220" text-anchor="middle" class="s">cca 17 °C</text><text x="1485" y="236" text-anchor="middle" class="s">čerpadlo DAB A 50/180 XM</text><text x="1485" y="252" text-anchor="middle" class="s">(stávající)</text>
+<path d="M1354 320H1400" class="h"/><path d="M1400 380H1354" class="c"/>
+<rect x="1400" y="290" width="170" height="110" class="box"/><text x="1485" y="316" text-anchor="middle" class="b">SPRÁVNÍ BUDOVA</text>
+<text x="1485" y="334" text-anchor="middle" class="s">kanceláře, šatny</text><text x="1485" y="350" text-anchor="middle" class="s">radiátory Korado</text><text x="1485" y="366" text-anchor="middle" class="s">směšovač ESBE + DAB VA 35/130</text><text x="1485" y="382" text-anchor="middle" class="s">(stávající)</text>
+<path d="M1354 450H1400" class="h"/><path d="M1400 520H1354" class="c"/>
+<rect x="1400" y="420" width="170" height="130" class="box"/><text x="1485" y="446" text-anchor="middle" class="b">OHŘEV TUV</text>
+<rect x="1450" y="456" width="70" height="66" rx="22" class="box"/><text x="1485" y="494" text-anchor="middle" class="s">ACV 320 l</text>
+<text x="1485" y="540" text-anchor="middle" class="s">ohřev z topné vody (stávající)</text>
+
+
+<!-- REŽIMY -->
+<rect x="18" y="760" width="1564" height="262" class="note"/>
+<text x="34" y="786" font-size="15" class="b">Provozní režimy</text>
+<g class="s">
+<text x="34" y="812"><tspan class="b">1 · Tepelná čerpadla samostatně</tspan> – jednotky dodávají vodu až 70 °C do venkovní teploty −10 °C. Předpokládáme, že do −10 °C objekt vytopí samotná kaskáda TČ (bez elektřiny) – negarantováno, skutečná tepelná ztráta není známa.</text>
+<text x="34" y="836"><tspan class="b">2 · Bivalence</tspan> – pod ≈ −10 °C nebo při trvalém výkonovém deficitu běží TČ naplno a elektrokotel se připíná postupně, s časovou prodlevou (ne při krátkém poklesu teploty).</text>
+<text x="34" y="860"><tspan class="b">3 · Výpadek jedné jednotky TČ</tspan> – zbývající jednotka + elektrokotel; s alternativní 3. jednotkou běží dál dvě tepelná čerpadla.</text>
+<text x="34" y="884"><tspan class="b">4 · Výpadek všech jednotek TČ</tspan> – elektrokotel topí samostatně v rozsahu svého výkonu (pro plnou zálohu i v mrazu doporučujeme 3. jednotku TČ).</text>
+<text x="34" y="908"><tspan class="b">5 · Návrat na teplovod</tspan> – bude-li teplovod MM Holz znovu dostupný, lze po uzavření UZ-K1/K2 a otevření UZ-T1/T2 objekt na něj přepnout (ne současný provoz obou zdrojů).</text>
+<text x="34" y="936" fill="#8a3a1a"><tspan class="b">Poznámky:</tspan> Výměník mezi zdrojem a soustavou ubírá několik kelvinů (typ výměníku ověříme). TUV se dál ohřívá ve stávajícím zásobníku ACV 320 l z topné vody.</text>
+<text x="34" y="958" fill="#8a3a1a">Výkon elektrokotle bude upřesněn (předběžně ≈ 50 kW). Výkony jsou orientační – vycházejí z naměřené dodávky tepla a výkonové mapy výrobce.</text>
+<text x="34" y="982">Koncepční schéma, nikoli prováděcí projekt. ThermaVera Energy · TV-ALIGNUM-2026-01.</text>
+</g>
+<!-- legenda -->
+<g transform="translate(34,1010)" class="s">
+<path d="M0 0H36" class="h"/><text x="42" y="4">přívod</text>
+<path d="M110 0H146" class="c"/><text x="152" y="4">zpátečka</text>
+<path d="M230 0H266" class="g"/><text x="272" y="4">glykol</text>
+<path d="M330 0H366" class="e"/><text x="372" y="4">okruh elektrokotlů</text>
+<path d="M500 0H536" class="tv"/><text x="542" y="4">teplovod MM Holz</text>
+<path d="M660 0H696" class="tuv"/><text x="702" y="4">TUV</text>
+</g>
+</svg>
+
+  <figcaption><strong>Koncepční schéma</strong> — tepelná čerpadla (třetí jednotka přerušovaně jako alternativa)
+  nabíjejí akumulaci, elektrokotel dohřívá přívod při deficitu výkonu, kotelna napájí stávající výměníkovou
+  stanici. Za výměníkem zůstává soustava beze změny. Přípojka teplovodu MM Holz je zachována, kotelna a teplovod
+  nikdy nepracují současně. Dimenze a rozsah měření a regulace upřesní prováděcí dokumentace.</figcaption>
+</figure>
+
+<h2>7 · Co je a co není v ceně</h2>
+<table>
+  <thead><tr><th>V ceně je</th><th>V ceně není</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul style="margin:0;padding-left:16px">
+          <li>Dodávka a montáž 2 × REO RH X50</li>
+          <li>Akumulace 2 × 1 200 l, deskový výměník a náplň nemrznoucí směsi</li>
+          <li>Elektrokotel pro bivalenci</li>
+          <li>Čerpadla, armatury, expanzní a pojistné prvky, filtrace</li>
+          <li>Napojení na stávající výměníkovou stanici</li>
+          <li>Rozvaděč kotelny, regulace a vzdálený dohled</li>
+          <li>Doprava, instalace, uvedení do provozu, revize</li>
+          <li>Zaškolení obsluhy, dokumentace skutečného provedení</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="margin:0;padding-left:16px">
+          <li>Elektrický přívod 3 × 160 A k rozvaděči kotelny</li>
+          <li>Stavební úpravy, zpevněná plocha a základy pro venkovní jednotky</li>
+          <li>Úpravy stávající otopné soustavy a ohřevu vody</li>
+          <li>Elektrická energie pro provoz</li>
+          <li>Pravidelný servis po uvedení do provozu (nabídneme samostatně)</li>
+          <li>Projektová dokumentace nad rámec dílenské</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>8 · Další postup</h2>
+<ol style="font-size:14.5px">
+  <li><strong>Potvrzení varianty</strong> — sestava, nebo se třetí jednotkou; umístění v kontejneru, nebo v technických prostorách Alignum.</li>
+  <li><strong>Upřesnění výkonu elektrokotle</strong> a elektrického přívodu.</li>
+  <li><strong>Smlouva</strong> — pronájem s možností odkupu, nebo přímý nákup.</li>
+  <li><strong>Dodání, instalace a uvedení do provozu</strong>, zaškolení obsluhy.</li>
+</ol>
+
+<h2>9 · Shrnutí</h2>
+<table>
+  <thead><tr><th>Varianta</th><th class="num">Tepelná čerpadla</th><th class="num">Cena bez DPH</th></tr></thead>
+  <tbody>
+    <tr><td>Sestava — kaskáda, akumulace 2 × 1 200 l, elektrokotel ≈ 50 kW, doprava a instalace</td><td class="num">2 × REO RH X50</td><td class="num">1 250 000 Kč</td></tr>
+    <tr><td>Alternativa — třetí jednotka (výkon a záloha)</td><td class="num">+ 1 × REO RH X50</td><td class="num">+ 250 000 Kč</td></tr>
+    <tr class="total"><td>Sestava se třetí jednotkou</td><td class="num">3 × REO RH X50</td><td class="num">1 500 000 Kč</td></tr>
+    <tr><td>Pronájem s možností odkupu za cenu sestavy</td><td class="num">—</td><td class="num">80 000 Kč / měsíc</td></tr>
+  </tbody>
+</table>
+
+<div class="callout green">
+  <h3>Další krok</h3>
+  <p>Potvrďte nám prosím preferovanou variantu a způsob umístění. Obratem připravíme smlouvu a termín dodání.
+  Rádi vše probereme i osobně.</p>
+</div>
+
+<div class="sign">
+  <p>S pozdravem</p>
+  <div class="brand-name">ThermaVera Energy</div>
+  <div class="contact">
+    <span><span class="lbl">E‑mail</span> info@thermavera.cz</span>
+    <span><span class="lbl">Telefon</span> +420 774 872 467</span>
+    <span><span class="lbl">Web</span> <span class="web">www.thermavera.cz</span></span>
+  </div>
+</div>
+
+<div class="footnote">
+  Nabídka je orientační a nenahrazuje projektovou dokumentaci. Výkony a teploty jsou odhadem z naměřené dodávky tepla
+  a výkonové mapy výrobce, nejde o záruku výkonu ani úspory. ThermaVera Energy · TV-ALIGNUM-2026-01 · 21. 10. 2026.
+</div>
+
+</div><!-- /doc -->
+</div><!-- /wrap -->
+</body>
+</html>

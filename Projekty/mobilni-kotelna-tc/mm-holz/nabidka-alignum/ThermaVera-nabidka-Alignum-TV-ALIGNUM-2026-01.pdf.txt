@@ -1,0 +1,349 @@
+[Text vytažený z ThermaVera-nabidka-Alignum-TV-ALIGNUM-2026-01.pdf]
+
+--- strana 1 ---
+7 N A B Í D K A
+Zelená kotelna s tepelnými čerpadly
+REO RH X50 pro areál Alignum Paskov
+Náhrada dodávky tepla z teplovodu — vytápění výrobní haly a správní budovy, ohřev teplé
+vody
+č. TV-ALIGNU
+M-2026-01
+21. 10. 2026
+platnost 30 dní
+ceny bez DPH
+Vážený pane inženýre,
+děkujeme za zaslané podklady, statistiku dodávky tepla a za možnost prohlédnout si objekt na místě. Na jejich
+základě předkládáme nabídku zelené kotelny s tepelnými čerpadly pro areál společnosti Alignu
+m v Paskově.
+Kotelna je náhradou za dodávku tepla teplovodem ze sousední společnosti MM Holz, který je po havárii
+momentálně nedostu
+pný. Zajistí vytápění výrobní haly i správní budovy a ohřev teplé vody ve stávajícím
+zásobníku
+. Stávající otopná soustava zůstává
+beze změny.
+ZDR
+O
+J TEPLA
+2 × REO RH X50
+kaskáda + elektrokotel pro bivalenci
+TEPLOTA TOPNÉ VODY
+až 70 °C
+do venkovní teploty −10 °C
+CENA SESTAVY
+1 250 000 Kč
+bez DPH, včetně dopravy a instalace
+1 · Výchozí stav
+Výrobní hala 1 182 m², provozní teplota cca 17 °C, 5 teplovzdušných jednotek SAHARA W3634 (projektový spád
+80/60 °C).
+Kanceláře, šatny a sociální zázemí, desková otopná tělesa se směšováním (projektový spád 75/60 °C).
+Správní
+budova
+Teplá voda Dosavadní
+zdroj
+Spotřeba
+tepla
+Nepřímotopný zásobník ACV Smart Line 320 l ohřívaný z topné vody; 12 zaměstnanců ve 3 směnách.
+Teplovod ze sousední společnosti MM Holz přes výměníkovou stanici 200 kW a rozdělovač RS Kombi
+100. Po havárii je teplovod momentálně nedostu
+pný.
+Podle měření MM Holz 140–193 MWh ročně v letech 2019–2025 (vytápění a teplá voda).
+--- strana 2 ---
+2 · Navržené řešení
+SOUČÁST DODÁVKY
+Tepelná čerpadla 2 × REO
+RH X50 (vzdu
+Venkovní okruh plněný nemrznou
+nezamrznou ani při výpadku
+ch/voda, chladivo R290) v kaskádě, s řízením a střídáním jednotek.
+cí směsí a oddělený deskovým výměníkem — jednotky
+proudu
+.
+Aku
+m
+ulace Elektrokotel pro
+bivalenci
+Napojení Regulace a
+dohled
+Umístění 2 × 1 200 l. Vyrovnává výkon tepelných čerpadel a potřebu objektu
+odtávání jednotek.
+, omezuje taktování a pokrývá
+Předběžně ≈ 50 kW, výkon ještě u
+přesníme. Řízení po stu
+pních; zapíná se až při trvalém
+nedostatku výkonu tepelných čerpadel, nikoli při krátkém poklesu teploty.
+Na primární stranu stávající výměníkové stanice. Rozvody, čerpadla jednotlivých větví, jednotky
+SAHARA i ohřev teplé vody zůstávají beze změny. Přípojka teplovodu zůstává zachována pro
+případný návrat.
+Nadřazená regulace (PLC) s ekvitermním řízením, prioritou tepelných čerpadel, ohřevem a
+dezinfekcí teplé vody, hlídáním elektrického příkonu a vzdáleným dohledem s hlášením poru
+ch.
+Technologie v kontejneru u objektu
+, nebo po dohodě přímo v technických prostorách
+společnosti Alignu
+m. Venkovní jednotky na terénu v blízkosti kotelny.
+3 · Výkon a provoz
+Jednotky REO
+RH X50 jsou
+podle výkonové mapy výrob
+ce schopny dodávat topnou vodu až 70 °C na výstu
+venkovní teploty −10 °C. Předpokládáme proto, že do −10 °C venkovní teploty kaskáda tepelných čerpadel objekt
+vytopí samotnými kompresory, bez elektrického dohřevu
+. Pod −10 °C nebo při výkonovém deficitu se postu
+p
+u do
+pně
+připíná elektrokotel.
+Výkon negarantujeme
+Skutečnou
+potřebu tepla budovy neznáme — tepelná ztráta objektu ani ztráty otopné soustavy neb
+yly stanoveny
+výpočtem. Uvedené výkony a teploty jsou
+proto orientační: vycházejí z naměřené dodávky tepla v letech 2021–
+2025, z venkovních teplot v Paskově a z výkonové mapy výrob
+ce. Při změně provozu (např. vyšší teploty v hale)
+se mohou lišit.
+O
+RIENTAČNÍ ODHAD Z NAMĚŘENÉ SPOTŘEBY (DENNÍ PRŮMĚR VENKOVNÍ TEPLOTY)
+Venkovní teplota Odhad potřeb
+y objektu 2 × RH X50 (55 °C) 3 × RH X50 (55 °C)
+0 °C ≈ 35 kW 75 kW 113 kW
+−5 °C ≈ 46 kW 71 kW 106 kW
+−10 °C ≈ 57 kW 62 kW 93 kW
+−12 °C ≈ 62 kW 54 kW 82 kW
+−15 °C ≈ 69 kW 50 kW 74 kW
+Výkon tepelných čerpadel klesá s rostou
+cí teplotou vody — při 70 °C a −10 °C dodá jedna jednotka 21,9 kW. Podle odhadu však objekt
+při −10 °C vystačí s nižší teplotou topné vody (orientačně 50–55 °C), při které mají jednotky vyšší výkon. Regulace proto drží teplotu
+vody jen tak vysokou
+, jak je potřeba.
+--- strana 3 ---
+Do ≈ −10 °C topí jen tepelná čerpadla.
+Pod −10 °C doplňuje chybějící výkon elektrokotel — při −15 °C orientačně 20–25 kW. Elektřina tak dodá jen malý
+podíl ročního tepla.
+Při výpadku jedné jednotky pokryje druhá jednotka s elektrokotlem potřebu orientačně do −15 °C.
+Při výpadku obou jednotek topí elektrokotel samostatně v rozsahu svého výkonu (≈ 50 kW pokryje potřebu
+orientačně do −5 °C). Plnou zálohu i v mrazu zajistí třetí jednotka — viz alternativa.
+4 · Cena
+Sestava
+2 × REO
+RH X50 + aku
+m
+ulace + elektrokotel
+Alternativa
+Třetí jednotka REO
+RH X50
+NÁHRADA TEPLOVODU
+2 × REO
+RH X50 v kaskádě, aku
+m
+ulace 2 × 1 200 l,
+elektrokotel pro bivalenci (≈ 50 kW), napojení na
+výměníkovou stanici, regulace s dálkovým dohledem.
+Topná voda až 70 °C do −10 °C.
+Do −10 °C předpoklad provozu jen na tepelná
+čerpadla.
+Včetně dopravy, instalace a uvedení do provozu
+.
+VÝKONOVÁ REZERVA A ZÁLOHA
++ 1 × REO
+RH X50 zapojená do stejné kaskády. Kryje
+výkonový deficit v nejchladnějších dnech a slouží
+jako záloha při výpadku kterékoli jednotky.
+Tři jednotky pokryjí potřebu orientačně do −15 °C bez
+elektřiny.
+Při výpadku jedné jednotky běží dál dvě tepelná
+čerpadla.
+Elektrokotel zůstává jako rezerva.
+1 250 000 Kč
+bez DPH · včetně dopravy a instalace
++ 250 000 Kč
+bez DPH · zvýhodněná cena · sestava celkem 1 500 000 Kč
+Nejprve pronájem, potom odku
+p
+Kotelnu lze nejprve pronajmout a po úspěšném pronájm
+u odkou
+pit za cenu sestavy
+uvedenou výše (1 250 000
+Kč, s třetí jednotkou
+1 500 000 Kč
+bez DPH). Podmínky pronájm
+u
+: 80 000 Kč měsíčně, minimálně 6 měsíců,
+instalace 50 000 Kč a doprava 30 000 Kč, vše bez DPH. Elektrickou energii hradí provozovatel objektu; kotelna
+má vlastní měření elektřiny i tepla.
+5 · Elektrické připojení
+Dvě jednotky RH X50 odebírají nejvýše 2 × 32 A, elektrokotel ≈ 50 kW přibližně 72 A na fázi. Kotelna potřebuje
+vyhrazený přívod 3 × 160 A. Regulace hlídá souběh tepelných čerpadel a elektrokotle a v případě potřeb
+dohřev omezí — tepelná čerpadla mají vždy přednost.
+y elektrický
+--- strana 4 ---
+UZ-K1
+primár
+6 · Schéma kotelny
+Alignum Paskov – zelená kotelna s tepelnými čerpadly (koncepční schéma)
+Tepelná čerpadla 2 × REO RH X50 (+ volitelně 3. jednotka) + akumulace 2 × 1 200 l + elektrokotel pro bivalenci napájí primár stávajícího výměníku. Kotelna nahrazuje teplovod MM Holz, který je momentálně nedostupný; jeho přípojka zůstává zachována.
+Za výměníkem beze změny: rozdělovač RS Kombi 100 → hala (5 × SAHARA), administrativa (radiátory), ohřev TUV (ACV Smart Line 320 l).
+VENKU TECHNOLOGIE KOTELNY (kontejner / prostory Alignum) STÁVAJÍCÍ VÝMĚNÍKOVÁ STANICE SPOTŘEBIČE ALIGNUM
+přívod max. 70 °C
+sekundár
+TČ1 RH X50
+až 70 °C do −10 °C
+pod −10 °C 60–65 °C
+R290, jistič 40 A
+staniční
+čerpadlo
+TČ2 RH X50
+až 70 °C do −10 °C
+pod −10 °C 60–65 °C
+R290, jistič 40 A
+TČ3 RH X50
+alternativa – výkon
+a záloha, stejný sběrač
+Primár: propylenglykol, čerpadlo,
+filtr, zpětná klapka a uzávěry
+u každé jednotky
+Výstup až 70 °C do −10 °C
+(výkonová mapa výrobce)
+VS-TČ
+deskový
+glykol/voda P2
+AKU 1
+1 200 l
+AKU 2
+1 200 l
+paralelně, čidla nahoře / uprostřed / dole
+Rozvaděč + PLC, dálkový dohled
+• priorita TČ, ekvitermní řízení
+• elektrokotel po stupních, s prodlevou
+• hlídání elektrického příkonu
+• ohřev TUV 65 °C, dezinfekce 70 °C
+ELEKTROKOTEL
+cca 50 kW, řízení po stupních
+EK ≈ 50 kW
+sériový dohřev přívodu
+P4, STB, spínač průtoku
+zapíná se postupně při deficitu
+nebo při výpadku jednotky TČ
+F + mag.
+Pojištění a armatury kotelny
+expanzní nádoby a pojistné ventily (voda i glykol)
+filtr + magnetický odkalovač ve zpátečce, kalorimetr MID
+uzávěry UZ-K1/K2 kotelny TČ (běžně OTEVŘENO)
+zpětné klapky, odvzdušnění, vypouštění
+UZ-K2
+RS Kombi 100 – rozdělovač / sběrač
+HALA 1 182 m²
+5 × SAHARA W3634
+cca 17 °C
+čerpadlo DAB A 50/180 XM
+(stávající)
+SPRÁVNÍ BUDOVA
+kanceláře, šatny
+radiátory Korado
+směšovač ESBE + DAB VA 35/130
+(stávající)
+OHŘEV TUV
+ACV 320 l
+ohřev z topné vody (stávající)
+HV VS 200 kW
+stávající výměník
+primár ← TČ / teplovod
+UZ-T1/T2 teplovod
+ZAVŘENO
+TEPLOVOD MM HOLZ (přípojka 2 × DN65) – momentálně nedostupný
+Přípojka zůstává zachována pro případný návrat; nikdy současný provoz se zdrojem TČ.
+Provozní režimy
+1 · Tepelná čerpadla samostatně – jednotky dodávají vodu až 70 °C do venkovní teploty −10 °C. Předpokládáme, že do −10 °C objekt vytopí samotná kaskáda TČ (bez elektřiny) – negarantováno, skutečná tepelná ztráta není známa.
+2 · Bivalence – pod ≈ −10 °C nebo při trvalém výkonovém deficitu běží TČ naplno a elektrokotel se připíná postupně, s časovou prodlevou (ne při krátkém poklesu teploty).
+3 · Výpadek jedné jednotky TČ – zbývající jednotka + elektrokotel; s alternativní 3. jednotkou běží dál dvě tepelná čerpadla.
+4 · Výpadek všech jednotek TČ – elektrokotel topí samostatně v rozsahu svého výkonu (pro plnou zálohu i v mrazu doporučujeme 3. jednotku TČ).
+5 · Návrat na teplovod – bude-li teplovod MM Holz znovu dostupný, lze po uzavření UZ-K1/K2 a otevření UZ-T1/T2 objekt na něj přepnout (ne současný provoz obou zdrojů).
+Poznámky: Výměník mezi zdrojem a soustavou ubírá několik kelvinů (typ výměníku ověříme). TUV se dál ohřívá ve stávajícím zásobníku ACV 320 l z topné vody.
+Výkon elektrokotle bude upřesněn (předběžně ≈ 50 kW). Výkony jsou orientační – vycházejí z naměřené dodávky tepla a výkonové mapy výrobce.
+Koncepční schéma, nikoli prováděcí projekt. ThermaVera Energy · TV-ALIGNUM-2026-01.
+přívod zpátečka glykol okruh elektrokotlů teplovod MM Holz TUV
+Koncepční schéma — tepelná čerpadla (třetí jednotka přerušovaně jako alternativa) nabíjejí aku
+m
+ulaci, elektrokotel dohřívá přívod při
+deficitu výkonu
+, kotelna napájí stávající výměníkovou stanici. Za výměníkem zůstává soustava beze změny. Přípojka teplovodu MM Holz je
+zachována, kotelna a teplovod nikdy nepracují sou
+časně. Dimenze a rozsah měření a regulace u
+přesní prováděcí doku
+mentace.
+7 · Co je a co není v ceně
+V ceně je V ceně není
+Dodávka a montáž 2 × REO
+RH X50
+Aku
+m
+ulace 2 × 1 200 l, deskový výměník a náplň
+nemrznou
+cí směsi
+Elektrokotel pro bivalenci
+Čerpadla, armatury, expanzní a pojistné prvky, filtrace
+Napojení na stávající výměníkovou stanici
+Rozvaděč kotelny, regulace a vzdálený dohled
+Doprava, instalace, uvedení do provozu
+, revize
+Zaškolení obsluhy, doku
+mentace skutečného
+provedení
+Elektrický přívod 3 × 160 A k rozvaděči kotelny
+Stavební úpravy, zpevněná plocha a základy pro
+venkovní jednotky
+Úpravy stávající otopné soustavy a ohřevu vody
+Elektrická energie pro provoz
+Pravidelný servis po uvedení do provozu (nabídneme
+samostatně)
+Projektová doku
+mentace nad rámec dílenské
+--- strana 5 ---
+8 · Další postup
+1. Potvrzení varianty — sestava, nebo se třetí jednotkou; u
+místění v kontejneru
+Alignu
+m.
+2. Upřesnění výkonu elektrokotle a elektrického přívodu
+.
+3. Smlouva — pronájem s možností odku
+u
+p
+, nebo přímý náku
+p.
+4. Dodání, instalace a uvedení do provozu
+, zaškolení obsluhy.
+, nebo v technických prostorách
+9 · Shrnutí
+Varianta Sestava — kaskáda, aku
+instalace
+m
+Alternativa — třetí jednotka (výkon a záloha) Sestava se třetí jednotkou Pronájem s možností odku
+p
+u za cenu sestavy ulace 2 × 1 200 l, elektrokotel ≈ 50 kW, doprava a
+Tepelná čerpadla Cena bez DPH
+2 × REO
+RH X50 1 250 000 Kč
++ 1 × REO
+3 × REO
+RH X50 RH X50 + 250 000 Kč
+1 500 000 Kč
+— 80 000 Kč / měsíc
+Další krok
+Potvrďte nám prosím preferovanou variantu a způsob u
+Rádi vše probereme i osobně.
+místění. O
+bratem připravíme smlouvu a termín dodání.
+S pozdravem
+ThermaVera Energy
+E‑MAIL
+info@thermavera.cz
+TELEFON
++420 774 872 467
+WEB
+www.thermavera.cz
+Nabídka je orientační a nenahrazuje projektovou doku
+mentaci. Výkony a teploty jsou odhadem z naměřené dodávky tepla a výkonové mapy
+výrob
+ce, nejde o záruku výkonu ani úspory. ThermaVera Energy · TV-ALIGNU
+M-2026-01 · 21. 10. 2026.
