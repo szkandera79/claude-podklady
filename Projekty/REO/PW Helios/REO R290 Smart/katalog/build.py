@@ -24,17 +24,17 @@ HERO = uri("hero-scena.png")
 LOGO, UNIT, RHX = uri("logo-cut.png"), uri("smart-cut.png"), uri("rhx-pro-cut.png")
 QR = uri("qr-reoheating.svg")
 
-# --- data (spec. výrobce; RH06–RH16 rozsah, COP, hmotnost a rozměry dle katalogu výrobce 10/2025, aktualizováno 21. 10. 2026). P = jmen. výkon A7/W35, rng = rozsah A7/W35,
+# --- data (spec. výrobce, shodné s letaky/build.py). P = jmen. výkon A7/W35, rng = rozsah A7/W35,
 # cop = A7/W35, A7/W55 (EN 14511), scop = 35/55 °C průměrné klima (EN 14825), lwa = ErP 35/55, lp = 1 m,
 # fuse = jištění vč. el. dohřevu 3 kW, price = Kč bez DPH (web eko4home 20. 10. 2026)
 M = [
  # model,      ph,  P,  rng,         cop35, cop55, scop35,scop55, lwa,     lp,      fuse, kg,  r290,  rozm,           price
- ("RH06",      "1F", 6,  "3,4–8,5",   "4,88","3,03","5,00","3,84",(52,53),(38,38), 40, 116, "0,6", "1200×463×791",  129000),
- ("RH08",      "3F", 8,  "4,5–11,0",  "4,89","3,04","5,15","3,90",(50,50),(35,34), 25, 120, "0,9", "1328×470×1065", 139000),
- ("RH10",      "3F", 10, "5,2–12,9",  "4,76","2,91","5,20","3,90",(54,55),(39,40), 32, 138, "1,15","1328×470×1065", 149000),
- ("RH12",      "3F", 12, "7,0–17,0",  "4,86","3,01","5,11","3,94",(55,55),(40,40), 40, 165, "1,3", "1328×470×1065", 159000),
- ("RH14",      "3F", 14, "7,6–19,3",  "4,73","2,95","5,29","3,91",(56,55),(41,40), 40, 170, "1,5", "1328×470×1065", 169000),
- ("RH16",      "3F", 16, "8,8–22,0",  "4,70","2,93","5,09","3,88",(55,56),(39,41), 40, 190, "1,7", "1328×470×1065", 189000),
+ ("RH06",      "1F", 6,  "3,4–8,5",   "5,04","3,11","5,00","3,84",(52,53),(38,38), 40, 128, "0,6", "1200×465×791",  129000),
+ ("RH08",      "3F", 8,  "4,1–11,0",  "4,89","3,04","5,15","3,90",(50,50),(35,34), 25, 165, "0,9", "1328×485×1065", 139000),
+ ("RH10",      "3F", 10, "4,2–12,9",  "4,92","3,21","5,20","3,90",(54,55),(39,40), 32, 170, "1,15","1328×485×1065", 149000),
+ ("RH12",      "3F", 12, "6,3–17,0",  "5,03","3,35","5,11","3,94",(55,55),(40,40), 40, 178, "1,3", "1328×485×1065", 159000),
+ ("RH14",      "3F", 14, "6,6–19,3",  "4,80","3,22","5,29","3,91",(56,55),(41,40), 40, 182, "1,5", "1328×485×1065", 169000),
+ ("RH16",      "3F", 16, "7,8–22,0",  "4,90","3,16","5,09","3,88",(55,56),(39,41), 40, 190, "1,7", "1328×485×1065", 189000),
  ("RHX20 Pro", "3F", 20, "10,2–28,0", "4,85","2,92","5,23","3,97",(50,56),(35,40), 32, 265, "2,2", "1375×532×1565", 300000),
  ("RHX30 Pro", "3F", 30, "12,7–40,0", "4,60","2,80","5,25","3,90",(55,59),(39,42), 40, 328, "3,4", "1550×630×1708", 350000),
 ]
@@ -531,7 +531,7 @@ p5 = f"""
       <p class="sm">Potenciál globálního oteplování (GWP, 100 let). Přírodní propan R290 je oproti R410A téměř 700× šetrnější.</p>
     </div>
   </div>
-  <div class="mitsu">{ic('cpu')}<div><b>Kompresor Mitsubishi Electric</b> v každé jednotce řady – invertorový, plynule moduluje výkon (např. RH10 5,2–12,9 kW), proto běží dlouho na nízké otáčky místo častého zapínání a vypínání. To je jeden z důvodů vysokého SCOP.</div></div>
+  <div class="mitsu">{ic('cpu')}<div><b>Kompresor Mitsubishi Electric</b> v každé jednotce řady – invertorový, plynule moduluje výkon (např. RH10 4,2–12,9 kW), proto běží dlouho na nízké otáčky místo častého zapínání a vypínání. To je jeden z důvodů vysokého SCOP.</div></div>
   <div class="foot">COP podle EN 14511, SCOP a energetická třída podle EN 14825 (průměrné klima) – technická specifikace a ERP protokol výrobce. Skutečná spotřeba závisí na domě, otopné soustavě a způsobu provozu. {FOOT}</div>
 </section>"""
 
@@ -606,7 +606,7 @@ p7 = f"""
     <tbody>{''.join(trow(m) for m in M)}</tbody>
   </table>
   <p class="tn">Napájení RH06 1F 230 V, ostatní 400 V 3N~. Jištění RH06–RH16 vč. el. dohřevu 3 kW. Provoz: vytápění −25…35 °C, chlazení −5…43 °C, TUV −25…43 °C venkovní teploty;
-  topná voda 25–75 °C; TUV 25–75 °C a chlazení 5–30 °C (RH06–RH16), u RHX Pro TUV 20–70 °C a chlazení 5–25 °C. Přípojky DN25/DN32 (RHX Pro DN40). Kaskáda až 8 jednotek (RS485), Modbus RS485 pro BMS.</p>
+  topná voda 25–75 °C, TUV 20–70 °C, chlazení 5–25 °C. Přípojky DN25/DN32 (RHX Pro DN40). Kaskáda až 8 jednotek (RS485), Modbus RS485 pro BMS.</p>
   <div class="two hy">
     <div class="card">
       <h3>{ic('layers')} Zapojení v rodinném domě</h3>

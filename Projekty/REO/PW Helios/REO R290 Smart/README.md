@@ -143,6 +143,6 @@ Přeznačení produktového katalogu výrobce (vydání 10/2025, 14 stran) do de
 `brozura/build.py` → `REO-R290-Smart_brozura.pdf` (CSS, ikony, logo a schéma FV se berou z `katalog/build.py`).
 - Modely jen RH06 1F + RH08–RH16 3F (ostatní 1F vypuštěny); data tabulky = technické údaje z katalogu výrobce.
   Data: tabulky katalogu výrobce, ale jmenovité COP A7/W35 a A7/W55, rozsah A7/W35, hmotnost a rozměry = původní (lepší) hodnoty
-  ze specifikace (uživatel 21. 10. 2026: „ponechej staré a lepší hodnoty“); jmenovitý příkon dopočten. `katalog/build.py` má zatím nová čísla výrobce. SCOP, hluk a jištění zůstávají z ERP protokolu. `letaky/build.py` záměrně ponechává původní (lepší) hodnoty – rozhodnutí uživatele 21. 10. 2026.
+  ze specifikace (uživatel 21. 10. 2026: „ponechej staré a lepší hodnoty“); jmenovitý příkon dopočten. Katalog i letáky mají stejně původní hodnoty (nová čísla výrobce nepoužívat). SCOP, hluk a jištění zůstávají z ERP protokolu. 
 - Vypuštěno: německý §14a EnWG (nahrazeno „omezení příkonu“), srovnávací stupnice hluku; přidány 3 pilíře, FV tabulka, umístění jednotky.
 - Fotky `brozura/assets/*.jpg` = výřezy z katalogu výrobce bez loga (zkontrolováno); jednotka a hero z `katalog/assets`.
