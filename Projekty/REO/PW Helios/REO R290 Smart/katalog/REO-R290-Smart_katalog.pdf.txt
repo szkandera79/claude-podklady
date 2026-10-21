@@ -1214,7 +1214,7 @@ nán
 ule mod
 ulu
 je výk
-on (např. RH10 4,2–
+on (např. RH10 5,2–
 nán
 í. To je jeden z důvodů vyso
 kého
@@ -1306,7 +1306,7 @@ A
 7/W35 11,0
 kW
 mod
-ulace 4,1–11,0
+ulace 4,5–11,0
 SC
 OP 35 / 55 °C hluk Lp 1 m kW
 5,15 / 3,90
@@ -1325,7 +1325,7 @@ max. výk
 on
 7/W35 12,9 kW
 mod
-ulace 4,2–12,9 kW
+ulace 5,2–12,9 kW
 SC
 OP 35 / 55 °C 5,2
 0 / 3,90
@@ -1345,7 +1345,7 @@ A
 7/W35 17,0
 kW
 mod
-ulace 6,3–17,0
+ulace7,0–17,0
 SC
 OP 35 / 55 °C hluk Lp 1 m kW
 5,11 / 3,94
@@ -1362,7 +1362,7 @@ max. výk
 on
 7/W35 19,3 kW
 mod
-ulace 6,6–19,3 kW
+ulace7,6–19,3 kW
 SC
 OP 35 / 55 °C 5,29 / 3,91
 hluk Lp 1 m 41 dB(A)
@@ -1381,7 +1381,7 @@ A
 7/W35 22,0
 kW
 mod
-ulace7,8–22,0
+ulace 8,8–22,0
 kW
 SC
 OP 35 / 55 °C 5,09 / 3,88
@@ -1570,54 +1570,65 @@ R290
 hm.
 [kg]
 Š×H×V [mm]
-RH06 1F 6 3,4–8,5 5,04 3,11 5,00 3,84 52 / 53 38 / 38 40 0,6 128 12
-00×465×791
-RH08 3F 8 4,1–11,0 4,89 3,04 5,15 3,90 50 / 50 35 / 34 25 0,9 165 1328×485×1065
-RH10 3F 10 4,2–12,9 4,92 3,21 5,2
-0 3,90 54 / 55 39 / 40 32 1,15 17
-0 1328×485×1065
-RH12 3F 12 6,3–17,0 5,03 3,35 5,11 3,94 55 / 55 40 / 40 40 1,3 178 1328×485×1065
-RH14 3F 14 6,6–19,3 4,80 3,22 5,29 3,91 56 / 55 41 / 40 40 1,5 182 1328×485×1065
-RH16 3F 16 7,8–22,0 4,90 3,16 5,09 3,88 55 / 56 39 / 41 40 1,7 190 1328×485×1065
+RH06 1F 6 3,4–8,5 4,88 3,03 5,00 3,84 52 / 53 38 / 38 40 0,6 116 12
+00×463×791
+RH08 3F 8 4,5–11,0 4,89 3,04 5,15 3,90 50 / 50 35 / 34 25 0,9 12
+0 1328×47
+0×1065
+RH10 3F 10 5,2–12,9 4,76 2,91 5,2
+0 3,90 54 / 55 39 / 40 32 1,15 138 1328×47
+0×1065
+RH12 3F 12 7,0–17,0 4,86 3,01 5,11 3,94 55 / 55 40 / 40 40 1,3 165 1328×47
+0×1065
+RH14 3F 14 7,6–19,3 4,73 2,95 5,29 3,91 56 / 55 41 / 40 40 1,5 17
+0 1328×47
+0×1065
+RH16 3F 16 8,8–22,0 4,7
+2,93 5,09 3,88 55 / 56 39 / 41 40 1,7 190 1328×47
+0×1065
 RHX2
 0 Pro 3F 2
 0 10,2–28,0 4,85 2,92 5,23 3,97 50 / 56 35 / 40 32 2,2 265 1375×532×1565
 RHX30 Pro 3F 30 12,7–40,0 4,60
 2,80 5,25 3,90 55 / 59 39 / 42 40 3,4 328 1550×630×17
 08
+0
 Napá
 jen
-venk
-ovn
-pro BMS.
 í RH06 1F 230 V, ostat
 n
 í 400 V 3N~. Jišt
-ě
-t
-epl
-t
-o
-y; t
-opná voda 25–75 °C, TUV 2
-0–7
-í
 n
+ě
 í RH06–RH16 vč. el. doh
 řevu 3 kW. Provoz: vy
 táp
 n
 ě
 −25…35 °C, chlazen
-−5…43 °C, TUV −25…43 °C
-0 °C, chlazen
-í 5–25 °C. Přípoj
-ky DN25/DN32 (RHX Pro DN40). Kaskáda až 8 jedno
+venk
+ovn
+t
+epl
+t
+o
+y; t
+opná voda 25–75 °C; TUV 25–75 °C a chlazen
+í 5–30 °C (RH06–RH16), u RHX Pro TUV 2
+0–7
+0 °C a chlazen
+Pro DN40). Kaskáda až 8 jedno
 t
 ek (RS485), Modb
-us RS485
+us RS485 pro BMS.
 í
 í
+í
+−5…43 °C, TUV −25…43 °C
+í 5–25 °C. Přípoj
+ky DN25/DN32 (RHX
+Zapojen
+í v rodinném dom
 ě
 V D
 O
@@ -1629,13 +1640,6 @@ AKU
 dle po
 t
 řeby
-í
-3cest
-ný ven
-t
-il
-Zapojen
-í v rodinném dom
 FV panely (vo
 t
 li
@@ -1655,6 +1659,10 @@ doh
 řev 3 kW
 expanze 6 l
 poj. ven
+t
+il
+3cest
+ný ven
 t
 il
 zásobn
@@ -1713,6 +1721,23 @@ stat
 ist
 iky
 imy,
+Aplikace přes Wi-Fi
+ovládán
+odku
+dk
+o
+li, sdí
+rodino
+u, upozorn
+n
+ě
+len
+na poru
+í s
+í
+u
+ch
+í
 S
 tat
 ist
@@ -1737,6 +1762,12 @@ ermn
 k
 ř
 ivky
+SG Ready a HD
+O
+vy
+už
+ije přeby
+tky FVE a levný tarif
 í
 Vzdálený servis
 t
@@ -1747,29 +1778,7 @@ mén
 ě
 výjezdů
 í data –
-Aplikace přes Wi-Fi
-ovládán
-odku
-dk
-o
-li, sdí
-rodino
-u, upozorn
-n
-ě
-len
-na poru
-í s
 í
-u
-ch
-í
-SG Ready a HD
-O
-vy
-už
-ije přeby
-tky FVE a levný tarif
 c
 Údaje podle
 t

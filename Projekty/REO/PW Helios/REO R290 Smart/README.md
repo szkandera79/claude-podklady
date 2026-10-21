@@ -142,6 +142,7 @@ topná voda dole – podlaha/radiátory) jsou SVG v `hero_overlay()`. Build zár
 Přeznačení produktového katalogu výrobce (vydání 10/2025, 14 stran) do designu katalogu REO HEATING: 8 stran A4,
 `brozura/build.py` → `REO-R290-Smart_brozura.pdf` (CSS, ikony, logo a schéma FV se berou z `katalog/build.py`).
 - Modely jen RH06 1F + RH08–RH16 3F (ostatní 1F vypuštěny); data tabulky = technické údaje z katalogu výrobce.
-  Pozor: liší se od dat v `katalog/` (např. RH06 COP A7/W35 4,88 vs 5,04; hmotnosti 116–190 kg; hloubka 463/470 mm) → sjednotit po potvrzení výrobcem.
+  Data: tabulky katalogu výrobce, ale jmenovité COP A7/W35 a A7/W55, rozsah A7/W35, hmotnost a rozměry = původní (lepší) hodnoty
+  ze specifikace (uživatel 21. 10. 2026: „ponechej staré a lepší hodnoty“); jmenovitý příkon dopočten. `katalog/build.py` má zatím nová čísla výrobce. SCOP, hluk a jištění zůstávají z ERP protokolu. `letaky/build.py` záměrně ponechává původní (lepší) hodnoty – rozhodnutí uživatele 21. 10. 2026.
 - Vypuštěno: německý §14a EnWG (nahrazeno „omezení příkonu“), srovnávací stupnice hluku; přidány 3 pilíře, FV tabulka, umístění jednotky.
 - Fotky `brozura/assets/*.jpg` = výřezy z katalogu výrobce bez loga (zkontrolováno); jednotka a hero z `katalog/assets`.

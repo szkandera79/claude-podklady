@@ -222,13 +222,10 @@ Tepelná čerpadla 2 × REO RH X50 (+ volitelně 3. jednotka) + akumulace 2 × 1
 Za výměníkem beze změny: rozdělovač RS Kombi 100 → hala (5 × SAHARA), administrativa (radiátory), ohřev TUV (ACV Smart Line 320 l).
 VENKU KOTELNA – technické prostory Alignum STÁVAJÍCÍ VÝMĚNÍKOVÁ STANICE SPOTŘEBIČE ALIGNUM
 přívod max. 70 °C
-sekundár
 TČ1 RH X50
 až 70 °C do −10 °C
 pod −10 °C 60–65 °C
 R290, jistič 40 A
-staniční
-čerpadlo
 TČ2 RH X50
 až 70 °C do −10 °C
 pod −10 °C 60–65 °C
@@ -241,6 +238,9 @@ Přímo do AKU, bez výměníku:
 uzávěry, protimrazové ventily
 Výstup až 70 °C do −10 °C
 (výkonová mapa výrobce)
+sekundár
+staniční
+čerpadlo
 AKU 1
 1 200 l
 AKU 2
@@ -265,6 +265,9 @@ filtr + magnetický odkalovač ve zpátečce, kalorimetr MID
 uzávěry UZ-K1/K2 kotelny TČ (běžně OTEVŘENO)
 zpětné klapky, odvzdušnění, vypouštění
 UZ-K2
+HV VS 200 kW
+stávající výměník
+primár ← TČ / teplovod
 RS Kombi 100 – rozdělovač / sběrač
 HALA 1 182 m²
 5 × SAHARA W3634
@@ -279,9 +282,6 @@ směšovač ESBE + DAB VA 35/130
 OHŘEV TUV
 ACV 320 l
 ohřev z topné vody (stávající)
-HV VS 200 kW
-stávající výměník
-primár ← TČ / teplovod
 UZ-T1/T2 teplovod
 ZAVŘENO
 TEPLOVOD MM HOLZ (přípojka 2 × DN65) – momentálně nedostupný
@@ -298,16 +298,16 @@ Koncepční schéma, nikoli prováděcí projekt. ThermaVera Energy · TV-ALIGNU
 přívod zpátečka okruh elektrokotlů teplovod MM Holz TUV
 Koncepční schéma — tepelná čerpadla (třetí jednotka přerušovaně jako alternativa) nabíjejí aku
 m
-ulaci, elektrokotel dohřívá přívod při
-deficitu výkonu
-, kotelna napájí stávající výměníkovou stanici. Za výměníkem zůstává soustava beze změny. Přípojka teplovodu MM Holz je
-zachována, kotelna a teplovod nikdy nepracují sou
-časně. Dimenze a rozsah měření a regulace u
-přesní prováděcí doku
+Za výměníkem zůstává soustava beze změny. Přípojka teplovodu MM Holz je zachována, kotelna a teplovod nikdy nepracují sou
+doku
 mentace.
+ulaci, elektrokotel dohřívá přívod při deficitu výkonu
+, kotelna napájí stávající výměníkovou stanici.
+časně. Dimenze a rozsah měření a regulace u
+přesní prováděcí
+--- strana 5 ---
 7 · Co je a co není v ceně
-V ceně je V ceně není
-Dodávka a montáž 2 × REO
+V ceně je Dodávka a montáž 2 × REO
 RH X50
 Aku
 m
@@ -321,6 +321,7 @@ Doprava, instalace, uvedení do provozu
 , revize
 Zaškolení obsluhy, doku
 mentace skutečného provedení
+V ceně není
 Silový rozvaděč kotelny a elektrický přívod 3 × 160
 A
 Stavební úpravy, zpevněná plocha a základy pro
@@ -331,7 +332,6 @@ Pravidelný servis po uvedení do provozu
 (nabídneme samostatně)
 Projektová doku
 mentace nad rámec dílenské
---- strana 5 ---
 8 · Další postup
 1. Potvrzení varianty — sestava se dvěma, nebo třemi jednotkami.
 2. Upřesnění výkonu elektrokotle a elektrického přívodu
@@ -349,21 +349,21 @@ u
 Varianta Sestava — kaskáda, aku
 instalovaná a v provozu
 m
-Alternativa — třetí jednotka (výkon a záloha) Sestava se třetí jednotkou ulace 2 × 1 200 l, elektrokotel ≈ 50 kW,
-Tepelná čerpadla Zůstatková cena bez DPH
+ulace 2 × 1 200 l, elektrokotel ≈ 50 kW,
+Alternativa — třetí jednotka (výkon a záloha) Sestava se třetí jednotkou Tepelná čerpadla Zůstatková cena bez DPH
 2 × REO
-RH X50 1 250 000 Kč
 + 1 × REO
-3 × REO
-RH X50 + 250 000 Kč
-RH X50 1 500 000 Kč
+RH X50 RH X50 3 × REO
+RH X50 1 250 000 Kč
++ 250 000 Kč
+1 500 000 Kč
 Další krok
 Potvrďte nám prosím preferovanou variantu (se dvěma, nebo třemi jednotkami). K
 u
+pní smlouvu
 konci pronájm
 u
 , případně dříve podle Vašeho přání. Rádi vše probereme i osobně.
-pní smlouvu
 připravíme ke
 S pozdravem
 ThermaVera Energy

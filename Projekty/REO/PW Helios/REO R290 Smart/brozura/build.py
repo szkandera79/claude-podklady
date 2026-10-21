@@ -2,7 +2,8 @@
 """Produktová brožura REO R290 Smart (A4, 8 stran) – přeznačení produktového katalogu výrobce (vydání 10/2025)
 v designu katalogu REO HEATING (sdílí CSS, ikony a logo z ../katalog/build.py).
 Nabízené modely: RH06 1F + RH08–RH16 3F (ostatní jednofázové verze se nenabízejí → vypuštěny).
-Data = tabulky technických údajů z katalogu výrobce (orientační, rozhodující je typový štítek).
+Data = tabulky z katalogu výrobce, ale jmenovité COP, rozsah A7/W35, hmotnost a rozměry = původní (lepší) hodnoty
+z technické specifikace (rozhodnutí uživatele 21. 10. 2026); jmenovitý příkon dopočten = výkon / COP.
 Fotky v assets/ = výřezy z katalogu výrobce bez loga (zkontrolováno), jednotka a hero = naše assets katalogu.
     python3 build.py   → REO-R290-Smart_brozura.html + .pdf (headless Chrome)
 """
@@ -47,18 +48,18 @@ MOD = ["RH06 1F", "RH08 3F", "RH10 3F", "RH12 3F", "RH14 3F", "RH16 3F"]
 SPEC = [
  ("sec", "Vytápění A7/W35 (jmenovitě)"),
  ("Topný výkon [kW]",            ["6,0", "8,0", "10,0", "12,0", "14,0", "16,0"]),
- ("Příkon [kW]",                 ["1,23", "1,64", "2,10", "2,47", "2,96", "3,40"]),
- ("COP",                         ["4,88", "4,89", "4,76", "4,86", "4,73", "4,70"]),
+ ("Příkon [kW]",                 ["1,19", "1,64", "2,03", "2,39", "2,92", "3,27"]),
+ ("COP",                         ["5,04", "4,89", "4,92", "5,03", "4,80", "4,90"]),
  ("sec", "Vytápění A7/W55 (jmenovitě)"),
  ("Topný výkon [kW]",            ["6,0", "8,0", "10,0", "12,0", "14,0", "16,0"]),
- ("Příkon [kW]",                 ["1,98", "2,63", "3,44", "3,99", "4,75", "5,46"]),
- ("COP",                         ["3,03", "3,04", "2,91", "3,01", "2,95", "2,93"]),
+ ("Příkon [kW]",                 ["1,93", "2,63", "3,12", "3,58", "4,35", "5,06"]),
+ ("COP",                         ["3,11", "3,04", "3,21", "3,35", "3,22", "3,16"]),
  ("sec", "Chlazení A35/W18 (jmenovitě)"),
  ("Chladicí výkon [kW]",         ["6,0", "8,0", "10,0", "12,0", "14,0", "16,0"]),
  ("Příkon [kW]",                 ["1,23", "1,64", "2,10", "2,48", "2,92", "3,37"]),
  ("EER",                         ["4,86", "4,88", "4,76", "4,84", "4,80", "4,75"]),
  ("sec", "Vytápění – rozsah modulace (A7/W35, voda 30/35 °C)"),
- ("Topný výkon [kW]",            ["3,4–8,5", "4,5–11,0", "5,2–12,9", "7,0–17,0", "7,6–19,3", "8,8–22,0"]),
+ ("Topný výkon [kW]",            ["3,4–8,5", "4,1–11,0", "4,2–12,9", "6,3–17,0", "6,6–19,3", "7,8–22,0"]),
  ("Příkon [kW]",                 ["0,66–1,99", "0,87–2,60", "1,03–3,08", "1,38–3,90", "1,50–4,62", "1,74–5,47"]),
  ("COP",                         ["4,27–5,13", "4,23–5,15", "4,19–5,05", "4,35–5,07", "4,18–5,07", "4,02–5,05"]),
  ("sec", "Ohřev teplé vody (A20, voda 15 → 55 °C)"),
@@ -79,8 +80,8 @@ SPEC = [
  ("Přípojky vody",               [("DN25", 4), ("DN32", 2)]),
  ("Průtok vody [m³/h]",          ["1,46", "1,89", "2,24", "2,92", "3,32", "3,78"]),
  ("Tlaková ztráta max. [kPa]",   ["30", "35", "40", "43", "47", "52"]),
- ("Hmotnost netto [kg]",         ["116", "120", "138", "165", "170", "190"]),
- ("Rozměry Š×H×V [mm]",          ["1200×463×791", ("1328×470×1065", 5)]),
+ ("Hmotnost netto [kg]",         ["128", "165", "170", "178", "182", "190"]),
+ ("Rozměry Š×H×V [mm]",          ["1200×465×791", ("1328×485×1065", 5)]),
  ("Krytí / třída ochrany",       "IPX4 / I"),
  ("Chladivo",                    "R290 (propan)"),
  ("Výbava v jednotce",           "oběhové čerpadlo · záložní el. dohřev 3 kW · expanzní nádoba 6 l · pojistný ventil"),
