@@ -150,3 +150,5 @@ Data jsou výrobce beze změny – liší se od našeho katalogu a letáků (nap
   (null = nepřekládat, "" = text přesunut do sousedního segmentu), úpravy sazby `cz/override.json`, pak `translate.py build`.
   Písma: Calibri z Microsoft Wordu (/Applications/Microsoft Word.app/…/DFonts), za OPPOSans Arial. Texty v obrázcích (displej, aplikace,
   konzole) zůstávají anglicky; čísla v tabulkách s desetinnou tečkou jako v originálu. Po změně EN verze spustit `translate.py extract` znovu a zkontrolovat id.
+- Publikováno v artefaktu **Marketing REO HEATING** (https://claude.ai/artifact/8zGFmzL6gnPFsy8zTqRjGz) jako karta „Produktový katalog“
+  (náhled titulky a str. 9, stažení CZ i EN PDF; soubory `katalog/…` a `img/katalog-1/2.jpg`). Po změně katalogu přenahrát.
