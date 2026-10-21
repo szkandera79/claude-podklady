@@ -36,7 +36,8 @@ section{padding:96px 0}
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
 .logo{display:inline-flex;flex-direction:column;align-items:center;line-height:1;gap:2px}
-.logo img{height:52px;width:auto}
+.logo{flex:0 0 auto}
+.logo img{height:63px;width:auto;max-width:none}
 .logo span{font-weight:800;font-size:1.5rem;letter-spacing:-.03em;color:#232323}
 .logo-light span{color:#fff}
 .menu{display:flex;gap:20px;font-weight:500;font-size:.95rem;white-space:nowrap}
@@ -99,8 +100,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .sunband{background:linear-gradient(135deg,#fffaf0,#fff 55%,var(--brand-light));padding:80px 0}
 .sun-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center}
 .sun-img{position:relative;display:grid;place-items:center}
-.sun-img img{max-height:340px;filter:drop-shadow(0 20px 22px rgba(18,56,33,.2))}
-.sun-img .sun{position:absolute;top:-20px;right:6%;font-size:4.2rem;filter:drop-shadow(0 0 22px rgba(252,187,0,.7))}
+.sun-img img{max-height:420px;filter:drop-shadow(0 20px 22px rgba(18,56,33,.2))}
+.sun-img .sun{position:absolute;top:-62px;right:0;font-size:4.2rem;filter:drop-shadow(0 0 22px rgba(252,187,0,.7))}
 .sun-list{list-style:none;display:grid;gap:12px;margin:22px 0 28px}
 .sun-list li{padding-left:30px;position:relative;color:var(--muted)}
 .sun-list li::before{content:"✓";position:absolute;left:0;top:0;width:22px;height:22px;border-radius:50%;background:var(--brand);color:#fff;font-size:.75rem;display:grid;place-items:center;font-weight:800}
@@ -114,6 +115,10 @@ mark.hl{background:linear-gradient(transparent 45%,rgba(245,184,0,.55) 45%);colo
 .hero-cap b{color:var(--brand-dark);font-size:.92rem}
 .hero-cap .scop-h{font-size:.72rem;color:var(--muted);font-weight:700}
 .hero-cap-row{display:flex;gap:8px}
+.sun-cap{margin-top:14px;background:#fff;border-radius:999px;padding:6px 14px;font-size:.85rem;font-weight:700;color:var(--brand-dark);box-shadow:0 4px 14px rgba(18,56,33,.1)}
+.comp-badge{position:static;margin-top:10px;display:flex;align-items:center;gap:10px;background:#fff;border-radius:16px;padding:10px 14px 10px 10px;box-shadow:0 8px 22px rgba(18,56,33,.16);font-weight:800;color:var(--ink);font-size:.95rem;line-height:1.15}
+.comp-badge small{display:block;font-weight:600;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.comp-ic{width:38px;height:38px;flex:0 0 38px;color:#fff;background:#e60012;border-radius:10px;padding:6px}
 /* why */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.2s}
@@ -251,7 +256,7 @@ footer{background:var(--brand-dark);color:#b9cfc1;padding:56px 0 28px;font-size:
 footer h4{color:#fff;margin-bottom:12px}
 footer a:hover{color:#fff}
 footer .logo{margin-bottom:14px}
-footer .logo img{height:58px}
+footer .logo img{height:63px}
 .fbottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:.82rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 @media (max-width:980px){
@@ -275,6 +280,8 @@ footer .logo img{height:58px}
   section{padding:64px 0}
   .why-grid,.services,.posts,.process,.reviews,.pillars{grid-template-columns:1fr}
   .phone,.nav-right .btn,.badge{display:none}
+  .sun-img img{max-height:300px}.comp-badge{font-size:.85rem}.comp-ic{width:32px;height:32px;flex-basis:32px}.sun-img .sun{font-size:3rem;top:-40px}
+  .logo img{height:52px}
   .hero-photo{margin:0 -16px;border-radius:0;box-shadow:none}.hero-cap{position:static;border-radius:0;box-shadow:none;background:var(--bg-soft)}.hero-unit{padding:24px 12px 14px;gap:8px}.hu img{height:190px}.hu-smart img{height:120px}.hu-pair img{height:170px}.hu-pair .hu-small{height:100px;margin-left:-20px}.scop{font-size:.9rem;padding:3px 7px}
   form{grid-template-columns:1fr;padding:22px}
   .band{padding:36px 24px}
@@ -329,7 +336,7 @@ footer .logo img{height:58px}
 
 <section class="sunband">
   <div class="wrap sun-grid">
-    <div class="sun-img"><img src="assets/img/smart.png" alt="REO R290 Smart"><span class="sun">☀️</span></div>
+    <div class="sun-img"><img src="assets/img/rhx-pro-alpha.png" alt="REO R290 Smart RHX30 Pro"><span class="sun">☀️</span><span class="sun-cap">REO R290 Smart</span><span class="comp-badge"><svg class="comp-ic" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M7.5 9.5 24.5 12.5M7.5 22.5 24.5 19.5"/><path d="M16 1v3M16 28v3"/></svg><span><small>kompresor</small>Mitsubishi Electric</span></span></div>
     <div>
       <span class="eyebrow">REO R290 Smart</span>
       <h2>Topí přímo <span class="hand">ze sluníčka</span></h2>
@@ -574,7 +581,7 @@ footer .logo img{height:58px}
     <div class="contact">
       <div class="cinfo">
         <a class="ci" href="tel:+420774872467"><span class="ic">📞</span><div><small>Zavolejte nám</small><b>+420 774 872 467</b></div></a>
-        <a class="ci" href="mailto:info@eko4home.cz"><span class="ic">✉️</span><div><small>Napište e-mail</small><b>info@eko4home.cz</b></div></a>
+        <a class="ci" href="mailto:info@reoheating.cz"><span class="ic">✉️</span><div><small>Napište e-mail</small><b>info@reoheating.cz</b></div></a>
         <div class="ci"><span class="ic">📍</span><div><small>Sídlíme v Třinci</small><b>Schůzku si domluvte předem</b><br><small>Jsme často v terénu, ať s vámi počítáme.</small></div></div>
       </div>
       <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Děkujeme, ozveme se ✓'">
@@ -598,7 +605,7 @@ footer .logo img{height:58px}
     <div class="fgrid">
       <div><div class="logo"><img src="assets/img/logo-reoheating-light.svg" alt="REO HEATING"></div><p>Úsporná řešení na míru pro Váš dům přímo od výrobce.</p></div>
       <div><h4>Produkty</h4><a href="#produkty">REO R290 RH030–RH060</a><br><a href="#produkty">REO R290 Smart</a><br><a href="#produkty">RHX30 Pro / RH X50</a><br><a href="#produkty">Nádrže</a></div>
-      <div><h4>Kontakt</h4><a href="tel:+420774872467">+420 774 872 467</a><br><a href="mailto:info@eko4home.cz">info@eko4home.cz</a><br>Třinec</div>
+      <div><h4>Kontakt</h4><a href="tel:+420774872467">+420 774 872 467</a><br><a href="mailto:info@reoheating.cz">info@reoheating.cz</a><br>Třinec</div>
       <div><h4>Působíme</h4>Celá Česká republika<br>a Slovensko</div>
     </div>
     <div class="fbottom"><span>© 2026 Riva Trade s.r.o. · IČ 08864811 · DIČ CZ08864811</span><a href="#">Podmínky ochrany osobních údajů</a></div>
