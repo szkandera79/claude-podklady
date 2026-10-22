@@ -117,6 +117,11 @@ mark.hl{background:linear-gradient(transparent 45%,rgba(245,184,0,.55) 45%);colo
 .hero-cap-row{display:flex;gap:8px}
 .sun-cap{margin-top:14px;background:#fff;border-radius:999px;padding:6px 14px;font-size:.85rem;font-weight:700;color:var(--brand-dark);box-shadow:0 4px 14px rgba(18,56,33,.1)}
 .new-tag{display:inline-block;background:var(--yellow);color:var(--ink);font-weight:800;font-size:.72em;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:2px 9px;margin-right:8px;vertical-align:1px}
+.nerez{position:absolute;left:12px;top:12px;background:var(--brand);color:#fff;font-weight:800;font-size:.8rem;letter-spacing:.03em;padding:5px 11px;border-radius:999px;box-shadow:0 4px 12px rgba(52,162,99,.35)}
+.nerez-band{display:flex;gap:14px;align-items:center;background:#fff;border:2px solid var(--brand);border-radius:20px;padding:16px 20px;margin-bottom:22px;box-shadow:var(--shadow)}
+.nerez-band b{display:block;font-size:1.1rem;color:var(--brand-dark)}
+.nerez-band span{color:var(--muted);font-size:.93rem}
+.nerez-ic{flex:0 0 44px;height:44px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:800;font-size:1.3rem}
 /* why */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.2s}
@@ -151,8 +156,12 @@ mark.hl{background:linear-gradient(transparent 45%,rgba(245,184,0,.55) 45%);colo
 .series-img.stack figure{display:flex;flex-direction:column;align-items:center;gap:10px}
 .series-img.stack figure:first-child img{max-height:330px}
 .series-img.stack figure:last-child img{max-height:260px}
-.smart-stack figure:first-child img{max-height:230px}
-.smart-stack figure:last-child img{max-height:380px}
+.series-img.smart-stack figure:first-child img{max-height:230px}
+.series-img.smart-stack figure:last-child{width:100%;flex:1;justify-content:center}
+.series-img.smart-stack figure:last-child img{width:100%;height:auto;max-height:none;max-width:none}
+.series-img.smart-stack{padding:20px 8px}
+.series-img.fill{padding:20px 8px;align-self:stretch}
+.series-img.fill img{width:100%;height:auto;max-height:520px;object-fit:contain}
 .series-img.stack figcaption{font-size:.85rem;font-weight:700;color:var(--brand-dark);background:#fff;border-radius:999px;padding:4px 12px;box-shadow:0 3px 10px rgba(18,56,33,.08)}
 .series h3{font-size:1.7rem;margin-bottom:6px}
 .series .tag{color:var(--brand);font-weight:600;margin-bottom:14px}
@@ -177,10 +186,11 @@ mark.hl{background:linear-gradient(transparent 45%,rgba(245,184,0,.55) 45%);colo
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
 .pillar{background:var(--bg-soft);border-radius:14px;padding:14px}
 .pillar b{display:block;color:var(--brand-dark);font-size:.95rem}
+.pillar span strong{color:var(--brand-dark)}
 .pillar span{font-size:.82rem;color:var(--muted)}
 .tanks{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
 .tank{background:#fff;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.tank .ti{background:radial-gradient(circle at 50% 60%,var(--brand-light),#fff 75%);height:230px;display:grid;place-items:center;padding:18px}
+.tank .ti{position:relative;background:radial-gradient(circle at 50% 60%,var(--brand-light),#fff 75%);height:230px;display:grid;place-items:center;padding:18px}
 .tank .ti img{max-height:200px;object-fit:contain}
 .tank .tb{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
 .tank h4{font-size:1.08rem;margin-bottom:6px}
@@ -285,7 +295,7 @@ footer .logo img{height:63px}
   section{padding:64px 0}
   .why-grid,.services,.posts,.process,.reviews,.pillars{grid-template-columns:1fr}
   .phone,.nav-right .btn,.badge{display:none}
-  .sun-img img{max-height:340px}.series-img.stack figure:first-child img{max-height:240px}.series-img.stack figure:last-child img{max-height:190px}.sun-img .sun{font-size:3rem;top:-40px}
+  .sun-img img{max-height:340px}.series-img.stack figure:first-child img{max-height:240px}.series-img.stack figure:last-child img{max-height:190px}.series-img.smart-stack figure:last-child img{width:100%;max-width:300px;height:auto;max-height:none}.series-img.fill img{max-width:300px;max-height:380px}.sun-img .sun{font-size:3rem;top:-40px}
   .logo img{height:52px}
   .hero-photo{margin:0 -16px;border-radius:0;box-shadow:none}.hero-cap{position:static;border-radius:0;box-shadow:none;background:var(--bg-soft)}.hero-unit{padding:24px 12px 14px;gap:8px}.hu img{height:190px}.hu-smart img{height:120px}.hu-pair img{height:170px}.hu-pair .hu-small{height:100px;margin-left:-20px}.scop{font-size:.9rem;padding:3px 7px}
   form{grid-template-columns:1fr;padding:22px}
@@ -349,6 +359,7 @@ footer .logo img{height:63px}
       <ul class="sun-list">
         <li><b>Nemusíte pořizovat velkou a drahou domácí fotovoltaiku</b> – stačí několik panelů zapojených rovnou do čerpadla.</li>
         <li><b>Kompresor Mitsubishi Electric</b> – spolehlivé srdce celé jednotky.</li>
+        <li><b>Tichý chod</b> – pětistupňové odhlučnění, akustický tlak ve 3 m už od 32 dB(A).</li>
         <li><b>Topná voda až 75 °C</b> – zvládne i radiátory ve starších domech a ohřev teplé vody.</li>
         <li><b>SCOP až 5,29 s podlahovým topením a 3,91 s radiátory</b> (RH14)<span class="hl-box">průměrný roční topný faktor – <strong>víc než většina značkových R290 monobloků</strong></span></li>
       </ul>
@@ -397,10 +408,10 @@ footer .logo img{height:63px}
       <button class="tab active" data-tab="rh">REO R290 · RH030–RH060</button>
       <button class="tab" data-tab="smart">REO R290 Smart · RH06–RH16</button>
       <button class="tab" data-tab="pro">Bytové domy a firmy · RHX30 Pro / RH X50</button>
-      <button class="tab" data-tab="nadrze" id="nadrze">Akumulační nádrže a TUV</button>
+      <button class="tab" data-tab="nadrze" id="nadrze">Nerezové nádrže a TUV</button>
     </div>
 
-    <p class="note center" style="margin:-18px 0 22px">Akustický tlak ve 3 m je dopočten z akustického výkonu L<sub>WA</sub> dle podkladů výrobce pro volné pole (L<sub>p</sub> = L<sub>WA</sub> − 20·log r − 8). Skutečnost ovlivní odrazy od zdí a umístění jednotky.</p>
+    <p class="note center" style="margin:-18px 0 22px">Akustický tlak ve 3 m je dopočten z akustického výkonu L<sub>WA</sub> dle podkladů výrobce pro volné pole; u řady Smart a Pro uvádíme nejnižší hodnotu (provoz A7/W35) (L<sub>p</sub> = L<sub>WA</sub> − 20·log r − 8). Skutečnost ovlivní odrazy od zdí a umístění jednotky.</p>
 
     <div class="panel active" data-panel="rh">
       <div class="series">
@@ -415,7 +426,7 @@ footer .logo img{height:63px}
             <div class="model"><span class="name">RH030</span><span class="spec">8,9 kW · COP 5,17</span><span class="spec">novostavby, menší domy</span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: <b>40</b>&nbsp;dB(A)</span></span><span class="price">95 000 Kč <small>bez DPH</small></span></div>
             <div class="model"><span class="name">RH040</span><span class="spec">11,4 kW · COP 5,29</span><span class="spec">středně velké domy</span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: <b>43</b>&nbsp;dB(A)</span></span><span class="price">105 000 Kč <small>bez DPH</small></span></div>
             <div class="model"><span class="name">RH050</span><span class="spec">14,8 kW · COP 5,22</span><span class="spec">větší zateplené domy</span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: <b>41</b>&nbsp;dB(A)</span></span><span class="price">125 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH060</span><span class="spec">22,0 kW · COP 5,22</span><span class="mscop"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>4,80</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,89</span></span></span><span class="spec">velké domy, BD v kaskádě</span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: <b>44</b>&nbsp;dB(A)</span></span><span class="price">169 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH060</span><span class="spec">22,0 kW · COP 5,22</span><span class="mscop"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>4,80</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,89</span></span></span><span class="spec">velké domy, BD v kaskádě</span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: od&nbsp;<b>34</b>&nbsp;dB(A)</span></span><span class="price">169 000 Kč <small>bez DPH</small></span></div>
           </div>
           <p class="note">Topný výkon max. při A7/W35. Akustický výkon L<sub>WA</sub> 58–62 dB(A) dle protokolů TÜV SÜD (EN 12102-1). SCOP RH060 dle KEYMARK (EN 14825, průměrné klima).</p>
         </div>
@@ -430,21 +441,21 @@ footer .logo img{height:63px}
           <div class="tag">Topí přímo ze sluníčka</div>
           <div class="pillars">
             <div class="pillar"><b>☀️ Topí ze sluníčka</b><span>Panely připojíte přímo k jednotce – bez střídače, baterie a další elektroniky. Co chybí, odebere ze sítě. Nepotřebujete velkou a drahou domácí FV.</span></div>
-            <div class="pillar"><b>📈 Vysoká účinnost</b><span>SCOP až 5,29 (35 °C) – <mark class="hl">víc než většina značkových R290 monobloků</mark>.</span></div>
+            <div class="pillar"><b>📈 Vysoká účinnost</b><span>SCOP až <strong>5,29</strong> s podlahovým topením (35 °C) a až <strong>3,94</strong> s radiátory (55 °C) – <mark class="hl">víc než většina značkových R290 monobloků</mark>.</span></div>
             <div class="pillar"><b>⚙️ Mitsubishi Electric</b><span>Kompresor Mitsubishi Electric – osvědčená spolehlivost.</span></div>
           </div>
-          <div class="pills"><span class="pill">🌡️ topná voda až 75 °C</span><span class="pill">R290</span><span class="pill">kompresor Mitsubishi Electric</span><span class="pill">integrovaný dohřev 3 kW</span></div>
+          <div class="pills"><span class="pill">🌡️ topná voda až 75 °C</span><span class="pill">🔇 tichý chod – od 32 dB(A) ve 3 m</span><span class="pill">R290</span><span class="pill">kompresor Mitsubishi Electric</span><span class="pill">integrovaný dohřev 3 kW</span></div>
           <p class="note" style="margin:0 0 8px"><b>Číslo v názvu modelu</b> (RH06 … RH16) odpovídá orientačně tepelné ztrátě domu v kW, pro který se jednotka hodí. Skutečný maximální topný výkon je vyšší – uvádíme ho při venkovní teplotě 7 °C a topné vodě 35 °C (A7/W35).</p>
           <p class="note" style="margin:0 0 14px">SCOP (průměrný roční topný faktor) dle EN 14825, průměrné klima, podklady výrobce.</p>
           <p>Jednotka má integrovaný elektrický dohřev 3 kW, oběhové čerpadlo i expanzní nádobu. Přímé napájení z fotovoltaiky využijete hlavně od jara do podzimu.</p>
           <div class="scop-legend"><b>SCOP = průměrný roční topný faktor</b> – kolik kWh tepla vyrobí čerpadlo z 1 kWh elektřiny v průměru za celou topnou sezónu.<span><svg style="color:#e0662b"><use href="#i-floor"/></svg>35 °C – podlahové topení</span><span><svg style="color:#c24b2a"><use href="#i-rad"/></svg>55 °C – radiátory</span><span><svg class="spk" style="width:18px;height:18px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>akustický tlak ve vzdálenosti 3 m od jednotky</span></div>
           <div class="models">
             <div class="model"><span class="name">RH06 <small class="ph">1F</small></span><span class="pw"><b>8,5&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 3,4–8,5&nbsp;kW</span><span class="mscop"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>5,00</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,84</span></span></span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: <b>35</b>&nbsp;dB(A)</span></span><span class="price">129 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH08 <small class="ph">3F</small></span><span class="pw"><b>11,0&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 4,1–11,0&nbsp;kW</span><span class="mscop"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>5,15</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,90</span></span></span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: <b>32</b>&nbsp;dB(A)</span></span><span class="price">139 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH10 <small class="ph">3F</small></span><span class="pw"><b>12,9&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 4,2–12,9&nbsp;kW</span><span class="mscop"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>5,20</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,90</span></span></span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: <b>37</b>&nbsp;dB(A)</span></span><span class="price">149 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH12 <small class="ph">3F</small></span><span class="pw"><b>17,0&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 6,3–17,0&nbsp;kW</span><span class="mscop"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>5,11</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,94</span></span></span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: <b>37</b>&nbsp;dB(A)</span></span><span class="price">159 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH14 <small class="ph">3F</small></span><span class="pw"><b>19,3&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 6,6–19,3&nbsp;kW</span><span class="mscop"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>5,29</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,91</span></span></span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: <b>38</b>&nbsp;dB(A)</span></span><span class="price">169 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RH16 <small class="ph">3F</small></span><span class="pw"><b>22,0&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 7,8–22,0&nbsp;kW</span><span class="mscop"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>5,09</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,88</span></span></span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: <b>38</b>&nbsp;dB(A)</span></span><span class="price">189 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH08 <small class="ph">3F</small></span><span class="pw"><b>11,0&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 4,1–11,0&nbsp;kW</span><span class="mscop"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>5,15</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,90</span></span></span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: od&nbsp;<b>32</b>&nbsp;dB(A)</span></span><span class="price">139 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH10 <small class="ph">3F</small></span><span class="pw"><b>12,9&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 4,2–12,9&nbsp;kW</span><span class="mscop"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>5,20</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,90</span></span></span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: od&nbsp;<b>36</b>&nbsp;dB(A)</span></span><span class="price">149 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH12 <small class="ph">3F</small></span><span class="pw"><b>17,0&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 6,3–17,0&nbsp;kW</span><span class="mscop"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>5,11</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,94</span></span></span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: od&nbsp;<b>37</b>&nbsp;dB(A)</span></span><span class="price">159 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH14 <small class="ph">3F</small></span><span class="pw"><b>19,3&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 6,6–19,3&nbsp;kW</span><span class="mscop"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>5,29</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,91</span></span></span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: od&nbsp;<b>38</b>&nbsp;dB(A)</span></span><span class="price">169 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RH16 <small class="ph">3F</small></span><span class="pw"><b>22,0&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 7,8–22,0&nbsp;kW</span><span class="mscop"><span class="scop scop-35"><svg><use href="#i-floor"/></svg><span><i>podlaha 35 °C</i>5,09</span></span><span class="scop scop-55"><svg><use href="#i-rad"/></svg><span><i>radiátory 55 °C</i>3,88</span></span></span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: od&nbsp;<b>37</b>&nbsp;dB(A)</span></span><span class="price">189 000 Kč <small>bez DPH</small></span></div>
           </div>
         </div>
       </div>
@@ -452,20 +463,20 @@ footer .logo img{height:63px}
 
     <div class="panel" data-panel="pro">
       <div class="series">
-        <div class="series-img"><img src="assets/img/rhx-pro.png" alt="Tepelné čerpadlo REO RHX20 Pro / RHX30 Pro"></div>
+        <div class="series-img fill"><img src="assets/img/rhx-pro-alpha.png" alt="Tepelné čerpadlo REO RHX20 Pro / RHX30 Pro"></div>
         <div>
           <h3>REO R290 Smart · RHX20 Pro / RHX30 Pro</h3>
           <div class="tag">Výkonné jednotky pro bytové domy, firmy a kaskády</div>
           <p>Větší jednotky řady Smart pro objekty s vyšší potřebou tepla. Kompresor Mitsubishi Electric, možnost přímého připojení fotovoltaiky, řazení do kaskády. Elektrický dohřev a expanzi řešíme v rámci kotelny.</p>
-          <div class="pills"><span class="pill">🌡️ topná voda až 75 °C</span><span class="pill">R290</span><span class="pill">kaskády</span><span class="pill">kompresor Mitsubishi Electric</span><span class="pill">bytové domy · firmy</span></div>
+          <div class="pills"><span class="pill">🌡️ topná voda až 75 °C</span><span class="pill">🔇 tichý chod – od 32 dB(A) ve 3 m</span><span class="pill">R290</span><span class="pill">kaskády</span><span class="pill">kompresor Mitsubishi Electric</span><span class="pill">bytové domy · firmy</span></div>
           <div class="models">
-            <div class="model"><span class="name">RHX20 Pro</span><span class="pw"><b>28,0&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 10,2–28,0&nbsp;kW</span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: <b>38</b>&nbsp;dB(A)</span></span><span class="price">300 000 Kč <small>bez DPH</small></span></div>
-            <div class="model"><span class="name">RHX30 Pro</span><span class="pw"><b>40,0&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 12,7–40,0&nbsp;kW</span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: <b>41</b>&nbsp;dB(A)</span></span><span class="price">350 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RHX20 Pro</span><span class="pw"><b>28,0&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 10,2–28,0&nbsp;kW</span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: od&nbsp;<b>32</b>&nbsp;dB(A)</span></span><span class="price">300 000 Kč <small>bez DPH</small></span></div>
+            <div class="model"><span class="name">RHX30 Pro</span><span class="pw"><b>40,0&nbsp;kW</b>max. výkon při A7/W35</span><span class="spec">modulace 12,7–40,0&nbsp;kW</span><span class="noise"><svg class="spk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>akustický tlak ve 3&nbsp;m: od&nbsp;<b>37</b>&nbsp;dB(A)</span></span><span class="price">350 000 Kč <small>bez DPH</small></span></div>
           </div>
         </div>
       </div>
       <div class="series" style="margin-top:24px">
-        <div class="series-img"><img src="assets/img/rh-x50.png" alt="Komerční tepelné čerpadlo REO RH X50"></div>
+        <div class="series-img fill"><img src="assets/img/rh-x50.png" alt="Komerční tepelné čerpadlo REO RH X50"></div>
         <div>
           <h3>REO RH X50</h3>
           <div class="tag">Komerční tepelné čerpadlo pro bytové domy a velké objekty</div>
@@ -480,13 +491,14 @@ footer .logo img{height:63px}
     </div>
 
     <div class="panel" data-panel="nadrze">
+      <div class="nerez-band"><span class="nerez-ic">✓</span><div><b>Všechny naše nádrže jsou z nerezové oceli 304</b><span>Nerez nekoroduje a je hygienická – voda zůstává čistá a bez rzi, nádrž si drží vzhled i funkci dlouhá léta.</span></div></div>
       <div class="tanks">
-        <div class="tank"><div class="ti"><img src="assets/img/aku-100.png" alt="Akumulační nádrž AKU 100 l"></div><div class="tb"><h4>AKU 100 l nerez + 3 kW</h4><p>Akumulační a vyrovnávací zásobník, nerez 304, izolace 50 mm, ⌀ 470 × 1 045 mm.</p><span class="price">15 000 Kč <small>bez DPH</small></span></div></div>
-        <div class="tank"><div class="ti"><img src="assets/img/aku-500.jpg" alt="Akumulační nádrž AKU 500 l"></div><div class="tb"><h4>AKU 500 l nerez</h4><p>Velký akumulační zásobník bez výměníku, nerez SUS304, PUR 50 mm, 70 × 70 × 179 cm. Připojí i krb nebo kotel; lze doplnit spirálu 9 kW.</p><span class="price">35 000 Kč <small>bez DPH</small></span></div></div>
-        <div class="tank"><div class="ti"><img src="assets/img/tuv.png" alt="Zásobník TUV 200 l"></div><div class="tb"><h4>TUV 200 l nerez (bojler)</h4><p>Nerez 304, výměník ⌀ 25 mm × 20 m (2,7 m²), izolace 50 mm, ⌀ 520 × 1 560 mm.</p><span class="price">25 000 Kč <small>bez DPH</small></span></div></div>
-        <div class="tank"><div class="ti"><img src="assets/img/tuv.png" alt="Zásobník TUV 300 l"></div><div class="tb"><h4>TUV 300 l nerez (bojler)</h4><p>Nerez 304, výměník ⌀ 25 mm × 30 m (4,3 m²), izolace 50 mm, ⌀ 560 × 1 860 mm.</p><span class="price">30 000 Kč <small>bez DPH</small></span></div></div>
-        <div class="tank"><div class="ti"><img src="assets/img/watertank.png" alt="Kombinovaný zásobník Watertank 210/70"></div><div class="tb"><h4>Watertank 210/70 l</h4><p>Kombinovaný zásobník TUV + topné vody v jednom „slim“ tanku (⌀ 56 cm, výška 190 cm), výměník 3,5 m², v každé nádrži spirála 3 kW.</p><span class="price">39 000 Kč <small>bez DPH</small></span><span class="combo">s naším TČ jen 25 000 Kč</span></div></div>
-        <div class="tank"><div class="ti"><img src="assets/img/watertank.png" alt="Kombinovaný zásobník Watertank 330/120"></div><div class="tb"><h4>Watertank 330/120 l</h4><p>Větší kombinovaný zásobník (⌀ 70 cm, výška 190 cm), výměník 3,5 m², spirály 3 kW, připojení dvou zdrojů tepla.</p><span class="price">45 000 Kč <small>bez DPH</small></span><span class="combo">s naším TČ jen 31 000 Kč</span></div></div>
+        <div class="tank"><div class="ti"><span class="nerez">✓ Nerez 304</span><img src="assets/img/aku-100.png" alt="Akumulační nádrž AKU 100 l"></div><div class="tb"><h4>Nerezová AKU nádrž 100 l + 3 kW</h4><p>Akumulační a vyrovnávací zásobník z nerezové oceli 304, izolace 50 mm, ⌀ 470 × 1 045 mm.</p><span class="price">15 000 Kč <small>bez DPH</small></span></div></div>
+        <div class="tank"><div class="ti"><span class="nerez">✓ Nerez 304</span><img src="assets/img/aku-500.jpg" alt="Akumulační nádrž AKU 500 l"></div><div class="tb"><h4>Nerezová AKU nádrž 500 l</h4><p>Velký akumulační zásobník bez výměníku z nerezové oceli 304, PUR 50 mm, 70 × 70 × 179 cm. Připojí i krb nebo kotel; lze doplnit spirálu 9 kW.</p><span class="price">35 000 Kč <small>bez DPH</small></span></div></div>
+        <div class="tank"><div class="ti"><span class="nerez">✓ Nerez 304</span><img src="assets/img/tuv.png" alt="Zásobník TUV 200 l"></div><div class="tb"><h4>Nerezový bojler TUV 200 l</h4><p>Nádrž i výměník z nerezové oceli 304, výměník ⌀ 25 mm × 20 m (2,7 m²), izolace 50 mm, ⌀ 520 × 1 560 mm.</p><span class="price">25 000 Kč <small>bez DPH</small></span></div></div>
+        <div class="tank"><div class="ti"><span class="nerez">✓ Nerez 304</span><img src="assets/img/tuv.png" alt="Zásobník TUV 300 l"></div><div class="tb"><h4>Nerezový bojler TUV 300 l</h4><p>Nádrž i výměník z nerezové oceli 304, výměník ⌀ 25 mm × 30 m (4,3 m²), izolace 50 mm, ⌀ 560 × 1 860 mm.</p><span class="price">30 000 Kč <small>bez DPH</small></span></div></div>
+        <div class="tank"><div class="ti"><span class="nerez">✓ Nerez 304</span><img src="assets/img/watertank.png" alt="Kombinovaný zásobník Watertank 210/70"></div><div class="tb"><h4>Nerezový Watertank 210/70 l</h4><p>Kombinovaný nerezový zásobník (ocel 304) TUV + topné vody v jednom „slim“ tanku (⌀ 56 cm, výška 190 cm), výměník 3,5 m², v každé nádrži spirála 3 kW.</p><span class="price">39 000 Kč <small>bez DPH</small></span><span class="combo">s naším TČ jen 25 000 Kč</span></div></div>
+        <div class="tank"><div class="ti"><span class="nerez">✓ Nerez 304</span><img src="assets/img/watertank.png" alt="Kombinovaný zásobník Watertank 330/120"></div><div class="tb"><h4>Nerezový Watertank 330/120 l</h4><p>Větší kombinovaný nerezový zásobník (ocel 304) (⌀ 70 cm, výška 190 cm), výměník 3,5 m², spirály 3 kW, připojení dvou zdrojů tepla.</p><span class="price">45 000 Kč <small>bez DPH</small></span><span class="combo">s naším TČ jen 31 000 Kč</span></div></div>
       </div>
     </div>
   </div>
@@ -595,7 +607,7 @@ footer .logo img{height:63px}
         <label class="full">E-mail<input type="email" name="email"></label>
         <label class="full">Adresa realizace<input name="adresa"></label>
         <label class="full">Mám zájem o
-          <select name="zajem"><option>Tepelné čerpadlo RH030–RH060</option><option>REO R290 Smart (topí ze sluníčka)</option><option>Bytový dům / SVJ</option><option>Komerční objekt</option><option>RHX30 Pro / RH X50</option><option>Akumulační nádrž / TUV</option><option>Fotovoltaika</option><option>Fotovoltaika + tepelné čerpadlo</option></select>
+          <select name="zajem"><option>Tepelné čerpadlo RH030–RH060</option><option>REO R290 Smart (topí ze sluníčka)</option><option>Bytový dům / SVJ</option><option>Komerční objekt</option><option>RHX30 Pro / RH X50</option><option>Nerezová nádrž / bojler TUV</option><option>Fotovoltaika</option><option>Fotovoltaika + tepelné čerpadlo</option></select>
         </label>
         <label class="full">Zpráva<textarea name="zprava" rows="4"></textarea></label>
         <div class="full"><button class="btn btn-primary" type="submit">Odeslat poptávku</button></div>
