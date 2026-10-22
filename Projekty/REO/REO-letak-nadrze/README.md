@@ -73,4 +73,4 @@ za nové vždy zkontrolovat, zda na plášti nezůstal štítek.
   `python3 web/build_web.py . /cesta/katalog-nadrzi.html`
 - Publikováno jako artefakt https://claude.ai/artifact/EPYT2QCFdGPg3cduyU1vGL (2026-10-15).
   Po změně `letak.html` přegenerovat a znovu publikovat na stejnou URL.
-  **22. 10. 2026: nové logo je v `letak.html` i `build_web.py`, artefakt zatím NEpřepublikován.**
+  **22. 10. 2026: nové logo v `letak.html` i `build_web.py`, artefakt přepublikován (verze 2).**

@@ -48,7 +48,8 @@
   td.r{ font-weight:700; white-space:nowrap; padding-left:10px; }
   .note{ font-size:12.5px; color:var(--muted); margin:0; }
   .pdf{ display:inline-flex; gap:8px; align-items:center; justify-content:center; background:var(--brand); color:#fff;
-    text-decoration:none; font-weight:700; padding:11px 16px; border-radius:10px; }
+    text-decoration:none; font:inherit; font-weight:700; padding:11px 16px; border-radius:10px; border:0; cursor:pointer; }
+  .pdf[disabled]{ opacity:.6; cursor:progress; }
   .pdf:focus-visible{ outline:3px solid var(--brand-strong); outline-offset:2px; }
 
   .pages{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
@@ -116,13 +117,32 @@ function show(id, push){
         <tr><td>B · vytápění + TUV</td><td class="r">${kc(bDod)}</td><td class="r">${kc(bDod + INST_B)}</td></tr>
       </table>
       <p class="note">Dodávka = jednotka, AKU 100 l, u sestavy B navíc zásobník TUV 200 l, a doprava. Instalace je orientační.</p>
-      <a class="pdf" href="pdf/REO_HEATING_Letak_${m.name}.pdf" target="_blank" rel="noopener">Otevřít leták ${m.name} (PDF)</a>
+      <button class="pdf" type="button" id="dl" data-file="REO_HEATING_Letak_${m.name}.pdf">Stáhnout nabídku ${m.name} (PDF)</button>
+      <p class="note" id="dlStatus" role="status"></p>
     </aside>
     <div class="pages">
       <figure><img src="img/${m.name}-1.jpg" alt="Leták ${m.name}, strana 1: produkt, parametry a realizace" loading="lazy"><figcaption>Strana 1 · produkt a realizace</figcaption></figure>
       <figure><img src="img/${m.name}-2.jpg" alt="Leták ${m.name}, strana 2: ceny sestav, servis a poptávka" loading="lazy"><figcaption>Strana 2 · ceny sestav a servis</figcaption></figure>
     </div>`;
   if (push) { try { history.replaceState(null, '', '#' + m.id); } catch (e) {} }
+  const btn = document.getElementById('dl'), st = document.getElementById('dlStatus');
+  btn.addEventListener('click', async () => {
+    btn.disabled = true; st.textContent = 'Připravuji PDF…';
+    try {
+      const downloads = await downloadsReady;
+      if (!downloads) { st.textContent = 'Stažení tu není k dispozici.'; return; }
+      const res = await fetch('pdf/' + btn.dataset.file);
+      if (!res.ok) throw { code: 'fetch' };
+      await downloads.save({ filename: btn.dataset.file, data: await res.blob() });
+      st.textContent = 'PDF předáno ke stažení.';
+    } catch (e) {
+      const c = e && e.code;
+      st.textContent = c === 'declined' ? 'Stažení zrušeno.'
+        : c === 'rate_limited' ? 'Jedno stažení už čeká na potvrzení, zkuste to za chvíli.'
+        : 'PDF se nepodařilo stáhnout.';
+    } finally { btn.disabled = false; }
+  });
 }
+const downloadsReady = window.claude && window.claude.use ? window.claude.use('downloads') : Promise.resolve(null);
 show((location.hash || '#rh040').slice(1), false);
 </script>
