@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="assets/style.css">
 <style>
   .calc{display:grid;grid-template-columns:400px 1fr;gap:32px;align-items:start}
+  .calc > div{min-width:0}
   .panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow-sm)}
   .panel + .panel{margin-top:18px}
   .panel h2{font-size:1.05rem;margin-bottom:14px;display:flex;gap:10px;align-items:center}
@@ -28,8 +29,8 @@
   .prices td{padding:6px 8px}
   .prices input{padding:7px 8px;font-size:.88rem;text-align:right}
   .prices td.l{font-size:.86rem}
-  .t{display:inline-block;font-size:.66rem;font-weight:700;font-family:"Poppins";padding:1px 6px;border-radius:5px;margin-left:4px;vertical-align:1px}
-  .t-O{background:var(--green-tint);color:var(--green)} .t-I{background:#e5eefb;color:#2c5a9a} .t-P{background:#fff1cc;color:#8a5a00}
+  .tg{display:inline-block;font-size:.66rem;font-weight:700;font-family:"Poppins";padding:1px 6px;border-radius:5px;margin-left:4px;vertical-align:1px}
+  .tg-O{background:var(--green-tint);color:var(--green)} .tg-I{background:#e5eefb;color:#2c5a9a} .tg-P{background:#fff1cc;color:#8a5a00}
   .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
   .kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
   .kpi .k{font-size:.78rem;color:var(--muted);font-weight:600}
@@ -91,14 +92,14 @@
           <div class="fld" data-mode="kw">
             <label for="kw">Tepelná ztráta objektu (kW)</label>
             <input id="kw" type="number" min="1" step="1" value="50">
-            <p class="hint">Roční potřebu odhadneme jako ztráta × <span id="flh-txt"></span> hodin plného výkonu <span class="t t-P">P</span>.</p>
+            <p class="hint">Roční potřebu odhadneme jako ztráta × <span id="flh-txt"></span> hodin plného výkonu <span class="tg tg-P">P</span>.</p>
           </div>
           <div class="fld" data-mode="rok" hidden>
             <div class="row2">
               <div><label for="rok">Roční spotřeba</label><input id="rok" type="number" min="0" step="1" value="400"></div>
               <div><label for="rokUnit">Jednotka</label><select id="rokUnit"><option value="gj">GJ tepla</option><option value="mwh">MWh tepla</option><option value="m3">m³ zemního plynu</option></select></div>
             </div>
-            <p class="hint">U plynu počítáme 10,6 kWh/m³ a účinnost stávajícího kotle 90 % <span class="t t-P">P</span>. Spotřeba jen na vytápění, bez teplé vody.</p>
+            <p class="hint">U plynu počítáme 10,6 kWh/m³ a účinnost stávajícího kotle 90 % <span class="tg tg-P">P</span>. Spotřeba jen na vytápění, bez teplé vody.</p>
           </div>
           <div class="fld" data-mode="obdobi" hidden>
             <div class="row2">
@@ -114,7 +115,7 @@
             <div><label for="start">Od měsíce</label><select id="start"></select></div>
             <div><label for="months">Počet měsíců</label><input id="months" type="number" min="1" max="60" step="1" value="6"></div>
           </div>
-          <p class="hint">Rozložení potřeby tepla do měsíců podle typických denostupňů v ČR <span class="t t-P">P</span>.</p>
+          <p class="hint">Rozložení potřeby tepla do měsíců podle typických denostupňů v ČR <span class="tg tg-P">P</span>.</p>
         </div>
 
         <div class="panel">
@@ -125,7 +126,7 @@
           <div class="fld" id="elshare-wrap" hidden style="margin-top:10px">
             <label for="elshare">Podíl tepla z elektrického dohřevu (%)</label>
             <input id="elshare" type="number" min="0" max="100" step="5" value="30">
-            <p class="hint">Odhad <span class="t t-P">P</span>. Skutečný podíl zjistíme z teplot soustavy na obhlídce.</p>
+            <p class="hint">Odhad <span class="tg tg-P">P</span>. Skutečný podíl zjistíme z teplot soustavy na obhlídce.</p>
           </div>
         </div>
 
@@ -193,7 +194,7 @@
 
         <div class="panel" style="margin-top:18px">
           <h2>Předpoklady a zdroje</h2>
-          <p class="note" style="margin-bottom:10px"><span class="t t-O">O</span> ověřeno ze zdroje · <span class="t t-I">I</span> údaj ThermaVera · <span class="t t-P">P</span> předpoklad, upřesníme pro váš objekt</p>
+          <p class="note" style="margin-bottom:10px"><span class="tg tg-O">O</span> ověřeno ze zdroje · <span class="tg tg-I">I</span> údaj ThermaVera · <span class="tg tg-P">P</span> předpoklad, upřesníme pro váš objekt</p>
           <ul id="sources" class="note" style="padding-left:18px"></ul>
         </div>
       </div>

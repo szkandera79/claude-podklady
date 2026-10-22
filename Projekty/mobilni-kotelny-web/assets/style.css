@@ -40,7 +40,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.93);backdr
 .logo .b{color:var(--green)} .logo .t{color:var(--amber-deep)}
 .logo small{display:block;font-family:"Inter";font-weight:500;font-size:.72rem;color:var(--muted);letter-spacing:.04em;margin-top:-2px}
 .menu{display:flex;align-items:center;gap:20px}
-.menu a{font-size:.9rem;font-weight:500;color:var(--muted)}
+.menu a{white-space:nowrap;font-size:.9rem;font-weight:500;color:var(--muted)}
 .menu a:hover,.menu a.on{color:var(--green)}
 .navright{display:flex;align-items:center;gap:14px}
 .tel{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.92rem;white-space:nowrap}
@@ -48,8 +48,8 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.93);backdr
 .navright .btn{padding:11px 20px;font-size:.9rem}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
 .burger span{width:24px;height:2px;background:var(--green);border-radius:2px}
-@media(max-width:1080px){.tel{display:none}}
-@media(max-width:900px){
+@media(max-width:1240px){.tel{display:none}}
+@media(max-width:1100px){
   .menu{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;padding:16px 24px 22px;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
   .menu.open{display:flex}
   .burger{display:flex}

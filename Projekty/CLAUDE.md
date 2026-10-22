@@ -32,6 +32,7 @@ CLAUDE.md** a drž se pravidel tam uvedených.
 | `audit-akustika-rh030-rh060/` | audit akustické dokumentace RH030–RH060 (LWA/LpA z protokolů TÜV SÜD, chybějící podklady, NV 272/2011) |
 | `porovnani-x50-rh060/` | srovnání jednotek pro kaskády BD: RH X50 / X40 / X20 / RH060 |
 | `mobilni-kotelna-tc/` | podnikatelský a technický model pronájmu mobilních kotelen s TČ v kontejneru; `univerzalni/` = studie univerzální kotelny (fáze 1 hotová) |
+| `mobilni-kotelny-web/` | web služby pronájmu mobilních kotelen s TČ (značka ThermaVera): úvod, kalkulačka celkové ceny tepla (7 zdrojů), článek o ceně tepla; data v `assets/calc-core.js` |
 | `reo-iot-cz/` | rozšíření Chrome nad IOT Power World (CZ překlad, encyklopedie parametrů, chyby, diagnostika); vlastní **CLAUDE.md** (read-only, `podklady/` mimo git) |
 | `eko4home-web/` | návrh redesignu eko4home.cz (Riva Trade): design dle klimatizacekasparek.vercel.app, produkty REO RH030–RH060, Smart, RHX Pro, nádrže s cenami |
 | `marketing/` | oslovení SVJ (e‑maily, leady CZT, tracker), Google Ads / PPC, grafika |

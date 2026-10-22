@@ -17,21 +17,21 @@
   $('start').innerHTML = MONTHS.map((m, i) => `<option value="${i}"${i === 9 ? ' selected' : ''}>${m}</option>`).join('');
   $('soustava').innerHTML = Object.entries(SOUSTAVY).map(([k, s]) => `<option value="${k}"${k === 'stredni' ? ' selected' : ''}>${s.label}</option>`).join('');
   $('prices').innerHTML = PRICE_KEYS.map(p => `
-    <tr><td class="l">${p.label} <span class="t t-O" title="${SOURCES[p.key].t}">O</span></td>
+    <tr><td class="l">${p.label} <span class="tg tg-O" title="${SOURCES[p.key].t}">O</span></td>
     <td><input type="number" min="0" step="${p.step}" id="p-${p.key}" value="${defaultPrice(p.key)}" aria-label="${p.label} ${p.unit}"></td>
     <td class="l note">${p.unit}</td></tr>`).join('');
   $('rents').innerHTML = TECH.map(t => `
-    <tr><td class="l">${t.name} ${t.rent != null ? `<span class="t t-${t.rentTag}">${t.rentTag}</span>` : ''}</td>
+    <tr><td class="l">${t.name} ${t.rent != null ? `<span class="tg tg-${t.rentTag}">${t.rentTag}</span>` : ''}</td>
     <td style="text-align:center"><input type="checkbox" id="inc-${t.id}" checked aria-label="Zahrnout ${t.name}" style="width:auto"></td>
     <td><input type="number" min="0" step="1000" id="r-${t.id}" value="${t.rent ?? ''}" placeholder="neznámý" aria-label="Nájem ${t.name}"></td>
     <td><input type="number" min="0" step="1000" id="o-${t.id}" value="${t.once ?? ''}" placeholder="neznámé" aria-label="Jednorázově ${t.name}"></td>
     <td><input type="number" min="0" step="500" id="x-${t.id}" value="0" aria-label="Další náklady ${t.name}"></td></tr>`).join('');
   $('sources').innerHTML = Object.values(SOURCES).map(s => `<li>${s.u ? `<a href="${s.u}" target="_blank" rel="noopener">${s.t}</a>` : s.t}</li>`).join('') +
     `<li>Výhřevnost: nafta a LTO 10 kWh/l, propan 6,6 kWh/l, pelety 4,6 kWh/kg (norma pro pelety A1 ≥ 16,5 MJ/kg).</li>
-     <li>Účinnost <span class="t t-P">P</span>: kotle na olej a naftu 90 %, plyn a LPG 93 %, pelety 85 %, elektrokotel 99 %.</li>
-     <li>Tepelné čerpadlo <span class="t t-O">O</span>: sezónní topný faktor ${Object.values(SOUSTAVY).filter(s => s.tag === 'O').map(s => fmt(s.spf, 2)).join(' / ')} podle teploty vody, vypočtený z výkonových map RH X50 pro typický průběh teplot.</li>
-     <li>Nájmy konkurence <span class="t t-P">P</span>: střední hodnota veřejných ceníků 35–60 tis. Kč/měs. (zahraniční půjčovny, přepočet kurzem). U pelet a elektrokotle nájem v ČR nemáme ověřený.</li>
-     <li>Nájem tepelného čerpadla <span class="t t-I">I</span>: orientační ceník ThermaVera pro kotelnu ≈ 50 kW. Přesnou cenu stanoví nabídka.</li>
+     <li>Účinnost <span class="tg tg-P">P</span>: kotle na olej a naftu 90 %, plyn a LPG 93 %, pelety 85 %, elektrokotel 99 %.</li>
+     <li>Tepelné čerpadlo <span class="tg tg-O">O</span>: sezónní topný faktor ${Object.values(SOUSTAVY).filter(s => s.tag === 'O').map(s => fmt(s.spf, 2)).join(' / ')} podle teploty vody, vypočtený z výkonových map RH X50 pro typický průběh teplot.</li>
+     <li>Nájmy konkurence <span class="tg tg-P">P</span>: střední hodnota veřejných ceníků 35–60 tis. Kč/měs. (zahraniční půjčovny, přepočet kurzem). U pelet a elektrokotle nájem v ČR nemáme ověřený.</li>
+     <li>Nájem tepelného čerpadla <span class="tg tg-I">I</span>: orientační ceník ThermaVera pro kotelnu ≈ 50 kW. Přesnou cenu stanoví nabídka.</li>
      <li>Výpočet nezahrnuje teplou vodu, stálé platby za přípojky a ceny povolenek ETS2.</li>`;
 
   // --- čtení vstupů ---
@@ -75,13 +75,14 @@
     $('elshare-wrap').hidden = soustava !== 'vysoka';
     const elShare = soustava === 'vysoka' ? Math.min(100, Math.max(0, num('elshare') ?? 30)) / 100 : 0;
     const factor = hpFactor(soustava, elShare);
-    $('spf-hint').innerHTML = `Tepelné čerpadlo vyrobí z 1 kWh elektřiny ≈ ${fmt(factor, 2)} kWh tepla <span class="t t-${SOUSTAVY[soustava].tag}">${SOUSTAVY[soustava].tag}</span>.`;
+    $('spf-hint').innerHTML = `Tepelné čerpadlo vyrobí z 1 kWh elektřiny ≈ ${fmt(factor, 2)} kWh tepla <span class="tg tg-${SOUSTAVY[soustava].tag}">${SOUSTAVY[soustava].tag}</span>.`;
 
     const q = heatNeed(months, start);
     const vat = document.querySelector('input[name=vat]:checked').value === '1' ? VAT : 1;
     const money = (n) => fmtKc(n * vat);
     const techs = readTechs();
-    const res = compute({ q, months, soustava, elShare, techs }).sort((a, b) => a.total - b.total);
+    const res = compute({ q, months, soustava, elShare, techs })
+      .sort((a, b) => (b.rentKnown - a.rentKnown) || (a.total - b.total));   // neznámý nájem až na konec
     const tc = res.find(r => r.id === 'tc');
 
     // KPI
