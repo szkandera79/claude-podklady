@@ -12,7 +12,8 @@ def svg(name, cls):
     s = (ROOT / 'assets/img' / name).read_text(encoding='utf-8')
     s = re.sub(r'<\?xml[^>]*\?>\s*', '', s)
     s = re.sub(r'\s(id|data-name)="[^"]*"', '', s, count=2)
-    s = re.sub(r'\swidth="[^"]*"\s+height="[^"]*"', f' class="{cls}" role="img" aria-label="REO HEATING"', s, count=1)
+    s = re.sub(r'\swidth="[^"]*"\s+height="[^"]*"', '', s, count=1)
+    s = s.replace('<svg ', f'<svg class="{cls}" ', 1)
     return s
 html = html.replace('<img src="assets/img/logo-reoheating.svg" alt="REO HEATING">', svg('logo-reoheating.svg', 'logo-svg'))
 html = html.replace('<img src="assets/img/logo-reoheating-light.svg" alt="REO HEATING">', svg('logo-reoheating-light.svg', 'logo-svg'))

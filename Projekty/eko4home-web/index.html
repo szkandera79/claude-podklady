@@ -48,7 +48,17 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 
 /* hero */
 .hero{position:relative;overflow:hidden;color:#fff;min-height:min(80vh,720px);display:flex;align-items:center;padding:72px 0;background:#1d2a22 url(assets/img/hero-blur.webp) left center/cover}
-.hero::before{content:"";position:absolute;right:0;bottom:0;width:min(62%,980px);aspect-ratio:1186/838;background:url(assets/img/hero-schema.webp) center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%),linear-gradient(180deg,transparent 0,#000 14%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 16%),linear-gradient(180deg,transparent 0,#000 14%);mask-composite:intersect}
+.hero-media{position:absolute;right:0;bottom:0;width:min(62%,980px);aspect-ratio:1186/838;z-index:1}
+.hero-media>img{width:100%;height:100%;display:block;object-fit:cover;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%),linear-gradient(180deg,transparent 0,#000 14%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 16%),linear-gradient(180deg,transparent 0,#000 14%);mask-composite:intersect}
+.hc-dot{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;border:3px solid var(--brand-dark);box-shadow:0 0 0 3px rgba(255,255,255,.6)}
+.hc-line{position:absolute;height:3px;margin-top:-1.5px;background:var(--brand-dark)}
+.hc-box{position:absolute;background:rgba(255,255,255,.25);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);text-shadow:0 0 6px rgba(255,255,255,.95),0 0 2px #fff;border:1px solid rgba(255,255,255,.6);border-radius:12px;padding:7px 10px;box-shadow:0 8px 24px rgba(0,0,0,.18);color:var(--ink);width:max-content;max-width:20.5%}
+.hc-ic{display:flex;gap:5px;margin-bottom:4px}
+.hc-ic span{width:28px;height:28px;border-radius:50%;display:grid;place-items:center}
+.hc-ic svg{width:17px;height:17px;color:#fff}
+.hc-box b{display:block;font-size:.98rem;color:var(--brand-dark);line-height:1.15}
+.hc-box small{display:block;font-size:.74rem;color:#2d2f2e;font-weight:600;line-height:1.35;margin-top:2px}
+.hc-tag{position:absolute;transform:translateX(-50%);background:var(--brand);color:#fff;font-weight:800;font-size:.85rem;padding:5px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 4px 12px rgba(0,0,0,.2)}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,36,24,.92) 0%,rgba(14,36,24,.78) 32%,rgba(14,36,24,.2) 46%,rgba(14,36,24,0) 55%)}
 .hero .wrap{position:relative;z-index:2;max-width:1400px;width:100%}
 .hero-grid{display:block}
@@ -111,7 +121,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 mark.hl{background:linear-gradient(transparent 45%,rgba(245,184,0,.55) 45%);color:var(--ink);font-weight:700;padding:0 2px}
 .hero-photo{position:relative;border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
 .hero-photo img{width:100%;aspect-ratio:1186/838;object-fit:cover;display:block}
-.hero-cap{position:absolute;left:16px;top:16px;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-radius:16px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+.hero-cap{position:absolute;left:16px;top:16px;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-radius:12px;padding:7px 10px;display:flex;flex-direction:column;gap:6px;box-shadow:0 6px 18px rgba(0,0,0,.15)}
 .hero-cap b{color:var(--brand-dark);font-size:.92rem}
 .hero-cap .scop-h{font-size:.72rem;color:var(--muted);font-weight:700}
 .hero-cap-row{display:flex;gap:8px}
@@ -276,7 +286,8 @@ footer .logo img{height:63px}
 
 @media (max-width:980px){
   .hero{min-height:0;align-items:flex-start;padding:40px 0 calc(70.7vw + 10px);background-position:center top}
-  .hero::before{width:100%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%);mask-image:linear-gradient(180deg,transparent 0,#000 18%)}
+  .hero-media{width:100%}.hero-media>img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%);mask-image:linear-gradient(180deg,transparent 0,#000 18%);-webkit-mask-composite:source-over;mask-composite:add}
+  .hc-box{padding:7px 9px;border-radius:10px;width:auto;max-width:34%}.hc-box small{display:none}.hc-box{left:auto!important;right:1%}.hc-ut{top:73%!important}.hc-tag{bottom:auto!important;top:4%}.hc-box b{font-size:.8rem}.hc-ic span{width:24px;height:24px}.hc-ic svg{width:15px;height:15px}.hc-ic{margin-bottom:3px}.hc-tag{font-size:.7rem;padding:3px 9px}
   .hero::after{background:linear-gradient(180deg,rgba(14,36,24,.95) 0%,rgba(14,36,24,.88) 55%,rgba(14,36,24,.2) 78%,rgba(14,36,24,0) 90%)}
 }
 @media (max-width:1320px){.phone{display:none}}
@@ -331,7 +342,15 @@ footer .logo img{height:63px}
 </header>
 
 <section class="hero" aria-label="Úvod">
-  <div class="wrap hero-grid">
+  <div class="hero-media" aria-hidden="true">
+    <img src="assets/img/hero-schema.webp" alt="">
+    <span class="hc-line" style="left:72.1%;top:35.8%;width:5.9%"></span><span class="hc-dot" style="left:72.1%;top:35.8%"></span>
+    <div class="hc-box hc-tuv" style="left:78%;top:28%"><div class="hc-ic"><span style="background:#f5b800"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9a5 5 0 0 1 9.6-2"/><path d="M11 9h9l-1.5-2.5h-6z"/><path d="M13 13v1M16 13v1M19 13v1M14.5 16.5v1M17.5 16.5v1M16 20v1"/></svg></span></div><b>Teplá voda</b><small>TUV 210 l s výměníkem</small></div>
+    <span class="hc-line" style="left:72.5%;top:82%;width:5.5%"></span><span class="hc-dot" style="left:72.5%;top:82%"></span>
+    <div class="hc-box hc-ut" style="left:78%;top:70%"><div class="hc-ic"><span style="background:#e0662b"><svg><use href="#i-floor"/></svg></span><span style="background:#e0662b"><svg><use href="#i-rad"/></svg></span></div><b>Topná voda</b><small>akumulace 70 l</small></div>
+    <span class="hc-tag" style="left:75.2%;bottom:1.5%">REO Watertank 210/70</span>
+  </div>
+    <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">Česká republika · Slovensko</span>
       <h1><span class="yellow">Teplo</span>, které <span class="hand">šetří</span> čas i peníze</h1>
