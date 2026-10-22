@@ -74,8 +74,14 @@ section{padding:84px 0}
 @media(max-width:620px){section{padding:60px 0}.wrap{padding:0 16px}}
 
 /* hero */
-.hero{background:linear-gradient(120deg,#163a1c 0%,#2E6B33 60%,#3f7f39 100%);color:#fff;padding:72px 0 80px;overflow:hidden}
-.hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero{position:relative;background:#163a1c;color:#fff;padding:96px 0 104px;overflow:hidden;min-height:78vh;display:flex;align-items:center}
+.hero-slides{position:absolute;inset:0;z-index:0}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:65% center;opacity:0;transition:opacity 1.4s ease}
+.hero-slide.active{opacity:1}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(95deg,rgba(11,24,14,.88) 0%,rgba(11,24,14,.7) 42%,rgba(11,24,14,.2) 75%,rgba(11,24,14,.1) 100%)}
+.hero > .wrap{position:relative;z-index:2;width:100%}
+.hero .grid{display:block}
+.hero-badge{position:absolute;right:16px;bottom:14px;z-index:2;font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,0,0,.45);color:#fff;padding:4px 10px;border-radius:999px}
 .hero .eyebrow{color:#cdeab4}
 .hero h1{font-size:clamp(2.2rem,4.6vw,3.5rem);font-weight:800;margin-bottom:18px;max-width:17ch}
 .hero h1 .acc{color:var(--amber)}
@@ -88,10 +94,9 @@ section{padding:84px 0}
 .path.urgent{border-left:4px solid var(--amber)}
 .path.plan{border-left:4px solid #9fd77a}
 .path em{display:inline-block;margin-top:10px;font-style:normal;font-family:"Poppins";font-weight:600;font-size:.9rem;color:var(--amber)}
-.hero-art svg{width:100%;height:auto;display:block}
 .hero-facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:.88rem;color:rgba(255,255,255,.85)}
 .hero-facts span::before{content:"✓ ";color:#9fd77a;font-weight:700}
-@media(max-width:900px){.hero .grid{grid-template-columns:1fr}.hero-art{max-width:520px}}
+@media(max-width:700px){.hero::after{background:rgba(11,24,14,.72)}.hero{padding:64px 0 72px;min-height:0}}
 @media(max-width:520px){.paths{grid-template-columns:1fr}}
 
 /* cards */

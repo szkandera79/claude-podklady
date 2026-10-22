@@ -12,6 +12,12 @@ Technika a ekonomika vychází z `../mobilni-kotelna-tc/` (RH X50, kontejner 20�
 - `cena-tepla.html`: článek „Proč nízké nájemné neznamená nízké celkové náklady“ (tabulka se počítá z dat).
 - `assets/calc-core.js`: **jediný zdroj čísel** (ceny, zdroje, SPF, účinnosti, nájmy, rozložení do měsíců, výpočet).
   Štítky O = ověřeno, I = interní údaj, P = předpoklad. Při změně cen upravit `DATUM_CEN` a `SOURCES`.
+- `assets/img/hero-*.jpg`: **AI vizualizace** (Gemini, banner-generator klíč) kontejneru 20′ + 2× RH X50 u paneláku,
+  podniku, činžovního domu, potravinářského závodu, logistického skladu, dřevozpracujícího podniku, historické továrny,
+  strojírenského závodu a hotelu (scény H1–H9); v hero se střídají strojírenský závod (antracit), hotel (krémový), logistický sklad (šedý) a potravinářský závod
+  (zelený) se štítkem „Vizualizace“; `hero-strecha-*.jpg` = návrh jednotek na střeše kontejneru (zatím nepoužito) (nejsou to realizace). Generuje `src/gen-hero.mjs`
+  (`node mobilni-kotelny-web/src/gen-hero.mjs H1 H2 H3 --out <složka>`, reference = katalogový obrázek RH X50).
+  Kontejner na obrázcích působí kratší než 20′.
 - `assets/style.css`, `assets/site.js`: společné styly (paleta thermavera.cz) a menu/formulář.
 
 ## Náhled
@@ -32,4 +38,5 @@ python http.server neotevře). Po úpravě zkopírovat: `rsync -a --delete mobil
 - Formulář je demo → napojit na `odeslat.php` (jako thermavera-web). i18n EN/DE/PL zatím není.
 - Doména / umístění (vlastní doména vs. thermavera.cz/mobilni-kotelny/), název služby, fotky TČ kotelny
   (stávající fotky mobilních kotelen jsou kotle na biomasu/olej → pro TČ nepoužívat).
+- Elektro (návod RH X50 kap. 2.2/2.11): jednotka max. 20 kW / 32 A, jistič 3×40 A, vodič 10 mm²; kaskáda 2× → přívod ≈ 3×80 A.
 - Hluk RH X50 na webu neuvádět, dokud není jasné, zda ≤ 62 dB(A) je Lp nebo Lw.

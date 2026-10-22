@@ -46,7 +46,7 @@ function tcSet(kw) {
 const TECH = [
   { id: 'tc', name: 'Tepelné čerpadlo', short: 'TČ', fuelName: 'elektřina', unit: 'kWh', price: 3.0, priceTag: 'I', src: 'el',
     kwh: 1, eta: null, rent: 80000, rentTag: 'I', once: TC_ONCE, onceTag: 'I', ours: true,
-    note: 'Elektřina přes podružné měření, platí zákazník. Potřebný přívod orientačně 3×50 A pro ≈ 50 kW.' },
+    note: 'Elektřina přes podružné měření, platí zákazník. Každá jednotka max. 20 kW / 32 A, jistič 3×40 A; kaskáda 2 jednotek orientačně přívod 3×80 A.' },
   { id: 'plyn', name: 'Zemní plyn', short: 'Plyn', fuelName: 'zemní plyn', unit: 'kWh', price: 1.55, priceTag: 'O', src: 'plyn',
     kwh: 1, eta: 0.93, etaTag: 'P', rent: 45000, rentTag: 'P', once: 25000, onceTag: 'P',
     note: 'Jen kde je plynová přípojka s dostatečnou kapacitou. Platba za denní kapacitu není v ceně.' },

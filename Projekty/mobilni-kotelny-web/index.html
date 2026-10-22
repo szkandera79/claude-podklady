@@ -42,6 +42,13 @@
 <main>
 <!-- HERO -->
 <section class="hero" id="top">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide active" style="background-image:url(assets/img/hero-strojirensky-zavod.jpg)"></div>
+    <div class="hero-slide" style="background-image:url(assets/img/hero-hotel.jpg)"></div>
+    <div class="hero-slide" style="background-image:url(assets/img/hero-logisticky-sklad.jpg)"></div>
+    <div class="hero-slide" style="background-image:url(assets/img/hero-potravinarsky-zavod.jpg)"></div>
+  </div>
+  <span class="hero-badge">Vizualizace</span>
   <div class="wrap grid">
     <div>
       <span class="eyebrow">Pronájem mobilních kotelen s tepelným čerpadlem</span>
@@ -61,31 +68,7 @@
       </div>
       <div class="hero-facts"><span>Bez paliva a jeho dovozu</span><span>Bez spalin u objektu</span><span>Výkon počítáme při −15 °C</span></div>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 520 330" fill="none">
-        <rect x="0" y="292" width="520" height="6" rx="3" fill="rgba(255,255,255,.18)"/>
-        <rect x="40" y="130" width="300" height="160" rx="6" fill="#e9efe6"/>
-        <g stroke="#c9d3c5" stroke-width="3">
-          <path d="M70 136v148M100 136v148M130 136v148M160 136v148M190 136v148M220 136v148M250 136v148M280 136v148M310 136v148"/>
-        </g>
-        <rect x="40" y="130" width="300" height="160" rx="6" stroke="#2E6B33" stroke-width="3"/>
-        <rect x="62" y="170" width="70" height="104" rx="4" fill="#2E6B33"/>
-        <circle cx="122" cy="224" r="3.5" fill="#FCC83C"/>
-        <rect x="160" y="152" width="160" height="40" rx="6" fill="#fff"/>
-        <path d="M176 172h18l-8 11" stroke="#FCC83C" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
-        <text x="204" y="178" font-family="Poppins,sans-serif" font-weight="700" font-size="17" fill="#2E6B33">ThermaVera</text>
-        <g>
-          <rect x="370" y="168" width="110" height="122" rx="8" fill="#f4f7f2" stroke="#2E6B33" stroke-width="3"/>
-          <circle cx="425" cy="214" r="34" fill="#dfe8db" stroke="#2E6B33" stroke-width="3"/>
-          <path d="M425 186v56M397 214h56M405 194l40 40M445 194l-40 40" stroke="#2E6B33" stroke-width="2.5"/>
-          <rect x="384" y="260" width="82" height="16" rx="3" fill="#2E6B33"/>
-        </g>
-        <path d="M340 260h30M340 272h30" stroke="#FCC83C" stroke-width="5" stroke-linecap="round"/>
-        <path d="M425 150c-6-10 6-14 0-26M405 152c-6-10 6-14 0-26M445 152c-6-10 6-14 0-26" stroke="rgba(255,255,255,.55)" stroke-width="3" stroke-linecap="round"/>
-        <text x="40" y="318" font-family="Inter,sans-serif" font-size="13" fill="rgba(255,255,255,.8)">Kontejner 20′: akumulace, rozvaděč, regulace</text>
-        <text x="372" y="318" font-family="Inter,sans-serif" font-size="13" fill="rgba(255,255,255,.8)">Tepelná čerpadla</text>
-      </svg>
-    </div>
+
   </div>
 </section>
 
@@ -183,8 +166,9 @@
           <tbody>
             <tr><td class="l">Výkon jedné jednotky RH X50 při −15 °C / 55 °C<br><span class="src">výkonová mapa výrobce</span></td><td>24,8 kW</td></tr>
             <tr><td class="l">Dvě jednotky v kaskádě při −15 °C / 55 °C</td><td>49,6 kW</td></tr>
-            <tr><td class="l">Napájení jednotky<br><span class="src">návod k použití</span></td><td>3×400 V, max. 32 A</td></tr>
-            <tr><td class="l">Přívod pro kotelnu ≈ 50 kW<br><span class="src">náš návrh, ověříme na obhlídce</span></td><td>3×50 A (CEE 63)</td></tr>
+            <tr><td class="l">Napájení jedné jednotky<br><span class="src">návod k použití</span></td><td>3×400 V, max. 20 kW / 32 A</td></tr>
+            <tr><td class="l">Jistič pro jednu jednotku<br><span class="src">návod k použití, s ochranou proti úniku proudu</span></td><td>3×40 A, vodič 10 mm²</td></tr>
+            <tr><td class="l">Přívod pro kaskádu 2 jednotek (100 kW nominálně)<br><span class="src">orientačně, upřesníme na obhlídce</span></td><td>3×80 A + regulace</td></tr>
             <tr><td class="l">Chladivo / náplň na jednotku</td><td>R290 / 4,0 kg</td></tr>
             <tr><td class="l">Rozměry a hmotnost jednotky</td><td>1195 × 980 × 1900 mm, 370 kg</td></tr>
             <tr><td class="l">Volný prostor kolem jednotky<br><span class="src">návod k použití</span></td><td>sání ≥ 0,5 m, nad výfukem ≥ 2 m</td></tr>
@@ -235,7 +219,7 @@
       <div class="callout"><b>Havárie:</b> počet kotelen je omezený. Termín nasazení potvrdíme podle aktuální dostupnosti. Nástup do několika hodin neslibujeme.</div>
     </div>
     <ul class="check">
-      <li><span class="n">1</span><div><b>Elektrický přívod</b><span>Hlavní jistič nebo možnost dočasného připojení. Kotelna kolem 50 kW potřebuje orientačně 3×50 A.</span></div></li>
+      <li><span class="n">1</span><div><b>Elektrický přívod</b><span>Hlavní jistič nebo možnost dočasného připojení. Každá jednotka potřebuje vlastní jistič 3×40 A, kaskáda dvou jednotek orientačně přívod 3×80 A.</span></div></li>
       <li><span class="n">2</span><div><b>Teplota otopné vody</b><span>Na kolik stupňů topíte v mrazu (např. 55 °C, 70 °C, 90/70 °C), případně typ otopných těles.</span></div></li>
       <li><span class="n">3</span><div><b>Místo a napojení</b><span>Rovná plocha pro kontejner 20′ a jednotky, příjezd pro nákladní auto s rukou, místo pro napojení na soustavu.</span></div></li>
       <li><span class="n">+</span><div><b>Spotřeba nebo tepelná ztráta</b><span>Roční spotřeba tepla z faktur (GJ, MWh, m³ plynu) nebo tepelná ztráta objektu v kW.</span></div></li>
@@ -252,7 +236,7 @@
       <details><summary>A proti plynu nebo propanu?</summary><p>Tam tepelné čerpadlo levnější vyjít nemusí. Energii má levnější i proti nim, rozdíl je ale menší a vyšší nájem obvykle nevyrovná. Výhodou tepelného čerpadla zůstává provoz bez paliva, bez nádrže a bez spalin. Kalkulačka ukáže obě varianty vedle sebe.</p></details>
       <details><summary>Zvládne tepelné čerpadlo mráz?</summary><p>Ano, ale s nižším výkonem. Proto kotelnu navrhujeme podle výkonu při −15 °C. Jedna jednotka RH X50 dává při −15 °C a 55 °C podle výkonové mapy 24,8 kW.</p></details>
       <details><summary>Máme radiátory na 90/70 °C. Půjde to?</summary><p>Často ano. Mnoho soustav navržených na 90/70 °C ve skutečnosti stačí s nižší teplotou, zvlášť po zateplení. Kde to nestačí, doplníme elektrický dohřev. Spotřeba elektřiny pak roste a v kalkulaci ji poctivě započteme.</p></details>
-      <details><summary>Jak velký elektrický přívod potřebujeme?</summary><p>Pro kotelnu kolem 50 kW orientačně 3×50 A (zásuvka CEE 63 A). Pokud přívod nestačí, prověříme dočasné posílení u distributora. Napájení z dieselového agregátu nedoporučujeme, protože by smazalo výhodu tepelného čerpadla.</p></details>
+      <details><summary>Jak velký elektrický přívod potřebujeme?</summary><p>Podle návodu má každá jednotka RH X50 příkon nejvýš 20 kW (32 A) a vlastní jistič 3×40 A. Kaskáda dvou jednotek proto potřebuje přívod orientačně 3×80 A, k tomu malý příkon pro regulaci a čerpadla v kontejneru. Přesnou hodnotu určíme na obhlídce. Pokud přívod nestačí, prověříme dočasné posílení u distributora. Napájení z dieselového agregátu nedoporučujeme, protože by smazalo výhodu tepelného čerpadla.</p></details>
       <details><summary>Ohřejete i teplou vodu?</summary><p>Ano, přes zásobník teplé vody. Pro pravidelnou tepelnou dezinfekci se teplá voda dohřívá elektricky. To je v návrhu zahrnuté.</p></details>
       <details><summary>Kdo platí elektřinu?</summary><p>Vy, podle podružného elektroměru. Nájem zahrnuje zařízení, dálkový dohled a servis, dopravu a montáž účtujeme zvlášť. Teplo jako takové neprodáváme.</p></details>
       <details><summary>Můžeme kotelnu po pronájmu odkoupit?</summary><p>Ano. Část zaplaceného nájmu započteme do ceny. Podmínky dohodneme ve smlouvě předem.</p></details>
@@ -316,6 +300,14 @@
 <script src="assets/calc-core.js"></script>
 <script src="assets/site.js"></script>
 <script>
+/* Hero: střídání vizualizací */
+(function () {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (slides.length < 2) return;
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;   // bez prolínání (CSS) a pomaleji
+  let i = 0;
+  setInterval(() => { slides[i].classList.remove('active'); i = (i + 1) % slides.length; slides[i].classList.add('active'); }, calm ? 10000 : 7000);
+})();
 /* Modelový příklad: říjen–březen, soustava do 55 °C, dvě velikosti objektu podle sestav ceníku */
 (function () {
   const cases = [[24, 'Objekt s tepelnou ztrátou 24 kW · kotelna 50 kW (1× RH X50)'], [48, 'Objekt s tepelnou ztrátou 48 kW · kaskáda 100 kW (2× RH X50)']];
