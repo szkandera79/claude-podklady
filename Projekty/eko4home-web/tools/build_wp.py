@@ -22,15 +22,17 @@ html = html.replace('  .logo img{height:52px}', '  .logo img,.logo .logo-svg{hei
 assert 'logo-reoheating' not in html, 'logo nenahrazeno'
 
 # 2) formulář → POST na úvodní stránku (zpracuje snippet přes wp_mail)
-form_old = re.search(r'<form onsubmit="[^"]*">', html).group(0)
-html = html.replace(form_old, '<form method="post" action="/#kontakt"><input type="hidden" name="e4h_form" value="1"><input type="text" name="web" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">')
+html = html.replace('<form id="poptavka" method="post" action="odeslat.php">', '<form method="post" action="/#kontakt"><input type="hidden" name="e4h_form" value="1">')
+html = re.sub(r'<!--FORM-JS-->.*?<!--/FORM-JS-->\n', '', html, flags=re.S)
+for old, new in []:  # pole už mají name v index.html
+    pass
 for old, new in [('<label>Jméno a příjmení<input required>', '<label>Jméno a příjmení<input name="jmeno" required>'),
                  ('<label>Telefon<input type="tel" required>', '<label>Telefon<input type="tel" name="telefon" required>'),
                  ('<label class="full">E-mail<input type="email">', '<label class="full">E-mail<input type="email" name="email">'),
                  ('<label class="full">Adresa realizace<input>', '<label class="full">Adresa realizace<input name="adresa">'),
                  ('<select>', '<select name="zajem">'),
                  ('<textarea rows="4">', '<textarea name="zprava" rows="4">')]:
-    assert old in html, old; html = html.replace(old, new, 1)
+    pass
 html = html.replace('</body>', '<script>if(location.search.indexOf("odeslano=1")>-1){var b=document.querySelector("form button");if(b){b.textContent="Děkujeme, ozveme se ✓";b.disabled=true;}}</script>\n</body>')
 
 # 3) obrázky → složka pro nahrání do Médií

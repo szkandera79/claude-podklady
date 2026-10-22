@@ -587,15 +587,15 @@ footer .logo img{height:63px}
         <a class="ci" href="mailto:info@reoheating.cz"><span class="ic">✉️</span><div><small>Napište e-mail</small><b>info@reoheating.cz</b></div></a>
         <div class="ci"><span class="ic">📍</span><div><small>Sídlíme v Třinci</small><b>Schůzku si domluvte předem</b><br><small>Jsme často v terénu, ať s vámi počítáme.</small></div></div>
       </div>
-      <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Děkujeme, ozveme se ✓'">
-        <label>Jméno a příjmení<input required></label>
-        <label>Telefon<input type="tel" required></label>
-        <label class="full">E-mail<input type="email"></label>
-        <label class="full">Adresa realizace<input></label>
+      <form id="poptavka" method="post" action="odeslat.php"><input type="text" name="web" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <label>Jméno a příjmení<input name="jmeno" required></label>
+        <label>Telefon<input type="tel" name="telefon" required></label>
+        <label class="full">E-mail<input type="email" name="email"></label>
+        <label class="full">Adresa realizace<input name="adresa"></label>
         <label class="full">Mám zájem o
-          <select><option>Tepelné čerpadlo RH030–RH060</option><option>REO R290 Smart (topí ze sluníčka)</option><option>Bytový dům / SVJ</option><option>Komerční objekt</option><option>RHX30 Pro / RH X50</option><option>Akumulační nádrž / TUV</option><option>Fotovoltaika</option><option>Fotovoltaika + tepelné čerpadlo</option></select>
+          <select name="zajem"><option>Tepelné čerpadlo RH030–RH060</option><option>REO R290 Smart (topí ze sluníčka)</option><option>Bytový dům / SVJ</option><option>Komerční objekt</option><option>RHX30 Pro / RH X50</option><option>Akumulační nádrž / TUV</option><option>Fotovoltaika</option><option>Fotovoltaika + tepelné čerpadlo</option></select>
         </label>
-        <label class="full">Zpráva<textarea rows="4"></textarea></label>
+        <label class="full">Zpráva<textarea name="zprava" rows="4"></textarea></label>
         <div class="full"><button class="btn btn-primary" type="submit">Odeslat poptávku</button></div>
         <small class="full">Osobní údaje použijeme jen pro vyřízení poptávky.</small>
       </form>
@@ -626,5 +626,12 @@ document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',()=
 document.querySelectorAll('[data-pick]').forEach(a=>a.addEventListener('click',()=>{const s=document.querySelector('form select');s.value=a.dataset.pick;}));
 document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
 </script>
+<!--FORM-JS-->
+<script>
+(function(){var f=document.getElementById('poptavka');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button');b.disabled=true;b.textContent='Odesílám…';
+fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(r){return r.json()}).then(function(d){if(d.ok){b.textContent='Děkujeme, ozveme se ✓';f.reset();}else{b.disabled=false;b.textContent='Odeslat poptávku';alert(d.error||'Odeslání se nepodařilo, zavolejte nám prosím.');}})
+.catch(function(){b.disabled=false;b.textContent='Odeslat poptávku';alert('Odeslání se nepodařilo, zavolejte nám prosím +420 774 872 467.');});});})();
+</script>
+<!--/FORM-JS-->
 </body>
 </html>

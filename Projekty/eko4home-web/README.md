@@ -36,6 +36,6 @@ přes Pillow; originály v `assets/src-orig/`. Obrázek „Jak funguje“ = sch�
 
 ## Nasazení (eko4home.cz – WebSupport/Active24, dnes WordPress)
 - Balíček k nahrání: `dist/` (index.html + použité obrázky, ~4,5 MB). Znovu vytvořit: viz příkaz v historii (kopie index.html + všech `assets/img/*` odkazovaných v HTML).
-- Před ostrým spuštěním: formulář je jen maketa (neodesílá), ilustrace `k-*` pocházejí z cizího webu (souhlas / náhrada).
+- Formulář: statická verze posílá přes `odeslat.php` (mail(), From info@eko4home.cz → info@reoheating.cz + potvrzení tazateli); WP verze přes wp_mail. Ilustrace `k-*` z cizího webu – souhlas / náhrada.
 - Postup: záloha WP → FTP (FileZilla) do kořene webu → WordPress přesunout do podsložky (jinak má index.php přednost a .htaccess přepisuje URL) → nahrát obsah `dist/`.
 - **Varianta WordPress (jen přístup do WP admin):** `python3 eko4home-web/tools/build_wp.py` → `dist-wp/obrazky/` (nahrát do Médií) + `dist-wp/eko4home-snippet.php` (Code Snippets, „Spustit všude“). Snippet na úvodní stránce vypíše toto HTML místo Divi a formulář odesílá přes `wp_mail` na info@reoheating.cz. Vypnutí = deaktivovat snippet. Cesta k obrázkům `/wp-content/uploads/RRRR/MM/` je v proměnné `$img`.
