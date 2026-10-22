@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>REO HEATING — Nabídka RH050 · 15 kW</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root{
+    --green:#34A263;        /* REO zelená (podklady) */
+    --green-dark:#1E6A3D;   /* nadpisy */
+    --green-tint:#E9F6EE;   /* podbarvení */
+    --green-soft:#F5FBF7;
+    --amber:#F7C838;        /* akcent — štítek výprodeje */
+    --ink:#16201C;
+    --body:#55615A;
+    --line:#DCE8E0;
+    --paper:#FFFFFF;
+  }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body{
+    font-family:"Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:var(--ink); background:#8a8f94;
+    font-size:9.6pt; line-height:1.45;
+  }
+  .page{
+    width:210mm; height:297mm; display:flex; flex-direction:column; background:var(--paper);
+    position:relative; overflow:hidden; page-break-after:always;
+    padding:11mm 14mm 0;
+  }
+  .page:last-child{ page-break-after:auto; }
+  .page > *{ flex-shrink:0; }
+  @media screen{ .page{ margin:8mm auto; box-shadow:0 2px 12px rgba(0,0,0,.25); } }
+
+  /* ── hlavička ── */
+  .head{ display:flex; justify-content:space-between; align-items:center; }
+  .head img.logo{ width:42mm; display:block; }
+  .tag{
+    background:var(--amber); color:#2A1C02; font-weight:700; font-size:9pt;
+    padding:2.2mm 5.5mm; border-radius:20mm; letter-spacing:.02em;
+  }
+  .kicker{
+    font-size:8pt; letter-spacing:.26em; text-transform:uppercase;
+    color:var(--green); font-weight:700;
+  }
+  h1{
+    color:var(--green-dark); font-size:25pt; line-height:1.08; font-weight:700;
+    letter-spacing:-.015em; margin-top:2mm;
+  }
+  h1 em{ font-style:normal; color:var(--green); }
+  h2{
+    color:var(--green-dark); font-size:14pt; line-height:1.15; font-weight:700;
+    letter-spacing:-.01em; margin-bottom:3mm;
+  }
+  .lead{ font-size:10.2pt; color:var(--body); margin-top:3mm; max-width:170mm; }
+  .rule{ width:22mm; height:3px; background:var(--green); border-radius:2px; margin:4mm 0 0; }
+
+  /* ── hero ── */
+  .hero{ display:flex; align-items:stretch; gap:5mm; margin-top:4mm; }
+  .hero .units{ flex:1 1 auto; display:flex; align-items:center; }
+  .hero .units img{ width:100%; height:auto; display:block; border-radius:3mm; }
+  .price-card{
+    flex:0 0 72mm; border:1.4px solid var(--green); border-radius:4mm;
+    padding:4mm 5mm; background:var(--paper);
+  }
+  .price-card .model{ font-size:9pt; font-weight:700; color:var(--green); letter-spacing:.08em; text-transform:uppercase; }
+  .price-card .name{ font-size:15pt; font-weight:700; color:var(--green-dark); margin-top:.5mm; }
+  .price-card .price{ white-space:nowrap; font-size:23pt; font-weight:700; color:var(--ink); margin-top:2.5mm; line-height:1; letter-spacing:-.01em; }
+  .price-card .price small{ font-size:9pt; font-weight:600; color:var(--body); letter-spacing:0; }
+  .price-card .save{ display:inline-block; margin-top:2.5mm; background:var(--amber); color:#2A1C02; font-weight:700; font-size:8.6pt; padding:1.2mm 3mm; border-radius:2mm; }
+  .price-card .sub{ color:var(--body); font-size:8.8pt; margin-top:2mm; }
+  .price-card ul{ list-style:none; margin-top:3mm; border-top:1px solid var(--line); padding-top:2.5mm; }
+  .price-card li{ font-size:8.8pt; padding-left:4.5mm; position:relative; margin:1mm 0; }
+  .price-card li::before{ content:""; position:absolute; left:0; top:1.6mm; width:2mm; height:2mm; border-radius:50%; background:var(--green); }
+
+  /* ── parametry ── */
+  .params{ display:grid; grid-template-columns:repeat(4,1fr); gap:2.4mm; margin-top:4.5mm; }
+  .p{
+    background:var(--green-soft); border:1px solid var(--line); border-radius:3mm;
+    padding:2.6mm 3.2mm;
+  }
+  .p .v{ font-size:15pt; font-weight:700; color:var(--green-dark); line-height:1.05; }
+  .p .v small{ font-size:9pt; font-weight:700; }
+  .p .k{ font-size:8pt; color:var(--body); margin-top:1.2mm; line-height:1.3; }
+
+  /* ── modelová řada ── */
+  .range{ margin-top:3.5mm; display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); border-radius:3mm; overflow:hidden; }
+  .range div{ padding:2.6mm 3.4mm; border-left:1px solid var(--line); }
+  .range div:first-child{ border-left:0; }
+  .range b{ display:block; font-size:10.5pt; color:var(--green-dark); }
+  .range span{ font-size:8pt; color:var(--body); display:block; }
+  .range span.rp{ font-weight:700; color:var(--ink); }
+  .range .hl{ background:var(--green-tint); }
+
+  /* ── realizace ── */
+  .real-title{ margin-top:4.5mm; display:flex; justify-content:space-between; align-items:baseline; }
+  .real-title .note{ font-size:8pt; color:var(--body); }
+  .photos{ display:grid; gap:2.4mm; margin-top:2.5mm; }
+  .photos figure{ position:relative; border-radius:2.5mm; overflow:hidden; }
+  .photos img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .photos figcaption{
+    position:absolute; left:2mm; bottom:2mm; background:rgba(255,255,255,.92);
+    color:var(--green-dark); font-size:7.6pt; font-weight:700; padding:.8mm 2.4mm; border-radius:10mm;
+  }
+  .photos.p1{ grid-template-columns:1.55fr 1fr 1fr 1fr; height:34mm; }
+
+  /* ── patička ── */
+  .foot{
+    position:absolute; left:0; right:0; bottom:0; height:15mm;
+    background:var(--green); color:#fff; display:flex; align-items:center;
+    justify-content:space-between; padding:0 14mm; font-size:9pt;
+  }
+  .foot b{ font-size:10.5pt; }
+  .foot .sep{ opacity:.55; margin:0 2.5mm; }
+
+  /* ── strana 2: sestavy ── */
+  .packs{ display:grid; grid-template-columns:1fr 1fr; gap:5mm; margin-top:4mm; }
+  .pack{ border:1.4px solid var(--line); border-radius:4mm; overflow:hidden; display:flex; flex-direction:column; }
+  .pack.main{ border-color:var(--green); }
+  .pack .ph{ background:var(--green-tint); padding:2.8mm 4.5mm; }
+  .pack.main .ph{ background:var(--green); color:#fff; }
+  .pack .ph .lbl{ font-size:7.8pt; letter-spacing:.16em; text-transform:uppercase; font-weight:700; opacity:.85; }
+  .pack .ph .ttl{ font-size:13pt; font-weight:700; margin-top:.5mm; }
+  .pack .pb{ padding:3mm 4.5mm 4mm; flex:1; display:flex; flex-direction:column; }
+  table{ width:100%; border-collapse:collapse; }
+  td{ padding:1.1mm 0; vertical-align:top; border-bottom:1px solid var(--line); font-size:8.8pt; }
+  td.c{ text-align:right; white-space:nowrap; padding-left:3mm; font-weight:600; }
+  td .d{ display:block; font-size:7.6pt; color:var(--body); line-height:1.3; margin-top:.4mm; }
+  tr.sum td{ border-bottom:0; border-top:1.6px solid var(--green-dark); font-weight:700; font-size:10pt; color:var(--green-dark); padding-top:2mm; }
+  .sublbl{ font-size:7.8pt; letter-spacing:.14em; text-transform:uppercase; color:var(--green); font-weight:700; margin:3mm 0 .3mm; }
+  tr.tot td{ border-bottom:0; background:var(--green-tint); font-weight:700; font-size:10.4pt; color:var(--ink); padding:2.4mm 2.5mm; }
+  tr.tot td.c{ color:var(--green-dark); }
+  .pack .tip{ margin-top:auto; padding-top:3mm; font-size:7.8pt; color:var(--body); }
+
+  .inst-note{
+    margin-top:3mm; font-size:8.6pt; color:var(--body);
+    border-left:3px solid var(--green); padding:1mm 0 1mm 3.5mm;
+  }
+
+  /* ── servis ── */
+  .service{ display:grid; grid-template-columns:1.05fr 1fr; gap:5mm; margin-top:3.5mm; }
+  .svc{ background:var(--green-soft); border:1px solid var(--line); border-radius:4mm; padding:3.5mm 5mm; }
+  .svc ul{ list-style:none; }
+  .svc li{ padding-left:6mm; position:relative; margin:1mm 0; font-size:8.7pt; }
+  .svc li::before{
+    content:"✓"; position:absolute; left:0; top:-.2mm; color:#fff; background:var(--green);
+    width:4mm; height:4mm; border-radius:50%; font-size:7pt; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .svc .plus{ margin-top:2mm; font-size:8.4pt; color:var(--body); }
+  .photos.p2{ grid-template-columns:1fr 1fr 1fr; margin-top:0; }
+
+  /* ── poptávka ── */
+  .ask{ display:grid; grid-template-columns:1fr 30mm; gap:6mm; margin-top:4mm; align-items:start; }
+  .ask ol{ list-style:none; counter-reset:n; display:grid; grid-template-columns:1fr 1fr; gap:1.6mm 5mm; }
+  .ask li{ counter-increment:n; position:relative; padding-left:7mm; font-size:8.9pt; }
+  .ask li::before{
+    content:counter(n); position:absolute; left:0; top:-.1mm; width:4.8mm; height:4.8mm; border-radius:50%;
+    border:1.3px solid var(--green); color:var(--green-dark); font-size:7.4pt; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .ask .txt{ font-size:8.9pt; color:var(--body); margin-bottom:3mm; }
+  .qr{ text-align:center; font-size:7.6pt; color:var(--body); }
+  .qr img{ width:24mm; display:block; margin:0 auto 1.5mm; }
+
+  .partner{
+    margin-top:2.5mm; border:1px dashed #A9BDB0; border-radius:3mm; padding:2.6mm 4mm;
+    display:flex; justify-content:space-between; align-items:center; gap:5mm; font-size:8.4pt; color:var(--body);
+  }
+  .partner b{ color:var(--ink); }
+  .partner .pp{ font-size:11pt; font-weight:700; color:var(--ink); white-space:nowrap; }
+
+  .fine{ margin-top:auto; margin-bottom:16.8mm; padding-top:1.5mm; font-size:6.9pt; color:#7B867F; line-height:1.4; }
+</style>
+</head>
+<body>
+
+<!-- ═════════════ STRANA 1 ═════════════ -->
+<section class="page">
+  <div class="head">
+    <img class="logo" src="logo-reo-heating.svg" alt="REO HEATING">
+    <div class="tag">Výprodej skladu · jen do vyprodání zásob</div>
+  </div>
+
+  <div style="margin-top:6mm">
+    <div class="kicker">Tepelná čerpadla vzduch–voda · R290</div>
+    <h1>REO R290 — <em>česká značka,</em><br>český servis</h1>
+    <div class="rule"></div>
+    <p class="lead">Parametry srovnatelné s prémiovými evropskými značkami, nižší pořizovací
+    i servisní náklady. Výstupní teplota až 75 °C — vhodné pro nízkoenergetické domy
+    i pro starší objekty s radiátory.</p>
+  </div>
+
+  <div class="hero">
+    <div class="units"><img src="foto/hero-scena.jpg" alt="Tepelné čerpadlo REO R290 a nádrž WATERTANK"></div>
+    <div class="price-card">
+      <div class="model">Pro větší domy</div>
+      <div class="name">RH050 · 15 kW</div>
+      <div class="price">124 900 Kč <small>bez DPH</small></div>
+      <div class="save">Průměrná úspora 60–80 000 Kč</div>
+      <div class="sub">Pro větší domy s tepelnou ztrátou cca 9–13 kW. Cena jednotky bez montáže, instalaci naplánujete, až se vám to hodí.</div>
+      <ul>
+        <li>prémiový servis a <b>záruka až 10 let</b></li>
+        <li>pro velké domy <b>RH060 · 22 kW</b> za 168 900 Kč</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="params">
+    <div class="p"><div class="v">8–22 <small>kW</small></div><div class="k">topný výkon řady RH030–RH060</div></div>
+    <div class="p"><div class="v">COP 5,22</div><div class="k">při A7/W35 — z 1 kW elektřiny až 5,22 kW tepla</div></div>
+    <div class="p"><div class="v">A+++</div><div class="k">energetická třída při 35 °C i 55 °C</div></div>
+    <div class="p"><div class="v">75 <small>°C</small></div><div class="k">max. výstupní teplota — i pro radiátory</div></div>
+    <div class="p"><div class="v">R290</div><div class="k">ekologické přírodní chladivo, kompresor Highly (Hitachi)</div></div>
+    <div class="p"><div class="v">−25 <small>°C</small></div><div class="k">provoz do −25 °C venkovní teploty</div></div>
+    <div class="p"><div class="v">44–45 <small>dB(A)</small></div><div class="k">akustický tlak v 1 m (měření dle EN 12102-1)</div></div>
+    <div class="p"><div class="v">Wi‑Fi</div><div class="k">ovládání z mobilu, 5" dotykový displej, SG-Ready</div></div>
+  </div>
+
+  <div class="range">
+    <div><b>RH030 · 8 kW</b><span>menší novostavby</span><span class="rp">94 900 Kč</span></div>
+    <div><b>RH040 · 12 kW</b><span>středně velké domy</span><span class="rp">104 900 Kč</span></div>
+    <div class="hl"><b>RH050 · 15 kW</b><span>větší domy</span><span class="rp">124 900 Kč</span></div>
+    <div><b>RH060 · 22 kW</b><span>velké domy, kaskády</span><span class="rp">168 900 Kč</span></div>
+  </div>
+
+  <div class="real-title">
+    <h2 style="margin:0">Naše realizace</h2>
+    <span class="note">Instalace REO HEATING v rodinných domech a penzionech</span>
+  </div>
+  <div class="photos p1">
+    <figure><img src="foto/morava-hero.jpg" alt=""><figcaption>Penzion, Dolní Morava</figcaption></figure>
+    <figure><img src="foto/benesov-hero.jpg" alt=""><figcaption>Dolní Benešov</figcaption></figure>
+    <figure><img src="foto/kuncice-hero.jpg" alt="" style="object-position:30% 50%"><figcaption>Kunčice p. O.</figcaption></figure>
+    <figure><img src="foto/novy-venek.jpg" alt="" style="object-position:55% 60%"><figcaption>Baška</figcaption></figure>
+  </div>
+
+  <div class="foot">
+    <span><b>(+420) 774 872 467</b><span class="sep">|</span>info@reoheating.cz<span class="sep">|</span>reoheating.cz</span>
+    <span>Showroom, prodejna a sklad Třinec</span>
+  </div>
+</section>
+
+<!-- ═════════════ STRANA 2 ═════════════ -->
+<section class="page">
+  <div class="head" style="align-items:flex-end">
+    <div>
+      <div class="kicker">Nabídka · RH050 15 kW · PREMIUM</div>
+      <h2 style="margin-top:1.5mm;font-size:18pt;margin-bottom:1.5mm">Kolik stojí celá sestava</h2>
+    </div>
+    <img class="logo" src="logo-reo-heating.svg" alt="REO HEATING" style="width:32mm;margin-bottom:1mm">
+  </div>
+  <p class="lead" style="margin-top:0;font-size:9.4pt">Pouze vytápění, nebo i ohřev teplé vody — všechny ceny jsou bez DPH.</p>
+
+  <div class="packs">
+    <!-- A -->
+    <div class="pack">
+      <div class="ph"><div class="lbl">Sestava A</div><div class="ttl">Pouze vytápění</div></div>
+      <div class="pb">
+        <table>
+          <tr><td>Tepelné čerpadlo RH050 · 15 kW</td><td class="c">124 900 Kč</td></tr>
+          <tr><td>AKU 100 l nerez<span class="d">taktovací nádoba pro plynulý provoz, 3 kW spirála a termostat</span></td><td class="c">12 000 Kč</td></tr>
+          <tr><td>Doprava</td><td class="c">4 500 Kč</td></tr>
+          <tr class="sum"><td>Dodávka celkem <small style="font-size:7.8pt;font-weight:600">bez DPH</small></td><td class="c">141 400 Kč</td></tr>
+        </table>
+        <div class="sublbl">Instalace — orientačně</div>
+        <table>
+          <tr><td>Napojovací komponenty<span class="d">Wi‑Fi termostat, oběhové čerpadlo, expanzní nádoba, fitinky, trubky, izolace</span></td><td class="c">20 000 Kč</td></tr>
+          <tr><td>Topenářské a elektro práce</td><td class="c">25 000 Kč</td></tr>
+          <tr class="tot"><td>Celkem s instalací <small style="font-size:7.8pt;font-weight:600">bez DPH</small></td><td class="c">186 400 Kč</td></tr>
+        </table>
+      </div>
+    </div>
+    <!-- B -->
+    <div class="pack main">
+      <div class="ph"><div class="lbl">Sestava B</div><div class="ttl">Vytápění + ohřev teplé vody</div></div>
+      <div class="pb">
+        <table>
+          <tr><td>Tepelné čerpadlo RH050 · 15 kW</td><td class="c">124 900 Kč</td></tr>
+          <tr><td>AKU 100 l nerez<span class="d">taktovací nádoba, 3 kW spirála a termostat</span></td><td class="c">12 000 Kč</td></tr>
+          <tr><td>Zásobník TUV 200 l nerez<span class="d">bojler pro TČ s výměníkem 3 m², 3 kW spirála a termostat</span></td><td class="c">25 000 Kč</td></tr>
+          <tr><td>Doprava</td><td class="c">4 500 Kč</td></tr>
+          <tr class="sum"><td>Dodávka celkem <small style="font-size:7.8pt;font-weight:600">bez DPH</small></td><td class="c">166 400 Kč</td></tr>
+        </table>
+        <div class="sublbl">Instalace — orientačně</div>
+        <table>
+          <tr><td>Napojovací komponenty<span class="d">Wi‑Fi termostat, oběhové čerpadlo, expanzní nádoba, fitinky, trubky, izolace</span></td><td class="c">30 000 Kč</td></tr>
+          <tr><td>Topenářské a elektro práce</td><td class="c">25 000 Kč</td></tr>
+          <tr class="tot"><td>Celkem s instalací <small style="font-size:7.8pt;font-weight:600">bez DPH</small></td><td class="c">221 400 Kč</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <p class="inst-note">Montáž provede náš partner, nebo i váš topenář a elektrikář podle dodaného schématu.
+  Ostatní modely (jednotka, bez DPH): RH030 94 900 Kč, RH040 104 900 Kč, RH060 168 900 Kč.</p>
+
+  <div class="service">
+    <div class="svc">
+      <h2>Servis a záruka PREMIUM</h2>
+      <ul>
+        <li><b>záruka až 10 let</b> — 2 roky základní + rozšířená záruka</li>
+        <li>vzdálená diagnostika v záruční i pozáruční době</li>
+        <li>výjezd technika v základní záruce zdarma</li>
+        <li>odstranění závady do 7 pracovních dnů</li>
+        <li>rychlý a levnější servis díky modulární konstrukci a dostupným dílům</li>
+      </ul>
+      <p class="plus">Bez povinné roční revize a bez pravidelného doplňování chladiva — nižší provozní náklady dlouhodobě.</p>
+    </div>
+    <div class="photos p2">
+      <figure><img src="foto/novy-kotelna.jpg" alt=""><figcaption>Baška</figcaption></figure>
+      <figure><img src="foto/benesov-2.jpg" alt=""><figcaption>Dolní Benešov</figcaption></figure>
+      <figure><img src="foto/odry-watertank.jpg" alt=""><figcaption>Odry</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="ask">
+    <div>
+      <h2>Připravíme vám přesnou nabídku</h2>
+      <p class="txt" style="margin-bottom:2mm">Pošlete nám pár údajů o domě — doporučíme vhodnou jednotku a konfiguraci.</p>
+      <ol>
+        <li>tepelná ztráta domu (pokud ji znáte)</li>
+        <li>velikost vytápěné plochy</li>
+        <li>pouze vytápění, nebo i teplá voda</li>
+        <li>podlahové topení, radiátory, kombinace</li>
+        <li>lokalita instalace</li>
+      </ol>
+    </div>
+    <div class="qr"><img src="qr-reoheating.svg" alt="QR reoheating.cz">reoheating.cz</div>
+  </div>
+
+  <div class="partner">
+    <span><b>Pro montážní partnery (nákup na IČ):</b> velkoobchodní cena RH050 bez montáže, se základní
+    zárukou; servis zajišťuje partner, výjezd technika je zpoplatněn.</span>
+    <span class="pp">cena na dotaz</span>
+  </div>
+
+  <p class="fine">Ceny bez DPH, platí do vyprodání zásob; úspora oproti běžným cenám při současných výprodejových cenách.
+  Rozšířená záruka dle záručních podmínek REO HEATING. Ceny instalace jsou orientační. COP dle technického listu (A7/W35);
+  hlučnost L<sub>pA</sub> v 1 m dle protokolů TÜV SÜD (EN 12102-1), L<sub>WA</sub> 59 dB(A).</p>
+
+  <div class="foot">
+    <span><b>(+420) 774 872 467</b><span class="sep">|</span>info@reoheating.cz<span class="sep">|</span>reoheating.cz</span>
+    <span>Třinec · Po–Pá 9:00–16:00</span>
+  </div>
+</section>
+
+</body>
+</html>

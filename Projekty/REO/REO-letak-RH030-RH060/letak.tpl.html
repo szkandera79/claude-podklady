@@ -2,7 +2,7 @@
 <html lang="cs">
 <head>
 <meta charset="utf-8">
-<title>REO HEATING — Nabídka tepelných čerpadel REO R290 (RH030–RH060)</title>
+<title>REO HEATING — Nabídka {{MODEL}} · {{KW}} kW</title>
 <style>
   @page { size: A4; margin: 0; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,7 +36,7 @@
 
   /* ── hlavička ── */
   .head{ display:flex; justify-content:space-between; align-items:center; }
-  .head img.logo{ width:38mm; display:block; }
+  .head img.logo{ width:42mm; display:block; }
   .tag{
     background:var(--amber); color:#2A1C02; font-weight:700; font-size:9pt;
     padding:2.2mm 5.5mm; border-radius:20mm; letter-spacing:.02em;
@@ -58,9 +58,9 @@
   .rule{ width:22mm; height:3px; background:var(--green); border-radius:2px; margin:4mm 0 0; }
 
   /* ── hero ── */
-  .hero{ display:flex; align-items:center; gap:6mm; margin-top:4mm; }
-  .hero .units{ flex:1 1 auto; }
-  .hero .units img{ max-height:55mm; max-width:100%; display:block; margin:0 auto; }
+  .hero{ display:flex; align-items:stretch; gap:5mm; margin-top:4mm; }
+  .hero .units{ flex:1 1 auto; display:flex; align-items:center; }
+  .hero .units img{ width:100%; height:auto; display:block; border-radius:3mm; }
   .price-card{
     flex:0 0 72mm; border:1.4px solid var(--green); border-radius:4mm;
     padding:4mm 5mm; background:var(--paper);
@@ -90,7 +90,8 @@
   .range div{ padding:2.6mm 3.4mm; border-left:1px solid var(--line); }
   .range div:first-child{ border-left:0; }
   .range b{ display:block; font-size:10.5pt; color:var(--green-dark); }
-  .range span{ font-size:8pt; color:var(--body); }
+  .range span{ font-size:8pt; color:var(--body); display:block; }
+  .range span.rp{ font-weight:700; color:var(--ink); }
   .range .hl{ background:var(--green-tint); }
 
   /* ── realizace ── */
@@ -179,7 +180,7 @@
 <!-- ═════════════ STRANA 1 ═════════════ -->
 <section class="page">
   <div class="head">
-    <img class="logo" src="logo-reoheating.svg" alt="REO HEATING">
+    <img class="logo" src="logo-reo-heating.svg" alt="REO HEATING">
     <div class="tag">Výprodej skladu · jen do vyprodání zásob</div>
   </div>
 
@@ -193,36 +194,33 @@
   </div>
 
   <div class="hero">
-    <div class="units"><img src="foto/jednotky.png" alt="Tepelná čerpadla REO R290"></div>
+    <div class="units"><img src="foto/hero-scena.jpg" alt="Tepelné čerpadlo REO R290 a nádrž WATERTANK"></div>
     <div class="price-card">
-      <div class="model">Nejžádanější model</div>
-      <div class="name">RH040 · 12 kW</div>
-      <div class="price">104 900 Kč <small>bez DPH</small></div>
+      <div class="model">{{CARD_KICKER}}</div>
+      <div class="name">{{MODEL}} · {{KW}} kW</div>
+      <div class="price">{{PRICE}} Kč <small>bez DPH</small></div>
       <div class="save">Průměrná úspora 60–80 000 Kč</div>
-      <div class="sub">Pro domy s tepelnou ztrátou cca 7–10 kW. Cena jednotky bez montáže, instalaci naplánujete, až se vám to hodí.</div>
+      <div class="sub">{{FIT}} Cena jednotky bez montáže, instalaci naplánujete, až se vám to hodí.</div>
       <ul>
-        <li>prémiový servis a <b>záruka až 10 let</b> v ceně</li>
-        <li>RH030 · 8 kW o <b>10 000 Kč</b> levněji — pro menší novostavby do 200 m²</li>
+        <li>prémiový servis a <b>záruka až 10 let</b></li>
+        <li>{{ALT}}</li>
       </ul>
     </div>
   </div>
 
   <div class="params">
     <div class="p"><div class="v">8–22 <small>kW</small></div><div class="k">topný výkon řady RH030–RH060</div></div>
-    <div class="p"><div class="v">COP 5,29</div><div class="k">při A7/W35 — z 1 kW elektřiny až 5,29 kW tepla</div></div>
+    <div class="p"><div class="v">COP {{COP}}</div><div class="k">při A7/W35 — z 1 kW elektřiny až {{COP}} kW tepla</div></div>
     <div class="p"><div class="v">A+++</div><div class="k">energetická třída při 35 °C i 55 °C</div></div>
     <div class="p"><div class="v">75 <small>°C</small></div><div class="k">max. výstupní teplota — i pro radiátory</div></div>
     <div class="p"><div class="v">R290</div><div class="k">ekologické přírodní chladivo, kompresor Highly (Hitachi)</div></div>
     <div class="p"><div class="v">−25 <small>°C</small></div><div class="k">provoz do −25 °C venkovní teploty</div></div>
-    <div class="p"><div class="v">43–47 <small>dB(A)</small></div><div class="k">akustický tlak v 1 m (měření dle EN 12102-1)</div></div>
+    <div class="p"><div class="v">{{LP}} <small>dB(A)</small></div><div class="k">akustický tlak v 1 m (měření dle EN 12102-1)</div></div>
     <div class="p"><div class="v">Wi‑Fi</div><div class="k">ovládání z mobilu, 5" dotykový displej, SG-Ready</div></div>
   </div>
 
   <div class="range">
-    <div><b>RH030 · 8 kW</b><span>menší novostavby</span></div>
-    <div class="hl"><b>RH040 · 12 kW</b><span>středně velké domy</span></div>
-    <div><b>RH050 · 15 kW</b><span>větší domy</span></div>
-    <div><b>RH060 · 22 kW</b><span>velké domy, kaskády</span></div>
+{{RANGE}}
   </div>
 
   <div class="real-title">
@@ -246,10 +244,10 @@
 <section class="page">
   <div class="head" style="align-items:flex-end">
     <div>
-      <div class="kicker">Nabídka · RH040 12 kW · PREMIUM</div>
+      <div class="kicker">Nabídka · {{MODEL}} {{KW}} kW · PREMIUM</div>
       <h2 style="margin-top:1.5mm;font-size:18pt;margin-bottom:1.5mm">Kolik stojí celá sestava</h2>
     </div>
-    <img class="logo" src="logo-reoheating.svg" alt="REO HEATING" style="width:28mm;margin-bottom:2mm">
+    <img class="logo" src="logo-reo-heating.svg" alt="REO HEATING" style="width:32mm;margin-bottom:1mm">
   </div>
   <p class="lead" style="margin-top:0;font-size:9.4pt">Pouze vytápění, nebo i ohřev teplé vody — všechny ceny jsou bez DPH.</p>
 
@@ -259,16 +257,16 @@
       <div class="ph"><div class="lbl">Sestava A</div><div class="ttl">Pouze vytápění</div></div>
       <div class="pb">
         <table>
-          <tr><td>Tepelné čerpadlo RH040 · 12 kW</td><td class="c">104 900 Kč</td></tr>
+          <tr><td>Tepelné čerpadlo {{MODEL}} · {{KW}} kW</td><td class="c">{{PRICE}} Kč</td></tr>
           <tr><td>AKU 100 l nerez<span class="d">taktovací nádoba pro plynulý provoz, 3 kW spirála a termostat</span></td><td class="c">12 000 Kč</td></tr>
           <tr><td>Doprava</td><td class="c">4 500 Kč</td></tr>
-          <tr class="sum"><td>Dodávka celkem <small style="font-size:7.8pt;font-weight:600">bez DPH</small></td><td class="c">121 400 Kč</td></tr>
+          <tr class="sum"><td>Dodávka celkem <small style="font-size:7.8pt;font-weight:600">bez DPH</small></td><td class="c">{{A_DOD}} Kč</td></tr>
         </table>
         <div class="sublbl">Instalace — orientačně</div>
         <table>
           <tr><td>Napojovací komponenty<span class="d">Wi‑Fi termostat, oběhové čerpadlo, expanzní nádoba, fitinky, trubky, izolace</span></td><td class="c">20 000 Kč</td></tr>
           <tr><td>Topenářské a elektro práce</td><td class="c">25 000 Kč</td></tr>
-          <tr class="tot"><td>Celkem s instalací <small style="font-size:7.8pt;font-weight:600">bez DPH</small></td><td class="c">166 400 Kč</td></tr>
+          <tr class="tot"><td>Celkem s instalací <small style="font-size:7.8pt;font-weight:600">bez DPH</small></td><td class="c">{{A_TOT}} Kč</td></tr>
         </table>
       </div>
     </div>
@@ -277,24 +275,24 @@
       <div class="ph"><div class="lbl">Sestava B</div><div class="ttl">Vytápění + ohřev teplé vody</div></div>
       <div class="pb">
         <table>
-          <tr><td>Tepelné čerpadlo RH040 · 12 kW</td><td class="c">104 900 Kč</td></tr>
+          <tr><td>Tepelné čerpadlo {{MODEL}} · {{KW}} kW</td><td class="c">{{PRICE}} Kč</td></tr>
           <tr><td>AKU 100 l nerez<span class="d">taktovací nádoba, 3 kW spirála a termostat</span></td><td class="c">12 000 Kč</td></tr>
           <tr><td>Zásobník TUV 200 l nerez<span class="d">bojler pro TČ s výměníkem 3 m², 3 kW spirála a termostat</span></td><td class="c">25 000 Kč</td></tr>
           <tr><td>Doprava</td><td class="c">4 500 Kč</td></tr>
-          <tr class="sum"><td>Dodávka celkem <small style="font-size:7.8pt;font-weight:600">bez DPH</small></td><td class="c">146 400 Kč</td></tr>
+          <tr class="sum"><td>Dodávka celkem <small style="font-size:7.8pt;font-weight:600">bez DPH</small></td><td class="c">{{B_DOD}} Kč</td></tr>
         </table>
         <div class="sublbl">Instalace — orientačně</div>
         <table>
           <tr><td>Napojovací komponenty<span class="d">Wi‑Fi termostat, oběhové čerpadlo, expanzní nádoba, fitinky, trubky, izolace</span></td><td class="c">30 000 Kč</td></tr>
           <tr><td>Topenářské a elektro práce</td><td class="c">25 000 Kč</td></tr>
-          <tr class="tot"><td>Celkem s instalací <small style="font-size:7.8pt;font-weight:600">bez DPH</small></td><td class="c">201 400 Kč</td></tr>
+          <tr class="tot"><td>Celkem s instalací <small style="font-size:7.8pt;font-weight:600">bez DPH</small></td><td class="c">{{B_TOT}} Kč</td></tr>
         </table>
       </div>
     </div>
   </div>
 
   <p class="inst-note">Montáž provede náš partner, nebo i váš topenář a elektrikář podle dodaného schématu.
-  S modelem RH030 · 8 kW je každá sestava o 10 000 Kč levnější.</p>
+  {{INST_NOTE}}</p>
 
   <div class="service">
     <div class="svc">
@@ -311,7 +309,7 @@
     <div class="photos p2">
       <figure><img src="foto/novy-kotelna.jpg" alt=""><figcaption>Baška</figcaption></figure>
       <figure><img src="foto/benesov-2.jpg" alt=""><figcaption>Dolní Benešov</figcaption></figure>
-      <figure><img src="foto/odry-3.jpg" alt=""><figcaption>Odry</figcaption></figure>
+      <figure><img src="foto/odry-watertank.jpg" alt=""><figcaption>Odry</figcaption></figure>
     </div>
   </div>
 
@@ -331,14 +329,14 @@
   </div>
 
   <div class="partner">
-    <span><b>Pro montážní partnery (nákup na IČ):</b> velkoobchodní cena RH040 bez montáže, se základní
+    <span><b>Pro montážní partnery (nákup na IČ):</b> velkoobchodní cena {{MODEL}} bez montáže, se základní
     zárukou; servis zajišťuje partner, výjezd technika je zpoplatněn.</span>
-    <span class="pp">74 990 Kč <small style="font-size:8pt;font-weight:600">bez DPH</small></span>
+    <span class="pp">{{PARTNER}}</span>
   </div>
 
   <p class="fine">Ceny bez DPH, platí do vyprodání zásob; úspora oproti běžným cenám při současných výprodejových cenách.
   Rozšířená záruka dle záručních podmínek REO HEATING. Ceny instalace jsou orientační. COP dle technického listu (A7/W35);
-  hlučnost L<sub>pA</sub> v 1 m dle protokolů TÜV SÜD (EN 12102-1), L<sub>WA</sub> 57–62 dB(A).</p>
+  hlučnost L<sub>pA</sub> v 1 m dle protokolů TÜV SÜD (EN 12102-1), L<sub>WA</sub> {{LWA}} dB(A).</p>
 
   <div class="foot">
     <span><b>(+420) 774 872 467</b><span class="sep">|</span>info@reoheating.cz<span class="sep">|</span>reoheating.cz</span>
