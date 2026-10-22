@@ -22,6 +22,8 @@ jako „–" a křivku přeruší.
 - `src/data.js` – všechna data (jediný zdroj pravdy); `src/sheet.js` + `sheet.css` – vykreslení listu
 - `src/index.template.html` – artefakt (přepínač modelů)
 - `src/assets/` – logo + štítky (PNG vyrenderované z `../REO datové listy/RH 0x0 Energy Label.pdf`)
+- **Logo:** `src/assets/logo-reo-heating.svg` (+ `.png`) = kopie závazného loga z `../logo/` (od 22. 10. 2026; staré
+  `logo-reoheating.png` vyřazeno). Do listů se vkládá SVG jako data URI (`build.py`, `ASSETS.logo`), výška 18 mm v hlavičce.
 - `build.py` → `print/*.html`, `pdf/*.pdf` (headless Chrome), `index.html` (artefakt)
 
 ## Zdroje dat

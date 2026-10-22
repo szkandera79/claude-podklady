@@ -8,7 +8,8 @@ S = sys.argv[1]
 FF = f"{S}/ffmpeg"
 SRC = f"{S}/src/in.mp4"
 ST = f"{S}/still"
-LOGO = "/Users/jindrichszkandera/Claude/banner-generator/sablony/assets/reo-logo-ai.png"
+# logo REO HEATING (závazné od 22. 10. 2026, kopie z ~/Claude/REO/logo/logo-reo-heating.png)
+LOGO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "logo-reo-heating.png")
 W, H = 1920, 1080
 FPS = 60000 / 1001
 AV = "/System/Library/Fonts/Avenir Next.ttc"
@@ -109,7 +110,8 @@ def paste_a(base, layer, alpha, xy=(0, 0)):
 
 # ---------------------------------------------------------------- logo
 logo = Image.open(LOGO).convert("RGBA")
-LH = 84
+logo = logo.crop(logo.getbbox())                       # bez průhledného okraje
+LH = 90
 logo_s = logo.resize((int(logo.width * LH / logo.height), LH), Image.LANCZOS)
 PL = (34, 26, 34 + max(334, logo_s.width + 40), 138)  # deska přes logo výrobce (45–355 × 40–125)
 plate = Image.new("RGBA", (PL[2] - PL[0], PL[3] - PL[1]), (0, 0, 0, 0))

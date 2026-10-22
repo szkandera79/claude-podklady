@@ -13,25 +13,11 @@ os.makedirs(OUT, exist_ok=True)
 z = zipfile.ZipFile(SRC)
 load = lambda n: Image.open(io.BytesIO(z.read('ppt/media/' + n)))
 def logo_variants():
-    """Logo REO HEATING (stejné jako v manuálu): bílé pozadí → průhlednost; bílá varianta pro tmavé pozadí."""
-    src = Image.open(os.path.join(DIR, 'media', 'logo-reoheating.png')).convert('RGB')
-    col = Image.new('RGBA', src.size)
-    wht = Image.new('RGBA', src.size)
-    cp, wp, sp = col.load(), wht.load(), src.load()
-    for y in range(src.height):
-        for x in range(src.width):
-            r, g, b = sp[x, y]
-            a = 255 - min(r, g, b)                 # čím tmavší/sytější, tím neprůhlednější
-            a = min(255, int(a * 1.6))
-            if a < 8:
-                a = 0
-            k = 255 - a if a else 0
-            cp[x, y] = (min(255, int((r - k) * 255 / a)) if a else 0,
-                        min(255, int((g - k) * 255 / a)) if a else 0,
-                        min(255, int((b - k) * 255 / a)) if a else 0, a)
-            wp[x, y] = (255, 255, 255, a)
-    bb = col.getbbox()
-    return col.crop(bb), wht.crop(bb)
+    """Logo REO HEATING (závazné od 22. 10. 2026, kopie z ~/Claude/REO/logo): barevné + bílá varianta pro tmavé pozadí.
+    PNG jsou průhledné; ořízne se jen prázdný okraj."""
+    col = Image.open(os.path.join(DIR, 'media', 'logo-reo-heating.png')).convert('RGBA')
+    wht = Image.open(os.path.join(DIR, 'media', 'logo-reo-heating-white.png')).convert('RGBA')
+    return col.crop(col.getbbox()), wht.crop(wht.getbbox())
 
 
 LOGO, LOGO_W = logo_variants()

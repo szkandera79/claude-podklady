@@ -1,7 +1,6 @@
 [Text vytažený z RH-X50-katalog-EN.pdf]
 
 --- strana 1 ---
-S . R . O.
 C O M M E R C I A L S E R I E S · R 2 9 0 R E F R I G E R A N T
 RH X50
 Full DC inverter
@@ -35,7 +34,6 @@ Designed for
 commercial applications
 RH X50 combines maximum efficiency with versatility. It covers heating, cooling and hot water, and
 cascade control lets it grow with the building's demand.
-S . R . O.
 R290 refrigerant (propane) — ODP = 0, low GWP = 3.
 Dual DC inverter technology: precise and efficient heating with a
 water outlet temperature of up to 78 °C.
@@ -78,7 +76,6 @@ REO HEATING · RH X50 02
 D E S I G N A N D E Q U I P M E N T
 Premium configuration,
 reliable quality
-S . R . O.
 Large colour touchscreen controller with a built-in Wi‑Fi module.
 Heating and hot water status on a single screen.
 Modes T emperatures Status Functions Settings heating · hot water · cooling · automatic
@@ -126,7 +123,6 @@ REO HEATING · RH X50 03
 T E C H N I C A L D A T A
 DC inverter R290 heat pump
 for heating, cooling and hot water
-S . R . O.
 Model RH X50
 Domestic hot water ambient 20/15 °C (DB/WB), water 15/55 °C
 Heating capacity (kW) 23.8–68
@@ -160,7 +156,6 @@ Packing dimensions W × D × H (mm) 1,275 × 1,060 × 2,100
 Net weight (kg) 370
 Specifications may change as part of continuous product development. The data on the rating plate of the delivered unit are binding. For
 detailed performance curves, see the RH X50 performance data sheet.
-S . R . O.
 E‑ M A I L
 info@reoheating.cz
 P H O N E

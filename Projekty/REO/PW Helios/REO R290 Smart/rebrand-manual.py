@@ -14,15 +14,17 @@ Co skript dělá:
   * záložky (osnova) a metadata PDF.
 Výsledek: REO-R290-Smart_navod-EN.pdf
 """
+import io
 import os
 import re
 
 import fitz
+from PIL import Image
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(DIR, '..', 'aTechnical Manual Helios Residential and Commercial.pdf')
 OUT = os.path.join(DIR, 'REO-R290-Smart_navod-EN.pdf')
-LOGO = os.path.join(DIR, 'logo-reoheating.png')
+LOGO = os.path.join(DIR, 'logo-reo-heating.png')   # závazné logo od 22. 10. 2026 (kopie z REO/logo)
 GREEN = (0x2E / 255, 0x6B / 255, 0x33 / 255)
 SERIES = 'REO R290 Smart'
 COVER_LINE = SERIES                                   # zelený řádek pod nadpisem
@@ -94,8 +96,13 @@ cover.draw_rect(fitz.Rect(55.0, 110.0, 347.0, 136.5), color=None, fill=(1, 1, 1)
 cover.insert_text((56.6, 129.0), COVER_LINE, fontname='arialbd', fontsize=17.0, color=GREEN,
                   fontfile='/System/Library/Fonts/Supplemental/Arial Bold.ttf')
 w = 112.0
-cover.insert_image(fitz.Rect(56.6, 172.0, 56.6 + w, 172.0 + w * 582 / 1610), filename=LOGO)
-cover.insert_text((56.6, 172.0 + w * 582 / 1610 + 22), MODELS_LINE, fontname='arialbd', fontsize=12.0,
+_im = Image.open(LOGO).convert('RGBA')
+_im = _im.crop(_im.getchannel('A').getbbox())              # PNG má průhledný okraj → oříznout
+_im = _im.resize((1000, round(1000 * _im.height / _im.width)), Image.LANCZOS)
+_buf = io.BytesIO(); _im.save(_buf, 'PNG', optimize=True)
+_ratio = _im.height / _im.width
+cover.insert_image(fitz.Rect(56.6, 172.0, 56.6 + w, 172.0 + w * _ratio), stream=_buf.getvalue())
+cover.insert_text((56.6, 172.0 + w * _ratio + 22), MODELS_LINE, fontname='arialbd', fontsize=12.0,
                   color=(0.33, 0.33, 0.33), fontfile='/System/Library/Fonts/Supplemental/Arial Bold.ttf')
 
 # ---- záložky ----

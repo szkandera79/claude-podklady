@@ -3,6 +3,11 @@
 **Název řady:** REO R290 Smart (nová řada, odlišení od starší REO R290 RH030–RH060). Slovo „Helios“ (název řady výrobce)
 se nikde ve výstupech ani názvech souborů neuvádí. Modely: RH06–RH16 1F/3F, RHX20 Pro, RHX30 Pro.
 
+**Logo (od 22. 10. 2026):** jen závazné logo `../../logo/` (šedá + zelená střecha, okno, slunce, nápis REO HEATING).
+Kopie: `logo-reo-heating(.png)` v kořeni (návod), `katalog/assets/logo-reo-heating(-white).svg/.png`, `letaky/assets/*.svg`,
+`katalog-en/assets/*.png` (bílá varianta na tmavé záhlaví). Starší loga (`logo-reoheating.png`, `logo-cut.png`,
+`letaky/assets/logo.png`) se v buildech už nepoužívají. Po změně loga v `REO/logo` zkopírovat a přegenerovat výstupy.
+
 Rebranding originálního manuálu výrobce (`../aTechnical Manual Helios Residential and Commercial.pdf`,
 99 stran, anglicky) na značku **REO HEATING**.
 

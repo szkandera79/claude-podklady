@@ -10,6 +10,7 @@ Jednostránkový návrh (statické HTML) nového webu eko4home.cz (Riva Trade s.
   - Nádrže AKU 100/500, TUV 200/300, Watertank 210/70 a 330/120 — z e-shopu REO
 - Úvod přes celou šířku: schéma F s RH060 (`hero-schema.webp`; varianta s RHX30 Pro `hero-x30.webp`) vpravo dole, vlevo rozmazané pozadí (`hero-blur.webp`) + tmavý přechod, bílý text; varianty pozadí v `navrhy-hero/`; pod úvodem pruh „Topí přímo ze sluníčka“ (Smart RH14). Sekce „Pro koho“: rodinné domy · bytové domy a SVJ · komerční objekty
   (BD a firmy = RHX30 Pro + RH X50). Působnost: celá ČR a Slovensko, sídlo Třinec.
+- Logo REO HEATING (hlavička + patička): `assets/img/logo-reoheating(-light).svg` = kopie nového závazného loga z `~/Claude/REO/logo/` (22. 10. 2026; `-light` = bílá varianta). Ve WP verzi se vkládá inline (do Médií se nenahrává).
 - Texty (Proč my, recenze, kontakt) převzaty ze současného eko4home.cz.
 
 ## Otevřené body

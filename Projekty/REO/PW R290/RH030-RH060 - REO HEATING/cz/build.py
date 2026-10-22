@@ -20,7 +20,7 @@ import fitz
 DIR = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(DIR, '..', '..', 'Power World R290 Heat Pump User Manual.pdf')
 OUT = os.path.join(DIR, '..', 'RH030-RH060-navod-CZ_REO-HEATING.pdf')
-LOGO = os.path.join(DIR, '..', 'logo-reoheating.png')
+LOGO = os.path.join(DIR, '..', 'logo-reo-heating.png')   # závazné logo od 22. 10. 2026 (REO/logo)
 GREEN = (0x2E / 255, 0x6B / 255, 0x33 / 255)
 COVER_LINE = 'RH030  ·  RH040  ·  RH050  ·  RH060'
 FONTDIR = '/System/Library/Fonts/Supplemental'
@@ -320,7 +320,8 @@ if not IDENTITY:
     cover.insert_text((56.6, 129.0), COVER_LINE, fontname='arialbd', fontsize=17.0, color=GREEN,
                       fontfile=os.path.join(FONTDIR, 'Arial Bold.ttf'))
     w = 112.0
-    cover.insert_image(fitz.Rect(56.6, 172.0, 56.6 + w, 172.0 + w * 582 / 1610), filename=LOGO)
+    lp = fitz.Pixmap(LOGO)
+    cover.insert_image(fitz.Rect(56.6, 172.0, 56.6 + w, 172.0 + w * lp.height / lp.width), filename=LOGO)
 
     # rastrové obrázky
     import io

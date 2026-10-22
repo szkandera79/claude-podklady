@@ -418,19 +418,19 @@ Tepelné
 --- strana 35 ---
 Elektrické zapojení
 • Řídicí deska RHX20 Pro
-H,G,,4R,STT
+)M9MM45M677
 M PPT Bo a rd O p t io n a l
 ®C O m it If N o t U se d
 40!
 4 - W a y v a lv e
-"G
-"G
-NO+ P+L
+"*
+"*
+12+ 3+/
 0
-L
--. L 0 -. L 0 -. 0
--IN
-mB
+/
+-. / 0 -. / 0 -. 0
+-,1
+Pl
 !
 ,
 -.
@@ -438,14 +438,14 @@ T S R
 !
 ,
 -.
-I T
-!B
+I 7
+!%
 Lo w p r e ssu r e se n so r
-AB'EF
-AB&!
-!B
-AN AO A5
-E + I
+$%'()
+$%&!
+!%
+$1 $2 $5
+( + ,
 A m b ie n t t e m p Su ct io n g a s t e m p
 T W o u t 1 w a t e r t e m p
 ( p la t e e x ch a n g e r )
@@ -453,7 +453,7 @@ Fin t e m p
 Ex h a u st g a s t e m p
 W a t e r in le t t e m p
 P
-iI
+LI
 W a t e r Flo w sw it ch
 !"
 Ele ct ric H e a t in g
@@ -462,92 +462,92 @@ P
 P
 Lo w p re ssu re sw it ch
 H ig h p re ssu re sw it ch
-Im a x £ ! 2 0 A
+Im a x £ T 2 0 A
 Pm a x = 1 1 KW
-NEBT
-(#)G+
+N(l7
+(#)*+
 !
 A C- N
 !
-A A C2 2 0 V
+$ A C2 2 0 V
 A C- L
-NEBI
-EFGH,-./,MN
-!
-!"#AB
-AB#)G+
+N(lI
+(19)MBFwMO1
+a
+!"#$%
+$%#)*+
+pu
+m
+!"#$&
+$&#)*+
+,*
+lu
+dg
+!"#$'
+$'#)*+
 "#
-A
-!"#AC
-AC#)G+
-,G
-B#
-CD
-!"#A'
-A'#)G+
-"#
-O.P
-CD
+2F3
+dg
 G N D
-8V#:;Y=>?=>#@=A?#BCaB#=E=V?>:VAE#c:Ad>AaeI,C#GH,-#!Tg,h
+89u:;<=>?=>u@=A?uBCDBu=E=9?>:9AEuF:AG>ADHIMdu9)MBua7JMK
 D PH e - h e a t in g
 Q Z H 1 e - h e a t in g
 R 2 9 0 D e t e ct io n ( R S4 8 5 )
-lA?=>#BCaB
+OA?=>uBCDB
 N
-iA:;#DD-
-lA?=>#BCaB
+LA:;uggB
+OA?=>uBCDB
 M
-"P
+p3
 RS4 8 5 in t e rf a ce T o
 in d o o r u n it
-E
+(
 RS4 8 5 in t e rf a ce T o In v e rt e r
 L
-8F#CCaB
+81udCDB
 --- strana 36 ---
 Elektrické zapojení
 • Řídicí deska RHX30 Pro
-H,G,,4R,STG
+)M9MM45M679
 5'
-5S
-5C
+56
+5&
 M PPT Bo a rd O p t io n a l
 ®C O m it If N o t U se d
 !
 4 - W a y v a lv e
-5T
-. BCO PO L
+57
+. %&2 32 /
 .
-L
-0N
-. L 0N
-. L 0N
+/
+01
+. / 01
+. / 01
 4.!
-5B
-I T
-mB
-0VB
-!IU
+5%
+I 7
+Pl
+09%
+!,8
 ,
 -.
-!E
+!(
 +
-O
-V
-iI
+2
+9
+LI
 T S R
 Lo w p r e ssu r e se n so r
-!E
-"J
-"J
+!(
+"-
+"-
 A m b ie n t t e m p Su ct io n g a s t e m p
 T W o u t 1 w a t e r t e m p
 ( p la t e e x ch a n g e r)
 Fin t e m p
 Ex h a u st g a s t e m p
 W a t e r in le t t e m p
-AB AC A' AEF! AEG+I
+$% $& $' $()! $(*+,
 P
 W a t e r Flo w sw it ch
 !"
@@ -557,49 +557,49 @@ P
 Lo w p re ssu re sw it ch
 H ig h p re ssu re sw it ch
 P
-Im a x £ ! 2 0 A
+Im a x £ T 2 0 A
 Pm a x = 1 1 KW
-NEBT
-(#)G+
+N(l7
+(#)*+
 !
 A C- N
 !
-A A C2 2 0 V
+$ A C2 2 0 V
 A C- L
-NEBI
-EFGH,-./,MN
-!
-!"#AB
-AB#)G+
+N(lI
+(19)MBFwMO1
+a
+!"#$%
+$%#)*+
+pu
+m
+!"#$&
+$&#)*+
+,*
+lu
+dg
+!"#$'
+$'#)*+
 "#
-A
-!"#AC
-AC#)G+
-,G
-B#
-CD
-!"#A'
-A'#)G+
-"#
-O.P
-CD
+2F3
+dg
 G N D
-8V#:;Y=>?=>#@=A?#BCaB#=E=V?>:VAE#c:Ad>AaeI/C#GH,-#!Tg,h
+89u:;<=>?=>u@=A?uBCDBu=E=9?>:9AEuF:AG>ADHIwdu9)MBua7JMK
 D P H e - h e a t in g
 Q Z H 1 e - h e a t in g
 R 2 9 0 D e t e ct io n ( R S4 8 5 )
-lA?=>#BCaB
+OA?=>uBCDB
 N
-iA:;#DD-
-lA?=>#BCaB
+LA:;uggB
+OA?=>uBCDB
 M
-"P
+p3
 RS4 8 5 in t e rf a ce T o
 in d o o r u n it
-E
+(
 RS4 8 5 in t e rf a ce T o In v e rt e r
 L
-8F#CCaB
+81udCDB
 --- strana 37 ---
 Elektrické zapojení
 • Vnitřní řídicí deska RHX20 Pro / RHX30 Pro

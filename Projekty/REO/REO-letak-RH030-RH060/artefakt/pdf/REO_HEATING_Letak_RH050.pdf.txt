@@ -27,12 +27,6 @@ chladivo, kompresor Highly
 COP 5,22
 při A7/W35 — z 1 kW
 elektřiny až 5,22 kW tepla
-−25 °C
-provoz do −25 °C venkovní
-teploty
-RH040 · 12 kW
-středně velké domy
-104 900 Kč
 A+++
 energetická třída při 35 °C i
 55 °C
@@ -45,6 +39,13 @@ radiátory
 Wi‑Fi
 ovládání z mobilu, 5"
 dotykový displej, SG-Ready
+−10 °C bez dohřevu
+výkonnější kompresor než u
+konkurence · provoz do −25
+°C
+RH040 · 12 kW
+středně velké domy
+104 900 Kč
 RH030 · 8 kW
 menší novostavby
 94 900 Kč
@@ -55,7 +56,7 @@ RH060 · 22 kW
 velké domy, kaskády
 168 900 Kč
 Instalace REO HEATING v rodinných domech a penzionech
-Penzion, Dolní Morava Dolní Benešov Kunčice p. O. Baška
+Penzion, Dolní Morava Dolní Benešov Odry Baška
 (+420) 774 872 467 info@reoheating.cz reoheating.cz | |
 Showroom, prodejna a sklad Třinec
 --- strana 2 ---
@@ -128,7 +129,7 @@ Pro montážní partnery (nákup na IČ): velkoobchodní cena RH050 bez montáž
 servis zajišťuje partner, výjezd technika je zpoplatněn.
 reoheating.cz
 cena na dotaz
-Ceny bez DPH, platí do vyprodání zásob; úspora oproti běžným cenám při současných výprodejových cenách. Rozšířená záruka dle záručních podmínek REO
-HEATING. Ceny instalace jsou orientační. COP dle technického listu (A7/W35); hlučnost LpA v 1 m dle protokolů TÜV SÜD (EN 12102-1), LWA 59 dB(A).
+Ceny bez DPH, platí do vyprodání zásob; úspora oproti běžným cenám při výprodeji. Záruka dle záručních podmínek REO HEATING. Instalace orientačně. Vytápění
+bez el. dohřevu při −10 °C při správném dimenzování výkonu. COP dle tech. listu (A7/W35); LpA v 1 m dle protokolů TÜV SÜD (EN 12102-1), LWA 59 dB(A).
 (+420) 774 872 467 info@reoheating.cz reoheating.cz | |
 Třinec · Po–Pá 9:00–16:00

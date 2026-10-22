@@ -298,16 +298,15 @@ m
 í
 í
 --- strana 2 ---
-Srovnání hlučnosti
 A
+Srovnání hlučnosti
 kust
 ický výk
 on a akust
 ický tlak · aplikace 55 °C · t
 epelná čerpadla vzd
 u
-R290
-ch–voda
+ch–voda R290
 A
 kust
 ický výk
@@ -437,6 +436,7 @@ je RHX30 Pro (42 dB v 1 m) — a t
 o př
 i nejvyšším výk
 on
+t šš RH 3 (44 )l t š RH 4 (47 )
 u
 domovn
 í

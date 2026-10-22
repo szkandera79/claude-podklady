@@ -18,7 +18,8 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '&family=Poppins:wght@500;600&display=swap" rel="stylesheet">')
 
 def data_uri(p):
-    return "data:image/png;base64," + base64.b64encode(p.read_bytes()).decode()
+    mime = "image/svg+xml" if p.suffix == ".svg" else "image/png"
+    return f"data:{mime};base64," + base64.b64encode(p.read_bytes()).decode()
 
 data_js = (SRC / "data.js").read_text()
 
@@ -69,7 +70,7 @@ models += [(k, n, n.replace(" ", "-")) for k, n, *_ in SMART]
 
 def assets_js(labels):
     return "const ASSETS = " + json.dumps({
-        "logo": data_uri(SRC / "assets/logo-reoheating.png"),
+        "logo": data_uri(SRC / "assets/logo-reo-heating.svg"),  # závazné logo od 22. 10. 2026 (../logo)
         # modely bez štítku (zatím nedodán výrobcem) se prostě přeskočí
         "labels": {f"label-{k}.png": data_uri(SRC / f"assets/label-{k}.png") for k in labels
                    if (SRC / f"assets/label-{k}.png").exists()},

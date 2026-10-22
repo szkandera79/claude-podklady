@@ -41,11 +41,15 @@ Kvalitní montáž (split + checklist) → `#dotace` (Užitečné informace + pa
 - Formulace „do −15 °C bez elektrodohřevu, provoz do −25 °C" — neměnit na silnější tvrzení.
 
 ## Placeholdery / TODO
-- **Logo je modré (#0083CC)**, web je zelený → zvážit zelenou variantu loga nebo vrátit modrý
-  akcent. Zatím ponecháno oficiální modré logo.
 - Chybí produktové fotky samotných jednotek (v kartách produktů jsou zatím fotky z realizací).
 - Formulář: `odeslat.php` běží až na PHP hostingu (lokálně vrací chybu — to je v pořádku).
 - Zvážit převzetí kalkulačky z thermavera-web (`kalkulacka.html`) v REO brandingu.
+
+## Logo
+- Od 22. 10. 2026 jen nové logo z `~/Claude/REO/logo/` (šedá + zelená střecha, slunce, nápis
+  „REO HEATING“). `assets/images/logo-reo.png` / `logo-reo-alpha.png` = barevné, `logo-reo-white.png`
+  = bílý nápis do tmavého footeru (720 px, průhledné). `favicon.svg` = jen symbol domů + slunce.
+- Staré modré „RH / REOHEATING“ logo už nepoužívat.
 
 ## Konvence
 - Texty česky, tlačítka v sentence-case („Nezávazná poptávka", „Zjistit více").

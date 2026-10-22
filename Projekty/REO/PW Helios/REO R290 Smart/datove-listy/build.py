@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Datové listy REO R290 Smart (Heating 35–55 °C + vysokoteplotní provoz 60–75 °C), A4, anglicky
-(stejně jako datové listy REO R290). Vzhled a vykreslení sdílí s ../../../R290-datove-listy/src (sheet.js, sheet.css).
+(stejně jako datové listy REO R290). Vzhled a vykreslení sdílí s ../../../R290-datove-listy/src (sheet.js, sheet.css);
+logo je vlastní: assets/logo-reo-heating.svg (nové logo REO HEATING).
 
 Data: ../data/vykonove-mapy.json (z výkonových map výrobce, parse_maps.py).
     python3 build.py           # HTML + PDF
@@ -65,7 +66,8 @@ data_js = ('// REO R290 Smart — výkonová data z výkonových map výrobce (g
            'const MODELS = ' + json.dumps(models) + ';\n')
 sheet_js = (SHARED / 'sheet.js').read_text()
 sheet_css = (SHARED / 'sheet.css').read_text()
-logo = 'data:image/png;base64,' + base64.b64encode((SHARED / 'assets' / 'logo-reoheating.png').read_bytes()).decode()
+# logo REO HEATING (závazné od 22. 10. 2026, kopie z ~/Claude/REO/logo) — vektor, ne sdílené staré logo
+logo = 'data:image/svg+xml;base64,' + base64.b64encode((ROOT / 'assets' / 'logo-reo-heating.svg').read_bytes()).decode()
 assets_js = 'const ASSETS = ' + json.dumps({'logo': logo, 'labels': {}}) + ';'
 
 (ROOT / 'print').mkdir(exist_ok=True)

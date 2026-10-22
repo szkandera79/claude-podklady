@@ -11,9 +11,10 @@ A = ROOT / "assets"
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 def uri(p):
-    return "data:image/png;base64," + base64.b64encode((A / p).read_bytes()).decode()
+    mime = "image/svg+xml" if p.endswith(".svg") else "image/png"
+    return f"data:{mime};base64," + base64.b64encode((A / p).read_bytes()).decode()
 
-LOGO, UNIT = uri("logo.png"), uri("jednotka.png")
+LOGO, UNIT = uri("logo-reo-heating.svg"), uri("jednotka.png")
 
 # --- data (spec. výrobce). P = jmen. výkon A7/W35, rng = rozsah A7/W35, cop35/55 = A7/W35 a A7/W55,
 # scop = EN 14825 průměrné klima, lwa/lp = ErP 35/55 °C (lp v 1 m), fuse = jištění vč. el. dohřevu 3 kW

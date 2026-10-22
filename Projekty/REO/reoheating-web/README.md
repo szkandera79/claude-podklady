@@ -23,7 +23,8 @@ Web4u / net2ftp zplošťuje strukturu složek při rozbalení ZIPu, proto se nah
 ```
 rm -rf dist && mkdir dist
 sed -e 's#assets/images/realizace/##g' -e 's#assets/images/##g' index.html > dist/index.html
-cp odeslat.php favicon.svg ochrana-udaju.html robots.txt sitemap.xml dist/
+sed -e 's#assets/images/##g' ochrana-udaju.html > dist/ochrana-udaju.html
+cp odeslat.php favicon.svg robots.txt sitemap.xml dist/
 cp assets/images/*.jpg assets/images/*.png dist/
 cp assets/images/realizace/*.jpg dist/
 ```
@@ -31,4 +32,4 @@ cp assets/images/realizace/*.jpg dist/
 ## Zdroje obsahu
 - Texty a parametry produktů: reoheating.cz (domácí / průmyslová čerpadla, mobilní kotelna, dotace)
 - Realizace a fotografie: `~/Claude/REO-katalog-instalaci` (Katalog realizací REO HEATING)
-- Logo: `~/Claude/REO-katalog-instalaci/logo-reo*.png`
+- Logo: `~/Claude/REO/logo/` (závazné od 22. 10. 2026; `assets/images/logo-reo*.png` jsou z něj zmenšené kopie)

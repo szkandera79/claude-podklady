@@ -30,6 +30,6 @@ Cena pro montážní partnery známa jen u RH040 (74 990 Kč), ostatní „na do
 - Tepelná ztráta pro RH040 „7–10 kW“ (mejl uvádí jednou 6–9 kW).
 
 ## Fotky realizací (22. 10. 2026)
-- Strana 1: Dolní Morava, Dolní Benešov, Kunčice (venkovní jednotky) + `novy-venek.jpg`; strana 2: kotelny (`novy-kotelna.jpg`, Benešov, Odry = `odry-watertank.jpg` s nádrží WATERTANK).
+- Strana 1: Dolní Morava, Dolní Benešov, Odry (`odry-venek.jpg`, dodáno 22. 10.) + `novy-venek.jpg`; strana 2: kotelny (`novy-kotelna.jpg`, Benešov, Odry = `odry-watertank.jpg` s nádrží WATERTANK).
 - `novy-venek.jpg` a `novy-kotelna.jpg`: dodané uživatelem, nápis cizí značky na jednotce a hydroboxu přepsán na „REO HEATING“
   (retuš v PIL — vyplnění plochy přechodem a nový nápis Avenir Next). Lokalita: Baška u Frýdku-Místku.

@@ -551,3 +551,11 @@ Když v promptu popisuješ vizuál anglickými termíny („a story-sequence car
    - ✅ „a card with two illustrated objects labeled 'pila' and 'vila' in Czech"
 
 4) Když není potřeba label vůbec, **explicitně řekni „no label"**: „cards arranged on a rug, NO TEXT on any of the cards, NO labels, NO captions — purely illustrated content."
+
+## Logo REO HEATING (od 22. 10. 2026)
+- Jediné povolené logo: `~/Claude/REO/logo/` (`logo-reo-heating.svg/.png`, na tmavý podklad `-white`).
+  Staré varianty (modré „RH“, stříbrné „REQ HEATING“, AI logo „REOHEATING“ `reo-logo-ai.png`) nepoužívat.
+- U Gemini bannerů logo nenechávat kreslit AI — prostor vlevo nahoře nechat volný a skutečné logo vložit
+  dodatečně (nebo použít HTML šablony `sablony/reo-tc.html`, kde je logo už správně).
+- Logo natištěné na jednotkách na produktových fotkách může zůstat, jak je.
+

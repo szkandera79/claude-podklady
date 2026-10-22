@@ -7,27 +7,18 @@ hrdel, výrobní štítky na fotkách).
 
 ## Soubory
 - `letak.html` — zdroj, jeden soubor, A4 na výšku, interní CSS, bez JS.
-- `build-logo.py` — generátor loga do SVG (spustit po každé úpravě tvarů).
 - `REO_HEATING_Katalog_nadrzi.pdf` — vyexportovaný tisk (10 stran).
 - `obrazky/` — fotky a řezy nádrží (PNG, 350 dpi, retušované).
 - V dokumentu se **nepoužívá `mix-blend-mode`** — do PDF se ukládá jako průhledná
   skupina a některé prohlížeče i tiskové RIPy ji nevykreslí. Všechny podklady leží
   na bílé, takže prolnutí není potřeba. Kontrola po buildu: počet `/Group` objektů
   v PDF musí být 0.
-- `logo-reoheating.svg` / `logo-reoheating-white.svg` — logo (domek se sluncem).
-  Postavené **podle vzoru loga Riva Trade s.r.o.**, které uživatel dodal: plné
-  chunky tvary (stroke s ostrými rohy a rovnými konci), šedý dům vzadu, zelený
-  vpředu se žlutým čtyřtabulkovým oknem, slunce s hrotitými paprsky, pod tím
-  těžký šedý nápis přes celou šířku. Zelená a žlutá jsou z palety thermavera.cz,
-  šedá `#6D6E71` dům / `#58595B` nápis.
-  Nápis **není sázený písmem** — je kreslený vektorově (hranaté litery se zkosenými
-  rohy), protože žádné systémové písmo se vzoru neblíží. Generuje ho `build-logo.py`:
-  slovník `G` drží obrys každé litery, obrys i počítadlo musí být v **jednom `<path>`**
-  s `fill-rule="evenodd"`, jinak se díra nevykrojí.
-  **Pozor: pořád je to napodobenina, ne originál.** Až bude zdrojový soubor loga
-  k dispozici, nahradit ho.
-  Poznámka: nápis nese „S.R.O." podle vzoru, ale REO HEATING je značka —
-  právní subjekt je Riva Trade s.r.o. Ověřit s uživatelem, jestli tam má zůstat.
+- `logo-reo-heating.svg` / `logo-reo-heating-white.svg` — **závazné logo REO HEATING
+  (od 22. 10. 2026)**, kopie z `../logo/` (tam README, build a PNG). Při změně loga
+  zkopírovat znovu odtud. Bílá varianta jen na tmavé/zelené podklady.
+- **ZASTARALÉ, nepoužívat:** `build-logo.py` + `logo-reoheating.svg` / `logo-reoheating-white.svg`
+  (vlastní kreslená napodobenina „REOHEATING S.R.O.“ podle vzoru Riva Trade). Od 22. 10. 2026
+  nahrazeno logem z `../logo/`; soubory ponechány jen jako archiv.
 - `logo-reo*.png` — starší modré logo `RH`. V tomto katalogu se už nepoužívá.
 
 ## Build PDF
@@ -82,3 +73,4 @@ za nové vždy zkontrolovat, zda na plášti nezůstal štítek.
   `python3 web/build_web.py . /cesta/katalog-nadrzi.html`
 - Publikováno jako artefakt https://claude.ai/artifact/EPYT2QCFdGPg3cduyU1vGL (2026-10-15).
   Po změně `letak.html` přegenerovat a znovu publikovat na stejnou URL.
+  **22. 10. 2026: nové logo je v `letak.html` i `build_web.py`, artefakt zatím NEpřepublikován.**

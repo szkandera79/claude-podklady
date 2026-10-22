@@ -1,7 +1,6 @@
 [Text vytažený z RH-X50-katalog-CZ.pdf]
 
 --- strana 1 ---
-S . R . O.
 K O M E R Č N Í Ř A D A · C H L A D I V O R 2 9 0
 RH X50
 Plně invertorové tepelné čerpadlo
@@ -34,7 +33,6 @@ V L A S T N O S T I
 komerční provoz
 RH X50 spojuje vysokou účinnost a všestrannost. Pokryje vytápění, chlazení i ohřev teplé vody a díky
 kaskádě roste s potřebou objektu.
-S . R . O.
 Chladivo R290 (propan) — ODP = 0, nízké GWP = 3.
 Dvojitá invertorová technologie: přesné a úsporné vytápění s
 výstupní teplotou vody až 78 °C.
@@ -76,7 +74,6 @@ REO HEATING · RH X50 02
 K O N S T R U K C E A V Ý B A V A
 Prémiová výbava,
 spolehlivá kvalita
-S . R . O.
 Velký barevný dotykový ovladač s vestavěným Wi‑Fi modulem. Na
 jedné obrazovce je vidět stav vytápění i teplé vody.
 Režimy T eploty Stav Funkce vytápění · teplá voda · chlazení · automatický
@@ -126,7 +123,6 @@ REO HEATING · RH X50 03
 T E C H N I C K É P A R A M E T R Y
 Invertorové tepelné čerpadlo R290
 pro vytápění, chlazení a teplou vodu
-S . R . O.
 Model RH X50
 Ohřev teplé vody venkovní 20/15 °C (DB/WB), voda 15/55 °C
 Topný výkon (kW) 23,8–68
@@ -160,7 +156,6 @@ Rozměry balení Š × H × V (mm) 1 275 × 1 060 × 2 100
 Hmotnost netto (kg) 370
 Parametry se mohou v rámci průběžného vývoje produktu měnit. Rozhodující jsou údaje na výrobním štítku dodané jednotky. Podrobné
 výkonové křivky viz protokol výkonových charakteristik RH X50.
-S . R . O.
 E‑ M A I L
 info@reoheating.cz
 T E L E F O N

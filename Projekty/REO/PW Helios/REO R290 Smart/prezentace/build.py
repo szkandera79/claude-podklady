@@ -370,6 +370,31 @@ for sh in prs.slides[2].shapes:
         sh.width, sh.height = int(sh.width * f), int(sh.height * f)
         sh.left = int(cx - sh.width / 2)
 
+# ---------------------------------------------------------------- snímky 1 a 50: bílé pozadí, zelené písmo
+# (pravidlo značky REO HEATING; stejně jako ../prezentace-komercni/build.py) — skryje grafiku layoutu
+# (zelená mapa + bílé logo), nastaví bílé pozadí a vloží barevné logo REO HEATING (media_out/image3.png)
+def white_slide(s1):
+    s1._element.set('showMasterSp', '0')
+    s1.background.fill.solid()
+    s1.background.fill.fore_color.rgb = RGBColor(255, 255, 255)
+    pic = s1.shapes.add_picture(os.path.join(DIR, 'media_out', 'image3.png'), Emu(10051576), Emu(344557),
+                                width=Emu(1588444))
+    pic._element.getparent().remove(pic._element)
+    s1.shapes._spTree.insert(2, pic._element)                  # za kořen stromu, pod texty
+    for sh in s1.shapes:
+        if not sh.has_text_frame:
+            continue
+        for rpr in sh._element.iter(A('rPr'), A('endParaRPr')):
+            for el in rpr.findall(A('solidFill')) + rpr.findall(A('effectLst')):
+                rpr.remove(el)
+            fill = etree.SubElement(rpr, A('solidFill'))
+            etree.SubElement(fill, A('srgbClr')).set('val', GREEN_HEX)
+            rpr.insert(0, fill)                                # solidFill musí být v rPr před latin/ea/cs
+
+
+for sl in (prs.slides[0], prs.slides[len(prs.slides) - 1]):    # titulní a závěrečný snímek
+    white_slide(sl)
+
 # ---------------------------------------------------------------- barvy, písma, alt texty
 def recolor(root, sno=0):
     for c in root.iter(A('srgbClr')):

@@ -20,7 +20,7 @@ import fitz
 SRC = 'PW_R290_Commercial_Heat_Pump_Technical_Manual_20250520 cs.pdf'
 DIR = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(DIR, 'RH-X50-navod-k-pouziti.pdf')
-LOGO = os.path.join(DIR, 'logo-reoheating.png')
+LOGO = os.path.join(DIR, 'logo-reo-heating.png')  # závazné logo od 22. 10. 2026 (REO/logo)
 
 MAP = {'PW150-DKZLRS-E': 'RH X50', 'PW300-DKZLRS-E': 'RH X100'}
 GREEN = (0x2E / 255, 0x6B / 255, 0x33 / 255)
@@ -65,8 +65,10 @@ for pno, rect, new, font, size in jobs:
     y = rect.y0 + size * 0.80 if pno == 0 else rect.y1 - size * 0.215
     doc[pno].insert_text((rect.x0, y), new, fontname=font, fontsize=size, color=color)
 
-w = 112.0
-doc[0].insert_image(fitz.Rect(56.6, 158.0, 56.6 + w, 158.0 + w / 2.766), filename=LOGO)
+_pix = fitz.Pixmap(LOGO)
+LOGO_RATIO = _pix.width / _pix.height   # nové logo ≈ 2,62 : 1
+w = 104.0   # nové logo je vyšší (2,62:1) — užší, aby nenaráželo na výkres pod ním
+doc[0].insert_image(fitz.Rect(56.6, 158.0, 56.6 + w, 158.0 + w / LOGO_RATIO), filename=LOGO)
 
 doc.set_metadata({
     'title': 'RH X50 / RH X100 — návod k použití',

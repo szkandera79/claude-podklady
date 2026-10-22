@@ -75,7 +75,7 @@ V["D"] = ("Sluníčko na prvním místě", f"""<section class="page cover vd">
 # E – tmavá prémiová
 V["E"] = ("Tmavá prémiová", f"""<section class="page cover ve">
   <div class="cv-glow"></div>
-  <div class="cv-top"><img src="{B.uri('logo-cut.png')}" class="lg" alt="REO HEATING"><div class="qr"><img src="{QR}" alt=""></div></div>
+  <div class="cv-top"><img src="{LOGO}" class="lg" alt="REO HEATING"><div class="qr"><img src="{QR}" alt=""></div></div>
   {HEAD}
   <div class="hero">{HERO_BOX}</div>{CLAIMS}{ICONS}{BOT}</section>""")
 

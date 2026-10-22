@@ -1,7 +1,6 @@
 [Text vytažený z REO_HEATING_Katalog_nadrzi.pdf]
 
 --- strana 1 ---
-S . R . O.
 N E R E Z O V É A K U M U L A Č N Í A Z Á S O B N Í K O V É N Á D R Ž E
 Srdce soustavy, které
 vydrží déle než kotelna.
@@ -460,7 +459,6 @@ Poznámka k údajům. Uvedené technické parametry vycházejí z podkladů výr
 Rozměry a hmotnosti jsou orientační. Závazné hodnoty pro konkrétní projekt potvrdíme v nabídce.
 ZAKÁZKOVÁ VÝROBA 09
 --- strana 10 ---
-S . R . O.
 K O N T A K T
 Napište nám, co má
 nádrž zvládnout.

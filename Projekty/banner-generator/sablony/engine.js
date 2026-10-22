@@ -47,11 +47,13 @@ function md(s = '') {
 
 const TV_MARK = '<svg viewBox="0 0 32 32" fill="none"><rect x="1" y="1" width="30" height="30" rx="9" fill="#2E6B33"/><path d="M9.8 10.6H21.6L14 23.4" fill="none" stroke="#FCC83C" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
-function logoHtml(brand) {
+function logoHtml(brand, b = {}) {
   if (brand.logo === 'thermavera') {
     return `<div class="bn-logo-tv">${TV_MARK}<span><span class="b">Therma</span><span class="t">Vera</span> <span class="e">Energy</span></span></div>`;
   }
-  return `<img class="bn-logo" src="${brand.logo}" alt="">`;
+  // tmavý banner → světlá varianta loga (brand.logoDark), pokud ji značka má
+  const src = (b.dark && brand.logoDark) ? brand.logoDark : brand.logo;
+  return `<img class="bn-logo" src="${src}" alt="">`;
 }
 
 const BOTTOM_H = { band: 150, cta: 140, icons: 172, aud: 104, calc: 116 };
@@ -83,7 +85,7 @@ function bannerHtml(b, brand) {
   if (b.pill) s += `<div class="bn-pill"><span class="chk">${icon(b.pill.icon || 'tick', 3)}</span><span>${md(b.pill.text)}</span></div>`;
   if (b.stat) s += `<div class="bn-stat"><div class="lbl">${md(b.stat.label)}</div><div class="num">${md(b.stat.num)}</div><div class="note">${md(b.stat.note || '')}</div></div>`;
 
-  s += `<div class="bn-col">${logoHtml(brand)}`;
+  s += `<div class="bn-col">${logoHtml(brand, b)}`;
   if (b.h1) s += `<h1 class="bn-h1">${md(b.h1)}</h1>`;
   if (b.rule !== false) s += `<div class="bn-rule"></div>`;
   if (b.sub) s += `<p class="bn-sub">${md(b.sub)}</p>`;

@@ -17,6 +17,7 @@ ROOT = pathlib.Path(__file__).parent
 SRC = ROOT.parents[1] / "Power World Helios Pro Series Catalog.pdf"   # zdroj výrobce (mimo výstupy)
 OUT = ROOT / "REO-R290-Smart_catalogue-EN.pdf"
 KAT = ROOT.parent / "katalog" / "assets"
+ASSETS = ROOT / "assets"                 # logo REO HEATING (kopie z REO/logo)
 SUP = pathlib.Path("/System/Library/Fonts/Supplemental")
 F_REG, F_BOLD, F_BLACK, F_BI = (str(SUP / n) for n in ("Arial.ttf", "Arial Bold.ttf", "Arial Black.ttf", "Arial Bold Italic.ttf"))
 GREEN = (0x34 / 255, 0xA2 / 255, 0x63 / 255)
@@ -26,17 +27,14 @@ TBL = (0x23 / 255, 0x19 / 255, 0x16 / 255)
 
 # ------------------------------------------------------------------ pomocné
 def logos():
-    """Logo REO HEATING: originál (na světlé pozadí) a varianta s bílým textem (na tmavé pozadí)."""
-    im = Image.open(KAT / "logo-cut.png").convert("RGBA")
-    a = np.array(im).astype(int)
-    r, g, b = a[..., 0], a[..., 1], a[..., 2]
-    grey = (np.abs(r - g) < 18) & (np.abs(g - b) < 18) & (a[..., 3] > 0)
-    w = a.copy()
-    w[grey, 0:3] = 255
+    """Logo REO HEATING (závazné od 22. 10. 2026, ../../../logo): barevné (světlé pozadí) a bílé (tmavé pozadí)."""
     out = {}
-    for k, arr in (("dark", a), ("white", w)):
+    for k, fn in (("dark", "logo-reo-heating.png"), ("white", "logo-reo-heating-white.png")):
+        im = Image.open(ASSETS / fn).convert("RGBA")
+        im = im.crop(im.getchannel("A").getbbox())
+        im = im.resize((1200, round(1200 * im.height / im.width)), Image.LANCZOS)
         buf = io.BytesIO()
-        Image.fromarray(arr.astype("uint8")).save(buf, "PNG")
+        im.save(buf, "PNG", optimize=True)
         out[k] = buf.getvalue()
     return out, im.width / im.height
 

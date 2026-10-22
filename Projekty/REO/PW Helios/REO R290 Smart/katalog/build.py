@@ -21,7 +21,7 @@ def uri(p):
 
 
 HERO = uri("hero-scena.png")
-LOGO, UNIT, RHX = uri("logo-cut.png"), uri("smart-cut.png"), uri("rhx-pro-cut.png")
+LOGO, UNIT, RHX = uri("logo-reo-heating.svg"), uri("smart-cut.png"), uri("rhx-pro-cut.png")
 QR = uri("qr-reoheating.svg")
 
 # --- data (spec. výrobce, shodné s letaky/build.py). P = jmen. výkon A7/W35, rng = rozsah A7/W35,

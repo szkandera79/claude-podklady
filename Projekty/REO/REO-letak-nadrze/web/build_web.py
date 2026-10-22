@@ -36,7 +36,7 @@ body = body.replace('<div class="cta">Chci nezávaznou nabídku</div>', '<a clas
 nav = '''<nav class="nav" aria-label="Typy nádrží"><div class="in">
 <a class="brand" href="#uvod"><img src="%s" alt="REO HEATING"></a>
 <div class="links"><a href="#an">AN</a><a href="#zv">ZV</a><a href="#zh">ZH</a><a href="#zd">ZD</a><a href="#kn">KN</a><a href="#zs">ZS</a><a href="#zakazka">Na míru</a><a href="#kontakt" class="k">Kontakt</a></div>
-</div></nav>''' % img_uri('logo-reoheating.svg')
+</div></nav>''' % img_uri('logo-reo-heating.svg')
 
 css = open(os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), 'web.css'), encoding='utf-8').read()
 html = f'''<title>Katalog nádrží REO HEATING</title>

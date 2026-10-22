@@ -84,11 +84,12 @@ open sablony/reo-tc.html                         # náhled všech bannerů v pro
 - `sablony/<šablona>.html` = značka (`BRAND`: logo, barvy) + pole `BANNERS` s texty. Značení v textech:
   `[[zelená]]`, `{{žlutá}}`, `**tučně**`, `|` = nový řádek. Jemné doladění pozic přes `vars` (např. `h1`,
   `prod-w`, `badge-x`) nebo `css` (`&` = selektor banneru).
-- Výstup: `bannery-<šablona>/<ID>_1080x1080.png` + `prehled.jpg`.
+- Výstup: `bannery-<šablona>/<ID>_1080x1080.png` + `prehled.jpg` (přehled skript nevytváří — mřížka 2 sloupce 540 px, skládá se ručně přes Pillow).
 - Assety v `sablony/assets/`:
-  - REO logo = **AI logo dům + slunce** (`reo-logo-ai.png`, vyříznuté z AI bannerů) — uživatel ho chce
-    používat místo oficiálního modrého „RH“ loga.
-  - Jednotky: velké (`reo-skupina*.png`, `reo-unit-1.png`) nesou **celé AI logo svisle** na panelu;
+  - REO logo = **jen nové závazné logo** z `~/Claude/REO/logo/` (od 22. 10. 2026): `reo-logo.svg`,
+    na tmavém banneru (`dark: true`) automaticky `reo-logo-white.svg` (`BRAND.logoDark`). Staré AI logo
+    „REOHEATING“ (`reo-logo-ai.png`) ani modré „RH“ už nepoužívat.
+  - Jednotky: velké (`reo-skupina*.png`, `reo-unit-1.png`) nesou na panelu původní AI logo svisle (fotky jednotek se nemění);
     řada **Smart** (`reo-smart-jednotka.png`) má jen nápis „REO HEATING“ (na celé logo není místo).
     Bannery o pilířích REO R290 Smart ukazují jen Smart jednotku.
   - Nepoužívej reálné fotky instalací, kde je na jednotce vidět jiné logo (`reo-foto-zahrada.jpg`).
