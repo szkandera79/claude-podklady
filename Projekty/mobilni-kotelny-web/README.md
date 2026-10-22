@@ -15,7 +15,8 @@ Technika a ekonomika vychází z `../mobilni-kotelna-tc/` (RH X50, kontejner 20�
 - `assets/img/hero-*.jpg`: **AI vizualizace** (Gemini, banner-generator klíč) kontejneru 20′ + 2× RH X50 u paneláku,
   podniku, činžovního domu, potravinářského závodu, logistického skladu, dřevozpracujícího podniku, historické továrny,
   strojírenského závodu a hotelu (scény H1–H9); v hero se střídají strojírenský závod (antracit), hotel (krémový), logistický sklad (šedý) a potravinářský závod
-  (zelený) se štítkem „Vizualizace“; `hero-strecha-*.jpg` = návrh jednotek na střeše kontejneru (zatím nepoužito) (nejsou to realizace). Generuje `src/gen-hero.mjs`
+  (zelený) se štítkem „Vizualizace“; `hero-strecha-hala.jpg` a `hero-strecha-panelak.jpg` = návrh jednotek na střeše kontejneru,
+  také v hero (6 obrázků; varianta technicky neprověřená: přeprava zvlášť, rám do rohových kostek, servis ve výšce) (nejsou to realizace). Generuje `src/gen-hero.mjs`
   (`node mobilni-kotelny-web/src/gen-hero.mjs H1 H2 H3 --out <složka>`, reference = katalogový obrázek RH X50).
   Kontejner na obrázcích působí kratší než 20′.
 - `assets/style.css`, `assets/site.js`: společné styly (paleta thermavera.cz) a menu/formulář.
