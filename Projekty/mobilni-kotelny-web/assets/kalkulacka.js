@@ -94,7 +94,7 @@
     $('k-tc').textContent = tc ? money(tc.total) : '–';
     $('k-tc2').textContent = tc && q > 0 ? `${fmt(tc.perMwh / GJ_PER_MWH * vat)} Kč za GJ tepla` : 'není zahrnuto';
     const custom = num('r-tc') != null;
-    $('tc-set').innerHTML = `Sestava pro ztrátu ≈ ${fmt(kw)} kW: <b>${set.units}× RH X50</b> (${set.nominal} kW nominálně, ${fmt(set.kwCold, 1)} kW při −15 °C), nájem ${custom ? 'zadán ručně' : `podle ceníku ${money(set.rent)}/měs.`}${set.listed ? '' : ' <span class="tg tg-P">P</span> nad 100 kW individuálně'}.`;
+    $('tc-set').innerHTML = `Sestava pro ztrátu ≈ ${fmt(kw)} kW: <b>${set.units}× RH X50</b> (${set.nominal} kW nominálně, ${fmt(set.kwCold, 1)} kW při −15 °C), nájem ${custom ? 'zadán ručně' : `podle ceníku ${money(set.rent)}/měs`}${set.listed ? '' : ' <span class="tg tg-P">P</span> nad 100 kW individuálně'}.`;
     const known = res.filter(r => r.rentKnown);
     const best = known[0];
     $('k-best').textContent = best ? best.name : '–';

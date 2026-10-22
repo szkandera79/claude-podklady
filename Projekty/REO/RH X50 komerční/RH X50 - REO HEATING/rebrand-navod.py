@@ -32,6 +32,49 @@ GREEN = (0x34 / 255, 0xA2 / 255, 0x63 / 255)   # zelená REO HEATING #34A263
 # znak, který na kód těsně navazuje (např. dvojtečku za názvem modelu)
 PAD = (-0.4, -0.4, -0.6, 0.4)
 
+def rebuild_toc(doc, en_src):
+    """Obsah (str. 2) je v české verzi výrobce rozsypaný (různá odsazení, písma, čísla stran).
+    Vysází se znovu: názvy z české verze, čísla stran z anglického originálu (stránkování je 1:1)."""
+    page = doc[1]
+    rows = []
+    for b in page.get_text('dict')['blocks']:
+        for l in b.get('lines', []):
+            t = ''.join(s['text'] for s in l['spans'])
+            m = re.match(r'\s*(.*?)\s*[._\s]{3,}\s*-?\s*\d+\s*-?\s*$', t)
+            if m:
+                rows.append(m.group(1).strip())
+    en = []
+    for l in fitz.open(en_src)[1].get_text().splitlines():
+        m = re.search(r'-\s*(\d+)\s*-\s*$', l)
+        if m:
+            en.append(m.group(1))
+    if len(rows) != len(en):
+        raise SystemExit(f'Obsah: {len(rows)} řádků CZ vs. {len(en)} EN — zkontrolovat ručně')
+    top = page.search_for('Obsah')[0]
+    page.add_redact_annot(fitz.Rect(0, top.y1 + 2, page.rect.width, page.rect.height - 60), fill=(1, 1, 1))
+    page.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_REMOVE_IF_TOUCHED)
+    x_part, x_sub, x_right, y, step, size = 56.6, 70.0, 538.6, 80.7, 15.2, 11.0
+    FF = '/System/Library/Fonts/Supplemental/'
+    reg, bold = ('arial', FF + 'Arial.ttf'), ('arialbd', FF + 'Arial Bold.ttf')
+    width = {k: fitz.Font(fontfile=f) for k, f in (reg, bold)}
+    def put(x, text, fnt, color=(0, 0, 0)):
+        page.insert_text((x, y), text, fontname=fnt[0], fontfile=fnt[1], fontsize=size, color=color)
+        return width[fnt[0]].text_length(text, fontsize=size)
+    dot = width['arial'].text_length('.', fontsize=size)
+    for title, num in zip(rows, en):
+        sub = bool(re.match(r'\d+\.\d+', title))
+        x = x_sub if sub else x_part
+        label = f'- {num} -'
+        w_t = put(x, title, reg if sub else bold)
+        w_n = width['arial'].text_length(label, fontsize=size)
+        x0, x1 = x + w_t + 4, x_right - w_n - 4
+        dots = '.' * max(0, int((x1 - x0) / dot))
+        put(x1 - len(dots) * dot, dots, reg, (0.35, 0.35, 0.35))
+        put(x_right - w_n, label, reg)
+        y += step
+    return len(rows)
+
+
 if not os.path.exists(SRC):
     sys.exit(f'Nenalezen zdroj: {SRC} — spusť skript ze složky „RH X50 komerční“.')
 
@@ -74,6 +117,7 @@ LOGO_RATIO = _pix.width / _pix.height   # nové logo ≈ 2,62 : 1
 w = 104.0   # nové logo je vyšší (2,62:1) — užší, aby nenaráželo na výkres pod ním
 doc[0].insert_image(fitz.Rect(56.6, 158.0, 56.6 + w, 158.0 + w / LOGO_RATIO), filename=LOGO)
 
+n_toc = rebuild_toc(doc, 'PW_R290_Commercial_Heat_Pump_Technical_Manual_20250520.pdf')
 _tmp = tempfile.TemporaryDirectory()
 n_img = ssid_fix.fix_document(doc, ssid_fix.CZ, _tmp.name)   # název Wi‑Fi výrobce ve snímcích aplikace
 doc.del_xml_metadata()
@@ -92,6 +136,8 @@ src, out = fitz.open(SRC), fitz.open(OUT)
 norm = lambda t: re.sub(r'\s+', '', t)
 problems = []
 for i in range(src.page_count):
+    if i == 1:
+        continue   # obsah je vysázen znovu
     expected = norm(src[i].get_text())
     for old, new in MAP.items():
         expected = expected.replace(old, norm(new))
@@ -102,5 +148,6 @@ for i in range(src.page_count):
         problems.append(i)
 leftover = [i for i, p in enumerate(out) if re.search(r'PW\s*\d{2,3}', p.get_text())]
 print(f'stran: {out.page_count} | nahrazení: {len(jobs)} | opravené snímky: {n_img} | zbylé kódy PW: {leftover or "žádné"}')
+print(f'obsah: {n_toc} položek vysázeno znovu')
 print(f'poškozené strany: {problems or "žádné"}')
 print(f'uloženo: {OUT}')

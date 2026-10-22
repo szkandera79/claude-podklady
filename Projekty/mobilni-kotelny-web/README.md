@@ -19,8 +19,13 @@ Konfigurace `mobilni-kotelny-web` v `.claude/launch.json` servíruje kopii ve sc
 python http.server neotevře). Po úpravě zkopírovat: `rsync -a --delete mobilni-kotelny-web/ <scratchpad>/site/`.
 
 ## Otevřené body
-- **Nájem TČ 70 000 Kč/měs. + 90 000 Kč** (pracovní ceník) dává při výchozích cenách TČ celkově jen o ≈ 2 % levněji
-  než nafta a dráž než LTO, LPG a plyn (modelový příklad 50 kW, říjen–březen). Rozhodnout cenu před zveřejněním.
+- **Ceník TČ (22. 10. 2026, I):** 1× RH X50 (50 kW nom., 24,8 kW při −15 °C) 50 000 Kč/měs., kaskáda 2× (100 kW nom.)
+  80 000 Kč/měs., doprava 30 000 + montáž 50 000 Kč vždy zvlášť (`TC_SETS`, `tcSet()` v calc-core.js). Nad 2 jednotky
+  skládá kalkulačka z těchto sestav (P). Neupřesněno: zda doprava 30 000 je tam i zpět a zda je v montáži demontáž.
+  Žádné rozlišení cen podle délky nájmu.
+- **Výsledek (říjen–březen, 55 °C):** ztráta 24 kW → TČ 462 tis. vs nafta 485, LTO 449, LPG 411; ztráta 48 kW → TČ 723 tis.
+  vs nafta 676, LTO 604, LPG 517. Bod zvratu nájmu proti naftě ≈ 54 tis. (1×) a ≈ 72 tis. (2×). Texty webu upraveny poctivě
+  („celkově podobně jako nafta, proti LTO/LPG/plynu dráž“) → hlavní sdělení webu je slabší, rozhodnout obchodně.
 - Nájmy konkurence 45 000 Kč/měs. = střed veřejných ceníků (P); pelety a elektrokotel bez ověřeného nájmu.
 - Cena plynu bez kapacitní platby; pelety „pod 10 Kč/kg“ = horní mez (ověřit u dodavatele).
 - Rozložení potřeby do měsíců a 2 100 h plného výkonu jsou předpoklady.
