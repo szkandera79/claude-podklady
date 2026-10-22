@@ -33,3 +33,9 @@ přes Pillow; originály v `assets/src-orig/`. Obrázek „Jak funguje“ = sch�
 - Hluk: na webu jen akustický tlak ve 3 m = L_WA − 20·log 3 − 8 (stejně jako `REO/R290-datove-listy/src/compare.js`).
 - Topná voda: Smart, RHX Pro, RH X50 až 75 °C; RH030–RH060 až 70 °C (e-shop).
 - Sekce „Jak funguje“: scéna G v2 (`tools/scene_g_compose.py`) – jednotka −15 %, černé izolované potrubí, okruh topení do podlahy + popisky TUV / topení; v1 v `src-orig/`.
+
+## Nasazení (eko4home.cz – WebSupport/Active24, dnes WordPress)
+- Balíček k nahrání: `dist/` (index.html + použité obrázky, ~4,5 MB). Znovu vytvořit: viz příkaz v historii (kopie index.html + všech `assets/img/*` odkazovaných v HTML).
+- Před ostrým spuštěním: formulář je jen maketa (neodesílá), ilustrace `k-*` pocházejí z cizího webu (souhlas / náhrada).
+- Postup: záloha WP → FTP (FileZilla) do kořene webu → WordPress přesunout do podsložky (jinak má index.php přednost a .htaccess přepisuje URL) → nahrát obsah `dist/`.
+- **Varianta WordPress (jen přístup do WP admin):** `python3 eko4home-web/tools/build_wp.py` → `dist-wp/obrazky/` (nahrát do Médií) + `dist-wp/eko4home-snippet.php` (Code Snippets, „Spustit všude“). Snippet na úvodní stránce vypíše toto HTML místo Divi a formulář odesílá přes `wp_mail` na info@reoheating.cz. Vypnutí = deaktivovat snippet. Cesta k obrázkům `/wp-content/uploads/RRRR/MM/` je v proměnné `$img`.
