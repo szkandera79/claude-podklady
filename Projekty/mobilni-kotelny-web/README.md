@@ -23,9 +23,9 @@ python http.server neotevře). Po úpravě zkopírovat: `rsync -a --delete mobil
   80 000 Kč/měs., doprava 30 000 + montáž 50 000 Kč vždy zvlášť (`TC_SETS`, `tcSet()` v calc-core.js). Nad 2 jednotky
   skládá kalkulačka z těchto sestav (P). Neupřesněno: zda doprava 30 000 je tam i zpět a zda je v montáži demontáž.
   Žádné rozlišení cen podle délky nájmu.
-- **Výsledek (říjen–březen, 55 °C):** ztráta 24 kW → TČ 462 tis. vs nafta 485, LTO 449, LPG 411; ztráta 48 kW → TČ 723 tis.
-  vs nafta 676, LTO 604, LPG 517. Bod zvratu nájmu proti naftě ≈ 54 tis. (1×) a ≈ 72 tis. (2×). Texty webu upraveny poctivě
-  („celkově podobně jako nafta, proti LTO/LPG/plynu dráž“) → hlavní sdělení webu je slabší, rozhodnout obchodně.
+- **Elektřina 3 000 Kč/MWh bez DPH vč. distribuce** (zadání 22. 10. 2026, I).
+- **Výsledek (říjen–březen, 55 °C ekviterm):** ztráta 24 kW → TČ 429 tis. vs nafta 485, LTO 449, LPG 411, plyn 367;
+  ztráta 48 kW → TČ 658 tis. vs nafta 676, LTO 604, LPG 517. Bod zvratu nájmu proti naftě ≈ 59 tis. (1×) a ≈ 83 tis. (2×).
 - Nájmy konkurence 45 000 Kč/měs. = střed veřejných ceníků (P); pelety a elektrokotel bez ověřeného nájmu.
 - Cena plynu bez kapacitní platby; pelety „pod 10 Kč/kg“ = horní mez (ověřit u dodavatele).
 - Rozložení potřeby do měsíců a 2 100 h plného výkonu jsou předpoklady.

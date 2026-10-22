@@ -17,7 +17,7 @@
   $('start').innerHTML = MONTHS.map((m, i) => `<option value="${i}"${i === 9 ? ' selected' : ''}>${m}</option>`).join('');
   $('soustava').innerHTML = Object.entries(SOUSTAVY).map(([k, s]) => `<option value="${k}"${k === 'stredni' ? ' selected' : ''}>${s.label}</option>`).join('');
   $('prices').innerHTML = PRICE_KEYS.map(p => `
-    <tr><td class="l">${p.label} <span class="tg tg-O" title="${SOURCES[p.key].t}">O</span></td>
+    <tr><td class="l">${p.label} <span class="tg tg-${TECH.find(t => t.src === p.key).priceTag}" title="${SOURCES[p.key].t}">${TECH.find(t => t.src === p.key).priceTag}</span></td>
     <td><input type="number" min="0" step="${p.step}" id="p-${p.key}" value="${defaultPrice(p.key)}" aria-label="${p.label} ${p.unit}"></td>
     <td class="l note">${p.unit}</td></tr>`).join('');
   $('rents').innerHTML = TECH.map(t => `

@@ -7,7 +7,7 @@ const DATUM_CEN = '22. 10. 2026';
 
 const SOURCES = {
   nafta: { t: 'ČSÚ, průměrná cena nafty 41. týden 2026: 47,74 Kč/l s DPH (přes wattbox.cz)', u: 'https://wattbox.cz/ceny-paliv' },
-  el: { t: 'TZB-info: ceny elektřiny 2026, jednotarif 5,6–6,6 Kč/kWh s DPH (E.ON, PRE, ČEZ)', u: 'https://www.tzb-info.cz/ceny-paliv-a-energii/14-ceny-elektriny' },
+  el: { t: 'Elektřina 3 000 Kč/MWh bez DPH včetně distribuce: typická smluvní, předem fixovaná cena větších odběratelů (údaj ThermaVera, 22. 10. 2026). Standardní ceníky pro domácnosti a malé odběry jsou vyšší, 5,6–6,6 Kč/kWh s DPH (TZB-info)', u: 'https://www.tzb-info.cz/ceny-paliv-a-energii/14-ceny-elektriny' },
   lpg: { t: 'CALPG: propan pro vytápění ≈ 2,4–2,9 Kč/kWh s DPH', u: 'https://calpg.cz/kolik-stoji-prechod-na-propanove-vytapeni/' },
   lto: { t: 'e-genergie: spotřební daň a vratka u LTO; NRG: koncová cena ≈ 38 Kč/l s DPH (nedatováno)', u: 'https://www.egenergie.com/ropne-produkty/extra-lehky-topny-olej/' },
   plyn: { t: 'TZB-info: ceníky plynu 2026, pásmo nad 63 MWh/rok 1 824–1 936 Kč/MWh s DPH (bez platby za kapacitu)', u: 'https://www.tzb-info.cz/prehled-cen-zemniho-plynu' },
@@ -44,7 +44,7 @@ function tcSet(kw) {
 /* Technologie. fuelName = název paliva, unit = jednotka paliva, kwh = kWh tepla ve palivu na jednotku, eta = účinnost,
    rent = nájem Kč/měs., once = doprava + montáž + demontáž, null = neznámé (uživatel doplní). */
 const TECH = [
-  { id: 'tc', name: 'Tepelné čerpadlo', short: 'TČ', fuelName: 'elektřina', unit: 'kWh', price: 5.0, priceTag: 'O', src: 'el',
+  { id: 'tc', name: 'Tepelné čerpadlo', short: 'TČ', fuelName: 'elektřina', unit: 'kWh', price: 3.0, priceTag: 'I', src: 'el',
     kwh: 1, eta: null, rent: 80000, rentTag: 'I', once: TC_ONCE, onceTag: 'I', ours: true,
     note: 'Elektřina přes podružné měření, platí zákazník. Potřebný přívod orientačně 3×50 A pro ≈ 50 kW.' },
   { id: 'plyn', name: 'Zemní plyn', short: 'Plyn', fuelName: 'zemní plyn', unit: 'kWh', price: 1.55, priceTag: 'O', src: 'plyn',
@@ -62,7 +62,7 @@ const TECH = [
   { id: 'bio', name: 'Biomasa (pelety)', short: 'Pelety', fuelName: 'pelety', unit: 'kg', price: 8.3, priceTag: 'O', src: 'pelety',
     kwh: 4.6, eta: 0.85, etaTag: 'P', rent: null, rentTag: 'P', once: null, onceTag: 'P',
     note: 'Sklad paliva, zavážení, odvoz popela, komín. Nájem v ČR nemáme ověřený, doplňte nabídku.' },
-  { id: 'elk', name: 'Elektrokotel', short: 'Elektrokotel', fuelName: 'elektřina', unit: 'kWh', price: 5.0, priceTag: 'O', src: 'el',
+  { id: 'elk', name: 'Elektrokotel', short: 'Elektrokotel', fuelName: 'elektřina', unit: 'kWh', price: 3.0, priceTag: 'I', src: 'el',
     kwh: 1, eta: 0.99, etaTag: 'P', rent: null, rentTag: 'P', once: null, onceTag: 'P',
     note: 'Potřebuje zhruba 2–3× větší elektrický příkon než TČ. Nájem doplňte podle nabídky.' },
 ];
