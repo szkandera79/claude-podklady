@@ -23,7 +23,7 @@
   $('rents').innerHTML = TECH.map(t => `
     <tr><td class="l">${t.name} ${t.rent != null ? `<span class="tg tg-${t.rentTag}">${t.rentTag}</span>` : ''}</td>
     <td style="text-align:center"><input type="checkbox" id="inc-${t.id}" checked aria-label="Zahrnout ${t.name}" style="width:auto"></td>
-    <td><input type="number" min="0" step="1000" id="r-${t.id}" value="${t.rent ?? ''}" placeholder="neznámý" aria-label="Nájem ${t.name}"></td>
+    <td><input type="number" min="0" step="1000" id="r-${t.id}" value="${t.id === 'tc' ? '' : t.rent ?? ''}" placeholder="${t.id === 'tc' ? 'podle ceníku' : 'neznámý'}" aria-label="Nájem ${t.name}"></td>
     <td><input type="number" min="0" step="1000" id="o-${t.id}" value="${t.once ?? ''}" placeholder="neznámé" aria-label="Jednorázově ${t.name}"></td>
     <td><input type="number" min="0" step="500" id="x-${t.id}" value="0" aria-label="Další náklady ${t.name}"></td></tr>`).join('');
   $('sources').innerHTML = Object.values(SOURCES).map(s => `<li>${s.u ? `<a href="${s.u}" target="_blank" rel="noopener">${s.t}</a>` : s.t}</li>`).join('') +
@@ -31,30 +31,32 @@
      <li>Účinnost <span class="tg tg-P">P</span>: kotle na olej a naftu 90 %, plyn a LPG 93 %, pelety 85 %, elektrokotel 99 %.</li>
      <li>Tepelné čerpadlo <span class="tg tg-O">O</span>: sezónní topný faktor ${Object.values(SOUSTAVY).filter(s => s.tag === 'O').map(s => fmt(s.spf, 2)).join(' / ')} podle teploty vody, vypočtený z výkonových map RH X50 pro typický průběh teplot.</li>
      <li>Nájmy konkurence <span class="tg tg-P">P</span>: střední hodnota veřejných ceníků 35–60 tis. Kč/měs. (zahraniční půjčovny, přepočet kurzem). U pelet a elektrokotle nájem v ČR nemáme ověřený.</li>
-     <li>Nájem tepelného čerpadla <span class="tg tg-I">I</span>: orientační ceník ThermaVera pro kotelnu ≈ 50 kW. Přesnou cenu stanoví nabídka.</li>
+     <li>Nájem tepelného čerpadla <span class="tg tg-I">I</span>: ceník ThermaVera ${TC_SETS.map(c => `${c.nominal} kW nominálně (${fmt(c.units * TC_UNIT_KW, 1)} kW při −15 °C) ${fmt(c.rent)} Kč/měs.`).join(', ')}; doprava ${fmt(TC_TRANSPORT)} Kč a montáž ${fmt(TC_INSTALL)} Kč zvlášť. Sestavu volíme podle výkonu při −15 °C. Větší výkon skládáme z těchto sestav <span class="tg tg-P">P</span>. Přesnou cenu stanoví nabídka.</li>
      <li>Výpočet nezahrnuje teplou vodu, stálé platby za přípojky a ceny povolenek ETS2.</li>`;
 
   // --- čtení vstupů ---
   const num = (id) => { const v = parseFloat($(id).value); return Number.isFinite(v) ? v : null; };
   const mode = () => document.querySelector('input[name=mode]:checked').value;
 
+  /* Potřeba tepla za období (MWh) a odhad tepelné ztráty (kW) pro volbu sestavy TČ. */
   function heatNeed(months, start) {
     const share = periodShare(start, Math.min(months, 12)) + Math.max(0, months - 12) / 12;   // nad 12 měsíců průměrně
-    if (mode() === 'kw') return (num('kw') || 0) * FULL_LOAD_HOURS / 1000 * share;
+    if (mode() === 'kw') { const kw = num('kw') || 0; return { q: kw * FULL_LOAD_HOURS / 1000 * share, kw }; }
     if (mode() === 'rok') {
       const v = num('rok') || 0, u = $('rokUnit').value;
       const annual = u === 'gj' ? v / GJ_PER_MWH : u === 'mwh' ? v : v * 10.6 * 0.9 / 1000;
-      return annual * share;
+      return { q: annual * share, kw: annual * 1000 / FULL_LOAD_HOURS };
     }
     const v = num('obd') || 0;
-    return $('obdUnit').value === 'gj' ? v / GJ_PER_MWH : v;
+    const q = $('obdUnit').value === 'gj' ? v / GJ_PER_MWH : v;
+    return { q, kw: share > 0 ? q * 1000 / (FULL_LOAD_HOURS * share) : 0 };
   }
 
-  function readTechs() {
+  function readTechs(set) {
     return TECH.filter(t => $('inc-' + t.id).checked).map(t => ({
       ...t,
       price: num('p-' + t.src) ?? 0,
-      rent: num('r-' + t.id),
+      rent: t.id === 'tc' ? num('r-tc') ?? set.rent : num('r-' + t.id),
       once: num('o-' + t.id),
       other: num('x-' + t.id) || 0,
     }));
@@ -77,10 +79,11 @@
     const factor = hpFactor(soustava, elShare);
     $('spf-hint').innerHTML = `Tepelné čerpadlo vyrobí z 1 kWh elektřiny ≈ ${fmt(factor, 2)} kWh tepla <span class="tg tg-${SOUSTAVY[soustava].tag}">${SOUSTAVY[soustava].tag}</span>.`;
 
-    const q = heatNeed(months, start);
+    const { q, kw } = heatNeed(months, start);
+    const set = tcSet(kw);
     const vat = document.querySelector('input[name=vat]:checked').value === '1' ? VAT : 1;
     const money = (n) => fmtKc(n * vat);
-    const techs = readTechs();
+    const techs = readTechs(set);
     const res = compute({ q, months, soustava, elShare, techs })
       .sort((a, b) => (b.rentKnown - a.rentKnown) || (a.total - b.total));   // neznámý nájem až na konec
     const tc = res.find(r => r.id === 'tc');
@@ -90,6 +93,8 @@
     $('k-q2').textContent = `${fmt(q * GJ_PER_MWH)} GJ · ${months} měs., začátek ${MONTHS[start]}`;
     $('k-tc').textContent = tc ? money(tc.total) : '–';
     $('k-tc2').textContent = tc && q > 0 ? `${fmt(tc.perMwh / GJ_PER_MWH * vat)} Kč za GJ tepla` : 'není zahrnuto';
+    const custom = num('r-tc') != null;
+    $('tc-set').innerHTML = `Sestava pro ztrátu ≈ ${fmt(kw)} kW: <b>${set.units}× RH X50</b> (${set.nominal} kW nominálně, ${fmt(set.kwCold, 1)} kW při −15 °C), nájem ${custom ? 'zadán ručně' : `podle ceníku ${money(set.rent)}/měs.`}${set.listed ? '' : ' <span class="tg tg-P">P</span> nad 100 kW individuálně'}.`;
     const known = res.filter(r => r.rentKnown);
     const best = known[0];
     $('k-best').textContent = best ? best.name : '–';
@@ -155,7 +160,7 @@
   });
   $('reset').addEventListener('click', () => {
     PRICE_KEYS.forEach(p => { $('p-' + p.key).value = defaultPrice(p.key); });
-    TECH.forEach(t => { $('r-' + t.id).value = t.rent ?? ''; $('o-' + t.id).value = t.once ?? ''; $('x-' + t.id).value = 0; $('inc-' + t.id).checked = true; });
+    TECH.forEach(t => { $('r-' + t.id).value = t.id === 'tc' ? '' : t.rent ?? ''; $('o-' + t.id).value = t.once ?? ''; $('x-' + t.id).value = 0; $('inc-' + t.id).checked = true; });
     render();
   });
   render();

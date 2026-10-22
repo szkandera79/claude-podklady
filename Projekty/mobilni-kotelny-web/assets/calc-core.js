@@ -24,11 +24,28 @@ const SOUSTAVY = {
   vysoka: { label: 'Nad 55 °C (např. CZT 90/70 °C)', spf: 1.89, el: 0.30, tag: 'P' },
 };
 
+/* Ceník ThermaVera [I], 10/2026, bez DPH: nájem podle sestavy RH X50, doprava a montáž vždy zvlášť.
+   Výkon při −15 °C / 55 °C z výkonové mapy (24,8 kW na jednotku). */
+const TC_UNIT_KW = 24.8;
+const TC_SETS = [
+  { units: 1, nominal: 50, rent: 50000 },
+  { units: 2, nominal: 100, rent: 80000 },
+];
+const TC_TRANSPORT = 30000, TC_INSTALL = 50000;
+const TC_ONCE = TC_TRANSPORT + TC_INSTALL;
+
+/* Sestava a nájem pro potřebný výkon v kW. Nad 2 jednotky skládáme z kaskád 100 kW a 50 kW [P]. */
+function tcSet(kw) {
+  const units = Math.max(1, Math.ceil(kw / TC_UNIT_KW - 1e-9));
+  const rent = Math.floor(units / 2) * TC_SETS[1].rent + (units % 2) * TC_SETS[0].rent;
+  return { units, nominal: units * 50, kwCold: units * TC_UNIT_KW, rent, listed: units <= 2 };
+}
+
 /* Technologie. fuelName = název paliva, unit = jednotka paliva, kwh = kWh tepla ve palivu na jednotku, eta = účinnost,
    rent = nájem Kč/měs., once = doprava + montáž + demontáž, null = neznámé (uživatel doplní). */
 const TECH = [
   { id: 'tc', name: 'Tepelné čerpadlo', short: 'TČ', fuelName: 'elektřina', unit: 'kWh', price: 5.0, priceTag: 'O', src: 'el',
-    kwh: 1, eta: null, rent: 70000, rentTag: 'I', once: 90000, onceTag: 'I', ours: true,
+    kwh: 1, eta: null, rent: 80000, rentTag: 'I', once: TC_ONCE, onceTag: 'I', ours: true,
     note: 'Elektřina přes podružné měření, platí zákazník. Potřebný přívod orientačně 3×50 A pro ≈ 50 kW.' },
   { id: 'plyn', name: 'Zemní plyn', short: 'Plyn', fuelName: 'zemní plyn', unit: 'kWh', price: 1.55, priceTag: 'O', src: 'plyn',
     kwh: 1, eta: 0.93, etaTag: 'P', rent: 45000, rentTag: 'P', once: 25000, onceTag: 'P',

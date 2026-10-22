@@ -14,8 +14,12 @@ Výsledek: RH X50 - REO HEATING/RH-X50-navod-k-pouziti.pdf
 import os
 import re
 import sys
+import tempfile
 
 import fitz
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import ssid_fix  # noqa: E402
 
 SRC = 'PW_R290_Commercial_Heat_Pump_Technical_Manual_20250520 cs.pdf'
 DIR = os.path.dirname(os.path.abspath(__file__))
@@ -23,7 +27,7 @@ OUT = os.path.join(DIR, 'RH-X50-navod-k-pouziti.pdf')
 LOGO = os.path.join(DIR, 'logo-reo-heating.png')  # závazné logo od 22. 10. 2026 (REO/logo)
 
 MAP = {'PW150-DKZLRS-E': 'RH X50', 'PW300-DKZLRS-E': 'RH X100'}
-GREEN = (0x2E / 255, 0x6B / 255, 0x33 / 255)
+GREEN = (0x34 / 255, 0xA2 / 255, 0x63 / 255)   # zelená REO HEATING #34A263
 # vlevo/nahoře/dole s přesahem, vpravo o kus dovnitř — jinak redakce spolkne
 # znak, který na kód těsně navazuje (např. dvojtečku za názvem modelu)
 PAD = (-0.4, -0.4, -0.6, 0.4)
@@ -70,6 +74,9 @@ LOGO_RATIO = _pix.width / _pix.height   # nové logo ≈ 2,62 : 1
 w = 104.0   # nové logo je vyšší (2,62:1) — užší, aby nenaráželo na výkres pod ním
 doc[0].insert_image(fitz.Rect(56.6, 158.0, 56.6 + w, 158.0 + w / LOGO_RATIO), filename=LOGO)
 
+_tmp = tempfile.TemporaryDirectory()
+n_img = ssid_fix.fix_document(doc, ssid_fix.CZ, _tmp.name)   # název Wi‑Fi výrobce ve snímcích aplikace
+doc.del_xml_metadata()
 doc.set_metadata({
     'title': 'RH X50 / RH X100 — návod k použití',
     'author': 'REO HEATING',
@@ -94,6 +101,6 @@ for i in range(src.page_count):
     if sorted(expected) != sorted(got):      # pořadí čtení se posunem textu mění, obsah ne
         problems.append(i)
 leftover = [i for i, p in enumerate(out) if re.search(r'PW\s*\d{2,3}', p.get_text())]
-print(f'stran: {out.page_count} | nahrazení: {len(jobs)} | zbylé kódy PW: {leftover or "žádné"}')
+print(f'stran: {out.page_count} | nahrazení: {len(jobs)} | opravené snímky: {n_img} | zbylé kódy PW: {leftover or "žádné"}')
 print(f'poškozené strany: {problems or "žádné"}')
 print(f'uloženo: {OUT}')

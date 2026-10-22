@@ -13,8 +13,9 @@ Zdrojové soubory výrobce zůstávají v nadřazené složce `RH X50 komerční
 | `RH-X50-vykonove-krivky.pdf` | Protokol výkonových charakteristik, 4 strany A4, česky. Postaven znovu v designu REO HEATING z `RH-X50-vykonove-krivky.html`. |
 | `RH-X50-vykonove-krivky.html` | Zdroj protokolu (A4 na výšku, tisk do PDF přes Chrome). Data jsou v objektu `DATA` na konci souboru. |
 | `RH-X50-energeticky-stitek.pdf` | Energetický štítek podle 811/2013, přeznačený na REO HEATING / RH X50. |
+| `RH-X50-operating-manual-EN.pdf` | Návod k použití, 53 stran, anglicky — z anglického originálu výrobce (`rebrand-navod-en.py`). Snímky aplikace: název Wi‑Fi výrobce „pwwm“ → „MyWiFi“ (`ssid_fix.py`, i v CZ verzi). |
 | `RH-X50-navod-k-pouziti.pdf` | Návod k použití, 53 stran, česky. Modelové kódy přeznačeny, logo a modelová řádka na titulce. |
-| `rebrand-stitek.py`, `rebrand-navod.py` | Skripty, kterými výstupy vznikly — spouštět ze složky `RH X50 komerční`. |
+| `rebrand-stitek.py`, `rebrand-navod.py`, `rebrand-navod-en.py`, `ssid_fix.py` | Skripty, kterými výstupy vznikly — spouštět ze složky `RH X50 komerční`. |
 
 ## Co se NEpřebrandovalo a proč
 
