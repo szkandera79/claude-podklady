@@ -407,7 +407,7 @@ footer .logo img,footer .logo-svg{height:63px}
 
 <section class="sunband">
   <div class="wrap sun-grid">
-    <div class="sun-img"><img src="%%IMG%%rhx-pro-alpha.png" alt="REO R290 Smart RHX30 Pro"><span class="sun">☀️</span></div>
+    <div class="sun-img"><img src="%%IMG%%rhx-pro-m.png" alt="REO R290 Smart RHX30 Pro"><span class="sun">☀️</span></div>
     <div>
       <span class="eyebrow"><span class="new-tag">Novinka</span>REO R290 Smart</span>
       <h2>Topí přímo <span class="hand">ze sluníčka</span></h2>
@@ -491,7 +491,7 @@ footer .logo img,footer .logo-svg{height:63px}
 
     <div class="panel" data-panel="smart">
       <div class="series">
-        <div class="series-img stack smart-stack"><figure><img src="%%IMG%%smart.png" alt="Tepelné čerpadlo REO R290 Smart RH06–RH16"><figcaption>RH06 – RH16</figcaption></figure><figure><img src="%%IMG%%rhx-pro-alpha.png" alt="Tepelné čerpadlo REO R290 Smart RHX30 Pro"><figcaption>RHX30 Pro</figcaption></figure></div>
+        <div class="series-img stack smart-stack"><figure><img src="%%IMG%%smart-m.png" alt="Tepelné čerpadlo REO R290 Smart RH06–RH16"><figcaption>RH06 – RH16</figcaption></figure><figure><img src="%%IMG%%rhx-pro-m.png" alt="Tepelné čerpadlo REO R290 Smart RHX30 Pro"><figcaption>RHX30 Pro</figcaption></figure></div>
         <div>
           <h3>REO R290 Smart · RH06–RH16</h3>
           <div class="tag">Topí přímo ze sluníčka</div>
@@ -519,7 +519,7 @@ footer .logo img,footer .logo-svg{height:63px}
 
     <div class="panel" data-panel="pro">
       <div class="series">
-        <div class="series-img fill"><img src="%%IMG%%rhx-pro-alpha.png" alt="Tepelné čerpadlo REO RHX20 Pro / RHX30 Pro"></div>
+        <div class="series-img fill"><img src="%%IMG%%rhx-pro-m.png" alt="Tepelné čerpadlo REO RHX20 Pro / RHX30 Pro"></div>
         <div>
           <h3>REO R290 Smart · RHX20 Pro / RHX30 Pro</h3>
           <div class="tag">Výkonné jednotky pro bytové domy, firmy a kaskády</div>
