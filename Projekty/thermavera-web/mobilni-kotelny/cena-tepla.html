@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Proč nízké nájemné mobilní kotelny neznamená nízké náklady | ThermaVera Energy</title>
+<meta name="description" content="Z čeho se skládá cena tepla z mobilní kotelny: nájem, doprava, palivo a skryté položky. Srovnání tepelného čerpadla, plynu, LPG, oleje, nafty, pelet a elektrokotle.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .subnav{border-top:1px solid var(--line);background:var(--bg-alt)}
+  .subnav-in{max-width:1360px;margin:0 auto;padding:0 24px;display:flex;gap:22px;align-items:center;height:44px;overflow-x:auto;white-space:nowrap;font-size:.86rem}
+  .subnav a{color:var(--muted);font-weight:500}
+  .subnav a.on,.subnav a:hover{color:var(--green);font-weight:600}
+  .subnav .crumb{color:var(--muted);font-size:.8rem;margin-right:8px}
+  .subnav .crumb a{color:var(--green-bright)}
+  html{scroll-padding-top:130px}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="../index.html" class="logo" aria-label="ThermaVera Energy — domů">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9" fill="#2E6B33"/><path d="M9.8 10.6H21.6L14 23.4" stroke="#FCC83C" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span><span class="b">Therma</span><span class="t">Vera</span> Energy</span>
+    </a>
+    <nav class="menu" aria-label="Hlavní navigace">
+      <a href="../index.html#reseni">Řešení</a>
+      <a href="index.html" class="on">Mobilní kotelny</a>
+      <a href="../index.html#ekonomika">Ekonomika</a>
+      <a href="../index.html#financovani">Financování</a>
+      <a href="../index.html#prokoho">Pro koho</a>
+      <a href="../index.html#reference">Realizace</a>
+      <a href="../index.html#kontakt">Kontakt</a>
+    </nav>
+    <div class="navright">
+      <a class="tel" href="tel:+420774872467">+420 774 872 467</a>
+      <a class="btn btn-amber" href="index.html#poptavka">Poptat kotelnu</a>
+      <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="subnav" aria-label="Mobilní kotelny">
+    <div class="subnav-in">
+      <span class="crumb"><a href="../index.html">ThermaVera</a> › Mobilní kotelny</span>
+      <a href="index.html" data-p="index">Přehled</a>
+      <a href="kalkulacka.html" data-p="kalkulacka">Kalkulačka ceny tepla</a>
+      <a href="cena-tepla.html" data-p="cena-tepla" class="on">Proč nerozhoduje jen nájem</a>
+      <a href="index.html#pronajem">Ceník a odkup</a>
+      <a href="index.html#faq">Časté dotazy</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section style="padding-top:52px">
+  <article class="article">
+    <span class="eyebrow">Cena tepla</span>
+    <h1 style="font-size:clamp(1.9rem,3.8vw,2.6rem);margin-bottom:16px">Proč nízké nájemné neznamená nízké celkové náklady</h1>
+    <p style="font-size:1.1rem">Při výběru mobilní kotelny se nabídky často srovnávají podle měsíčního nájmu. Pro rozpočet ale rozhoduje součet nájmu, dopravy s montáží a energie za celou dobu pronájmu. Za nájem platíte jednou měsíčně, za palivo každou hodinu provozu.</p>
+
+    <h2>Z čeho se skládá cena tepla</h2>
+    <ol>
+      <li><b>Nájem</b> za zařízení, obvykle měsíčně.</li>
+      <li><b>Jednorázové platby</b> za dopravu, montáž, napojení, uvedení do provozu a demontáž.</li>
+      <li><b>Energie nebo palivo.</b> U topné sezóny bývá u spalovacích kotelen největší položkou.</li>
+      <li><b>Další náklady:</b> doplňování paliva, nájem nádrže, obsluha, platba za kapacitu plynu, posílení elektrického přívodu.</li>
+    </ol>
+
+    <h2>Kolik energie potřebuje 1 kWh tepla</h2>
+    <p>Tady je hlavní rozdíl mezi technologiemi. Kotel spálí víc energie, než vyrobí tepla. Tepelné čerpadlo většinu tepla odebere z venkovního vzduchu.</p>
+    <div class="tbl"><table>
+      <thead><tr><th class="l">Zdroj</th><th>Na 1 kWh tepla</th><th>Cena energie</th><th>Energie na 1 GJ tepla</th></tr></thead>
+      <tbody id="per-kwh"></tbody>
+    </table></div>
+    <p class="note">Ceny bez DPH k <span class="datum"></span>. Tepelné čerpadlo pro otopnou vodu do 55 °C řízenou podle venkovní teploty. Účinnosti kotlů jsou předpoklady. Zdroje cen jsou v <a href="kalkulacka.html">kalkulačce</a>.</p>
+
+    <h2>Kde tepelné čerpadlo vyhrává a kde ne</h2>
+    <ul>
+      <li><b>Proti naftě</b> vychází tepelné čerpadlo na energii zhruba čtyřikrát levněji (viz tabulka výše). Za topnou sezónu to vyšší nájem obvykle vyrovná.</li>
+      <li><b>Proti lehkému topnému oleji</b> je úspora na energii menší. U menších kotelen vychází tepelné čerpadlo celkově levněji, u větších bývá dráž.</li>
+      <li><b>Proti propanu a zemnímu plynu</b> je tepelné čerpadlo na energii levnější, ale rozdíl vyšší nájem nevyrovná a celkově vychází dráž. Rozhodnout pak mohou jiné důvody: plynová přípojka nemusí být k dispozici, propan potřebuje zásobník s povolením a doplňováním.</li>
+      <li><b>Proti elektrokotli</b> spotřebuje tepelné čerpadlo zhruba dvakrát až třikrát méně elektřiny. Potřebuje i menší elektrický přívod.</li>
+      <li><b>Mimo topnou sezónu</b> je potřeba tepla malá a rozhoduje hlavně nájem.</li>
+    </ul>
+
+    <h2>Položky, které v nájmu nevidíte</h2>
+    <ul>
+      <li><b>Doprava a doplňování paliva.</b> Naftová kotelna kolem 50 kW spotřebuje v mrazu jednotky litrů nafty za hodinu. Někdo musí hlídat stav nádrže a objednávat dovoz.</li>
+      <li><b>Nádrž a její umístění.</b> Zásobník propanu vyžaduje odstupy a ohlášení. Nádrž na naftu nebo olej záchytnou vanu.</li>
+      <li><b>Spaliny a zápach</b> u oken a vchodů, zvlášť u bytových domů a hotelů.</li>
+      <li><b>Kapacita plynové přípojky</b> a platba za ni. U elektřiny posílení jističe nebo dočasné připojení.</li>
+      <li><b>Výkon v mrazu.</b> U tepelných čerpadel se výkon v mrazu snižuje. Ptejte se na výkon při −15 °C, ne na nominální výkon.</li>
+    </ul>
+
+    <h2>Jak číst nabídky mobilních kotelen</h2>
+    <ol>
+      <li>Srovnávejte celkové náklady za celou dobu nájmu, ne měsíční sazbu.</li>
+      <li>Do srovnání dosaďte ceny energií, které skutečně platíte.</li>
+      <li>U tepelných čerpadel porovnávejte výkon při −15 °C a teplotě vaší otopné vody.</li>
+      <li>Zjistěte, co je v ceně: doprava, montáž, demontáž, servis, dohled, palivo.</li>
+      <li>Ověřte, že máte dostatečný elektrický přívod, plynovou přípojku nebo místo pro nádrž.</li>
+    </ol>
+
+    <div class="callout green" style="margin-top:28px"><b>Spočítejte si to pro svůj objekt.</b> Kalkulačka porovná sedm zdrojů tepla s vašimi cenami a ukáže, při jaké ceně paliva vychází tepelné čerpadlo levněji. <a href="kalkulacka.html">Otevřít kalkulačku →</a></div>
+    <p class="note" style="margin-top:20px">Výpočty jsou orientační. Nezaručujeme výši úspor. Skutečné náklady závisí na objektu, počasí a cenách energií.</p>
+  </article>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>ThermaVera Energy</h4><p>Zelené kotelny na klíč a pronájem mobilních kotelen s tepelnými čerpadly. Chytrá a hospodárná energetika — teplo levněji, čistěji a nezávisleji.</p></div>
+      <div><h4>Mobilní kotelny</h4><ul><li><a href="index.html">Přehled služby</a></li><li><a href="kalkulacka.html">Kalkulačka ceny tepla</a></li><li><a href="cena-tepla.html">Proč nerozhoduje jen nájem</a></li><li><a href="../index.html">Zelené kotelny na klíč</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+420774872467">+420 774 872 467</a></li><li><a href="mailto:info@thermavera.cz">info@thermavera.cz</a></li><li>Riva Trade, s.r.o., IČ: 08864811<br>Korunní 2569/108, 110 00 Praha 10</li><li><a href="../ochrana-udaju.html">Ochrana osobních údajů</a></li></ul></div>
+    </div>
+    <p class="legal">Uvedené výpočty jsou orientační a nejsou závaznou nabídkou. Nezaručujeme výši úspor. © ThermaVera Energy — Riva Trade, s.r.o.</p>
+  </div>
+</footer>
+<div class="callbar"><a class="btn btn-amber" href="tel:+420774872467">Zavolat</a><a class="btn btn-green" href="index.html#poptavka">Poptávka</a></div>
+
+<script src="assets/calc-core.js"></script>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  document.querySelectorAll('.datum').forEach(el => { el.textContent = DATUM_CEN; });
+  const res = compute({ q: 1, months: 1, soustava: 'stredni', techs: TECH });
+  const unitName = { kWh: 'kWh', l: 'l', kg: 'kg' };
+  document.getElementById('per-kwh').innerHTML = res.map(r => {
+    const per = r.inputPerKwh;
+    const amount = r.unit === 'kWh' ? `${fmt(per, 2)} kWh ${r.id === 'tc' || r.id === 'elk' ? 'elektřiny' : 'plynu'}` : `${fmt(per, 3)} ${unitName[r.unit]} (${fmt(per * r.kwh, 2)} kWh)`;
+    return `<tr class="${r.ours ? 'ours' : ''}"><td class="l">${r.name}</td><td>${amount}</td><td>${fmt(r.price, 2)} Kč/${unitName[r.unit]}</td><td>${fmt(r.energyPerMwh / GJ_PER_MWH)} Kč</td></tr>`;
+  }).join('');
+})();
+</script>
+</body>
+</html>

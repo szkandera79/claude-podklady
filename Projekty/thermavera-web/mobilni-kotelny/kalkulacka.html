@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kalkulačka ceny tepla: mobilní kotelna TČ, plyn, LPG, olej, nafta | ThermaVera Energy</title>
+<meta name="description" content="Porovnejte celkové náklady mobilní kotelny: nájem, doprava a energie. Tepelné čerpadlo, zemní plyn, LPG, lehký topný olej, nafta, pelety a elektrokotel.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .calc{display:grid;grid-template-columns:400px 1fr;gap:32px;align-items:start}
+  .calc > div{min-width:0}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow-sm)}
+  .panel + .panel{margin-top:18px}
+  .panel h2{font-size:1.05rem;margin-bottom:14px;display:flex;gap:10px;align-items:center}
+  .panel h2 .n{flex:0 0 26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-size:.85rem;display:flex;align-items:center;justify-content:center}
+  .seg{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .seg label{margin:0;cursor:pointer}
+  .seg input{position:absolute;opacity:0;width:1px}
+  .seg span{display:block;font-size:.84rem;font-weight:600;padding:7px 12px;border:1.5px solid var(--line);border-radius:999px;color:var(--muted)}
+  .seg input:checked + span{background:var(--green);border-color:var(--green);color:#fff}
+  .seg input:focus-visible + span{outline:2px solid var(--green-bright);outline-offset:2px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .fld{margin-bottom:12px}
+  .hint{font-size:.78rem;color:var(--muted);margin-top:4px}
+  .prices td{padding:6px 8px}
+  .prices input{padding:7px 8px;font-size:.88rem;text-align:right}
+  .prices td.l{font-size:.86rem}
+  .tg{display:inline-block;font-size:.66rem;font-weight:700;font-family:"Poppins";padding:1px 6px;border-radius:5px;margin-left:4px;vertical-align:1px}
+  .tg-O{background:var(--green-tint);color:var(--green)} .tg-I{background:#e5eefb;color:#2c5a9a} .tg-P{background:#fff1cc;color:#8a5a00}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
+  .kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+  .kpi .k{font-size:.78rem;color:var(--muted);font-weight:600}
+  .kpi .v{font-family:"Poppins";font-weight:700;font-size:1.45rem;color:var(--green)}
+  .kpi .s{font-size:.8rem;color:var(--muted)}
+  .msgs{display:grid;gap:10px;margin:20px 0}
+  .vatsw{display:flex;gap:6px;align-items:center;font-size:.85rem}
+  .resulthead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+  .resulthead h2{font-size:1.4rem}
+  .be li{margin-bottom:6px}
+  .unk{color:var(--amber-deep);font-weight:600}
+  .rent-tbl input{width:96px}
+  @media(max-width:1020px){.calc{grid-template-columns:1fr}}
+  @media(max-width:620px){.kpis{grid-template-columns:1fr}.row2{grid-template-columns:1fr}}
+</style>
+<style>
+  .subnav{border-top:1px solid var(--line);background:var(--bg-alt)}
+  .subnav-in{max-width:1360px;margin:0 auto;padding:0 24px;display:flex;gap:22px;align-items:center;height:44px;overflow-x:auto;white-space:nowrap;font-size:.86rem}
+  .subnav a{color:var(--muted);font-weight:500}
+  .subnav a.on,.subnav a:hover{color:var(--green);font-weight:600}
+  .subnav .crumb{color:var(--muted);font-size:.8rem;margin-right:8px}
+  .subnav .crumb a{color:var(--green-bright)}
+  html{scroll-padding-top:130px}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="../index.html" class="logo" aria-label="ThermaVera Energy — domů">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9" fill="#2E6B33"/><path d="M9.8 10.6H21.6L14 23.4" stroke="#FCC83C" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span><span class="b">Therma</span><span class="t">Vera</span> Energy</span>
+    </a>
+    <nav class="menu" aria-label="Hlavní navigace">
+      <a href="../index.html#reseni">Řešení</a>
+      <a href="index.html" class="on">Mobilní kotelny</a>
+      <a href="../index.html#ekonomika">Ekonomika</a>
+      <a href="../index.html#financovani">Financování</a>
+      <a href="../index.html#prokoho">Pro koho</a>
+      <a href="../index.html#reference">Realizace</a>
+      <a href="../index.html#kontakt">Kontakt</a>
+    </nav>
+    <div class="navright">
+      <a class="tel" href="tel:+420774872467">+420 774 872 467</a>
+      <a class="btn btn-amber" href="index.html#poptavka">Poptat kotelnu</a>
+      <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="subnav" aria-label="Mobilní kotelny">
+    <div class="subnav-in">
+      <span class="crumb"><a href="../index.html">ThermaVera</a> › Mobilní kotelny</span>
+      <a href="index.html" data-p="index">Přehled</a>
+      <a href="kalkulacka.html" data-p="kalkulacka" class="on">Kalkulačka ceny tepla</a>
+      <a href="cena-tepla.html" data-p="cena-tepla">Proč nerozhoduje jen nájem</a>
+      <a href="index.html#pronajem">Ceník a odkup</a>
+      <a href="index.html#faq">Časté dotazy</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section style="padding-top:48px">
+  <div class="wrap">
+    <div class="head left" style="max-width:860px;margin-bottom:32px">
+      <span class="eyebrow">Kalkulačka celkové ceny tepla</span>
+      <h1 style="font-size:clamp(1.9rem,3.8vw,2.7rem);margin-bottom:12px">Kolik vás bude stát teplo z mobilní kotelny?</h1>
+      <p>Porovnáme nájem, dopravu s montáží a energii za celou dobu pronájmu pro sedm zdrojů tepla. Všechny ceny a předpoklady můžete přepsat podle svých faktur a nabídek. Výsledek je orientační, ne závazná nabídka.</p>
+    </div>
+
+    <div class="calc">
+      <!-- VSTUPY -->
+      <div>
+        <div class="panel">
+          <h2><span class="n">1</span>Potřeba tepla</h2>
+          <div class="seg" role="radiogroup" aria-label="Jak zadáte potřebu tepla">
+            <label><input type="radio" name="mode" value="kw" checked><span>Tepelná ztráta</span></label>
+            <label><input type="radio" name="mode" value="rok"><span>Roční spotřeba</span></label>
+            <label><input type="radio" name="mode" value="obdobi"><span>Za dobu nájmu</span></label>
+          </div>
+          <div class="fld" data-mode="kw">
+            <label for="kw">Tepelná ztráta objektu (kW)</label>
+            <input id="kw" type="number" min="1" step="1" value="45">
+            <p class="hint">Roční potřebu odhadneme jako ztráta × <span id="flh-txt"></span> hodin plného výkonu <span class="tg tg-P">P</span>.</p>
+          </div>
+          <div class="fld" data-mode="rok" hidden>
+            <div class="row2">
+              <div><label for="rok">Roční spotřeba</label><input id="rok" type="number" min="0" step="1" value="400"></div>
+              <div><label for="rokUnit">Jednotka</label><select id="rokUnit"><option value="gj">GJ tepla</option><option value="mwh">MWh tepla</option><option value="m3">m³ zemního plynu</option></select></div>
+            </div>
+            <p class="hint">U plynu počítáme 10,6 kWh/m³ a účinnost stávajícího kotle 90 % <span class="tg tg-P">P</span>. Spotřeba jen na vytápění, bez teplé vody.</p>
+          </div>
+          <div class="fld" data-mode="obdobi" hidden>
+            <div class="row2">
+              <div><label for="obd">Teplo za dobu nájmu</label><input id="obd" type="number" min="0" step="1" value="80"></div>
+              <div><label for="obdUnit">Jednotka</label><select id="obdUnit"><option value="mwh">MWh</option><option value="gj">GJ</option></select></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2><span class="n">2</span>Doba nájmu</h2>
+          <div class="row2">
+            <div><label for="start">Od měsíce</label><select id="start"></select></div>
+            <div><label for="months">Počet měsíců</label><input id="months" type="number" min="1" max="60" step="1" value="6"></div>
+          </div>
+          <p class="hint">Rozložení potřeby tepla do měsíců podle typických denostupňů v ČR <span class="tg tg-P">P</span>.</p>
+        </div>
+
+        <div class="panel">
+          <h2><span class="n">3</span>Otopná soustava</h2>
+          <label for="soustava">Teplota otopné vody v mrazu</label>
+          <select id="soustava"></select>
+          <p class="hint" id="spf-hint"></p>
+          <div class="fld" id="elshare-wrap" hidden style="margin-top:10px">
+            <label for="elshare">Podíl tepla z elektrického dohřevu (%)</label>
+            <input id="elshare" type="number" min="0" max="100" step="5" value="30">
+            <p class="hint">Odhad <span class="tg tg-P">P</span>. Skutečný podíl zjistíme z teplot soustavy na obhlídce.</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2><span class="n">4</span>Ceny energií (bez DPH)</h2>
+          <div class="tbl"><table class="prices"><tbody id="prices"></tbody></table></div>
+          <p class="hint" style="margin-top:8px">Výchozí ceny k <span class="datum"></span>, zdroje pod výsledky. Nahraďte je cenami z vašich faktur.</p>
+        </div>
+      </div>
+
+      <!-- VÝSLEDKY -->
+      <div>
+        <div class="resulthead">
+          <h2>Výsledek</h2>
+          <div class="vatsw seg" role="radiogroup" aria-label="DPH" style="margin:0">
+            <label><input type="radio" name="vat" value="0" checked><span>bez DPH</span></label>
+            <label><input type="radio" name="vat" value="1"><span>s DPH 21 %</span></label>
+          </div>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><div class="k">Potřeba tepla za nájem</div><div class="v" id="k-q"></div><div class="s" id="k-q2"></div></div>
+          <div class="kpi"><div class="k">Tepelné čerpadlo celkem</div><div class="v" id="k-tc"></div><div class="s" id="k-tc2"></div></div>
+          <div class="kpi"><div class="k">Nejnižší celkové náklady</div><div class="v" id="k-best" style="font-size:1.15rem"></div><div class="s" id="k-best2"></div></div>
+        </div>
+
+        <div class="panel">
+          <h2>Celkové náklady za dobu nájmu</h2>
+          <div class="bars" id="bars"></div>
+          <div class="legend"><span><i style="background:#9DB8A0"></i>Nájem</span><span><i style="background:#C9D6CA"></i>Doprava, montáž, demontáž</span><span><i style="background:var(--amber)"></i>Palivo / energie</span><span><i style="background:#e7ecef"></i>Další náklady</span></div>
+        </div>
+
+        <p class="callout green" id="tc-set" style="margin-top:18px"></p>
+        <div class="msgs" id="msgs"></div>
+
+        <div class="panel">
+          <h2>Rozpis</h2>
+          <div class="tbl"><table>
+            <thead><tr><th class="l">Zdroj</th><th>Spotřeba</th><th>Energie</th><th>Nájem</th><th>Jednorázově</th><th>Další</th><th>Celkem</th><th>Kč/GJ tepla</th></tr></thead>
+            <tbody id="detail"></tbody>
+          </table></div>
+        </div>
+
+        <div class="panel">
+          <h2>Kdy tepelné čerpadlo vyjde levněji</h2>
+          <ul class="be" id="be" style="padding-left:20px"></ul>
+        </div>
+
+        <div class="panel">
+          <h2>Nájmy a další náklady (bez DPH)</h2>
+          <p class="hint" style="margin-bottom:10px">Zadejte nabídky, které máte. Prázdný nájem znamená, že ho neznáme, a zdroj se pak v pořadí porovná jen podle energie. U tepelného čerpadla prázdné pole znamená nájem podle ceníku.</p>
+          <div class="tbl"><table class="prices rent-tbl">
+            <thead><tr><th class="l">Zdroj</th><th>Zahrnout</th><th>Nájem Kč/měs.</th><th>Jednorázově Kč</th><th>Další Kč/měs.</th></tr></thead>
+            <tbody id="rents"></tbody>
+          </table></div>
+          <p class="hint" style="margin-top:8px">„Další“ = obsluha, doplňování paliva, nájem nádrže, platba za kapacitu plynu, stálé platby za přívod apod.</p>
+          <p style="margin-top:12px"><button class="btn btn-outline" type="button" id="reset">Obnovit výchozí hodnoty</button></p>
+        </div>
+
+        <div class="ctaband" style="border-radius:var(--r);padding:28px;margin-top:18px">
+          <div style="display:block">
+            <h2 style="font-size:1.35rem;margin-bottom:8px">Chcete přesnou nabídku?</h2>
+            <p style="margin-bottom:16px">Pošlete nám poptávku. Údaje z kalkulačky do ní předvyplníme.</p>
+            <a class="btn btn-amber" id="to-form" href="index.html#poptavka">Poptat mobilní kotelnu</a>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top:18px">
+          <h2>Předpoklady a zdroje</h2>
+          <p class="note" style="margin-bottom:10px"><span class="tg tg-O">O</span> ověřeno ze zdroje · <span class="tg tg-I">I</span> údaj ThermaVera · <span class="tg tg-P">P</span> předpoklad, upřesníme pro váš objekt</p>
+          <ul id="sources" class="note" style="padding-left:18px"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>ThermaVera Energy</h4><p>Zelené kotelny na klíč a pronájem mobilních kotelen s tepelnými čerpadly. Chytrá a hospodárná energetika — teplo levněji, čistěji a nezávisleji.</p></div>
+      <div><h4>Mobilní kotelny</h4><ul><li><a href="index.html">Přehled služby</a></li><li><a href="kalkulacka.html">Kalkulačka ceny tepla</a></li><li><a href="cena-tepla.html">Proč nerozhoduje jen nájem</a></li><li><a href="../index.html">Zelené kotelny na klíč</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+420774872467">+420 774 872 467</a></li><li><a href="mailto:info@thermavera.cz">info@thermavera.cz</a></li><li>Riva Trade, s.r.o., IČ: 08864811<br>Korunní 2569/108, 110 00 Praha 10</li><li><a href="../ochrana-udaju.html">Ochrana osobních údajů</a></li></ul></div>
+    </div>
+    <p class="legal">Uvedené výpočty jsou orientační a nejsou závaznou nabídkou. Nezaručujeme výši úspor. © ThermaVera Energy — Riva Trade, s.r.o.</p>
+  </div>
+</footer>
+<div class="callbar"><a class="btn btn-amber" href="tel:+420774872467">Zavolat</a><a class="btn btn-green" href="index.html#poptavka">Poptávka</a></div>
+
+<script src="assets/calc-core.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/kalkulacka.js"></script>
+</body>
+</html>

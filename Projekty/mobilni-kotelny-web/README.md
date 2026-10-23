@@ -21,6 +21,11 @@ Technika a ekonomika vychází z `../mobilni-kotelna-tc/` (RH X50, kontejner 20�
   Kontejner na obrázcích působí kratší než 20′.
 - `assets/style.css`, `assets/site.js`: společné styly (paleta thermavera.cz) a menu/formulář.
 
+## Varianty
+- **Varianta 1 — samostatný web** (tato složka), navržená doména teplonacas.cz (volná 23. 10. 2026), název „Teplo na čas“.
+- **Varianta 2 — integrace do thermavera.cz/mobilni-kotelny/**: návrh a skript náhledu v `integrace-thermavera/`
+  (stejné stránky v hlavičce ThermaVera + úpravy homepage s překlady). Zdroj `thermavera-web/` se nemění.
+
 ## Náhled
 Konfigurace `mobilni-kotelny-web` v `.claude/launch.json` servíruje kopii ve scratchpadu (iCloud složku
 python http.server neotevře). Po úpravě zkopírovat: `rsync -a --delete mobilni-kotelny-web/ <scratchpad>/site/`.

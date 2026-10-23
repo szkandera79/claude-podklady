@@ -267,7 +267,7 @@
         <div class="fgrid">
           <div><label for="f-jmeno">Jméno a příjmení</label><input id="f-jmeno" name="jmeno" required autocomplete="name"></div>
           <div><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" required autocomplete="tel"></div>
-          <div class="full" data-only="plan"><label for="f-email">E‑mail</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+          <div class="full"><label for="f-email">E‑mail</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
           <div><label for="f-misto">Obec, místo objektu</label><input id="f-misto" name="misto"></div>
           <div><label for="f-objekt">Typ objektu</label><select id="f-objekt" name="objekt"><option>Bytový dům / SVJ</option><option>Průmysl, hala</option><option>Hotel, ubytování</option><option>Škola, veřejná budova</option><option>Jiné</option></select></div>
           <div><label for="f-vykon">Výkon nebo spotřeba <span class="opt">(pokud víte)</span></label><input id="f-vykon" name="vykon" placeholder="např. 50 kW nebo 400 GJ/rok"></div>
@@ -277,7 +277,8 @@
           <div class="full"><label for="f-jistic">Elektrický přívod <span class="opt">(hlavní jistič, pokud víte)</span></label><input id="f-jistic" name="jistic" placeholder="např. 3×63 A"></div>
           <div class="full"><label for="f-zprava">Zpráva</label><textarea id="f-zprava" name="zprava" placeholder="Co se stalo, co potřebujete vytápět, teplá voda ano/ne…"></textarea></div>
           <div class="full"><button class="btn btn-green" type="submit">Odeslat poptávku</button></div>
-          <p class="full note">Odesláním souhlasíte se zpracováním údajů pro vyřízení poptávky podle <a href="https://thermavera.cz/ochrana-udaju.html">zásad ochrany osobních údajů</a>.</p>
+          <label class="full note" style="display:flex;gap:8px;align-items:flex-start;font-weight:400"><input type="checkbox" name="souhlas" value="ano" required style="width:auto;margin-top:4px"><span>Souhlasím se zpracováním údajů pro vyřízení poptávky podle <a href="https://thermavera.cz/ochrana-udaju.html">zásad ochrany osobních údajů</a>.</span></label>
+          <p class="full callout" id="errmsg" hidden></p>
         </div>
       </form>
       <div class="okmsg callout green" id="okmsg"><b>Děkujeme.</b> Poptávku jsme přijali a ozveme se. U havárie prosím zavolejte i na +420 774 872 467.</div>

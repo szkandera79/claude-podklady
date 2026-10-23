@@ -119,6 +119,7 @@ Meta description a klíčová slova jsou v `<head>` — při změnách textů je
     cp odeslat.php favicon.svg ochrana-udaju.html robots.txt sitemap.xml kalkulacka.html kurz.php dist/
     cp google*.html dist/   # ověřovací soubor Google Search Console
     cp assets/images/*.jpg dist/ ; cp assets/images/reference/*.jpg dist/
+    cp -R mobilni-kotelny dist/   # služba Mobilní kotelny — podsložka se strukturou, nahrát jako složku přes FTP
 - Měna v kalkulačce: `kurz.php` (server-side stáhne denní střed ČNB CZK/EUR, cache 6 h, JSON).
   Kalkulačka má přepínač Kč/€ (`setCurrency`), autodetekce dle jazyka prohlížeče (cs/sk→Kč, jinak €).
   Výstupy jdou přes `fmtM()` (dělí `FX`) + symbol `SYM`; převedeny jsou render funkce (ř. ~1257–1526)
@@ -158,6 +159,14 @@ Meta description a klíčová slova jsou v `<head>` — při změnách textů je
     i B2B Baranova bez DPH). V `getExportData` proto `m0`=investice/dotace→`fmtP`, `m1`=ceny energií→`fmtM`.
     Návratnost se počítá z raw hodnot (přepínač ji nemění). Excel list „Info" uvádí měnu + režim DPH.
 - Repozitář si drží hezkou strukturu `assets/images/` jako zdroj pravdy.
+
+## Mobilní kotelny (`mobilni-kotelny/`, od 23. 10. 2026)
+- Podsložka **se generuje**, ručně ji neupravuj: zdroj je `../mobilni-kotelny-web/` (texty, kalkulačka, obrázky),
+  po změně spusť z kořene repa `python3 mobilni-kotelny-web/integrace-thermavera/build_integrace.py --apply`
+  (podsložku přegeneruje; úpravy homepage a sitemap provede jen poprvé).
+- Na homepage: položka menu „Mobilní kotelny“, tlačítko v hero, odkaz v kartě Mobilní kotelna a v patičce (vše s TR překlady),
+  v hero 6 AI vizualizací (`data-viz`) se štítkem „Vizualizace“ — nejsou to realizace, štítek nesmí zmizet.
+- Poptávka ze služby jde přes `odeslat.php` (pole `model` = „Pronájem mobilní kotelny – …“). Podstránky jen česky.
 
 ## Kontaktní formulář (ostrý)
 - Formulář v `#kontakt` odesílá přes `fetch` POST na **`odeslat.php`** (PHP `mail()`),

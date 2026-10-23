@@ -137,6 +137,8 @@
   /* ---------- HERO (full-bleed rotující fotky realizací) ---------- */
   .hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden;padding:84px 0}
   .hero-slides{position:absolute;inset:0;z-index:0}
+  .hero-viz{position:absolute;right:16px;bottom:14px;z-index:3;display:none;font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,0,0,.45);color:#fff;padding:4px 10px;border-radius:999px}
+  .hero-viz.show{display:block}
   .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.4s ease}
   .hero-slide.active{opacity:1;animation:heroKB 8s ease forwards}
   @keyframes heroKB{from{transform:scale(1)}to{transform:scale(1.08)}}
@@ -459,6 +461,7 @@
     </a>
     <nav class="menu" id="menu" aria-label="Hlavní navigace">
       <a class="link" href="#reseni">Řešení</a>
+      <a class="link" href="mobilni-kotelny/">Mobilní kotelny</a>
       <a class="link" href="#kogenerace">Kogenerace</a>
       <a class="link" href="#ekonomika">Ekonomika</a>
       <a class="link" href="#ets2">ETS2</a>
@@ -502,7 +505,14 @@
     <div class="hero-slide" style="background-image:url('assets/images/reference/lacoruna-1.jpg')"></div>
     <div class="hero-slide" style="background-image:url('assets/images/reference/lodni-1.jpg')"></div>
     <div class="hero-slide" style="background-image:url('assets/images/reference/r-arnhall-1.jpg')"></div>
+    <div class="hero-slide" data-viz style="background-image:url('mobilni-kotelny/assets/img/hero-strojirensky-zavod.jpg')"></div>
+    <div class="hero-slide" data-viz style="background-image:url('mobilni-kotelny/assets/img/hero-hotel.jpg')"></div>
+    <div class="hero-slide" data-viz style="background-image:url('mobilni-kotelny/assets/img/hero-logisticky-sklad.jpg')"></div>
+    <div class="hero-slide" data-viz style="background-image:url('mobilni-kotelny/assets/img/hero-potravinarsky-zavod.jpg')"></div>
+    <div class="hero-slide" data-viz style="background-image:url('mobilni-kotelny/assets/img/hero-strecha-hala.jpg')"></div>
+    <div class="hero-slide" data-viz style="background-image:url('mobilni-kotelny/assets/img/hero-strecha-panelak.jpg')"></div>
   </div>
+  <span class="hero-viz" id="heroViz">Vizualizace</span>
   <div class="wrap hero-content">
     <div>
       <span class="eyebrow">Chytrá a hospodárná energetika</span>
@@ -511,6 +521,7 @@
       <div class="hero-cta">
         <a href="kalkulacka.html" class="btn btn-amber">Spočítat návratnost</a>
         <a href="#financovani" class="btn btn-outline">Prověřit řešení bez investice</a>
+        <a href="mobilni-kotelny/" class="btn btn-outline">Pronájem mobilní kotelny</a>
       </div>
       <a href="#dotace" class="hero-flag">
         <span class="hero-flag-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></svg></span>
@@ -608,8 +619,9 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Bez složitých stavebních zásahů</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Rychlé napojení na stávající systém</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Vhodná i pro rekonstrukce za provozu</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pronájem i s tepelným čerpadlem</li>
           </ul>
-          <a href="#kontakt" class="arrowlink">Více informací <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="mobilni-kotelny/" class="arrowlink">Pronájem mobilní kotelny <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
       <div class="sol reveal">
@@ -1288,6 +1300,7 @@
         <a href="#kombinace">Kombinace zdrojů</a>
         <a href="#technologie">Služby a technologie</a>
         <a href="#financovani">Modely spolupráce</a>
+        <a href="mobilni-kotelny/">Pronájem mobilní kotelny</a>
       </div>
       <div class="fcol">
         <h4>Kontakt</h4>
@@ -1360,6 +1373,10 @@
 (function(){
   /* hodnoty = [EN, DE, PL]; klíč = český originál (po trim) */
   const TR={
+  "Mobilní kotelny":["Mobile boiler rooms","Mobile Heizzentralen","Mobilne kotłownie"],
+  "Pronájem i s tepelným čerpadlem":["Rental also with a heat pump","Miete auch mit Wärmepumpe","Wynajem także z pompą ciepła"],
+  "Pronájem mobilní kotelny":["Mobile boiler room rental","Mobile Heizzentrale mieten","Wynajem mobilnej kotłowni"],
+  "Vizualizace":["Visualisation","Visualisierung","Wizualizacja"],
   /* navigace + aria */
   "Řešení":["Solutions","Lösungen","Rozwiązania"],
   "Ekonomika":["Economics","Wirtschaftlichkeit","Ekonomia"],
@@ -1914,6 +1931,15 @@
   function go(n){slides[i].classList.remove('active');dots[i].classList.remove('active');i=(n+slides.length)%slides.length;slides[i].classList.add('active');dots[i].classList.add('active');}
   function reset(){clearInterval(timer);timer=setInterval(function(){go(i+1);},6000);}
   reset();
+})();
+</script>
+<script>
+/* Štítek „Vizualizace“ u snímků mobilních kotelen v hero (nejsou to realizace) */
+(function(){
+  var badge=document.getElementById('heroViz');
+  var slides=[].slice.call(document.querySelectorAll('.hero-slide'));
+  function upd(){var a=document.querySelector('.hero-slide.active');badge.classList.toggle('show',!!(a&&a.hasAttribute('data-viz')));}
+  var mo=new MutationObserver(upd);slides.forEach(function(s){mo.observe(s,{attributes:true,attributeFilter:['class']});});upd();
 })();
 </script>
 </body>
