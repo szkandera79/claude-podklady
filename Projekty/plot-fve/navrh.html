@@ -1,0 +1,859 @@
+<meta charset="utf-8">
+<title>Fotovoltaický plot Vendryně</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+ /* layout: technický projektový podklad – úzký sloupec textu, výkresy přes celou šíři se svým posuvem */
+ --bg:#f4f6f7;--paper:#ffffff;--fg:#1a2228;--muted:#5b6872;--line:#d5dce0;--accent:#0d5c86;
+ --dim:#b8432b;--panel:#1f3d5c;--steel:#8f9ba5;--ok:#2f7d4f;--warn:#a86a10;--bad:#b23a2b;
+ --hl:#e7f0f5;--fence:#9aa7b0;--ground:#7b6a52;
+ --f-display:"Barlow Condensed","Arial Narrow",sans-serif;--f-body:"Barlow",system-ui,sans-serif;--f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11171b;--paper:#182026;--fg:#e3e9ec;--muted:#98a6ae;--line:#2c3a42;--accent:#5fb3e0;--dim:#ef8a6c;--panel:#3e6a95;--steel:#7e8b95;--ok:#5cc58a;--warn:#e0a948;--bad:#ef7a6a;--hl:#1d2c36;--fence:#61707a;--ground:#a8946f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11171b;--paper:#182026;--fg:#e3e9ec;--muted:#98a6ae;--line:#2c3a42;--accent:#5fb3e0;--dim:#ef8a6c;--panel:#3e6a95;--steel:#7e8b95;--ok:#5cc58a;--warn:#e0a948;--bad:#ef7a6a;--hl:#1d2c36;--fence:#61707a;--ground:#a8946f;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.55;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+main{max-width:1100px;margin:0 auto;display:grid;gap:40px}
+header{display:grid;gap:12px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:600;font-size:clamp(34px,6vw,54px);line-height:1.02;margin:0;text-wrap:balance}
+h2{font-family:var(--f-display);font-weight:600;font-size:28px;margin:0 0 12px;text-wrap:balance}
+h3{font-size:17px;margin:20px 0 6px}
+p,li{max-width:72ch}
+.lead{font-size:18px;color:var(--muted);max-width:70ch;margin:0}
+.warn{border:1px solid var(--warn);color:var(--fg);background:var(--paper);padding:12px 16px;border-radius:4px;font-size:15px}
+.warn b{color:var(--warn)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.kpi{background:var(--paper);padding:14px 16px;display:grid;gap:2px}
+.kpi .v{font-family:var(--f-display);font-size:30px;font-weight:600;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:13px;color:var(--muted)}
+section{display:grid;gap:8px;min-width:0}
+.tw{overflow-x:auto;border:1px solid var(--line);background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:12px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+td.n,th.n{text-align:right;font-family:var(--f-mono);font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.hl td{background:var(--hl);font-weight:600}
+tr.grp td{background:var(--bg);font-weight:600;font-size:13px}
+tfoot td{font-weight:700}
+.chip{display:inline-block;font-size:12px;padding:1px 8px;border-radius:10px;border:1px solid currentColor;white-space:nowrap}
+.chip.ok{color:var(--ok)}.chip.bad{color:var(--bad)}.chip.est{color:var(--warn)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--paper);border:1px solid var(--line);padding:16px;display:grid;gap:6px;min-width:0}
+.card h3{margin:0}
+.card.pick{border-color:var(--accent)}
+.card ul{margin:0;padding-left:18px}
+.mono{font-family:var(--f-mono);font-size:13px}
+.calc{background:var(--paper);border:1px solid var(--line);padding:14px 16px;font-family:var(--f-mono);font-size:13px;line-height:1.7;overflow-x:auto}
+.sheet{margin:0;background:var(--paper);border:1px solid var(--line)}
+.sheet figcaption{font-family:var(--f-display);font-size:20px;font-weight:600;padding:10px 14px;border-bottom:1px solid var(--line)}
+.scroll{overflow-x:auto;padding:8px}
+svg.dwg{width:100%;height:auto;display:block;margin:0 auto}
+svg.dwg *{vector-effect:non-scaling-stroke}
+svg .ink{stroke:var(--fg);stroke-width:1.2}
+svg .steel{stroke:var(--fg);stroke-width:1}
+svg .rail{stroke:var(--fg)}
+svg .fence{stroke:var(--fence);stroke-width:1;fill:none}
+svg .ground{stroke:var(--ground);stroke-width:1.6}
+svg .hidden{stroke:var(--muted);stroke-width:.9;stroke-dasharray:6 4;fill:none}
+svg .border{stroke:var(--bad);stroke-width:1.3;stroke-dasharray:14 4 3 4}
+svg .accent{stroke:var(--accent);stroke-width:1.6;fill:none}
+svg .cell{stroke:var(--paper);stroke-width:.6;opacity:.6}
+svg .dim,svg .dimx{stroke:var(--dim);stroke-width:.8}
+svg .nofill{fill:none}
+svg .f-panel{fill:var(--panel)}svg .f-steel{fill:var(--steel)}svg .f-rail{fill:var(--line)}svg .f-ink{fill:var(--fg)}svg .f-conc{fill:var(--line)}
+svg text{font-family:var(--f-body);fill:var(--fg)}
+svg text.dimt{fill:var(--dim);font-family:var(--f-mono)}
+svg text.note{fill:var(--muted)}
+svg text.ptxt{fill:#ffffff;opacity:.85}
+svg text.ptxt2{fill:var(--accent);font-weight:600}
+svg text.h{font-weight:700}
+ol.steps{display:grid;gap:10px;padding-left:22px;margin:0}
+ol.steps li{padding-left:4px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:22px;height:0;border-top:2px solid}
+footer{font-size:13px;color:var(--muted)}
+</style>
+<main>
+<header>
+ <div class="eyebrow">Projektový podklad · předběžný návrh · 23. 10. 2026</div>
+ <h1>Fotovoltaický plot Vendryně</h1>
+ <p class="lead">Samostatná svislá konstrukce na zemních vrutech v pásu 30 cm za stávajícím plotem. Jedna řada panelů naležato nahrazuje stínicí tkaninu a vyplňuje plot do výšky 1,5 m. Připojení jako samostatný string na SolaX X3-Ultra 25K.</p>
+ <div class="warn"><b>Předběžný návrh, není to ověřený statický projekt.</b> Zatížení je spočteno podle ČSN EN 1991-1-4 s předpoklady uvedenými níže. Dimenze sloupků, kotvení a únosnost vrutů v konkrétní zemině musí před realizací ověřit autorizovaný statik a zkouška vrutů na místě.</div>
+</header>
+
+<div class="kpis">
+ <div class="kpi"><span class="v">19</span><span class="l">panelů naležato, 1 řada</span></div>
+ <div class="kpi"><span class="v">8,55 kWp</span><span class="l">instalovaný výkon</span></div>
+ <div class="kpi"><span class="v">≈ 6 080 kWh</span><span class="l">ročně (PVGIS, svisle, 150°)</span></div>
+ <div class="kpi"><span class="v">17</span><span class="l">zemních vrutů Ø76×1600</span></div>
+ <div class="kpi"><span class="v">≈ 84 tis. Kč</span><span class="l">konstrukce vč. montáže, s DPH, odhad</span></div>
+ <div class="kpi"><span class="v">≈ 9 800 Kč</span><span class="l">konstrukce na 1 kWp</span></div>
+</div>
+
+<section>
+<h2>Vstupní údaje</h2>
+<div class="tw"><table>
+<tr><th>Parametr</th><th>Hodnota</th><th>Zdroj</th></tr>
+<tr><td>Lokalita</td><td>Vendryně (okr. Frýdek-Místek), 49°40′ s. š., 18°43′ v. d., 370 m n. m.</td><td>uživatel, kompas iPhone</td></tr>
+<tr><td>Plot</td><td>drátěné pletivo, délka ≈ 40 m, výška 1 500 mm, linie v rovině (oba konce ve stejné výšce)</td><td>uživatel, fotografie</td></tr>
+<tr><td>Rozteč sloupků plotu</td><td>2 210–2 330 mm, každé pole jinak</td><td>uživatel, změřeno</td></tr>
+<tr><td>Sloupky plotu</td><td>tenká kruhová trubka, odhad Ø 38–48 mm, některé zdvojené vzpěrou; patky neznámé</td><td>fotografie, <b>neověřeno</b></td></tr>
+<tr><td>Orientace panelů</td><td>azimut 150° (JJV), vnější strana plotu</td><td>uživatel, kompas</td></tr>
+<tr><td>Prostor</td><td>pás 300 mm za plotem patří uživateli, dál je pozemek souseda; plot patří uživateli</td><td>uživatel, <b>vytyčit geodetem</b></td></tr>
+<tr><td>Zastínění</td><td>na jednom konci strom, vynechat posledních 2–3 pole; vně louka se vzrostlými ovocnými stromy</td><td>uživatel, fotografie</td></tr>
+<tr><td>Panel (předpoklad)</td><td>1762×1134×30 mm, 450 Wp, ≈ 21.5 kg, Voc ≈ 39.5 V, Isc ≈ 14.3 A, zadní zkušební zatížení 2400 Pa</td><td><b>typ zatím nevybrán</b></td></tr>
+<tr><td>Střídač</td><td>SolaX X3-Ultra 25K: 3 MPPT, 36 A na MPPT, 2 vstupy na MPPT, rozsah MPPT 160–950 V</td><td><a href="https://www.solaxpower.com/products/x3-ultra/">solaxpower.com</a></td></tr>
+</table></div>
+</section>
+
+<section>
+<h2>Varianty konstrukce</h2>
+<p>Stávající plot je stavěný na pletivo. Plná plocha panelů ve větru působí na sloupek zhruba 2–3× větší silou, než jakou tenká trubka unese.</p>
+<div class="grid2">
+ <div class="card"><h3>A – na stávajících sloupcích <span class="chip bad">nevyhoví</span></h3>
+  <ul><li>Sloupek Ø48×1,5 (optimistický předpoklad): M<sub>Rd</sub> = 0,76 kNm</li>
+  <li>Pole 2,27 m, zóna D: M<sub>Ed</sub> = 2,40 kNm → využití <b>315 %</b></li>
+  <li>Patky neznámé, sloupky už teď místy vychýlené</li><li>Nejlevnější, ale nebezpečná. Zamítnuto.</li></ul></div>
+ <div class="card pick"><h3>B – samostatná konstrukce na zemních vrutech <span class="chip ok">návrh</span></h3>
+  <ul><li>Nezávislá na statice plotu, rozteč sloupků FV volná (1 sloupek uprostřed pole plotu)</li>
+  <li>Bez betonu a výkopů, rozebíratelná, šroubované spoje</li>
+  <li>Vejde se do pásu 300 mm (hloubka konstrukce ≈ 225 mm od osy plotu)</li>
+  <li>Vruty je potřeba ověřit zkouškou v místní zemině</li></ul></div>
+ <div class="card"><h3>C – kombinace plot + přídavné podpěry <span class="chip est">nevýhodná</span></h3>
+  <ul><li>Stávající sloupky nepřenesou ani podíl zatížení bez zesílení, takže se celá síla stejně přesune na nové podpěry</li>
+  <li>Spoje k plotu bez známé únosnosti, různé rozteče a vychýlení komplikují montáž</li>
+  <li>Úspora proti B je malá: ušetří se nejvýš pár vrutů</li></ul></div>
+ <div class="card"><h3>Další možnosti</h3>
+  <ul><li><b>Zabetonované sloupky</b>: patka se do pásu 300 mm vejde jen jako vrtaná Ø 250 mm. Řešení je spolehlivé, ale pracnější a nerozebíratelné. Je to záloha, pokud vruty v kamenité zemině nevyhoví.</li>
+  <li><b>Bifaciální panely sklo-sklo</b>: zadní strana dostane světlo ze zahrady přes pletivo. Orientačně +5 až 10 % výroby, panel je ale těžší a dražší.</li></ul></div>
+</div>
+</section>
+
+<section>
+<h2>Sklon panelů</h2>
+<p>Výroba podle PVGIS 5.2 pro 1 kWp, azimut 150°, ztráty 14 %, včetně horizontu terénu. Hloubka zahrnuje průmět panelu (1134 mm naležato) a 130 mm na sloupek a profil. Sklon kromě svislého by navíc panely vykláněl nad pozemek souseda a nenahradil by stínicí tkaninu.</p>
+<div class="tw"><table>
+<tr><th>Sklon</th><th class=n>kWh/kWp·rok</th><th class=n>vůči optimu</th><th class=n>zima XI–II</th><th class=n>léto VI–VIII</th><th class=n>hloubka mm</th><th>pás 300 mm</th></tr>
+<tr class=hl><td>90° svisle (návrh)</td><td class=n>711</td><td class=n>71 %</td><td class=n>159</td><td class=n>214</td><td class=n>130</td><td><span class='chip ok'>vejde</span></td></tr><tr><td>80°</td><td class=n>806</td><td class=n>81 %</td><td class=n>170</td><td class=n>254</td><td class=n>327</td><td><span class='chip bad'>nevejde</span></td></tr><tr><td>75°</td><td class=n>848</td><td class=n>85 %</td><td class=n>173</td><td class=n>273</td><td class=n>424</td><td><span class='chip bad'>nevejde</span></td></tr><tr><td>60°</td><td class=n>943</td><td class=n>94 %</td><td class=n>177</td><td class=n>319</td><td class=n>697</td><td><span class='chip bad'>nevejde</span></td></tr><tr><td>37° optimum (pro srovnání)</td><td class=n>999</td><td class=n>100 %</td><td class=n>163</td><td class=n>363</td><td class=n>1 036</td><td><span class='chip bad'>nevejde</span></td></tr>
+</table></div>
+<p><b>Závěr:</b> svisle se ročně vyrobí asi 71 % optima, ale v zimě (listopad–únor) <b>98 % optima</b>, takže svislá plocha je zimní zdroj. V létě vyrábí méně, což u střídače se střešní FVE nevadí: svislý string pokrývá ráno, zimu a období po sněžení. Větší sklon se do pásu nevejde. Panely naležato mají pruhy článků vodorovně, takže sníh nebo tráva u spodní hrany vyřadí přes bypass diodu jen spodní třetinu panelu.</p>
+</section>
+
+<section>
+<h2>Rozmístění a zapojení</h2>
+<ul>
+<li>19 panelů naležato v jedné řadě, mezera 20 mm, délka stěny <b>33 838 mm</b>. Horní hrana 1 500 mm (= výška plotu), spodní hrana 366 mm nad terénem.</li>
+<li>Panely <b>nesledují rozteč plotu</b>. Pole mají 2 210–2 330 mm, panel s mezerou 1 782 mm, takže by se nikdy nekryly. Konstrukce má vlastní rastr a sloupky FV stojí uprostřed polí plotu, ≥ 0,5 m od jeho sloupků a patek.</li>
+<li>Posledních ≈ 2,7 pole plotu (≈ 6,2 m) u stromu zůstává volných. Tkaninu tam lze ponechat.</li>
+<li><b>Jeden string 19 panelů</b> na samostatný MPPT: Voc při −25 °C ≈ <b>844 V</b> (pod 1 000 V), Vmp při 70 °C ≈ 542 V (nad 160 V), proud ≈ 14.3 A (limit MPPT 36 A). Pokud by pole za stromem chtěl uživatel osadit, vejdou se nejvýš 2 panely navíc, tedy 21 panelů a Voc ≈ 933 V. Absolutní max. vstupní napětí ověřit v datovém listu.</li>
+<li>Pod panely zůstává mezera 366 mm. Pokud má plot dál bránit výhledu, nechá se dole pruh původní tkaniny.</li>
+</ul>
+</section>
+
+<section>
+<h2>Předběžné statické posouzení</h2>
+<h3>Zatížení větrem (ČSN EN 1991-1-4 + NA)</h3>
+<div class="calc">
+v<sub>b,0</sub> = 25 m/s (větrná oblast II, ověřit v mapě NA) · c<sub>dir</sub> = c<sub>season</sub> = 1 → q<sub>b</sub> = 391 Pa<br>
+kategorie terénu II (louka, sad – konzervativně), z = max(h; z<sub>min</sub>) = 2.0 m · c<sub>r</sub> = 0.701 · c<sub>o</sub> = 1,0 · I<sub>v</sub> = 0.271<br>
+<b>q<sub>p</sub> = 556 Pa</b><br>
+volně stojící stěna (čl. 7.4.1, tab. 7.9), plná φ = 1, l/h = 22,6 ≥ 10, bez nároží:<br>
+A: 0.00–0.45 m → c<sub>p,net</sub> = 3.4 → w = 1.89 kPa, B: 0.45–3.00 m → c<sub>p,net</sub> = 2.1 → w = 1.17 kPa, C: 3.00–6.00 m → c<sub>p,net</sub> = 1.7 → w = 0.95 kPa, D: 6.00–99.00 m → c<sub>p,net</sub> = 1.2 → w = 0.67 kPa<br>
+Čistý tlak působí oběma směry: zepředu (od souseda) tlačí panel na profily, zezadu (od zahrady) ho odtrhuje od svorek. Rozhoduje zadní směr.<br>
+Sníh: na svislé ploše se neukládá. Řeší se jen navátý nebo nahrnutý sníh u spodní hrany (366 mm), takže sníh od panelů neodhrnovat.
+</div>
+<h3>Panely a svorky</h3>
+<div class="calc">
+plošně průměrný tlak na panel: max. 1,36 kPa (krajní panel), běžně 0,67 kPa<br>
+návrhová únosnost panelu zezadu typ. 2400 / 1,5 = 1,60 kPa → <b>vyhoví</b>, pokud výrobce povoluje upnutí na dlouhých hranách s profily rovnoběžnými s dlouhou hranou (ověřit v montážním návodu)<br>
+síla na svorku (4 ks/panel, ULS): 1,02 kN
+</div>
+<h3>Nosné profily (spojitý nosník, MKP)</h3>
+<div class="calc">
+2 profily Al 40×40, každý nese ½ výšky panelu = 567 mm, podpory = sloupky FV<br>
+M<sub>max,k</sub> = 0,213 kNm → M<sub>Ed</sub> = 0,319 kNm → potřebný W<sub>el</sub> ≥ <b>2,2 cm³</b> (f<sub>0</sub> = 160 MPa, γ<sub>M1</sub> = 1,1)<br>
+průhyb (I = 11 cm⁴ předpoklad) max. 6,6 mm
+</div>
+<h3>Sloupky a vruty</h3>
+<p>Sloupek jekl 80×80×3, S235, žár. Zn: W<sub>pl</sub> = 26,7 cm³, M<sub>pl,Rd</sub> = 6,27 kNm. Síly jsou reakce spojitých profilů. γ<sub>Q</sub> = 1,5. H<sub>k</sub> působí na rameni ≈ 0.93 m nad terénem.</p>
+<div class="tw"><table>
+<tr><th class=n>Sloupek</th><th class=n>x mm</th><th>Zóna</th><th class=n>H<sub>k</sub> kN</th><th class=n>M<sub>k</sub> kNm (terén)</th><th class=n>M<sub>Ed</sub> vrut kNm</th><th class=n>Využití sloupku</th><th class=n>Posun vrchu mm</th></tr>
+<tr><td class=n>S1</td><td class=n>500</td><td>B</td><td class=n>1,93</td><td class=n>1,80</td><td class=n>2,70</td><td class=n>0,38</td><td class=n>5</td></tr><tr><td class=n>S2</td><td class=n>1 770</td><td>B</td><td class=n>1,70</td><td class=n>1,59</td><td class=n>2,38</td><td class=n>0,34</td><td class=n>4</td></tr><tr><td class=n>S3</td><td class=n>3 405</td><td>C</td><td class=n>2,36</td><td class=n>2,20</td><td class=n>3,30</td><td class=n>0,47</td><td class=n>6</td></tr><tr><td class=n>S4</td><td class=n>5 675</td><td>C</td><td class=n>2,22</td><td class=n>2,07</td><td class=n>3,10</td><td class=n>0,44</td><td class=n>5</td></tr><tr><td class=n>S5</td><td class=n>7 945</td><td>D</td><td class=n>1,67</td><td class=n>1,55</td><td class=n>2,33</td><td class=n>0,33</td><td class=n>4</td></tr><tr><td class=n>S6</td><td class=n>10 215</td><td>D</td><td class=n>1,73</td><td class=n>1,62</td><td class=n>2,42</td><td class=n>0,34</td><td class=n>4</td></tr><tr><td class=n>S7</td><td class=n>12 485</td><td>D</td><td class=n>1,71</td><td class=n>1,60</td><td class=n>2,40</td><td class=n>0,34</td><td class=n>4</td></tr><tr><td class=n>S8</td><td class=n>14 755</td><td>D</td><td class=n>1,72</td><td class=n>1,60</td><td class=n>2,41</td><td class=n>0,34</td><td class=n>4</td></tr><tr><td class=n>S9</td><td class=n>17 025</td><td>D</td><td class=n>1,72</td><td class=n>1,60</td><td class=n>2,40</td><td class=n>0,34</td><td class=n>4</td></tr><tr><td class=n>S10</td><td class=n>19 295</td><td>D</td><td class=n>1,72</td><td class=n>1,60</td><td class=n>2,40</td><td class=n>0,34</td><td class=n>4</td></tr><tr><td class=n>S11</td><td class=n>21 565</td><td>D</td><td class=n>1,71</td><td class=n>1,60</td><td class=n>2,40</td><td class=n>0,34</td><td class=n>4</td></tr><tr><td class=n>S12</td><td class=n>23 835</td><td>D</td><td class=n>1,73</td><td class=n>1,61</td><td class=n>2,42</td><td class=n>0,34</td><td class=n>4</td></tr><tr><td class=n>S13</td><td class=n>26 105</td><td>D</td><td class=n>1,68</td><td class=n>1,57</td><td class=n>2,35</td><td class=n>0,33</td><td class=n>4</td></tr><tr><td class=n>S14</td><td class=n>28 375</td><td>C</td><td class=n>2,28</td><td class=n>2,13</td><td class=n>3,19</td><td class=n>0,45</td><td class=n>6</td></tr><tr><td class=n>S15</td><td class=n>30 645</td><td>C</td><td class=n>2,36</td><td class=n>2,20</td><td class=n>3,30</td><td class=n>0,47</td><td class=n>6</td></tr><tr><td class=n>S16</td><td class=n>32 280</td><td>B</td><td class=n>1,93</td><td class=n>1,80</td><td class=n>2,70</td><td class=n>0,38</td><td class=n>5</td></tr><tr><td class=n>S17</td><td class=n>33 550</td><td>A</td><td class=n>1,48</td><td class=n>1,38</td><td class=n>2,07</td><td class=n>0,29</td><td class=n>4</td></tr>
+</table></div>
+<div class="calc">
+max. využití sloupku 47 % → <b>vyhoví</b> · patka 4× M12 8.8: F<sub>t,Ed</sub> = 13,7 kN ≤ F<sub>t,Rd</sub> = 48,6 kN → vyhoví<br>
+<b>Požadavek na vrut (zadání pro dodavatele):</b> H<sub>k</sub> = 2,36 kN ve výšce 0.93 m, M<sub>k</sub> v terénu = 2,20 kNm, M<sub>Ed</sub> = 3,30 kNm, tah zanedbatelný (svislá plocha)<br>
+Vrut Ø76×1600 je v soudržné zemině obvykle dostačující. V kamenitém flyši nebo navážce musí únosnost potvrdit zkouška; pokud nevyhoví, použít Ø89×2000 nebo vrtanou patku Ø250×1200.<br>
+celková vodorovná síla na stěnu H<sub>k</sub> = 31,6 kN
+</div>
+<h3>Co musí statik ověřit nebo doplnit</h3>
+<ul>
+<li>větrnou oblast a kategorii terénu podle mapy NA a vliv orografie (pozemek ve svahu nad údolím, c<sub>o</sub> může být &gt; 1)</li>
+<li>únosnost vrutů v místní zemině: zkouška min. na 2 vrutech, nejlépe krajních</li>
+<li>průřezové charakteristiky zvoleného Al profilu a upínací konfiguraci podle návodu výrobce panelu</li>
+<li>posun hlavy vrutu a natočení. Konstrukce nemá vzpěry (není na ně místo), takže tuhost závisí jen na vrutu</li>
+</ul>
+</section>
+
+<section>
+<h2>Výkresy</h2>
+<div class="legend"><span><i class="sw" style="border-color:var(--fg)"></i>konstrukce</span><span><i class="sw" style="border-color:var(--muted);border-top-style:dashed"></i>skryté hrany</span><span><i class="sw" style="border-color:var(--fence)"></i>stávající plot</span><span><i class="sw" style="border-color:var(--bad);border-top-style:dashed"></i>hranice pozemku</span><span><i class="sw" style="border-color:var(--dim)"></i>kóty v mm</span></div>
+<figure class="sheet"><figcaption>Výkres 1 – pohled z vnější strany</figcaption><div class="scroll"><svg class="dwg" viewBox="-1238 -3941 42228 5831" style="min-width:1100px;max-width:100000px" role="img" aria-label="Výkres 1 – pohled z vnější strany">
+<line class="ground" x1="-600.0" y1="0.0" x2="40600.0" y2="0.0"/>
+<rect class="fence nofill" x="-24.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="2246.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="4516.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="6786.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="9056.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="11326.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="13596.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="15866.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="18136.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="20406.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="22676.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="24946.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="27216.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="29486.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="31756.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="34026.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="36296.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="38566.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="39976.0" y="-1500.0" width="48.0" height="1500.0"/>
+<line class="fence" x1="0.0" y1="-1500.0" x2="40000.0" y2="-1500.0"/>
+<rect class="ink f-panel" x="0.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="0.0" y1="-744.0" x2="1762.0" y2="-744.0"/>
+<line class="cell" x1="0.0" y1="-1122.0" x2="1762.0" y2="-1122.0"/>
+<text class="ptxt" x="881.0" y="-842.0" font-size="260" text-anchor="middle">P1</text>
+<rect class="ink f-panel" x="1782.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="1782.0" y1="-744.0" x2="3544.0" y2="-744.0"/>
+<line class="cell" x1="1782.0" y1="-1122.0" x2="3544.0" y2="-1122.0"/>
+<text class="ptxt" x="2663.0" y="-842.0" font-size="260" text-anchor="middle">P2</text>
+<rect class="ink f-panel" x="3564.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="3564.0" y1="-744.0" x2="5326.0" y2="-744.0"/>
+<line class="cell" x1="3564.0" y1="-1122.0" x2="5326.0" y2="-1122.0"/>
+<text class="ptxt" x="4445.0" y="-842.0" font-size="260" text-anchor="middle">P3</text>
+<rect class="ink f-panel" x="5346.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="5346.0" y1="-744.0" x2="7108.0" y2="-744.0"/>
+<line class="cell" x1="5346.0" y1="-1122.0" x2="7108.0" y2="-1122.0"/>
+<text class="ptxt" x="6227.0" y="-842.0" font-size="260" text-anchor="middle">P4</text>
+<rect class="ink f-panel" x="7128.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="7128.0" y1="-744.0" x2="8890.0" y2="-744.0"/>
+<line class="cell" x1="7128.0" y1="-1122.0" x2="8890.0" y2="-1122.0"/>
+<text class="ptxt" x="8009.0" y="-842.0" font-size="260" text-anchor="middle">P5</text>
+<rect class="ink f-panel" x="8910.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="8910.0" y1="-744.0" x2="10672.0" y2="-744.0"/>
+<line class="cell" x1="8910.0" y1="-1122.0" x2="10672.0" y2="-1122.0"/>
+<text class="ptxt" x="9791.0" y="-842.0" font-size="260" text-anchor="middle">P6</text>
+<rect class="ink f-panel" x="10692.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="10692.0" y1="-744.0" x2="12454.0" y2="-744.0"/>
+<line class="cell" x1="10692.0" y1="-1122.0" x2="12454.0" y2="-1122.0"/>
+<text class="ptxt" x="11573.0" y="-842.0" font-size="260" text-anchor="middle">P7</text>
+<rect class="ink f-panel" x="12474.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="12474.0" y1="-744.0" x2="14236.0" y2="-744.0"/>
+<line class="cell" x1="12474.0" y1="-1122.0" x2="14236.0" y2="-1122.0"/>
+<text class="ptxt" x="13355.0" y="-842.0" font-size="260" text-anchor="middle">P8</text>
+<rect class="ink f-panel" x="14256.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="14256.0" y1="-744.0" x2="16018.0" y2="-744.0"/>
+<line class="cell" x1="14256.0" y1="-1122.0" x2="16018.0" y2="-1122.0"/>
+<text class="ptxt" x="15137.0" y="-842.0" font-size="260" text-anchor="middle">P9</text>
+<rect class="ink f-panel" x="16038.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="16038.0" y1="-744.0" x2="17800.0" y2="-744.0"/>
+<line class="cell" x1="16038.0" y1="-1122.0" x2="17800.0" y2="-1122.0"/>
+<text class="ptxt" x="16919.0" y="-842.0" font-size="260" text-anchor="middle">P10</text>
+<rect class="ink f-panel" x="17820.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="17820.0" y1="-744.0" x2="19582.0" y2="-744.0"/>
+<line class="cell" x1="17820.0" y1="-1122.0" x2="19582.0" y2="-1122.0"/>
+<text class="ptxt" x="18701.0" y="-842.0" font-size="260" text-anchor="middle">P11</text>
+<rect class="ink f-panel" x="19602.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="19602.0" y1="-744.0" x2="21364.0" y2="-744.0"/>
+<line class="cell" x1="19602.0" y1="-1122.0" x2="21364.0" y2="-1122.0"/>
+<text class="ptxt" x="20483.0" y="-842.0" font-size="260" text-anchor="middle">P12</text>
+<rect class="ink f-panel" x="21384.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="21384.0" y1="-744.0" x2="23146.0" y2="-744.0"/>
+<line class="cell" x1="21384.0" y1="-1122.0" x2="23146.0" y2="-1122.0"/>
+<text class="ptxt" x="22265.0" y="-842.0" font-size="260" text-anchor="middle">P13</text>
+<rect class="ink f-panel" x="23166.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="23166.0" y1="-744.0" x2="24928.0" y2="-744.0"/>
+<line class="cell" x1="23166.0" y1="-1122.0" x2="24928.0" y2="-1122.0"/>
+<text class="ptxt" x="24047.0" y="-842.0" font-size="260" text-anchor="middle">P14</text>
+<rect class="ink f-panel" x="24948.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="24948.0" y1="-744.0" x2="26710.0" y2="-744.0"/>
+<line class="cell" x1="24948.0" y1="-1122.0" x2="26710.0" y2="-1122.0"/>
+<text class="ptxt" x="25829.0" y="-842.0" font-size="260" text-anchor="middle">P15</text>
+<rect class="ink f-panel" x="26730.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="26730.0" y1="-744.0" x2="28492.0" y2="-744.0"/>
+<line class="cell" x1="26730.0" y1="-1122.0" x2="28492.0" y2="-1122.0"/>
+<text class="ptxt" x="27611.0" y="-842.0" font-size="260" text-anchor="middle">P16</text>
+<rect class="ink f-panel" x="28512.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="28512.0" y1="-744.0" x2="30274.0" y2="-744.0"/>
+<line class="cell" x1="28512.0" y1="-1122.0" x2="30274.0" y2="-1122.0"/>
+<text class="ptxt" x="29393.0" y="-842.0" font-size="260" text-anchor="middle">P17</text>
+<rect class="ink f-panel" x="30294.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="30294.0" y1="-744.0" x2="32056.0" y2="-744.0"/>
+<line class="cell" x1="30294.0" y1="-1122.0" x2="32056.0" y2="-1122.0"/>
+<text class="ptxt" x="31175.0" y="-842.0" font-size="260" text-anchor="middle">P18</text>
+<rect class="ink f-panel" x="32076.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="32076.0" y1="-744.0" x2="33838.0" y2="-744.0"/>
+<line class="cell" x1="32076.0" y1="-1122.0" x2="33838.0" y2="-1122.0"/>
+<text class="ptxt" x="32957.0" y="-842.0" font-size="260" text-anchor="middle">P19</text>
+<line class="hidden" x1="0.0" y1="-386.0" x2="33838.0" y2="-386.0"/>
+<line class="hidden" x1="0.0" y1="-1480.0" x2="33838.0" y2="-1480.0"/>
+<line class="accent" x1="10682.0" y1="-216.0" x2="10682.0" y2="-1650.0"/>
+<text class="note" x="10682.0" y="-1700.0" font-size="182" text-anchor="middle">dilatace profilů</text>
+<line class="accent" x1="23156.0" y1="-216.0" x2="23156.0" y2="-1650.0"/>
+<text class="note" x="23156.0" y="-1700.0" font-size="182" text-anchor="middle">dilatace profilů</text>
+<rect class="steel f-steel" x="460.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="460.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="462.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="1730.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="1730.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="1732.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="3365.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="3365.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="3367.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="5635.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="5635.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="5637.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="7905.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="7905.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="7907.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="10175.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="10175.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="10177.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="12445.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="12445.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="12447.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="14715.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="14715.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="14717.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="16985.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="16985.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="16987.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="19255.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="19255.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="19257.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="21525.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="21525.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="21527.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="23795.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="23795.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="23797.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="26065.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="26065.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="26067.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="28335.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="28335.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="28337.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="30605.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="30605.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="30607.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="32240.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="32240.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="32242.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="33510.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="33510.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="33512.0" y="0.0" width="76.0" height="1500.0"/>
+<line class="dim" x1="0.0" y1="-2400.0" x2="33838.0" y2="-2400.0"/>
+<line class="dim" x1="-65.0" y1="-2335.0" x2="65.0" y2="-2465.0"/>
+<line class="dimx" x1="0.0" y1="-1500.0" x2="0.0" y2="-2478.0"/>
+<line class="dim" x1="33773.0" y1="-2335.0" x2="33903.0" y2="-2465.0"/>
+<line class="dimx" x1="33838.0" y1="-1500.0" x2="33838.0" y2="-2478.0"/>
+<text class="dimt" x="16919.0" y="-2491.0" font-size="260" text-anchor="middle">33 838</text>
+<line class="dim" x1="33838.0" y1="-2400.0" x2="40000.0" y2="-2400.0"/>
+<line class="dim" x1="33773.0" y1="-2335.0" x2="33903.0" y2="-2465.0"/>
+<line class="dimx" x1="33838.0" y1="-1500.0" x2="33838.0" y2="-2478.0"/>
+<line class="dim" x1="39935.0" y1="-2335.0" x2="40065.0" y2="-2465.0"/>
+<line class="dimx" x1="40000.0" y1="-1500.0" x2="40000.0" y2="-2478.0"/>
+<text class="dimt" x="36919.0" y="-2491.0" font-size="260" text-anchor="middle">6 162</text>
+<text class="note" x="36919.0" y="-1850.0" font-size="208" text-anchor="middle">vynecháno – stín stromu</text>
+<line class="dim" x1="0.0" y1="-3200.0" x2="40000.0" y2="-3200.0"/>
+<line class="dim" x1="-65.0" y1="-3135.0" x2="65.0" y2="-3265.0"/>
+<line class="dimx" x1="0.0" y1="-2400.0" x2="0.0" y2="-3278.0"/>
+<line class="dim" x1="39935.0" y1="-3135.0" x2="40065.0" y2="-3265.0"/>
+<line class="dimx" x1="40000.0" y1="-2400.0" x2="40000.0" y2="-3278.0"/>
+<text class="dimt" x="20000.0" y="-3291.0" font-size="260" text-anchor="middle">plot ≈ 40 000</text>
+<line class="dim" x1="-400.0" y1="0.0" x2="-400.0" y2="-1500.0"/>
+<line class="dim" x1="-465.0" y1="65.0" x2="-335.0" y2="-65.0"/>
+<line class="dimx" x1="0.0" y1="0.0" x2="-478.0" y2="0.0"/>
+<line class="dim" x1="-465.0" y1="-1435.0" x2="-335.0" y2="-1565.0"/>
+<line class="dimx" x1="0.0" y1="-1500.0" x2="-478.0" y2="-1500.0"/>
+<text class="dimt" x="-491.0" y="-750.0" font-size="260" text-anchor="middle" transform="rotate(-90 -491.0 -750.0)">1 500</text>
+<line class="dimx" x1="0.0" y1="350.0" x2="0.0" y2="650.0"/>
+<line class="dimx" x1="450.0" y1="350.0" x2="450.0" y2="650.0"/>
+<text class="note" x="225.0" y="620.0" font-size="208" text-anchor="middle">A</text>
+<line class="dimx" x1="450.0" y1="350.0" x2="450.0" y2="650.0"/>
+<line class="dimx" x1="3000.0" y1="350.0" x2="3000.0" y2="650.0"/>
+<text class="note" x="1725.0" y="620.0" font-size="208" text-anchor="middle">B</text>
+<line class="dimx" x1="3000.0" y1="350.0" x2="3000.0" y2="650.0"/>
+<line class="dimx" x1="6000.0" y1="350.0" x2="6000.0" y2="650.0"/>
+<text class="note" x="4500.0" y="620.0" font-size="208" text-anchor="middle">C</text>
+<line class="dimx" x1="33388.0" y1="350.0" x2="33388.0" y2="650.0"/>
+<line class="dimx" x1="33838.0" y1="350.0" x2="33838.0" y2="650.0"/>
+<text class="note" x="33613.0" y="620.0" font-size="208" text-anchor="middle">A</text>
+<line class="dimx" x1="30838.0" y1="350.0" x2="30838.0" y2="650.0"/>
+<line class="dimx" x1="33388.0" y1="350.0" x2="33388.0" y2="650.0"/>
+<text class="note" x="32113.0" y="620.0" font-size="208" text-anchor="middle">B</text>
+<line class="dimx" x1="27838.0" y1="350.0" x2="27838.0" y2="650.0"/>
+<line class="dimx" x1="30838.0" y1="350.0" x2="30838.0" y2="650.0"/>
+<text class="note" x="29338.0" y="620.0" font-size="208" text-anchor="middle">C</text>
+<text class="note" x="16919.0" y="620.0" font-size="208" text-anchor="middle">zóna D</text>
+<text class="note" x="16919.0" y="1100.0" font-size="182" text-anchor="middle">zóny větru podle ČSN EN 1991-1-4, tab. 7.9</text>
+<text class="ptxt2" x="16929.0" y="-1850.0" font-size="208" text-anchor="middle">1 string · 19 panelů · 8.55 kWp</text>
+</svg></div></figure><figure class="sheet"><figcaption>Výkres 1b – pohled z vnější strany, výřez 0–7,6 m</figcaption><div class="scroll"><svg class="dwg" viewBox="-805 -2080 9800 4484" style="min-width:900px;max-width:100000px" role="img" aria-label="Výkres 1b – pohled z vnější strany, výřez 0–7,6 m">
+<line class="ground" x1="-700.0" y1="0.0" x2="7600.0" y2="0.0"/>
+<rect class="fence nofill" x="-24.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="2246.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="4516.0" y="-1500.0" width="48.0" height="1500.0"/>
+<rect class="fence nofill" x="6786.0" y="-1500.0" width="48.0" height="1500.0"/>
+<line class="fence" x1="0.0" y1="-1500.0" x2="7600.0" y2="-1500.0"/>
+<rect class="ink f-panel" x="0.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="0.0" y1="-744.0" x2="1762.0" y2="-744.0"/>
+<line class="cell" x1="0.0" y1="-1122.0" x2="1762.0" y2="-1122.0"/>
+<text class="ptxt" x="881.0" y="-908.5" font-size="70" text-anchor="middle">P1</text>
+<rect class="ink f-panel" x="1782.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="1782.0" y1="-744.0" x2="3544.0" y2="-744.0"/>
+<line class="cell" x1="1782.0" y1="-1122.0" x2="3544.0" y2="-1122.0"/>
+<text class="ptxt" x="2663.0" y="-908.5" font-size="70" text-anchor="middle">P2</text>
+<rect class="ink f-panel" x="3564.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="3564.0" y1="-744.0" x2="5326.0" y2="-744.0"/>
+<line class="cell" x1="3564.0" y1="-1122.0" x2="5326.0" y2="-1122.0"/>
+<text class="ptxt" x="4445.0" y="-908.5" font-size="70" text-anchor="middle">P3</text>
+<rect class="ink f-panel" x="5346.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="5346.0" y1="-744.0" x2="7108.0" y2="-744.0"/>
+<line class="cell" x1="5346.0" y1="-1122.0" x2="7108.0" y2="-1122.0"/>
+<text class="ptxt" x="6227.0" y="-908.5" font-size="70" text-anchor="middle">P4</text>
+<rect class="ink f-panel" x="7128.0" y="-1500.0" width="1762.0" height="1134.0"/>
+<line class="cell" x1="7128.0" y1="-744.0" x2="8890.0" y2="-744.0"/>
+<line class="cell" x1="7128.0" y1="-1122.0" x2="8890.0" y2="-1122.0"/>
+<text class="ptxt" x="8009.0" y="-908.5" font-size="70" text-anchor="middle">P5</text>
+<line class="hidden" x1="0.0" y1="-386.0" x2="7600.0" y2="-386.0"/>
+<line class="hidden" x1="0.0" y1="-1480.0" x2="7600.0" y2="-1480.0"/>
+<rect class="steel f-steel" x="460.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="460.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="462.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="1730.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="1730.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="1732.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="3365.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="3365.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="3367.0" y="0.0" width="76.0" height="1500.0"/>
+<rect class="steel f-steel" x="5635.0" y="-366.0" width="80.0" height="266.0"/>
+<rect class="hidden nofill" x="5635.0" y="-1500.0" width="80.0" height="1134.0"/>
+<rect class="hidden nofill" x="5637.0" y="0.0" width="76.0" height="1500.0"/>
+<line class="dim" x1="0.0" y1="-1880.0" x2="1762.0" y2="-1880.0"/>
+<line class="dim" x1="-17.5" y1="-1862.5" x2="17.5" y2="-1897.5"/>
+<line class="dimx" x1="0.0" y1="-1500.0" x2="0.0" y2="-1901.0"/>
+<line class="dim" x1="1744.5" y1="-1862.5" x2="1779.5" y2="-1897.5"/>
+<line class="dimx" x1="1762.0" y1="-1500.0" x2="1762.0" y2="-1901.0"/>
+<text class="dimt" x="881.0" y="-1904.5" font-size="70" text-anchor="middle">1 762</text>
+<line class="dim" x1="1762.0" y1="-1880.0" x2="1782.0" y2="-1880.0"/>
+<line class="dim" x1="1744.5" y1="-1862.5" x2="1779.5" y2="-1897.5"/>
+<line class="dim" x1="1764.5" y1="-1862.5" x2="1799.5" y2="-1897.5"/>
+<text class="dimt" x="1772.0" y="-1904.5" font-size="70" text-anchor="middle">20</text>
+<line class="dim" x1="1782.0" y1="-1880.0" x2="3544.0" y2="-1880.0"/>
+<line class="dim" x1="1764.5" y1="-1862.5" x2="1799.5" y2="-1897.5"/>
+<line class="dimx" x1="1782.0" y1="-1500.0" x2="1782.0" y2="-1901.0"/>
+<line class="dim" x1="3526.5" y1="-1862.5" x2="3561.5" y2="-1897.5"/>
+<line class="dimx" x1="3544.0" y1="-1500.0" x2="3544.0" y2="-1901.0"/>
+<text class="dimt" x="2663.0" y="-1904.5" font-size="70" text-anchor="middle">1 762</text>
+<line class="dim" x1="0.0" y1="1850.0" x2="500.0" y2="1850.0"/>
+<line class="dim" x1="-17.5" y1="1867.5" x2="17.5" y2="1832.5"/>
+<line class="dimx" x1="0.0" y1="1500.0" x2="0.0" y2="1871.0"/>
+<line class="dim" x1="482.5" y1="1867.5" x2="517.5" y2="1832.5"/>
+<line class="dimx" x1="500.0" y1="1500.0" x2="500.0" y2="1871.0"/>
+<text class="dimt" x="250.0" y="1825.5" font-size="70" text-anchor="middle">500</text>
+<line class="dim" x1="500.0" y1="1850.0" x2="1770.0" y2="1850.0"/>
+<line class="dim" x1="482.5" y1="1867.5" x2="517.5" y2="1832.5"/>
+<line class="dimx" x1="500.0" y1="1500.0" x2="500.0" y2="1871.0"/>
+<line class="dim" x1="1752.5" y1="1867.5" x2="1787.5" y2="1832.5"/>
+<line class="dimx" x1="1770.0" y1="1500.0" x2="1770.0" y2="1871.0"/>
+<text class="dimt" x="1135.0" y="1825.5" font-size="70" text-anchor="middle">1 270</text>
+<line class="dim" x1="1770.0" y1="1850.0" x2="3405.0" y2="1850.0"/>
+<line class="dim" x1="1752.5" y1="1867.5" x2="1787.5" y2="1832.5"/>
+<line class="dimx" x1="1770.0" y1="1500.0" x2="1770.0" y2="1871.0"/>
+<line class="dim" x1="3387.5" y1="1867.5" x2="3422.5" y2="1832.5"/>
+<line class="dimx" x1="3405.0" y1="1500.0" x2="3405.0" y2="1871.0"/>
+<text class="dimt" x="2587.5" y="1825.5" font-size="70" text-anchor="middle">1 635</text>
+<line class="dim" x1="3405.0" y1="1850.0" x2="5675.0" y2="1850.0"/>
+<line class="dim" x1="3387.5" y1="1867.5" x2="3422.5" y2="1832.5"/>
+<line class="dimx" x1="3405.0" y1="1500.0" x2="3405.0" y2="1871.0"/>
+<line class="dim" x1="5657.5" y1="1867.5" x2="5692.5" y2="1832.5"/>
+<line class="dimx" x1="5675.0" y1="1500.0" x2="5675.0" y2="1871.0"/>
+<text class="dimt" x="4540.0" y="1825.5" font-size="70" text-anchor="middle">2 270</text>
+<line class="dim" x1="0.0" y1="2250.0" x2="2270.0" y2="2250.0"/>
+<line class="dim" x1="-17.5" y1="2267.5" x2="17.5" y2="2232.5"/>
+<line class="dimx" x1="0.0" y1="0.0" x2="0.0" y2="2271.0"/>
+<line class="dim" x1="2252.5" y1="2267.5" x2="2287.5" y2="2232.5"/>
+<line class="dimx" x1="2270.0" y1="0.0" x2="2270.0" y2="2271.0"/>
+<text class="dimt" x="1135.0" y="2225.5" font-size="70" text-anchor="middle">≈ 2 270</text>
+<line class="dim" x1="2270.0" y1="2250.0" x2="4540.0" y2="2250.0"/>
+<line class="dim" x1="2252.5" y1="2267.5" x2="2287.5" y2="2232.5"/>
+<line class="dimx" x1="2270.0" y1="0.0" x2="2270.0" y2="2271.0"/>
+<line class="dim" x1="4522.5" y1="2267.5" x2="4557.5" y2="2232.5"/>
+<line class="dimx" x1="4540.0" y1="0.0" x2="4540.0" y2="2271.0"/>
+<text class="dimt" x="3405.0" y="2225.5" font-size="70" text-anchor="middle">2 210–2 330</text>
+<line class="dim" x1="4540.0" y1="2250.0" x2="6810.0" y2="2250.0"/>
+<line class="dim" x1="4522.5" y1="2267.5" x2="4557.5" y2="2232.5"/>
+<line class="dimx" x1="4540.0" y1="0.0" x2="4540.0" y2="2271.0"/>
+<line class="dim" x1="6792.5" y1="2267.5" x2="6827.5" y2="2232.5"/>
+<line class="dimx" x1="6810.0" y1="0.0" x2="6810.0" y2="2271.0"/>
+<text class="dimt" x="5675.0" y="2225.5" font-size="70" text-anchor="middle">2 210–2 330</text>
+<line class="dim" x1="-450.0" y1="0.0" x2="-450.0" y2="-366.0"/>
+<line class="dim" x1="-467.5" y1="17.5" x2="-432.5" y2="-17.5"/>
+<line class="dimx" x1="0.0" y1="0.0" x2="-471.0" y2="0.0"/>
+<line class="dim" x1="-467.5" y1="-348.5" x2="-432.5" y2="-383.5"/>
+<line class="dimx" x1="0.0" y1="-366.0" x2="-471.0" y2="-366.0"/>
+<text class="dimt" x="-474.5" y="-183.0" font-size="70" text-anchor="middle" transform="rotate(-90 -474.5 -183.0)">366</text>
+<line class="dim" x1="-450.0" y1="-366.0" x2="-450.0" y2="-1500.0"/>
+<line class="dim" x1="-467.5" y1="-348.5" x2="-432.5" y2="-383.5"/>
+<line class="dim" x1="-467.5" y1="-1482.5" x2="-432.5" y2="-1517.5"/>
+<text class="dimt" x="-474.5" y="-933.0" font-size="70" text-anchor="middle" transform="rotate(-90 -474.5 -933.0)">1 134</text>
+<line class="dim" x1="-50.0" y1="0.0" x2="-50.0" y2="-100.0"/>
+<line class="dim" x1="-67.5" y1="17.5" x2="-32.5" y2="-17.5"/>
+<line class="dimx" x1="0.0" y1="0.0" x2="-71.0" y2="0.0"/>
+<line class="dim" x1="-67.5" y1="-82.5" x2="-32.5" y2="-117.5"/>
+<line class="dimx" x1="0.0" y1="-100.0" x2="-71.0" y2="-100.0"/>
+<text class="dimt" x="-74.5" y="-50.0" font-size="70" text-anchor="middle" transform="rotate(-90 -74.5 -50.0)">100</text>
+<line class="dim" x1="-50.0" y1="1500.0" x2="-50.0" y2="-100.0"/>
+<line class="dim" x1="-67.5" y1="1517.5" x2="-32.5" y2="1482.5"/>
+<line class="dimx" x1="0.0" y1="1500.0" x2="-71.0" y2="1500.0"/>
+<line class="dim" x1="-67.5" y1="-82.5" x2="-32.5" y2="-117.5"/>
+<line class="dimx" x1="0.0" y1="-100.0" x2="-71.0" y2="-100.0"/>
+<text class="dimt" x="-74.5" y="700.0" font-size="70" text-anchor="middle" transform="rotate(-90 -74.5 700.0)">1 600</text>
+<text class="note" x="200.0" y="800.0" font-size="70" text-anchor="start">zemní vrut Ø76×1600</text>
+<text class="note" x="570.0" y="-160.0" font-size="70" text-anchor="start">sloupek 80×80×3</text>
+<text class="note" x="7550.0" y="1900.0" font-size="70" text-anchor="end">osy sloupků FV</text>
+<text class="note" x="7550.0" y="2300.0" font-size="70" text-anchor="end">rozteč plotu (skutečná)</text>
+</svg></div></figure><figure class="sheet"><figcaption>Výkres 2 – boční řez</figcaption><div class="scroll"><svg class="dwg" viewBox="-755 -2136 1700 4230" style="min-width:520px;max-width:640px" role="img" aria-label="Výkres 2 – boční řez">
+<line class="ground" x1="-700.0" y1="0.0" x2="900.0" y2="0.0"/>
+<line class="ground" x1="-650.0" y1="0.0" x2="-710.0" y2="60.0"/>
+<line class="ground" x1="-530.0" y1="0.0" x2="-590.0" y2="60.0"/>
+<line class="ground" x1="-410.0" y1="0.0" x2="-470.0" y2="60.0"/>
+<line class="ground" x1="-290.0" y1="0.0" x2="-350.0" y2="60.0"/>
+<line class="ground" x1="-170.0" y1="0.0" x2="-230.0" y2="60.0"/>
+<line class="ground" x1="-50.0" y1="0.0" x2="-110.0" y2="60.0"/>
+<line class="ground" x1="70.0" y1="0.0" x2="10.0" y2="60.0"/>
+<line class="ground" x1="190.0" y1="0.0" x2="130.0" y2="60.0"/>
+<line class="ground" x1="310.0" y1="0.0" x2="250.0" y2="60.0"/>
+<line class="ground" x1="430.0" y1="0.0" x2="370.0" y2="60.0"/>
+<line class="ground" x1="550.0" y1="0.0" x2="490.0" y2="60.0"/>
+<line class="ground" x1="670.0" y1="0.0" x2="610.0" y2="60.0"/>
+<line class="ground" x1="790.0" y1="0.0" x2="730.0" y2="60.0"/>
+<text class="note" x="-450.0" y="-1650.0" font-size="30" text-anchor="middle">ZAHRADA (uvnitř)</text>
+<text class="note" x="600.0" y="-1650.0" font-size="30" text-anchor="middle">SOUSED</text>
+<rect class="fence nofill" x="-24.0" y="-1500.0" width="48.0" height="2300.0"/>
+<rect class="fence f-conc" x="-25.0" y="-200.0" width="50.0" height="250.0"/>
+<text class="note" x="-60.0" y="-120.0" font-size="22" text-anchor="end">podhrabová deska</text>
+<text class="note" x="-60.0" y="-1350.0" font-size="22" text-anchor="end">sloupek plotu (stávající)</text>
+<text class="note" x="-60.0" y="-1300.0" font-size="22" text-anchor="end">pletivo, tkanina odstraněna</text>
+<line class="border" x1="300.0" y1="1900.0" x2="300.0" y2="-1900.0"/>
+<text class="note" x="320.0" y="-1800.0" font-size="22" text-anchor="start">hranice pozemku (vytyčit)</text>
+<rect class="steel f-steel" x="62.0" y="0.0" width="76.0" height="1350.0"/>
+<line class="steel" x1="30.0" y1="1300.0" x2="170.0" y2="1240.0"/>
+<line class="steel" x1="30.0" y1="1080.0" x2="170.0" y2="1020.0"/>
+<line class="steel" x1="30.0" y1="860.0" x2="170.0" y2="800.0"/>
+<line class="steel" x1="30.0" y1="640.0" x2="170.0" y2="580.0"/>
+<line class="steel" x1="30.0" y1="420.0" x2="170.0" y2="360.0"/>
+<line class="steel" x1="30.0" y1="200.0" x2="170.0" y2="140.0"/>
+<line class="steel" x1="62.0" y1="1350.0" x2="100.0" y2="1500.0"/>
+<line class="steel" x1="138.0" y1="1350.0" x2="100.0" y2="1500.0"/>
+<rect class="steel f-steel" x="30.0" y="-100.0" width="140.0" height="8.0"/>
+<rect class="steel f-steel" x="20.0" y="-108.0" width="160.0" height="8.0"/>
+<rect class="steel f-steel" x="60.0" y="-1500.0" width="80.0" height="1392.0"/>
+<rect class="ink f-ink" x="60.0" y="-1506.0" width="80.0" height="6.0"/>
+<rect class="ink f-ink" x="140.0" y="-411.0" width="5.0" height="50.0"/>
+<rect class="ink f-rail" x="145.0" y="-406.0" width="40.0" height="40.0"/>
+<rect class="ink f-ink" x="140.0" y="-1505.0" width="5.0" height="50.0"/>
+<rect class="ink f-rail" x="145.0" y="-1500.0" width="40.0" height="40.0"/>
+<rect class="ink f-panel" x="185.0" y="-1500.0" width="30.0" height="1134.0"/>
+<rect class="ink f-ink" x="215.0" y="-381.0" width="8.0" height="15.0"/>
+<rect class="ink f-ink" x="215.0" y="-1500.0" width="8.0" height="15.0"/>
+<text class="note" x="245.0" y="-900.0" font-size="22" text-anchor="start">FV panel naležato</text>
+<text class="note" x="245.0" y="-860.0" font-size="22" text-anchor="start">1762×1134×30</text>
+<text class="note" x="160.0" y="900.0" font-size="22" text-anchor="start">zemní vrut Ø76×1600</text>
+<text class="note" x="160.0" y="940.0" font-size="22" text-anchor="start">s přírubou, žár. Zn</text>
+<text class="note" x="200.0" y="-1540.0" font-size="22" text-anchor="start">Al profil 40×40</text>
+<line class="dim" x1="0.0" y1="1750.0" x2="100.0" y2="1750.0"/>
+<line class="dim" x1="-7.5" y1="1757.5" x2="7.5" y2="1742.5"/>
+<line class="dimx" x1="0.0" y1="1500.0" x2="0.0" y2="1759.0"/>
+<line class="dim" x1="92.5" y1="1757.5" x2="107.5" y2="1742.5"/>
+<line class="dimx" x1="100.0" y1="1500.0" x2="100.0" y2="1759.0"/>
+<text class="dimt" x="50.0" y="1739.5" font-size="30" text-anchor="middle">100</text>
+<line class="dim" x1="0.0" y1="-1950.0" x2="223.0" y2="-1950.0"/>
+<line class="dim" x1="-7.5" y1="-1942.5" x2="7.5" y2="-1957.5"/>
+<line class="dimx" x1="0.0" y1="-1500.0" x2="0.0" y2="-1959.0"/>
+<line class="dim" x1="215.5" y1="-1942.5" x2="230.5" y2="-1957.5"/>
+<line class="dimx" x1="223.0" y1="-1500.0" x2="223.0" y2="-1959.0"/>
+<text class="dimt" x="111.5" y="-1960.5" font-size="30" text-anchor="middle">223</text>
+<line class="dim" x1="0.0" y1="-2050.0" x2="300.0" y2="-2050.0"/>
+<line class="dim" x1="-7.5" y1="-2042.5" x2="7.5" y2="-2057.5"/>
+<line class="dimx" x1="0.0" y1="-1950.0" x2="0.0" y2="-2059.0"/>
+<line class="dim" x1="292.5" y1="-2042.5" x2="307.5" y2="-2057.5"/>
+<line class="dimx" x1="300.0" y1="-1950.0" x2="300.0" y2="-2059.0"/>
+<text class="dimt" x="150.0" y="-2060.5" font-size="30" text-anchor="middle">300</text>
+<line class="dim" x1="700.0" y1="0.0" x2="700.0" y2="-366.0"/>
+<line class="dim" x1="692.5" y1="7.5" x2="707.5" y2="-7.5"/>
+<line class="dimx" x1="215.0" y1="0.0" x2="709.0" y2="0.0"/>
+<line class="dim" x1="692.5" y1="-358.5" x2="707.5" y2="-373.5"/>
+<line class="dimx" x1="215.0" y1="-366.0" x2="709.0" y2="-366.0"/>
+<text class="dimt" x="689.5" y="-183.0" font-size="30" text-anchor="middle" transform="rotate(-90 689.5 -183.0)">366</text>
+<line class="dim" x1="700.0" y1="-366.0" x2="700.0" y2="-1500.0"/>
+<line class="dim" x1="692.5" y1="-358.5" x2="707.5" y2="-373.5"/>
+<line class="dim" x1="692.5" y1="-1492.5" x2="707.5" y2="-1507.5"/>
+<text class="dimt" x="689.5" y="-933.0" font-size="30" text-anchor="middle" transform="rotate(-90 689.5 -933.0)">1 134</text>
+<line class="dim" x1="820.0" y1="0.0" x2="820.0" y2="-1500.0"/>
+<line class="dim" x1="812.5" y1="7.5" x2="827.5" y2="-7.5"/>
+<line class="dimx" x1="215.0" y1="0.0" x2="829.0" y2="0.0"/>
+<line class="dim" x1="812.5" y1="-1492.5" x2="827.5" y2="-1507.5"/>
+<line class="dimx" x1="215.0" y1="-1500.0" x2="829.0" y2="-1500.0"/>
+<text class="dimt" x="809.5" y="-750.0" font-size="30" text-anchor="middle" transform="rotate(-90 809.5 -750.0)">1 500</text>
+<line class="dim" x1="-300.0" y1="1500.0" x2="-300.0" y2="0.0"/>
+<line class="dim" x1="-307.5" y1="1507.5" x2="-292.5" y2="1492.5"/>
+<line class="dimx" x1="62.0" y1="1500.0" x2="-309.0" y2="1500.0"/>
+<line class="dim" x1="-307.5" y1="7.5" x2="-292.5" y2="-7.5"/>
+<line class="dimx" x1="62.0" y1="0.0" x2="-309.0" y2="0.0"/>
+<text class="dimt" x="-310.5" y="750.0" font-size="30" text-anchor="middle" transform="rotate(-90 -310.5 750.0)">1 500</text>
+<line class="dim" x1="-300.0" y1="0.0" x2="-300.0" y2="-100.0"/>
+<line class="dim" x1="-307.5" y1="7.5" x2="-292.5" y2="-7.5"/>
+<line class="dim" x1="-307.5" y1="-92.5" x2="-292.5" y2="-107.5"/>
+<text class="dimt" x="-310.5" y="-50.0" font-size="30" text-anchor="middle" transform="rotate(-90 -310.5 -50.0)">100</text>
+<line class="dim" x1="500.0" y1="-386.0" x2="500.0" y2="-1480.0"/>
+<line class="dim" x1="492.5" y1="-378.5" x2="507.5" y2="-393.5"/>
+<line class="dimx" x1="185.0" y1="-386.0" x2="509.0" y2="-386.0"/>
+<line class="dim" x1="492.5" y1="-1472.5" x2="507.5" y2="-1487.5"/>
+<line class="dimx" x1="185.0" y1="-1480.0" x2="509.0" y2="-1480.0"/>
+<text class="dimt" x="489.5" y="-933.0" font-size="30" text-anchor="middle" transform="rotate(-90 489.5 -933.0)">1 094</text>
+<text class="note" x="150.0" y="2050.0" font-size="26" text-anchor="middle">sklon 90° · azimut 150°</text>
+</svg></div></figure><figure class="sheet"><figcaption>Výkres 3 – půdorys (výřez 0–8 m)</figcaption><div class="scroll"><svg class="dwg" viewBox="-727 -1450 10104 3128" style="min-width:800px;max-width:100000px" role="img" aria-label="Výkres 3 – půdorys (výřez 0–8 m)">
+<line class="fence" x1="-400.0" y1="0.0" x2="8200.0" y2="0.0"/>
+<circle class="fence nofill" cx="0.0" cy="0.0" r="24.0"/>
+<circle class="fence nofill" cx="2270.0" cy="0.0" r="24.0"/>
+<circle class="fence nofill" cx="4540.0" cy="0.0" r="24.0"/>
+<circle class="fence nofill" cx="6810.0" cy="0.0" r="24.0"/>
+<circle class="fence nofill" cx="9080.0" cy="0.0" r="24.0"/>
+<rect class="fence nofill" x="-400.0" y="-25.0" width="8600.0" height="50.0"/>
+<line class="border" x1="-400.0" y1="300.0" x2="8200.0" y2="300.0"/>
+<text class="note" x="8150.0" y="390.0" font-size="85" text-anchor="end">hranice pozemku (30 cm za osou plotu – vytyčit)</text>
+<text class="note" x="8150.0" y="-160.0" font-size="85" text-anchor="end">plot (stávající, osa)</text>
+<rect class="steel f-steel" x="460.0" y="60.0" width="80.0" height="80.0"/>
+<circle class="hidden nofill" cx="500.0" cy="100.0" r="38.0"/>
+<rect class="steel f-steel" x="1730.0" y="60.0" width="80.0" height="80.0"/>
+<circle class="hidden nofill" cx="1770.0" cy="100.0" r="38.0"/>
+<rect class="steel f-steel" x="3365.0" y="60.0" width="80.0" height="80.0"/>
+<circle class="hidden nofill" cx="3405.0" cy="100.0" r="38.0"/>
+<rect class="steel f-steel" x="5635.0" y="60.0" width="80.0" height="80.0"/>
+<circle class="hidden nofill" cx="5675.0" cy="100.0" r="38.0"/>
+<rect class="steel f-steel" x="7905.0" y="60.0" width="80.0" height="80.0"/>
+<circle class="hidden nofill" cx="7945.0" cy="100.0" r="38.0"/>
+<line class="hidden" x1="0.0" y1="140.0" x2="8200.0" y2="140.0"/>
+<line class="hidden" x1="0.0" y1="185.0" x2="8200.0" y2="185.0"/>
+<rect class="ink f-panel" x="0.0" y="185.0" width="1762.0" height="30.0"/>
+<rect class="ink f-panel" x="1782.0" y="185.0" width="1762.0" height="30.0"/>
+<rect class="ink f-panel" x="3564.0" y="185.0" width="1762.0" height="30.0"/>
+<rect class="ink f-panel" x="5346.0" y="185.0" width="1762.0" height="30.0"/>
+<rect class="ink f-panel" x="7128.0" y="185.0" width="1072.0" height="30.0"/>
+<line class="dim" x1="0.0" y1="800.0" x2="500.0" y2="800.0"/>
+<line class="dim" x1="-21.2" y1="821.2" x2="21.2" y2="778.8"/>
+<line class="dimx" x1="0.0" y1="140.0" x2="0.0" y2="825.5"/>
+<line class="dim" x1="478.8" y1="821.2" x2="521.2" y2="778.8"/>
+<line class="dimx" x1="500.0" y1="140.0" x2="500.0" y2="825.5"/>
+<text class="dimt" x="250.0" y="770.2" font-size="85" text-anchor="middle">500</text>
+<line class="dim" x1="500.0" y1="800.0" x2="1770.0" y2="800.0"/>
+<line class="dim" x1="478.8" y1="821.2" x2="521.2" y2="778.8"/>
+<line class="dimx" x1="500.0" y1="140.0" x2="500.0" y2="825.5"/>
+<line class="dim" x1="1748.8" y1="821.2" x2="1791.2" y2="778.8"/>
+<line class="dimx" x1="1770.0" y1="140.0" x2="1770.0" y2="825.5"/>
+<text class="dimt" x="1135.0" y="770.2" font-size="85" text-anchor="middle">1 270</text>
+<line class="dim" x1="1770.0" y1="800.0" x2="3405.0" y2="800.0"/>
+<line class="dim" x1="1748.8" y1="821.2" x2="1791.2" y2="778.8"/>
+<line class="dimx" x1="1770.0" y1="140.0" x2="1770.0" y2="825.5"/>
+<line class="dim" x1="3383.8" y1="821.2" x2="3426.2" y2="778.8"/>
+<line class="dimx" x1="3405.0" y1="140.0" x2="3405.0" y2="825.5"/>
+<text class="dimt" x="2587.5" y="770.2" font-size="85" text-anchor="middle">1 635</text>
+<line class="dim" x1="3405.0" y1="800.0" x2="5675.0" y2="800.0"/>
+<line class="dim" x1="3383.8" y1="821.2" x2="3426.2" y2="778.8"/>
+<line class="dimx" x1="3405.0" y1="140.0" x2="3405.0" y2="825.5"/>
+<line class="dim" x1="5653.8" y1="821.2" x2="5696.2" y2="778.8"/>
+<line class="dimx" x1="5675.0" y1="140.0" x2="5675.0" y2="825.5"/>
+<text class="dimt" x="4540.0" y="770.2" font-size="85" text-anchor="middle">2 270</text>
+<line class="dim" x1="5675.0" y1="800.0" x2="7945.0" y2="800.0"/>
+<line class="dim" x1="5653.8" y1="821.2" x2="5696.2" y2="778.8"/>
+<line class="dimx" x1="5675.0" y1="140.0" x2="5675.0" y2="825.5"/>
+<line class="dim" x1="7923.8" y1="821.2" x2="7966.2" y2="778.8"/>
+<line class="dimx" x1="7945.0" y1="140.0" x2="7945.0" y2="825.5"/>
+<text class="dimt" x="6810.0" y="770.2" font-size="85" text-anchor="middle">2 270</text>
+<line class="dim" x1="0.0" y1="1150.0" x2="1762.0" y2="1150.0"/>
+<line class="dim" x1="-21.2" y1="1171.2" x2="21.2" y2="1128.8"/>
+<line class="dimx" x1="0.0" y1="215.0" x2="0.0" y2="1175.5"/>
+<line class="dim" x1="1740.8" y1="1171.2" x2="1783.2" y2="1128.8"/>
+<line class="dimx" x1="1762.0" y1="215.0" x2="1762.0" y2="1175.5"/>
+<text class="dimt" x="881.0" y="1120.2" font-size="85" text-anchor="middle">1 762</text>
+<line class="dim" x1="-250.0" y1="100.0" x2="-250.0" y2="0.0"/>
+<line class="dim" x1="-271.2" y1="121.2" x2="-228.8" y2="78.8"/>
+<line class="dimx" x1="500.0" y1="100.0" x2="-275.5" y2="100.0"/>
+<line class="dim" x1="-271.2" y1="21.2" x2="-228.8" y2="-21.2"/>
+<line class="dimx" x1="500.0" y1="0.0" x2="-275.5" y2="0.0"/>
+<text class="dimt" x="-279.8" y="50.0" font-size="85" text-anchor="middle" transform="rotate(-90 -279.8 50.0)">100</text>
+<line class="dim" x1="-500.0" y1="300.0" x2="-500.0" y2="0.0"/>
+<line class="dim" x1="-521.2" y1="321.2" x2="-478.8" y2="278.8"/>
+<line class="dim" x1="-521.2" y1="21.2" x2="-478.8" y2="-21.2"/>
+<text class="dimt" x="-529.8" y="150.0" font-size="85" text-anchor="middle" transform="rotate(-90 -529.8 150.0)">300</text>
+<line class="ink" x1="7450.0" y1="-640.2" x2="7750.0" y2="-1159.8"/>
+<line class="ink" x1="7750.0" y1="-1159.8" x2="7660.0" y2="-1069.8"/>
+<text class="ptxt2" x="7795.0" y="-1237.7" font-size="85" text-anchor="middle">S</text>
+<text class="note" x="7600.0" y="-440.0" font-size="85" text-anchor="middle">panely → 150° (JJV)</text>
+<text class="note" x="3000.0" y="-1000.0" font-size="85" text-anchor="middle">ZAHRADA</text>
+<text class="note" x="3000.0" y="1550.0" font-size="85" text-anchor="middle">POZEMEK SOUSEDA</text>
+</svg></div></figure><figure class="sheet"><figcaption>Výkres 4 – konstrukční detaily</figcaption><div class="scroll"><svg class="dwg" viewBox="-180 -332 2119 616" style="min-width:860px;max-width:100000px" role="img" aria-label="Výkres 4 – konstrukční detaily">
+<rect class="steel f-steel" x="-38.0" y="8.0" width="76.0" height="212.0"/>
+<rect class="steel f-steel" x="-70.0" y="0.0" width="140.0" height="8.0"/>
+<rect class="steel f-steel" x="-80.0" y="-8.0" width="160.0" height="8.0"/>
+<rect class="steel f-steel" x="-40.0" y="-228.0" width="80.0" height="220.0"/>
+<rect class="ink f-ink" x="-66.0" y="-20.0" width="12.0" height="40.0"/>
+<rect class="ink f-ink" x="54.0" y="-20.0" width="12.0" height="40.0"/>
+<line class="ground" x1="-160.0" y1="100.0" x2="160.0" y2="100.0"/>
+<line class="dim" x1="-80.0" y1="-260.0" x2="80.0" y2="-260.0"/>
+<line class="dim" x1="-83.2" y1="-256.8" x2="-76.8" y2="-263.2"/>
+<line class="dimx" x1="-80.0" y1="-8.0" x2="-80.0" y2="-263.9"/>
+<line class="dim" x1="76.8" y1="-256.8" x2="83.2" y2="-263.2"/>
+<line class="dimx" x1="80.0" y1="-8.0" x2="80.0" y2="-263.9"/>
+<text class="dimt" x="0.0" y="-264.6" font-size="13" text-anchor="middle">160</text>
+<line class="dim" x1="-60.0" y1="260.0" x2="60.0" y2="260.0"/>
+<line class="dim" x1="-63.2" y1="263.2" x2="-56.8" y2="256.8"/>
+<line class="dimx" x1="-60.0" y1="20.0" x2="-60.0" y2="263.9"/>
+<line class="dim" x1="56.8" y1="263.2" x2="63.2" y2="256.8"/>
+<line class="dimx" x1="60.0" y1="20.0" x2="60.0" y2="263.9"/>
+<text class="dimt" x="0.0" y="255.4" font-size="13" text-anchor="middle">120</text>
+<text class="h" x="0.0" y="-300.0" font-size="13" text-anchor="middle">D1 – kotvení sloupku na vrut</text>
+<text class="note" x="95.0" y="-20.0" font-size="13" text-anchor="start">patní deska P8 160×160</text>
+<text class="note" x="95.0" y="6.0" font-size="13" text-anchor="start">příruba vrutu (dle výrobce)</text>
+<text class="note" x="95.0" y="32.0" font-size="13" text-anchor="start">4× M12 8.8 žár. Zn</text>
+<text class="note" x="95.0" y="-160.0" font-size="13" text-anchor="start">jekl 80×80×3, svar dokola a5</text>
+<rect class="steel f-steel" x="480.0" y="-40.0" width="80.0" height="80.0"/>
+<rect class="ink f-ink" x="560.0" y="-30.0" width="5.0" height="60.0"/>
+<rect class="ink f-ink" x="560.0" y="-30.0" width="50.0" height="5.0"/>
+<rect class="ink f-rail" x="565.0" y="-20.0" width="40.0" height="40.0"/>
+<rect class="ink f-panel" x="605.0" y="-40.0" width="30.0" height="80.0"/>
+<line class="hidden" x1="460.0" y1="0.0" x2="565.0" y2="0.0"/>
+<line class="dim" x1="480.0" y1="90.0" x2="560.0" y2="90.0"/>
+<line class="dim" x1="476.8" y1="93.2" x2="483.2" y2="86.8"/>
+<line class="dimx" x1="480.0" y1="40.0" x2="480.0" y2="93.9"/>
+<line class="dim" x1="556.8" y1="93.2" x2="563.2" y2="86.8"/>
+<line class="dimx" x1="560.0" y1="40.0" x2="560.0" y2="93.9"/>
+<text class="dimt" x="520.0" y="85.5" font-size="13" text-anchor="middle">80</text>
+<line class="dim" x1="565.0" y1="90.0" x2="605.0" y2="90.0"/>
+<line class="dim" x1="561.8" y1="93.2" x2="568.2" y2="86.8"/>
+<line class="dimx" x1="565.0" y1="20.0" x2="565.0" y2="93.9"/>
+<line class="dim" x1="601.8" y1="93.2" x2="608.2" y2="86.8"/>
+<line class="dimx" x1="605.0" y1="20.0" x2="605.0" y2="93.9"/>
+<text class="dimt" x="585.0" y="85.5" font-size="13" text-anchor="middle">40</text>
+<line class="dim" x1="605.0" y1="90.0" x2="635.0" y2="90.0"/>
+<line class="dim" x1="601.8" y1="93.2" x2="608.2" y2="86.8"/>
+<line class="dimx" x1="605.0" y1="40.0" x2="605.0" y2="93.9"/>
+<line class="dim" x1="631.8" y1="93.2" x2="638.2" y2="86.8"/>
+<line class="dimx" x1="635.0" y1="40.0" x2="635.0" y2="93.9"/>
+<text class="dimt" x="620.0" y="85.5" font-size="13" text-anchor="middle">30</text>
+<text class="h" x="550.0" y="-300.0" font-size="13" text-anchor="middle">D2 – držák profilu (řez)</text>
+<text class="note" x="550.0" y="-150.0" font-size="13" text-anchor="middle">úhelník L50×50×5, l = 80</text>
+<text class="note" x="550.0" y="-128.0" font-size="13" text-anchor="middle">1× M10 do sloupku (prův.), 1× T-šroub M8</text>
+<text class="note" x="550.0" y="-106.0" font-size="13" text-anchor="middle">do drážky profilu; otvor oválný ±10 mm</text>
+<rect class="ink f-rail" x="1050.0" y="-20.0" width="40.0" height="40.0"/>
+<rect class="ink f-panel" x="1090.0" y="-80.0" width="30.0" height="140.0"/>
+<rect class="ink f-ink" x="1120.0" y="-80.0" width="10.0" height="25.0"/>
+<line class="ink" x1="1125.0" y1="-55.0" x2="1070.0" y2="-55.0"/>
+<line class="dim" x1="1050.0" y1="100.0" x2="1090.0" y2="100.0"/>
+<line class="dim" x1="1046.8" y1="103.2" x2="1053.2" y2="96.8"/>
+<line class="dimx" x1="1050.0" y1="20.0" x2="1050.0" y2="103.9"/>
+<line class="dim" x1="1086.8" y1="103.2" x2="1093.2" y2="96.8"/>
+<line class="dimx" x1="1090.0" y1="20.0" x2="1090.0" y2="103.9"/>
+<text class="dimt" x="1070.0" y="95.5" font-size="13" text-anchor="middle">40</text>
+<line class="dim" x1="1090.0" y1="100.0" x2="1120.0" y2="100.0"/>
+<line class="dim" x1="1086.8" y1="103.2" x2="1093.2" y2="96.8"/>
+<line class="dimx" x1="1090.0" y1="60.0" x2="1090.0" y2="103.9"/>
+<line class="dim" x1="1116.8" y1="103.2" x2="1123.2" y2="96.8"/>
+<line class="dimx" x1="1120.0" y1="60.0" x2="1120.0" y2="103.9"/>
+<text class="dimt" x="1105.0" y="95.5" font-size="13" text-anchor="middle">30</text>
+<text class="h" x="1090.0" y="-300.0" font-size="13" text-anchor="middle">D3 – koncová svorka na rám</text>
+<text class="note" x="1090.0" y="-150.0" font-size="13" text-anchor="middle">4 svorky / panel na dlouhých hranách</text>
+<text class="note" x="1090.0" y="-128.0" font-size="13" text-anchor="middle">v upínací zóně výrobce (typ. ¼ L od rohu)</text>
+<text class="note" x="1090.0" y="-106.0" font-size="13" text-anchor="middle">rám překrývá profil ≥ 20 mm</text>
+<rect class="ink f-rail" x="1500.0" y="-20.0" width="200.0" height="40.0"/>
+<rect class="ink f-rail" x="1720.0" y="-20.0" width="200.0" height="40.0"/>
+<rect class="accent nofill" x="1620.0" y="-26.0" width="180.0" height="52.0"/>
+<rect class="ink nofill" x="1638.0" y="-5.0" width="24.0" height="10.0"/>
+<rect class="ink nofill" x="1758.0" y="-5.0" width="24.0" height="10.0"/>
+<line class="dim" x1="1700.0" y1="90.0" x2="1720.0" y2="90.0"/>
+<line class="dim" x1="1696.8" y1="93.2" x2="1703.2" y2="86.8"/>
+<line class="dimx" x1="1700.0" y1="20.0" x2="1700.0" y2="93.9"/>
+<line class="dim" x1="1716.8" y1="93.2" x2="1723.2" y2="86.8"/>
+<line class="dimx" x1="1720.0" y1="20.0" x2="1720.0" y2="93.9"/>
+<text class="dimt" x="1710.0" y="85.5" font-size="13" text-anchor="middle">20</text>
+<line class="dim" x1="1620.0" y1="-90.0" x2="1800.0" y2="-90.0"/>
+<line class="dim" x1="1616.8" y1="-86.8" x2="1623.2" y2="-93.2"/>
+<line class="dimx" x1="1620.0" y1="-26.0" x2="1620.0" y2="-93.9"/>
+<line class="dim" x1="1796.8" y1="-86.8" x2="1803.2" y2="-93.2"/>
+<line class="dimx" x1="1800.0" y1="-26.0" x2="1800.0" y2="-93.9"/>
+<text class="dimt" x="1710.0" y="-94.5" font-size="13" text-anchor="middle">180</text>
+<text class="h" x="1710.0" y="-300.0" font-size="13" text-anchor="middle">D4 – dilatační spoj profilu</text>
+<text class="note" x="1710.0" y="-150.0" font-size="13" text-anchor="middle">2× na řadu, v mezeře mezi panely</text>
+<text class="note" x="1710.0" y="-128.0" font-size="13" text-anchor="middle">spojka s oválnými otvory, 1 strana pevně</text>
+</svg></div></figure>
+<p>Výkres 5 (svažitý terén) není potřeba, protože linie plotu je v rovině. Lokální nerovnosti do ±100 mm se vyrovnají hloubkou zavrtání. Všechny výkresy jsou i v editovatelném DXF (R12, mm 1:1, hladiny OBRYS, PANEL, OCEL, PROFIL, PLOT, TEREN, KOTY, SKRYTE, HRANICE) v projektové složce: <span class="mono">plot-fve/dxf/plot-fve.dxf</span>.</p>
+</section>
+
+<section>
+<h2>Materiál a rozpočet</h2>
+<p>Ceny jsou v Kč s DPH pro soukromou osobu. „Ověřeno“ znamená, že cenu potvrdila nabídka českého obchodu (říjen 2026). Ostatní jsou odhady, které je potřeba poptat.</p>
+<div class="tw"><table>
+<tr><th>Položka</th><th>Specifikace</th><th>Materiál</th><th>Rozměr</th><th class=n>ks</th><th class=n>Kč/ks</th><th class=n>Kč</th><th>Cena</th></tr>
+<tr class=grp><td colspan=8>Nosná konstrukce</td></tr><tr><td>Sloupek s patní deskou</td><td>jekl 80×80×3 + P8 160×160, 4 otvory Ø14, 2 otvory Ø11 pro držáky, svar a5, žárový zinek</td><td>S235</td><td>l = 1 400 mm</td><td class=n>17</td><td class=n>1 050</td><td class=n>17 850</td><td><span class='chip est'>odhad</span></td></tr><tr><td>Nosný profil FV</td><td>Al profil 40×40 s drážkou (např. G21 HPG2144X), W ≥ 4 cm³</td><td>Al 6063-T6</td><td>6 000 mm</td><td class=n>12</td><td class=n>1 070</td><td class=n>12 840</td><td><span class='chip ok'>ověřeno</span></td></tr><tr><td>Držák profilu</td><td>úhelník L50×50×5 s oválným otvorem</td><td>S235 žár. Zn</td><td>l = 80 mm</td><td class=n>34</td><td class=n>80</td><td class=n>2 720</td><td><span class='chip est'>odhad</span></td></tr><tr><td>Spojka profilu pevná</td><td>pro profil 40×40</td><td>Al</td><td>—</td><td class=n>8</td><td class=n>120</td><td class=n>960</td><td><span class='chip est'>odhad</span></td></tr><tr><td>Spojka profilu dilatační</td><td>s oválnými otvory</td><td>Al</td><td>—</td><td class=n>4</td><td class=n>250</td><td class=n>1 000</td><td><span class='chip est'>odhad</span></td></tr><tr><td>Záslepka sloupku</td><td>PE 80×80</td><td>PE</td><td>—</td><td class=n>17</td><td class=n>25</td><td class=n>425</td><td><span class='chip est'>odhad</span></td></tr><tr class=grp><td colspan=8>Kotvení</td></tr><tr><td>Zemní vrut s přírubou</td><td>Ø76×1600 mm, příruba 4× M12, rozteč děr 120 mm</td><td>S235 žár. Zn</td><td>1600 mm</td><td class=n>17</td><td class=n>1 200</td><td class=n>20 400</td><td><span class='chip est'>odhad</span></td></tr><tr><td>Strojní zavrtání vrutů</td><td>vč. dopravy stroje, předvrtání v kamenité zemině</td><td>služba</td><td>—</td><td class=n>17</td><td class=n>300</td><td class=n>5 100</td><td><span class='chip est'>odhad</span></td></tr><tr><td>Zatěžovací zkouška vrutu</td><td>2 ks, vodorovná síla dle tab. statiky</td><td>služba</td><td>—</td><td class=n>1</td><td class=n>2 500</td><td class=n>2 500</td><td><span class='chip est'>odhad</span></td></tr><tr class=grp><td colspan=8>Spojovací materiál</td></tr><tr><td>Koncová svorka panelu</td><td>pro rám 30 mm, s T-šroubem M8</td><td>Al + nerez</td><td>—</td><td class=n>76</td><td class=n>45</td><td class=n>3 420</td><td><span class='chip est'>odhad</span></td></tr><tr><td>Šroub + T-šroub držáku</td><td>M10×100 8.8 + M8 T-šroub s maticí</td><td>žár. Zn / nerez</td><td>—</td><td class=n>34</td><td class=n>25</td><td class=n>850</td><td><span class='chip est'>odhad</span></td></tr><tr><td>Šroubová sada patky</td><td>M12×40 8.8, matice, 2 podložky</td><td>žár. Zn</td><td>—</td><td class=n>68</td><td class=n>20</td><td class=n>1 360</td><td><span class='chip est'>odhad</span></td></tr><tr><td>Pospojování konstrukce</td><td>Cu 6 mm² zelenožlutý + svorky na sloupky, propojení na HOP</td><td>Cu</td><td>≈ 45 m</td><td class=n>1</td><td class=n>2 000</td><td class=n>2 000</td><td><span class='chip est'>odhad</span></td></tr><tr><td>Zinkový sprej</td><td>oprava řezů a poškození Zn</td><td>—</td><td>—</td><td class=n>2</td><td class=n>150</td><td class=n>300</td><td><span class='chip est'>odhad</span></td></tr><tr class=grp><td colspan=8>Montáž</td></tr><tr><td>Montáž konstrukce a panelů</td><td>2 osoby × 1,5 dne</td><td>práce</td><td>24 h</td><td class=n>24</td><td class=n>500</td><td class=n>12 000</td><td><span class='chip est'>odhad</span></td></tr>
+<tfoot><tr><td colspan=6>Celkem konstrukce, kotvení, spojovací materiál a montáž</td><td class=n>83 725</td><td></td></tr></tfoot>
+</table></div>
+<div class="tw"><table>
+<tr><th>Skupina</th><th class=n>Kč</th><th class=n>Kč/kWp</th></tr>
+<tr><td>Nosná konstrukce</td><td class=n>35 795</td><td class=n>4 187</td></tr><tr><td>Kotvení</td><td class=n>28 000</td><td class=n>3 275</td></tr><tr><td>Spojovací materiál</td><td class=n>7 930</td><td class=n>927</td></tr><tr><td>Montáž</td><td class=n>12 000</td><td class=n>1 404</td></tr>
+<tfoot><tr><td>Celkem</td><td class=n>83 725</td><td class=n>9 792</td></tr></tfoot>
+</table></div>
+<p><b>Mimo rozpočet konstrukce:</b> panely (19 × ≈ 2 000 Kč, tedy ≈ 38 000 Kč, odhad), DC kabeláž ke střídači (délka zatím neznámá), elektromontáž a revize (≈ 8 000 Kč), vytyčení hranice geodetem (≈ 6 000 Kč). Úspora při svépomoci: montáž ≈ 12 000 Kč. Vruty lze zavrtat i ručně s pronajatým nářadím, ale bez stroje je těžké dodržet svislost a hloubku v kamenité zemině.</p>
+</section>
+
+<section>
+<h2>Montážní postup</h2>
+<ol class="steps">
+<li><b>Příprava:</b> vytyčení hranice geodetem a domluva se sousedem (montáž půjde jen z jeho strany). Ohlášení a souhlas stavebního úřadu podle bodu Předpisy. Sundat tkaninu v osazovaném úseku.</li>
+<li><b>Vytyčení os sloupků:</b> šňůra 100 mm od osy plotu. Sloupky FV uprostřed polí plotu, v krajních polích 2 ks 500 mm od sloupků plotu. Polohu ±150 mm přizpůsobit patkám plotu a kamenům. Ověřit sítě v zemi (kabely, voda).</li>
+<li><b>Vruty:</b> strojně, svisle (odchylka ≤ 1°), hlava 100 mm nad terénem, všechny příruby do jedné výšky ±10 mm (nivelace laserem). Zatěžovací zkouška 2 vrutů. Při narážení na kámen předvrtat nebo posunout.</li>
+<li><b>Sloupky:</b> přišroubovat 4× M12 na přírubu, vyrovnat do svislice (podložky), horní hrany do jedné výšky 1 500 mm. Nasadit záslepky.</li>
+<li><b>Držáky a profily:</b> úhelníky na sloupky, profily vodorovně v osách 386 a 1480 mm. Dilatační spojky v mezerách za 6. a 13. panelem, ostatní spoje pevné. Profily nesmí přesahovat sloupek o více než 300 mm.</li>
+<li><b>Pospojování:</b> Cu 6 mm² mezi všemi sloupky a jedním profilem každé řady, připojit k hlavní ochranné přípojnici (HOP) domu. Svorky s nerezovými podložkami (Al/Zn).</li>
+<li><b>Panely:</b> od jednoho konce, koncové svorky na dlouhých hranách v upínací zóně podle návodu výrobce, moment podle výrobce svorky. Konektory MC4 propojit hned za panely, kabely vázat UV odolnými pásky k profilu, bez průvěsu.</li>
+<li><b>Kabeláž ke střídači:</b> H1Z2Z2-K 6 mm², od plotu v chráničce KOPOFLEX 40 v hloubce ≥ 0,7 m s výstražnou fólií. Na konstrukci kabely za panely, mimo dosah osob a zvířat. Označit „FV – DC napětí“.</li>
+<li><b>Zapojení a revize:</b> elektrikář připojí string na volný MPPT SolaxU, proměří Voc, Isc a izolační odpor a vystaví revizní zprávu.</li>
+<li><b>Kontrola po 1. zimě:</b> dotažení šroubů, svislost sloupků, poškození zinku a kabelů.</li>
+</ol>
+</section>
+
+<section>
+<h2>Elektro, předpisy a bezpečnost</h2>
+<div class="grid2">
+<div class="card"><h3>Distributor (ČEZ Distribuce)</h3><p>Přidáním 8,55 kWp se mění instalovaný výkon výrobny. Podat žádost o změnu nebo oznámení a doložit novou revizi. Rezervovaný výkon se nemění, pokud zůstává stejný střídač. Postup ověřit v portálu distributora před nákupem.</p></div>
+<div class="card"><h3>Stavební úřad</h3><p>Konstrukce stojí na hranici pozemku a je vyšší než 1,5 m nad terénem jen o rámeček. Režim (bez povolení, nebo ohlášení) a nutnost souhlasu souseda ověřit u příslušného stavebního úřadu. Souhlas souseda doporučuji mít písemně v každém případě.</p></div>
+<div class="card"><h3>Bezpečnost v dosahu osob</h3><ul><li>Panely ve výšce 0,37–1,5 m jsou na dosah z pozemku souseda: sklo může rozbít míč nebo kámen, DC kabely nesmí být přístupné.</li><li>Pospojování konstrukce podle ČSN 33 2000-7-712.</li><li>Žádné ostré hrany: záslepky, zaoblené konce profilů.</li></ul></div>
+<div class="card"><h3>Koroze</h3><p>Ocel žárově zinkovaná (sloupky po svaření), spojovací materiál žár. Zn nebo nerez A2. Hliník od zinku oddělit podložkou z nerezu nebo EPDM. Řezy a vrtání opravit zinkovým sprejem. Spodní hrana 366 mm a hlava vrutu 100 mm nad terénem chrání před vlhkostí a sekačkou.</p></div>
+</div>
+</section>
+
+<section>
+<h2>Otevřené body</h2>
+<ul>
+<li>Typ panelu: rozměry, Voc, zadní zatížitelnost a <b>povolená upínací konfigurace</b> (dlouhé hrany, profily rovnoběžně s dlouhou hranou). Případně bifaciální sklo-sklo.</li>
+<li>Vytyčení hranice: od čeho se 30 cm měří (osa, nebo líc pletiva)?</li>
+<li>Zemina v pásu za plotem: kamenitá, nebo hlinitá? Zkouška vrutů.</li>
+<li>Vzdálenost od plotu ke střídači a trasa kabelu.</li>
+<li>Kolik polí u stromu přesně vynechat. Lze ověřit fotkou plotu v zimě kolem poledne.</li>
+</ul>
+</section>
+<footer>Zdroje: PVGIS 5.2 (JRC), ČSN EN 1991-1-4 + NA, ČSN EN 1993-1-1, ČSN EN 1999-1-1, datová stránka SolaX X3-Ultra, cena profilu: zbozi.cz (G21 HPG2144X). Výpočet a výkresy generuje <span class="mono">plot-fve/src/navrh.py</span>.</footer>
+</main>
