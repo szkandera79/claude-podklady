@@ -153,6 +153,11 @@ def build_sub(dest):
     for page in ('index', 'kalkulacka', 'cena-tepla'):
         html = (MK / f'{page}.html').read_text(encoding='utf-8')
         (dest / f'{page}.html').write_text(frame_subpage(html, page), encoding='utf-8')
+    # jen použité obrázky (méně souborů k nahrání přes FTP)
+    used = ''.join(p.read_text(encoding='utf-8') for p in dest.glob('*.html'))
+    for img in (dest / 'assets' / 'img').iterdir():
+        if img.name not in used and img.stem.removeprefix('hero-') not in HERO_VIZ:
+            img.unlink()
 
 
 def patch_sitemap(s):

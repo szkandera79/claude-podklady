@@ -31,7 +31,7 @@
      <li>Účinnost <span class="tg tg-P">P</span>: kotle na olej a naftu 90 %, plyn a LPG 93 %, pelety 85 %, elektrokotel 99 %.</li>
      <li>Tepelné čerpadlo <span class="tg tg-O">O</span>: sezónní topný faktor ${Object.values(SOUSTAVY).filter(s => s.tag === 'O').map(s => fmt(s.spf, 2)).join(' / ')} podle teploty vody, vypočtený z výkonových map RH X50 pro typický průběh teplot.</li>
      <li>Nájmy konkurence <span class="tg tg-P">P</span>: střední hodnota veřejných ceníků 35–60 tis. Kč/měs. (zahraniční půjčovny, přepočet kurzem). U pelet a elektrokotle nájem v ČR nemáme ověřený.</li>
-     <li>Nájem tepelného čerpadla <span class="tg tg-I">I</span>: ceník ThermaVera ${TC_SETS.map(c => `${c.nominal} kW nominálně (${fmt(c.units * TC_UNIT_KW, 1)} kW při −15 °C) ${fmt(c.rent)} Kč/měs.`).join(', ')}; doprava ${fmt(TC_TRANSPORT)} Kč a montáž ${fmt(TC_INSTALL)} Kč zvlášť. Sestavu volíme podle výkonu při −15 °C. Větší výkon skládáme z těchto sestav <span class="tg tg-P">P</span>. Přesnou cenu stanoví nabídka.</li>
+     <li>Nájem tepelného čerpadla <span class="tg tg-I">I</span>: ceník ThermaVera ${TC_SETS.map(c => `${c.nominal} kW nominálně (${fmt(c.units * TC_UNIT_KW, 1)} kW při −15 °C) ${fmt(c.rent)} Kč/měs.`).join(', ')}; doprava ${fmt(TC_TRANSPORT)} Kč a montáž ${fmt(TC_INSTALL)} Kč zvlášť. Sestavu volíme podle výkonu při −15 °C. Větší výkon skládáme z těchto sestav <span class="tg tg-P">P</span>. Ceny jsou orientační, konečná cena je vždy smluvní podle specifikace a délky pronájmu. Při odkupu kotelny po skončení pronájmu může být pronájem zdarma (tuto možnost kalkulačka nepočítá).</li>
      <li>Výpočet nezahrnuje teplou vodu, stálé platby za přípojky a ceny povolenek ETS2.</li>`;
 
   // --- čtení vstupů ---
