@@ -667,6 +667,23 @@ HOTOVE = [
 ]
 
 
+USD = 23.0   # Kč/$ (orientačně)
+CINA = [
+    dict(nazev="Xiamen Megan Solar (MG Solar)", url="https://mgsolar.en.made-in-china.com/product/bAiYcwHThKWa/China-Solar-Vertical-Bifacial-Fence-PV-Farms-Mounting-Systems-Fence-Ground-Mount-System.html",
+         popis="svislý plot 90°, ocel Q345 žár. Zn (příp. ZnAlMg), panely naležato i nastojato, jedno- i oboustranné",
+         kotveni="beton, beraněné piloty nebo zemní vruty", zatizeni="vítr 45 m/s, sníh 1,4 kN/m²", cena="120 $/kW (od 1 kW)", usd=120 * STR["kWp"]),
+    dict(nazev="Yanglin Tech (Xiamen)", url="https://yanglinxm.en.made-in-china.com/product/QaEUlOibgChD/China-Easy-to-Install-Bifacial-Solar-Fence-Ground-Vertical-Mounting-System-Solar-Panels-for-Garden-Fence.html",
+         popis="bifaciální svislý plot „i pro zahradu“, uhlíková ocel, vlastní zemní vruty (dodání 5–10 dní po záloze)",
+         kotveni="zemní vruty (vlastní výroba)", zatizeni="vítr 60 m/s, sníh 1,4 kN/m² (AS/NZS 1170)", cena="0,30–0,80 $/ks (jednotka nejasná)", usd=None),
+    dict(nazev="Xiamen Kseng Metal Tech", url="https://www.xmkseng.com/space-saving-bifacial-vertical-solar-panel-fences-for-long-term-use_p262.html",
+         popis="ocel žár. Zn + hliník AL6005-T5, panely naležato i nastojato, rámové i bezrámové, i pro rezidenční použití",
+         kotveni="neuvedeno", zatizeni="vítr 60 m/s, sníh 2 kN/m² (JIS C 8955)", cena="na poptávku, na Alibabě MOQ 10 kW", usd=None),
+    dict(nazev="Xiamen 9Sun Solar", url="https://www.9sunsolar.net/product/ground-bracket-vertical-bifacial-solar-panel-fence-for-solar-ground-mounting-system",
+         popis="svislý bifaciální plot pro farmy, Al6005-T5 + ocel",
+         kotveni="zemní vruty nebo beton", zatizeni="vítr 38 m/s, sníh 1,4 kN/m²", cena="0,11–0,13 $/W, MOQ 10 kW", usd=0.13 * 10000),
+]
+
+
 # ---------------------------------------------------------------- HTML
 def fmt(x, d=0):
     s = f"{x:,.{d}f}".replace(",", " ").replace(".", ",")
@@ -695,6 +712,11 @@ def html():
                      f"<td>{h['kotveni']}</td><td class=n>{h['hloubka'] or '?'}</td><td class=n>{cena}</td><td>{h['cena_pozn']}</td>"
                      f"<td>{h['plus']}</td><td>{h['minus']}</td><td><span class='chip {h['hodnoceni']}'>{h['verdikt']}</span></td></tr>")
     nase = sum(r["celk"] for r in BOM) + N_PANEL * PANEL["cena"]
+    cina_rows = ""
+    for c in CINA:
+        kc = f"≈ {fmt(round(c['usd'] * USD, -3) / 1000)} tis. Kč" if c["usd"] else "—"
+        cina_rows += (f"<tr><td><a href=\"{c['url']}\">{c['nazev']}</a></td><td>{c['popis']}</td><td>{c['kotveni']}</td>"
+                      f"<td>{c['zatizeni']}</td><td>{c['cena']}</td><td class=n>{kc}</td></tr>")
 
     pan_rows = ""
     for key, p in PANELS.items():
@@ -893,6 +915,19 @@ footer{font-size:13px;color:var(--muted)}
 <li><b>Polsko:</b> nejbližší obdobou německé sady je <b>Solarne Ogrodzenia S1</b>, pole 2,1 m s panelem JA 500 W sklo-sklo za 1 179 zł. Na 33,6 m to dělá 16 polí a 8,0 kWp za ≈ 108 tis. Kč bez soklů a montáže. Plot by ale byl vysoký 1,7–1,8 m. <b>Emiter</b> v Katovicích prodává sady vodorovného pole se sloupkem 80×80 jen firmám, poptávka tedy přes montážní firmu. Na Slezsku je to logisticky nejbližší zdroj.</li>
 <li><b>Česko:</b> hotovou stavebnici „sloupek + panel“ s veřejnou cenou jsem nenašel. Česká řešení (Plotík, ALUX, Svaroq, Ploty Dobrý) jsou koncipovaná jako <b>náhrada plotu</b> v jeho linii. Plot je váš, takže to je reálná varianta: v osazeném úseku odstranit pletivo i staré sloupky a postavit solární plot na jejich místě. Omezení pásu 30 cm pak odpadá. Vyžaduje to poptávku a betonové patky.</li>
 </ul>
+<h3>Čína (Alibaba a Made-in-China)</h3>
+<p>Alibaba sama vyžaduje ověření posuvníkem (CAPTCHA), proto jsou údaje z výsledků vyhledávání a z webů dodavatelů, kteří na Alibabě prodávají. Všichni jsou z Xiamenu a nabízejí <b>svislé bifaciální ploty pro agro-FV</b>, tedy konstrukce bez panelů, cenu za watt a často minimální objednávku 10 kW.</p>
+<div class="tw"><table>
+<tr><th>Dodavatel</th><th>Systém</th><th>Kotvení</th><th>Zatížení (dle dodavatele)</th><th>Cena</th><th class=n>{fmt(STR['kWp'], 2)} kWp</th></tr>
+{cina_rows}
+</table></div>
+<ul>
+<li><b>Cena samotné konstrukce</b> je nízká: ≈ 25–30 tis. Kč za ocel na {fmt(STR['kWp'], 2)} kWp (9Sun při MOQ 10 kW ≈ 30 tis. Kč). Navíc přijde námořní doprava kusového zboží (LCL) do Hamburku nebo Gdaňsku a kamion (≈ 10–15 tis. Kč), clo, celní deklarace a 21% DPH. Celkem odhadem <b>≈ 45–55 tis. Kč</b> bez panelů a montáže proti ≈ 78 tis. Kč za materiál vlastního návrhu (vč. vrutů, bez montáže).</li>
+<li><b>Riziko dovozu hliníku:</b> na hliníkové profily z Číny platí v EU antidumpingové clo (≈ 21–32 %). Ocelová konstrukce je bezpečnější volba. Hodnotu CBAM malý dovoz nepřekročí (limit 50 t/rok).</li>
+<li><b>Technická rizika:</b> systémy jsou stavěné pro farmy (panely nastojato, 2 řady, sloupky po 2–4 m). Pro náš případ je potřeba výslovně objednat 1 řadu panelů naležato, horní hranu 1,5 m, hloubku ≤ 250 mm, vruty a svorky odpovídající návodu panelu JA. Deklarovaná zatížení (např. 60 m/s) nejsou ověřená podle eurokódů, takže statiku by stejně musel potvrdit český statik. Záruka se vymáhá jen obtížně, dodání trvá 6–10 týdnů.</li>
+<li><b>Závěr:</b> úspora proti vlastnímu návrhu je ≈ 25–30 tis. Kč a nevyváží riziko a čas. Smysl by dávala jen ve spojení s vlastním výpočtem (tento podklad) jako výrobní zadání pro konkrétní továrnu, a to nejlépe u dodavatele Megan Solar (cena od 1 kW, naležato, vruty).</li>
+</ul>
+
 <h3>Zkušenosti z diskusí</h3>
 <ul>
 <li>Svislé ploty se uživatelům osvědčily hlavně v zimě, jeden hlásí 44 kWh za zimní den z 18,5 kWp (<a href="https://www.photovoltaikforum.com/thread/219589-zaun-pv-windlast-wie-bauen-mit-bifazialen-modulen/">Photovoltaikforum</a>).</li>
