@@ -6,7 +6,8 @@ Soukromý projekt: konstrukce pro standardní FV moduly podél stávajícího dr
 rozpočet, montážní postup). **Předběžný návrh — finální dimenze a kotvení ověří autorizovaný statik.**
 
 ## Známé údaje
-- Délka plotu 40 m, orientace JV, mírný svah, panely na **vnější** straně.
+- Délka plotu 40 m, orientace JV, panely na **vnější** straně. Pozemek je v mírném svahu,
+  ale **linie plotu je v rovině** → bez výškového odstupňování modulů.
 - Pletivo s PVC povrchem, 3 napínací dráty, výška ≈ 1,5 m (odhad z fotek, neověřeno).
 - Sloupky: tenké kruhové trubky (odhad Ø 38–48 mm), zelená povrchová úprava, některé zdvojené
   (napínací/vzpěrné). Mezi sloupky pomocné tenké tyče, některé vychýlené.
@@ -16,6 +17,10 @@ rozpočet, montážní postup). **Předběžný návrh — finální dimenze a k
   (tenké tyče + rezavý drát) cca 0,3–0,5 m od plotu.
 - Fotky: `foto/IMG_6711–6714` vnitřní strana, `foto/IMG_6715–6717` vnější strana.
 
+- **Hranice:** plot sousedí se sousedem; za plotem patří uživateli pás jen **30 cm**
+  (ověřit vytyčením hranice geodetem). Celá konstrukce vč. vrutů, profilů a panelů se musí
+  vejít do tohoto pásu → prakticky jen **svislé panely (90°)**; 75° (průmět ≈ 0,46 m) a 60°
+  (≈ 0,88 m) se nevejdou. Montáž a údržba jen ze sousedního pozemku → souhlas souseda.
 - Připojení: samostatný string na střídač **SolaX X3-Ultra 25K** (parametry MPPT ověřit
   z datového listu: max. DC napětí 1 000 V, počet MPPT a vstupů, max. proud na MPPT).
 
@@ -33,8 +38,9 @@ rozpočet, montážní postup). **Předběžný návrh — finální dimenze a k
 - Riziko zastínění od ovocných stromů na vnější straně — nutno ověřit vzdálenosti a výšky.
 
 ## Otevřené body (čeká se na uživatele)
-- Komu patří pozemek za plotem? Stojí plot na hranici? (panely vně = zábor cizího pozemku?)
+- Čí je samotný plot (sloupky) — uživatele, nebo souseda? Je hranice vytyčená / vyznačená?
+- Vztah se sousedem: souhlas s montáží z jeho pozemku a se stavbou na hranici.
 - Obec / nadmořská výška, přesný azimut plotu (kompas).
 - Rozteč sloupků (změřit 2–3 pole), obvod sloupku, výška plotu, založení sloupků.
-- Převýšení terénu po délce 40 m; vzdálenost a výška stromů vně plotu.
+- Vzdálenost a výška stromů vně plotu.
 - Typ panelu, cílový výkon, střídač / stávající FVE, vzdálenost k rozvaděči, priorita zima/rok.
