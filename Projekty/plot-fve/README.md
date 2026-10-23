@@ -6,16 +6,18 @@ Soukromý projekt: konstrukce pro standardní FV moduly podél stávajícího dr
 rozpočet, montážní postup). **Předběžný návrh — finální dimenze a kotvení ověří autorizovaný statik.**
 
 ## Stav (23. 10. 2026)
-Rozpracovaná varianta **B: samostatná svislá konstrukce na zemních vrutech v pásu 30 cm**,
-1 řada panelů **naležato** (náhrada stínicí tkaniny, horní hrana 1 500 = výška plotu).
-- 19 panelů 1 762×1 134 (450 Wp předpoklad) = 8,55 kWp, **1 string** na volný MPPT SolaX X3-Ultra 25K
-  (Voc −25 °C ≈ 844 V); PVGIS 90°/150° ≈ 710 kWh/kWp → ≈ 6 070 kWh/rok.
-- 17 sloupků jekl 80×80×3 na vrutech Ø76×1600 (krajní pole 2 ks, ostatní 1 ks uprostřed pole plotu),
-  2 Al profily 40×40 na dlouhých hranách panelů, dilatace za 6. a 13. panelem.
+Varianta **B: samostatná svislá konstrukce na zemních vrutech v pásu 30 cm**, 1 řada panelů **naležato**
+(náhrada stínicí tkaniny, horní hrana 1 500 = výška plotu).
+- Panel: **JA Solar JAM54D40-450/LB** (bifaciální sklo-sklo), alternativa AIKO Neostar 2P A465, Trina NEG9RC.27
+  (Voc 52 V → max. 18 ks/string). Žádný výrobce nepovoluje upnutí s profily rovnoběžně s dlouhou hranou
+  → **dvouvrstvý systém**: vodorovné nosníky 40×40 na sloupcích + svislé profily 40×40 (2/panel, A ≈ 440 mm).
+- 19 panelů = 8,55 kWp, **1 string** na volný MPPT SolaX X3-Ultra 25K (Voc −25 °C ≈ 840 V);
+  PVGIS 90°/150° ≈ 710 kWh/kWp → ≈ 6 070 kWh/rok.
+- 17 sloupků jekl 60×60×4 (využití ≤ 66 %) na vrutech Ø76×1600, hloubka konstrukce 250 mm od osy plotu.
 - Vítr: qp = 556 Pa (oblast II, terén II), volně stojící stěna tab. 7.9; var. A (stávající sloupky) využití 315 % → zamítnuto.
-- Konstrukce vč. montáže ≈ 84 tis. Kč s DPH (odhad) ≈ 9 800 Kč/kWp.
-- Projektový podklad: `navrh.html` (artefakt „Fotovoltaický plot Vendryně“), výkresy `dxf/plot-fve.dxf`,
-  souhrn `vystup/statika.json`; vše generuje `python3 plot-fve/src/navrh.py` (vstupy na začátku skriptu).
+- Konstrukce vč. montáže ≈ 98 tis. Kč s DPH (odhad).
+- Podklad: `navrh.html` (artefakt CvKMLkVx9LvPeLw9rx7acp), výkresy `dxf/plot-fve.dxf`, souhrn `vystup/statika.json`;
+  generuje `python3 plot-fve/src/navrh.py` (volba panelu = `VYBER`).
 
 ## Známé údaje
 - Délka plotu 40 m, orientace JV, panely na **vnější** straně. Pozemek je v mírném svahu,

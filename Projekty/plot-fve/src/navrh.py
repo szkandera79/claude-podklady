@@ -15,17 +15,42 @@ np.seterr(all="ignore")      # macOS Accelerate hlásí falešná varování v m
 # ---------------------------------------------------------------- vstupy
 SITE = dict(obec="Vendryně (okr. Frýdek-Místek)", lat=49.6689, lon=18.7228, alt=370,
             azimut=150, plot_delka=40.0, plot_vyska=1500, roztec=(2210, 2330), pas=300)
-PANEL = dict(L=1762, B=1134, t=30, Wp=450, kg=21.5, Voc=39.5, Vmp=32.8, Isc=14.3,
-             tk_voc=-0.25, tk_vmp=-0.29, zad_zkus=2400)  # typický 108 půlčlánků TOPCon
+# Kandidáti 1 762 × 1 134 mm (údaje z datových listů a montážních návodů výrobců, 10/2026).
+# Všichni povolují upnutí na dlouhých hranách jen s profily KOLMO na dlouhou hranu.
+# zad_navrh = návrhové zatížení zezadu (sání) po součiniteli 1,5; A = poloha svorky od kratší hrany.
+PANELS = {
+    "JA": dict(nazev="JA Solar JAM54D40-450/LB", typ="bifaciální sklo-sklo, n-TOPCon", L=1762, B=1134, t=30,
+               Wp=450, kg=22.0, Voc=39.3, Vmp=32.82, Isc=14.48, tk_voc=-0.25, tk_vmp=-0.29,
+               zad_navrh=1600, A=(390, 490), cena=2300,
+               zdroj="JA Solar Bifacial Double-glass Installation Manual (2024), tab. Clamps, rails cross the long frame"),
+    "AIKO": dict(nazev="AIKO Neostar 2P A465-MAH54Mw", typ="jednostranný, sklo-fólie, ABC (zadní kontakty)", L=1757, B=1134, t=30,
+                 Wp=465, kg=21.0, Voc=41.12, Vmp=34.68, Isc=14.29, tk_voc=-0.24, tk_vmp=-0.29,
+                 zad_navrh=1600, A=(310, 410), cena=2900,
+                 zdroj="AIKO Mono glass Installation Manual v1.1, clamp mounting on long frame (+5400/−2400 Pa zkušební)"),
+    "TRINA": dict(nazev="Trina Vertex S+ TSM-440NEG9RC.27", typ="bifaciální sklo-sklo, n-TOPCon", L=1762, B=1134, t=30,
+                  Wp=440, kg=21.0, Voc=52.2, Vmp=44.0, Isc=10.67, tk_voc=-0.24, tk_vmp=-0.29,
+                  zad_navrh=2667, A=(300, 350), cena=2300,
+                  zdroj="Trina Vertex User Manual UM-M-0002 L (08/2024), A-surface clamp, rails perpendicular (−4000/+5400 Pa zkušební)"),
+}
+VYBER = "JA"
+PANEL = PANELS[VYBER]
 N_PANEL = 19
 GAP = 20                     # mezera mezi panely [mm]
 Y_TOP = 1500                 # horní hrana panelů = výška plotu
 Y_BOT = Y_TOP - PANEL["B"]   # 366
 RAIL = 40                    # Al profil 40×40
-RAIL_Y = (Y_BOT + 20, Y_TOP - 20)   # osy profilů (podél dlouhých hran rámu)
+RAIL_Y = (Y_BOT + 60, Y_TOP - 60)   # osy vodorovných nosníků (spodní vrstva)
+VR_A = sum(PANEL["A"]) / 2          # svislé profily (horní vrstva) od kratší hrany panelu
+VR_EXT = 45                         # přesah svislého profilu za hranu panelu (pro svorku)
 FIELD = 2270                 # schematická rozteč sloupků plotu (skutečně 2 210–2 330)
 X_POST_PLOT = 100            # osa sloupku FV od osy plotu (ven)
-POST = dict(b=80, t=3, fy=235, nazev="jekl 80×80×3, S235, žár. Zn")
+POST = dict(b=60, t=4, fy=235, nazev="jekl 60×60×4, S235, žár. Zn")
+# hloubková skladba od osy plotu: sloupek | vodorovný nosník | svislý profil | panel | svorka
+X_POST_F = X_POST_PLOT + POST["b"] / 2
+X_BEAM = (X_POST_F, X_POST_F + RAIL)
+X_VR = (X_BEAM[1], X_BEAM[1] + RAIL)
+X_PAN = (X_VR[1], X_VR[1] + 30)
+X_CLAMP = X_PAN[1] + 10
 HEAD = 100                   # hlava vrutu nad terénem
 VRUT = dict(d=76, L=1600)
 PITCH = PANEL["L"] + GAP
@@ -97,20 +122,34 @@ def zone_at(x_mm):
 
 
 # ---------------------------------------------------------------- spojitý nosník (MKP)
+def vr_positions():
+    """Svislé profily: 2 na panel ve vzdálenosti A od kratších hran."""
+    return [(i, i * PITCH + a) for i in range(N_PANEL) for a in (VR_A, PANEL["L"] - VR_A)]
+
+
+def panel_pressure(i):
+    xs = np.linspace(i * PITCH, i * PITCH + PANEL["L"], 50)
+    return float(np.mean([w_at(x) for x in xs]))
+
+
 def rail_fe():
+    """Vodorovný nosník = spojitý nosník na sloupcích, zatížený bodově od svislých profilů."""
     E, I = 70000.0, 11.0e4                     # Al 6063-T6, I ≈ 11 cm⁴ (40×40, ověřit u výrobce)
-    grid = set(np.arange(0, L_WALL + 1, 20.0).round(1)) | {round(p, 1) for p in POSTS} | {L_WALL}
+    vrs = vr_positions()
+    grid = set(np.arange(0, L_WALL + 1, 20.0).round(1)) | {round(p, 1) for p in POSTS} | {L_WALL} \
+        | {round(x, 1) for _, x in vrs}
     xs = np.array(sorted(grid))
     n = len(xs)
     K = np.zeros((2 * n, 2 * n)); F = np.zeros(2 * n)
+    for i, x in vrs:                            # P/4 na každý styk svislý profil × nosník
+        P = panel_pressure(i) * PANEL["L"] * PANEL["B"] / 1e6 * 1000    # N
+        F[2 * int(np.argmin(abs(xs - round(x, 1))))] += P / 4
     for e in range(n - 1):
         l = xs[e + 1] - xs[e]
         k = E * I / l ** 3 * np.array([[12, 6 * l, -12, 6 * l], [6 * l, 4 * l * l, -6 * l, 2 * l * l],
                                         [-12, -6 * l, 12, -6 * l], [6 * l, 2 * l * l, -6 * l, 4 * l * l]])
-        q = w_at((xs[e] + xs[e + 1]) / 2) * PANEL["B"] / 2 / 1000      # kN/m = N/mm
-        fe = q * np.array([l / 2, l * l / 12, l / 2, -l * l / 12])
         idx = [2 * e, 2 * e + 1, 2 * e + 2, 2 * e + 3]
-        K[np.ix_(idx, idx)] += k; F[idx] += fe
+        K[np.ix_(idx, idx)] += k
     sup = [int(np.argmin(abs(xs - p))) * 2 for p in POSTS]
     free = [i for i in range(2 * n) if i not in sup]
     u = np.zeros(2 * n)
@@ -122,9 +161,7 @@ def rail_fe():
         l = xs[e + 1] - xs[e]
         k = E * I / l ** 3 * np.array([[12, 6 * l, -12, 6 * l], [6 * l, 4 * l * l, -6 * l, 2 * l * l],
                                         [-12, -6 * l, 12, -6 * l], [6 * l, 2 * l * l, -6 * l, 4 * l * l]])
-        q = w_at((xs[e] + xs[e + 1]) / 2) * PANEL["B"] / 2 / 1000
-        fe = q * np.array([l / 2, l * l / 12, l / 2, -l * l / 12])
-        f = k @ u[2 * e:2 * e + 4] - fe
+        f = k @ u[2 * e:2 * e + 4]
         M += [abs(f[1]), abs(f[3])]
     defl = max(abs(u[0::2]))
     return dict(R=[-r for r in R], Mmax=max(M) / 1e6, defl=defl, E=E, I=I)
@@ -150,10 +187,7 @@ def statics():
         posts.append(dict(x=round(x), zona=zone_at(x), H_k=H, M_k=Mg, M_Ed_post=gQ * Mb,
                           M_Ed_vrut=gQ * Mg, UR=gQ * Mb / Mpl, d_top=dtop))
     # panely: plošně průměrný tlak na panel
-    pp = []
-    for i in range(N_PANEL):
-        xs = np.linspace(i * PITCH, i * PITCH + PANEL["L"], 50)
-        pp.append(float(np.mean([w_at(x) for x in xs])))
+    pp = [panel_pressure(i) for i in range(N_PANEL)]
     Ap = PANEL["L"] * PANEL["B"] / 1e6
     clamp = max(pp) * Ap / 4 * gQ
     # rail
@@ -177,11 +211,12 @@ def statics():
 S = statics()
 
 # ---------------------------------------------------------------- string
-def string():
-    n = N_PANEL
-    voc_cold = PANEL["Voc"] * (1 + PANEL["tk_voc"] / 100 * (-25 - 25)) * n
-    vmp_hot = PANEL["Vmp"] * (1 + PANEL["tk_vmp"] / 100 * (70 - 25)) * n
-    return dict(n=n, kWp=n * PANEL["Wp"] / 1000, voc_cold=voc_cold, vmp_hot=vmp_hot, vmp_stc=PANEL["Vmp"] * n)
+def string(p=PANEL, n=N_PANEL):
+    voc1 = p["Voc"] * (1 + p["tk_voc"] / 100 * (-25 - 25))       # −25 °C
+    n_max = int(1000 * 0.98 // voc1)                             # 2 % rezerva pod 1 000 V
+    n = min(n, n_max)
+    vmp_hot = p["Vmp"] * (1 + p["tk_vmp"] / 100 * (70 - 25)) * n
+    return dict(n=n, n_max=n_max, kWp=n * p["Wp"] / 1000, voc_cold=voc1 * n, vmp_hot=vmp_hot, vmp_stc=p["Vmp"] * n)
 
 
 STR = string()
@@ -262,6 +297,7 @@ class Sheet:
 
 def sheet_front(x_from=-600, x_to=40600, detail=False):
     th = 70 if detail else 260
+    pb = POST["b"]
     s = Sheet("Výkres 1 – pohled z vnější strany", th)
     s.line(x_from, 0, x_to, 0, "ground")
     # plot (za panely)
@@ -279,24 +315,33 @@ def sheet_front(x_from=-600, x_to=40600, detail=False):
         for k in (1, 2):
             s.line(x, Y_BOT + k * PANEL["B"] / 3, x + PANEL["L"], Y_BOT + k * PANEL["B"] / 3, "cell")
         s.text(x + PANEL["L"] / 2, Y_BOT + PANEL["B"] / 2 - th * .35, f"P{i + 1}", "ptxt")
-    # profily (skryté), dilatace
+    # svislé profily (horní vrstva) – přesahují panel o VR_EXT nahoře i dole
+    for _, x in vr_positions():
+        if x_from < x < x_to:
+            s.rect(x - RAIL / 2, Y_BOT - VR_EXT, RAIL, VR_EXT, "ink", "rail")
+            s.rect(x - RAIL / 2, Y_TOP, RAIL, VR_EXT, "ink", "rail")
+            s.line(x - RAIL / 2, Y_BOT, x - RAIL / 2, Y_TOP, "hidden")
+            s.line(x + RAIL / 2, Y_BOT, x + RAIL / 2, Y_TOP, "hidden")
+    # vodorovné nosníky (skryté), dilatace
     for y in RAIL_Y:
         s.line(max(x_from, 0), y, min(x_to, L_WALL), y, "hidden")
     for d in DIL:
         if x_from < d < x_to:
             s.line(d, Y_BOT - 150, d, Y_TOP + 150, "accent")
-            s.text(d, Y_TOP + 200, "dilatace profilů", "note", th * .7)
+            s.text(d, Y_TOP + 200, "dilatace nosníků", "note", th * .7)
     # sloupky + vruty
     for x in POSTS:
         if not (x_from < x < x_to):
             continue
-        s.rect(x - 40, HEAD, 80, Y_BOT - HEAD, "steel", "steel")
-        s.rect(x - 40, Y_BOT, 80, Y_TOP - Y_BOT, "hidden")
+        s.rect(x - pb / 2, HEAD, pb, Y_BOT - VR_EXT - HEAD, "steel", "steel")
+        s.rect(x - pb / 2, Y_BOT - VR_EXT, pb, Y_TOP - Y_BOT + VR_EXT, "hidden")
         s.rect(x - 38, -VRUT["L"] + HEAD, 76, VRUT["L"] - HEAD, "hidden")
     if detail:
-        s.dimh(0, PANEL["L"], Y_TOP + 380, ext=Y_TOP)
+        s.dimh(0, PANEL["L"], Y_TOP + 380, ext=Y_TOP + VR_EXT)
         s.dimh(PANEL["L"], PITCH, Y_TOP + 380, "20")
-        s.dimh(PITCH, PITCH + PANEL["L"], Y_TOP + 380, ext=Y_TOP)
+        s.dimh(PITCH, PITCH + PANEL["L"], Y_TOP + 380, ext=Y_TOP + VR_EXT)
+        s.dimh(0, VR_A, Y_TOP + 200, ext=Y_TOP + VR_EXT)
+        s.dimh(VR_A, PANEL["L"] - VR_A, Y_TOP + 200, ext=Y_TOP + VR_EXT)
         prev = 0
         for x in [p for p in POSTS if p < x_to]:
             s.dimh(prev, x, -VRUT["L"] - 250, ext=-VRUT["L"] + HEAD)
@@ -308,8 +353,9 @@ def sheet_front(x_from=-600, x_to=40600, detail=False):
         s.dimv(Y_BOT, Y_TOP, x_from + 250)
         s.dimv(0, HEAD, x_from + 650, ext=0)
         s.dimv(-VRUT["L"] + HEAD, HEAD, x_from + 650, ext=0)
+        s.dimv(RAIL_Y[0], RAIL_Y[1], x_to - 300, ext=L_WALL if x_to > L_WALL else x_to - 400)
         s.text(x_from + 900, -VRUT["L"] / 2, "zemní vrut Ø76×1600", "note", anchor="start")
-        s.text(POSTS[0] + 70, HEAD + 60, "sloupek 80×80×3", "note", anchor="start")
+        s.text(POSTS[0] + 50, HEAD + 40, f"sloupek {pb}×{pb}×{POST['t']}", "note", anchor="start")
         s.text(x_to - 50, -VRUT["L"] - 300, "osy sloupků FV", "note", anchor="end")
         s.text(x_to - 50, -VRUT["L"] - 700, "rozteč plotu (skutečná)", "note", anchor="end")
     else:
@@ -318,7 +364,6 @@ def sheet_front(x_from=-600, x_to=40600, detail=False):
         s.text((L_WALL + 40000) / 2, Y_TOP + 350, "vynecháno – stín stromu", "note", th * .8)
         s.dimh(0, 40000, Y_TOP + 1700, "plot ≈ 40 000", ext=Y_TOP + 900)
         s.dimv(0, Y_TOP, -400, ext=0)
-        # zóny větru
         h = W["h"] * 1000
         edges = [0, .3 * h, 2 * h, 4 * h]
         for side in (0, 1):
@@ -334,20 +379,20 @@ def sheet_front(x_from=-600, x_to=40600, detail=False):
 
 def sheet_side():
     s = Sheet("Výkres 2 – boční řez", 30)
+    pb = POST["b"]
     s.line(-700, 0, 900, 0, "ground")
     for x in range(-650, 900, 120):
         s.line(x, 0, x - 60, -60, "ground")
-    s.text(-450, 1650, "ZAHRADA (uvnitř)", "note", anchor="middle")
-    s.text(600, 1650, "SOUSED", "note", anchor="middle")
+    s.text(-450, 1700, "ZAHRADA (uvnitř)", "note", anchor="middle")
+    s.text(620, 1700, "SOUSED", "note", anchor="middle")
     # plot
     s.rect(-24, -800, 48, 800 + SITE["plot_vyska"], "fence")
     s.rect(-25, -50, 50, 250, "fence", "conc")
     s.text(-60, 120, "podhrabová deska", "note", 22, "end")
     s.text(-60, 1350, "sloupek plotu (stávající)", "note", 22, "end")
     s.text(-60, 1300, "pletivo, tkanina odstraněna", "note", 22, "end")
-    # hranice
-    s.line(SITE["pas"], -1900, SITE["pas"], 1900, "border")
-    s.text(SITE["pas"] + 20, 1800, "hranice pozemku (vytyčit)", "note", 22, "start")
+    s.line(SITE["pas"], -1900, SITE["pas"], 1950, "border")
+    s.text(SITE["pas"] + 20, 1850, "hranice pozemku (vytyčit)", "note", 22, "start")
     # vrut + sloupek
     x = X_POST_PLOT
     s.rect(x - 38, -VRUT["L"] + HEAD + 150, 76, VRUT["L"] - HEAD - 150, "steel", "steel")
@@ -358,32 +403,36 @@ def sheet_side():
     s.line(x + 38, -VRUT["L"] + HEAD + 150, x, -VRUT["L"] + HEAD, "steel")
     s.rect(x - 70, HEAD - 8, 140, 8, "steel", "steel")
     s.rect(x - 80, HEAD, 160, 8, "steel", "steel")
-    s.rect(x - 40, HEAD + 8, 80, Y_TOP - HEAD - 8, "steel", "steel")
-    s.rect(x - 40, Y_TOP, 80, 6, "ink", "ink")
-    # držáky + profily + panel
-    xr = x + 40
+    top_post = RAIL_Y[1] + 60
+    s.rect(x - pb / 2, HEAD + 8, pb, top_post - HEAD - 8, "steel", "steel")
+    s.rect(x - pb / 2, top_post, pb, 6, "ink", "ink")
+    # vodorovné nosníky na úhelnících, svislý profil, panel, svorky
     for y in RAIL_Y:
-        s.rect(x + 40, y - 25, 5, 50, "ink", "ink")
-        s.rect(xr + 5, y - RAIL / 2, RAIL, RAIL, "ink", "rail")
-    xp = xr + 5 + RAIL
-    s.rect(xp, Y_BOT, PANEL["t"], PANEL["B"], "ink", "panel")
-    for y in (Y_BOT, Y_TOP):
-        s.rect(xp + PANEL["t"], y - 15 if y == Y_TOP else y, 8, 15, "ink", "ink")
-    s.text(xp + 60, 900, "FV panel naležato", "note", 22, "start")
-    s.text(xp + 60, 860, f"{PANEL['L']}×{PANEL['B']}×{PANEL['t']}", "note", 22, "start")
+        s.rect(X_BEAM[0], y - 30, 4, 60, "ink", "ink")
+        s.rect(X_BEAM[0] + 4, y - RAIL / 2, RAIL - 4, RAIL, "ink", "rail")
+    s.rect(X_VR[0], Y_BOT - VR_EXT, RAIL, PANEL["B"] + 2 * VR_EXT, "ink", "rail")
+    s.rect(X_PAN[0], Y_BOT, PANEL["t"], PANEL["B"], "ink", "panel")
+    for y, sgn in ((Y_TOP, 1), (Y_BOT, -1)):
+        s.rect(X_PAN[0], y if sgn > 0 else y - 8, X_CLAMP - X_PAN[0], 8, "ink", "ink")
+        s.rect(X_PAN[1], y - 14 if sgn > 0 else y + 6, 10, 8, "ink", "ink")
+    s.text(X_CLAMP + 40, 900, "FV panel naležato", "note", 22, "start")
+    s.text(X_CLAMP + 40, 860, f"{PANEL['L']}×{PANEL['B']}×{PANEL['t']}", "note", 22, "start")
     s.text(x + 60, -900, f"zemní vrut Ø{VRUT['d']}×{VRUT['L']}", "note", 22, "start")
     s.text(x + 60, -940, "s přírubou, žár. Zn", "note", 22, "start")
-    s.text(xr + 60, RAIL_Y[1] + 60, "Al profil 40×40", "note", 22, "start")
+    s.text(-60, RAIL_Y[1] + 10, "vodorovný nosník 40×40", "note", 22, "end")
+    s.text(-60, RAIL_Y[1] - 30, f"svislý profil 40×40, l = {PANEL['B'] + 2 * VR_EXT}", "note", 22, "end")
+    s.text(-60, 700, f"sloupek {pb}×{pb}×{POST['t']}", "note", 22, "end")
     # kóty
     s.dimh(0, x, -1750, ext=-VRUT["L"] + HEAD)
-    s.dimh(0, xp + PANEL["t"] + 8, 1950, ext=Y_TOP)
-    s.dimh(0, SITE["pas"], 2050, ext=1950)
-    s.dimv(0, Y_BOT, 700, ext=xp + PANEL["t"])
-    s.dimv(Y_BOT, Y_TOP, 700)
-    s.dimv(0, Y_TOP, 820, ext=xp + PANEL["t"])
+    s.dimh(0, X_CLAMP, 1950, ext=Y_TOP + VR_EXT)
+    s.dimh(0, SITE["pas"], 2060, ext=1950)
+    s.dimh(X_POST_F, X_PAN[1], 1800, ext=Y_TOP + VR_EXT)
+    s.dimv(0, Y_BOT, 720, ext=X_CLAMP)
+    s.dimv(Y_BOT, Y_TOP, 720)
+    s.dimv(0, Y_TOP, 840, ext=X_CLAMP)
     s.dimv(-VRUT["L"] + HEAD, 0, -300, ext=x - 38)
     s.dimv(0, HEAD, -300)
-    s.dimv(RAIL_Y[0], RAIL_Y[1], 500, ext=xr + 45)
+    s.dimv(RAIL_Y[0], RAIL_Y[1], 560, ext=X_BEAM[1])
     s.text(150, -2050, f"sklon 90° · azimut {SITE['azimut']}°", "note", 26)
     return s
 
@@ -391,29 +440,32 @@ def sheet_side():
 def sheet_plan():
     s = Sheet("Výkres 3 – půdorys (výřez 0–8 m)", 85)
     X1 = 8200
+    pb = POST["b"]
     s.line(-400, 0, X1, 0, "fence")
     for k in range(5):
         s.circle(k * FIELD, 0, 24, "fence")
     s.rect(-400, -25, X1 + 400, 50, "fence")
     s.line(-400, -SITE["pas"], X1, -SITE["pas"], "border")
-    s.text(X1 - 50, -SITE["pas"] - 90, "hranice pozemku (30 cm za osou plotu – vytyčit)", "note", anchor="end")
+    s.text(X1 - 50, -SITE["pas"] - 110, "hranice pozemku (30 cm za osou plotu – vytyčit)", "note", anchor="end")
     s.text(X1 - 50, 160, "plot (stávající, osa)", "note", anchor="end")
     for x in [p for p in POSTS if p < X1]:
-        s.rect(x - 40, -X_POST_PLOT - 40, 80, 80, "steel", "steel")
+        s.rect(x - pb / 2, -X_POST_F, pb, pb, "steel", "steel")
         s.circle(x, -X_POST_PLOT, 38, "hidden")
-    for y in (-X_POST_PLOT - 40, -X_POST_PLOT - 85):
+    for y in (-X_BEAM[0], -X_BEAM[1]):
         s.line(0, y, X1, y, "hidden")
+    for _, x in vr_positions():
+        if x < X1:
+            s.rect(x - RAIL / 2, -X_VR[1], RAIL, RAIL, "ink", "rail")
     for i in range(5):
         x = i * PITCH
-        s.rect(x, -X_POST_PLOT - 85 - PANEL["t"], min(PANEL["L"], X1 - x), PANEL["t"], "ink", "panel")
+        s.rect(x, -X_PAN[1], min(PANEL["L"], X1 - x), PANEL["t"], "ink", "panel")
     prev = 0
     for x in [p for p in POSTS if p < X1]:
-        s.dimh(prev, x, -800, ext=-X_POST_PLOT - 40)
+        s.dimh(prev, x, -800, ext=-X_POST_F)
         prev = x
-    s.dimh(0, PANEL["L"], -1150, ext=-X_POST_PLOT - 115)
+    s.dimh(0, PANEL["L"], -1150, ext=-X_PAN[1])
     s.dimv(-X_POST_PLOT, 0, -250, ext=POSTS[0])
     s.dimv(-SITE["pas"], 0, -500)
-    # sever: dolů = vnější normála 150°, nahoru = 330°, sever 30° doprava od svislice
     cx, cy, r = X1 - 600, 900, 300
     a = math.radians(30)
     s.line(cx - r * math.sin(a), cy - r * math.cos(a), cx + r * math.sin(a), cy + r * math.cos(a), "ink")
@@ -421,18 +473,19 @@ def sheet_plan():
     s.text(cx + (r + 90) * math.sin(a), cy + (r + 90) * math.cos(a), "S", "ptxt2")
     s.text(cx, cy - r - 160, "panely → 150° (JJV)", "note")
     s.text(3000, 1000, "ZAHRADA", "note")
-    s.text(3000, -1550, "POZEMEK SOUSEDA", "note")
+    s.text(3000, -1650, "POZEMEK SOUSEDA", "note")
     return s
 
 
 def sheet_details():
     s = Sheet("Výkres 4 – konstrukční detaily", 13)
+    pb = POST["b"]
     # D1 patka: příruba vrutu + patní deska + 4×M12
     ox, oy = 0, 0
     s.rect(ox - 38, oy - 220, 76, 212, "steel", "steel")
     s.rect(ox - 70, oy - 8, 140, 8, "steel", "steel")
     s.rect(ox - 80, oy, 160, 8, "steel", "steel")
-    s.rect(ox - 40, oy + 8, 80, 220, "steel", "steel")
+    s.rect(ox - pb / 2, oy + 8, pb, 220, "steel", "steel")
     for bx in (-60, 60):
         s.rect(ox + bx - 6, oy - 20, 12, 40, "ink", "ink")
     s.line(ox - 160, oy - 100, ox + 160, oy - 100, "ground")
@@ -442,36 +495,40 @@ def sheet_details():
     s.text(ox + 95, oy + 20, "patní deska P8 160×160", "note", anchor="start")
     s.text(ox + 95, oy - 6, "příruba vrutu (dle výrobce)", "note", anchor="start")
     s.text(ox + 95, oy - 32, "4× M12 8.8 žár. Zn", "note", anchor="start")
-    s.text(ox + 95, oy + 160, "jekl 80×80×3, svar dokola a5", "note", anchor="start")
-    # D2 půdorysný řez: sloupek – úhelník – profil
+    s.text(ox + 95, oy + 160, f"jekl {pb}×{pb}×{POST['t']}, svar dokola a4", "note", anchor="start")
+    # D2 půdorysný řez: sloupek – úhelník – vodorovný nosník – svislý profil – panel
     ox = 520
-    s.rect(ox - 40, -40, 80, 80, "steel", "steel")
-    s.rect(ox + 40, -30, 5, 60, "ink", "ink")
-    s.rect(ox + 40, 25, 50, 5, "ink", "ink")
-    s.rect(ox + 45, -20, 40, 40, "ink", "rail")
-    s.rect(ox + 85, -40, 30, 80, "ink", "panel")
-    s.line(ox - 60, 0, ox + 45, 0, "hidden")
-    s.dimh(ox - 40, ox + 40, -90, ext=-40)
-    s.dimh(ox + 45, ox + 85, -90, ext=-20)
-    s.dimh(ox + 85, ox + 115, -90, ext=-40)
-    s.text(ox + 30, 300, "D2 – držák profilu (řez)", "h")
-    s.text(ox + 30, 150, "úhelník L50×50×5, l = 80", "note")
-    s.text(ox + 30, 128, "1× M10 do sloupku (prův.), 1× T-šroub M8", "note")
-    s.text(ox + 30, 106, "do drážky profilu; otvor oválný ±10 mm", "note")
-    # D3 svorka na dlouhé hraně panelu
-    ox = 1050
+    s.rect(ox - pb / 2, -pb / 2, pb, pb, "steel", "steel")
+    s.rect(ox - pb / 2 - 5, -pb / 2 - 5, 5, pb + 5, "ink", "ink")
+    s.rect(ox - pb / 2 - 5, -pb / 2 - 5, pb + 45, 5, "ink", "ink")
+    s.rect(ox + pb / 2, -pb / 2 + 10, 40, 40, "ink", "rail")
+    s.rect(ox + pb / 2 + 40, -pb / 2 + 10, 40, 40, "ink", "rail")
+    s.rect(ox + pb / 2 + 80, -pb / 2 - 30, 30, 120, "ink", "panel")
+    s.line(ox - pb, 0, ox + pb / 2 + 20, 0, "hidden")
+    s.dimh(ox - pb / 2, ox + pb / 2, -110, ext=-pb / 2)
+    s.dimh(ox + pb / 2, ox + pb / 2 + 40, -110, ext=-pb / 2 + 10)
+    s.dimh(ox + pb / 2 + 40, ox + pb / 2 + 80, -110, ext=-pb / 2 + 10)
+    s.dimh(ox + pb / 2 + 80, ox + pb / 2 + 110, -110, ext=-pb / 2 - 30)
+    s.text(ox + 40, 300, "D2 – skladba v půdorysu", "h")
+    s.text(ox + 40, 170, "úhelník L50×50×5, l = 80, 1× M10 do sloupku", "note")
+    s.text(ox + 40, 148, "vodorovný nosník: T-šroub M8, otvor oválný", "note")
+    s.text(ox + 40, 126, "svislý profil: křížový spojovač na nosník", "note")
+    # D3 křížový spoj + koncová svorka na dlouhé hraně
+    ox = 1080
     s.rect(ox, -20, 40, 40, "ink", "rail")
-    s.rect(ox + 40, -60, 30, 140, "ink", "panel")
-    s.rect(ox + 70, 55, 10, 25, "ink", "ink")
-    s.line(ox + 75, 55, ox + 20, 55, "ink")
-    s.dimh(ox, ox + 40, -100, ext=-20)
-    s.dimh(ox + 40, ox + 70, -100, ext=-60)
-    s.text(ox + 40, 300, "D3 – koncová svorka na rám", "h")
-    s.text(ox + 40, 150, "4 svorky / panel na dlouhých hranách", "note")
-    s.text(ox + 40, 128, "v upínací zóně výrobce (typ. ¼ L od rohu)", "note")
-    s.text(ox + 40, 106, "rám překrývá profil ≥ 20 mm", "note")
-    # D4 dilatace profilu
-    ox = 1500
+    s.rect(ox + 40, -120, 40, 260, "ink", "rail")
+    s.rect(ox + 36, -32, 48, 6, "accent")
+    s.rect(ox + 80, -120 + VR_EXT, 30, 215, "ink", "panel")
+    s.rect(ox + 80, 95, 40, 6, "ink", "ink")
+    s.rect(ox + 110, 81, 10, 14, "ink", "ink")
+    s.dimh(ox + 80, ox + 110, -150, ext=-75)
+    s.dimv(95, 140, ox + 150, str(VR_EXT), ext=ox + 80)
+    s.text(ox + 60, 300, "D3 – křížový spoj a svorka", "h")
+    s.text(ox + 60, 200, "svislý profil přes vodorovný nosník", "note")
+    s.text(ox + 60, 178, "4 koncové svorky / panel na dlouhých hranách", "note")
+    s.text(ox + 60, 156, f"A = {PANEL['A'][0]}–{PANEL['A'][1]} mm od kratší hrany", "note")
+    # D4 dilatace nosníku
+    ox = 1520
     s.rect(ox, -20, 200, 40, "ink", "rail")
     s.rect(ox + 220, -20, 200, 40, "ink", "rail")
     s.rect(ox + 120, -26, 180, 52, "accent")
@@ -479,7 +536,7 @@ def sheet_details():
         s.rect(ox + bx - 12, -5, 24, 10, "ink")
     s.dimh(ox + 200, ox + 220, -90, "20", ext=-20)
     s.dimh(ox + 120, ox + 300, 90, ext=26)
-    s.text(ox + 210, 300, "D4 – dilatační spoj profilu", "h")
+    s.text(ox + 210, 300, "D4 – dilatační spoj nosníku", "h")
     s.text(ox + 210, 150, "2× na řadu, v mezeře mezi panely", "note")
     s.text(ox + 210, 128, "spojka s oválnými otvory, 1 strana pevně", "note")
     return s
@@ -532,16 +589,18 @@ def bom():
     rail_bars = 12
     rows = [
         # skupina, název, specifikace, materiál, rozměr, ks, jedn. cena, ověřeno?
-        ("Nosná konstrukce", "Sloupek s patní deskou", "jekl 80×80×3 + P8 160×160, 4 otvory Ø14, 2 otvory Ø11 pro držáky, svar a5, žárový zinek", "S235", "l = 1 400 mm", n, 1050, False),
-        ("Nosná konstrukce", "Nosný profil FV", "Al profil 40×40 s drážkou (např. G21 HPG2144X), W ≥ 4 cm³", "Al 6063-T6", "6 000 mm", rail_bars, 1070, True),
+        ("Nosná konstrukce", "Sloupek s patní deskou", "jekl 60×60×4 + P8 160×160, 4 otvory Ø14, 2 otvory Ø11 pro držáky, svar a4, žárový zinek", "S235", "l = 1 400 mm", n, 950, False),
+        ("Nosná konstrukce", "Vodorovný nosník (spodní vrstva)", "Al profil 40×40 s drážkou (např. G21 HPG2144X), W ≥ 3 cm³", "Al 6063-T6", "6 000 mm", rail_bars, 1070, True),
+        ("Nosná konstrukce", "Svislý profil (horní vrstva)", f"Al profil 40×40, nařezat 2 ks/panel = {2 * N_PANEL} ks à {PANEL['B'] + 2 * VR_EXT} mm (4 ks z tyče)", "Al 6063-T6", "6 000 mm", math.ceil(2 * N_PANEL / 4), 1070, True),
+        ("Nosná konstrukce", "Křížový spojovač", "profil na profil 40×40, s T-šroubem M8", "Al + nerez", "—", 4 * N_PANEL, 65, False),
         ("Nosná konstrukce", "Držák profilu", "úhelník L50×50×5 s oválným otvorem", "S235 žár. Zn", "l = 80 mm", 2 * n, 80, False),
         ("Nosná konstrukce", "Spojka profilu pevná", "pro profil 40×40", "Al", "—", 8, 120, False),
         ("Nosná konstrukce", "Spojka profilu dilatační", "s oválnými otvory", "Al", "—", 4, 250, False),
-        ("Nosná konstrukce", "Záslepka sloupku", "PE 80×80", "PE", "—", n, 25, False),
+        ("Nosná konstrukce", "Záslepka sloupku", "PE 60×60", "PE", "—", n, 25, False),
         ("Kotvení", f"Zemní vrut s přírubou", f"Ø{VRUT['d']}×{VRUT['L']} mm, příruba 4× M12, rozteč děr 120 mm", "S235 žár. Zn", f"{VRUT['L']} mm", n, 1200, False),
         ("Kotvení", "Strojní zavrtání vrutů", "vč. dopravy stroje, předvrtání v kamenité zemině", "služba", "—", n, 300, False),
         ("Kotvení", "Zatěžovací zkouška vrutu", "2 ks, vodorovná síla dle tab. statiky", "služba", "—", 1, 2500, False),
-        ("Spojovací materiál", "Koncová svorka panelu", "pro rám 30 mm, s T-šroubem M8", "Al + nerez", "—", 4 * N_PANEL, 45, False),
+        ("Spojovací materiál", "Koncová svorka panelu", "pro rám 30 mm, délka ≥ 50 mm, tl. ≥ 4 mm (dle návodu výrobce panelu), T-šroub M8", "Al + nerez", "—", 4 * N_PANEL, 45, False),
         ("Spojovací materiál", "Šroub + T-šroub držáku", "M10×100 8.8 + M8 T-šroub s maticí", "žár. Zn / nerez", "—", 2 * n, 25, False),
         ("Spojovací materiál", "Šroubová sada patky", "M12×40 8.8, matice, 2 podložky", "žár. Zn", "—", 4 * n, 20, False),
         ("Spojovací materiál", "Pospojování konstrukce", "Cu 6 mm² zelenožlutý + svorky na sloupky, propojení na HOP", "Cu", "≈ 45 m", 1, 2000, False),
@@ -576,9 +635,22 @@ def html():
     sumr = lambda a: sum(PVGIS[a][i] for i in (5, 6, 7))
     proj = lambda a: PANEL["B"] * math.cos(math.radians(a))
 
+    pan_rows = ""
+    for key, p in PANELS.items():
+        st_p = string(p)
+        verdict = {"JA": "doporučený", "AIKO": "alternativa", "TRINA": "jen 1 string ≤ 18 ks"}[key]
+        chip = {"JA": "ok", "AIKO": "ok", "TRINA": "est"}[key]
+        Lw = st_p["n"] * p["L"] + (st_p["n"] - 1) * GAP
+        pan_rows += (f"<tr{' class=hl' if key == VYBER else ''}><td>{p['nazev']}</td><td>{p['typ']}</td><td class=n>{p['L']}×{p['B']}</td>"
+                     f"<td class=n>{p['Wp']}</td><td class=n>{p['Voc']}</td><td class=n>{p['Isc']}</td>"
+                     f"<td class=n>{st_p['n_max']}</td><td class=n>{st_p['n']} ks / {fmt(st_p['kWp'], 2)}</td>"
+                     f"<td class=n>{p['A'][0]}–{p['A'][1]}</td><td class=n>{fmt(p['zad_navrh'])}</td>"
+                     f"<td class=n>{fmt(p['cena'])}</td><td><span class='chip {chip}'>{verdict}</span></td></tr>")
+    pan_src = "".join(f"<li>{p['nazev']}: {p['zdroj']}</li>" for p in PANELS.values())
+
     tilt_rows = ""
     for a in (90, 80, 75, 60, 37):
-        hloubka = proj(a) + 130
+        hloubka = proj(a) + X_PAN[0]
         fit = "vejde" if hloubka <= SITE["pas"] - 40 else "nevejde"
         lab = {90: "90° svisle (návrh)", 80: "80°", 75: "75°", 60: "60°", 37: "37° optimum (pro srovnání)"}[a]
         tilt_rows += (f"<tr{' class=hl' if a == 90 else ''}><td>{lab}</td><td class=n>{fmt(sum(PVGIS[a]))}</td>"
@@ -715,7 +787,7 @@ footer{font-size:13px;color:var(--muted)}
 <tr><td>Orientace panelů</td><td>azimut 150° (JJV), vnější strana plotu</td><td>uživatel, kompas</td></tr>
 <tr><td>Prostor</td><td>pás 300 mm za plotem patří uživateli, dál je pozemek souseda; plot patří uživateli</td><td>uživatel, <b>vytyčit geodetem</b></td></tr>
 <tr><td>Zastínění</td><td>na jednom konci strom, vynechat posledních 2–3 pole; vně louka se vzrostlými ovocnými stromy</td><td>uživatel, fotografie</td></tr>
-<tr><td>Panel (předpoklad)</td><td>{PANEL['L']}×{PANEL['B']}×{PANEL['t']} mm, {PANEL['Wp']} Wp, ≈ {PANEL['kg']} kg, Voc ≈ {PANEL['Voc']} V, Isc ≈ {PANEL['Isc']} A, zadní zkušební zatížení {PANEL['zad_zkus']} Pa</td><td><b>typ zatím nevybrán</b></td></tr>
+<tr><td>Panel (návrh)</td><td>{PANEL['nazev']}, {PANEL['L']}×{PANEL['B']}×{PANEL['t']} mm, {PANEL['Wp']} Wp, ≈ {PANEL['kg']} kg, Voc {PANEL['Voc']} V, Isc {PANEL['Isc']} A, návrhové sání {PANEL['zad_navrh']} Pa</td><td>datový list, montážní návod</td></tr>
 <tr><td>Střídač</td><td>SolaX X3-Ultra 25K: 3 MPPT, 36 A na MPPT, 2 vstupy na MPPT, rozsah MPPT 160–950 V</td><td><a href="https://www.solaxpower.com/products/x3-ultra/">solaxpower.com</a></td></tr>
 </table></div>
 </section>
@@ -731,7 +803,7 @@ footer{font-size:13px;color:var(--muted)}
  <div class="card pick"><h3>B – samostatná konstrukce na zemních vrutech <span class="chip ok">návrh</span></h3>
   <ul><li>Nezávislá na statice plotu, rozteč sloupků FV volná (1 sloupek uprostřed pole plotu)</li>
   <li>Bez betonu a výkopů, rozebíratelná, šroubované spoje</li>
-  <li>Vejde se do pásu 300 mm (hloubka konstrukce ≈ 225 mm od osy plotu)</li>
+  <li>Vejde se do pásu 300 mm (hloubka konstrukce {fmt(X_CLAMP)} mm od osy plotu, rezerva {fmt(SITE['pas'] - X_CLAMP)} mm)</li>
   <li>Vruty je potřeba ověřit zkouškou v místní zemině</li></ul></div>
  <div class="card"><h3>C – kombinace plot + přídavné podpěry <span class="chip est">nevýhodná</span></h3>
   <ul><li>Stávající sloupky nepřenesou ani podíl zatížení bez zesílení, takže se celá síla stejně přesune na nové podpěry</li>
@@ -744,8 +816,24 @@ footer{font-size:13px;color:var(--muted)}
 </section>
 
 <section>
+<h2>Výběr panelu</h2>
+<p>Prošel jsem montážní návody tří výrobců panelů 1 762 × 1 134 mm. <b>Žádný z nich nepovoluje upnutí na dlouhých hranách s profily rovnoběžnými s dlouhou hranou</b>: JA Solar má u řady JAM54 v tabulce „N/A“, Trina ani Aiko tuto kombinaci u formátu 54 článků neuvádějí. Povolené je upnutí na dlouhých hranách s profily <b>kolmo</b> na dlouhou hranu. U panelů naležato to znamená svislé profily. Konstrukce je proto dvouvrstvá: vodorovné nosníky na sloupcích a na nich krátké svislé profily, 2 na každý panel.</p>
+<div class="tw"><table>
+<tr><th>Panel</th><th>Typ</th><th class=n>mm</th><th class=n>Wp</th><th class=n>Voc V</th><th class=n>Isc A</th><th class=n>max. ks / string</th><th class=n>osazeno</th><th class=n>svorky A mm</th><th class=n>sání Pa</th><th class=n>Kč/ks</th><th></th></tr>
+{pan_rows}
+</table></div>
+<p>Max. počet panelů ve stringu je spočten pro −25 °C s 2% rezervou pod 1 000 V. „Sání“ je návrhové zatížení zezadu podle výrobce (zkušební / 1,5) pro upnutí na dlouhých hranách s profily kolmo. Ceny jsou odhad s DPH (říjen 2026), je potřeba je poptat.</p>
+<ul>
+<li><b>JA Solar JAM54D40-450/LB (doporučený):</b> bifaciální sklo-sklo, vejde se 19 ks na jeden string ({fmt(STR['kWp'], 2)} kWp), v ČR běžně skladem. Zadní strana zachytí odražené a difuzní světlo ze zahrady, orientačně +3 až 6 % (přes pletivo). Verze se sklem 2,0 mm má vyšší únosnost zepředu (3 600 Pa).</li>
+<li><b>AIKO Neostar 2P A465 (alternativa):</b> nejvyšší výkon na plochu ({fmt(string(PANELS['AIKO'])['kWp'], 2)} kWp), technologie ABC lépe snáší částečné zastínění (tráva a sníh u spodní hrany, stín stromu na konci). Je jednostranný, sklo-fólie, a dražší.</li>
+<li><b>Trina Vertex S+ NEG9RC.27:</b> mechanicky nejodolnější (sání až 4 000 Pa zkušební se svorkou typu „A-surface“), ale má vysoké napětí článků. Na jeden string se vejde jen {string(PANELS['TRINA'])['n_max']} ks, takže celý plot by potřeboval druhý MPPT.</li>
+</ul>
+<p class="mono">Zdroje upínání:</p><ul class="mono">{pan_src}</ul>
+</section>
+
+<section>
 <h2>Sklon panelů</h2>
-<p>Výroba podle PVGIS 5.2 pro 1 kWp, azimut 150°, ztráty 14 %, včetně horizontu terénu. Hloubka zahrnuje průmět panelu ({PANEL['B']} mm naležato) a 130 mm na sloupek a profil. Sklon kromě svislého by navíc panely vykláněl nad pozemek souseda a nenahradil by stínicí tkaninu.</p>
+<p>Výroba podle PVGIS 5.2 pro 1 kWp, azimut 150°, ztráty 14 %, včetně horizontu terénu. Hloubka zahrnuje průmět panelu ({PANEL['B']} mm naležato) a {fmt(X_PAN[0])} mm na sloupek a dvě vrstvy profilů. Sklon kromě svislého by navíc panely vykláněl nad pozemek souseda a nenahradil by stínicí tkaninu.</p>
 <div class="tw"><table>
 <tr><th>Sklon</th><th class=n>kWh/kWp·rok</th><th class=n>vůči optimu</th><th class=n>zima XI–II</th><th class=n>léto VI–VIII</th><th class=n>hloubka mm</th><th>pás 300 mm</th></tr>
 {tilt_rows}
@@ -756,7 +844,8 @@ footer{font-size:13px;color:var(--muted)}
 <section>
 <h2>Rozmístění a zapojení</h2>
 <ul>
-<li>{N_PANEL} panelů naležato v jedné řadě, mezera {GAP} mm, délka stěny <b>{fmt(L_WALL)} mm</b>. Horní hrana 1 500 mm (= výška plotu), spodní hrana {Y_BOT} mm nad terénem.</li>
+<li>{N_PANEL} panelů {PANEL['nazev']} naležato v jedné řadě, mezera {GAP} mm, délka stěny <b>{fmt(L_WALL)} mm</b>. Horní hrana 1 500 mm (= výška plotu), spodní hrana {Y_BOT} mm nad terénem.</li>
+<li>Skladba od plotu: sloupek {POST['b']}×{POST['b']} → vodorovný nosník 40×40 (2 řady, osy {RAIL_Y[0]} a {RAIL_Y[1]} mm) → svislý profil 40×40 délky {PANEL['B'] + 2 * VR_EXT} mm, 2 na panel ve vzdálenosti {fmt(VR_A)} mm od kratších hran → panel → svorky. Svislé profily přesahují panel o {VR_EXT} mm kvůli svorkám, horní konec je tedy {Y_TOP + VR_EXT} mm nad terénem.</li>
 <li>Panely <b>nesledují rozteč plotu</b>. Pole mají 2 210–2 330 mm, panel s mezerou 1 782 mm, takže by se nikdy nekryly. Konstrukce má vlastní rastr a sloupky FV stojí uprostřed polí plotu, ≥ 0,5 m od jeho sloupků a patek.</li>
 <li>Posledních ≈ 2,7 pole plotu (≈ 6,2 m) u stromu zůstává volných. Tkaninu tam lze ponechat.</li>
 <li><b>Jeden string {N_PANEL} panelů</b> na samostatný MPPT: Voc při −25 °C ≈ <b>{fmt(STR['voc_cold'])} V</b> (pod 1 000 V), Vmp při 70 °C ≈ {fmt(STR['vmp_hot'])} V (nad 160 V), proud ≈ {PANEL['Isc']} A (limit MPPT 36 A). Pokud by pole za stromem chtěl uživatel osadit, vejdou se nejvýš 2 panely navíc, tedy 21 panelů a Voc ≈ {fmt(STR['voc_cold'] / N_PANEL * 21)} V. Absolutní max. vstupní napětí ověřit v datovém listu.</li>
@@ -779,12 +868,12 @@ Sníh: na svislé ploše se neukládá. Řeší se jen navátý nebo nahrnutý s
 <h3>Panely a svorky</h3>
 <div class="calc">
 plošně průměrný tlak na panel: max. {fmt(max(st['panel_p']), 2)} kPa (krajní panel), běžně {fmt(min(st['panel_p']), 2)} kPa<br>
-návrhová únosnost panelu zezadu typ. {PANEL['zad_zkus']} / 1,5 = 1,60 kPa → <b>vyhoví</b>, pokud výrobce povoluje upnutí na dlouhých hranách s profily rovnoběžnými s dlouhou hranou (ověřit v montážním návodu)<br>
-síla na svorku (4 ks/panel, ULS): {fmt(st['clamp_Ed'], 2)} kN
+návrhové sání podle výrobce ({PANEL['nazev']}, svorky na dlouhých hranách, profily kolmo, A = {PANEL['A'][0]}–{PANEL['A'][1]} mm): {fmt(PANEL['zad_navrh'] / 1000, 2)} kPa → využití {fmt(max(st['panel_p']) / PANEL['zad_navrh'] * 1e5)} % → <b>vyhoví</b><br>
+síla na svorku (4 ks/panel, ULS): {fmt(st['clamp_Ed'], 2)} kN · svislý profil: svorky leží na jeho koncích nad vodorovnými nosníky, ohyb zanedbatelný
 </div>
-<h3>Nosné profily (spojitý nosník, MKP)</h3>
+<h3>Vodorovné nosníky (spojitý nosník, MKP)</h3>
 <div class="calc">
-2 profily Al 40×40, každý nese ½ výšky panelu = {PANEL['B'] / 2:.0f} mm, podpory = sloupky FV<br>
+2 nosníky Al 40×40, bodová zatížení ¼ tlaku na panel v každém styku se svislým profilem ({2 * N_PANEL} styků na nosník), podpory = sloupky FV<br>
 M<sub>max,k</sub> = {fmt(st['fe']['Mmax'], 3)} kNm → M<sub>Ed</sub> = {fmt(st['MEd_rail'], 3)} kNm → potřebný W<sub>el</sub> ≥ <b>{fmt(st['Wreq'], 1)} cm³</b> (f<sub>0</sub> = 160 MPa, γ<sub>M1</sub> = 1,1)<br>
 průhyb (I = 11 cm⁴ předpoklad) max. {fmt(st['fe']['defl'], 1)} mm
 </div>
@@ -804,7 +893,7 @@ celková vodorovná síla na stěnu H<sub>k</sub> = {fmt(st['H_total'], 1)} kN
 <ul>
 <li>větrnou oblast a kategorii terénu podle mapy NA a vliv orografie (pozemek ve svahu nad údolím, c<sub>o</sub> může být &gt; 1)</li>
 <li>únosnost vrutů v místní zemině: zkouška min. na 2 vrutech, nejlépe krajních</li>
-<li>průřezové charakteristiky zvoleného Al profilu a upínací konfiguraci podle návodu výrobce panelu</li>
+<li>průřezové charakteristiky zvoleného Al profilu a únosnost křížových spojovačů a svorek</li>
 <li>posun hlavy vrutu a natočení. Konstrukce nemá vzpěry (není na ně místo), takže tuhost závisí jen na vrutu</li>
 </ul>
 </section>
@@ -839,9 +928,10 @@ celková vodorovná síla na stěnu H<sub>k</sub> = {fmt(st['H_total'], 1)} kN
 <li><b>Vytyčení os sloupků:</b> šňůra 100 mm od osy plotu. Sloupky FV uprostřed polí plotu, v krajních polích 2 ks 500 mm od sloupků plotu. Polohu ±150 mm přizpůsobit patkám plotu a kamenům. Ověřit sítě v zemi (kabely, voda).</li>
 <li><b>Vruty:</b> strojně, svisle (odchylka ≤ 1°), hlava 100 mm nad terénem, všechny příruby do jedné výšky ±10 mm (nivelace laserem). Zatěžovací zkouška 2 vrutů. Při narážení na kámen předvrtat nebo posunout.</li>
 <li><b>Sloupky:</b> přišroubovat 4× M12 na přírubu, vyrovnat do svislice (podložky), horní hrany do jedné výšky 1 500 mm. Nasadit záslepky.</li>
-<li><b>Držáky a profily:</b> úhelníky na sloupky, profily vodorovně v osách {RAIL_Y[0]} a {RAIL_Y[1]} mm. Dilatační spojky v mezerách za 6. a 13. panelem, ostatní spoje pevné. Profily nesmí přesahovat sloupek o více než 300 mm.</li>
+<li><b>Nosníky:</b> úhelníky na sloupky, vodorovné nosníky v osách {RAIL_Y[0]} a {RAIL_Y[1]} mm. Dilatační spojky v mezerách za 6. a 13. panelem, ostatní spoje pevné. Konec nosníku smí přesahovat krajní sloupek nejvýš o 300 mm.</li>
+<li><b>Svislé profily:</b> křížovými spojovači na nosníky, 2 na panel ve vzdálenosti {fmt(VR_A)} mm od kratších hran (šablona z latě). Spodní konce do jedné výšky {Y_BOT - VR_EXT} mm nad terénem.</li>
 <li><b>Pospojování:</b> Cu 6 mm² mezi všemi sloupky a jedním profilem každé řady, připojit k hlavní ochranné přípojnici (HOP) domu. Svorky s nerezovými podložkami (Al/Zn).</li>
-<li><b>Panely:</b> od jednoho konce, koncové svorky na dlouhých hranách v upínací zóně podle návodu výrobce, moment podle výrobce svorky. Konektory MC4 propojit hned za panely, kabely vázat UV odolnými pásky k profilu, bez průvěsu.</li>
+<li><b>Panely:</b> od jednoho konce, 4 koncové svorky na dlouhých hranách (na koncích svislých profilů), svorky a moment podle návodu výrobce panelu. Konektory MC4 propojit hned za panely, kabely vázat UV odolnými pásky k profilu, bez průvěsu.</li>
 <li><b>Kabeláž ke střídači:</b> H1Z2Z2-K 6 mm², od plotu v chráničce KOPOFLEX 40 v hloubce ≥ 0,7 m s výstražnou fólií. Na konstrukci kabely za panely, mimo dosah osob a zvířat. Označit „FV – DC napětí“.</li>
 <li><b>Zapojení a revize:</b> elektrikář připojí string na volný MPPT SolaxU, proměří Voc, Isc a izolační odpor a vystaví revizní zprávu.</li>
 <li><b>Kontrola po 1. zimě:</b> dotažení šroubů, svislost sloupků, poškození zinku a kabelů.</li>
@@ -861,14 +951,14 @@ celková vodorovná síla na stěnu H<sub>k</sub> = {fmt(st['H_total'], 1)} kN
 <section>
 <h2>Otevřené body</h2>
 <ul>
-<li>Typ panelu: rozměry, Voc, zadní zatížitelnost a <b>povolená upínací konfigurace</b> (dlouhé hrany, profily rovnoběžně s dlouhou hranou). Případně bifaciální sklo-sklo.</li>
+<li>Potvrdit panel u dodavatele: aktuální revize montážního návodu (upnutí na dlouhých hranách, profily kolmo), cena a dostupnost.</li>
 <li>Vytyčení hranice: od čeho se 30 cm měří (osa, nebo líc pletiva)?</li>
 <li>Zemina v pásu za plotem: kamenitá, nebo hlinitá? Zkouška vrutů.</li>
 <li>Vzdálenost od plotu ke střídači a trasa kabelu.</li>
 <li>Kolik polí u stromu přesně vynechat. Lze ověřit fotkou plotu v zimě kolem poledne.</li>
 </ul>
 </section>
-<footer>Zdroje: PVGIS 5.2 (JRC), ČSN EN 1991-1-4 + NA, ČSN EN 1993-1-1, ČSN EN 1999-1-1, datová stránka SolaX X3-Ultra, cena profilu: zbozi.cz (G21 HPG2144X). Výpočet a výkresy generuje <span class="mono">plot-fve/src/navrh.py</span>.</footer>
+<footer>Zdroje: montážní návody JA Solar, Trina Solar a AIKO (viz Výběr panelu), PVGIS 5.2 (JRC), ČSN EN 1991-1-4 + NA, ČSN EN 1993-1-1, ČSN EN 1999-1-1, datová stránka SolaX X3-Ultra, cena profilu: zbozi.cz (G21 HPG2144X). Výpočet a výkresy generuje <span class="mono">plot-fve/src/navrh.py</span>.</footer>
 </main>"""
 
 
