@@ -1,0 +1,85 @@
+{
+ "p1_009": {
+  "bullets": [
+   "|Chladivo R290, ODP = 0, nízké GWP (GWP = 3)",
+   "Dvojitá DC invertorová technologie:|přesné a účinné vytápění s výstupní teplotou až 78 °C.",
+   "Nejvyšší účinnost:|energetická třída A+++ (při 35 °C), COP až 5,62.",
+   "Vestavěný Wi‑Fi modul:|spolehlivé připojení a dálkové ovládání.",
+   "Vícejazyčné ovládání:|snadná obsluha v řadě jazyků.",
+   "Funkce SG Ready (Smart Grid):|lepší řízení spotřeby a napojení na energetický systém.",
+   "Automatická regulace teploty:|vždy optimální provoz.",
+   "Noční režim:|pohodlné ovládání mimo špičku.",
+   "Kaskádové řízení:|až 8 jednotek pro snadné rozšíření výkonu.",
+   "Časovaná dezinfekce vysokou teplotou:|bezpečná a zdravotně nezávadná teplá voda.",
+   "Cloudová platforma IoT pro správu|",
+   "Volitelná výbava:|vestavěné oběhové čerpadlo a snímač úniku chladiva, řízení externího zdroje tepla a zásobníku vody."
+  ],
+  "x1": 942
+ },
+ "p2_093": {
+  "bullets": [
+   "|HIGHLY",
+   "|-25~43 °C",
+   "|20~78 °C (TUV)"
+  ],
+  "x0": 808.5,
+  "x1": 974,
+  "align": "center"
+ },
+ "p2_094": {
+  "bullets": [
+   "|HIGHLY",
+   "|-25~43 °C",
+   "|20~78 °C (TUV)"
+  ],
+  "x0": 975,
+  "x1": 1141,
+  "align": "center"
+ },
+ "p2_101": {
+  "bullets": [
+   "|20~78 °C (vytápění)",
+   "|7~35 °C (chlazení)"
+  ],
+  "x0": 808.5,
+  "x1": 974,
+  "align": "center"
+ },
+ "p2_102": {
+  "bullets": [
+   "|20~78 °C (vytápění)",
+   "|7~35 °C (chlazení)"
+  ],
+  "x0": 975,
+  "x1": 1141,
+  "align": "center"
+ },
+ "p1_006": {
+  "grow": 70
+ },
+ "p1_035": {
+  "grow": 12
+ },
+ "p2_013": {
+  "grow": 30
+ },
+ "p2_020": {
+  "grow": 25
+ },
+ "p2_038": {
+  "grow": 25
+ },
+ "p2_075": {
+  "grow": 45
+ },
+ "p2_098": {
+  "grow": 40
+ },
+ "p2_002": {
+  "bullets": [
+   "|TEPELNÉ ČERPADLO S DC INVERTOREM PRO VYTÁPĚNÍ, CHLAZENÍ A TUV (R290)",
+   "|Model"
+  ],
+  "x1": 1100
+ }
+}

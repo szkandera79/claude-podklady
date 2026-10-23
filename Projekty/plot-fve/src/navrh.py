@@ -617,7 +617,28 @@ BOM = bom()
 
 # ---------------------------------------------------------------- hotové systémy (rešerše 23. 10. 2026)
 EUR = 24.5   # Kč/€ (orientačně)
+PLN = 5.7    # Kč/zł (orientačně)
 HOTOVE = [
+    dict(nazev="Solarne Ogrodzenia S1", zeme="PL", url="https://solarneogrodzenia.pl/przeslo-ogrodzenie-solarne-s1-dlugosc-21mb-500w-dwustronne-bez-podmurowek-kolor",
+         popis="pole 2,1 m s panelem JA Solar JAM60D41 500 W, bifaciální sklo-sklo 1953×1134, ocel 2 mm žár. Zn + prášková barva, výška 1,69–1,79 m",
+         kotveni="betonové sokly (podmurówki) zvlášť", hloubka=None, cena_kc=16 * 1179 * PLN,
+         cena_pozn="1 179 zł/pole vč. panelu; 16 polí = 33,6 m, 8,0 kWp; sokly zvlášť",
+         plus="nejbližší obdoba německé sady, panel JA sklo-sklo, ocel Zn", minus="výška 1,7–1,8 m (vyšší než plot), panel 1 953 mm jen 16 ks, statika a kotvení neuvedeny", hodnoceni="ok", verdikt="poptat"),
+    dict(nazev="Emiter Ogrodzenie PV", zeme="PL", url="https://emiter.net.pl/produkty/ogrodzenie-pv",
+         popis="velkoobchod v Katovicích (≈ 80 km od Vendryně): sady vodorovného pole se sloupkem 80×80 i svislého pole (sloupek 120×120, 2× JA 440 Wp), brány a branky",
+         kotveni="neuvedeno (výkres PDF na webu)", hloubka=80, cena_kc=None,
+         cena_pozn="jen pro firmy (B2B platforma), přes montážní firmu",
+         plus="blízko, vodorovná varianta, panely JA", minus="cena neveřejná, prodej přes instalatéry", hodnoceni="ok", verdikt="poptat"),
+    dict(nazev="Kleinanzeigen „Solarzaun“ (solar.carport)", zeme="DE", url="https://www.kleinanzeigen.de/",
+         popis="pole ≈ 1,9 m: panel 460 W bifaciální sklo-sklo, Al sloupek RAL 7016 výšky 135 cm (nebo 180 cm k zabetonování), patka, krytka, 4 úhelníky",
+         kotveni="zabetonování nebo přišroubování na beton či zeď", hloubka=None, cena_kc=(N_PANEL * 175 + 110) * EUR,
+         cena_pozn="175 €/pole vč. panelu + 110 € koncový sloupek; jen osobní odběr v Seesenu (≈ 800 km)",
+         plus="nejnižší cena", minus="výška 1,35 m, datový list a statika chybí, odvoz", hodnoceni="est", verdikt="levné, ověřit"),
+    dict(nazev="Green-Tech (Next2Sun styl)", zeme="PL", url="https://green-tech.com.pl/pionowe-instalacje-fotowoltaiczne/",
+         popis="svislý bifaciální plot, ocelové sloupky a příčníky, panely nastojato, výška 1,5–1,8 m (1 řada)",
+         kotveni="neuvedeno, montáž firmou", hloubka=None, cena_kc=None,
+         cena_pozn="dodávka na klíč „od 10 000 zł za 1 kW“",
+         plus="ověřený koncept pro agro-FV", minus="panely nastojato, drahé, jen montáž firmou", hodnoceni="bad", verdikt="nehodí se"),
     dict(nazev="Kirchberger SUNLINE horizontal", zeme="DE", url="https://kirchberger-metall.de/products/solarzaun-pv-zaun-modell-sunline-horizontal-komplettset-basismodul-1-modul-2-pfosten",
          popis="Al sloupek 68×68 s drážkou, osa 178 cm, bezrámový bifaciální panel sklo-sklo 435 Wp (Solitec) vložený do drážky sloupků, výška systému 127 cm, sokl 90 mm",
          kotveni="patka s deskou na přišroubování nebo zabetonování; vruty neuvádí", hloubka=70,
@@ -668,7 +689,8 @@ def html():
 
     sys_rows = ""
     for h in HOTOVE:
-        cena = f"≈ {fmt(round(h['cena_eur'] * EUR, -3) / 1000)} tis. Kč" if h["cena_eur"] else "—"
+        kc = h.get("cena_kc") or (h["cena_eur"] * EUR if h.get("cena_eur") else None)
+        cena = f"≈ {fmt(round(kc, -3) / 1000)} tis. Kč" if kc else "—"
         sys_rows += (f"<tr><td><a href=\"{h['url']}\">{h['nazev']}</a> <span class=mono>{h['zeme']}</span></td><td>{h['popis']}</td>"
                      f"<td>{h['kotveni']}</td><td class=n>{h['hloubka'] or '?'}</td><td class=n>{cena}</td><td>{h['cena_pozn']}</td>"
                      f"<td>{h['plus']}</td><td>{h['minus']}</td><td><span class='chip {h['hodnoceni']}'>{h['verdikt']}</span></td></tr>")
@@ -862,13 +884,14 @@ footer{font-size:13px;color:var(--muted)}
 {sys_rows}
 <tr class=hl><td>Vlastní návrh (tento podklad)</td><td>sloupky 60×60 na vrutech, 2 vrstvy Al profilů, {PANEL['nazev']}</td><td>zemní vruty Ø76×1600</td><td class=n>{fmt(X_CLAMP - X_POST_PLOT + POST['b'] / 2)}</td><td class=n>≈ {fmt(round(nase, -3) / 1000)} tis. Kč</td><td>konstrukce + montáž + panely, s DPH</td><td>výška 1,5 m = plot, vruty, volba panelu</td><td>více dílů, vlastní statika</td><td><span class='chip ok'>srovnávací</span></td></tr>
 </table></div>
-<p>Ceny německých systémů jsou přepočtené kurzem {EUR} Kč/€. Jsou uvedené bez DPH (v Německu platí pro FV soukromníků 0 %). Při dodání do ČR soukromé osobě se nejspíš připočte 21 % české DPH, doprava a kotvení, montáž v ceně není.</p>
+<p>Ceny jsou přepočtené kurzem {EUR} Kč/€ a {PLN} Kč/zł. Polské ceny jsou obvykle s polskou DPH 23 %, ověřit. Jsou uvedené bez DPH (v Německu platí pro FV soukromníků 0 %). Při dodání do ČR soukromé osobě se nejspíš připočte 21 % české DPH, doprava a kotvení, montáž v ceně není.</p>
 <h3>Co z toho plyne</h3>
 <ul>
 <li><b>Systémy s drážkovými sloupky</b> (Kirchberger, Profiness) sedí na pás 300 mm nejlépe. Sloupek 68–80 mm nese panel přímo, bez vodorovných nosníků, takže celá stěna je hluboká jen ≈ 7–8 cm. Panel je schválený pro daný systém, takže odpadá problém se způsobem upnutí. Sloupky stojí po 1,78–1,84 m, což je 20 patek místo 17 vrutů.</li>
 <li>Oba mají výšku <b>1,25–1,27 m</b>, tedy o 23–25 cm níž než plot. Spodní hrana panelu je těsně nad soklem u země. Je potřeba poptat zvýšené sloupky (spodní hrana ≥ 30 cm kvůli trávě a sněhu) a patku na přírubu zemního vrutu místo betonu.</li>
 <li>Při ceně ≈ 140–180 tis. Kč za 19 panelů vychází hotový systém stejně nebo o 10–25 % dráž než vlastní návrh s panely. Ušetří ale výrobu, řezání a dvouvrstvou montáž a za statiku i kompatibilitu ručí dodavatel.</li>
-<li>Česká řešení (Plotík, ALUX, Svaroq, Ploty Dobrý) jsou koncipovaná jako <b>náhrada plotu</b> v jeho linii. Plot je váš, takže to je reálná varianta: v osazeném úseku odstranit pletivo i staré sloupky a postavit solární plot na jejich místě. Omezení pásu 30 cm pak odpadá. Vyžaduje to poptávku a betonové patky.</li>
+<li><b>Polsko:</b> nejbližší obdobou německé sady je <b>Solarne Ogrodzenia S1</b>, pole 2,1 m s panelem JA 500 W sklo-sklo za 1 179 zł. Na 33,6 m to dělá 16 polí a 8,0 kWp za ≈ 108 tis. Kč bez soklů a montáže. Plot by ale byl vysoký 1,7–1,8 m. <b>Emiter</b> v Katovicích prodává sady vodorovného pole se sloupkem 80×80 jen firmám, poptávka tedy přes montážní firmu. Na Slezsku je to logisticky nejbližší zdroj.</li>
+<li><b>Česko:</b> hotovou stavebnici „sloupek + panel“ s veřejnou cenou jsem nenašel. Česká řešení (Plotík, ALUX, Svaroq, Ploty Dobrý) jsou koncipovaná jako <b>náhrada plotu</b> v jeho linii. Plot je váš, takže to je reálná varianta: v osazeném úseku odstranit pletivo i staré sloupky a postavit solární plot na jejich místě. Omezení pásu 30 cm pak odpadá. Vyžaduje to poptávku a betonové patky.</li>
 </ul>
 <h3>Zkušenosti z diskusí</h3>
 <ul>

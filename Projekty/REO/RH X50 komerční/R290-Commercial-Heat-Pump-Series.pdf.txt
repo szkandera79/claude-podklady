@@ -1,0 +1,165 @@
+[Text vytažený z R290-Commercial-Heat-Pump-Series.pdf]
+
+--- strana 1 ---
+COMMERCIAL
+Full DC Inverter Heat Pump
+78
+High temp
+Water outlet
+R290
+Commercial Series
+A cutting-edge solution designed for maximum efficiency and versatility in commercial applications.
+Features
+R290 refrigerant, ODP=0, low GWP(GWP=3)
+Dual DC Inverter T echnology: Delivers precise and efficient
+heating with a maximum output temperature of 78°C.
+T op Efficiency Ratings: Achieves ErP Level A+++ (at 35°C) with
+a high COP of 5.62.
+Built-in Wi-Fi Module: Provides seamless connectivity and
+control.
+Multilingual Support: Easy operation in various languages.
+SG Smart Grid Functionality: Enhances energy management
+and integration.
+Automatic T emperature Adjustment: Ensures optimal
+performance.
+Night Operation Mode: Convenient control during off-hours.
+Cascade Control: Supports up to 8 units for flexible scaling.
+Timed High-T emperature Disinfection: Ensure the safe and
+healthy use of hot water .
+IoT Cloud Management Platform
+Customizable Features: Options for built-in pumps and
+Refrigerant leak sensors, as well as external heat source and
+water tank control.
+Two-System Configuration,
+Large Capacity, Superior Stability
++++ A zero carbon Energy-Saving
+78℃
+High temp Water outlet
+R-290
+35°C/55°C
+A+++
+380V/3Ph/50-60Hz
+--- strana 2 ---
+Zero Carbon Heating Cooling & DHW Solutions
+Premium Configuration, Reliable Quality
+WIFI regular work
+Heating mode
+Hot water mode
+Timing
+Heating mode
+Hot water mode
+Cooling mode
+Automatic mode
+T arget T emperature
+Current T emperature
+Query
+Lock screen
+Error
+Hot water temperature state
+Operation State
+Setting
+Mode Setting
+R290 Refrigerant leakage monitoring sensor
+An alarm will be triggered when the
+concentration reaches 15%.
+Large LCD color screentouch controller
+Built-in WiFi module with integrated system and end
+device control, offering simple operation.
+Pressure gauge
+Electric control box
+Liquid storage tank
+Plate heat exchanger
+Flat-panel louvered fin heat exchanger
+1. Hydrophilic coating for corrosion resistance, salt
+spray durability , and exceptional oxidation resistance.
+2. Flat window design minimizes water , ice, and dust
+buildup, is easy to clean, and reduces air resistance,
+making it suitable for harsher environments.
+Multiple noise reduction designs
+Patented designs, achieving noise levels as low as
+62 dB(A) at 1Meter .
+Big DC inverter Stepless Fan Moto(14000m³ /h)
+Stepless variable speed operation, precise speed
+control, low noise, fewer moving parts, and
+higher efficiency.
+Chassis drainage hole design
+Directly drains condensate water
+to prevent ice formation from
+water accumulation.
+HIGHL Y Full DC Inverter
+Compressor (Dual system)
+Low vibration, quiet operation, and
+efficient performance in extreme cold
+weather down to -25°C.
+DC INVERTER HEAT PUMP FOR COOLING HEATING AND DHW (R290)
+Model
+PW150-DKZLRS-E
+DHW Condition-Ambient Temp.(DB/WB):20/15°C,Water Temp.(In/Out):15/55°C
+Heating Capacity Range (kW)
+23.8~68
+Heating Power Input Range(kW)
+4.23~15.46
+COP Range
+4.39~5.62
+Heated water output (L/H)
+1462
+Heating Condition - Ambient Temp.(DB/WB):7/6°C,Water Temp.(In/Out):30/35°C
+Heating Capacity Range (kW)
+18.4~49.25
+Heating Power Input Range(kW)
+4.23~12.96
+COP Range
+3.8~4.3
+Cooling Condition - Ambient Temp.(DB/WB):35/24°C,Water Temp.(In/Out):12/7°C
+Cooling Capacity Range (kW)
+13.8~34.5
+Cooling Power Input Range (kW)
+5.2~16.2
+EER Range
+2.12~2.65
+ErP Level (35°C)
+A+++
+ErP Level (55°C)
+A++
+Power supply
+380V/3Ph/50-60Hz
+Max. power input(kW)
+20
+Max. current (A)
+32
+Fuse or circuit breaker (A)
+40
+Wire diameter (mm²)
+10mm²
+Diameter of pipe (mm)
+G1.5"
+Sound power level (dB(A))
+≤77
+Sound pressure level (dB(A))
+62
+Water Flow(m3/h)
+5.8
+Water Pressure Drop (max) kPa
+80
+Net Weight (kg)
+370
+Body size(W*D*H) (mm)
+1195×980×1900
+Packing size(W*D*H)(Polywood) 1275*1060*2100
+IP Grade (Level of protection)
+IPX4
+Anti-electric shock Rate
+I
+Refrigerant
+R290
+Compressor Brand
+HIGHL Y
+Operation Ambient T emp. (°C)
+-25~43°C
+Water outlet temperature (°C)
+20~78°C(DHW )
+Water outlet temperature (°C)
+20~78°C(Heating)
+Water outlet temperature (°C)
+7~35°C(Cooling)
+the parameters of some products are changed in the process of continuous optimization. Please refer to the actual products.
