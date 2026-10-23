@@ -16,6 +16,9 @@ Varianta **B: samostatná svislá konstrukce na zemních vrutech v pásu 30 cm**
 - 17 sloupků jekl 60×60×4 (využití ≤ 66 %) na vrutech Ø76×1600, hloubka konstrukce 250 mm od osy plotu.
 - Vítr: qp = 556 Pa (oblast II, terén II), volně stojící stěna tab. 7.9; var. A (stávající sloupky) využití 315 % → zamítnuto.
 - Konstrukce vč. montáže ≈ 98 tis. Kč s DPH (odhad).
+- Hotové systémy (rešerše 23. 10.): nejvhodnější Kirchberger SUNLINE horizontal a Profiness Basic quer
+  (drážkové Al sloupky, hloubka ≈ 7–8 cm, výška 1,25–1,27 m, ≈ 140–180 tis. Kč za 19 panelů) → poptat
+  zvýšené sloupky, kotvení na vruty, statiku, dodání do ČR. CZ firmy (Plotík, ALUX, Svaroq) = náhrada plotu v linii.
 - Podklad: `navrh.html` (artefakt CvKMLkVx9LvPeLw9rx7acp), výkresy `dxf/plot-fve.dxf`, souhrn `vystup/statika.json`;
   generuje `python3 plot-fve/src/navrh.py` (volba panelu = `VYBER`).
 

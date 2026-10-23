@@ -615,6 +615,37 @@ def bom():
 
 BOM = bom()
 
+# ---------------------------------------------------------------- hotové systémy (rešerše 23. 10. 2026)
+EUR = 24.5   # Kč/€ (orientačně)
+HOTOVE = [
+    dict(nazev="Kirchberger SUNLINE horizontal", zeme="DE", url="https://kirchberger-metall.de/products/solarzaun-pv-zaun-modell-sunline-horizontal-komplettset-basismodul-1-modul-2-pfosten",
+         popis="Al sloupek 68×68 s drážkou, osa 178 cm, bezrámový bifaciální panel sklo-sklo 435 Wp (Solitec) vložený do drážky sloupků, výška systému 127 cm, sokl 90 mm",
+         kotveni="patka s deskou na přišroubování nebo zabetonování; vruty neuvádí", hloubka=70,
+         cena_eur=370 + (N_PANEL - 1) * 310, cena_pozn="370 € základ + 310 € každý další, vč. panelu, bez DPH (cena pro DE)",
+         plus="nejmenší hloubka, panel schválený se systémem, rychlá montáž", minus="výška 127 cm (o 23 cm níž než plot), spodní hrana nízko u země, statika neuvedena", hodnoceni="ok", verdikt="nejvhodnější"),
+    dict(nazev="Profiness Solarzaun Basic quer", zeme="DE", url="https://shop.profiness.de/en/product/solarzaun-basic-quer/",
+         popis="Al sloupek, prvek 1,84 m × 1,25 m, panel Jolywood JW-HD108N 1762×1134, 450 Wp bifaciální, vyráběný na zakázku",
+         kotveni="sloupky k zabetonování (volba), plánování vč. statiky zdarma i mimo DE", hloubka=80,
+         cena_eur=N_PANEL * 280 + 60, cena_pozn="280 €/prvek (5–35 ks) + koncový sloupek, vč. panelu",
+         plus="zdarma statika pro konkrétní místo, panel 1762×1134", minus="výška 1,25 m, běžné panely nelze použít, betonové patky", hodnoceni="ok", verdikt="vhodný"),
+    dict(nazev="ClickCon ClickWall", zeme="DE", url="https://clickcon.eu/solarzaun-montagesystem-clickwall/",
+         popis="Al sloupky s kabelovým kanálem, panel naležato i nastojato, 1–2 panely nad sebou, pro běžné rámové panely (i bifaciální sklo-sklo)",
+         kotveni="patky, pásy, zemní kotvy nebo upravené desky", hloubka=None,
+         cena_eur=None, cena_pozn="online kalkulátor, cena neuvedena",
+         plus="lze použít vlastní panel (např. JA)", minus="upínání panelu ani hloubka neuvedeny, nutno poptat", hodnoceni="est", verdikt="poptat"),
+    dict(nazev="Firend Solarzaun horizontal", zeme="DE", url="https://www.firend24.de/product/solarzaun-2module.html",
+         popis="práškově lakovaná ocel, sloupky se stojnou patkou, rozteč ≈ 1 802 mm, jen pro panely 1722×1134×30",
+         kotveni="stojná patka (způsob kotvení neuveden)", hloubka=None,
+         cena_eur=None, cena_pozn="129,60 € za sadu pro 2 panely, bez panelů",
+         plus="velmi levná konstrukce", minus="jen panel 1722 mm, statika ani kotvení neuvedeny", hodnoceni="est", verdikt="levná varianta, rizikové"),
+    dict(nazev="Plotík, ALUX/ILIOS, Svaroq, Ploty Dobrý", zeme="CZ", url="https://www.plotik.cz/",
+         popis="české hliníkové solární ploty jako náhrada plotu; Plotík výška 1,2–2,2 m i svépomocí, ALUX s panely Trina, Svaroq bifaciální sklo-sklo, Ploty Dobrý s AIKO 540 Wp",
+         kotveni="neuvádějí; obvykle betonové patky v linii plotu", hloubka=None,
+         cena_eur=None, cena_pozn="na poptávku; ALUX uvádí sestavy 7,1 kWp za 227 000 Kč vč. střídače a montáže",
+         plus="dodavatel v ČR, montáž na klíč, servis", minus="řeší se jako nový plot v linii starého, ne v pásu 30 cm; ceny na poptávku", hodnoceni="est", verdikt="poptat jako náhradu plotu"),
+]
+
+
 # ---------------------------------------------------------------- HTML
 def fmt(x, d=0):
     s = f"{x:,.{d}f}".replace(",", " ").replace(".", ",")
@@ -634,6 +665,14 @@ def html():
     win = lambda a: sum(PVGIS[a][i] for i in (0, 1, 10, 11))
     sumr = lambda a: sum(PVGIS[a][i] for i in (5, 6, 7))
     proj = lambda a: PANEL["B"] * math.cos(math.radians(a))
+
+    sys_rows = ""
+    for h in HOTOVE:
+        cena = f"≈ {fmt(round(h['cena_eur'] * EUR, -3) / 1000)} tis. Kč" if h["cena_eur"] else "—"
+        sys_rows += (f"<tr><td><a href=\"{h['url']}\">{h['nazev']}</a> <span class=mono>{h['zeme']}</span></td><td>{h['popis']}</td>"
+                     f"<td>{h['kotveni']}</td><td class=n>{h['hloubka'] or '?'}</td><td class=n>{cena}</td><td>{h['cena_pozn']}</td>"
+                     f"<td>{h['plus']}</td><td>{h['minus']}</td><td><span class='chip {h['hodnoceni']}'>{h['verdikt']}</span></td></tr>")
+    nase = sum(r["celk"] for r in BOM) + N_PANEL * PANEL["cena"]
 
     pan_rows = ""
     for key, p in PANELS.items():
@@ -816,6 +855,32 @@ footer{font-size:13px;color:var(--muted)}
 </section>
 
 <section>
+<h2>Hotové systémy solárních plotů</h2>
+<p>Rešerše trhu a diskusí (Photovoltaikforum, Akkudoktor), říjen 2026. Hledal jsem systém, který stojí samostatně, je mělký (pás 300 mm), nese jednu řadu panelů naležato a dá se ukotvit bez velkých výkopů.</p>
+<div class="tw"><table>
+<tr><th>Systém</th><th>Konstrukce</th><th>Kotvení</th><th class=n>hloubka mm</th><th class=n>19 panelů</th><th>Cena</th><th>Výhody</th><th>Nevýhody</th><th></th></tr>
+{sys_rows}
+<tr class=hl><td>Vlastní návrh (tento podklad)</td><td>sloupky 60×60 na vrutech, 2 vrstvy Al profilů, {PANEL['nazev']}</td><td>zemní vruty Ø76×1600</td><td class=n>{fmt(X_CLAMP - X_POST_PLOT + POST['b'] / 2)}</td><td class=n>≈ {fmt(round(nase, -3) / 1000)} tis. Kč</td><td>konstrukce + montáž + panely, s DPH</td><td>výška 1,5 m = plot, vruty, volba panelu</td><td>více dílů, vlastní statika</td><td><span class='chip ok'>srovnávací</span></td></tr>
+</table></div>
+<p>Ceny německých systémů jsou přepočtené kurzem {EUR} Kč/€. Jsou uvedené bez DPH (v Německu platí pro FV soukromníků 0 %). Při dodání do ČR soukromé osobě se nejspíš připočte 21 % české DPH, doprava a kotvení, montáž v ceně není.</p>
+<h3>Co z toho plyne</h3>
+<ul>
+<li><b>Systémy s drážkovými sloupky</b> (Kirchberger, Profiness) sedí na pás 300 mm nejlépe. Sloupek 68–80 mm nese panel přímo, bez vodorovných nosníků, takže celá stěna je hluboká jen ≈ 7–8 cm. Panel je schválený pro daný systém, takže odpadá problém se způsobem upnutí. Sloupky stojí po 1,78–1,84 m, což je 20 patek místo 17 vrutů.</li>
+<li>Oba mají výšku <b>1,25–1,27 m</b>, tedy o 23–25 cm níž než plot. Spodní hrana panelu je těsně nad soklem u země. Je potřeba poptat zvýšené sloupky (spodní hrana ≥ 30 cm kvůli trávě a sněhu) a patku na přírubu zemního vrutu místo betonu.</li>
+<li>Při ceně ≈ 140–180 tis. Kč za 19 panelů vychází hotový systém stejně nebo o 10–25 % dráž než vlastní návrh s panely. Ušetří ale výrobu, řezání a dvouvrstvou montáž a za statiku i kompatibilitu ručí dodavatel.</li>
+<li>Česká řešení (Plotík, ALUX, Svaroq, Ploty Dobrý) jsou koncipovaná jako <b>náhrada plotu</b> v jeho linii. Plot je váš, takže to je reálná varianta: v osazeném úseku odstranit pletivo i staré sloupky a postavit solární plot na jejich místě. Omezení pásu 30 cm pak odpadá. Vyžaduje to poptávku a betonové patky.</li>
+</ul>
+<h3>Zkušenosti z diskusí</h3>
+<ul>
+<li>Svislé ploty se uživatelům osvědčily hlavně v zimě, jeden hlásí 44 kWh za zimní den z 18,5 kWp (<a href="https://www.photovoltaikforum.com/thread/219589-zaun-pv-windlast-wie-bauen-mit-bifazialen-modulen/">Photovoltaikforum</a>).</li>
+<li>Doporučují <b>sklo-sklo panely</b>, protože fólii na zadní straně u plotu poškodí tráva a keře. Na sloupky se vyplatí bouřkové kotvy.</li>
+<li>Stejná situace jako u vás (starý plot, různé rozteče polí) se řešila v <a href="https://www.photovoltaikforum.com/thread/262607-zaunsolaranlage-vorhandenen-pfosten-verwenden/">tomto vlákně</a>. Rozměry panelů do nepravidelných polí nikdy nesednou. Řešením jsou vodorovné příčníky a na nich držáky panelů nezávislé na sloupcích, stejně jako ve vlastním návrhu.</li>
+<li>Kutilské ploty na dřevěných sloupcích a kotvách tvaru H vítr převrátil (12 m plotu), a proto se doporučují kovové sloupky na betonu nebo vrutech (<a href="https://akkudoktor.net/t/erfahrungsaustausch-zu-eigenem-pv-zaun-projekt/24873">Akkudoktor</a>). Dalším častým problémem bylo napětí stringu: 19 panelů s vyšším Voc přesáhlo v mrazu limit střídače, což u zvoleného JA panelu (840 V) nehrozí.</li>
+</ul>
+<p><b>Doporučení:</b> poptat Kirchberger SUNLINE a Profiness Basic quer. Na rozhodnutí stačí pět údajů: cena s dodáním do ČR, statika pro větrnou oblast II a terén II, sloupky pro výšku 1,5 m se spodní hranou ≥ 30 cm, kotvení na zemní vruty a elektrické údaje panelu (Voc) kvůli stringu 19 ks. Pokud dodavatel zvýšení nebo vruty nenabídne, zůstává vlastní návrh.</p>
+</section>
+
+<section>
 <h2>Výběr panelu</h2>
 <p>Prošel jsem montážní návody tří výrobců panelů 1 762 × 1 134 mm. <b>Žádný z nich nepovoluje upnutí na dlouhých hranách s profily rovnoběžnými s dlouhou hranou</b>: JA Solar má u řady JAM54 v tabulce „N/A“, Trina ani Aiko tuto kombinaci u formátu 54 článků neuvádějí. Povolené je upnutí na dlouhých hranách s profily <b>kolmo</b> na dlouhou hranu. U panelů naležato to znamená svislé profily. Konstrukce je proto dvouvrstvá: vodorovné nosníky na sloupcích a na nich krátké svislé profily, 2 na každý panel.</p>
 <div class="tw"><table>
@@ -958,7 +1023,7 @@ celková vodorovná síla na stěnu H<sub>k</sub> = {fmt(st['H_total'], 1)} kN
 <li>Kolik polí u stromu přesně vynechat. Lze ověřit fotkou plotu v zimě kolem poledne.</li>
 </ul>
 </section>
-<footer>Zdroje: montážní návody JA Solar, Trina Solar a AIKO (viz Výběr panelu), PVGIS 5.2 (JRC), ČSN EN 1991-1-4 + NA, ČSN EN 1993-1-1, ČSN EN 1999-1-1, datová stránka SolaX X3-Ultra, cena profilu: zbozi.cz (G21 HPG2144X). Výpočet a výkresy generuje <span class="mono">plot-fve/src/navrh.py</span>.</footer>
+<footer>Zdroje: stránky výrobců solárních plotů a diskuse (viz Hotové systémy), montážní návody JA Solar, Trina Solar a AIKO (viz Výběr panelu), PVGIS 5.2 (JRC), ČSN EN 1991-1-4 + NA, ČSN EN 1993-1-1, ČSN EN 1999-1-1, datová stránka SolaX X3-Ultra, cena profilu: zbozi.cz (G21 HPG2144X). Výpočet a výkresy generuje <span class="mono">plot-fve/src/navrh.py</span>.</footer>
 </main>"""
 
 
