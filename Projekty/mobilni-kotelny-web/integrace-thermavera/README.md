@@ -42,7 +42,7 @@ Stávající `thermavera.cz/kalkulacka.html` (návratnost trvalé kotelny) zůst
 - **Formulář poptávky** je napojený na `../odeslat.php` (pole model = „Pronájem mobilní kotelny – Havárie/Plánovaná odstávka“).
 - **sitemap.xml:** tři nové URL doplněny. **Google Ads:** nová sestava s cílovou stránkou /mobilni-kotelny/ (zbývá).
 - **Doména teplonacas.cz** (pokud ji zaregistrujete) jen jako přesměrování 301 na thermavera.cz/mobilni-kotelny/.
-- Ceník nájmů (50/80 tis. Kč/měs., doprava 30 tis., montáž 50 tis.) je po nahrání veřejný.
+- Ceník nájmů (49/79 tis. Kč/měs., doprava 30 tis., montáž 50 tis.) je po nahrání veřejný.
 
 ## Varianta 1 vs. 2
 | | 1 — samostatný web (teplonacas.cz) | 2 — součást thermavera.cz |

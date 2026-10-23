@@ -31,8 +31,8 @@ Konfigurace `mobilni-kotelny-web` v `.claude/launch.json` servíruje kopii ve sc
 python http.server neotevře). Po úpravě zkopírovat: `rsync -a --delete mobilni-kotelny-web/ <scratchpad>/site/`.
 
 ## Otevřené body
-- **Ceník TČ (22. 10. 2026, I):** 1× RH X50 (50 kW nom., 24,8 kW při −15 °C) 50 000 Kč/měs., kaskáda 2× (100 kW nom.)
-  80 000 Kč/měs., doprava 30 000 + montáž 50 000 Kč vždy zvlášť (`TC_SETS`, `tcSet()` v calc-core.js). Nad 2 jednotky
+- **Ceník TČ (23. 10. 2026, I):** 1× RH X50 (50 kW nom., 24,8 kW při −15 °C) 49 000 Kč/měs., kaskáda 2× (100 kW nom.)
+  79 000 Kč/měs., doprava 30 000 + montáž 50 000 Kč vždy zvlášť (`TC_SETS`, `tcSet()` v calc-core.js). Nad 2 jednotky
   skládá kalkulačka z těchto sestav (P). Neupřesněno: zda doprava 30 000 je tam i zpět a zda je v montáži demontáž.
   Žádné rozlišení cen podle délky nájmu.
 - **Elektřina 3 000 Kč/MWh bez DPH vč. distribuce** (zadání 22. 10. 2026, I).

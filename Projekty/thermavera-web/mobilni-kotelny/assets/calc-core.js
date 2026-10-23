@@ -24,12 +24,12 @@ const SOUSTAVY = {
   vysoka: { label: 'Nad 55 °C (např. CZT 90/70 °C)', spf: 1.89, el: 0.30, tag: 'P' },
 };
 
-/* Ceník ThermaVera [I], 10/2026, bez DPH: nájem podle sestavy RH X50, doprava a montáž vždy zvlášť.
+/* Ceník ThermaVera [I], 23. 10. 2026, bez DPH: nájem podle sestavy RH X50, doprava a montáž vždy zvlášť.
    Výkon při −15 °C / 55 °C z výkonové mapy (24,8 kW na jednotku). */
 const TC_UNIT_KW = 24.8;
 const TC_SETS = [
-  { units: 1, nominal: 50, rent: 50000 },
-  { units: 2, nominal: 100, rent: 80000 },
+  { units: 1, nominal: 50, rent: 49000 },
+  { units: 2, nominal: 100, rent: 79000 },
 ];
 const TC_TRANSPORT = 30000, TC_INSTALL = 50000;
 const TC_ONCE = TC_TRANSPORT + TC_INSTALL;
@@ -45,7 +45,7 @@ function tcSet(kw) {
    rent = nájem Kč/měs., once = doprava + montáž + demontáž, null = neznámé (uživatel doplní). */
 const TECH = [
   { id: 'tc', name: 'Tepelné čerpadlo', short: 'TČ', fuelName: 'elektřina', unit: 'kWh', price: 3.0, priceTag: 'I', src: 'el',
-    kwh: 1, eta: null, rent: 80000, rentTag: 'I', once: TC_ONCE, onceTag: 'I', ours: true,
+    kwh: 1, eta: null, rent: 79000, rentTag: 'I', once: TC_ONCE, onceTag: 'I', ours: true,
     note: 'Elektřina přes podružné měření, platí zákazník. Každá jednotka max. 20 kW / 32 A, jistič 3×40 A; kaskáda 2 jednotek orientačně přívod 3×80 A.' },
   { id: 'plyn', name: 'Zemní plyn', short: 'Plyn', fuelName: 'zemní plyn', unit: 'kWh', price: 1.55, priceTag: 'O', src: 'plyn',
     kwh: 1, eta: 0.93, etaTag: 'P', rent: 45000, rentTag: 'P', once: 25000, onceTag: 'P',
