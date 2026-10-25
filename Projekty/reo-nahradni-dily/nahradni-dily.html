@@ -1,0 +1,273 @@
+<title>Náhradní díly RH030–RH060</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: servisní katalog — hlavička s kurzem, záložky modelů, tabulka po skupinách dílů */
+:root{
+  --bg:#F6F8F6; --surface:#FFFFFF; --ink:#1D2420; --muted:#66716B; --line:#DFE6E1;
+  --green:#34A263; --green-ink:#1F7A47; --green-soft:#E9F6EE; --amber:#B7791F; --amber-soft:#FDF3E1;
+  --logo-ink:#363533; --logo-grey:#838383;
+  --f-body:"Figtree", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121614; --surface:#1A201D; --ink:#E6ECE8; --muted:#97A39C; --line:#2C3531;
+  --green:#46B876; --green-ink:#7FD3A2; --green-soft:#1C2E24; --amber:#E2A84B; --amber-soft:#2E2617;
+  --logo-ink:#E6ECE8; --logo-grey:#A9B0AC; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121614; --surface:#1A201D; --ink:#E6ECE8; --muted:#97A39C; --line:#2C3531;
+  --green:#46B876; --green-ink:#7FD3A2; --green-soft:#1C2E24; --amber:#E2A84B; --amber-soft:#2E2617;
+  --logo-ink:#E6ECE8; --logo-grey:#A9B0AC; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.45}
+.wrap{max-width:1180px;margin:0 auto;padding-block:28px 48px;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+header{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between;
+  border-bottom:3px solid var(--green);padding-bottom:20px}
+.brand{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.logo{width:150px;height:auto;display:block}
+h1{font-size:clamp(24px,3.4vw,34px);font-weight:800;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.sub{color:var(--green-ink);font-weight:600;margin:2px 0 0}
+.rates{display:flex;flex-wrap:wrap;gap:8px}
+.rate{display:flex;flex-direction:column;gap:4px;background:var(--surface);border:1px solid var(--line);
+  border-radius:10px;padding:10px 14px}
+.rate label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rate .row{display:flex;align-items:center;gap:8px}
+#rate{width:104px!important}
+.rate input{width:84px;font:600 18px var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);
+  border-radius:6px;padding:4px 8px}
+.rate small{color:var(--muted);font-size:12px}
+.rate button{font:600 12px var(--f-body);color:var(--green-ink);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+input:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:24px 0 18px}
+.tab{font:600 14px var(--f-body);color:var(--ink);background:var(--surface);border:1px solid var(--line);
+  border-radius:999px;padding:8px 16px;cursor:pointer}
+.tab small{color:var(--muted);font-weight:500;margin-left:4px}
+.tab[aria-selected="true"]{background:var(--green);border-color:var(--green);color:#fff}
+.tab[aria-selected="true"] small{color:#E3F5EA}
+.tab.cmp{margin-left:auto}
+
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:18px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+.kpi .k{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.kpi .v{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums;margin-top:2px}
+.kpi .v2{font:500 13px var(--f-mono);color:var(--muted)}
+
+.tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.tools input{flex:1 1 260px;min-width:0;font:15px var(--f-body);color:var(--ink);background:var(--surface);
+  border:1px solid var(--line);border-radius:8px;padding:9px 12px}
+.tools .meta{color:var(--muted);font-size:13px}
+
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;min-width:820px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  background:var(--bg);position:sticky;top:0}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.grp td{background:var(--green-soft);color:var(--green-ink);font-weight:700;font-size:12px;letter-spacing:.1em;
+  text-transform:uppercase;padding:7px 12px}
+tr.grp td span{float:right;letter-spacing:0;text-transform:none;font-weight:600}
+.pn{font-weight:600}
+.en{display:block;color:var(--muted);font-size:12px}
+.code{font:500 13px var(--f-mono);white-space:nowrap}
+.spec{color:var(--muted);font-size:12.5px;max-width:360px}
+.usd{font-family:var(--f-mono);font-size:13.5px}
+.czk{font-weight:700}
+.flag{display:inline-block;margin-left:6px;font-size:11px;font-weight:700;color:var(--amber);background:var(--amber-soft);
+  border-radius:4px;padding:1px 6px;vertical-align:1px}
+tfoot td{font-weight:800;border-bottom:0;background:var(--bg)}
+mark{background:var(--amber-soft);color:inherit;border-radius:2px}
+.notes{display:grid;gap:10px;margin-top:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.note{background:var(--amber-soft);border-radius:10px;padding:12px 16px;font-size:13.5px}
+.note b{color:var(--amber)}
+.note.info{background:var(--surface);border:1px solid var(--line)}
+.note.info b{color:var(--green-ink)}
+footer{margin-top:28px;color:var(--muted);font-size:12.5px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+@media (max-width:640px){.tab.cmp{margin-left:0}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="brand">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="24 22 264 101" role="img" aria-label="REO HEATING">
+  <path d="M76.07 79.02 L112.09 42.35 L126.02 55.61 L130.98 50.39 L111.91 32.25 L70.93 73.98 Z" style="fill:var(--logo-grey)"/>
+  <path d="M119.98 76.11 L160.96 37.21 L202.47 78.07 L207.53 72.93 L161.04 27.19 L115.02 70.89 Z" fill="#50854D"/>
+  <rect x="86" y="44.5" width="6" height="14" style="fill:var(--logo-grey)"/>
+  <rect x="181" y="39.5" width="6.2" height="14" fill="#50854D"/>
+  <g fill="#F0C246"><rect x="152.00" y="54.00" width="8.00" height="7.50"/><rect x="152.00" y="63.10" width="8.00" height="7.50"/><rect x="161.60" y="54.00" width="8.00" height="7.50"/><rect x="161.60" y="63.10" width="8.00" height="7.50"/><circle cx="213" cy="44.5" r="8.9"/><path d="M210.09 34.00 L213.00 27.10 L215.91 34.00 Z"/><path d="M215.73 33.95 L221.70 29.43 L220.77 36.86 Z"/><path d="M220.64 36.73 L228.07 35.80 L223.55 41.77 Z"/><path d="M223.50 41.59 L230.40 44.50 L223.50 47.41 Z"/><path d="M223.55 47.23 L228.07 53.20 L220.64 52.27 Z"/><path d="M220.77 52.14 L221.70 59.57 L215.73 55.05 Z"/><path d="M215.91 55.00 L213.00 61.90 L210.09 55.00 Z"/><path d="M210.27 55.05 L204.30 59.57 L205.23 52.14 Z"/><path d="M205.36 52.27 L197.93 53.20 L202.45 47.23 Z"/><path d="M202.50 47.41 L195.60 44.50 L202.50 41.59 Z"/><path d="M202.45 41.77 L197.93 35.80 L205.36 36.73 Z"/><path d="M205.23 36.86 L204.30 29.43 L210.27 33.95 Z"/></g>
+  <path d="M34.95720338983051 116.3H31.0V88.0H40.07358757062147Q42.11214689265537 88.0 43.95084745762712 88.41970338983052Q45.789548022598865 88.83940677966102 47.168573446327684 89.75875706214688Q48.5475988700565 90.67810734463276 49.347033898305085 92.17704802259887Q50.14646892655367 93.67598870056497 50.14646892655367 95.83446327683616Q50.14646892655367 98.95225988700565 48.22782485875706 100.87090395480226Q46.309180790960454 102.78954802259886 43.27132768361582 103.30918079096045L51.18573446327683 116.3H46.389124293785315L39.19420903954802 103.70889830508474H34.95720338983051ZM34.95720338983051 100.39124293785311H39.51398305084746Q40.91299435028249 100.39124293785311 42.11214689265537 100.15141242937852Q43.311299435028246 99.91158192090396 44.21066384180791 99.37196327683615Q45.11002824858757 98.83234463276835 45.62966101694915 97.97295197740112Q46.14929378531073 97.1135593220339 46.14929378531073 95.83446327683616Q46.14929378531073 94.55536723163841 45.62966101694915 93.69597457627118Q45.11002824858757 92.83658192090395 44.25063559322034 92.31694915254238Q43.39124293785311 91.79731638418079 42.23206214689266 91.57747175141243Q41.0728813559322 91.35762711864407 39.793785310734464 91.35762711864407H34.95720338983051ZM57.93266949152542 112.78248587570621H72.72221751412428V116.3H53.97546610169491V88.0H72.12264124293785V91.47754237288136H57.93266949152542V99.95155367231638H71.28323446327683V103.34915254237288H57.93266949152542ZM104.97112994350283 102.11002824858757Q104.97112994350283 105.38771186440678 103.8319350282486 108.1257768361582Q102.69274011299436 110.86384180790961 100.69415254237289 112.84244350282486Q98.69556497175142 114.8210451977401 95.93751412429378 115.92026836158192Q93.17946327683616 117.01949152542373 89.94175141242938 117.01949152542373Q86.7040395480226 117.01949152542373 83.9659745762712 115.92026836158192Q81.22790960451978 114.8210451977401 79.22932203389831 112.84244350282486Q77.23073446327685 110.86384180790961 76.11152542372882 108.1257768361582Q74.9923163841808 105.38771186440678 74.9923163841808 102.11002824858757Q74.9923163841808 98.79237288135593 76.11152542372882 96.05430790960452Q77.23073446327685 93.3162429378531 79.22932203389831 91.37761299435027Q81.22790960451978 89.43898305084745 83.9659745762712 88.35974576271187Q86.7040395480226 87.28050847457627 89.94175141242938 87.28050847457627Q93.17946327683616 87.28050847457627 95.93751412429378 88.35974576271187Q98.69556497175142 89.43898305084745 100.69415254237289 91.37761299435027Q102.69274011299436 93.3162429378531 103.8319350282486 96.05430790960452Q104.97112994350283 98.79237288135593 104.97112994350283 102.11002824858757ZM100.69415254237289 102.11002824858757Q100.69415254237289 99.79166666666666 99.93468926553673 97.73312146892656Q99.17522598870057 95.67457627118644 97.77621468926554 94.11567796610169Q96.37720338983051 92.55677966101695 94.39860169491526 91.65741525423729Q92.42 90.75805084745762 89.94175141242938 90.75805084745762Q87.50347457627119 90.75805084745762 85.52487288135595 91.65741525423729Q83.54627118644069 92.55677966101695 82.16724576271187 94.11567796610169Q80.78822033898305 95.67457627118644 80.0287570621469 97.73312146892656Q79.26929378531074 99.79166666666666 79.26929378531074 102.11002824858757Q79.26929378531074 104.4683615819209 80.0287570621469 106.54689265536723Q80.78822033898305 108.62542372881356 82.18723163841808 110.16433615819209Q83.58624293785311 111.70324858757061 85.54485875706214 112.58262711864407Q87.50347457627119 113.46200564971751 89.94175141242938 113.46200564971751Q92.38002824858758 113.46200564971751 94.37861581920905 112.58262711864407Q96.37720338983051 111.70324858757061 97.77621468926554 110.16433615819209Q99.17522598870057 108.62542372881356 99.93468926553673 106.54689265536723Q100.69415254237289 104.4683615819209 100.69415254237289 102.11002824858757ZM117.22587570621468 88.0H121.18307909604519V99.8316384180791H135.49296610169492V88.0H139.49014124293785V116.3H135.49296610169492V103.34915254237288H121.18307909604519V116.3H117.22587570621468ZM148.7552966101695 112.78248587570621H163.54484463276836V116.3H144.79809322033898V88.0H162.94526836158192V91.47754237288136H148.7552966101695V99.95155367231638H162.10586158192092V103.34915254237288H148.7552966101695ZM168.41310734463278 116.3H164.01621468926555L176.28754237288138 88.0H179.88500000000002L192.03641242937854 116.3H187.55957627118647L184.68161016949153 109.34491525423729H171.25110169491526ZM172.6501129943503 105.86737288135593H183.2426271186441L177.9663559322034 92.59675141242937ZM204.0196468926554 116.3H200.0624435028249V91.47754237288136H190.98885593220342V88.0H213.09323446327687V91.47754237288136H204.0196468926554ZM219.240593220339 116.3H215.2833898305085V88.0H219.240593220339ZM244.49444915254242 110.62401129943503H244.5743926553673V88.0H248.5315960451978V116.3H243.53512711864414L228.58569209039553 93.19632768361582H228.50574858757068V116.3H224.54854519774017V88.0H229.70490112994355ZM275.1844632768362 93.8358757062147Q273.9053672316385 92.43686440677966 271.9267655367232 91.59745762711864Q269.94816384180797 90.75805084745762 267.5098870056498 90.75805084745762Q265.0316384180792 90.75805084745762 263.03305084745773 91.65741525423729Q261.0344632768362 92.55677966101695 259.6354519774012 94.11567796610169Q258.2364406779662 95.67457627118644 257.47697740113006 97.73312146892656Q256.71751412429387 99.79166666666666 256.71751412429387 102.11002824858757Q256.71751412429387 104.4683615819209 257.47697740113006 106.54689265536723Q258.2364406779662 108.62542372881356 259.6354519774012 110.16433615819209Q261.0344632768362 111.70324858757061 263.0730225988701 112.58262711864407Q265.11158192090403 113.46200564971751 267.6298022598871 113.46200564971751Q269.6283898305085 113.46200564971751 271.30720338983053 113.10225988700564Q272.9860169491526 112.74251412429378 274.2251412429379 112.06299435028248V104.1885593220339H267.9495762711865V100.83093220338984H278.142372881356V114.5412429378531Q275.90395480225993 115.74039548022598 273.2658192090396 116.37994350282486Q270.62768361581925 117.01949152542373 267.5098870056498 117.01949152542373Q264.19223163841815 117.01949152542373 261.4141949152543 115.92026836158192Q258.6361581920905 114.8210451977401 256.63757062146897 112.84244350282486Q254.63898305084751 110.86384180790961 253.5197740112995 108.1257768361582Q252.4005649717515 105.38771186440678 252.4005649717515 102.11002824858757Q252.4005649717515 98.79237288135593 253.53975988700574 96.05430790960452Q254.67895480225997 93.3162429378531 256.6975282485877 91.37761299435027Q258.7161016949153 89.43898305084745 261.47415254237296 88.35974576271187Q264.2322033898306 87.28050847457627 267.4699152542374 87.28050847457627Q270.86751412429385 87.28050847457627 273.5256355932204 88.279802259887Q276.183757062147 89.27909604519775 277.94251412429384 90.95790960451977Z" style="fill:var(--logo-ink)"/>
+</svg>
+
+    <div>
+      <h1>Náhradní díly RH030–RH060</h1>
+      <p class="sub">Ceník náhradních dílů · tepelná čerpadla REO R290 · nákupní ceny</p>
+    </div>
+  </div>
+  <div class="rates">
+    <div class="rate">
+      <label for="rate">Kurz USD → Kč</label>
+      <div class="row"><input id="rate" type="number" step="0.001" min="1" inputmode="decimal"><small>Kč/USD</small></div>
+      <small>ČNB 23. 10. 2026</small>
+    </div>
+    <div class="rate">
+      <label for="duty">Clo</label>
+      <div class="row"><input id="duty" type="number" step="0.1" min="0" inputmode="decimal"><small>% z ceny</small></div>
+      <small>dle HS kódu dílu</small>
+    </div>
+    <div class="rate">
+      <label for="vat">DPH</label>
+      <div class="row"><input id="vat" type="number" step="1" min="0" inputmode="decimal"><small>%</small></div>
+      <small><button id="rateReset" type="button">vrátit výchozí</button></small>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs" role="tablist"></nav>
+<section id="view"></section>
+
+<div class="notes">
+  <div class="note"><b>RH050 ověřit.</b> List „050 3 phase“ má stejný kusovník i BOM kód (CP-RW0400086) jako RH040 — včetně menšího ventilátoru. Nejspíš kopie listu; ceny ověřit u dodavatele.</div>
+  <div class="note info"><b>Ceny</b> jsou nákupní v USD za kus. Kč s clem a DPH = USD × kurz × (1 + clo) × (1 + DPH); DPH se počítá z ceny včetně cla. Doprava není zahrnuta. „Celkem“ = cena × počet kusů v jednotce.</div>
+  <div class="note"><b>Clo 2,5 % je výchozí odhad.</b> Skutečná sazba se liší podle HS kódu dílu (kompresor, desky, čerpadlo…); upravte ji v hlavičce.</div>
+</div>
+<footer><span>Zdroj: Spare Part List.xlsx (REO / PW R290) · interní podklad, nešířit zákazníkům</span><span>REO HEATING · 10/2026</span></footer>
+</div>
+
+<script>
+const DATA = {"source": "REO/PW R290/Spare Part List.xlsx", "currency": "USD", "models": [{"id": "RH030", "model": "RH030", "phase": "1F", "kw": 8, "bom": "CP-RW0300114", "variant": "RH030-PW8-A2, R290", "parts": [{"code": "801019-0116", "name": "Electronic expansion valve", "spec": "DPF(TS1)1.65C-49,diameterφ6.35", "qty": 1, "usd": 13.65}, {"code": "802026-3358", "name": "Pressure Switch", "spec": "Low pressure switch, 0.05MPa(OFF)-0.15MPa(ON),1.5 meter cable with VH-2Y terminal, copper tube length 38*41mm", "qty": 1, "usd": 3.43}, {"code": "802026-1255", "name": "Pressure Switch", "spec": "High pressure switch, 2.6MPa(ON)-3.2MPa(OFF)1.5 meter cable with VH-2Y terminal,copper tube length 38*41mm", "qty": 1, "usd": 3.43}, {"code": "802006-0204", "name": "Pressure Sensor", "spec": "35CP02-03158020XS00F5H-ENV,0-20bar, cable 1.5 meter", "qty": 1, "usd": 34.45}, {"code": "801012-0002", "name": "Needle valve", "spec": "φ6.35*80,KAE KSE", "qty": 2, "usd": 1.87}, {"code": "802002-3267", "name": "Circuit board", "spec": "PW58381-CC1010B Frequency conversion triple supply controller", "qty": 1, "usd": 161.2}, {"code": "802003-2111", "name": "Controller panel", "spec": "PW58410-CC1247", "qty": 1, "usd": 105}, {"code": "802007-1116", "name": "Signal cable", "spec": "CCX330.45,XH-4Y white,length 500mm", "qty": 1, "usd": 1.04}, {"code": "802007-1143", "name": "Signal cable", "spec": "CCX330.64,XH-4Y white and SM-4Y black,length 400mm+300mm", "qty": 1, "usd": 1.04}, {"code": "802007-1144", "name": "Signal cable", "spec": "CCX306.07, SM-4A black/SM-4Y black，length 10000mm", "qty": 1, "usd": 5.2}, {"code": "802010-0209", "name": "Reactor", "spec": "R25027 I：25A L：2.7mH-90CM 12AWG cable-5.5-5round terminal", "qty": 1, "usd": 20.8}, {"code": "802004-2080", "name": "Temperature Sensor", "spec": "CC.T94(5K plastic seal - PVC pipe 950mm, XH-2Y white, length 1000mm)", "qty": 1, "usd": 1.43}, {"code": "802004-2083", "name": "Temperature Sensor", "spec": "CC.T98(5K plastic seal - PVC pipe 950mm, XH-2Y white, length 1000mm)", "qty": 1, "usd": 1.43}, {"code": "802004-2030", "name": "Temperature Sensor", "spec": "CC.T257（50K high temperature copper sealing tape XH-2Y, red wire length 1200mm）", "qty": 1, "usd": 2.08}, {"code": "802004-2093", "name": "Temperature Sensor", "spec": "CC.T186(5K copper seal - PVC pipe 1000mm, XH-2Y white, length 10000mm)", "qty": 1, "usd": 3.85}, {"code": "802004-2055", "name": "Temperature Sensor", "spec": "CC.T43(5K copper seal - PVC pipe 1000mm,  XH-2Y white cable, length 1200mm)", "qty": 3, "usd": 1.43}, {"code": "802004-2027", "name": "Temperature Sensor", "spec": "CC.T245（5K copper sealing tape XH-2Y, black wire length 1500mm）", "qty": 1, "usd": 1.82}, {"code": "801001-0091", "name": "Compressor", "spec": "Highly/R290/Inverter", "qty": 1, "usd": 353.6}, {"code": "801015-0100", "name": "Circulation pump", "spec": "Shimge, APM25-9-130 PWM1/cable length 1.5m", "qty": 1, "usd": 145}, {"code": "802042-1106", "name": "Motor", "spec": "RD150HA,150W, DC, 850rpm 8P 310V", "qty": 1, "usd": 64.2}, {"code": "802043-0304", "name": "Fan blade", "spec": "φ552*142, 3 blades, ASG20, blue", "qty": 1, "usd": 10.6}, {"code": "801014-0309", "name": "Pressure gauge", "spec": "0-3.8,M4 thread", "qty": 1, "usd": 8.2}, {"code": "802039-0001", "name": "Flow switch", "spec": "WFS27020PF（30）plastic ，1/6 female thread，cable length 2 meters", "qty": 1, "usd": 18}]}, {"id": "RH040", "model": "RH040", "phase": "1F", "kw": 12, "bom": "CP-RW0400086", "variant": "RH040-PW12-A2,R290", "parts": [{"code": "801019-0118", "name": "Electronic expansion valve", "spec": "DPF(TS1)2.2C-34,Diameter φ7.94", "qty": 1, "usd": 16.5}, {"code": "802026-3358", "name": "Pressure Switch", "spec": "Low pressure switch, 0.05MPa(OFF)-0.15MPa(ON),1.5 meter cable with VH-2Y terminal, copper tube length 38*41mm", "qty": 1, "usd": 3.43}, {"code": "802026-1255", "name": "Pressure Switch", "spec": "High pressure switch, 2.6MPa(ON)-3.2MPa(OFF)1.5 meter cable with VH-2Y terminal,copper tube length 38*41mm", "qty": 1, "usd": 3.43}, {"code": "802006-0204", "name": "Pressure Sensor", "spec": "35CP02-03158020XS00F5H-ENV,0-20bar, cable 1.5 meter", "qty": 1, "usd": 34.45}, {"code": "801012-0001", "name": "Needle valve", "spec": "φ6.35*40,KAE KSE", "qty": 1, "usd": 1.73}, {"code": "801012-0002", "name": "Needle valve", "spec": "φ6.35*80,KAE KSE", "qty": 2, "usd": 1.87}, {"code": "802002-3266", "name": "Circuit board", "spec": "PW58381-CC1010B Frequency conversion triple supply controller", "qty": 1, "usd": 244}, {"code": "802003-2111", "name": "Controller panel", "spec": "PW58410-CC1247", "qty": 1, "usd": 125.6}, {"code": "802007-1116", "name": "Signal cable", "spec": "CCX330.45,XH-4Y white,length 500mm", "qty": 1, "usd": 1.04}, {"code": "802007-1143", "name": "Signal cable", "spec": "CCX330.64,XH-4Y white and SM-4Y black,length 400mm+300mm", "qty": 1, "usd": 1.04}, {"code": "802007-1144", "name": "Signal cable", "spec": "CCX306.07, SM-4A black/SM-4Y black，length 10000mm", "qty": 1, "usd": 5.2}, {"code": "802010-0211", "name": "Reactor", "spec": "R25027 I：25A L：2.7mH-90CM 12AWG cable-5.5-5round terminal", "qty": 1, "usd": 20.8}, {"code": "802004-2055", "name": "Temperature Sensor", "spec": "CC.T43(5K copper seal - PVC pipe 1000mm,  XH-2Y white cable, length 1200mm)", "qty": 3, "usd": 1.43}, {"code": "802004-2083", "name": "Temperature Sensor", "spec": "CC.T98(5K plastic seal - PVC pipe 950mm, XH-2Y white, length 1000mm)", "qty": 1, "usd": 1.43}, {"code": "802004-2093", "name": "Temperature Sensor", "spec": "CC.T186(5K copper seal - PVC pipe 1000mm, XH-2Y white, length 10000mm)", "qty": 1, "usd": 3.85}, {"code": "802004-2030", "name": "Temperature Sensor", "spec": "CC.T257（50K high temperature copper sealing tape XH-2Y, red wire length 1200mm）", "qty": 1, "usd": 2.08}, {"code": "802004-2027", "name": "Temperature Sensor", "spec": "CC.T245（5K copper sealing tape XH-2Y, black wire length 1500mm）", "qty": 2, "usd": 1.82}, {"code": "801001-0089", "name": "Compressor", "spec": "Highly/R290/Inverter", "qty": 1, "usd": 452}, {"code": "801015-0105", "name": "Circulation pump", "spec": "Shimge, APM25-9-130 PWM1/cable length 1.5m", "qty": 1, "usd": 145}, {"code": "802043-0305", "name": "Fan blade", "spec": "φ552*142, 3 blades, ASG20, blue", "qty": 1, "usd": 10.6}, {"code": "802042-1102", "name": "Motor", "spec": "RD150HA,150W, DC, 850rpm 8P 310V", "qty": 1, "usd": 64.2}, {"code": "801014-0309", "name": "Pressure gauge", "spec": "0-3.8,M4 thread", "qty": 1, "usd": 8.2}, {"code": "802039-0004", "name": "Flow switch", "spec": "WFS27020PF（30）plastic ，1/6 female thread，cable length 2 meters", "qty": 1, "usd": 18}]}, {"id": "RH050", "model": "RH050", "phase": "3F", "kw": 15, "bom": "CP-RW0400086", "variant": "RH050-PW15-A3,R290", "parts": [{"code": "801019-0118", "name": "Electronic expansion valve", "spec": "DPF(TS1)2.2C-34,Diameter φ7.94", "qty": 1, "usd": 16.5}, {"code": "802026-3358", "name": "Pressure Switch", "spec": "Low pressure switch, 0.05MPa(OFF)-0.15MPa(ON),1.5 meter cable with VH-2Y terminal, copper tube length 38*41mm", "qty": 1, "usd": 3.43}, {"code": "802026-1255", "name": "Pressure Switch", "spec": "High pressure switch, 2.6MPa(ON)-3.2MPa(OFF)1.5 meter cable with VH-2Y terminal,copper tube length 38*41mm", "qty": 1, "usd": 3.43}, {"code": "802006-0204", "name": "Pressure Sensor", "spec": "35CP02-03158020XS00F5H-ENV,0-20bar, cable 1.5 meter", "qty": 1, "usd": 34.45}, {"code": "801012-0001", "name": "Needle valve", "spec": "φ6.35*40,KAE KSE", "qty": 1, "usd": 1.73}, {"code": "801012-0002", "name": "Needle valve", "spec": "φ6.35*80,KAE KSE", "qty": 2, "usd": 1.87}, {"code": "802002-3266", "name": "Circuit board", "spec": "PW58381-CC1010B Frequency conversion triple supply controller", "qty": 1, "usd": 244}, {"code": "802003-2111", "name": "Controller panel", "spec": "PW58410-CC1247", "qty": 1, "usd": 125.6}, {"code": "802007-1116", "name": "Signal cable", "spec": "CCX330.45,XH-4Y white,length 500mm", "qty": 1, "usd": 1.04}, {"code": "802007-1143", "name": "Signal cable", "spec": "CCX330.64,XH-4Y white and SM-4Y black,length 400mm+300mm", "qty": 1, "usd": 1.04}, {"code": "802007-1144", "name": "Signal cable", "spec": "CCX306.07, SM-4A black/SM-4Y black，length 10000mm", "qty": 1, "usd": 5.2}, {"code": "802010-0211", "name": "Reactor", "spec": "R25027 I：25A L：2.7mH-90CM 12AWG cable-5.5-5round terminal", "qty": 1, "usd": 20.8}, {"code": "802004-2055", "name": "Temperature Sensor", "spec": "CC.T43(5K copper seal - PVC pipe 1000mm,  XH-2Y white cable, length 1200mm)", "qty": 3, "usd": 1.43}, {"code": "802004-2083", "name": "Temperature Sensor", "spec": "CC.T98(5K plastic seal - PVC pipe 950mm, XH-2Y white, length 1000mm)", "qty": 1, "usd": 1.43}, {"code": "802004-2093", "name": "Temperature Sensor", "spec": "CC.T186(5K copper seal - PVC pipe 1000mm, XH-2Y white, length 10000mm)", "qty": 1, "usd": 3.85}, {"code": "802004-2030", "name": "Temperature Sensor", "spec": "CC.T257（50K high temperature copper sealing tape XH-2Y, red wire length 1200mm）", "qty": 1, "usd": 2.08}, {"code": "802004-2027", "name": "Temperature Sensor", "spec": "CC.T245（5K copper sealing tape XH-2Y, black wire length 1500mm）", "qty": 2, "usd": 1.82}, {"code": "801001-0089", "name": "Compressor", "spec": "Highly/R290/Inverter", "qty": 1, "usd": 452}, {"code": "801015-0105", "name": "Circulation pump", "spec": "Shimge, APM25-9-130 PWM1/cable length 1.5m", "qty": 1, "usd": 145}, {"code": "802043-0305", "name": "Fan blade", "spec": "φ552*142, 3 blades, ASG20, blue", "qty": 1, "usd": 10.6}, {"code": "802042-1102", "name": "Motor", "spec": "RD150HA,150W, DC, 850rpm 8P 310V", "qty": 1, "usd": 64.2}, {"code": "801014-0309", "name": "Pressure gauge", "spec": "0-3.8,M4 thread", "qty": 1, "usd": 8.2}, {"code": "802039-0004", "name": "Flow switch", "spec": "WFS27020PF（30）plastic ，1/6 female thread，cable length 2 meters", "qty": 1, "usd": 18}]}, {"id": "RH060", "model": "RH060", "phase": "3F", "kw": 22, "bom": "CP-RW0600061", "variant": "RH060-PW22-A3", "parts": [{"code": "801019-0120", "name": "Electronic expansion valve", "spec": "DPF(TS1)3.0C-01,Diameter φ7.94", "qty": 1, "usd": 21.4}, {"code": "802026-3354", "name": "Pressure Switch", "spec": "Low pressure switch, 0.05MPa(OFF)-0.15MPa(ON),1.5 meter cable with VH-2Y terminal, copper tube length 38*41mm", "qty": 1, "usd": 3.43}, {"code": "802026-1252", "name": "Pressure Switch", "spec": "High pressure switch, 2.6MPa(ON)-3.2MPa(OFF)1.5 meter cable with VH-2Y terminal,copper tube length 38*41mm", "qty": 1, "usd": 3.43}, {"code": "802006-0204", "name": "Pressure Sensor", "spec": "35CP02-03158020XS00F5H-ENV,0-20bar, cable 1.5 meter", "qty": 1, "usd": 34.45}, {"code": "801012-0002", "name": "Needle valve", "spec": "φ6.35*80,KAE KSE", "qty": 3, "usd": 1.87}, {"code": "801023-0051", "name": "Non-return valve", "spec": "For fluorine, V-6 diaphragm type φ9.52 inlet with filter", "qty": 1, "usd": 8.45}, {"code": "802002-3007", "name": "Circuit board", "spec": "PW58338-T12A02 Driver module 6.5KW inverter module", "qty": 1, "usd": 365.8}, {"code": "802002-3264", "name": "Circuit board", "spec": "PW58382-CC902 for circulation pump", "qty": 1, "usd": 52}, {"code": "802003-2111", "name": "Controller panel", "spec": "PW58410-CC1247", "qty": 1, "usd": 105.4}, {"code": "802010-0210", "name": "Reactor", "spec": "R20035(AL)-90CM12AWG cable-5.5-5round terminal", "qty": 1, "usd": 19.1}, {"code": "802007-1143", "name": "Signal cable", "spec": "CCX330.64（XH-4Y white,SM-4Y black,length 400mm+300mm）", "qty": 1, "usd": 1.04}, {"code": "802007-1144", "name": "Signal cable", "spec": "CCX306.07（SM-4A black/SM-4Y black, length 10000mm)", "qty": 1, "usd": 5.2}, {"code": "802007-1120", "name": "Signal cable", "spec": "CCX327.18(XH-3Y white, length 1500mm)", "qty": 1, "usd": 1.04}, {"code": "802007-1116", "name": "Signal cable", "spec": "CCX330.45（XH-4Y white, length 500mm）", "qty": 1, "usd": 1.04}, {"code": "802004-2080", "name": "Temperature Sensor", "spec": "CC.T94(5K copper seal - PVC pipe 950mm,XH-2Y white cable, length 1000mm)", "qty": 2, "usd": 1.43}, {"code": "802004-2057", "name": "Temperature Sensor", "spec": "CC.T45(5K plastic seal - PVC pipe 750mm,XH-2Y white, length 800mm)", "qty": 1, "usd": 1.43}, {"code": "802004-2033", "name": "Temperature Sensor", "spec": "CC.T286(50K high temperature copper sealing tape XH-2Y red, length 1500mm)", "qty": 1, "usd": 2.08}, {"code": "802004-2093", "name": "Temperature Sensor", "spec": "CC.T186(5K copper seal - PVC pipe 1000mm, XH-2Y white, length 10000mm)", "qty": 1, "usd": 3.82}, {"code": "802004-2027", "name": "Temperature Sensor", "spec": "CC.T245（5K copper sealing tape XH-2Y, black wire length 1500mm）", "qty": 3, "usd": 1.82}, {"code": "801001-0093", "name": "Compressor", "spec": "Highly/R290/Inverter", "qty": 1, "usd": 810}, {"code": "802039-0004", "name": "Flow switch", "spec": "WFS27020PF（30）plastic ，1/6 female thread，cable length 2 meters", "qty": 1, "usd": 18.1}, {"code": "801014-0309", "name": "Pressure gauge", "spec": "0-3.8,M4 thread", "qty": 1, "usd": 8.2}, {"code": "802042-1102", "name": "Motor", "spec": "RD150HA,150W, DC, 850rpm 8P 310V", "qty": 2, "usd": 64.2}, {"code": "802043-0305", "name": "Fan blade", "spec": "φ552*142, 3 blades, ASG20, blue", "qty": 2, "usd": 10.6}, {"code": "801015-0104", "name": "Circulation pump", "spec": "APF25-12-130E FPWM1，cable length 1.6m", "qty": 1, "usd": 223.6}]}]};
+const DEFAULT_RATE = 21.741, DEFAULT_DUTY = 2.5, DEFAULT_VAT = 21;
+const CAT = {chl:"Chladivový okruh", ele:"Elektronika a ovládání", cid:"Teplotní čidla", hyd:"Hydraulika", ven:"Ventilátor"};
+const ORDER = ["chl","ele","hyd","ven","cid"];
+function cz(p){
+  const s = p.spec.toLowerCase();
+  switch(p.name){
+    case "Compressor": return ["Kompresor (inverter, R290)","chl"];
+    case "Electronic expansion valve": return ["Elektronický expanzní ventil","chl"];
+    case "Pressure Switch": return [s.startsWith("low") ? "Nízkotlaký presostat" : "Vysokotlaký presostat","chl"];
+    case "Pressure Sensor": return ["Snímač tlaku 0–20 bar","chl"];
+    case "Needle valve": return ["Servisní ventilek (jehlový)","chl"];
+    case "Non-return valve": return ["Zpětný ventil chladiva","chl"];
+    case "Circuit board":
+      if (s.includes("driver")) return ["Modul měniče (driver)","ele"];
+      if (s.includes("pump")) return ["Deska oběhového čerpadla","ele"];
+      if (s.includes("filter")) return ["Filtrační deska (EMC)","ele"];
+      return ["Hlavní řídicí deska s měničem","ele"];
+    case "Controller panel": return ["Ovládací panel (displej)","ele"];
+    case "Reactor": return ["Tlumivka (PFC)","ele"];
+    case "Signal cable": return ["Signální kabel","ele"];
+    case "Temperature Sensor": return ["Teplotní čidlo " + (p.spec.match(/CC\.T\d+/)||[""])[0],"cid"];
+    case "Circulation pump": return ["Oběhové čerpadlo","hyd"];
+    case "Flow switch": return ["Průtokový spínač","hyd"];
+    case "Pressure gauge": return ["Manometr","hyd"];
+    case "Motor": return ["Motor ventilátoru (DC)","ven"];
+    case "Fan blade": return ["Vrtule ventilátoru","ven"];
+  }
+  return [p.name,"ele"];
+}
+DATA.models.forEach(m => m.parts.forEach(p => { const [n,c] = cz(p); p.cz = n; p.cat = c; p.q = p.qty ?? 1; p.noQty = p.qty == null; }));
+
+let duty = DEFAULT_DUTY, vat = DEFAULT_VAT;
+let rate = DEFAULT_RATE, current = "RH030", query = "";
+try { const r = parseFloat(localStorage.getItem("reo-rate")); if (r > 0) rate = r; const d = parseFloat(localStorage.getItem("reo-duty")); if (d >= 0) duty = d; const w = parseFloat(localStorage.getItem("reo-vat")); if (w >= 0) vat = w; const t = localStorage.getItem("reo-tab"); if (t) current = t; } catch(e){}
+if (location.hash && (DATA.models.some(m => m.id === location.hash.slice(1)) || location.hash === "#srovnani")) current = location.hash.slice(1);
+
+const fUSD = v => "$" + v.toLocaleString("en-US",{minimumFractionDigits:2, maximumFractionDigits:2});
+const fCZK = v => Math.round(v * rate).toLocaleString("cs-CZ") + " Kč";
+const full = v => v * rate * (1 + duty/100) * (1 + vat/100);
+const fFULL = v => Math.round(full(v)).toLocaleString("cs-CZ") + " Kč";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const hl = s => { s = esc(s); if (!query) return s; const q = query.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"); return s.replace(new RegExp(q,"gi"), m => "<mark>"+m+"</mark>"); };
+const label = m => m.model;
+const total = m => m.parts.reduce((a,p) => a + p.usd * p.q, 0);
+
+function tabs(){
+  const el = document.getElementById("tabs");
+  el.innerHTML = DATA.models.map(m => `<button class="tab" role="tab" data-id="${m.id}" aria-selected="${m.id===current}">${label(m)}<small>${m.kw} kW · ${m.phase}</small></button>`).join("")
+    + `<button class="tab cmp" role="tab" data-id="srovnani" aria-selected="${current==="srovnani"}">Srovnání modelů</button>`;
+  el.querySelectorAll(".tab").forEach(b => b.onclick = () => { current = b.dataset.id; try{localStorage.setItem("reo-tab",current)}catch(e){} render(); });
+}
+
+function modelView(m){
+  const parts = m.parts.filter(p => !query || [p.cz,p.name,p.code,p.spec].join(" ").toLowerCase().includes(query.toLowerCase()));
+  const comp = m.parts.find(p => p.name === "Compressor");
+  const t = total(m);
+  let rows = "";
+  for (const c of ORDER){
+    const ps = parts.filter(p => p.cat === c); if (!ps.length) continue;
+    const sub = ps.reduce((a,p) => a + p.usd*p.q, 0);
+    rows += `<tr class="grp"><td colspan="8">${CAT[c]}<span>${fUSD(sub)} · ${fFULL(sub)} s clem a DPH</span></td></tr>`;
+    rows += ps.map(p => `<tr>
+      <td><span class="pn">${hl(p.cz)}</span><span class="en">${hl(p.name)}</span></td>
+      <td class="code">${hl(p.code)}</td>
+      <td class="spec">${hl(p.spec)}</td>
+      <td class="n">${p.q}${p.noQty ? '<span class="flag" title="Počet v ceníku chybí">?</span>' : ""}</td>
+      <td class="n usd">${fUSD(p.usd)}</td>
+      <td class="n">${fCZK(p.usd)}</td>
+      <td class="n czk">${fFULL(p.usd)}</td>
+      <td class="n">${fFULL(p.usd*p.q)}</td></tr>`).join("");
+  }
+  return `
+  <div class="summary">
+    <div class="kpi"><div class="k">Jednotka</div><div class="v">${label(m)} · ${m.kw} kW</div><div class="v2">${esc(m.variant.replace(/-PW\d+/,""))} · BOM ${esc(m.bom)}</div></div>
+    <div class="kpi"><div class="k">Kompresor s clem a DPH</div><div class="v">${fFULL(comp.usd)}</div><div class="v2">${fUSD(comp.usd)} · ${fCZK(comp.usd)} bez cla a DPH</div></div>
+    <div class="kpi"><div class="k">Položek v ceníku</div><div class="v">${m.parts.length}</div><div class="v2">${m.parts.reduce((a,p)=>a+p.q,0)} ks celkem</div></div>
+    <div class="kpi"><div class="k">Sada dílů s clem a DPH</div><div class="v">${fFULL(t)}</div><div class="v2">${fUSD(t)} · ${fCZK(t)} bez cla a DPH</div></div>
+  </div>
+  <div class="tools"><input id="q" type="search" placeholder="Hledat díl, kód nebo specifikaci…" value="${esc(query)}" aria-label="Hledat"><span class="meta">${parts.length} z ${m.parts.length} položek</span></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Díl</th><th>Kód BOM</th><th>Specifikace</th><th class="n">Ks</th><th class="n">USD / ks</th><th class="n">Kč / ks<span class="en" style="text-transform:none;letter-spacing:0">bez cla a DPH</span></th><th class="n">Kč / ks<span class="en" style="text-transform:none;letter-spacing:0">s clem a DPH</span></th><th class="n">Celkem<span class="en" style="text-transform:none;letter-spacing:0">s clem a DPH</span></th></tr></thead>
+    <tbody>${rows || '<tr><td colspan="8" class="empty">Nic nenalezeno — zkuste jiný výraz.</td></tr>'}</tbody>
+    ${query ? "" : `<tfoot><tr><td colspan="4">Celkem za jednotku (cena × ks)</td><td class="n usd">${fUSD(t)}</td><td class="n">${fCZK(t)}</td><td></td><td class="n">${fFULL(t)}</td></tr></tfoot>`}
+  </table></div>`;
+}
+
+function cmpView(){
+  const groups = [
+    ["Kompresor", p => p.name === "Compressor"],
+    ["Hlavní deska / modul měniče", p => p.name === "Circuit board" && !/pump|filter/i.test(p.spec)],
+    ["Ostatní desky (čerpadlo, filtr)", p => p.name === "Circuit board" && /pump|filter/i.test(p.spec)],
+    ["Ovládací panel (displej)", p => p.name === "Controller panel"],
+    ["Oběhové čerpadlo", p => p.name === "Circulation pump"],
+    ["Elektronický expanzní ventil", p => p.name === "Electronic expansion valve"],
+    ["Ventilátor (motor + vrtule)", p => p.cat === "ven"],
+    ["Snímač tlaku + presostaty", p => /Pressure (Sensor|Switch)/.test(p.name)],
+    ["Teplotní čidla", p => p.cat === "cid"],
+    ["Ostatní (kabely, tlumivka, ventilky, spínač průtoku, manometr)", null],
+  ];
+  const used = new Set();
+  const rows = groups.map(([name, fn]) => {
+    const cells = DATA.models.map(m => {
+      const ps = m.parts.filter(p => fn ? fn(p) : !used.has(p));
+      if (fn) ps.forEach(p => used.add(p));
+      const v = ps.reduce((a,p) => a + p.usd*p.q, 0);
+      return v ? `<td class="n"><span class="czk">${fFULL(v)}</span><span class="en">${fUSD(v)} · ${fCZK(v)}</span></td>` : `<td class="n"><span class="en">—</span></td>`;
+    });
+    return `<tr><td class="pn">${name}</td>${cells.join("")}</tr>`;
+  });
+  return `<div class="tbl"><table>
+    <thead><tr><th>Skupina dílů (cena × ks, Kč s clem a DPH)</th>${DATA.models.map(m => `<th class="n">${label(m)}<span class="en" style="text-transform:none;letter-spacing:0">${m.kw} kW · ${m.phase}</span></th>`).join("")}</tr></thead>
+    <tbody>${rows.join("")}</tbody>
+    <tfoot><tr><td>Sada dílů celkem</td>${DATA.models.map(m => `<td class="n"><span class="czk">${fFULL(total(m))}</span><span class="en">${fUSD(total(m))} · ${fCZK(total(m))}</span></td>`).join("")}</tr></tfoot>
+  </table></div>`;
+}
+
+function render(){
+  tabs();
+  const v = document.getElementById("view");
+  v.innerHTML = current === "srovnani" ? cmpView() : modelView(DATA.models.find(m => m.id === current) || DATA.models[0]);
+  const q = document.getElementById("q");
+  if (q) q.oninput = e => { query = e.target.value; const pos = e.target.selectionStart; render(); const n = document.getElementById("q"); n.focus(); n.setSelectionRange(pos,pos); };
+}
+const ri = document.getElementById("rate");
+ri.value = rate;
+const di = document.getElementById("duty"), vi = document.getElementById("vat");
+di.value = duty; vi.value = vat;
+di.oninput = () => { const d = parseFloat(di.value); if (d >= 0){ duty = d; try{localStorage.setItem("reo-duty",d)}catch(e){} render(); } };
+vi.oninput = () => { const w = parseFloat(vi.value); if (w >= 0){ vat = w; try{localStorage.setItem("reo-vat",w)}catch(e){} render(); } };
+ri.oninput = () => { const r = parseFloat(ri.value); if (r > 0){ rate = r; try{localStorage.setItem("reo-rate",r)}catch(e){} render(); } };
+document.getElementById("rateReset").onclick = () => { rate = DEFAULT_RATE; duty = DEFAULT_DUTY; vat = DEFAULT_VAT; ri.value = rate; di.value = duty; vi.value = vat; try{["reo-rate","reo-duty","reo-vat"].forEach(k => localStorage.removeItem(k))}catch(e){} render(); };
+render();
+</script>

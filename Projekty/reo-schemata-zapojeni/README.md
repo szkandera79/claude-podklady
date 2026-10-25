@@ -5,10 +5,10 @@ seznamem součástí a krátkým „jak to funguje“. Značka REO HEATING (logo
 
 | Soubor | Obsah |
 |---|---|
-| `schema-varianta-1.svg` / `.png` | **Varianta 1** — pouze vytápění s akumulační nádrží; sekundární čerpadlo za AKU spíná bezdrátový termostat |
+| `schema-varianta-1.svg` / `.png` | **Varianta 1** (REO RH030–RH060) — pouze vytápění s akumulační nádrží; sekundární čerpadlo za AKU spíná bezdrátový termostat |
 
-Varianta 1 obsahuje: uzavírací ventily u venkovní jednotky (výstup i vratka), protizámrazový ventil na vratce,
-separátor vzduchu a nečistot s odvzdušňovacím a pojistným ventilem na výstupu, AKU, expanzní nádobu,
+Varianta 1 obsahuje: uzavírací ventily u venkovní jednotky (výstup i vratka), protizámrazový ventil Caleffi na vratce,
+separátor s odvzdušňovacím a pojistným ventilem venku hned za jednotkou (bezpečný únik vzduchu i případně uniklého R290), AKU, expanzní nádobu,
 sekundární čerpadlo s uzávěry, přijímač (relé) + bezdrátový termostat, čidlo AKU → řízení TČ.
 
 ## Build

@@ -165,7 +165,7 @@ R(0, 0, W, H, fill="#fff", stroke=None)
 logo(36, 22, 190)
 T(256, 62, "Schéma zapojení tepelného čerpadla", "ttl")
 T(256, 92, "Varianta 1 — pouze vytápění s akumulační nádrží", "sub")
-T(W - 36, 58, "REO-SCH-V1", "zone", "end")
+T(W - 36, 58, "REO-SCH-V1 · RH030–RH060", "zone", "end")
 T(W - 36, 78, "rev. 0 · 10/2026", "tx", "end")
 add(f'<line x1="30" y1="118" x2="{W - 30}" y2="118" stroke="{GRN}" stroke-width="3"/>')
 
@@ -179,6 +179,14 @@ T(48, ZT + 26, "VENKU", "zone")
 T(440, ZT + 26, "TECHNICKÁ MÍSTNOST", "zone")
 T(1000, ZT + 26, "OBYTNÉ PROSTORY", "zone")
 T(424, ZB - 12, "obvodová zeď", "tx")
+# varování R290 ve venkovní zóně
+R(46, 540, 358, 92, fill="#FFF4DA", stroke="#E3A71B", sw=2, rx=8)
+add(f'<path d="M66,560 L80,584 L52,584 Z" fill="#E3A71B"/>')
+T(66, 581, "!", "num", "middle")
+T(92, 565, "R290 je hořlavý plyn", "lab")
+T(92, 584, "Separátor (4) patří VENKU hned za jednotku —", "tx")
+T(92, 600, "vzduch i případně uniklé chladivo musí odejít", "tx")
+T(92, 616, "do volného prostoru, nikdy ne do domu.", "tx")
 
 # ---------------------------------------------------------------- potrubí
 FY, RY = 300, 390            # výstup / vratka u TČ
@@ -198,14 +206,14 @@ P(f"M1230,{TIN + 70} L1280,{TIN + 70} M1230,486 L1280,486", BLUE)
 P(f"M1280,{TIN + 70} L1280,580 L820,580 L820,{TOUT} L{TX + TW},{TOUT}", BLUE)
 
 # šipky směru
-arrow(385, FY, 0, RED); arrow(470, RY, 180, BLUE)
+arrow(510, FY, 0, RED); arrow(470, RY, 180, BLUE)
 arrow(990, TIN, 0, RED); arrow(1000, 580, 180, BLUE)
 
 # ---------------------------------------------------------------- prvky
 heat_pump(60, 255, h=200)
-valve(290, FY); valve(290, RY)                     # 2 – uzávěry u venkovní jednotky
+valve(372, FY); valve(290, RY)                     # 2 – uzávěry u venkovní jednotky
 antifreeze(360, RY)                                 # 3 – protizámrazový ventil na vratce
-separator(480, FY)                                  # 4 – separátor + odvzdušnění + pojistný v.
+separator(298, FY)                                  # 4 – separátor venku hned za jednotkou (vzduch + R290)
 tank(TX, TY, TW, TH)
 exp_vessel(590, 605)
 valve(830, TIN); pump(885, TIN); valve(940, TIN)    # 7 – sekundární čerpadlo
@@ -226,10 +234,10 @@ P("M975,168 L1206,208", YEL, 1.6, dash="2 7")
 T(1100, 210, "bezdrátový signál", "tx", "middle")
 
 # ---------------------------------------------------------------- čísla + krátké popisky
-num(155, 232, 1);  T(176, 237, "Tepelné čerpadlo", "lab")
-num(290, 345, 2)
-num(326, 422, 3)
-num(480, 218, 4)
+num(80, 232, 1);  T(101, 237, "REO RH030–RH060", "lab")
+num(372, 340, 2); num(290, 428, 2)
+num(396, 428, 3)
+num(298, 212, 4)
 num(TX + TW / 2, 202, 5)
 num(548, 612, 6)
 num(885, 312, 7)
@@ -244,10 +252,10 @@ BY = 680
 R(30, BY, 660, 290, fill="#fff", stroke="#DDE3E6", sw=1.5, rx=10)
 T(52, BY + 32, "SOUČÁSTI", "hd")
 parts = [
-    (1, "Tepelné čerpadlo REO HEATING", "venkovní jednotka (monoblok)"),
+    (1, "Tepelné čerpadlo REO RH030–RH060", "venkovní jednotka (monoblok), chladivo R290"),
     (2, "Uzavírací ventily", "u venkovní jednotky na výstupu i vratce"),
-    (3, "Protizámrazový ventil", "na vratce, venku — při výpadku proudu vypustí vodu"),
-    (4, "Separátor vzduchu a nečistot", "s odvzdušňovacím a pojistným ventilem, na výstupu"),
+    (3, "Protizámrazový ventil Caleffi", "na vratce, venku — při mrazu a výpadku vypustí vodu"),
+    (4, "Separátor s odvzdušněním a poj. ventilem", "venku hned za jednotkou — únik vzduchu i R290"),
     (5, "Akumulační nádrž (AKU)", "odděluje okruh TČ a okruh topení"),
     (6, "Expanzní nádoba", "vyrovnává roztažnost vody"),
     (7, "Sekundární oběhové čerpadlo", "s uzávěry, žene vodu z AKU do topení"),
@@ -287,7 +295,7 @@ T(732, BY + 186, "TIPY PRO MONTÁŽ", "hd")
 tips = [
     "• Uzávěry (2) dejte co nejblíž venkovní jednotce — kvůli servisu.",
     "• Protizámrazový ventil (3) patří venku na vratku, výpustí dolů.",
-    "• Separátor (4) osaďte svisle; odvzdušňovací ventil nahoru.",
+    "• Separátor (4) venku hned za jednotkou, svisle, odvzdušnění nahoru.",
     "• V místnosti s termostatem nechte hlavice radiátorů otevřené.",
 ]
 for i, s in enumerate(tips):
