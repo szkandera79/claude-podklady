@@ -4,7 +4,7 @@ Automaticky generované textové zrcadlo pracovních složek z Macu pro hlasové
 Obsahuje jen texty; z PDF, Wordu, Excelu a PowerPointu je vytažený text do souborů `*.txt`.
 Fotky, videa a tajné údaje se nezrcadlí. **Needitovat ručně** — přepíše se při další synchronizaci.
 
-Poslední synchronizace: 25. 10. 2026 15:08
+Poslední synchronizace: 25. 10. 2026 15:26
 
 ## Složky
 
