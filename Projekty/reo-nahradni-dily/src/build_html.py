@@ -135,11 +135,10 @@ footer{margin-top:28px;color:var(--muted);font-size:12.5px;display:flex;flex-wra
 <section id="view"></section>
 
 <div class="notes">
-  <div class="note"><b>RH050 ověřit.</b> List „050 3 phase“ má stejný kusovník i BOM kód (CP-RW0400086) jako RH040 — včetně menšího ventilátoru. Nejspíš kopie listu; ceny ověřit u dodavatele.</div>
   <div class="note info"><b>Ceny</b> jsou nákupní v USD za kus. Kč s clem a DPH = USD × kurz × (1 + clo) × (1 + DPH); DPH se počítá z ceny včetně cla. Doprava není zahrnuta. „Celkem“ = cena × počet kusů v jednotce.</div>
   <div class="note"><b>Clo 2,5 % je výchozí odhad.</b> Skutečná sazba se liší podle HS kódu dílu (kompresor, desky, čerpadlo…); upravte ji v hlavičce.</div>
 </div>
-<footer><span>Zdroj: Spare Part List.xlsx (REO / PW R290) · interní podklad, nešířit zákazníkům</span><span>REO HEATING · 10/2026</span></footer>
+<footer><span>Zdroj: Spare Part List – revised (PDF, 10/2026) · interní podklad, nešířit zákazníkům</span><span>REO HEATING · 10/2026</span></footer>
 </div>
 
 <script>
@@ -160,9 +159,11 @@ function cz(p){
       if (s.includes("driver")) return ["Modul měniče (driver)","ele"];
       if (s.includes("pump")) return ["Deska oběhového čerpadla","ele"];
       if (s.includes("filter")) return ["Filtrační deska (EMC)","ele"];
+      if (s.includes("detection")) return ["Deska měření proudu","ele"];
       return ["Hlavní řídicí deska s měničem","ele"];
     case "Controller panel": return ["Ovládací panel (displej)","ele"];
     case "Reactor": return ["Tlumivka (PFC)","ele"];
+    case "Coil": return [s.includes("dc12v") ? "Cívka expanzního ventilu (12 V DC)" : "Cívka 4cestného ventilu (230 V)","chl"];
     case "Signal cable": return ["Signální kabel","ele"];
     case "Temperature Sensor": return ["Teplotní čidlo " + (p.spec.match(/CC\.T\d+/)||[""])[0],"cid"];
     case "Circulation pump": return ["Oběhové čerpadlo","hyd"];
@@ -233,15 +234,15 @@ function modelView(m){
 function cmpView(){
   const groups = [
     ["Kompresor", p => p.name === "Compressor"],
-    ["Hlavní deska / modul měniče", p => p.name === "Circuit board" && !/pump|filter/i.test(p.spec)],
-    ["Ostatní desky (čerpadlo, filtr)", p => p.name === "Circuit board" && /pump|filter/i.test(p.spec)],
+    ["Hlavní deska / modul měniče", p => p.name === "Circuit board" && !/pump|filter|detection/i.test(p.spec)],
+    ["Ostatní desky (čerpadlo, filtr, měření)", p => p.name === "Circuit board" && /pump|filter|detection/i.test(p.spec)],
     ["Ovládací panel (displej)", p => p.name === "Controller panel"],
     ["Oběhové čerpadlo", p => p.name === "Circulation pump"],
     ["Elektronický expanzní ventil", p => p.name === "Electronic expansion valve"],
     ["Ventilátor (motor + vrtule)", p => p.cat === "ven"],
     ["Snímač tlaku + presostaty", p => /Pressure (Sensor|Switch)/.test(p.name)],
     ["Teplotní čidla", p => p.cat === "cid"],
-    ["Ostatní (kabely, tlumivka, ventilky, spínač průtoku, manometr)", null],
+    ["Ostatní (kabely, tlumivka, ventilky, cívky, spínač průtoku, manometr)", null],
   ];
   const used = new Set();
   const rows = groups.map(([name, fn]) => {

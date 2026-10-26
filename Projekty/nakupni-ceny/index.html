@@ -1,0 +1,258 @@
+<title>Nákupní ceny REO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDF1EC; --surface:#FFFFFF; --surface-2:#F5F8F4; --ink:#16201C; --muted:#5A675F; --line:#D7DFD6;
+  --accent:#1E6B45; --accent-ink:#FFFFFF; --accent-soft:#E2F0E6;
+  --fakt:#8A5A12; --fakt-bg:#FBF1DC; --shadow:0 1px 2px rgba(22,32,28,.07), 0 6px 20px rgba(22,32,28,.07);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0F1512; --surface:#18201B; --surface-2:#1D2721; --ink:#E4EBE5; --muted:#97A59C; --line:#29352D;
+  --accent:#63BA86; --accent-ink:#0C1810; --accent-soft:#1D3225;
+  --fakt:#D9A441; --fakt-bg:#2C2416; --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.45);
+}}
+:root[data-theme="dark"]{
+  --bg:#0F1512; --surface:#18201B; --surface-2:#1D2721; --ink:#E4EBE5; --muted:#97A59C; --line:#29352D;
+  --accent:#63BA86; --accent-ink:#0C1810; --accent-soft:#1D3225;
+  --fakt:#D9A441; --fakt-bg:#2C2416; --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.45);
+}
+html,body{ background:var(--bg); }
+body{ color:var(--ink); font-family:Inter,-apple-system,"Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.5; }
+.wrap{ max-width:1120px; margin:0 auto; padding:26px 16px 56px; display:flex; flex-direction:column; gap:18px; }
+h1{ font-family:Poppins,Inter,sans-serif; font-weight:600; font-size:clamp(21px,3vw,28px); margin:0; text-wrap:balance; }
+h2{ font-family:Poppins,Inter,sans-serif; font-weight:600; font-size:18px; margin:10px 0 0; }
+h2 small{ font-family:Inter,sans-serif; font-weight:500; font-size:13px; color:var(--muted); margin-left:9px; }
+.eyebrow{ font-size:11.5px; font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--accent); }
+.lede{ margin:5px 0 0; color:var(--muted); max-width:70ch; font-size:14px; }
+
+.fx{ display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; background:var(--surface);
+     border:1px solid var(--line); border-radius:11px; padding:12px 14px; box-shadow:var(--shadow); }
+.fx label{ font-size:13.5px; color:var(--muted); display:inline-flex; align-items:center; gap:7px; }
+.fx input{ width:86px; font:inherit; font-variant-numeric:tabular-nums; padding:6px 9px; border-radius:8px;
+           border:1px solid var(--line); background:var(--surface-2); color:var(--ink); }
+.fx input:focus-visible{ outline:2px solid var(--accent); outline-offset:1px; }
+.fx .src{ font-size:12.5px; color:var(--muted); }
+.fx .grow{ flex:1; }
+.btn{ appearance:none; font:inherit; font-weight:600; font-size:13.5px; cursor:pointer; border-radius:9px;
+      padding:8px 14px; border:1px solid var(--accent); background:transparent; color:var(--accent); }
+.btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+
+section{ background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px 16px 16px;
+         box-shadow:var(--shadow); display:grid; gap:10px; }
+.tbl{ overflow-x:auto; }
+table{ width:100%; border-collapse:collapse; font-size:13.5px; font-variant-numeric:tabular-nums; min-width:520px; }
+th,td{ text-align:right; padding:7px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+th:first-child, td:first-child{ text-align:left; white-space:normal; min-width:170px; }
+thead th{ font-size:12px; color:var(--muted); font-weight:600; }
+tbody tr:last-child td{ border-bottom:none; }
+tbody tr:hover td{ background:var(--surface-2); }
+td.kc{ font-weight:600; }
+td.sub{ color:var(--muted); }
+td .kc2{ display:block; font-size:12px; font-weight:600; color:var(--muted); }
+tr.sum td{ border-top:2px solid var(--line); font-weight:700; }
+.tag{ display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px;
+      background:var(--fakt-bg); color:var(--fakt); margin-left:8px; }
+.tag.list{ background:var(--accent-soft); color:var(--accent); }
+.note{ font-size:12.8px; color:var(--muted); }
+.note b{ color:var(--ink); font-weight:600; }
+.foot{ color:var(--muted); font-size:12.5px; border-top:1px solid var(--line); padding-top:12px; }
+code{ font-size:12.5px; background:var(--surface-2); border:1px solid var(--line); padding:1px 6px; border-radius:5px; }
+</style>
+
+<div class="wrap">
+  <div>
+    <div class="eyebrow">Riva Trade · interní podklad</div>
+    <h1>Nákupní ceny — Power World a nádrže</h1>
+    <p class="lede">Co platíme výrobcům: skutečně fakturované ceny z objednávek a aktuální ceníky. Všechno bez DPH a bez dopravy a cla — ceny tepelných čerpadel jsou EXW Čína, nádrže FOB Guangzhou, sklad Frankfurt EXW Frankfurt.</p>
+  </div>
+
+  <div class="fx">
+    <label>1 USD = <input id="usd" type="number" step="0.001" min="1" value="21.741" aria-label="Kurz USD"> Kč</label>
+    <label>1 EUR = <input id="eur" type="number" step="0.001" min="1" value="24.335" aria-label="Kurz EUR"> Kč</label>
+    <span class="src">kurz ČNB 23. 10. 2026</span>
+    <span class="grow"></span>
+    <button class="btn" id="export" type="button" hidden>Stáhnout CSV</button>
+  </div>
+
+  <div id="sections"></div>
+
+  <div class="foot">Zdroje: faktury a proforma faktury Power World (<code>PW Obchodní/</code>), ceníky výrobce 10/2026 (<code>REO/PW Helios/</code>), proforma faktura na nádrže z 21. 4. 2026 (<code>Wok/</code>). Ceníky Power World jsou vázané na kurz USD/RMB 7 — při odchylce nad 1 % se ceny mění. Prodejní ceny a marže řeší <code>porovnani-x50-rh060/</code>.</div>
+</div>
+
+<script>
+const SECTIONS = [
+  {
+    h: 'Skutečně nakoupeno', sub: 'fakturované ceny za kus',
+    cols: ['Model', 'Datum', 'Ks', 'USD/ks', 'Kč/ks', 'Celkem USD'],
+    rows: [
+      ['RH030-PW8-A2',   '12. 9. 2025', 3, 1312, null, 3936, 'f'],
+      ['RH040-PW12-A3',  '12. 9. 2025', 3, 1171, null, 3512, 'f'],
+      ['RH050-PW15-A3',  '12. 9. 2025', 4, 1960, null, 7840, 'f'],
+      ['RH060-PW22-A3',  '12. 9. 2025', 2, 2398, null, 4796, 'f'],
+      ['RH150-PW50-A3 (RH X50)', '12. 9. 2025', 2, 4800, null, 9600, 'f'],
+      ['RH030-PW8-A2',   '20. 10. 2023', 5, 1312, null, 6560, 'f'],
+      ['RH040-PW12-A2',  '20. 10. 2023', 5, 1648, null, 8240, 'f'],
+      ['RH060-PW22-A3',  '20. 10. 2023', 4, 2398, null, 9592, 'f'],
+      ['Odvzdušňovací ventil', '20. 10. 2023', 40, 35, null, 1400, 'f'],
+    ],
+    note: 'Faktura z 12. 9. 2025 má u RH040 jednotkovou cenu 1 171 USD, protože ze tří kusů byly dva za 1 756 USD a třetí zdarma. Objednávka 2023 navíc obsahovala dopravu do Fo-šanu 300 USD.',
+  },
+  {
+    h: 'REO R290 Smart', sub: 'ceník 14. 10. 2026 · varianta s integrovaným hydroboxem',
+    cols: ['Model', 'Výkon A7/W35', '1F bez PV', '1F s PV', '3F bez PV', '3F s PV'],
+    usd: [2, 3, 4, 5],
+    rows: [
+      ['RH06', '6 kW',  1680, 1750, null, null, 'c'],
+      ['RH08', '8 kW',  1985, 2057, 2004, 2068, 'c'],
+      ['RH10', '10 kW', 2094, 2271, 2127, 2195, 'c'],
+      ['RH12', '12 kW', 2291, 2420, 2266, 2388, 'c'],
+      ['RH14', '14 kW', 2318, 2501, 2323, 2446, 'c'],
+      ['RH16', '16 kW', 2477, 2661, 2492, 2615, 'c'],
+    ],
+    note: 'Ceny v USD za kus. „s PV" = s MPPT měničem pro přímé napájení z fotovoltaiky. Prodáváme jen variantu s integrovaným hydroboxem; varianta bez něj je o 120–145 USD levnější. Koruny jsou pod cenou v dolarech.',
+    kc: true,
+  },
+  {
+    h: 'REO RHX Pro', sub: 'ceník 14. 10. 2026',
+    cols: ['Model', 'Výkon A7/W35', 'USD/ks', 'Kč/ks'],
+    rows: [
+      ['RHX20 Pro', '20 kW', 3350, null, 'c'],
+      ['RHX30 Pro', '30 kW', 4190, null, 'c'],
+    ],
+    note: 'Starší ceník uváděl 2 940 € a 3 680 € — nový ceník je v dolarech a o něco výš. Dosud nenakoupeno.',
+  },
+  {
+    h: 'REO R290 (Cleanlife)', sub: 'ceník 27. 9. 2026',
+    cols: ['Model', 'Fáze', 'S čerpadlem', 'Bez čerpadla', 'Kč/ks (s čerp.)'],
+    kcFrom: {col: 4, src: 2, cur: 'usd'},
+    rows: [
+      ['RH030 (PW030)', '1F', 1312, 1242, null, 'c'],
+      ['RH040 (PW040)', '1F', 1648, 1578, null, 'c'],
+      ['RH050 (PW050)', '1F', 2120, 2020, null, 'c'],
+      ['RH055 (PW055)', '1F', 2253, null, null, 'c'],
+      ['RH060 (PW060)', '1F', 2311, null, null, 'c'],
+      ['RH070 (PW070)', '1F', 2468, null, null, 'c'],
+      ['RH040 (PW040)', '3F', 1756, 1676, null, 'c'],
+      ['RH050 (PW050)', '3F', 2160, 2060, null, 'c'],
+      ['RH055 (PW055)', '3F', 2317, null, null, 'c'],
+      ['RH060 (PW060)', '3F', 2398, 2298, null, 'c'],
+      ['RH070 (PW070)', '3F', 2530, null, null, 'c'],
+    ],
+    note: 'Ceny v USD za kus. Hydroboxy zvlášť: REO-03H/S 406 USD (pro RH030/RH040 1F), REO-05H/S 409 USD (RH050/RH060 1F), REO-05H 438 USD (RH050/RH060 3F).',
+  },
+  {
+    h: 'Komerční jednotky', sub: 'ceník Power World',
+    cols: ['Model', 'Výkon A7/W35', 'USD/ks', 'Kč/ks'],
+    rows: [
+      ['RH X50 (PW150)', '49,3 kW', 4800, null, 'c'],
+      ['RH X100 (PW300)', '≈ 100 kW', 9500, null, 'c'],
+    ],
+    note: 'RH X50 odpovídá fakturované ceně z 9/2025. RH X100 zatím nenakoupeno.',
+  },
+  {
+    h: 'Nádrže', sub: 'proforma faktura 21. 4. 2026 · FOB Guangzhou',
+    cols: ['Položka', 'Objem', 'Ks', 'USD/ks', 'Kč/ks', 'Celkem USD'],
+    rows: [
+      ['Kombinovaná AKU + TUV (nerez 304 / duplex 2205)', '300 l (70 + 210)', 10, 450.50, null, 4505.00, 'f'],
+      ['Akumulační nádrž', '100 l', 10, 116.00, null, 1160.00, 'f'],
+      ['Akumulační nádrž', '200 l', 10, 188.70, null, 1887.00, 'f'],
+      ['Akumulační nádrž', '300 l', 10, 259.25, null, 2592.50, 'f'],
+      ['Akumulační nádrž', '500 l', 10, 345.10, null, 3451.00, 'f'],
+      ['Zásobník TUV, jeden výměník', '200 l', 10, 345.10, null, 3451.00, 'f'],
+      ['Zásobník TUV, jeden výměník', '300 l', 10, 473.03, null, 4730.25, 'f'],
+      ['Zásobník TUV, dva výměníky', '200 l', 10, 387.60, null, 3876.00, 'f'],
+      ['Zásobník TUV, dva výměníky', '300 l', 10, 536.78, null, 5367.75, 'f'],
+    ],
+    sum: ['Celkem (1× 40GP)', '', 90, null, null, 31020.50],
+    note: 'Všechny nádrže mají elektrickou patronu 3 kW a izolaci 50 mm. Platba 30 % záloha / 70 % před expedicí, dodání 40 dní od zálohy. Záruka 2 roky na nerez 304, 5 let na duplex 2205.',
+  },
+  {
+    h: 'Sklad Frankfurt', sub: 'ceník 4. 9. 2025 · EXW Frankfurt, v eurech',
+    cols: ['Model', 'Skladem', 'Stálý zákazník €', 'Nový zákazník €', 'Kč/ks (stálý)'],
+    eur: [2, 3], kcFrom: {col: 4, src: 2, cur: 'eur'},
+    rows: [
+      ['RH030 1F (PW030-DKZLRS-E/S)', '1 ks', 2276, 2845, null, 'c'],
+      ['RH050 1F (PW050-DKZLRS-E/S)', '1 ks', 2860, 3576, null, 'c'],
+      ['RH050 3F (PW050-DKZLRS-E)', '9 ks', 2898, 3622, null, 'c'],
+      ['RH055 1F (PW055-DKZLRS-E/S)', '2 ks', 3331, 4164, null, 'c'],
+      ['RH055 3F (PW055-DKZLRS-E)', '10 ks', 3404, 4255, null, 'c'],
+      ['RH060 3F (PW060-DKZLRS-E)', '1 ks', 3407, 4259, null, 'c'],
+      ['Hydrobox REO-05H (3F)', '6 ks', 922, 1153, null, 'c'],
+      ['Hydrobox REO-03H/S (1F)', '2 ks', 878, 1098, null, 'c'],
+      ['Hydrobox REO-05H/S (1F)', '3 ks', 883, 1103, null, 'c'],
+    ],
+    note: 'Evropský sklad je výrazně dražší než nákup z Číny (RH060 3F zde 3 407 € ≈ dvojnásobek tovární ceny), zato bez čekání na dodávku a bez cla. Pro doplnění jednoho kusu do rozjeté zakázky.',
+  },
+];
+
+const fmt = (v, d = 0) => v == null ? '—' : v.toLocaleString('cs-CZ', {minimumFractionDigits: d, maximumFractionDigits: d});
+const $ = id => document.getElementById(id);
+const rate = cur => Math.max(1, parseFloat($(cur).value) || 0);
+
+function render(){
+  $('sections').innerHTML = SECTIONS.map(s => {
+    const usdCols = s.usd || [], eurCols = s.eur || [];
+    const cell = (v, i, zdroj) => {
+      const head = s.cols[i] || '';
+      if (i === 0) return `<td>${v}${zdroj === 'f' && i === 0 ? '' : ''}</td>`;
+      if (typeof v !== 'number') return `<td class="sub">${v ?? '—'}</td>`;
+      if (/Kč/.test(head)) return `<td class="kc">${fmt(v)}</td>`;
+      const cena = fmt(v, Number.isInteger(v) ? 0 : 2);
+      // u ceníku s více cenovými sloupci rovnou i koruny, ať se nemusí dopočítávat
+      return s.kc && i >= 2 ? `<td>${cena}<span class="kc2">${fmt(Math.round(v * rate('usd')))} Kč</span></td>`
+                            : `<td>${cena}</td>`;
+    };
+    const body = s.rows.map(r => {
+      const zdroj = r[r.length - 1];
+      const cells = s.cols.map((c, i) => {
+        let v = r[i];
+        if (v == null && /Kč/.test(c)) {              // dopočet Kč z nejbližšího cizoměnového sloupce
+          const src = s.kcFrom ? r[s.kcFrom.src] : r.find((x, j) => j > 0 && typeof x === 'number' && /USD|€/.test(s.cols[j]));
+          const cur = s.kcFrom ? s.kcFrom.cur : (eurCols.length ? 'eur' : 'usd');
+          v = src == null ? null : Math.round(src * rate(cur));
+        }
+        return cell(v, i, zdroj);
+      }).join('');
+      return `<tr>${cells}</tr>`;
+    }).join('');
+    const sum = s.sum ? `<tr class="sum">${s.sum.map((v, i) => cell(v, i)).join('')}</tr>` : '';
+    const kcRada = '';
+    return `<section>
+      <h2>${s.h}<small>${s.sub}</small></h2>
+      <div class="tbl"><table>
+        <thead><tr>${s.cols.map(c => `<th>${c}</th>`).join('')}</tr></thead>
+        <tbody>${body}${sum}${kcRada}</tbody>
+      </table></div>
+      <p class="note">${s.note}</p>
+    </section>`;
+  }).join('');
+}
+
+$('usd').addEventListener('input', render);
+$('eur').addEventListener('input', render);
+render();
+
+// --- export do CSV
+let downloads = null;
+$('export').addEventListener('click', async () => {
+  const q = v => '"' + String(v ?? '').replace(/"/g, '""') + '"';
+  const lines = [];
+  SECTIONS.forEach(s => {
+    lines.push(q(s.h + ' — ' + s.sub));
+    lines.push(s.cols.map(q).join(';'));
+    s.rows.forEach(r => lines.push(s.cols.map((c, i) => q(r[i])).join(';')));
+    lines.push('');
+  });
+  lines.push(q('Kurz ČNB: 1 USD = ' + $('usd').value + ' Kč, 1 EUR = ' + $('eur').value + ' Kč'));
+  try {
+    await downloads.save({filename: 'nakupni-ceny-' + new Date().toISOString().slice(0, 10) + '.csv',
+                          data: '﻿' + lines.join('\n')});
+  } catch (e) { /* odmítnuto nebo nedostupné — tlačítko nic nehlásí */ }
+});
+(async () => {
+  downloads = window.claude && window.claude.use ? await window.claude.use('downloads') : null;
+  if (downloads) $('export').hidden = false;
+})();
+</script>
