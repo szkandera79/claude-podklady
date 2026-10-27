@@ -56,6 +56,8 @@ Ideální soustava pro tepelné čerpadlo vypadá takto:
 Taková soustava je jednoduchá, levná, nejlépe využívá nízkou teplotu topné vody – a **akumulační
 nádobu nepotřebuje**. Každý prvek navíc je jen další místo, kde se ztrácí teplota i peníze.
 
+![Schéma: tepelné čerpadlo napojené přímo na podlahové topení bez akumulační nádoby](obrazky/zapojeni-1-bez-nadoby.svg)
+
 ## Kdy akumulační nádobu potřebujete
 
 Nádobu doporučujeme zvážit, pokud platí alespoň jedno z následujícího:
@@ -81,6 +83,8 @@ takže jí protéká veškerá voda vracející se do tepelného čerpadla.
   zpátečce naopak zpomalí růst teploty vracející se vody – tepelné čerpadlo tak běží déle v kuse
   a dům mezitím normálně topí.
 
+![Schéma: akumulační nádoba zapojená sériově do zpátečky](obrazky/zapojeni-2-seriove-zpatecka.svg)
+
 ### 2. Paralelně, čtyřtrubkově – když se mění průtok
 
 Klasický **hydraulický oddělovač**. Tepelné čerpadlo má svůj okruh se stálým průtokem, dům svůj
@@ -92,11 +96,15 @@ zajištěný.
   do domu jde voda o **několik stupňů chladnější**. Tepelné čerpadlo to musí dohnat vyšší výstupní
   teplotou – a každý stupeň navíc mírně zhoršuje topný faktor.
 
+![Schéma: paralelní čtyřtrubkové zapojení akumulační nádoby jako hydraulického oddělovače](obrazky/zapojeni-3-paralelni-4trubkove.svg)
+
 ### 3. Paralelně, třítrubkově – méně známá, úspornější varianta
 
 Většina vody z tepelného čerpadla jde **přímo do soustavy** bez ztráty teploty. Do nádoby odtéká jen
 přebytek průtoku, který dům v danou chvíli nevyužije. V západní Evropě běžné řešení, u nás zatím
 méně známé. Výborně se hodí i tam, kde je nádoba větší a sbírá teplo z více zdrojů.
+
+![Schéma: paralelní třítrubkové zapojení akumulační nádoby](obrazky/zapojeni-4-paralelni-3trubkove.svg)
 
 | Zapojení | Řeší | Typický objem | Pozor na |
 |---|---|---|---|
