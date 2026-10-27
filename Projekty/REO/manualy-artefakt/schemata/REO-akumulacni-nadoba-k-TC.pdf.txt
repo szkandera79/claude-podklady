@@ -1,0 +1,179 @@
+[Text vytažený z REO-akumulacni-nadoba-k-TC.pdf]
+
+--- strana 1 ---
+PORA
+DNA
+REO HEATING
+Akumulační nádoba k tepelnému čerpadlu:
+kdy ji potřebujete a jak velkou zvolit
+Patří k tepelnému čerpadlu vždy akumulační nádoba?
+A čím víc litrů, tím líp?
+Ani jedno
+neplatí. Vysvětlíme, co tepelné čerpadlo od otopné soustavy potřebuje, kdy nádobu
+vynechat, jak ji zapojit a jak velká má být – s ohledem na jednotky REO HEATING.
+Akumulace pro tepelné čerpadlo není akumulace pro kotel na dřevo
+Kdo dřív topil kotlem na dřevo nebo uhlí, zná akumulační nádrže o objemu 500–1 000 litrů. Kotel v nich za
+pár hodin „nabije“ vodu na vysokou teplotu a dům z ní pak topí půl dne.
+U tepelného čerpadla je smysl nádoby jiný. Tepelné čerpadlo pracuje nejúsporněji tehdy, když ohřívá vodu
+jen na takovou teplotu, jakou dům právě potřebuje – často 30–40 °C u podlahového topení. Ohřívat
+velkou zásobu vody na vyšší teplotu „do foroty“ znamená horší topný faktor a vyšší spotřebu elektřiny.
+Akumulační nádoba u tepelného čerpadla proto bývá výrazně menší a neslouží jako velká zásobárna tepla,
+ale jako hydraulický pomocník.
+Starší velkou akumulační nádrž po kotli lze s tepelným čerpadlem často dál využít – rozhoduje ale správné
+zapojení. Poradíme, jak na to.
+Co tepelné čerpadlo od soustavy potřebuje
+Aby jednotka – ať už REO RH030–RH060, nebo REO R290 Smart – pracovala spolehlivě a úsporně,
+potřebuje od otopné soustavy dvě věci:
+1. Dostatečný průtok vody přes svůj výměník. Ten musí zůstat zachovaný i ve chvíli, kdy termostatické
+hlavice nebo zónové ventily v místnostech zavírají.
+2. Dostatečný objem vody v soustavě. Z dvou důvodů:
+delší pracovní cykly – kompresor se nemusí každých pár minut zapínat a vypínat, což prodlužuje
+jeho životnost a zlepšuje účinnost,
+odtávání – venkovní jednotka vzduch–voda v zimě namrzá a při odtávání si teplo bere z vody v
+soustavě. Když je vody málo, ochladí se topná voda citelně a v domě to poznáte.
+Soustavy navržené kdysi pro plynový nebo uhelný kotel tyto podmínky často nesplňují. Mají regulaci
+průtoku v každé místnosti, nebo naopak – po rekonstrukci – málo vody. Pozor i na „modernizaci“, při které
+se staré tlusté trubky nahradí tenkými: pro tepelné čerpadlo se tím objem vody zbytečně snižuje.
+--- strana 2 ---
+Kdy akumulační nádobu nepotřebujete
+Ideální soustava pro tepelné čerpadlo vypadá takto:
+velkoplošné vytápění – podlahové nebo stěnové,
+bez regulace průtoku – žádné termostatické hlavice, servopohony ani směšovací ventily v jednotlivých
+okruzích; teplotu v domě řídí ekvitermní regulace tepelného čerpadla,
+dostatek vody v systému díky dlouhým okruhům podlahovky.
+Taková soustava je jednoduchá, levná, nejlépe využívá nízkou teplotu topné vody – a akumulační nádobu
+nepotřebuje. Každý prvek navíc je jen další místo, kde se ztrácí teplota i peníze.
+Bez akumulační nádoby
+Ideální soustava: velkoplošné topení bez termostatů v místnostech
+plný průtok, dost vody v okruzích
+→
+nádoba není potřeba
+T epelné čerpadlo
+REO HEATING
+výstup – topná voda zpátečka
+Podlahové topení
+bez regulace průtoku
+Kdy akumulační nádobu potřebujete
+Nádobu doporučujeme zvážit, pokud platí alespoň jedno z následujícího:
+v místnostech jsou termostatické hlavice, zónové ventily nebo servopohony, které mohou průtok
+omezit nebo zastavit,
+soustava má malý objem vody (např. otopná tělesa s krátkými rozvody, malý byt, jeden okruh),
+na soustavu je napojen další zdroj tepla – krb s výměníkem, kotel, solární kolektory,
+chcete ukládat teplo z levnější elektřiny – nízký tarif nebo přebytky z fotovoltaiky (u REO R290 Smart,
+který umí brát energii přímo z panelů, to dává smysl zvlášť).
+Podle toho, který problém řešíte, se volí způsob zapojení.
+--- strana 3 ---
+Tři způsoby zapojení
+1. Sériově na zpátečce – když chybí objem vody
+Hodí se tam, kde je průtok v pořádku, ale soustava má málo vody. Nádoba se vřadí do zpátečky, takže jí
+protéká veškerá voda vracející se do tepelného čerpadla.
+Typická velikost: 50–100 litrů podle výkonu jednotky a objemu soustavy.
+Proč na zpátečce, a ne na výstupu? Nádoba na výstupu by zdržovala dodávku tepla do domu. Na
+zpátečce naopak zpomalí růst teploty vracející se vody – tepelné čerpadlo tak běží déle v kuse a dům
+mezitím normálně topí.
+Sériové zapojení na zpátečce
+Řeší malý objem vody v soustavě – průtokem prochází veškerá vratná voda
+Nádoba na zpátečce
+50–100 l
+T epelné čerpadlo
+REO HEATING
+výstup – topná voda zpátečka
+Podlahové topení
+bez regulace průtoku
+2. Paralelně, čtyřtrubkově – když se mění průtok
+Klasický hydraulický oddělovač. Tepelné čerpadlo má svůj okruh se stálým průtokem, dům svůj okruh s
+vlastním čerpadlem. Ať termostatické hlavice zavírají, jak chtějí, jednotka má průtok vždy zajištěný.
+Výhoda: nejrozšířenější a spolehlivé řešení, které funguje téměř s každou soustavou.
+Nevýhoda: v nádobě se teplá voda z tepelného čerpadla míchá s chladnější vratnou vodou, takže do
+domu jde voda o několik stupňů chladnější. Tepelné čerpadlo to musí dohnat vyšší výstupní teplotou –
+a každý stupeň navíc mírně zhoršuje topný faktor.
+--- strana 4 ---
+Paralelní zapojení
+–
+čtyřtrubkové
+Tepelné čerpadlo má stálý průtok, i když termostatické hlavice zavírají
+okruh TČ
+čerpadlo soustavy
+o pár
+°C
+chladnější
+100–200 l
+míšení
+T epelné čerpadlo
+REO HEATING
+4 hrdla – hydraulický oddělovač
+Otopná tělesa
+s termostatickými hlavicemi
+výstup – topná voda zpátečka oběhové čerpadlo
+3. Paralelně, třítrubkově – méně známá, úspornější varianta
+Většina vody z tepelného čerpadla jde přímo do soustavy bez ztráty teploty. Do nádoby odtéká jen
+přebytek průtoku, který dům v danou chvíli nevyužije. V západní Evropě běžné řešení, u nás zatím méně
+známé. Výborně se hodí i tam, kde je nádoba větší a sbírá teplo z více zdrojů.
+Paralelní zapojení
+–
+třítrubkové
+Bez ztráty teploty; nádoba přebírá jen průtok, který dům právě neodebere
+voda jde přímo do domu
+čerpadlo soustavy
+přebytek
+T epelné čerpadlo
+REO HEATING
+3 hrdla – nádoba bere jen nevyužitý průtok
+Otopná tělesa
+s termostatickými hlavicemi
+výstup – topná voda zpátečka oběhové čerpadlo
+--- strana 5 ---
+Zapojení Řeší Typický objem Pozor na
+Sériové na
+zpátečce
+Paralelní
+4trubkové
+Paralelní
+3trubkové
+malý objem vody proměnlivý průtok proměnlivý průtok, více
+zdrojů
+50–100 l 100–200 l nehodí se při regulaci průtoku v
+místnostech
+pokles teploty o pár °C → vyšší
+spotřeba
+100–200 l, s dalšími
+správný návrh hydrauliky
+zdroji i víc
+Jak velká má nádoba být?
+U samotného tepelného čerpadla vychází akumulační nádoba obvykle na zhruba 100–200 litrů. Konkrétní
+hodnotu vždy určujeme podle výkonu jednotky, objemu soustavy a doporučení v návodu k dané jednotce
+REO HEATING.
+Větší neznamená lepší. Předimenzovaná nádoba je v lepším případě zbytečná, v horším škodí:
+prodlužuje dobu ohřevu po startu i po odtávání,
+svádí k udržování vyšší teploty, než dům potřebuje,
+má vyšší tepelné ztráty – a tím snižuje účinnost celého systému.
+Nádrž o objemu 1 000 litrů a více má smysl jen tehdy, když do ní kromě tepelného čerpadla topí i další
+zdroj (krb, kotel, solár) – a ideálně v třítrubkovém zapojení. Pro samotné tepelné čerpadlo by takový objem
+nikdy nevyužil svůj potenciál.
+Velké „skladování“ tepla se u tepelného čerpadla vyplácí jen výjimečně – typicky když má smysl ohřát vodu
+v době levné elektřiny nebo z přebytků fotovoltaiky a využít ji později. I tehdy je dobré předem spočítat,
+zda se vyšší teplota a ztráty nádrže vyplatí.
+Jak to řešíme v REO HEATING
+Při návrhu soustavy s tepelným čerpadlem REO HEATING postupujeme vždy stejně: nejdřív se podíváme
+na otopnou soustavu (tělesa, nebo podlahovka, regulace v místnostech, objem vody, další zdroje) a teprve
+potom rozhodneme, zda nádobu doporučit, jak velkou a jak ji zapojit.
+Pokud nádoba potřeba je, nabízíme vlastní řadu nerezových nádrží:
+REO AN – akumulační nádrž bez výměníku, 30–500 l, pro hydraulické oddělení okruhů a zásobu tepla
+na odtávání,
+REO KN – kombinovaná nádrž 2 v 1, 200–500 l, akumulace i ohřev teplé vody v jednom tělese tam,
+kde je v technické místnosti málo místa,
+zásobníky teplé vody REO ZV / ZH / ZD s výměníky dimenzovanými pro tepelná čerpadla.
+Nádoby jsou z nerezové oceli (SUS304, SUS316L nebo duplex 2205) a s 50mm polyuretanovou izolací po
+celém obvodu. Připojovací rozměry lze upravit podle projektu.
+--- strana 6 ---
+Rychlá kontrola: potřebuji nádobu?
+Mám podlahové topení bez termostatů v místnostech → nejspíš ne.
+Mám termostatické hlavice nebo zónové ventily → ano, paralelní zapojení.
+Mám malou soustavu s málo vodou → ano, menší nádoba na zpátečce.
+Topím i krbem / kotlem / solárem → ano, větší nádoba, ideálně třítrubkově.
+Chci ukládat přebytky z FV nebo levný tarif → zvážit podle propočtu.
+Nevíte si rady se svou soustavou? Pošlete nám nezávaznou poptávku – technik REO HEATING
+posoudí vaši otopnou soustavu a navrhne, zda akumulační nádobu potřebujete, jak velkou a jak ji
+zapojit.
++420 774 872 467 · info@reoheating.cz · Showroom Smetanova 555, Třinec
+Údaje v článku jsou orientační; konkrétní řešení vždy závisí na posouzení dané otopné soustavy.

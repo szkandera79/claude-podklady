@@ -44,7 +44,7 @@ Postup (složka `cz/`, spouštět v ní):
 
 K revizi: kap. 1.2 bod 4 originálu tvrdí „žádné riziko výbuchu/požáru" — u R290 (propan) sporné, doporučuji
 v obou jazycích upravit; v originále je dvakrát kapitola 6.6 (Vzhled rozhraní / Sdílení zařízení).
-Artefakt s oběma verzemi: https://claude.ai/artifact/2DUqsPohBnVWECCKqTdYYu
+Artefakt s oběma verzemi: https://claude.ai/artifact/2DUqsPohBnVWECCKqTdYYu (lokální kopie stránky: `REO/manualy-artefakt/`)
 
 ## Prezentace — `prezentace/REO-R290-Smart_prezentace-CZ.pptx`
 Česká verze prezentace výrobce (`../Power World R290 Helios Series Introduction.pptx`, 50 snímků), přeznačená na REO HEATING.
