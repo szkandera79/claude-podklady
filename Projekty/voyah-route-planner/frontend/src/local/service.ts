@@ -83,6 +83,7 @@ export const DEFAULT_TARIFFS: Settings["tariffs"] = [
 DEFAULT_SETTINGS.tariffs = DEFAULT_TARIFFS;
 DEFAULT_SETTINGS.tariffs_version = TARIFFS_VERSION;
 DEFAULT_SETTINGS.planning.prices_without_vat = true;
+DEFAULT_SETTINGS.planning.tesla_ok = true;     // uživatel na Superchargerech běžně nabíjí
 
 function merged(s: Partial<Settings> | undefined): Settings {
   const d = structuredClone(DEFAULT_SETTINGS);
@@ -202,6 +203,8 @@ async function plan(req: PlanRequest, progress?: (m: string) => void): Promise<P
     progress?.("Nabíječky podél trasy…");
     const { stations, issues } = await stationsAlong(rr.points, +s.planning.corridor_km, keys.ocm, progress);
     notes.push(...issues);
+    if (s.planning.tesla_ok !== false)
+      for (const st of stations) if (st.operator === "Tesla") st.notes = st.notes.filter((n) => !n.startsWith("Tesla Supercharger"));
     if (!keys.ocm) notes.push("Klíč Open Charge Map není nastaven — nabíječky jen z OpenStreetMap.");
     progress?.("Optimalizuji zastávky…");
     const plans: Record<string, Plan> = {};

@@ -29,6 +29,15 @@ export function decodeSetup(s: string): ApiKeys | null {
   } catch { return null; }
 }
 
+/** Z naskenovaného textu (nastavovací odkaz) uloží klíče; vrací seznam uložených klíčů nebo null. */
+export function applySetupText(text: string): string[] | null {
+  const m = text.match(/setup=([A-Za-z0-9_-]+)/);
+  const k = m ? decodeSetup(m[1]) : null;
+  if (!k || (!k.ors && !k.ocm)) return null;
+  setKeys({ ...getKeys(), ...k });
+  return [k.ors ? "openrouteservice" : "", k.ocm ? "Open Charge Map" : ""].filter(Boolean);
+}
+
 /** Při startu: převezme klíče z #setup=… a adresu vyčistí. Vrací true, pokud se klíče uložily. */
 export function consumeSetupLink(): boolean {
   const m = location.hash.match(/setup=([A-Za-z0-9_-]+)/);

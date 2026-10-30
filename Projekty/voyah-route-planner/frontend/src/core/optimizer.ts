@@ -199,11 +199,10 @@ function reconstruct(nodes: Node[], arr: (Label | null)[][], dep: (Label | null)
   const usedIds = new Set(stops.map((x) => x.station.id));
   const detKm = nodes.filter((nd) => nd.station && usedIds.has(nd.station.id)).reduce((a, nd) => a + 2 * nd.detKm, 0);
   const warnings: string[] = [];
-  for (const st of stops) {
-    const s = st.station;
-    if (!s.isLiveStatus) warnings.push(`${s.name}: dostupnost neověřena (data ${s.dataSource || "bez zdroje"}${s.dataUpdated ? ", " + s.dataUpdated : ""}).`);
-    for (const note of s.notes) warnings.push(`${s.name}: ${note}`);
-  }
+  // jedno souhrnné upozornění místo opakování u každé zastávky
+  if (stops.some((st) => !st.station.isLiveStatus))
+    warnings.push("Obsazenost a aktuální funkčnost stanic nejsou známé (data OpenStreetMap / Open Charge Map, ne živý stav).");
+  for (const st of stops) for (const note of st.station.notes) warnings.push(`${st.station.name}: ${note}`);
   return { feasible: true, reason: "", stops, distanceKm: prof.totalKm - startKm + detKm,
            driveMin: final.time - chargeMin - overhead, chargeMin, stopOverheadMin: overhead, totalMin: final.time,
            costCzk: final.cost, arrivalSoc: soc, tripEnergyKwh: prof.energyBetween(startKm, prof.totalKm) * mult,

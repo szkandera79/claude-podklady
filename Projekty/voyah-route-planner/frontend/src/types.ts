@@ -43,7 +43,7 @@ export interface Settings {
   energy: Record<string, number>;
   planning: { reserve_station: number; reserve_destination: number; profile: string; conservative: boolean;
               stop_overhead_min: number; value_of_time_czk_h: number; min_station_kw: number;
-              only_preferred: boolean; corridor_km: number; default_price_kwh: number; prices_without_vat?: boolean };
+              only_preferred: boolean; corridor_km: number; default_price_kwh: number; prices_without_vat?: boolean; tesla_ok?: boolean };
   tariffs: Tariff[];
   tariffs_version?: number;
 }
