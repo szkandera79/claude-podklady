@@ -5,7 +5,7 @@ Cíl: minimální celkový čas cesty vč. nabíjení při bezpečné rezervě; 
 
 ## Stav
 - **Etapa 1–2 (analýza, návrh):** [ANALYZA.md](ANALYZA.md) — čeká na schválení, zatím se neprogramuje.
-- Otevřené dotazy na uživatele: ANALYZA.md, kap. 15.
+- Zodpovězeno 30. 10.: spotřeba, nabíjecí křivka (záznam PRE 22. 1. 2026), tarify, VPS schválen. Zbývající dotazy: ANALYZA.md, kap. 15.
 
 ## Zásady
 - Parametry vozu jsou výchozí předpoklady, ne ověřená data (EU spec. 106 kWh, DC 100 kW dle databází je odhad; uživatel pozoruje ~90 kW).

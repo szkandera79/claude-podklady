@@ -92,23 +92,42 @@ Přímé dlaždice tile.openstreetmap.org pro aplikace nepoužívat (zásady už
 | Parametr | Vaše hodnota | Zdroje | Výchozí v aplikaci |
 |---|---|---|---|
 | Baterie nominální | ~108 kWh | ⚠️ evropská specifikace uvádí **106 kWh** (EV Database, EVKX) | 106 kWh |
-| Využitelná kapacita | 100 kWh | ❓ výrobce neuvádí | 100 kWh (kalibruje se) |
-| Max. DC výkon | 89–90 kW (vaše zkušenost) | ⚠️ databáze uvádějí **100 kW**, ale jako odhad („Voyah has not released details") | **90 kW** — vaše pozorování má přednost |
+| Využitelná kapacita | 100 kWh | ✅ záznam PRE: ~1,01 kWh ze stojanu na 1 % SoC (viz 4.1) | 100 kWh (kalibruje se) |
+| Max. DC výkon | 89 kW v pásmu 10–80 % | ✅ záznam PRE: průměr 89,95 kW, rovná křivka 28→63 %; databáze uvádějí 100 kW jen jako odhad | **89 kW** |
 | Konektor DC | — | ✅ **CCS2** (EU), vlevo vzadu | CCS2 |
 | AC | — | ❓ 11 kW? ověřit v TP | — |
 
 **Nabíjecí křivka** se zadává jako tabulka bodů *(SoC %, max. výkon kW)* s lineární interpolací. Výchozí:
 
-| SoC | 0 | 10 | 50 | 80 | 85 | 90 | 95 | 100 |
-|---|---|---|---|---|---|---|---|---|
-| kW | 60 ❓ | 90 | 90 | 85 ❓ | 40 | 40 | 20 ❓ | 7 ❓ |
+| SoC | 0 | 10 | 80 | 82 | 90 | 95 | 100 |
+|---|---|---|---|---|---|---|---|
+| kW | 60 ❓ | 89 ✅ | 89 ✅ | 45 ❓ | 40 | 20 ❓ | 7 ❓ |
 
-Body s ❓ jsou dočasné předpoklady (je potřeba je změřit — viz kap. 11). Čas nabíjení:
+Pásmo 10–80 % = 89 kW (vaše zkušenost + záznam PRE). Body s ❓ jsou dočasné předpoklady — nejcennější další
+měření je **jedno nabíjení přes 80 % až k ~95 %** s fotkou displeje po každých ~5 %. Čas nabíjení:
 
 ```
 t = Σ přes kroky 1 % SoC:  ΔE / P(SoC)      kde ΔE = 1 % × využitelná kapacita / η_nabíjení
 P(SoC) = min( křivka_vozu(SoC) × k_teplota_baterie , výkon_stanice × k_sdílení )
 ```
+
+### 4.1 Změřeno: PRE 200 kW, 22. 1. 2026, venku 0 °C
+
+Zdroj: fotky ve složce `Voyah reklamace/PRE 200kw` (displej stojanu a přístrojový štít).
+
+| Veličina | Hodnota |
+|---|---|
+| SoC | 28 % → 63 % (35 bodů) |
+| Dobito ze stojanu | 35,4 kWh za 23:33 min |
+| Průměrný výkon | 89,95 kW (380 V, 239 A); graf prakticky rovný 89–92 kW |
+| Štít vozu během nabíjení | 49 % → 87 kW · 59 % → 91 kW |
+| Energie na 1 % SoC | ≈ 1,01 kWh ze stojanu → ~96 kWh do baterie při η 0,95 (souhlasí s ~100 kWh využitelné, nejistota ±3 % kvůli zaokrouhlení SoC) |
+| Teplota | 0 °C venku, žádný pokles výkonu → baterie byla po jízdě zahřátá |
+
+Vedlejší údaj (jen orientačně, je to odhad palubního počítače, ne měření): dojezd na štítu 139 km při 49 % a
+174 km při 59 % → vůz v tu dobu počítal se zimní spotřebou kolem 34–35 kWh/100 km.
+
+### 4.2 Parametry výpočtu
 
 - `η_nabíjení` (ztráty mezi stojanem a baterií) — výchozí 0,95, kvůli ceně (platí se kWh ze stojanu).
 - `k_teplota_baterie` — v zimě po příjezdu se studenou baterií < 1 (výchozí: lineárně 0,6 při −10 °C → 1,0 při +15 °C,
@@ -138,10 +157,11 @@ E_úsek = [ c_jízda(v, třída) × d                      ← odpor vzduchu + v
 Fyzikálně spotřeba roste s v² (aerodynamika). Model `c(v) = a + b·v²` [kWh/100 km] se nafituje na vaše letní hodnoty:
 
 - 17,5 kWh/100 km při 90 km/h
-- 25 kWh/100 km při dálniční rychlosti — **❓ potřebuji vědět, při jaké skutečné rychlosti** (předpoklad 130 km/h)
+- 25 kWh/100 km na dálnici při 120–130 km/h (vaše hodnota; pro fit použit střed 125 km/h)
 
-S předpokladem 130 km/h vyjde `a ≈ 10,6`, `b ≈ 0,00085` → 50 km/h ≈ 12,7; 110 km/h ≈ 20,9; 130 km/h ≈ 25,0.
-Jsou to **odvozené odhady**, ne měření; ve městě se navíc přičítá složka za zastavování (konfigurovatelná).
+Vyjde `a ≈ 9,4`, `b ≈ 0,00100` → 50 km/h ≈ 11,9; 110 km/h ≈ 21,5; 120 km/h ≈ 23,8; 130 km/h ≈ 26,3 kWh/100 km.
+Jsou to **odvozené odhady** z dvou bodů, ne měření; ve městě se navíc přičítá složka za zastavování (konfigurovatelná).
+Rozdíl 110 vs. 130 km/h ≈ 4,8 kWh/100 km — přesně to optimalizátor porovná s časem navíc u nabíječky.
 
 **Vítr:** v aerodynamickém členu se použije rychlost vůči vzduchu `v + v_protivítr` (průmět větru do směru jízdy).
 
@@ -196,10 +216,22 @@ horní hranici pásma. Dokud není kalibrace, UI ukazuje „odhad — model neka
    - *Nejlevnější* — minimalizuje Kč (cena kWh dle tarifu sítě, časové/blokovací poplatky) s limitem „max. +X % času".
    - *Vyvážený* — minimalizuje `čas + λ·Kč` (λ = hodnota vaší hodiny, nastavitelná) + bonus preferované sítě.
    - Implementačně label-setting s Paretovými štítky (čas, Kč) — z jednoho běhu se vyberou všechny tři varianty.
-7. **Preferované sítě:** změkčené — sleva na „ceně" hrany (minuty), ne zákaz. Režim „pouze preferované" jen na výslovné přání.
-8. **Čekání na obsazenou stanici:** pokud zdroj poskytne dostupnost, přičte se očekávané čekání; jinak se nepřičítá,
+7. **Vaše výchozí tarify** (ceny se ukládají s příznakem s/bez DPH, přepočet 21 %; výpočet nákladů v Kč s DPH):
+
+   | Síť | Zadáno | Kč/kWh bez DPH | Kč/kWh s DPH | Priorita |
+   |---|---|---|---|---|
+   | PRE | 10 bez DPH | 10,00 | 12,10 | 1 (preferovaná) |
+   | Lidl | 10 s DPH | 8,26 | 10,00 | 2 |
+   | Tesla Supercharger | 10–12 bez DPH | 10–12 | 12,10–14,52 | 3 (jen stanice otevřené pro ostatní vozy) |
+   | E.ON | 12–14 bez DPH | 12–14 | 14,52–16,94 | 4 |
+   | ostatní | dle OCM / ad hoc | — | výchozí 19 ❓ | bez preference |
+
+   U rozpětí se počítá horní hranice (konzervativně). Pozn.: nejlevnější je Lidl — v režimu *Nejlevnější* ho
+   optimalizátor upřednostní před PRE, v režimu *Vyvážený* rozhodne priorita + rozdíl v čase.
+8. **Preferované sítě:** změkčené — sleva na „ceně" hrany (minuty), ne zákaz. Režim „pouze preferované" jen na výslovné přání.
+9. **Čekání na obsazenou stanici:** pokud zdroj poskytne dostupnost, přičte se očekávané čekání; jinak se nepřičítá,
    ale stanice s 1 bodem dostane malou penalizaci (riziko obsazení) a UI nabídne **záložní stanici** pro každou zastávku.
-9. **Žádné řešení** → aplikace jasně řekne proč (např. „úsek X–Y 210 km bez CCS2 nabíječky, při rezervě 10 % dojezd 185 km")
+10. **Žádné řešení** → aplikace jasně řekne proč (např. „úsek X–Y 210 km bez CCS2 nabíječky, při rezervě 10 % dojezd 185 km")
    a nabídne povolit menší rezervu / delší zajížďku. Nikdy nevrátí nereálný plán.
 
 ### 6.2 Proč DP, ne A*/Dijkstra „naslepo"
@@ -279,7 +311,7 @@ Service worker (instalace na plochu)          ├─ optimizer/    DP / Pareto �
 | **Energetický model a optimalizátor bez I/O** | deterministické, reprodukovatelné testy na fixturách | — |
 | **Přístup** | aplikace jen pro vás → jednoduché přihlášení (passkey nebo token) + HTTPS | — |
 
-Hosting: malý VPS (např. Hetzner/OVH) s Dockerem a HTTPS (Caddy). iMac jako server nedoporučuji — telefon na cestách potřebuje stálou veřejnou adresu.
+Hosting: **schváleno — vlastní VPS** (např. Hetzner/OVH) s Dockerem a HTTPS (Caddy). iMac jako server nedoporučuji — telefon na cestách potřebuje stálou veřejnou adresu.
 
 ---
 
@@ -348,19 +380,18 @@ a později se skutečnými jízdami.
 
 ## 15. Co od vás potřebuji
 
-1. **Dálniční spotřeba 25 kWh/100 km — při jaké rychlosti** (tempomat 130? 120?) a při jaké teplotě.
-2. **Zimní zkušenost**, i hrubá: spotřeba na dálnici / silnici kolem 0 °C a −10 °C.
-3. **Nabíjecí křivka:** co ukazuje vůz/stojan při ~20 %, 50 %, 70 %, 80 %, 90 % (i pár fotek displeje stačí).
-   Máte složku „PRE 200kw" — pokud jsou tam záznamy z nabíjení, využiji je.
-4. **Využitelná kapacita:** máte záznam nabíjení s kWh ze stojanu a % před/po?
-5. Umí vůz **předehřev baterie** před nabíjením (při navigaci k nabíječce)?
-6. **Sítě a tarify:** u kterých operátorů máte účet/kartu a za kolik (Kč/kWh, minutové, blokovací poplatky).
-7. **Typické trasy** a země (jen ČR + okolí, nebo i Chorvatsko/Itálie apod.) — ovlivní objem dat a velikost serveru.
-8. **Hosting:** souhlas s VPS (~150 Kč/měs.) a případně doménou; nebo jiná preference.
-9. Hmotnost: typicky kolik osob/zavazadel, tažné zařízení?
-10. Potvrzení stacku (React+TS PWA + FastAPI + SQLite) a rozsahu MVP dle kap. 12.
+**Zodpovězeno 30. 10.:** dálnice 25 kWh/100 km při 120–130 km/h · DC 89 kW v pásmu 10–80 % (+ záznam PRE, kap. 4.1) ·
+tarify PRE / Lidl / Tesla / E.ON (kap. 6.1) · pronájem serveru (VPS) schválen.
 
----
+Zbývá (nic z toho neblokuje start etapy 2):
+
+1. **Zimní zkušenost**, i hrubá: spotřeba na dálnici / silnici kolem 0 °C a −10 °C (palubní dojezd v lednu naznačuje ~35 kWh/100 km).
+2. **Nabíjení nad 80 %:** při příští příležitosti dobít k ~95 % a vyfotit displej po ~5 %.
+3. Umí vůz **předehřev baterie** před nabíjením?
+4. **Typické trasy** a země (jen ČR + okolí, nebo i Chorvatsko/Itálie) — ovlivní objem dat nabíječek.
+5. Hmotnost: typicky kolik osob/zavazadel, tažné zařízení?
+6. Doména (volitelné, ~300 Kč/rok), nebo stačí adresa serveru.
+7. Potvrzení stacku (React+TS PWA + FastAPI + SQLite) a rozsahu MVP dle kap. 12.
 
 ## Zdroje
 
