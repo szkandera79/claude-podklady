@@ -41,7 +41,8 @@ def main() -> None:
                         profile=DriveProfile(a.profil), conservative=a.konzervativni)
     now = datetime.now()
     try:
-        res = plan_trip(a.odkud, a.kam, params, via=a.pres, tariffs=DEFAULT_TARIFFS)
+        res = plan_trip(a.odkud, a.kam, params, via=a.pres, tariffs=DEFAULT_TARIFFS,
+                        variants=["nejrychlejsi", "vyvazeny", "nejlevnejsi"])
     except SourceError as e:
         print(f"Plán nelze spočítat: {e}")
         raise SystemExit(1)

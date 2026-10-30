@@ -33,6 +33,8 @@ class StopPlan:
     cost_czk: float
     avg_kw: float
     next_leg_km: float = 0.0
+    arrive_min: float = 0.0      # minut od odjezdu (příjezd ke stanici)
+    depart_min: float = 0.0
 
 
 @dataclass
@@ -204,6 +206,7 @@ def _reconstruct(nodes, arr, dep, dest, soc, params, prof, cap, mult) -> Plan:
                 nd.station, nd.km, a, s, t_ch, kwh,
                 charge_cost(nd.tariff, kwh, t_ch, params.default_price_kwh),
                 kwh / (t_ch / 60.0) if t_ch > 0 else 0.0,
+                arrive_min=chain[k - 1][3][1], depart_min=lab[1],
             ))
     for k, st in enumerate(stops):
         nxt = stops[k + 1].arrive_km if k + 1 < len(stops) else prof.total_km

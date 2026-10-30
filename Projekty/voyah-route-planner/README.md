@@ -7,7 +7,8 @@ Cíl: minimální celkový čas cesty vč. nabíjení při bezpečné rezervě; 
 - **Etapa 1 (analýza):** [ANALYZA.md](ANALYZA.md) — schváleno 30. 10. 2026.
 - **Etapa 2 + 3a (architektura, výpočetní jádro):** [ARCHITEKTURA.md](ARCHITEKTURA.md), kód `backend/vrp`, 34 testů zelených.
 - **Etapa 3b (data):** hotovo — OSM + Open Charge Map, trasy ORS/OSRM, počasí Open-Meteo; plán z příkazové řádky, 46 testů.
-- **Další krok 3c:** FastAPI + PWA pro iPhone, pak nasazení na VPS.
+- **Etapa 3c (aplikace):** hotovo — FastAPI (`backend/vrp_api`, SQLite) + PWA (`frontend/`, React+TS+MapLibre): plán se 4 variantami, mapa, detail zastávky, aktivní cesta s přepočtem, kalibrace, nastavení; 52 testů, ověřeno v náhledu (mobil, světlý/tmavý režim).
+- **Další krok:** nasazení na VPS s HTTPS ([NASAZENI.md](NASAZENI.md)) → instalace na iPhone, pak etapa 4 (kalibrace na reálných jízdách).
 - Zodpovězeno 30. 10.: spotřeba, nabíjecí křivka (záznam PRE 22. 1. 2026), tarify, VPS schválen. Zbývající dotazy: ANALYZA.md, kap. 15.
 
 ## Zásady

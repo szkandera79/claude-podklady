@@ -1,7 +1,7 @@
 # Architektura (etapa 2) — Voyah Smart Route Planner
 
 Navazuje na [ANALYZA.md](ANALYZA.md). Stav 30. 10. 2026: **hotové výpočetní jádro (`backend/vrp`) a datová vrstva
-(`backend/vrp_data`), 46 testů, plánování z příkazové řádky funguje na skutečných datech.** Zbývá API a PWA.
+(`backend/vrp_data`), API (`backend/vrp_api`) a PWA (`frontend/`), 52 testů.** Zbývá nasazení na VPS ([NASAZENI.md](NASAZENI.md)).
 
 ## Moduly
 
@@ -27,8 +27,14 @@ backend/
     weather.py            Open-Meteo: teplota, protivítr, povrch v hodině průjezdu
     planner.py            adresa → trasa → počasí → nabíječky → plány ve 3 režimech
     cli.py                python -m vrp_data.cli "Ostrava" "Praha" --soc 60
-  — další krok —
-  api/                    FastAPI: /plan, /trip/{id}/soc, /settings, /history; SQLite
+  vrp_api/                FastAPI + SQLite (~/.local/share/voyah-route-planner/app.sqlite)
+    app.py                endpointy níže, token VRP_APP_TOKEN, servíruje i frontend/dist
+    settings.py           výchozí nastavení (vůz, křivka, tarify, rezervy) ↔ objekty jádra
+    store.py              nastavení, uložené plány (trasa + stanice pro přepočty), cesty, odečty SoC
+    serialize.py          JSON ↔ objekty jádra
+frontend/src/             PWA: PlanScreen (formulář, mapa, 4 varianty, časová osa), StopSheet (detail zastávky,
+                          Apple/Google Mapy), TripScreen (číselník SoC, GPS, přepočet, ukončení → kalibrace),
+                          SettingsScreen (vůz, křivka, plánování, tarify, model, kalibrace, token)
 frontend/                 React + TypeScript + Vite PWA, MapLibre + OpenFreeMap
 ```
 
@@ -54,12 +60,14 @@ Databáze (SQLite přes SQLAlchemy, etapa 3c): `settings` (JSON vozidla, tarifů
 
 | Metoda | Účel |
 |---|---|
-| `POST /api/plan` | {start, cíl, průjezdní body, SoC, rezerva, profil, režim} → varianty A/B/C s plány |
-| `POST /api/trips` | uloží zvolený plán jako aktivní cestu |
-| `POST /api/trips/{id}/soc` | {SoC, GPS} → promítnutí na trasu, `soc_update`, nový plán + varování |
-| `POST /api/trips/{id}/finish` | konec cesty → kalibrační pozorování |
-| `GET/PUT /api/settings` | vozidlo, křivka, tarify, rezervy, profily |
-| `GET /api/stations?bbox=` | nabíječky pro mapu (s atribucí zdroje) |
+| `POST /api/plan` | {odkud, kam, přes, SoC, rezerva, profil, konzervativní} → 4 varianty (nejrychlejší, vyvážená, nejlevnější, úsporná jízda), geometrie, nabíječky v koridoru |
+| `GET /api/plan/{id}` | uložený plán |
+| `POST /api/trips` | {plan_id, varianta} → aktivní cesta |
+| `POST /api/trips/{id}/soc` | {SoC, GPS} → promítnutí na trasu, odchylka spotřeby, přepočet; vyšší SoC = rozpoznané nabíjení |
+| `POST /api/trips/{id}/finish` | konec cesty → kalibrační pozorování (úsek ≥ 20 km bez nabíjení) |
+| `GET/PUT /api/settings`, `POST /api/settings/reset` | vozidlo, křivka, tarify, rezervy, profily |
+| `GET /api/calibration`, `POST /api/calibration/reset` | kalibrační tabulka a záznamy |
+| `GET /api/docs` | interaktivní dokumentace API |
 
 API klíče (ORS, OCM) jen v `.env` na serveru; frontend volá výhradně vlastní backend.
 
