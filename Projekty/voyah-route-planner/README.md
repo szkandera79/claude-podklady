@@ -6,7 +6,8 @@ Cíl: minimální celkový čas cesty vč. nabíjení při bezpečné rezervě; 
 ## Stav
 - **Etapa 1 (analýza):** [ANALYZA.md](ANALYZA.md) — schváleno 30. 10. 2026.
 - **Etapa 2 + 3a (architektura, výpočetní jádro):** [ARCHITEKTURA.md](ARCHITEKTURA.md), kód `backend/vrp`, 34 testů zelených.
-- **Další krok 3b:** routing (openrouteservice), import Open Charge Map, počasí Open-Meteo; pak API + PWA.
+- **Etapa 3b (data):** hotovo — OSM + Open Charge Map, trasy ORS/OSRM, počasí Open-Meteo; plán z příkazové řádky, 46 testů.
+- **Další krok 3c:** FastAPI + PWA pro iPhone, pak nasazení na VPS.
 - Zodpovězeno 30. 10.: spotřeba, nabíjecí křivka (záznam PRE 22. 1. 2026), tarify, VPS schválen. Zbývající dotazy: ANALYZA.md, kap. 15.
 
 ## Zásady
@@ -19,3 +20,9 @@ Cíl: minimální celkový čas cesty vč. nabíjení při bezpečné rezervě; 
 ```bash
 cd voyah-route-planner/backend && ~/.venvs/voyah-route-planner/bin/python -m pytest -q
 ```
+
+## Plán z příkazové řádky
+```bash
+cd voyah-route-planner/backend && ~/.venvs/voyah-route-planner/bin/python -m vrp_data.cli "Ostrava" "Praha" --soc 60
+```
+Klíče: `~/.config/voyah-route-planner/.env` (`ORS_API_KEY`, `OCM_API_KEY`) — mimo iCloud a git.

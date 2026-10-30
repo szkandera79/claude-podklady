@@ -63,6 +63,7 @@ class _Node:
     table: Optional[ChargeTable] = None
     tariff: Optional[Tariff] = None
     penalty_min: float = 0.0
+    bonus_min: float = 0.0      # preferovaná síť; plný bonus až od 20 kWh, aby nevznikaly zbytečné mini-zastávky
 
 
 # label = (objective, time_min, cost_czk, parent)
@@ -115,11 +116,11 @@ def plan_route(route: Route, stations: Sequence[Station], vehicle: Vehicle, para
             pen += SINGLE_POINT_PENALTY_MIN
         if params.min_station_kw and s.max_kw < params.min_station_kw:
             pen += LOW_POWER_PENALTY_MIN
-        if params.mode == Mode.BALANCED and t is not None and t.preferred:
-            pen -= params.preferred_bonus_min / max(t.priority, 1)
+        bonus = params.preferred_bonus_min / max(t.priority, 1) \
+            if params.mode == Mode.BALANCED and t is not None and t.preferred else 0.0
         nodes.append(_Node(
             s.route_km, s, detour_energy(s.detour_km, vehicle, energy) * mult, s.detour_min, s.detour_km,
-            station_charge_table(vehicle, s, params.battery_temp_c), t, pen,
+            station_charge_table(vehicle, s, params.battery_temp_c), t, pen, bonus,
         ))
     nodes.append(_Node(end_km))
     n = len(nodes)
@@ -144,7 +145,8 @@ def plan_route(route: Route, stations: Sequence[Station], vehicle: Vehicle, para
                     c = charge_cost(ni.tariff, kwh, t_ch, params.default_price_kwh)
                     t_add = t_ch + params.stop_overhead_min
                     # + nepatrná preference nižšího příjezdového SoC: při shodném čase nezastavovat zbytečně brzy
-                    obj = la[0] + t_add + w_cost * c + ni.penalty_min + TIEBREAK_PER_SOC * a
+                    bonus = ni.bonus_min * min(1.0, kwh / 20.0)
+                    obj = la[0] + t_add + w_cost * c + ni.penalty_min - bonus + TIEBREAK_PER_SOC * a
                     cur = dep[i][b]
                     if cur is None or obj < cur[0] - 1e-9:
                         dep[i][b] = (obj, la[1] + t_add, la[2] + c, ("arr", i, a))
@@ -224,6 +226,8 @@ def _reconstruct(nodes, arr, dep, dest, soc, params, prof, cap, mult) -> Plan:
         if not st.station.is_live_status:
             plan.warnings.append(f"{st.station.name}: dostupnost neověřena (data {st.station.data_source or 'bez zdroje'}"
                                  f"{', ' + st.station.data_updated if st.station.data_updated else ''}).")
+        for note in st.station.notes:
+            plan.warnings.append(f"{st.station.name}: {note}")
     return plan
 
 

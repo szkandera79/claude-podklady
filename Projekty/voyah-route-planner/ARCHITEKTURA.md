@@ -1,7 +1,7 @@
 # Architektura (etapa 2) — Voyah Smart Route Planner
 
-Navazuje na [ANALYZA.md](ANALYZA.md). Stav 30. 10. 2026: **hotové výpočetní jádro (`backend/vrp`) + 34 testů**.
-Zbývá datová vrstva (routing, nabíječky, počasí), API a PWA.
+Navazuje na [ANALYZA.md](ANALYZA.md). Stav 30. 10. 2026: **hotové výpočetní jádro (`backend/vrp`) a datová vrstva
+(`backend/vrp_data`), 46 testů, plánování z příkazové řádky funguje na skutečných datech.** Zbývá API a PWA.
 
 ## Moduly
 
@@ -15,10 +15,19 @@ backend/
     trip.py               aktivní cesta: ruční SoC → k_trip → přepočet + varování
     calibration.py        dlouhodobá kalibrace k(skupina silnic, teplotní pásmo), odhad kapacity
   tests/                  scénáře s SYNTETICKÝMI stanicemi (jen testy)
-  — připraví se v etapě 3b/3c —
-  vrp_data/routing.py     adaptér openrouteservice → Route (úseky s třídou, limitem, převýšením)
-  vrp_data/chargers.py    import Open Charge Map (+OSM), koridor kolem trasy, výpočet zajížďky
-  vrp_data/weather.py     Open-Meteo → teplota, vítr (průmět do směru jízdy), srážky na úsecích
+  vrp_data/               datová vrstva (jen standardní knihovna Pythonu, disková cache ~/.cache/voyah-route-planner)
+    config.py             klíče z ~/.config/voyah-route-planner/.env (mimo iCloud a git)
+    http.py               HTTP + cache; záloha přes curl kvůli starému TLS v systémovém Pythonu macOS
+    geocode.py            adresa → souřadnice (Photon / OSM, bez klíče)
+    routing.py            openrouteservice → Route; při výpadku OSRM + převýšení z Open-Meteo Elevation
+    osm.py                nabíječky CCS2 z OpenStreetMap (Overpass, dlaždice 1°, zrcadla, cache 7 dní) — HLAVNÍ ZDROJ
+    ocm.py                Open Charge Map podél trasy — doplněk (stav, datum ověření, cena), kontrola licence poskytovatele
+    chargers.py           sloučení OSM+OCM (do 150 m), koridor 5 km, odhad zajížďky
+    operators.py          sjednocení názvů provozovatelů (Pražská energetika → PRE …)
+    weather.py            Open-Meteo: teplota, protivítr, povrch v hodině průjezdu
+    planner.py            adresa → trasa → počasí → nabíječky → plány ve 3 režimech
+    cli.py                python -m vrp_data.cli "Ostrava" "Praha" --soc 60
+  — další krok —
   api/                    FastAPI: /plan, /trip/{id}/soc, /settings, /history; SQLite
 frontend/                 React + TypeScript + Vite PWA, MapLibre + OpenFreeMap
 ```
@@ -77,6 +86,27 @@ API klíče (ORS, OCM) jen v `.env` na serveru; frontend volá výhradně vlastn
 
 Výkon: trasa 1 500 km se 60 kandidátními stanicemi ≈ 0,1 s.
 
+## Pokrytí nabíječek (ověřeno 30. 10. 2026, ČR, CCS2)
+
+| Zdroj | Stanic | Poznámka |
+|---|---|---|
+| OpenStreetMap | 901 | ČEZ 367, E.ON 169, PRE 153, Lidl 49, Tesla 12; výkon uveden u 56 % |
+| Open Charge Map | 232 | jen Tesla 3, Lidl 7; část záznamů ověřena naposledy 2016–2021 |
+
+Proto je hlavním zdrojem OSM, OCM doplňuje. Chybějící výkon se počítá konzervativně 50 kW (s upozorněním).
+
+## Příklad (skutečná data, 30. 10. 2026 večer, OSRM záloha)
+
+`Ostrava → Praha, start 60 %`: 376 km, 196 nabíječek v koridoru. Nejrychlejší: 4 h 18 min (jízda 3 h 25 min,
+nabíjení 45 min), ČEZ futurego km 130 (25→49 %) + IONITY km 254 (10→50 %), v cíli 15 %, ~1 280 Kč.
+Nejlevnější: Lidl, 4 h 53 min, ~663 Kč. Vyvážený: 2× PRE, 4 h 26 min, ~800 Kč.
+
+## Plánování z příkazové řádky
+
+```bash
+cd voyah-route-planner/backend && ~/.venvs/voyah-route-planner/bin/python -m vrp_data.cli "Ostrava" "Praha" --soc 60
+```
+
 ## Spuštění testů
 
 ```bash
@@ -96,3 +126,7 @@ Virtuální prostředí je mimo iCloud (`~/.venvs/`), aby se nesynchronizovaly t
 - Křivka pod 10 % je předpoklad (❓); nad 80 % dle zkušenosti uživatele (40 kW do 90 %, pak ~20 kW), ne z měřeného záznamu.
 - Důsledek křivky: 10→80 % ≈ 50 min, 80→90 % ≈ 15 min, 90→100 % ≈ 31 min → nad 90 % se vyplatí jen výjimečně.
 - Čekání na obsazenou stanici zatím jen jako penalizace stanic s jedním bodem; živá data až s NAP / etapa 5.
+- Zajížďka k nabíječce je odhad z vzdušné vzdálenosti (1,4×); upřesnění maticí routeru je plánované.
+- openrouteservice měl 30. 10. výpadek (HTTP 502 / bez odpovědi) — jeho napojení je otestované jen na vzorových
+  datech; po obnovení ověřit skutečnou odpověď (hlavně kódy zemí v `countryinfo`). Do té doby jede záloha OSRM.
+- OSRM demo server je jen pro vývoj (podmínky užití); na VPS poběží vlastní Valhalla nebo ORS.

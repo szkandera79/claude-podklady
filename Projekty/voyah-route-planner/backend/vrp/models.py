@@ -117,6 +117,10 @@ class Station:
     data_updated: Optional[str] = None
     is_live_status: bool = False      # dostupnost z živého zdroje (jinak „neověřeno")
     available: Optional[bool] = None
+    lat: Optional[float] = None
+    lon: Optional[float] = None
+    address: str = ""
+    notes: Tuple[str, ...] = ()       # upozornění pro uživatele (neznámý výkon, otevírací doba, Tesla…)
 
 
 @dataclass
