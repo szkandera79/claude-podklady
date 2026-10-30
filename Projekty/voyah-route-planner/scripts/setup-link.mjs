@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 // Vytvoří nastavovací odkaz s klíči (za „#“, tedy se nikdy neposílá na server) a QR kód pro iPhone.
 // Klíče čte z ~/.config/voyah-route-planner/.env; nic nevypisuje. Použití:
-//   node scripts/setup-link.mjs https://adresa-aplikace/
+//   node scripts/setup-link.mjs https://adresa-aplikace/              → QR kód (iPhone: Nastavení → 📷)
+//   node scripts/setup-link.mjs https://adresa-aplikace/ --otevrit    → otevře odkaz v prohlížeči na Macu
+//   node scripts/setup-link.mjs https://adresa-aplikace/ --schranka   → zkopíruje odkaz do schránky (vložit v Nastavení)
 import { readFileSync, mkdirSync } from "node:fs";
 import { homedir } from "node:os";
 import { join, dirname } from "node:path";
@@ -22,6 +24,16 @@ const payload = Buffer.from(JSON.stringify(keys)).toString("base64").replace(/\+
 const url = base.replace(/#.*$/, "") + "#setup=" + payload;
 const outDir = join(homedir(), ".local/share/voyah-route-planner");
 mkdirSync(outDir, { recursive: true });
+if (process.argv.includes("--otevrit")) {
+  execFileSync("open", [url]);
+  console.log("Odkaz otevřen ve výchozím prohlížeči — klíče se uloží do této kopie aplikace.");
+  process.exit(0);
+}
+if (process.argv.includes("--schranka")) {
+  execFileSync("pbcopy", [], { input: url });
+  console.log("Odkaz s klíči je ve schránce. V aplikaci: Nastavení → Vložit nastavovací odkaz → ⌘V → Uložit. Pak schránku přepište.");
+  process.exit(0);
+}
 const png = join(outDir, "nastaveni-qr.png");
 await QRCode.toFile(png, url, { width: 600, margin: 2 });
 execFileSync("open", [png]);
