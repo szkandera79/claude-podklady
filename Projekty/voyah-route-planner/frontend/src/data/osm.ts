@@ -60,7 +60,7 @@ export function tilesFor(points: [number, number][], margin = 0.1): [number, num
   return [...s].sort().map((k) => k.split(",").map(Number) as [number, number]);
 }
 
-interface BundleIndex { generated: string; tiles: string[]; bbox: [number, number, number, number]; }
+interface BundleIndex { generated: string; covered: string[]; tiles: string[]; }
 let bundleIndex: Promise<BundleIndex | null> | null = null;
 
 /** Index přibaleného balíku (public/data/osm, generuje backend/tools/build_charger_tiles.py). */
@@ -75,9 +75,8 @@ function loadIndex(): Promise<BundleIndex | null> {
 async function fromBundle(lat0: number, lon0: number): Promise<{ els: any[]; generated: string } | null> {
   const idx = await loadIndex();
   if (!idx) return null;
-  const [s, w, n, e] = idx.bbox;
-  if (lat0 < s || lat0 >= n || lon0 < w || lon0 >= e) return null;
   const key = `${lat0}_${lon0}`;
+  if (!idx.covered.includes(key)) return null;                                       // mimo balík
   if (!idx.tiles.includes(key)) return { els: [], generated: idx.generated };       // pokryto, bez stanic
   const r = await fetch(`/data/osm/${key}.json`).catch(() => null);
   if (!r?.ok) return null;
