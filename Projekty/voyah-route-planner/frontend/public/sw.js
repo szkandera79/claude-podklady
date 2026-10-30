@@ -1,5 +1,5 @@
-// Service worker: offline jen „skořápka" aplikace; API a mapové dlaždice vždy ze sítě.
-const CACHE = "vrp-shell-v1";
+// Service worker: síť napřed, offline záloha pro aplikaci a balík nabíječek (/data/); cizí služby vždy ze sítě.
+const CACHE = "vrp-shell-v2";
 const SHELL = ["/", "/manifest.webmanifest", "/icon.svg", "/icon-192.png"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -13,7 +13,7 @@ self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET" || url.origin !== location.origin || url.pathname.startsWith("/api/")) return;
   e.respondWith(
     fetch(e.request).then((r) => {
-      if (r.ok && (url.pathname === "/" || url.pathname.startsWith("/assets/"))) {
+      if (r.ok && (url.pathname === "/" || url.pathname.startsWith("/assets/") || url.pathname.startsWith("/data/"))) {
         const copy = r.clone();
         caches.open(CACHE).then((c) => c.put(e.request, copy));
       }

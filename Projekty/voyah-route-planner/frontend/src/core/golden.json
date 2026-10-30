@@ -1,0 +1,591 @@
+{
+ "cases": [
+  {
+   "route": "mix",
+   "mode": "nejrychlejsi",
+   "soc": 90,
+   "conservative": false,
+   "feasible": true,
+   "total_min": 325.000232,
+   "cost": 1311.473684,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "C",
+     21,
+     49
+    ],
+    [
+     "D",
+     10,
+     69
+    ]
+   ],
+   "energy": 159.881527
+  },
+  {
+   "route": "mix",
+   "mode": "nejrychlejsi",
+   "soc": 90,
+   "conservative": true,
+   "feasible": true,
+   "total_min": 333.515903,
+   "cost": 1522.421053,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "C",
+     16,
+     52
+    ],
+    [
+     "D",
+     10,
+     73
+    ]
+   ],
+   "energy": 172.672049
+  },
+  {
+   "route": "mix",
+   "mode": "nejrychlejsi",
+   "soc": 55,
+   "conservative": false,
+   "feasible": true,
+   "total_min": 351.221293,
+   "cost": 1541.157895,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "A",
+     28,
+     90
+    ],
+    [
+     "D",
+     10,
+     69
+    ]
+   ],
+   "energy": 159.881527
+  },
+  {
+   "route": "mix",
+   "mode": "nejrychlejsi",
+   "soc": 55,
+   "conservative": true,
+   "feasible": true,
+   "total_min": 363.062917,
+   "cost": 2024.526316,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "A",
+     26,
+     56
+    ],
+    [
+     "C",
+     10,
+     52
+    ],
+    [
+     "D",
+     10,
+     73
+    ]
+   ],
+   "energy": 172.672049
+  },
+  {
+   "route": "mix",
+   "mode": "nejlevnejsi",
+   "soc": 90,
+   "conservative": false,
+   "feasible": true,
+   "total_min": 368.520043,
+   "cost": 993.157895,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "B",
+     48,
+     100
+    ],
+    [
+     "D",
+     34,
+     69
+    ]
+   ],
+   "energy": 159.881527
+  },
+  {
+   "route": "mix",
+   "mode": "nejlevnejsi",
+   "soc": 90,
+   "conservative": true,
+   "feasible": true,
+   "total_min": 378.69627,
+   "cost": 1139.368421,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "B",
+     45,
+     100
+    ],
+    [
+     "D",
+     29,
+     73
+    ]
+   ],
+   "energy": 172.672049
+  },
+  {
+   "route": "mix",
+   "mode": "nejlevnejsi",
+   "soc": 55,
+   "conservative": false,
+   "feasible": true,
+   "total_min": 412.730569,
+   "cost": 1361.578947,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "B",
+     13,
+     100
+    ],
+    [
+     "D",
+     34,
+     69
+    ]
+   ],
+   "energy": 159.881527
+  },
+  {
+   "route": "mix",
+   "mode": "nejlevnejsi",
+   "soc": 55,
+   "conservative": true,
+   "feasible": true,
+   "total_min": 422.906796,
+   "cost": 1507.789474,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "B",
+     10,
+     100
+    ],
+    [
+     "D",
+     29,
+     73
+    ]
+   ],
+   "energy": 172.672049
+  },
+  {
+   "route": "mix",
+   "mode": "vyvazeny",
+   "soc": 90,
+   "conservative": false,
+   "feasible": true,
+   "total_min": 331.85653,
+   "cost": 1072.736842,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "A",
+     63,
+     80
+    ],
+    [
+     "B",
+     65,
+     81
+    ],
+    [
+     "D",
+     15,
+     69
+    ]
+   ],
+   "energy": 159.881527
+  },
+  {
+   "route": "mix",
+   "mode": "vyvazeny",
+   "soc": 90,
+   "conservative": true,
+   "feasible": true,
+   "total_min": 340.92572,
+   "cost": 1223.368421,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "A",
+     61,
+     80
+    ],
+    [
+     "B",
+     64,
+     81
+    ],
+    [
+     "D",
+     10,
+     73
+    ]
+   ],
+   "energy": 172.672049
+  },
+  {
+   "route": "mix",
+   "mode": "vyvazeny",
+   "soc": 55,
+   "conservative": false,
+   "feasible": true,
+   "total_min": 358.35446,
+   "cost": 1511.894737,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "A",
+     28,
+     72
+    ],
+    [
+     "B",
+     57,
+     76
+    ],
+    [
+     "D",
+     10,
+     69
+    ]
+   ],
+   "energy": 159.881527
+  },
+  {
+   "route": "mix",
+   "mode": "vyvazeny",
+   "soc": 55,
+   "conservative": true,
+   "feasible": true,
+   "total_min": 366.870131,
+   "cost": 1664.736842,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "A",
+     26,
+     78
+    ],
+    [
+     "B",
+     62,
+     81
+    ],
+    [
+     "D",
+     10,
+     73
+    ]
+   ],
+   "energy": 172.672049
+  },
+  {
+   "route": "leto",
+   "mode": "nejrychlejsi",
+   "soc": 90,
+   "conservative": false,
+   "feasible": true,
+   "total_min": 353.859782,
+   "cost": 955.263158,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "A",
+     67,
+     70
+    ],
+    [
+     "D",
+     10,
+     82
+    ]
+   ],
+   "energy": 147.81896
+  },
+  {
+   "route": "leto",
+   "mode": "nejrychlejsi",
+   "soc": 90,
+   "conservative": true,
+   "feasible": true,
+   "total_min": 364.526953,
+   "cost": 1291.473684,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "A",
+     66,
+     74
+    ],
+    [
+     "D",
+     10,
+     61
+    ],
+    [
+     "F",
+     10,
+     37
+    ]
+   ],
+   "energy": 159.644476
+  },
+  {
+   "route": "leto",
+   "mode": "nejrychlejsi",
+   "soc": 55,
+   "conservative": false,
+   "feasible": true,
+   "total_min": 378.697156,
+   "cost": 1401.052632,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "A",
+     32,
+     70
+    ],
+    [
+     "D",
+     10,
+     82
+    ]
+   ],
+   "energy": 147.81896
+  },
+  {
+   "route": "leto",
+   "mode": "nejrychlejsi",
+   "soc": 55,
+   "conservative": true,
+   "feasible": true,
+   "total_min": 389.364327,
+   "cost": 1737.263158,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "A",
+     31,
+     74
+    ],
+    [
+     "D",
+     10,
+     61
+    ],
+    [
+     "F",
+     10,
+     37
+    ]
+   ],
+   "energy": 159.644476
+  },
+  {
+   "route": "leto",
+   "mode": "nejlevnejsi",
+   "soc": 90,
+   "conservative": false,
+   "feasible": true,
+   "total_min": 399.90236,
+   "cost": 838.631579,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "B",
+     53,
+     100
+    ],
+    [
+     "D",
+     55,
+     82
+    ]
+   ],
+   "energy": 147.81896
+  },
+  {
+   "route": "leto",
+   "mode": "nejlevnejsi",
+   "soc": 90,
+   "conservative": true,
+   "feasible": true,
+   "total_min": 413.715488,
+   "cost": 972.105263,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "B",
+     50,
+     100
+    ],
+    [
+     "D",
+     52,
+     87
+    ]
+   ],
+   "energy": 159.644476
+  },
+  {
+   "route": "leto",
+   "mode": "nejlevnejsi",
+   "soc": 55,
+   "conservative": false,
+   "feasible": true,
+   "total_min": 444.112886,
+   "cost": 1207.052632,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "B",
+     18,
+     100
+    ],
+    [
+     "D",
+     55,
+     82
+    ]
+   ],
+   "energy": 147.81896
+  },
+  {
+   "route": "leto",
+   "mode": "nejlevnejsi",
+   "soc": 55,
+   "conservative": true,
+   "feasible": true,
+   "total_min": 457.926015,
+   "cost": 1340.526316,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "B",
+     15,
+     100
+    ],
+    [
+     "D",
+     52,
+     87
+    ]
+   ],
+   "energy": 159.644476
+  },
+  {
+   "route": "leto",
+   "mode": "vyvazeny",
+   "soc": 90,
+   "conservative": false,
+   "feasible": true,
+   "total_min": 363.666996,
+   "cost": 900.526316,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "B",
+     53,
+     72
+    ],
+    [
+     "D",
+     27,
+     82
+    ]
+   ],
+   "energy": 147.81896
+  },
+  {
+   "route": "leto",
+   "mode": "vyvazeny",
+   "soc": 90,
+   "conservative": true,
+   "feasible": true,
+   "total_min": 365.302715,
+   "cost": 1082.631579,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "A",
+     66,
+     80
+    ],
+    [
+     "D",
+     16,
+     87
+    ]
+   ],
+   "energy": 159.644476
+  },
+  {
+   "route": "leto",
+   "mode": "vyvazeny",
+   "soc": 55,
+   "conservative": false,
+   "feasible": true,
+   "total_min": 378.697156,
+   "cost": 1401.052632,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "A",
+     32,
+     70
+    ],
+    [
+     "D",
+     10,
+     82
+    ]
+   ],
+   "energy": 147.81896
+  },
+  {
+   "route": "leto",
+   "mode": "vyvazeny",
+   "soc": 55,
+   "conservative": true,
+   "feasible": true,
+   "total_min": 390.140089,
+   "cost": 1528.421053,
+   "arrival_soc": 15,
+   "stops": [
+    [
+     "A",
+     31,
+     74
+    ],
+    [
+     "D",
+     10,
+     87
+    ]
+   ],
+   "energy": 159.644476
+  }
+ ]
+}

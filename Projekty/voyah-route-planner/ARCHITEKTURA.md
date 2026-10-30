@@ -1,4 +1,13 @@
-# Architektura (etapa 2) — Voyah Smart Route Planner
+# Architektura — Voyah Smart Route Planner
+
+> **Stav 30. 10. 2026 večer — varianta 3 „bez serveru“:** aplikace počítá vše přímo v telefonu.
+> `frontend/src/core` je přepis Python jádra do TypeScriptu (křížově ověřený: 24 scénářů dává stejné zastávky, časy,
+> ceny i energii jako Python), `frontend/src/data` přepis datové vrstvy, `frontend/src/local` úložiště v IndexedDB
+> a „lokální API“ se stejným rozhraním jako dřívější FastAPI. Nabíječky z OSM jsou přibalené jako statický balík
+> (`public/data/osm`, generuje `backend/tools/build_charger_tiles.py`), živý Overpass jen pro oblasti mimo balík.
+> Klíče nejsou v kódu — do telefonu se přenesou nastavovacím odkazem / QR (`scripts/setup-link.mjs`).
+> Python (`backend/`) zůstává jako referenční implementace, generátor balíku, CLI a rezervní serverová varianta.
+> Testy: 52 Python + 50 TypeScript. Nasazení: [NASAZENI.md](NASAZENI.md).
 
 Navazuje na [ANALYZA.md](ANALYZA.md). Stav 30. 10. 2026: **hotové výpočetní jádro (`backend/vrp`) a datová vrstva
 (`backend/vrp_data`), API (`backend/vrp_api`) a PWA (`frontend/`), 52 testů.** Zbývá nasazení na VPS ([NASAZENI.md](NASAZENI.md)).

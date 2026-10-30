@@ -8,7 +8,8 @@ Cíl: minimální celkový čas cesty vč. nabíjení při bezpečné rezervě; 
 - **Etapa 2 + 3a (architektura, výpočetní jádro):** [ARCHITEKTURA.md](ARCHITEKTURA.md), kód `backend/vrp`, 34 testů zelených.
 - **Etapa 3b (data):** hotovo — OSM + Open Charge Map, trasy ORS/OSRM, počasí Open-Meteo; plán z příkazové řádky, 46 testů.
 - **Etapa 3c (aplikace):** hotovo — FastAPI (`backend/vrp_api`, SQLite) + PWA (`frontend/`, React+TS+MapLibre): plán se 4 variantami, mapa, detail zastávky, aktivní cesta s přepočtem, kalibrace, nastavení; 52 testů, ověřeno v náhledu (mobil, světlý/tmavý režim).
-- **Další krok:** nasazení na VPS s HTTPS ([NASAZENI.md](NASAZENI.md)) → instalace na iPhone, pak etapa 4 (kalibrace na reálných jízdách).
+- **Varianta 3 (bez serveru):** výpočty přepsány do TypeScriptu a běží v telefonu; balík nabíječek OSM přibalený; klíče přes QR odkaz. 50 TS testů vč. křížové kontroly s Pythonem.
+- **Další krok:** nahrát `frontend/dist` na Cloudflare Pages / Netlify ([NASAZENI.md](NASAZENI.md)) → QR s klíči → přidat na plochu iPhonu; pak etapa 4 (kalibrace na reálných jízdách).
 - Zodpovězeno 30. 10.: spotřeba, nabíjecí křivka (záznam PRE 22. 1. 2026), tarify, VPS schválen. Zbývající dotazy: ANALYZA.md, kap. 15.
 
 ## Zásady

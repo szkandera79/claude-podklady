@@ -1,35 +1,70 @@
 # Nasazení a spuštění
 
-## Lokálně na Macu (vývoj)
+Od 30. 10. 2026 je hlavní varianta **aplikace bez serveru (varianta 3)**: vše se počítá přímo v telefonu
+(`frontend/src/core` = přepis Python jádra, `frontend/src/data` = trasy, nabíječky, počasí; data v IndexedDB telefonu).
+Stačí ji nahrát jako statický web s HTTPS. Python backend (`backend/`) zůstává jako referenční implementace,
+nástroj pro balík nabíječek a příkazová řádka; serverová varianta (FastAPI + Docker) je popsaná níže pro případ potřeby.
+
+## 1. Sestavení (na Macu)
 
 ```bash
-cd voyah-route-planner/frontend && npm install && ./link-node-modules.sh && npm run build
+cd voyah-route-planner/frontend && npm install && ./link-node-modules.sh
 ```
+
+```bash
+cd voyah-route-planner/backend && ~/.venvs/voyah-route-planner/bin/python tools/build_charger_tiles.py
+```
+
+```bash
+cd voyah-route-planner/frontend && npx vitest run && npm run build
+```
+
+Výsledek je složka `frontend/dist` (≈ aplikace + balík nabíječek CCS2 z OSM pro CZ, SK, AT, PL, HU, SI, HR, DE).
+Balík obnovovat cca 1× měsíčně (skript výše) a znovu nahrát.
+
+## 2. Hosting zdarma (statický web s HTTPS)
+
+| Služba | Postup | Poznámka |
+|---|---|---|
+| **Cloudflare Pages** (doporučeno) | účet zdarma → Workers & Pages → Create → Pages → *Upload assets* → přetáhnout obsah `dist` | adresa `*.pages.dev`; volitelně Cloudflare Access (zdarma) = přístup jen pro váš e-mail |
+| Netlify Drop | app.netlify.com/drop → přetáhnout složku `dist` | nejrychlejší; bez účtu odkaz po čase vyprší |
+| GitHub Pages | samostatné **veřejné** repo jen se sestavenou aplikací | soukromé repo vyžaduje placený GitHub |
+
+V sestavené aplikaci **nejsou žádné klíče** — publikovat ji je bezpečné.
+
+## 3. Klíče do telefonu (jednou)
+
+```bash
+node voyah-route-planner/scripts/setup-link.mjs https://<adresa-aplikace>/
+```
+
+Otevře se QR kód s nastavovacím odkazem (klíče jsou za `#`, prohlížeč je nikdy neposílá na server; aplikace je
+uloží do telefonu a z adresy smaže). Naskenujte ho fotoaparátem iPhonu → otevře se aplikace → **Sdílet → Přidat
+na plochu**. Soubor s QR (`~/.local/share/voyah-route-planner/nastaveni-qr.png`) pak smažte.
+
+Bez klíčů aplikace funguje také: trasy přes záložní OSRM (demo server, jen pro nekomerční užití) a nabíječky
+jen z OpenStreetMap.
+
+## 4. Data v telefonu
+
+Nastavení, cesty a kalibrace jsou jen v telefonu (IndexedDB). **Nastavení → Záloha dat → Stáhnout zálohu**
+(uložit do Souborů / iCloudu); obnova tamtéž. Smazání dat Safari = ztráta kalibrace, proto zálohovat.
+
+## Lokální náhled (vývoj)
 
 ```bash
 voyah-route-planner/scripts/sync-runtime.sh
 ```
 
-Pak v Claude Code náhled „voyah“ (`.claude/launch.json`, port 8010) — server běží z kopie mimo iCloud
-(`~/.local/share/voyah-route-planner/runtime`), protože náhledový proces nemá přístup do iCloud Drive.
-Klíče: `~/.config/voyah-route-planner/.env`. Data (nastavení, cesty, kalibrace): `~/.local/share/voyah-route-planner/app.sqlite`.
+Pak v Claude Code náhled „voyah“ (`.claude/launch.json`, port 8010, statický server z kopie mimo iCloud —
+náhledový proces nemá přístup do iCloud Drive). `node_modules` leží v `frontend/node_modules.nosync`
+(iCloud ji nesynchronizuje); po `npm install` spustit `./link-node-modules.sh`.
 
-Z iPhonu ve stejné Wi-Fi lze otevřít `http://<IP Macu>:8010`, ale **bez GPS** (Safari dává polohu jen přes HTTPS) —
-místo polohy lze do „Odkud“ psát adresu.
+## Serverová varianta (rezerva)
 
-`node_modules` leží v `frontend/node_modules.nosync` (iCloud ji nesynchronizuje); po každém `npm install` spustit
-`./link-node-modules.sh`.
+FastAPI (`backend/vrp_api`) + Docker + Caddy (`deploy/`) — pro případ, že by výpočty měly běžet na serveru
+(sdílená kalibrace více zařízení, skryté klíče). Docker obraz zatím nebyl sestaven ani vyzkoušen.
 
-## Server (VPS) — doporučeno
-
-1. VPS s Dockerem, např. Hetzner CX22 (2 vCPU, 4 GB RAM, ~4–5 €/měs.), Ubuntu 24.04.
-2. Doména (nebo subdoména) s A záznamem na IP serveru.
-3. Na server zkopírovat složku `voyah-route-planner` (bez `node_modules*`, `dist`).
-4. `cp deploy/.env.example deploy/.env` a doplnit DOMAIN, ORS_API_KEY, OCM_API_KEY, VRP_APP_TOKEN.
-5. `docker compose -f deploy/docker-compose.yml up -d --build`
-6. V Safari na iPhonu otevřít `https://<doména>`, zadat token, **Sdílet → Přidat na plochu**.
-
-⚠️ Docker obraz zatím nebyl sestaven ani vyzkoušen (lokálně není Docker). Ověřit při prvním nasazení.
-
-⚠️ Záložní router OSRM používá veřejný demo server, který není určen pro provoz. Na VPS má být hlavním routerem
-openrouteservice (klíč), případně vlastní Valhalla/OSRM (CZ+okolí ≈ 4–8 GB RAM).
+```bash
+cp deploy/.env.example deploy/.env && docker compose -f deploy/docker-compose.yml up -d --build
+```
