@@ -147,3 +147,18 @@ Virtuální prostředí je mimo iCloud (`~/.venvs/`), aby se nesynchronizovaly t
 - openrouteservice měl 30. 10. výpadek (HTTP 502 / bez odpovědi) — jeho napojení je otestované jen na vzorových
   datech; po obnovení ověřit skutečnou odpověď (hlavně kódy zemí v `countryinfo`). Do té doby jede záloha OSRM.
 - OSRM demo server je jen pro vývoj (podmínky užití); na VPS poběží vlastní Valhalla nebo ORS.
+
+## Tarify (30. 10. 2026, jen TypeScript verze)
+
+- Tarif může mít **výkonová pásma** (`tiers`: od kW → Kč/kWh, Kč/min po N min); optimalizátor vybírá pásmo podle výkonu
+  stanice (`tariffForStation`). Python jádro zatím umí jen jednu cenu na síť.
+- Ceny se počítají **bez DPH** (nastavitelné), vstupní ceny mají příznak s/bez DPH.
+- Výchozí ceníky (`frontend/src/local/service.ts`, `DEFAULT_TARIFFS`, verze `TARIFFS_VERSION` — po zvýšení se v telefonu
+  uložené tarify nahradí): PRE Start na stanicích PRE (DC 9,92 / UFC 11,57 Kč bez DPH), karta E.ON Drive registrovaný
+  na stanicích E.ON (9,50 / 13 / 16,90 Kč dle pásma — DPH neověřeno, bráno jako s DPH), ostatní sítě v ČR a okolí
+  roamingem čipem PRE dle „Ceník dobíjení na stanicích ostatních provozovatelů platný od 1. 7. 2026“.
+- Zdroj: [PRE – ceník ostatních provozovatelů](https://www.premobilita.cz/thmp/files/cenik-dobijeni-ostatnich-provozovatelu-od-172026/),
+  [E.ON Drive ceník 04/2026 (EV Magazín)](https://www.evmagazin.cz/eon-drive-meni-cenik-nabijeni-od-dubna-2026-950-kckwh-na-70-site-nocni-tarif-jeste-levnejsi),
+  [PRE Point tarify (Wattbox)](https://wattbox.cz/blog/zmeny-ceniku-nabijeni-duben-2026).
+- Oprava 30. 10.: openrouteservice `/geojson` vrací HTTP 406, pokud `Accept` obsahuje jen `application/json` → posílá se
+  `application/geo+json, application/json, */*`.
