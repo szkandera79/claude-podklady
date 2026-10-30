@@ -31,9 +31,11 @@ export interface Trip {
   state: { reference: { km: number; soc: number }; k_trip: number; plan: Plan };
   readings: Reading[]; plan_result: PlanResult;
 }
+export interface TariffTierSetting { from_kw: number; price: number; price_min?: number; after_min?: number; }
 export interface Tariff {
   operator: string; price: number; includes_vat: boolean; price_min?: number; session_fee?: number;
   blocking_fee_min?: number; blocking_after_min?: number; preferred: boolean; member: boolean; priority: number;
+  payment?: string; note?: string; tiers?: TariffTierSetting[];
 }
 export interface Settings {
   vehicle: { name: string; usable_kwh: number; charge_efficiency: number; mass_kg: number; extra_load_kg: number;
@@ -41,8 +43,9 @@ export interface Settings {
   energy: Record<string, number>;
   planning: { reserve_station: number; reserve_destination: number; profile: string; conservative: boolean;
               stop_overhead_min: number; value_of_time_czk_h: number; min_station_kw: number;
-              only_preferred: boolean; corridor_km: number; default_price_kwh: number };
+              only_preferred: boolean; corridor_km: number; default_price_kwh: number; prices_without_vat?: boolean };
   tariffs: Tariff[];
+  tariffs_version?: number;
 }
 export interface Calibration {
   cells: { group: string; band: number; factor: number; weight: number }[];

@@ -7,7 +7,10 @@ export function clock(offsetMin: number, from: Date = new Date()): string {
   const d = new Date(from.getTime() + offsetMin * 60000);
   return d.toLocaleTimeString("cs-CZ", { hour: "2-digit", minute: "2-digit" });
 }
-export const czk = (v: number) => `${Math.round(v).toLocaleString("cs-CZ")} Kč`;
+let priceSuffix = "";
+/** Nastaví popisek k cenám podle nastavení („bez DPH“ / „s DPH“). */
+export function setPriceBasis(withoutVat: boolean) { priceSuffix = withoutVat ? " bez DPH" : ""; }
+export const czk = (v: number) => `${Math.round(v).toLocaleString("cs-CZ")} Kč${priceSuffix}`;
 export const km = (v: number) => `${Math.round(v).toLocaleString("cs-CZ")} km`;
 
 export const VARIANT_LABEL: Record<string, string> = {

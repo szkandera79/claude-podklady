@@ -38,19 +38,59 @@ export const DEFAULT_SETTINGS: Settings = {
             batt_temp_coef: 0.006, regen_efficiency: 0.6, uncertainty: 0.08 },
   planning: { reserve_station: 10, reserve_destination: 15, profile: "standard", conservative: false, stop_overhead_min: 4,
               value_of_time_czk_h: 300, min_station_kw: 0, only_preferred: false, corridor_km: 5, default_price_kwh: 19 },
-  tariffs: [
-    { operator: "PRE", price: 10, includes_vat: false, preferred: true, member: true, priority: 1 },
-    { operator: "Lidl", price: 10, includes_vat: true, preferred: true, member: false, priority: 2 },
-    { operator: "Tesla", price: 12, includes_vat: false, preferred: true, member: false, priority: 3 },
-    { operator: "E.ON", price: 14, includes_vat: false, preferred: true, member: false, priority: 4 },
-  ],
+  tariffs: [],              // doplní DEFAULT_TARIFFS níže
 };
+
+/** Verze výchozích tarifů — při zvýšení se v telefonu nahradí uložené tarify novými (s upozorněním). */
+export const TARIFFS_VERSION = 2;
+const T = (from_kw: number, price: number, price_min = 0, after_min = 9999) => ({ from_kw, price, price_min, after_min });
+/** Ceníky 30. 10. 2026, ceny BEZ DPH. Uživatel: PRE Start (základní, bez paušálu) + E.ON Drive registrovaný.
+ *  Cizí sítě v ČR = roaming čipem PRE dle „Ceník dobíjení na stanicích ostatních provozovatelů platný od 1. 7. 2026“.
+ *  PRE: DC < 150 kW, UFC ≥ 150 kW. E.ON vlastní: pásma 0–100 / 101–200 / 201+ kW (denní sazba). */
+export const DEFAULT_TARIFFS: Settings["tariffs"] = [
+  { operator: "PRE", payment: "čip PRE – Start", includes_vat: false, preferred: true, member: true, priority: 1, price: 9.92,
+    tiers: [T(0, 9.92), T(150, 11.57)], note: "PRE Point Start: DC 12 / UFC 14 Kč s DPH" },
+  { operator: "E.ON", payment: "karta E.ON Drive – registrovaný", includes_vat: true, preferred: true, member: true, priority: 2,
+    price: 9.5, tiers: [T(0, 9.5), T(101, 13, 2, 60), T(201, 16.9, 2, 30)],
+    note: "denní sazby (noc 20–8 h levněji: 8 / 10 / 12 Kč); DPH dle článků neuvedeno — ověřte v aplikaci E.ON Drive. Čipem PRE by to bylo 14,87 / 17,36 Kč bez DPH" },
+  { operator: "Lidl", payment: "čip PRE – roaming", includes_vat: false, preferred: true, member: false, priority: 3, price: 10.91,
+    tiers: [T(0, 10.91, 0.83, 60)] },
+  { operator: "Tesla", payment: "aplikace Tesla", includes_vat: false, preferred: true, member: false, priority: 4, price: 12,
+    note: "dle vaší zkušenosti 10–12 Kč bez DPH; čipem PRE nelze" },
+  { operator: "ČEZ", payment: "čip PRE – roaming", includes_vat: false, preferred: false, member: false, priority: 10, price: 15.7,
+    tiers: [T(0, 15.7, 1.65, 60), T(150, 21.49, 1.65, 60)] },
+  { operator: "IONITY", payment: "čip PRE – roaming", includes_vat: false, preferred: false, member: false, priority: 10, price: 20.66,
+    tiers: [T(0, 20.66, 2.48, 60)] },
+  { operator: "Teplárny Brno", payment: "čip PRE – roaming", includes_vat: false, preferred: false, member: false, priority: 10,
+    price: 14.05, tiers: [T(0, 14.05, 0.83, 60), T(150, 14.87, 0.83, 60)] },
+  { operator: "Shell", payment: "čip PRE – roaming", includes_vat: false, preferred: false, member: false, priority: 10, price: 14.05,
+    tiers: [T(0, 14.05, 1.65, 45)] },
+  { operator: "Chargee", payment: "čip PRE – roaming", includes_vat: false, preferred: false, member: false, priority: 10, price: 20.66,
+    tiers: [T(0, 20.66, 1.65, 90), T(150, 22.31, 1.65, 60)] },
+  { operator: "innogy", payment: "čip PRE – roaming", includes_vat: false, preferred: false, member: false, priority: 10, price: 14.87,
+    tiers: [T(0, 14.87, 1.65, 90), T(150, 14.87, 1.65, 30)] },
+  { operator: "Orlen", payment: "čip PRE – roaming", includes_vat: false, preferred: false, member: false, priority: 10, price: 10.74,
+    tiers: [T(0, 10.74), T(150, 14.87)], note: "UFC v ceníku PRE nejednoznačné (13 Kč s DPH × 14,87 bez DPH) — počítáno s vyšší" },
+  { operator: "Smatrics", payment: "čip PRE – roaming (AT)", includes_vat: false, preferred: false, member: false, priority: 10,
+    price: 10.74, tiers: [T(0, 10.74), T(150, 12.8)] },
+  { operator: "EnBW", payment: "čip PRE – roaming (DE)", includes_vat: false, preferred: false, member: false, priority: 10,
+    price: 15.29, tiers: [T(0, 15.29, 4.13, 30)] },
+  { operator: "Greenway", payment: "čip PRE – roaming (SK, PL)", includes_vat: false, preferred: false, member: false, priority: 10,
+    price: 20.8, tiers: [T(0, 20.8, 2.48, 60), T(150, 20.66, 2.48, 60)] },
+  { operator: "ZSE", payment: "čip PRE – roaming (SK)", includes_vat: false, preferred: false, member: false, priority: 10, price: 12.4,
+    note: "UFC v ceníku PRE nejednoznačné — počítáno 12,40 Kč" },
+];
+DEFAULT_SETTINGS.tariffs = DEFAULT_TARIFFS;
+DEFAULT_SETTINGS.tariffs_version = TARIFFS_VERSION;
+DEFAULT_SETTINGS.planning.prices_without_vat = true;
 
 function merged(s: Partial<Settings> | undefined): Settings {
   const d = structuredClone(DEFAULT_SETTINGS);
   if (!s) return d;
+  const fresh = (s.tariffs_version ?? 1) < TARIFFS_VERSION;      // starší výchozí tarify → nahradit novými
   return { vehicle: { ...d.vehicle, ...(s.vehicle || {}) }, energy: { ...d.energy, ...(s.energy || {}) },
-           planning: { ...d.planning, ...(s.planning || {}) }, tariffs: s.tariffs ?? d.tariffs };
+           planning: { ...d.planning, ...(s.planning || {}) }, tariffs: fresh ? d.tariffs : s.tariffs ?? d.tariffs,
+           tariffs_version: TARIFFS_VERSION };
 }
 
 const ENERGY_MAP: Record<string, keyof EnergyParams> = {
@@ -69,11 +109,24 @@ function energyFrom(s: Settings): EnergyParams {
   for (const [k, v] of Object.entries(s.energy)) if (ENERGY_MAP[k]) (e as any)[ENERGY_MAP[k]] = +v;
   return e;
 }
+/** Převod ceny do jednotného základu: bez DPH (výchozí, uživatel je plátce DPH), nebo s DPH. */
+export function basePrice(price: number, includesVat: boolean, withoutVat: boolean): number {
+  if (withoutVat) return includesVat ? Math.round((price / 1.21) * 100) / 100 : price;
+  return withVat(price, includesVat);
+}
+
 function tariffsFrom(s: Settings): Record<string, Tariff> {
+  const net = s.planning.prices_without_vat !== false;
   const out: Record<string, Tariff> = {};
-  for (const t of s.tariffs) out[t.operator] = tariff(t.operator, withVat(+t.price, !!t.includes_vat), {
-    priceMin: +(t.price_min ?? 0), sessionFee: +(t.session_fee ?? 0), blockingFeeMin: +(t.blocking_fee_min ?? 0),
-    blockingAfterMin: +(t.blocking_after_min ?? 9999), preferred: !!t.preferred, member: !!t.member, priority: +(t.priority ?? 99) });
+  for (const t of s.tariffs) {
+    const v = !!t.includes_vat;
+    out[t.operator] = tariff(t.operator, basePrice(+t.price, v, net), {
+      priceMin: basePrice(+(t.price_min ?? 0), v, net), sessionFee: basePrice(+(t.session_fee ?? 0), v, net),
+      blockingFeeMin: basePrice(+(t.blocking_fee_min ?? 0), v, net), blockingAfterMin: +(t.blocking_after_min ?? 9999),
+      preferred: !!t.preferred, member: !!t.member, priority: +(t.priority ?? 99),
+      tiers: t.tiers?.length ? t.tiers.map((x) => ({ minKw: +x.from_kw, priceKwh: basePrice(+x.price, v, net),
+        priceMin: basePrice(+(x.price_min ?? 0), v, net), afterMin: +(x.after_min ?? 9999) })) : undefined });
+  }
   return out;
 }
 function paramsFrom(s: Settings, soc: number, over: Partial<PlanParams> = {}): PlanParams {
@@ -81,7 +134,7 @@ function paramsFrom(s: Settings, soc: number, over: Partial<PlanParams> = {}): P
   return planParams(soc, { reserveStation: +p.reserve_station, reserveDestination: +p.reserve_destination,
     profile: p.profile as DriveProfile, conservative: !!p.conservative, stopOverheadMin: +p.stop_overhead_min,
     valueOfTimeCzkH: +p.value_of_time_czk_h, minStationKw: +p.min_station_kw, onlyPreferred: !!p.only_preferred,
-    defaultPriceKwh: +p.default_price_kwh, ...Object.fromEntries(Object.entries(over).filter(([, v]) => v !== undefined)) });
+    defaultPriceKwh: basePrice(+p.default_price_kwh, true, p.prices_without_vat !== false), ...Object.fromEntries(Object.entries(over).filter(([, v]) => v !== undefined)) });
 }
 
 async function settings(): Promise<Settings> { return merged(await idbGet<Settings>("kv", "settings")); }
@@ -330,7 +383,16 @@ async function importData(json: string): Promise<number> {
   return Object.keys(d.data).length;
 }
 
+/** True, pokud uložené nastavení mělo starší tarify (pak se nahradí novými a uloží). */
+async function tariffsUpdated(): Promise<boolean> {
+  const stored = await idbGet<Settings>("kv", "settings");
+  if (!stored || (stored.tariffs_version ?? 1) >= TARIFFS_VERSION) return false;
+  await idbPut("kv", "settings", merged(stored));
+  return true;
+}
+
 export const service = {
+  tariffsUpdated,
   plan, getPlan: async (id: string) => (await loadPlan(id)).result, startTrip, trip, soc, finish,
   settings, saveSettings, resetSettings: async () => { await idbDel("kv", "settings"); return settings(); },
   calibration: calibrationView, resetCalibration: async () => { await idbDel("kv", "calibration"); return { ok: true }; },

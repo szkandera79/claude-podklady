@@ -88,9 +88,17 @@ export function station(id: string, routeKm: number, maxKw: number, extra: Parti
            isLiveStatus: false, available: null, lat: null, lon: null, address: "", notes: [], ...extra };
 }
 
+/** Cenové pásmo podle výkonu stanice (např. PRE: DC < 150 kW, UFC ≥ 150 kW; E.ON: 0–100 / 101–200 / 201+ kW). */
+export interface TariffTier {
+  minKw: number;             // platí pro stanice s výkonem ≥ minKw (do dalšího pásma)
+  priceKwh: number;
+  priceMin: number;          // Kč/min po uplynutí afterMin (blokovací / časový poplatek)
+  afterMin: number;
+}
+
 export interface Tariff {
   operator: string;
-  priceKwh: number;          // Kč/kWh s DPH
+  priceKwh: number;          // Kč/kWh v jednotném základu (s DPH, nebo bez DPH dle nastavení)
   priceMin: number;
   sessionFee: number;
   blockingFeeMin: number;
@@ -98,6 +106,14 @@ export interface Tariff {
   preferred: boolean;
   member: boolean;
   priority: number;
+  tiers?: TariffTier[];
+}
+
+/** Tarif pro konkrétní stanici: vybere pásmo podle výkonu stanice (bez pásem vrací tarif beze změny). */
+export function tariffForStation(t: Tariff | undefined, stationKw: number): Tariff | undefined {
+  if (!t?.tiers?.length) return t;
+  const tier = [...t.tiers].sort((a, b) => a.minKw - b.minKw).filter((x) => stationKw >= x.minKw).pop() ?? t.tiers[0];
+  return { ...t, priceKwh: tier.priceKwh, blockingFeeMin: tier.priceMin, blockingAfterMin: tier.priceMin ? tier.afterMin : 9999 };
 }
 
 export const withVat = (price: number, includesVat: boolean, vat = 0.21) =>

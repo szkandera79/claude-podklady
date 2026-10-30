@@ -8,7 +8,7 @@
 import { ChargeTable, chargeCost, stationChargeTable } from "./charging";
 import { CalibrationFn, RouteProfile, detourEnergy, routeProfile } from "./energy";
 import type { DriveProfile, EnergyParams, Mode, PlanParams, Route, Station, Tariff, Vehicle } from "./models";
-import { defaultEnergy } from "./models";
+import { defaultEnergy, tariffForStation } from "./models";
 
 export const SINGLE_POINT_PENALTY_MIN = 2;
 export const LOW_POWER_PENALTY_MIN = 10;
@@ -97,7 +97,7 @@ export function planRoute(route: Route, stations: Station[], v: Vehicle, p: Plan
   const cands = usableStations(stations, v, p, tariffs, startKm, endKm);
   const nodes: Node[] = [{ km: startKm, detKwh: 0, detMin: 0, detKm: 0, penaltyMin: 0, bonusMin: 0 }];
   for (const s of cands) {
-    const t = tariffs[s.operator];
+    const t = tariffForStation(tariffs[s.operator], s.maxKw);
     let pen = 0;
     if (s.points <= 1 && !s.isLiveStatus) pen += SINGLE_POINT_PENALTY_MIN;
     if (p.minStationKw && s.maxKw < p.minStationKw) pen += LOW_POWER_PENALTY_MIN;

@@ -4,6 +4,8 @@ const ALIASES: [string, string][] = [
   ["e.on", "E.ON"], ["eon", "E.ON"], ["cez", "ČEZ"], ["lidl", "Lidl"], ["kaufland", "Kaufland"],
   ["tesla", "Tesla"], ["ionity", "IONITY"], ["mol", "MOL"], ["shell", "Shell"], ["omv", "OMV"], ["orlen", "Orlen"],
   ["innogy", "innogy"], ["teplarny brno", "Teplárny Brno"], ["chargee", "Chargee"],
+  ["greenway", "Greenway"], [" zse", "ZSE"], ["smatrics", "Smatrics"], ["enbw", "EnBW"], [" petrol ", "Petrol"],
+  [" hep ", "HEP"], ["enel", "Enel X"],
 ];
 const plain = (s: string) => " " + s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().trim() + " ";
 
