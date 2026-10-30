@@ -138,7 +138,8 @@ def route_ors(waypoints: Sequence[Tuple[float, float]]) -> RouteResult:
     last = None
     for url in ORS_URLS:
         try:
-            data = request_json(url, body=body, headers={"Authorization": key}, timeout=20,
+            data = request_json(url, body=body, headers={"Authorization": key,
+                                                         "Accept": "application/geo+json, application/json, */*"}, timeout=20,
                                 cache_kind="ors", ttl_s=TTL_S)
             return parse_ors(data)
         except SourceError as e:

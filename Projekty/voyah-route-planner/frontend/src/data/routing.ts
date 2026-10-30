@@ -84,7 +84,8 @@ async function routeOrs(wps: LatLon[], key?: string): Promise<RouteResult> {
   try {
     const data = await requestJson(ORS_URL, {
       body: { coordinates: wps.map(([la, lo]) => [lo, la]), elevation: true, extra_info: ["waycategory", "waytype", "countryinfo"], instructions: true },
-      headers: { Authorization: key }, timeoutS: 25, cacheKind: "ors", ttlS: TTL_S });
+      headers: { Authorization: key, Accept: "application/geo+json, application/json, */*" }, timeoutS: 25,
+      cacheKind: "ors", ttlS: TTL_S });   // ORS /geojson vrací 406 při Accept jen application/json
     return parseOrs(data);
   } catch (e) {
     try { localStorage.setItem(ORS_DOWN_KEY, String(Date.now())); } catch { /* */ }

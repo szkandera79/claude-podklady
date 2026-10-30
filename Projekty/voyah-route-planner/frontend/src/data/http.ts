@@ -36,7 +36,7 @@ export async function requestJson<T = any>(url: string, o: RequestOpts = {}): Pr
   }
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), (o.timeoutS ?? 30) * 1000);
-  const headers: Record<string, string> = { Accept: "application/json", ...(o.headers || {}) };
+  const headers: Record<string, string> = { Accept: "application/json, */*", ...(o.headers || {}) };
   let body: BodyInit | undefined;
   if (o.body !== undefined) {
     if (o.form) {
