@@ -42,7 +42,7 @@ CLAUDE.md** a drž se pravidel tam uvedených.
 | `marketing/` | oslovení SVJ (e‑maily, leady CZT, tracker), Google Ads / PPC, grafika |
 | `claude-voice-cz/` | **kopie** projektu hlasového asistenta pro iPhone; hlavní verze je v `~/Developer/ClaudeVoiceCZ` |
 | `reo-crm/` | vlastní CRM REO HEATING (leady FB/IG z Google Drive, fáze, schůzky, faktury); artefakt LnRFiysRw114a2LJbqid6P; vlastní **CLAUDE.md** (data = osobní údaje, mimo git) |
-| `voyah-route-planner/` | osobní plánovač tras a nabíjení pro Voyah Free (PWA + FastAPI); zatím analýza `ANALYZA.md`, čeká na schválení |
+| `voyah-route-planner/` | osobní plánovač tras a nabíjení pro Voyah Free (PWA + FastAPI); jádro (energie, nabíjení, optimalizace) hotové + testy; další krok data + PWA |
 | `REO/` | značka REO HEATING — návody, datové listy, katalogy, letáky, prezentace, web `reoheating-web/` |
 | `banner-generator/` | generátor reklamních bannerů (ThermaVera / REO HEATING / SuperHeating), Gemini API — klíč jen v `.env.local` (není v gitu) |
 | `BD Michal Claude/` | podklady k bytovému domu Michal (PDF, smlouvy) |

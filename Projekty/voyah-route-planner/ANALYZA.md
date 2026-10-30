@@ -1,6 +1,6 @@
 # Voyah Smart Route Planner — analýza a návrh (Etapa 1–2)
 
-Stav: **návrh ke schválení** · 30. 10. 2026 · nic se zatím neprogramuje.
+Stav: **schváleno 30. 10. 2026** · implementace viz [ARCHITEKTURA.md](ARCHITEKTURA.md).
 
 Legenda ověření: ✅ ověřeno ze zdroje · ⚠️ nejednotné / odhad · ❓ neověřeno, nutno doplnit.
 
@@ -99,12 +99,12 @@ Přímé dlaždice tile.openstreetmap.org pro aplikace nepoužívat (zásady už
 
 **Nabíjecí křivka** se zadává jako tabulka bodů *(SoC %, max. výkon kW)* s lineární interpolací. Výchozí:
 
-| SoC | 0 | 10 | 80 | 82 | 90 | 95 | 100 |
+| SoC | 0 | 10 | 80 | 81 | 90 | 91 | 100 |
 |---|---|---|---|---|---|---|---|
-| kW | 60 ❓ | 89 ✅ | 89 ✅ | 45 ❓ | 40 | 20 ❓ | 7 ❓ |
+| kW | 60 ❓ | 89 ✅ | 89 ✅ | 40 ✅ | 40 ✅ | 20 ✅ | 20 ✅ |
 
-Pásmo 10–80 % = 89 kW (vaše zkušenost + záznam PRE). Body s ❓ jsou dočasné předpoklady — nejcennější další
-měření je **jedno nabíjení přes 80 % až k ~95 %** s fotkou displeje po každých ~5 %. Čas nabíjení:
+10–80 % = 89 kW (vaše zkušenost + záznam PRE), 80–90 % = 40 kW, nad 90 % ≈ 20 kW (vaše zkušenost 30. 10.).
+Výsledné časy (stanice ≥ 89 kW): 10→80 % ≈ 50 min, 80→90 % ≈ 15 min, 90→100 % ≈ 31 min. Čas nabíjení:
 
 ```
 t = Σ přes kroky 1 % SoC:  ΔE / P(SoC)      kde ΔE = 1 % × využitelná kapacita / η_nabíjení
@@ -386,12 +386,11 @@ tarify PRE / Lidl / Tesla / E.ON (kap. 6.1) · pronájem serveru (VPS) schválen
 Zbývá (nic z toho neblokuje start etapy 2):
 
 1. **Zimní zkušenost**, i hrubá: spotřeba na dálnici / silnici kolem 0 °C a −10 °C (palubní dojezd v lednu naznačuje ~35 kWh/100 km).
-2. **Nabíjení nad 80 %:** při příští příležitosti dobít k ~95 % a vyfotit displej po ~5 %.
-3. Umí vůz **předehřev baterie** před nabíjením?
-4. **Typické trasy** a země (jen ČR + okolí, nebo i Chorvatsko/Itálie) — ovlivní objem dat nabíječek.
-5. Hmotnost: typicky kolik osob/zavazadel, tažné zařízení?
-6. Doména (volitelné, ~300 Kč/rok), nebo stačí adresa serveru.
-7. Potvrzení stacku (React+TS PWA + FastAPI + SQLite) a rozsahu MVP dle kap. 12.
+2. Umí vůz **předehřev baterie** před nabíjením?
+3. **Typické trasy** a země (jen ČR + okolí, nebo i Chorvatsko/Itálie) — ovlivní objem dat nabíječek.
+4. Hmotnost: typicky kolik osob/zavazadel, tažné zařízení?
+5. Doména (volitelné, ~300 Kč/rok), nebo stačí adresa serveru.
+6. Potvrzení stacku (React+TS PWA + FastAPI + SQLite) a rozsahu MVP dle kap. 12.
 
 ## Zdroje
 
