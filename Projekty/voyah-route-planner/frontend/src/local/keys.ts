@@ -48,3 +48,18 @@ export function consumeSetupLink(): boolean {
   setKeys({ ...getKeys(), ...k });
   return true;
 }
+
+/** Jen pro lokální náhled na Macu (localhost): klíče ze souboru, který do kopie mimo iCloud zapisuje
+ *  scripts/sync-runtime.sh. Na veřejném webu soubor neexistuje a funkce se ani nezavolá. */
+export async function loadLocalDevKeys(): Promise<boolean> {
+  if (!["localhost", "127.0.0.1"].includes(location.hostname)) return false;
+  const cur = getKeys();
+  if (cur.ors && cur.ocm) return false;
+  try {
+    const r = await fetch("/local-keys.json", { cache: "no-store" });
+    if (!r.ok) return false;
+    const k = (await r.json()) as ApiKeys;
+    setKeys({ ors: cur.ors || k.ors, ocm: cur.ocm || k.ocm });
+    return !!(k.ors || k.ocm);
+  } catch { return false; }
+}

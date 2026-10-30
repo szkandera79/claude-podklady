@@ -50,6 +50,15 @@ jen z OpenStreetMap.
 Nastavení, cesty a kalibrace jsou jen v telefonu (IndexedDB). **Nastavení → Záloha dat → Stáhnout zálohu**
 (uložit do Souborů / iCloudu); obnova tamtéž. Smazání dat Safari = ztráta kalibrace, proto zálohovat.
 
+## Klíče na dalších zařízeních
+
+Každá kopie aplikace má vlastní úložiště (Safari ≠ aplikace na ploše iPhonu ≠ aplikace v Docku Macu). Klíče se do ní dostanou:
+- **iPhone (aplikace na ploše):** Nastavení → 📷 Naskenovat QR kód s klíči (QR: `node scripts/setup-link.mjs <URL>`).
+- **Mac (prohlížeč / Dock):** `node scripts/setup-link.mjs <URL> --schranka` → v aplikaci Nastavení → vložit nastavovací odkaz → Uložit; nebo `--otevrit` (otevře odkaz ve výchozím prohlížeči).
+- **Lokální náhled (localhost):** automaticky — `sync-runtime.sh` zapíše `local-keys.json` jen do kopie mimo iCloud
+  (práva 600), aplikace ho čte jen na localhost; server poslouchá jen na 127.0.0.1 (z Wi-Fi nedostupný).
+  Ve `frontend/dist` ani ve složce pro Netlify soubor nikdy není.
+
 ## Lokální náhled (vývoj)
 
 ```bash
