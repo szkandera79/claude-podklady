@@ -50,6 +50,8 @@ export function entryState(e: PriceEntry, l: PriceList): { label: string; ok: bo
 
 /** Výkonová pásma ceníku → pásma tarifu planneru (jen DC/HPC; Voyah plánuje jen rychlonabíjení). */
 export function tariffTiers(e: PriceEntry): { from_kw: number; price: number; price_min: number; after_min: number }[] {
-  return e.tiers.filter((t) => t.kind !== "AC").sort((a, b) => a.from_kw - b.from_kw)
+  const all = e.tiers.filter((t) => t.kind !== "AC").sort((a, b) => a.from_kw - b.from_kw)
     .map((t, i) => ({ from_kw: i === 0 ? 0 : t.from_kw, price: t.price, price_min: t.price_min || 0, after_min: t.after_min ?? 9999 }));
+  // DC a HPC za stejnou cenu = jedno pásmo (jinak by to vypadalo jako změna ceny)
+  return all.filter((t, i) => i === 0 || t.price !== all[i - 1].price || t.price_min !== all[i - 1].price_min || t.after_min !== all[i - 1].after_min);
 }

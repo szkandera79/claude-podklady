@@ -23,6 +23,7 @@ export interface RequestOpts {
   timeoutS?: number;
   cacheKind?: string;
   ttlS?: number;
+  referrerPolicy?: ReferrerPolicy;     // Nominatim chce identifikaci aplikace (stačí origin)
 }
 
 export async function requestJson<T = any>(url: string, o: RequestOpts = {}): Promise<T> {
@@ -49,7 +50,7 @@ export async function requestJson<T = any>(url: string, o: RequestOpts = {}): Pr
   }
   let data: T;
   try {
-    const r = await fetch(full, { method: body ? "POST" : "GET", headers, body, signal: ctrl.signal });
+    const r = await fetch(full, { method: body ? "POST" : "GET", headers, body, signal: ctrl.signal, referrerPolicy: o.referrerPolicy });
     if (!r.ok) throw new SourceError(`${host}: HTTP ${r.status}`);
     data = (await r.json()) as T;
   } catch (e) {

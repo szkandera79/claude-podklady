@@ -6,6 +6,7 @@
 import type { Route } from "../core/models";
 import { Polyline, type LatLon } from "./geo";
 import { requestJson } from "./http";
+import { nominatimCountry } from "./nominatim";
 
 export interface TollOption { label: string; price: number; currency: "EUR" | "HUF" | "CHF" | "PLN" | "CZK"; }
 export interface TollRule {
@@ -78,9 +79,13 @@ const STEP_KM = 40;
 const REFINE_KM = 4;
 
 async function countryAt([lat, lon]: LatLon): Promise<string> {
-  const d = await requestJson("https://photon.komoot.io/reverse", {
-    params: { lat: lat.toFixed(2), lon: lon.toFixed(2), limit: 1 }, timeoutS: 15, cacheKind: "rev", ttlS: CACHE_TTL_S });
-  return (d.features?.[0]?.properties?.countrycode || "").toUpperCase();
+  try {
+    const d = await requestJson("https://photon.komoot.io/reverse", {
+      params: { lat: lat.toFixed(2), lon: lon.toFixed(2), limit: 1 }, timeoutS: 10, cacheKind: "rev", ttlS: CACHE_TTL_S });
+    return (d.features?.[0]?.properties?.countrycode || "").toUpperCase();
+  } catch {
+    return nominatimCountry(lat, lon);        // výpadek Photonu → Nominatim (pomaleji, 1 dotaz/s)
+  }
 }
 
 /** Země podél trasy s délkou celkem a po dálnici/rychlostní silnici. Vzorky po 40 km, u hranic zjemnění na ~4 km. */

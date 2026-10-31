@@ -782,7 +782,10 @@ export function applyPriceList(s: Settings, list: PriceList): { settings: Settin
     if (!tiers.length) continue;
     const next = { ...t, tiers, price: tiers[0].price, includes_vat: false };
     if (tierSig(next) === tierSig(t)) continue;
-    changes.push(`${t.operator}: ${(t.tiers?.length ? t.tiers.map((x) => x.price) : [t.price]).join(" / ")} → ${tiers.map((x) => x.price).join(" / ")} Kč/kWh bez DPH`);
+    const was = (t.tiers?.length ? t.tiers.map((x) => x.price) : [t.price]).join(" / ");
+    const now = tiers.map((x) => x.price).join(" / ");
+    // upozornit jen na změnu ceny za kWh; doplněné poplatky / pásma se převezmou tiše
+    if (was !== now || !!t.includes_vat) changes.push(`${t.operator}: ${was}${t.includes_vat ? " s DPH" : ""} → ${now} Kč/kWh bez DPH`);
     Object.assign(t, next);
   }
   return { settings: out, changes };

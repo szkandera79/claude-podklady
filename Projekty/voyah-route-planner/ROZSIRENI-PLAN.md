@@ -182,3 +182,6 @@ Odhad: několik pracovních sezení; každá etapa končí funkční verzí k na
   balík nyní 101 dlaždic / 112 pokrytých, ~1,2 MB. Plán Vendryně → Budapešť 1,5 s (dřív 93 s živým Overpassem), → Zagreb 2,2 s.
 - Výběr místa: obec a stejnojmenný kraj/župa do 30 km se slučují (Budapest město × župa už se nenabízí jako dvě místa).
 - Omezení: Photon nezná české exonymy („Záhřeb“, „Lublaň“) — zadávejte místní název (Zagreb, Ljubljana).
+- Výpadek Photonu (31. 10. odpoledne, „photon.komoot.io: nedostupné“): geokódování i země pro mýtné mají zálohu Nominatim (OSM, 1 dotaz/s,
+  zná české exonymy — „Řím“, „Záhřeb“). Nominatim se použije i tehdy, když Photon obec daného jména nenajde.
+- Hlášení „Ceník se změnil“ už se neukazuje, když se cena za kWh nezměnila (DC a HPC za stejnou cenu se slučují do jednoho pásma).
