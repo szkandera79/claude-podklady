@@ -152,3 +152,32 @@ export async function planGeometry(wps: LatLon[], orsKey?: string): Promise<Rout
     return r;
   }
 }
+
+export interface RoadLeg { km: number; min: number; }
+/** Silniční vzdálenost a čas z jednoho bodu k více cílům (1 dotaz): ORS matrix → OSRM table → null (offline). */
+export async function roadMatrix(from: LatLon, to: LatLon[], orsKey?: string): Promise<{ legs: (RoadLeg | null)[]; source: string } | null> {
+  if (!to.length) return { legs: [], source: "" };
+  const locs = [from, ...to];
+  if (orsKey) {
+    try {
+      const d = await requestJson("https://api.openrouteservice.org/v2/matrix/driving-car", {
+        body: { locations: locs.map(([la, lo]) => [lo, la]), sources: [0], destinations: to.map((_, i) => i + 1),
+                metrics: ["distance", "duration"], units: "km" },
+        headers: { Authorization: orsKey }, timeoutS: 20, cacheKind: "orsm", ttlS: 3600 });
+      return { source: "openrouteservice", legs: to.map((_, i) => {
+        const km = d.distances?.[0]?.[i], s = d.durations?.[0]?.[i];
+        return km == null || s == null ? null : { km, min: s / 60 };
+      }) };
+    } catch { /* záloha */ }
+  }
+  try {
+    const coords = locs.map(([la, lo]) => `${lo.toFixed(6)},${la.toFixed(6)}`).join(";");
+    const d = await requestJson(`https://router.project-osrm.org/table/v1/driving/${coords}`, {
+      params: { sources: 0, annotations: "distance,duration" }, timeoutS: 20, cacheKind: "osrmt", ttlS: 3600 });
+    if (d.code !== "Ok") return null;
+    return { source: "OSRM", legs: to.map((_, i) => {
+      const m = d.distances?.[0]?.[i + 1], s = d.durations?.[0]?.[i + 1];
+      return m == null || s == null ? null : { km: m / 1000, min: s / 60 };
+    }) };
+  } catch { return null; }
+}

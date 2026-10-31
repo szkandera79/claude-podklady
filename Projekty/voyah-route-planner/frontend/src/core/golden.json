@@ -195,23 +195,18 @@
    "soc": 90,
    "conservative": false,
    "feasible": true,
-   "total_min": 331.85653,
-   "cost": 1072.736842,
+   "total_min": 334.498753,
+   "cost": 1046.210526,
    "arrival_soc": 15,
    "stops": [
     [
-     "A",
-     63,
-     80
-    ],
-    [
      "B",
-     65,
-     81
+     48,
+     76
     ],
     [
      "D",
-     15,
+     10,
      69
     ]
    ],

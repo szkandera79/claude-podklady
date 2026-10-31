@@ -59,6 +59,20 @@ Každá kopie aplikace má vlastní úložiště (Safari ≠ aplikace na ploše 
   (práva 600), aplikace ho čte jen na localhost; server poslouchá jen na 127.0.0.1 (z Wi-Fi nedostupný).
   Ve `frontend/dist` ani ve složce pro Netlify soubor nikdy není.
 
+## Sestavení pro Netlify a ceníky
+
+```bash
+voyah-route-planner/scripts/deploy-netlify.sh
+```
+
+Sestaví aplikaci, ověří, že v ní nejsou klíče, a připraví `~/voyah-netlify` + `~/voyah-netlify.zip`.
+Automatické nasazení: v `~/.config/voyah-route-planner/.env` doplnit `NETLIFY_AUTH_TOKEN=` (app.netlify.com → User settings →
+Applications → Personal access tokens) a `NETLIFY_SITE_ID=` (Project configuration → Project ID). Bez nich zip nahrát ručně.
+
+Ceník nabíjení: zdrojová data `backend/tools/ceniky_zdroj.py` → `python3 backend/tools/ceniky_zdroj.py`.
+Denní kontrola zdrojů: `scripts/install-ceniky-launchd.sh` (launchd 6:30, běží nad `~/voyah-netlify`, log `~/Library/Logs/voyah-ceniky.log`).
+Artefakt na claude.ai (rozcestník + ceník): `python3 scripts/build-artifact.py` → `artefakt/voyah-trasy.html` → publikovat přes Clauda.
+
 ## Lokální náhled (vývoj)
 
 ```bash

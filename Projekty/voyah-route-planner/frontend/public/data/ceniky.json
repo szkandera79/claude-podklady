@@ -1,0 +1,1155 @@
+{
+ "generated": "2026-10-31",
+ "stale_after_days": 30,
+ "currency_note": "ceny bez DPH v Kč; u cizích měn přepočet orientační",
+ "sources": {
+  "pre-point": {
+   "name": "PRE – Ceník dobíjení v síti PRE POINT (platný od 1. 12. 2025)",
+   "url": "https://www.pre.cz/Files/emobilita/cenik/cenik-dobijeni-v-siti-pre-point-aktualne-platny/",
+   "kind": "pdf",
+   "checked": "2026-10-31",
+   "changed": null,
+   "fingerprint": "4a360e614f6de08f"
+  },
+  "pre-roaming": {
+   "name": "PRE – Ceník dobíjení na stanicích ostatních provozovatelů (platný od 1. 7. 2026)",
+   "url": "https://www.pre.cz/Files/emobilita/cenik/cenik-dobijeni-na-stanicich-ostatnich-provozovatelu-aktualne-platny/",
+   "kind": "pdf",
+   "checked": "2026-10-31",
+   "changed": null,
+   "fingerprint": "d1150e5c7b4558ca"
+  },
+  "pre-adhoc": {
+   "name": "PRE – Jednorázové dobíjení (web)",
+   "url": "https://www.pre.cz/cs/domacnosti/emobilita/verejne-dobijeni/chci-dobijet-jednorazove/",
+   "kind": "html",
+   "checked": "2026-10-31",
+   "changed": null,
+   "fingerprint": "332dfd0299f84d6a"
+  },
+  "eon-clanek": {
+   "name": "EV Magazín – E.ON Drive mění ceník od dubna 2026 (článek, ne oficiální ceník)",
+   "url": "https://www.evmagazin.cz/eon-drive-meni-cenik-nabijeni-od-dubna-2026-950-kckwh-na-70-site-nocni-tarif-jeste-levnejsi",
+   "kind": "html",
+   "checked": "2026-10-31",
+   "changed": null,
+   "fingerprint": "ec3ae89dd8226416"
+  }
+ },
+ "entries": [
+  {
+   "id": "pre-start",
+   "operator": "PRE",
+   "country": "CZ",
+   "region": "",
+   "payment": "čip PRE",
+   "plan": "PRE CHARGE START (bez poplatku)",
+   "membership": true,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 7.44,
+     "price_min": 0.83,
+     "after_min": 180
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 9.91,
+     "price_min": 1.65,
+     "after_min": 60
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 11.57,
+     "price_min": 1.65,
+     "after_min": 30
+    }
+   ],
+   "source": "pre-point",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": "váš tarif"
+  },
+  {
+   "id": "pre-silver",
+   "operator": "PRE",
+   "country": "CZ",
+   "region": "",
+   "payment": "čip PRE",
+   "plan": "PRE CHARGE SILVER",
+   "membership": true,
+   "fee_month": 123.97,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 6.61,
+     "price_min": 0.41,
+     "after_min": 180
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 9.09,
+     "price_min": 0.83,
+     "after_min": 60
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 10.74,
+     "price_min": 1.65,
+     "after_min": 30
+    }
+   ],
+   "source": "pre-point",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pre-gold",
+   "operator": "PRE",
+   "country": "CZ",
+   "region": "",
+   "payment": "čip PRE",
+   "plan": "PRE CHARGE GOLD (jen zákazníci energií PRE)",
+   "membership": true,
+   "fee_month": 123.97,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 5.79,
+     "price_min": 0.41,
+     "after_min": 180
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 8.26,
+     "price_min": 0.83,
+     "after_min": 60
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 9.92,
+     "price_min": 1.65,
+     "after_min": 30
+    }
+   ],
+   "source": "pre-point",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pre-adhoc",
+   "operator": "PRE",
+   "country": "CZ",
+   "region": "",
+   "payment": "platba kartou (QR)",
+   "plan": "jednorázově bez registrace",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 8.26,
+     "price_min": 0.83,
+     "after_min": 180
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 10.74,
+     "price_min": 1.65,
+     "after_min": 60
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 12.4,
+     "price_min": 1.65,
+     "after_min": 30
+    }
+   ],
+   "source": "pre-adhoc",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "eon-drive",
+   "operator": "E.ON",
+   "country": "CZ",
+   "region": "",
+   "payment": "aplikace / karta E.ON Drive",
+   "plan": "registrovaný (denní sazba 8–20 h)",
+   "membership": true,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "DC",
+     "from_kw": 0,
+     "to_kw": 100,
+     "price": 9.5,
+     "price_min": 0.0,
+     "after_min": null
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 101,
+     "to_kw": 200,
+     "price": 13,
+     "price_min": 2,
+     "after_min": 60
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 201,
+     "to_kw": null,
+     "price": 16.9,
+     "price_min": 2,
+     "after_min": 30
+    }
+   ],
+   "source": "eon-clanek",
+   "verified": "2026-10-31",
+   "status": "neověřeno",
+   "note": "z článku, ne z oficiálního ceníku; není jisté, zda jsou ceny s DPH; noc 20–8 h: 8 / 10 / 12 Kč"
+  },
+  {
+   "id": "pr-eon",
+   "operator": "E.ON",
+   "country": "CZ",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 10.74,
+     "price_min": 1.65,
+     "after_min": 360
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 14.87,
+     "price_min": 2.48,
+     "after_min": 60
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 17.36,
+     "price_min": 3.31,
+     "after_min": 45
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-cez",
+   "operator": "ČEZ",
+   "country": "CZ",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 9.92,
+     "price_min": 1.65,
+     "after_min": 180
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 15.7,
+     "price_min": 1.65,
+     "after_min": 60
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 21.49,
+     "price_min": 1.65,
+     "after_min": 60
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-ionity",
+   "operator": "IONITY",
+   "country": "EU",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 20.66,
+     "price_min": 2.48,
+     "after_min": 60
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 20.66,
+     "price_min": 2.48,
+     "after_min": 60
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": "platí v ČR i v Evropě"
+  },
+  {
+   "id": "pr-lidl",
+   "operator": "Lidl",
+   "country": "CZ",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 8.43,
+     "price_min": 0,
+     "after_min": null
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 10.91,
+     "price_min": 0.83,
+     "after_min": 60
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-teplarny",
+   "operator": "Teplárny Brno",
+   "country": "CZ",
+   "region": "Brno",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming (síť Chargee)",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 9.5,
+     "price_min": 0.83,
+     "after_min": 240
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 14.05,
+     "price_min": 0.83,
+     "after_min": 60
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 14.87,
+     "price_min": 0.83,
+     "after_min": 60
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-shell",
+   "operator": "Shell",
+   "country": "CZ",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 14.05,
+     "price_min": 1.65,
+     "after_min": 45
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 14.05,
+     "price_min": 1.65,
+     "after_min": 45
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-chargee",
+   "operator": "Chargee",
+   "country": "CZ",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 16.53,
+     "price_min": 1.65,
+     "after_min": 480
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 20.66,
+     "price_min": 1.65,
+     "after_min": 90
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 22.31,
+     "price_min": 1.65,
+     "after_min": 60
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-innogy",
+   "operator": "innogy",
+   "country": "CZ",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 9.09,
+     "price_min": 1.65,
+     "after_min": 480
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 14.87,
+     "price_min": 1.65,
+     "after_min": 90
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 14.87,
+     "price_min": 1.65,
+     "after_min": 30
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-orlen",
+   "operator": "Orlen",
+   "country": "CZ",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 10.74,
+     "price_min": 0,
+     "after_min": null
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 10.74,
+     "price_min": 0,
+     "after_min": null
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 14.87,
+     "price_min": 0,
+     "after_min": null
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": "UFC v ceníku PRE nejednoznačné (13 Kč s DPH × 14,87 bez DPH) — uvedena vyšší"
+  },
+  {
+   "id": "pr-prcm",
+   "operator": "P+R Černý Most",
+   "country": "CZ",
+   "region": "Praha",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 6.61,
+     "price_min": 0.41,
+     "after_min": 720
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-enbw",
+   "operator": "EnBW",
+   "country": "DE",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 11.16,
+     "price_min": 2.07,
+     "after_min": 120
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 15.29,
+     "price_min": 4.13,
+     "after_min": 30
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 15.29,
+     "price_min": 4.13,
+     "after_min": 30
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-smatrics",
+   "operator": "Smatrics",
+   "country": "AT",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 8.6,
+     "price_min": 0,
+     "after_min": null
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 10.74,
+     "price_min": 0,
+     "after_min": null
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 12.8,
+     "price_min": 0,
+     "after_min": null
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-greenway",
+   "operator": "Greenway",
+   "country": "SK",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming (SK, PL, HR)",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 13.22,
+     "price_min": 2.48,
+     "after_min": 240
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 20.8,
+     "price_min": 2.48,
+     "after_min": 60
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 20.66,
+     "price_min": 2.48,
+     "after_min": 60
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": "platí i v Polsku a Chorvatsku"
+  },
+  {
+   "id": "pr-zse",
+   "operator": "ZSE",
+   "country": "SK",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 7.44,
+     "price_min": 0,
+     "after_min": null
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 12.4,
+     "price_min": 0,
+     "after_min": null
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 12.4,
+     "price_min": 0,
+     "after_min": null
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": "UFC v ceníku PRE nejednoznačné (15 Kč s DPH × 10,74 bez DPH) — uvedena vyšší"
+  },
+  {
+   "id": "pr-enelx",
+   "operator": "Enel X",
+   "country": "IT",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 16.45,
+     "price_min": 2.07,
+     "after_min": 60
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 16.45,
+     "price_min": 4.13,
+     "after_min": 60
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-hep",
+   "operator": "HEP",
+   "country": "HR",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 12.64,
+     "price_min": 0,
+     "after_min": null
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 17.6,
+     "price_min": 0,
+     "after_min": null
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 23.88,
+     "price_min": 0,
+     "after_min": null
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-petrol",
+   "operator": "Petrol",
+   "country": "SI",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming (HR, SI)",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 10.1,
+     "price_min": 0,
+     "after_min": null
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 22.7,
+     "price_min": 0,
+     "after_min": null
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 25.61,
+     "price_min": 0,
+     "after_min": null
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": "platí i v Chorvatsku"
+  },
+  {
+   "id": "pr-chargepoint",
+   "operator": "ChargePoint",
+   "country": "EU",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 14.46,
+     "price_min": 0.83,
+     "after_min": 60
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 14.46,
+     "price_min": 0.83,
+     "after_min": 60
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 14.46,
+     "price_min": 0.83,
+     "after_min": 60
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-lidl-hr",
+   "operator": "Lidl",
+   "country": "HR",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 8.68,
+     "price_min": 0,
+     "after_min": null
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 11.15,
+     "price_min": 0,
+     "after_min": null
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-kaufland-hr",
+   "operator": "Kaufland",
+   "country": "HR",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 8.68,
+     "price_min": 0,
+     "after_min": null
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 11.15,
+     "price_min": 0,
+     "after_min": null
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "pr-eon-eu",
+   "operator": "E.ON",
+   "country": "DE",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming (D, A, PL, IT, H, NL, DK, RO, SE)",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 14.79,
+     "price_min": 2.48,
+     "after_min": 240
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 17.27,
+     "price_min": 4.13,
+     "after_min": 45
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 19.75,
+     "price_min": 4.13,
+     "after_min": 45
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": "E.ON Drive Infrastructure v 9 zemích"
+  },
+  {
+   "id": "pr-shell-eu",
+   "operator": "Shell",
+   "country": "DE",
+   "region": "",
+   "payment": "čip PRE – roaming",
+   "plan": "roaming (D, PL, SK, H, FR, NL, GB)",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "AC",
+     "from_kw": 0,
+     "to_kw": 49,
+     "price": 19.01,
+     "price_min": 1.65,
+     "after_min": 45
+    },
+    {
+     "kind": "DC",
+     "from_kw": 50,
+     "to_kw": 149,
+     "price": 19.01,
+     "price_min": 1.65,
+     "after_min": 45
+    },
+    {
+     "kind": "HPC",
+     "from_kw": 150,
+     "to_kw": null,
+     "price": 19.01,
+     "price_min": 1.65,
+     "after_min": 45
+    }
+   ],
+   "source": "pre-roaming",
+   "verified": "2026-10-31",
+   "status": "ověřeno",
+   "note": ""
+  },
+  {
+   "id": "tesla",
+   "operator": "Tesla",
+   "country": "EU",
+   "region": "",
+   "payment": "aplikace Tesla",
+   "plan": "Supercharger pro jiné vozy",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [
+    {
+     "kind": "HPC",
+     "from_kw": 0,
+     "to_kw": null,
+     "price": 12.0,
+     "price_min": 0.0,
+     "after_min": null
+    }
+   ],
+   "source": "",
+   "verified": "",
+   "status": "neověřeno",
+   "note": "cena se liší podle stanice a času; jen v aplikaci Tesla — dle vaší zkušenosti 10–12 Kč bez DPH"
+  },
+  {
+   "id": "cez-app",
+   "operator": "ČEZ",
+   "country": "CZ",
+   "region": "",
+   "payment": "aplikace ČEZ",
+   "plan": "vlastní síť ČEZ",
+   "membership": false,
+   "fee_month": 0.0,
+   "currency": "CZK",
+   "vat_included": false,
+   "tiers": [],
+   "source": "",
+   "verified": "",
+   "status": "neověřeno",
+   "note": "oficiální ceník ČEZ zatím neověřen — doplňte ručně, nebo použijte čip PRE (roaming)"
+  }
+ ],
+ "checked": "2026-10-31"
+}

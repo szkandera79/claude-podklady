@@ -20,6 +20,7 @@ SINGLE_POINT_PENALTY_MIN = 2.0      # riziko obsazení stanice s jediným bodem
 LOW_POWER_PENALTY_MIN = 10.0        # stanice pod uživatelskou preferencí výkonu (měkké omezení)
 CHEAPEST_VOT_CZK_H = 30.0           # „Nejlevnější" stále mírně hlídá čas, aby nevznikaly absurdní objížďky
 TIEBREAK_PER_SOC = 1e-3             # min na % příjezdového SoC
+BONUS_CAP_OF_OVERHEAD = 0.75        # bonus nesmí vytvořit zbytečnou zastávku navíc
 
 
 @dataclass
@@ -120,6 +121,7 @@ def plan_route(route: Route, stations: Sequence[Station], vehicle: Vehicle, para
             pen += LOW_POWER_PENALTY_MIN
         bonus = params.preferred_bonus_min / max(t.priority, 1) \
             if params.mode == Mode.BALANCED and t is not None and t.preferred else 0.0
+        bonus = min(bonus, BONUS_CAP_OF_OVERHEAD * params.stop_overhead_min)
         nodes.append(_Node(
             s.route_km, s, detour_energy(s.detour_km, vehicle, energy) * mult, s.detour_min, s.detour_km,
             station_charge_table(vehicle, s, params.battery_temp_c), t, pen, bonus,

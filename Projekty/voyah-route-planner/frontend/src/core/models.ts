@@ -162,11 +162,16 @@ export interface PlanParams {
   defaultPriceKwh: number;
   batteryTempC: number | null;
   energyFactor: number;
+  idealKwMin: number;        // ideální výkon stanice (Voyah ~89 kW) — jemný bonus ve vyváženém režimu
+  idealKwMax: number;
+  idealBonusMin: number;     // 0 = vypnuto
+  maxDetourKm: number;       // stanice s delší zajížďkou se nepoužijí
 }
 
 export function planParams(startSoc: number, extra: Partial<PlanParams> = {}): PlanParams {
   return { startSoc, reserveStation: 10, reserveDestination: 15, profile: "standard", mode: "nejrychlejsi",
            conservative: false, stopOverheadMin: 4, valueOfTimeCzkH: 300, preferredBonusMin: 5,
            onlyPreferred: false, minStationKw: 0, defaultPriceKwh: 19, batteryTempC: null, energyFactor: 1,
+           idealKwMin: 75, idealKwMax: 100, idealBonusMin: 0, maxDetourKm: 99,
            ...extra };
 }

@@ -1,6 +1,6 @@
 # Rozšíření VOYAH TRASY — analýza a implementační plán (31. 10. 2026)
 
-Stav: **návrh ke schválení** (fáze A + B). Kód zatím nebyl měněn.
+Stav: **schváleno a implementováno 31. 10. 2026** — výsledná zpráva (fáze E) na konci dokumentu.
 
 ## A. Analýza současného stavu
 
@@ -101,6 +101,10 @@ Nové: preferované výkonové rozmezí (75–100 kW), max. zajížďka, hranice
 - Sestavení `dist` je statické (JS + balík nabíječek ~0,4 MB) → limit 16 MB vyhovuje; publikace skriptem po každém sestavení.
 - **Nutno nejdřív ověřit:** zda stránka artefaktu smí volat externí služby (openrouteservice, Overpass, Open Charge Map, Open-Meteo, Photon, mapové dlaždice) a používat GPS; service worker tam nejspíš nepůjde (offline režim jen na Netlify verzi). Pokud by síťová volání blokovala, varianta = artefakt jen jako rozcestník/ceník a plánovač dál na Netlify.
 - Klíče: stejně jako dnes jen v úložišti zařízení (nastavovacím odkazem / QR), nikdy v artefaktu.
+- **Výsledek ověření (31. 10.):** stránka artefaktu má CSP, která blokuje veškerá síťová volání mimo vlastní soubory
+  (fetch/XHR na ORS, Overpass, OCM, Open-Meteo, Photon i mapové dlaždice) a GPS není mezi dostupnými schopnostmi.
+  → Plánovač v artefaktu běžet nemůže. Artefakt = **rozcestník** (otevření aplikace na Netlify jedním klepnutím
+  z jakéhokoli zařízení, návod na instalaci) + **Ceník nabíjení** (data přibalená k artefaktu, publikují se se stejným `ceniky.json`).
 
 ### Rizika
 | Riziko | Opatření |
@@ -122,3 +126,43 @@ Nové: preferované výkonové rozmezí (75–100 kW), max. zajížďka, hranice
 7. Fáze D: testy (energie, dosažitelnost záloh, přepočet při změně stanice, tarify, offline, výkon první/opakovaný, regrese původních funkcí); fáze E: zpráva.
 
 Odhad: několik pracovních sezení; každá etapa končí funkční verzí k nahrání.
+
+## E. Výsledná zpráva (31. 10. 2026)
+
+### Implementováno
+| Funkce | Kde | Poznámka |
+|---|---|---|
+| Ideální výkon 75–100 kW (bonus ve vyváženém režimu), max. zajížďka 8 km, slabší stanice jen penalizované | `core/optimizer.ts`, nastavení | bonus omezen na 0,75 × režie zastávky (oprava: bonus dřív mohl vytvořit zbytečnou zastávku navíc; i v Python jádru) |
+| Povinná stanice v plánu (`requiredStationId`) | `core/optimizer.ts` | základ výměny stanice a záloh |
+| 2 záložní nabíječky ke každé zastávce + levnější alternativa | `core/alternatives.ts`, `local/worker.ts` (Web Worker) | počítá se po zobrazení plánu, UI nečeká; v detailu zastávky „Použít a přepočítat“ |
+| Výběr místa při více shodách (jiná obec / okres / kraj / země) | `data/geocode.ts`, `PlanScreen` | městské části a podniky stejného jména se nenabízejí; výběr se pamatuje |
+| Najít náhradní nabíječku (s cestou i bez ní) | `service.nearbyChargers`, `NearbySheet` | GPS → stanice do 40 km → silniční vzdálenost (ORS matrix / OSRM / offline odhad) → SOC při příjezdu, cena dle tarifu, čas do cíle; navigace Apple/Google; přesměrování poloha → stanice → původní cíl |
+| Aktivní asistent | `service.assist`, `TripScreen` | GPS + rozsvícený displej, ETA, odhad SOC, riziko dojezdu, mimo trasu > 3 km 2 min → nabídka přepočtu, u nabíječky výzva k SOC, připomenutí SOC po 30 min / 50 km; trasu přepočítává jen na události |
+| Ekonomické upozornění (výchozí 100 Kč, nastavitelné, vypínatelné) | `components/Alerts.tsx` | plán i cesta; nic se nemění bez potvrzení |
+| Záložka Ceník nabíjení | `components/PriceScreen.tsx`, `data/prices.ts`, `public/data/ceniky.json` | 29 položek: PRE (Start/Silver/Gold/jednorázově), E.ON, roaming čipem PRE v ČR a 9 dalších zemích; AC/DC/HPC, stání, zdroj, datum ověření; filtry země / provozovatel / výkon / platba |
+| Denní kontrola ceníků | `backend/tools/update_prices.py`, `scripts/install-ceniky-launchd.sh` | launchd 6:30 (kopie mimo iCloud — macOS ho do iCloud Drive nepustí); beze změny zdroje → nové datum ověření; změna → „zdroj změněn — ověřit“ + upozornění v macOS |
+| Ceník → tarify planneru | `service.applyPriceList`, migrace tarifů v3 | jen tarify „z ceníku“ a jen ověřené ceny ≤ 30 dní; ručně upravené se nepřepisují |
+| Oprava tarifu PRE Start | výchozí tarify v3 | DC 9,91 Kč + stání 1,65 Kč/min po 60 min, UFC 11,57 Kč + 1,65 Kč/min po 30 min (dříve bez poplatku za stání) |
+| Offline příprava po naplánování | `service.prepareOffline` | zálohy všech variant, dlaždice stanic okolo zastávek, ceník → IndexedDB |
+| Nastavení | `SettingsScreen` | ideální výkon, max. zajížďka, asistent, interval výzvy SOC, upozornění + hranice, auto-aktualizace ceníků, offline data |
+| Artefakt „Voyah trasy“ | `artefakt/voyah-trasy.html` (`scripts/build-artifact.py`) | spuštění aplikace z jakéhokoli zařízení + ceník; https://claude.ai/artifact/9LSdmfRW8jpyzTdxC3nnEg |
+| Sestavení a nasazení | `scripts/deploy-netlify.sh` | sestaví, kontroluje, že v balíku nejsou klíče, zip; s tokenem Netlify nasadí sám |
+
+### Testy
+- TypeScript: 63 testů (nové: povinná stanice, nedosažitelná povinná stanice, max. zajížďka, bonus nepřidá zastávku,
+  2 dosažitelné zálohy bez původní stanice, rychlost záloh < 300 ms, PRE se stáním, migrace v2 → v3 se zachováním ručních úprav,
+  ceník přepisuje jen navázané a čerstvé ceny). Python: 52 testů; golden (křížová kontrola Python × TS) přegenerován po úpravě bonusu.
+- Náhled (Mac): výběr místa „Nová Ves“ (8 obcí), „Praha“ / „Ostrava“ jednoznačné; zálohy a výměna stanice (+12 min / +33 Kč dle zálohy);
+  náhradní nabíječka se simulovanou GPS u Olomouce (6 stanic, ORS vzdálenosti, 0,8 s, čas do cíle); přesměrování přes stanici;
+  asistent (ETA, odhad SOC, výzva k SOC); levnější alternativa (E.ON, úspora ~700 Kč, +5 min ve variantě Nejrychlejší).
+- Výkon: opakované plánování Vendryně → Praha 0,25 s (před rozšířením 0,4 s), první 1,9 s; optimalizátor 4 varianty 1 500 km / 400 stanic 0,3 s.
+
+### Omezení
+- Stav baterie z vozu: veřejné API Voyah neexistuje → ruční zadání + odhad z modelu.
+- Obsazenost / živý stav stanic: žádný volný zdroj; jen příznak „v provozu (dle OCM)“.
+- Asistent běží jen při otevřené aplikaci (iOS webové aplikaci na pozadí polohu nedává); GPS na skutečném iPhonu nevyzkoušena.
+- E.ON vlastní ceník: jen z článku, DPH nejasné → „neověřeno“; noční sazby se nemodelují. Tesla a ČEZ (vlastní aplikace) bez ověřeného ceníku.
+- Denní kontrola pozná změnu zdroje, nové ceny ale nevyčte sama — doplní se do `backend/tools/ceniky_zdroj.py` (požádat Clauda).
+- Automatické nasazení vyžaduje `NETLIFY_AUTH_TOKEN` a `NETLIFY_SITE_ID` v `~/.config/voyah-route-planner/.env`; do té doby zip ručně.
+- Artefakt neumí plánovat (CSP blokuje vnější služby, GPS není dostupná) — slouží jako rozcestník a ceník; ceník v něm se obnoví až novým publikováním.
+- Ve variantě s povinnou stanicí může plán nabít jen málo a pokračovat další zastávkou — je to optimální plán, ne chyba.

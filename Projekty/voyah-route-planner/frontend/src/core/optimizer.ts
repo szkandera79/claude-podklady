@@ -14,6 +14,7 @@ export const SINGLE_POINT_PENALTY_MIN = 2;
 export const LOW_POWER_PENALTY_MIN = 10;
 export const CHEAPEST_VOT_CZK_H = 30;
 export const TIEBREAK_PER_SOC = 1e-3;
+export const BONUS_CAP_OF_OVERHEAD = 0.75;
 
 export interface StopPlan {
   station: Station;
@@ -61,7 +62,7 @@ interface Node {
 type Parent = ["arr" | "dep", number, number] | null;
 type Label = { obj: number; time: number; cost: number; parent: Parent };
 
-function costWeight(p: PlanParams): number {
+export function costWeight(p: PlanParams): number {
   if (p.mode === "nejrychlejsi") return 1e-4;
   if (p.mode === "nejlevnejsi") return 60 / CHEAPEST_VOT_CZK_H;
   return 60 / Math.max(p.valueOfTimeCzkH, 1);
@@ -71,7 +72,7 @@ export function usableStations(stations: Station[], v: Vehicle, p: PlanParams, t
                                fromKm: number, toKm: number): Station[] {
   return stations
     .filter((s) => s.accessOk && s.connectors.includes(v.connector) && s.available !== false
-      && s.routeKm > fromKm && s.routeKm < toKm
+      && s.routeKm > fromKm && s.routeKm < toKm && s.detourKm <= p.maxDetourKm
       && (!p.onlyPreferred || tariffs[s.operator]?.preferred))
     .sort((a, b) => a.routeKm - b.routeKm || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 }
@@ -82,6 +83,8 @@ export interface PlanOptions {
   calibration?: CalibrationFn;
   startKm?: number;
   profileCache?: RouteProfile;
+  /** Zastávka musí být u této stanice (výměna stanice, záložní varianty). */
+  requiredStationId?: string;
 }
 
 export function planRoute(route: Route, stations: Station[], v: Vehicle, p: PlanParams, o: PlanOptions = {}): Plan {
@@ -101,7 +104,9 @@ export function planRoute(route: Route, stations: Station[], v: Vehicle, p: Plan
     let pen = 0;
     if (s.points <= 1 && !s.isLiveStatus) pen += SINGLE_POINT_PENALTY_MIN;
     if (p.minStationKw && s.maxKw < p.minStationKw) pen += LOW_POWER_PENALTY_MIN;
-    const bonus = p.mode === "vyvazeny" && t?.preferred ? p.preferredBonusMin / Math.max(t.priority, 1) : 0;
+    let bonus = p.mode === "vyvazeny" && t?.preferred ? p.preferredBonusMin / Math.max(t.priority, 1) : 0;
+    if (p.mode === "vyvazeny" && s.maxKw >= p.idealKwMin && s.maxKw <= p.idealKwMax) bonus += p.idealBonusMin;
+    bonus = Math.min(bonus, BONUS_CAP_OF_OVERHEAD * p.stopOverheadMin);   // bonus nesmí vytvořit zbytečnou zastávku navíc
     nodes.push({ km: s.routeKm, station: s, detKwh: detourEnergy(s.detourKm, v, energy) * mult, detMin: s.detourMin,
                  detKm: s.detourKm, table: stationChargeTable(v, s, p.batteryTempC), tariff: t, penaltyMin: pen,
                  bonusMin: bonus });
@@ -109,6 +114,8 @@ export function planRoute(route: Route, stations: Station[], v: Vehicle, p: Plan
   nodes.push({ km: endKm, detKwh: 0, detMin: 0, detKm: 0, penaltyMin: 0, bonusMin: 0 });
   const n = nodes.length;
   const dest = n - 1;
+  const req = o.requiredStationId ? nodes.findIndex((nd) => nd.station?.id === o.requiredStationId) : -1;
+  if (o.requiredStationId && req < 0) return infeasible(nodes, [], p, prof, cap, mult, 0, "Zvolená stanice není pro tuto trasu použitelná.");
 
   const arr: (Label | null)[][] = Array.from({ length: n }, () => new Array(101).fill(null));
   const dep: (Label | null)[][] = Array.from({ length: n }, () => new Array(101).fill(null));
@@ -137,6 +144,7 @@ export function planRoute(route: Route, stations: Station[], v: Vehicle, p: Plan
     dep[i].forEach((l, d) => { if (l) states.push([d, l]); });
     if (!states.length) continue;
     for (let j = i + 1; j < n; j++) {
+      if (req > 0 && i < req && j > req) break;          // povinnou stanici nelze přeskočit
       const nj = nodes[j];
       const e = prof.energyBetween(ni.km, nj.km) * mult + ni.detKwh + nj.detKwh;
       const ePct = (e / cap) * 100;
@@ -157,6 +165,8 @@ export function planRoute(route: Route, stations: Station[], v: Vehicle, p: Plan
   let bestSoc = -1;
   let best: Label | null = null;
   arr[dest].forEach((l, a) => { if (l && (!best || l.obj < best.obj - 1e-9)) { best = l; bestSoc = a; } });
+  if (!best && req > 0) return infeasible(nodes, dep, p, prof, cap, mult, 0,
+    `Přes stanici „${nodes[req].station!.name}“ nelze bezpečně dojet (nedosažitelná nebo nestačí rezerva).`);
   if (!best) return infeasible(nodes, dep, p, prof, cap, mult, cands.length);
   return reconstruct(nodes, arr, dep, dest, bestSoc, p, prof, mult);
 }
@@ -210,7 +220,9 @@ function reconstruct(nodes: Node[], arr: (Label | null)[][], dep: (Label | null)
 }
 
 function infeasible(nodes: Node[], dep: (Label | null)[][], p: PlanParams, prof: RouteProfile, cap: number,
-                    mult: number, candCount: number): Plan {
+                    mult: number, candCount: number, why = ""): Plan {
+  if (why) return { feasible: false, reason: why, stops: [], distanceKm: 0, driveMin: 0, chargeMin: 0, stopOverheadMin: 0,
+                    totalMin: 0, costCzk: 0, arrivalSoc: 0, tripEnergyKwh: 0, warnings: [], profile: p.profile, mode: p.mode };
   let far = 0;
   for (let i = 0; i < nodes.length - 1; i++) if (dep[i].some((x) => x) && nodes[i].km >= nodes[far].km) far = i;
   const nf = nodes[far];

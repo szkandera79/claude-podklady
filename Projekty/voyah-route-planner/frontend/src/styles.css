@@ -126,7 +126,7 @@ label.check { display: flex; gap: 10px; align-items: center; color: var(--text);
 .v-total { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-top: 4px; font-variant-numeric: tabular-nums; }
 .v-sub { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
 
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 4px 0 12px; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 4px 0 12px; }
 .stats div { display: grid; gap: 2px; }
 .stats span { font-size: 12px; color: var(--muted); }
 .stats b { font-size: 17px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
@@ -161,7 +161,7 @@ details summary { cursor: pointer; font-weight: 600; }
 .soc-bar span { position: absolute; top: -18px; transform: translateX(-50%); font-size: 12px; color: var(--muted); }
 
 .entry { font-size: 48px; font-weight: 700; text-align: center; font-variant-numeric: tabular-nums; margin: 4px 0 8px; }
-.keypad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+.keypad { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 12px; }
 .keypad button { min-height: 60px; font-size: 26px; font-weight: 600; border-radius: 14px; border: 1px solid var(--line); background: var(--bg); cursor: pointer; }
 .keypad button:active { background: var(--accent-soft); }
 
@@ -173,7 +173,7 @@ details summary { cursor: pointer; font-weight: 600; }
 .sticky-save { position: sticky; bottom: calc(80px + env(safe-area-inset-bottom)); display: flex; gap: 8px; }
 
 .tabs {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 10; display: grid; grid-template-columns: repeat(3, 1fr);
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 10; display: grid; grid-template-columns: repeat(4, 1fr);
   background: color-mix(in srgb, var(--card) 92%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom);
 }
@@ -190,3 +190,24 @@ details summary { cursor: pointer; font-weight: 600; }
   font-size: 14px; display: flex; justify-content: space-between; gap: 8px; cursor: pointer; width: calc(100% - 32px); }
 label.btn { color: var(--text); font-size: 16px; display: inline-flex; }
 .qr-video { width: 100%; border-radius: 14px; background: #000; aspect-ratio: 3 / 4; object-fit: cover; }
+
+/* záložní nabíječky, upozornění, asistent */
+.backups { display: grid; gap: 6px; margin-top: 12px; border-top: 1px solid var(--line); padding-top: 12px; }
+.backup-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.backup { display: grid; gap: 6px; padding: 10px 12px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); }
+.alert-card { background: var(--accent-soft); border-radius: 12px; padding: 12px; display: grid; gap: 8px; }
+.alert-card.risk { background: var(--bad-soft); color: var(--bad); }
+.btn.big { min-height: 56px; font-size: 17px; font-weight: 600; }
+.choice-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.choice-list button { width: 100%; text-align: left; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--bg); color: var(--text); font: inherit; }
+.choice-list button small { display: block; color: var(--muted); }
+.chip.chip-bad { background: var(--bad-soft); color: var(--bad); }
+
+/* ceník */
+.filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; }
+.price-card { display: grid; gap: 8px; }
+.tbl-wrap { overflow-x: auto; }
+.price-tbl td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.price-tbl tr.dim { opacity: 0.45; }
+.pill.ok { background: var(--accent-soft); color: var(--accent); }
