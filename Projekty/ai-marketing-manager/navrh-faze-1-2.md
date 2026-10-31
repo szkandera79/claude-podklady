@@ -244,7 +244,18 @@ potom převzít kampaně.
 
 ---
 
-## 9. Otevřené otázky na tebe
+## 9. Rozhodnutí uživatele (31. 10. 2026) – návrh SCHVÁLEN („začni“)
+- **Značky:** REO Heating, Super Heating CZ, ThermaVera, Eko4home. Vlastník všech: **Riva Trade, s.r.o.**;
+  Meta/Google účty pod soukromým účtem jindrich.szkandera@gmail.com.
+- Cíl: nahradit agenturu, kampaně spravovat sám přes aplikaci. Později možná další uživatelé → role připravit.
+- **Rozpočet na reklamu: 20 000 Kč/měsíc pro ThermaVeru a REO Heating dohromady, zatím na zkoušku**
+  → v aplikaci společný měsíční limit pro tyto dvě značky.
+- **Hosting:** levný vlastní server.
+- Původní „systém na marketingová témata“ se lokálně nenašel (Dokumenty, Stahování, Projekty, historie Claude Code).
+  Ve Stahování je jen agenturní „Obsahová strategie – Eko4Home.pdf“ (2023). Pokud se najde v chatu na claude.ai,
+  převezmeme prompty do AI vrstvy.
+
+## 10. Původní otevřené otázky
 1. Kde je uložený původní systém na marketingová témata a kampaně (claude.ai projekt / Drive / jinde)?
 2. Super Heating CZ: web/e-shop, logo, FB stránka a IG účet, je to stejná firma (Riva Trade) a stejné Business portfolio jako REO?
 3. Kdo vlastní reklamní účty – ty, nebo agentura? Kolik reklamních účtů je (jeden společný / každá značka svůj)?
