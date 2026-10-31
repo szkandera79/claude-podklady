@@ -24,3 +24,8 @@ export function appleTo(p: LL, name?: string): string {
   const q = name ? `&q=${encodeURIComponent(name)}` : "";
   return `https://maps.apple.com/?daddr=${ll(p)}&dirflg=d${q}`;
 }
+
+/** Waze: jen jeden cíl (průjezdní body nepodporuje) → navigace po úsecích; odkaz otevře aplikaci Waze, jinak web. */
+export function wazeTo(p: LL): string {
+  return `https://waze.com/ul?ll=${ll(p)}&navigate=yes`;
+}
