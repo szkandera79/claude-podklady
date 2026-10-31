@@ -7,6 +7,7 @@ export interface Place { lat: number; lon: number; label: string; detail: string
 
 const COORDS = /^\s*(-?\d+(?:\.\d+)?)\s*[,;\s]\s*(-?\d+(?:\.\d+)?)\s*$/;
 const AMBIGUOUS_KM = 3;
+const SAME_NAME_KM = 30;     // obec a stejnojmenný okres/kraj (Budapest město × župa) = jedno místo
 const SETTLEMENT = new Set(["city", "town", "village", "hamlet", "municipality"]);
 
 function toPlace(f: any, text: string): Place {
@@ -48,7 +49,10 @@ export async function candidates(text: string): Promise<Place[]> {
   const seen = new Set<string>();
   // když jsou mezi výsledky obce, porovnávat jen obce (restaurace „Ostrava“ v Polsku není jiná Ostrava)
   const isPlace = (f: any) => ["place", "boundary"].includes(f.properties?.osm_key);
-  const pool = feats.some(isPlace) ? feats.filter(isPlace) : feats;
+  const isArea = (f: any) => !SETTLEMENT.has(f.properties?.osm_value) && f.properties?.type !== "city";
+  const pool = (feats.some(isPlace) ? feats.filter(isPlace) : feats)
+    .map((f, i) => [f, i] as const).sort((a, b) => Number(isArea(a[0])) - Number(isArea(b[0])) || a[1] - b[1]).map(([f]) => f);
+  const names: { name: string; at: [number, number] }[] = [];
   for (const f of pool) {
     const p = f.properties || {};
     const name = norm(p.name || p.street || "");
@@ -58,7 +62,9 @@ export async function candidates(text: string): Promise<Place[]> {
     const key = norm([p.country, p.state, p.county, muni].join("|"));
     const pl = toPlace(f, text);
     if (seen.has(key) || out.some((o) => haversineKm([o.lat, o.lon], [pl.lat, pl.lon]) < AMBIGUOUS_KM)) continue;
+    if (names.some((n) => n.name === name && haversineKm(n.at, [pl.lat, pl.lon]) < SAME_NAME_KM)) continue;
     seen.add(key);
+    names.push({ name, at: [pl.lat, pl.lon] });
     out.push(pl);
   }
   return out.length >= 2 ? out : [];

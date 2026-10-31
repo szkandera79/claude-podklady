@@ -176,3 +176,9 @@ Odhad: několik pracovních sezení; každá etapa končí funkční verzí k na
   31. 10. 2026; CH, PL z neoficiálních zdrojů), zvláštní mýtné úseky v AT (Brenner, Tauern, Pyhrn, Arlberg, Karavanky),
   CZ = zaplaceno (elektromobil). Přepočet na Kč orientační, mýtné není v ceně cesty.
 - Omezení: HR, IT, FR jen obecná informace (mýtné podle úseku); přívěs v HU / SI ověřit; kurzy pevné k 31. 10. 2026.
+
+### Balík nabíječek rozšířen (31. 10. 2026)
+- Přidány dlaždice lat 42–47, lon 9–22 (jižní Rakousko, Maďarsko, Slovinsko, Chorvatsko, sever BiH/Srbska): +2 659 stanic,
+  balík nyní 101 dlaždic / 112 pokrytých, ~1,2 MB. Plán Vendryně → Budapešť 1,5 s (dřív 93 s živým Overpassem), → Zagreb 2,2 s.
+- Výběr místa: obec a stejnojmenný kraj/župa do 30 km se slučují (Budapest město × župa už se nenabízí jako dvě místa).
+- Omezení: Photon nezná české exonymy („Záhřeb“, „Lublaň“) — zadávejte místní název (Zagreb, Ljubljana).
