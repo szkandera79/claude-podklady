@@ -62,6 +62,9 @@ describe("nabíječky", () => {
                      parsePoi(ocm(11, 50.1, 14.5, 150))!]);
     expect(m.length).toBe(2);
     expect([m[0].source, m[0].maxKw, m[0].operational]).toEqual(["OSM+OCM", 100, false]);
+    // stanice OCM z přibaleného balíku se při živém dotazu OCM nezdvojí
+    const again = merge(m, [parsePoi(ocm(11, 50.1, 14.5, 150))!]);
+    expect(again.length).toBe(2);
     const line = Polyline.from([[50, 14], [50, 15]]);
     const st = toStations([parseElement(osm(1, 50, 14.5))!, parseElement(osm(2, 50.03, 14.5))!,
                            parseElement(osm(3, 50.2, 14.5))!, parseElement(osm(4, 50, 14.6, { access: "private" }))!], line, 5);

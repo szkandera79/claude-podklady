@@ -1,28 +1,12 @@
 /** OSM (hlavní) + OCM (doplněk) → sloučení → průmět na trasu → Station (přepis vrp_data/chargers.py).
  *  Zajížďka ≈ 1,4 × vzdušná vzdálenost + 0,3 km, 40 km/h + 1 min (odhad). */
 import type { Station } from "../core/models";
-import { Polyline, haversineKm, simplifyByDistance, type LatLon } from "./geo";
+import { Polyline, simplifyByDistance, type LatLon } from "./geo";
 import { SourceError } from "./http";
 import { fetchAlong } from "./ocm";
-import { fetchTile, tilesFor, type ChargerRecord } from "./osm";
+import { fetchTile, merge, tilesFor, type ChargerRecord } from "./osm";
 
-export function merge(osm: ChargerRecord[], ocm: ChargerRecord[]): ChargerRecord[] {
-  const out = [...osm];
-  for (const o of ocm) {
-    const m = out.find((s) => s.source.startsWith("OSM") && haversineKm([s.lat, s.lon], [o.lat, o.lon]) <= 0.15
-      && (s.operator === o.operator || [s.operator, o.operator].includes("Neznámý") || !o.operator));
-    if (!m) { out.push(o); continue; }
-    if (!m.powerKnown && o.powerKnown) {
-      m.maxKw = o.maxKw; m.powerKnown = true;
-      m.notes = m.notes.filter((n) => !n.startsWith("výkon v datech chybí"));
-    }
-    if (o.operational === false) m.operational = false;
-    m.updated = o.updated || m.updated;
-    m.notes.push(...o.notes.filter((n) => n.startsWith("cena")));
-    m.source = "OSM+OCM";
-  }
-  return out;
-}
+export { merge } from "./osm";
 
 export function toStations(recs: ChargerRecord[], line: Polyline, corridorKm: number): Station[] {
   const out: Station[] = [];

@@ -2,6 +2,7 @@
  *  Licence ODbL — v aplikaci uvádět „© OpenStreetMap contributors". */
 import { normalizeOperator } from "./operators";
 import { SourceError, requestJson } from "./http";
+import { haversineKm } from "./geo";
 
 export const OVERPASS_URLS = ["https://overpass-api.de/api/interpreter",
                               "https://maps.mail.ru/osm/tools/overpass/api/interpreter"];
@@ -71,16 +72,28 @@ function loadIndex(): Promise<BundleIndex | null> {
   return bundleIndex;
 }
 
+/** Stanice z Open Charge Map přibalené v dlaždici (backend/tools/build_ocm_tiles.py). */
+function bundleOcm(x: any): ChargerRecord {
+  const kw = typeof x.kw === "number" ? x.kw : null;
+  const notes: string[] = [...(x.notes || [])];
+  if (kw === null) notes.push(`výkon v datech chybí, počítáno konzervativně s ${UNKNOWN_POWER_KW} kW`);
+  return { source: "OCM", sourceId: String(x.id), lat: +x.lat, lon: +x.lon, name: x.name || "Nabíjecí stanice",
+           operator: x.operator || "Neznámý", maxKw: kw ?? UNKNOWN_POWER_KW, powerKnown: kw !== null, points: x.points || 1,
+           access: x.access || "unknown", operational: x.operational ?? null, updated: x.updated || null,
+           address: x.address || "", notes };
+}
+
 /** Dlaždice z přibaleného balíku; null = mimo pokrytí balíku (→ živý Overpass). */
-async function fromBundle(lat0: number, lon0: number): Promise<{ els: any[]; generated: string } | null> {
+async function fromBundle(lat0: number, lon0: number): Promise<{ els: any[]; ocm: any[]; generated: string } | null> {
   const idx = await loadIndex();
   if (!idx) return null;
   const key = `${lat0}_${lon0}`;
   if (!idx.covered.includes(key)) return null;                                       // mimo balík
-  if (!idx.tiles.includes(key)) return { els: [], generated: idx.generated };       // pokryto, bez stanic
+  if (!idx.tiles.includes(key)) return { els: [], ocm: [], generated: idx.generated };   // pokryto, bez stanic
   const r = await fetch(`/data/osm/${key}.json`).catch(() => null);
   if (!r?.ok) return null;
-  return { els: (await r.json()).elements || [], generated: idx.generated };
+  const d = await r.json();
+  return { els: d.elements || [], ocm: d.ocm || [], generated: idx.generated };
 }
 
 async function fetchBox(s: number, w: number, n: number, e: number, deadline: number): Promise<any[]> {
@@ -101,8 +114,9 @@ async function fetchBox(s: number, w: number, n: number, e: number, deadline: nu
 export async function fetchTile(lat0: number, lon0: number, deadline = Date.now() + 90000): Promise<ChargerRecord[]> {
   const b = await fromBundle(lat0, lon0);
   if (b) {
-    return b.els.map(parseElement).filter((r): r is ChargerRecord => r !== null)
+    const osm = b.els.map(parseElement).filter((r): r is ChargerRecord => r !== null)
       .map((r) => ({ ...r, source: "OSM", updated: b.generated }));
+    return merge(osm, b.ocm.map(bundleOcm));
   }
   let els: any[];
   try { els = await fetchBox(lat0, lon0, lat0 + 1, lon0 + 1, deadline); }
@@ -111,4 +125,23 @@ export async function fetchTile(lat0: number, lon0: number, deadline = Date.now(
     for (const dl of [0, 0.5]) for (const dn of [0, 0.5]) els.push(...await fetchBox(lat0 + dl, lon0 + dn, lat0 + dl + 0.5, lon0 + dn + 0.5, deadline));
   }
   return els.map(parseElement).filter((r): r is ChargerRecord => r !== null);
+}
+
+export function merge(osm: ChargerRecord[], ocm: ChargerRecord[]): ChargerRecord[] {
+  const out = [...osm];
+  for (const o of ocm) {
+    if (out.some((s) => s.source === "OCM" && s.sourceId === o.sourceId)) continue;   // už z přibaleného balíku
+    const m = out.find((s) => s.source.startsWith("OSM") && haversineKm([s.lat, s.lon], [o.lat, o.lon]) <= 0.15
+      && (s.operator === o.operator || [s.operator, o.operator].includes("Neznámý") || !o.operator));
+    if (!m) { out.push(o); continue; }
+    if (!m.powerKnown && o.powerKnown) {
+      m.maxKw = o.maxKw; m.powerKnown = true;
+      m.notes = m.notes.filter((n) => !n.startsWith("výkon v datech chybí"));
+    }
+    if (o.operational === false) m.operational = false;
+    m.updated = o.updated || m.updated;
+    m.notes.push(...o.notes.filter((n) => n.startsWith("cena")));
+    m.source = "OSM+OCM";
+  }
+  return out;
 }

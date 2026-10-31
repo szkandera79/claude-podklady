@@ -78,9 +78,10 @@ def main() -> None:
                                                 "lon": round(lon, 6),
                                                 "tags": {k: v for k, v in el.get("tags", {}).items() if k in KEEP}}
         f = OUT / f"{key}.json"
-        if recs:
-            f.write_text(json.dumps({"elements": list(recs.values())}, ensure_ascii=False, separators=(",", ":")),
-                         encoding="utf-8")
+        ocm = (json.loads(f.read_text()).get("ocm") if f.exists() else None) or []   # z build_ocm_tiles.py — zachovat
+        if recs or ocm:
+            doc = {"elements": list(recs.values()), **({"ocm": ocm} if ocm else {})}
+            f.write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         elif f.exists():
             f.unlink()
         ok.append(key)
@@ -92,7 +93,7 @@ def main() -> None:
     covered = sorted((set(prev.get("covered", [])) - set(failed)) | set(ok))
     files = sorted(p.stem for p in OUT.glob("*_*.json"))
     idx_path.write_text(json.dumps({"generated": date.today().isoformat(), "covered": covered, "tiles": files,
-                                    "license": "© OpenStreetMap contributors, ODbL 1.0"}), encoding="utf-8")
+                                    "license": prev.get("license", "© OpenStreetMap contributors, ODbL 1.0")}), encoding="utf-8")
     size = sum(p.stat().st_size for p in OUT.glob("*.json"))
     print(f"Hotovo: {total} stanic v {len(ok)} dlaždicích, selhalo {len(failed)} {failed}, balík {size / 1e6:.1f} MB",
           flush=True)
