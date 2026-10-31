@@ -24,6 +24,7 @@ import { applyWeather } from "../data/weather";
 import type { AssistState, BackupOption, Calibration, NearbyOption, NearbyResult, Plan, PlanRequest, PlanResult, Settings, SocUpdate, StationBrief,
               StopBackups, Trip } from "../types";
 import { getKeys } from "./keys";
+import { routeCountries, tollAdvice, type TollAdvice } from "../data/tolls";
 import { entryState, loadPrices, tariffTiers, type PriceEntry, type PriceList } from "../data/prices";
 import { idbDel, idbGet, idbKeys, idbPut } from "./idb";
 
@@ -223,7 +224,7 @@ export const VARIANTS: Record<string, Partial<PlanParams>> = {
 };
 
 interface StoredPlan { id: string; created: number; request: PlanRequest; route: Route; points: LatLon[]; stations: Station[]; result: PlanResult;
-                     backups?: Record<string, StopBackups[]>; }
+                     backups?: Record<string, StopBackups[]>; tolls?: TollAdvice; }
 interface TripState { reference: { km: number; soc: number }; last: { km: number; soc: number } | null; k_trip: number; plan: Plan;
                       backups?: { at: number; stops: StopBackups[] }; }
 interface StoredTrip { id: string; plan_id: string; variant: string; created: number; finished: number | null; state: TripState;
@@ -812,12 +813,32 @@ async function adoptPriceEntry(e: PriceEntry): Promise<Settings> {
   return s;
 }
 
+/** Dálniční známky a mýtné pro zemi na trase (na pozadí; země z reverzního geokódování, cache 1 rok). */
+const tollsInFlight = new Map<string, Promise<TollAdvice>>();
+function tollInfo(planId: string): Promise<TollAdvice> {
+  let pr = tollsInFlight.get(planId);
+  if (!pr) {
+    pr = (async () => {
+      const p = await loadPlan(planId);
+      if (p.tolls) return p.tolls;
+      const t = tollAdvice(await routeCountries(p.points, p.route), p.points);
+      const fresh = (await idbGet<StoredPlan>("kv", `plan:${planId}`)) ?? p;
+      fresh.tolls = t;
+      await idbPut("kv", `plan:${planId}`, fresh);
+      return t;
+    })().finally(() => tollsInFlight.delete(planId));
+    tollsInFlight.set(planId, pr);
+  }
+  return pr;
+}
+
 /** Po naplánování na pozadí: záložní stanice všech variant, okolí zastávek (pro náhradní nabíječku), ceník.
  *  Vše se ukládá do IndexedDB → cesta funguje i bez signálu (údaje označené jako poslední známé). */
 async function prepareOffline(planId: string): Promise<void> {
   const s = await settings();
   if (s.planning.offline_data === false) return;
   await loadPrices().catch(() => null);
+  await tollInfo(planId).catch(() => null);
   const p = await loadPlan(planId);
   const pts: LatLon[] = [];
   for (const [variant, pl] of Object.entries(p.result.plans)) {
@@ -830,7 +851,7 @@ async function prepareOffline(planId: string): Promise<void> {
 }
 
 export const service = {
-  tariffsUpdated, refreshPrices, adoptPriceEntry, prepareOffline,
+  tariffsUpdated, refreshPrices, adoptPriceEntry, prepareOffline, tollInfo,
   plan, getPlan: async (id: string) => (await loadPlan(id)).result, startTrip, trip, soc, finish,
   planBackups, tripBackups, useStation, ambiguousPlaces, nearbyChargers, rerouteVia, assist,
   settings, saveSettings, resetSettings: async () => { await idbDel("kv", "settings"); return settings(); },

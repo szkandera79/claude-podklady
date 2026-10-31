@@ -166,3 +166,13 @@ Odhad: několik pracovních sezení; každá etapa končí funkční verzí k na
 - Automatické nasazení vyžaduje `NETLIFY_AUTH_TOKEN` a `NETLIFY_SITE_ID` v `~/.config/voyah-route-planner/.env`; do té doby zip ručně.
 - Artefakt neumí plánovat (CSP blokuje vnější služby, GPS není dostupná) — slouží jako rozcestník a ceník; ceník v něm se obnoví až novým publikováním.
 - Ve variantě s povinnou stanicí může plán nabít jen málo a pokračovat další zastávkou — je to optimální plán, ne chyba.
+
+### Doplněno 31. 10. 2026 (po zprávě)
+- Navigace: Google (celá trasa), **Mapy.cz** (celá trasa, až 15 zastávek, `navigate=true`), **Waze** (k další zastávce / do cíle); Apple Mapy odstraněny na přání.
+- **Jízda s přívěsem** (volba v plánu): +10 kWh/100 km dálnice, +5 ostatní, plánovaná rychlost nejvýš 115 km/h — vše v Nastavení;
+  taková jízda se nezapočítává do kalibrace.
+- **Dálniční známky a mýtné** (`data/tolls.ts`, karta v Plánu i v Cestě): země na trase zjištěné na pozadí (reverzní geokódování
+  Photon po 40 km, zjemnění u hranic, cache 1 rok), km po dálnici v každé zemi, ceny známek (AT, SK, HU, SI z oficiálních webů
+  31. 10. 2026; CH, PL z neoficiálních zdrojů), zvláštní mýtné úseky v AT (Brenner, Tauern, Pyhrn, Arlberg, Karavanky),
+  CZ = zaplaceno (elektromobil). Přepočet na Kč orientační, mýtné není v ceně cesty.
+- Omezení: HR, IT, FR jen obecná informace (mýtné podle úseku); přívěs v HU / SI ověřit; kurzy pevné k 31. 10. 2026.
