@@ -139,12 +139,15 @@ export interface EnergyParams {
   battTempCoef: number;
   surfaceFactor: Record<Surface, number>;
   uncertainty: number;
+  trailerMotorway: number;   // přívěs: spotřeba navíc na dálnici / rychlostní silnici [kWh/100 km], 0 = bez přívěsu
+  trailerOther: number;      // přívěs: navíc na ostatních silnicích [kWh/100 km]
+  maxSpeed: number;          // horní mez plánované rychlosti [km/h] (přívěs), 0 = bez omezení
 }
 
 export function defaultEnergy(): EnergyParams {
   return { a: 9.43, b: 0.000997, cityExtra: 1.5, driveEfficiency: 0.9, regenEfficiency: 0.6, heatStartC: 15,
            heatKwPerC: 0.12, heatBaseKw: 0.3, coolStartC: 25, coolKw: 0.5, battTempCoef: 0.006,
-           surfaceFactor: { sucho: 1, mokro: 1.05, snih: 1.15 }, uncertainty: 0.08 };
+           surfaceFactor: { sucho: 1, mokro: 1.05, snih: 1.15 }, uncertainty: 0.08, trailerMotorway: 0, trailerOther: 0, maxSpeed: 0 };
 }
 
 export interface PlanParams {

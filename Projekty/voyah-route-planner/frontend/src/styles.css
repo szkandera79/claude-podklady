@@ -211,3 +211,13 @@ label.btn { color: var(--text); font-size: 16px; display: inline-flex; }
 .price-tbl td.num { text-align: right; font-variant-numeric: tabular-nums; }
 .price-tbl tr.dim { opacity: 0.45; }
 .pill.ok { background: var(--accent-soft); color: var(--accent); }
+
+/* navigační tlačítka: stejné sloupce, nikdy se nepřekrývají */
+.nav-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 8px; }
+.nav-grid .btn { min-width: 0; padding-inline: 8px; white-space: normal; text-align: center; line-height: 1.2; overflow-wrap: anywhere; }
+.row.gap.wrap > .btn, .row.gap.wrap > button.btn { max-width: 100%; }
+
+/* úzký displej: karty ani řádky formuláře nesmí přetéct do strany */
+.screen > * { min-width: 0; }
+.row.gap > label.num { flex: 1 1 0; min-width: 0; }
+.row.gap > label.num input { min-width: 0; width: 100%; }

@@ -42,9 +42,11 @@ export interface SegmentResult { speed: number; minutes: number; kwh: number; }
 
 export function segmentEnergy(seg: Segment, v: Vehicle, p: EnergyParams, profile: DriveProfile,
                               cal?: CalibrationFn): SegmentResult {
-  const speed = plannedSpeed(seg, profile);
+  const planned = plannedSpeed(seg, profile);
+  const speed = p.maxSpeed > 0 ? Math.min(planned, p.maxSpeed) : planned;
   const hours = seg.lengthKm / speed;
-  const drive = (consumptionPer100(speed, p, seg.roadClass, seg.headwindKmh) / 100) * seg.lengthKm;
+  const trailer = seg.roadClass === "dalnice" || seg.roadClass === "rychlostni" ? p.trailerMotorway ?? 0 : p.trailerOther ?? 0;
+  const drive = ((consumptionPer100(speed, p, seg.roadClass, seg.headwindKmh) + trailer) / 100) * seg.lengthKm;
   const m = v.massKg + v.extraLoadKg;
   const dz = seg.elevationDeltaM;
   const elev = dz >= 0 ? (m * G * dz) / p.driveEfficiency / J_PER_KWH : (m * G * dz * p.regenEfficiency) / J_PER_KWH;

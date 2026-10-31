@@ -99,6 +99,8 @@ Object.assign(DEFAULT_SETTINGS.planning, {
   ideal_kw_min: 75, ideal_kw_max: 100,     // Voyah nabíjí max. ~89 kW → výkonnější stojan nezrychlí
   max_detour_km: 8, alert_saving_czk: 100, alerts_on: true, prices_auto_update: true, offline_data: true,
   assistant_on: true, soc_prompt_min: 30,
+  trailer_extra_motorway: 10, trailer_extra_other: 5,    // přívěs: kWh/100 km navíc (zkušenost uživatele)
+  trailer_max_kmh: 115,                                  // s přívěsem jezdí po dálnici ~110–120 km/h
 });
 
 const tierSig = (t: Settings["tariffs"][number]) => JSON.stringify([!!t.includes_vat,
@@ -179,11 +181,20 @@ function paramsFrom(s: Settings, soc: number, over: Partial<PlanParams> = {}): P
 async function settings(): Promise<Settings> { return merged(await idbGet<Settings>("kv", "settings")); }
 async function calibration(): Promise<CalibrationData> { return (await idbGet<CalibrationData>("kv", "calibration")) ?? emptyCalibration(); }
 
-async function models() {
-  return modelsFrom(await settings(), await calibration());
+async function models(req?: PlanRequest) {
+  return modelsFrom(await settings(), await calibration(), req);
 }
-function modelsFrom(s: Settings, cal: CalibrationData) {
-  const energy = energyFrom(s);
+/** Přívěs: spotřeba navíc z nastavení, jen když ho žádost o plán obsahuje. */
+function withTrailer(e: EnergyParams, s: Settings, req?: PlanRequest): EnergyParams {
+  if (req?.trailer) {
+    e.trailerMotorway = +(s.planning.trailer_extra_motorway ?? 10);
+    e.trailerOther = +(s.planning.trailer_extra_other ?? 5);
+    e.maxSpeed = +(s.planning.trailer_max_kmh ?? 115);
+  }
+  return e;
+}
+function modelsFrom(s: Settings, cal: CalibrationData, req?: PlanRequest) {
+  const energy = withTrailer(energyFrom(s), s, req);
   if (Object.keys(cal.cells).length) energy.uncertainty = Math.min(energy.uncertainty, uncertainty(cal, energy.uncertainty));
   return { s, vehicle: vehicleFrom(s), energy, tariffs: tariffsFrom(s), cal, calFn: calibrationFn(cal) };
 }
@@ -228,7 +239,7 @@ function requestParams(s: Settings, req: PlanRequest, soc: number): PlanParams {
 // ------------------------------------------------------------------ API
 
 async function plan(req: PlanRequest, progress?: (m: string) => void): Promise<PlanResult> {
-  const { s, vehicle, energy, tariffs, calFn } = await models();
+  const { s, vehicle, energy, tariffs, calFn } = await models(req);
   const keys = getKeys();
   const params = requestParams(s, req, req.soc);
   try {
@@ -248,6 +259,7 @@ async function plan(req: PlanRequest, progress?: (m: string) => void): Promise<P
     if (s.planning.tesla_ok !== false)
       for (const st of stations) if (st.operator === "Tesla") st.notes = st.notes.filter((n) => !n.startsWith("Tesla Supercharger"));
     if (!keys.ocm) notes.push("Klíč Open Charge Map není nastaven — nabíječky jen z OpenStreetMap.");
+    if (req.trailer) notes.unshift(`Jízda s přívěsem: max. ${energy.maxSpeed} km/h, spotřeba +${energy.trailerMotorway} kWh/100 km na dálnici, +${energy.trailerOther} kWh/100 km na ostatních silnicích (Nastavení).`);
     progress?.("Optimalizuji zastávky…");
     let requiredStationId: string | undefined;
     if (req.required_station) {
@@ -350,7 +362,7 @@ async function soc(id: string, socNow: number, lat?: number, lon?: number, route
   const t = await loadTrip(id);
   if (t.finished) throw new ApiError(400, "Cesta je ukončená");
   const p = await loadPlan(t.plan_id);
-  const { s, vehicle, energy, tariffs, calFn } = await models();
+  const { s, vehicle, energy, tariffs, calFn } = await models(p.request);
   const warnings: string[] = [];
   let km: number;
   let off = 0;
@@ -369,7 +381,7 @@ async function soc(id: string, socNow: number, lat?: number, lon?: number, route
   let kind: string;
   const prev = st.last ?? ref;
   if (socNow > prev.soc + CHARGE_DETECT_PCT || km < ref.km) {
-    if (st.last) await addObs(observation(p.route, ref, st.last, s), s);
+    if (st.last && !p.request.trailer) await addObs(observation(p.route, ref, st.last, s), s);
     newPlan = planRoute(p.route, p.stations, vehicle, { ...params, energyFactor: st.k_trip },
                         { energy, tariffs, calibration: calFn, startKm: km });
     result = { predicted_soc: null, measured_ratio: null, k_trip: st.k_trip };
@@ -401,11 +413,13 @@ async function finish(id: string, socNow: number, lat?: number, lon?: number) {
   const s = await settings();
   const km = lat != null && lon != null ? Polyline.from(p.points).project([lat, lon])[0]
     : p.route.segments.reduce((a, x) => a + x.lengthKm, 0);
-  const applied = await addObs(observation(p.route, t.state.reference, { km, soc: socNow }, s), s);
+  // jízda s přívěsem se do kalibrace vozu nezapočítává (jiná spotřeba)
+  const applied = p.request.trailer ? null : await addObs(observation(p.route, t.state.reference, { km, soc: socNow }, s), s);
   t.readings.push({ route_km: km, soc: socNow, ts: Date.now(), kind: "cil", lat, lon });
   t.finished = Date.now();
   await idbPut("kv", `trip:${id}`, t);
-  const msg = applied === null ? "Úsek byl na kalibraci příliš krátký nebo se během něj nabíjelo."
+  const msg = p.request.trailer ? "Jízda s přívěsem — do kalibrace spotřeby se nezapočítává."
+    : applied === null ? "Úsek byl na kalibraci příliš krátký nebo se během něj nabíjelo."
     : applied ? "Jízda byla započtena do kalibrace spotřeby."
     : "Odchylka byla příliš velká (> 40 %) — jízda uložena, ale do modelu nezapočtena.";
   return { ok: true, calibration: msg };
@@ -427,7 +441,7 @@ function optionView(a: Alternative): BackupOption {
 
 /** Čistý výpočet (běží ve Workeru; při nedostupnosti Workeru na hlavním vlákně). */
 export function computeBackups(i: BackupInput): StopBackups[] {
-  const { vehicle, energy, tariffs, calFn } = modelsFrom(merged(i.settings), i.calibration);
+  const { vehicle, energy, tariffs, calFn } = modelsFrom(merged(i.settings), i.calibration, i.request);
   const s = merged(i.settings);
   const params = { ...requestParams(s, i.request, i.startSoc), ...VARIANTS[i.variant], energyFactor: i.kTrip };
   const prof = routeProfile(i.route, vehicle, energy, params.profile, calFn);
@@ -502,9 +516,9 @@ async function tripBackups(tripId: string): Promise<StopBackups[]> {
  *  Volá se jen po potvrzení uživatelem. */
 async function useStation(ref: { planId: string; variant: string } | { tripId: string }, stationId: string,
                           excludeId?: string): Promise<Plan> {
-  const { s, vehicle, energy, tariffs, calFn } = await models();
   const trip = "tripId" in ref ? await loadTrip(ref.tripId) : null;
   const p = await loadPlan(trip ? trip.plan_id : (ref as { planId: string }).planId);
+  const { s, vehicle, energy, tariffs, calFn } = await models(p.request);
   const variant = trip ? trip.variant : (ref as { variant: string }).variant;
   const pos = trip ? tripPosition(trip) : { km: 0, soc: +p.request.soc };
   const params = { ...requestParams(s, p.request, pos.soc), ...VARIANTS[variant], energyFactor: trip?.state.k_trip ?? 1 };
@@ -558,10 +572,11 @@ async function nearbyChargers(lat: number, lon: number, socNow: number, tripId?:
   const t = tripId ? await loadTrip(tripId).catch(() => null) : null;
   const p = t ? await loadPlan(t.plan_id).catch(() => null) : null;
   const kTrip = t?.state.k_trip ?? 1;
+  if (p) withTrailer(energy, s, p.request);
   const params = p ? { ...requestParams(s, p.request, socNow), ...VARIANTS[t!.variant], energyFactor: kTrip }
                    : paramsFrom(s, socNow, { mode: "vyvazeny" as Mode });
   const w = costWeight(params);
-  const perKm = (consumptionPer100(80, energy, "okresni") / 100) * 1.1 * kTrip;      // konzervativně
+  const perKm = ((consumptionPer100(80, energy, "okresni") + energy.trailerOther) / 100) * 1.1 * kTrip;      // konzervativně
   const cap = vehicle.usableKwh;
   const pref = (op: string) => !!tariffs[op]?.preferred;
   const ideal = (kw: number) => kw >= params.idealKwMin && kw <= params.idealKwMax;
@@ -675,7 +690,7 @@ const PROMPT_KM = 50;
 async function assist(tripId: string, lat: number, lon: number): Promise<AssistState> {
   const t = await loadTrip(tripId);
   const p = await loadPlan(t.plan_id);
-  const { s, vehicle, energy, calFn } = await models();
+  const { s, vehicle, energy, calFn } = await models(p.request);
   const params = { ...requestParams(s, p.request, +p.request.soc), ...VARIANTS[t.variant] };
   const key = `${p.id}|${t.variant}`;
   let c = profileCache.get(key);

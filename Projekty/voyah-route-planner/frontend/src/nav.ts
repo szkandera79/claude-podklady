@@ -19,11 +19,21 @@ export function googleTo(p: LL): string {
   return `https://www.google.com/maps/dir/?api=1&destination=${ll(p)}&travelmode=driving`;
 }
 
-/** Apple Mapy: spolehlivě jen jeden cíl → navigace úsek po úseku. */
-export function appleTo(p: LL, name?: string): string {
-  const q = name ? `&q=${encodeURIComponent(name)}` : "";
-  return `https://maps.apple.com/?daddr=${ll(p)}&dirflg=d${q}`;
+const lonlat = (p: LL) => `${p.lon.toFixed(6)},${p.lat.toFixed(6)}`;
+
+/** Mapy.cz (mapy.com/fnc/v1): trasa s až 15 průjezdními body, navigate=true spustí navigaci v aplikaci Mapy.cz.
+ *  Bez `from` začíná trasa v aktuální poloze (dle aplikace). Souřadnice lon,lat. */
+export function mapyRoute(dest: LL, stops: Stop[] = [], from?: LL): string {
+  const u = new URL("https://mapy.com/fnc/v1/route");
+  if (from) u.searchParams.set("start", lonlat(from));
+  u.searchParams.set("end", lonlat(dest));
+  const wp = stops.filter((s) => s.station.lat != null).slice(0, 15).map((s) => lonlat({ lat: s.station.lat!, lon: s.station.lon! }));
+  if (wp.length) u.searchParams.set("waypoints", wp.join(";"));
+  u.searchParams.set("routeType", "car_fast_traffic");
+  u.searchParams.set("navigate", "true");
+  return u.toString();
 }
+export const mapyTo = (p: LL, from?: LL) => mapyRoute(p, [], from);
 
 /** Waze: jen jeden cíl (průjezdní body nepodporuje) → navigace po úsecích; odkaz otevře aplikaci Waze, jinak web. */
 export function wazeTo(p: LL): string {

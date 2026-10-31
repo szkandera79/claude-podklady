@@ -19,6 +19,8 @@ export interface PlanRequest {
   pins?: Record<string, [number, number, string]>;
   /** Povinná nabíjecí zastávka (náhradní nabíječka) — souřadnice stanice. */
   required_station?: { lat: number; lon: number };
+  /** Jízda s přívěsem (vozíkem) — vyšší spotřeba dle nastavení. */
+  trailer?: boolean;
 }
 export interface PlanResult {
   plan_id: string; origin: string; destination: string; route_source: string; distance_km: number;
@@ -52,7 +54,8 @@ export interface Settings {
               only_preferred: boolean; corridor_km: number; default_price_kwh: number; prices_without_vat?: boolean; tesla_ok?: boolean;
               ideal_kw_min?: number; ideal_kw_max?: number; max_detour_km?: number;
               alert_saving_czk?: number; alerts_on?: boolean; prices_auto_update?: boolean; offline_data?: boolean;
-              assistant_on?: boolean; soc_prompt_min?: number };
+              assistant_on?: boolean; soc_prompt_min?: number;
+              trailer_extra_motorway?: number; trailer_extra_other?: number; trailer_max_kmh?: number };
   tariffs: Tariff[];
   tariffs_version?: number;
 }

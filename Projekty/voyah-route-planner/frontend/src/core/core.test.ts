@@ -153,3 +153,20 @@ describe("křížová kontrola s Python jádrem", () => {
     });
   }
 });
+
+describe("přívěs", () => {
+  it("+10 kWh/100 km na dálnici, +5 na okresní silnici", () => {
+    const e = { ...defaultEnergy(), trailerMotorway: 10, trailerOther: 5 };
+    const kwh = (r: Route, en = defaultEnergy()) => { const p = routeProfile(r, V, en, "rychly"); return p.kwh[p.kwh.length - 1]; };
+    const dal = makeRoute([[100, "dalnice", 125, 20]]);
+    const okr = makeRoute([[100, "okresni", 90, 20]]);
+    expect(kwh(dal, e) - kwh(dal)).toBeCloseTo(10, 1);
+    expect(kwh(okr, e) - kwh(okr)).toBeCloseTo(5, 1);
+  });
+  it("rychlost s přívěsem omezena (115 km/h): delší čas, okresky beze změny", () => {
+    const e = { ...defaultEnergy(), maxSpeed: 115 };
+    const min = (r: Route, en = defaultEnergy()) => { const p = routeProfile(r, V, en, "rychly"); return p.minutesBetween(0, p.totalKm); };
+    expect(min(makeRoute([[115, "dalnice", 130, 20]]), e)).toBeCloseTo(60, 1);
+    expect(min(makeRoute([[90, "okresni", 90, 20]]), e)).toBeCloseTo(60, 1);
+  });
+});
