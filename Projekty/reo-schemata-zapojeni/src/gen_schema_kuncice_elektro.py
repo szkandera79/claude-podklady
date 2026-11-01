@@ -6,12 +6,15 @@ Vytváří ../schema-kuncice-elektro.svg (a PNG přes Chrome headless, viz READM
 Spuštění:  python3 reo-schemata-zapojeni/src/gen_schema_kuncice_elektro.py
 Styl: zjednodušené piktogramy + číslované popisky (vzor: REO/Fotky a schema).
 """
-import os, re
+import os, re, sys
+
+TUV = "--tuv" in sys.argv                 # varianta 2: s ohřevem TUV (trojcestný ventil, čidlo T2, vložka)
+DY = 140 if TUV else 0
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LOGO = os.path.expanduser("~/Claude/REO/logo/logo-reo-heating.svg")
 
-W, H = 1400, 1270
+W, H = 1400, 1270 + DY
 RED, BLUE = "#D9342B", "#2468B3"      # výstup (topná) / vratka
 YEL = "#E3A71B"                       # elektrické ovládání, signál
 INK, GREY = "#22272A", "#6B7378"
@@ -189,12 +192,12 @@ R(0, 0, W, H, fill="#fff", stroke=None)
 
 logo(36, 22, 190)
 T(256, 62, "Schéma elektrického zapojení", "ttl")
-T(256, 92, "Pouze vytápění s AKU nádrží 100 l · jednotky 1F i 3F dle návodu", "sub")
-T(W - 36, 58, "REO-SCH-K1-E · RH030–RH060", "zone", "end")
+T(256, 92, ("Vytápění s AKU nádrží 100 l a ohřev TUV" if TUV else "Pouze vytápění s AKU nádrží 100 l") + " · jednotky 1F i 3F dle návodu", "sub")
+T(W - 36, 58, ("REO-SCH-K2-E" if TUV else "REO-SCH-K1-E") + " · RH030–RH060", "zone", "end")
 T(W - 36, 78, "rev. 1 · 11/2026", "tx", "end")
 add(f'<line x1="30" y1="118" x2="{W - 30}" y2="118" stroke="{GRN}" stroke-width="3"/>')
 
-ZT, ZB = 140, 660
+ZT, ZB = 140, 660 + DY
 R(30, ZT, 390, ZB - ZT, fill="#F2F6F9", stroke=None, rx=10)
 R(1040, ZT, 330, ZB - ZT, fill="#FBF6EF", stroke=None, rx=10)
 for xx in (420, 1040):
@@ -222,27 +225,28 @@ T(UX + 254, UY + 58, "vestavěné čerpadlo,", "tx", "middle")
 T(UX + 254, UY + 73, "čidla vody T3, T8", "tx", "middle")
 # svorkovnice příslušenství 1–6
 T(UX + 18, UY + 140, "SVORKOVNICE PŘÍSLUŠENSTVÍ (všechny modely)", "rs")
-names = [("1", "TUV", False), ("2", "E-ohřev", False), ("3", "3c. ventil", False),
+names = [("1", "TUV", TUV), ("2", "E-ohřev", False), ("3", "3c. ventil", TUV),
          ("4", "N", True), ("5", "spínač", True), ("6", "COM", True)]
 for i, (n, nm, act) in enumerate(names):
     x = UX + 18 + i * 50
     terminal(x, UY + 146, n, act)
     T(x + 15, UY + 188, nm, "tx", "middle")
-T(UX + 18, UY + 210, "1–3 využije schéma 2 (TUV), nyní volné", "tx")
+if not TUV:
+    T(UX + 18, UY + 210, "1–3 pro příslušenství TUV — v této variantě volné", "tx")
 # volitelný externí spínač na 5–6
 P(f"M{UX + 233},{UY + 196} L{UX + 233},{UY + 232} M{UX + 283},{UY + 196} L{UX + 283},{UY + 232}", GREY, 2, dash="5 4")
 R(UX + 200, UY + 232, 116, 46, fill="#fff", stroke=GREY, sw=1.8, rx=5)
 add(f'<path d="M{UX + 214},{UY + 266} L{UX + 230},{UY + 252} M{UX + 236},{UY + 266} h12" stroke="{GREY}" stroke-width="2" fill="none"/>')
 T(UX + 284, UY + 252, "ext. spínač", "tx", "middle")
 T(UX + 284, UY + 268, "volitelně", "tx", "middle")
-T(UX + 18, UY + UH - 34, "VENKOVNÍ JEDNOTKA", "lab")
-T(UX + 18, UY + UH - 16, "REO RH030–RH060", "tx")
+jx = UX + 236 if TUV else UX + 18
+T(jx, UY + UH - 34, "VENKOVNÍ JEDNOTKA" if not TUV else "JEDNOTKA", "lab")
+T(jx, UY + UH - 16, "RH030–RH060" if TUV else "REO RH030–RH060", "tx")
 
 # ---------------------------------------------------------------- rozvaděč TČ
 RX, RY_, RW, RH = 470, 230, 250, 320
 R(RX, RY_, RW, RH, fill="#FFFDF6", stroke=INK, sw=2.6, rx=8)
 T(RX + 16, RY_ + 26, "ROZVADĚČ TČ", "lab")
-T(RX + 16, RY_ + 42, "(na fotkách „R.AC TČ“)", "tx")
 def brk(x, y, label, sub, w=110):
     R(x, y, w, 64, fill="#fff", stroke=INK, sw=2.2, rx=5)
     add(f'<path d="M{x + 16},{y + 46} L{x + 16},{y + 36} L{x + 30},{y + 20} M{x + 30},{y + 30} L{x + 30},{y + 46}" '
@@ -314,7 +318,23 @@ num(1290, 290, 10)
 num(UX + 186, UY + 256, 11)
 
 # legenda
-lx, ly = 1060, 560
+if TUV:
+    # ---------------------------------------------------------------- TUV: trojcestný ventil, čidlo T2, vložka
+    P(f"M{UX + 148},{UY + 159} L{UX + 158},{UY + 159} L{UX + 158},700 L470,700", PWR, 3)
+    R(470, 680, 150, 42, fill="#fff", stroke=INK, sw=2.2, rx=6)
+    T(545, 698, "TROJCESTNÝ VENTIL", "rs", "middle")
+    T(545, 713, "svorky 3 (L) + 4 (N) + PE", "tx", "middle")
+    P(f"M{UX + 318},{UY + 40} L{UX + 332},{UY + 40} L{UX + 332},732 L660,732", YEL, 2.4, dash="7 5")
+    R(660, 712, 150, 40, fill="#fff", stroke=INK, sw=2.2, rx=6)
+    T(735, 730, "ČIDLO TUV T2", "rs", "middle")
+    T(735, 745, "jímka zásobníku TUV", "tx", "middle")
+    P(f"M{UX + 48},{UY + 159} L{UX + 58},{UY + 159} L{UX + 58},776 L850,776", GREY, 2.4, dash="5 4")
+    R(850, 754, 176, 42, fill="#fff", stroke=GREY, sw=1.8, rx=6)
+    T(938, 772, "STYKAČ → TOPNÁ VLOŽKA", "rs", "middle")
+    T(938, 787, "svorky 1 + 4 · volitelně", "tx", "middle")
+    num(640, 684, 12); num(830, 716, 14); num(1000, 738, 13)
+
+lx, ly = 1060, 560 + DY
 for k, (c, lab, d) in enumerate([(PWR, "silový kabel 230 / 400 V", None), (COM, "komunikační kabel ovladače", "9 6"),
                                   (YEL, "rádiový signál termostatu", "2 7"), (GREY, "volitelné", "5 4")]):
     yy = ly + k * 18
@@ -323,7 +343,7 @@ for k, (c, lab, d) in enumerate([(PWR, "silový kabel 230 / 400 V", None), (COM,
     T(lx + 44, yy + 4, lab, "tx")
 
 # ---------------------------------------------------------------- varianty napájení dle návodu
-TY0 = 682
+TY0 = 682 + DY
 T(30, TY0 + 14, "VARIANTY NAPÁJENÍ PODLE NÁVODU RH030–RH060 (str. 17–19)", "hd")
 cols = [30, 390, 545, 690, 820, 1100, 1370]
 heads = ["Model (schéma výrobce)", "Napájení", "Svorky jednotky", "Proudový chránič", "Jistič TČ", "Napájecí kabel"]
@@ -341,7 +361,7 @@ T(30, TY0 + 146, "Svorky příslušenství 1–6 jsou u všech modelů stejné: 
   "Napětí ±10 %, při startu min. 90 % jmenovitého.", "tx")
 
 # ---------------------------------------------------------------- spodní část
-BY = 870
+BY = 870 + DY
 R(30, BY, 700, 370, fill="#fff", stroke="#DDE3E6", sw=1.5, rx=10)
 T(52, BY + 32, "SOUČÁSTI", "hd")
 parts = [
@@ -357,8 +377,12 @@ parts = [
     (10, "Bezdrátový pokojový termostat", "v hydraulickém schématu č. 12"),
     (11, "Externí spínač zap / vyp (volitelně)", "na svorky 5 a 6 (COM) jednotky"),
 ]
+if TUV:
+    parts += [(12, "Trojcestný ventil s pohonem 230 V", "svorky 3 (L) + 4 (N) + PE; v režimu TUV pod napětím"),
+              (13, "Stykač + topná vložka TUV (volitelně)", "ovládání svorky 1 + 4; vložka má vlastní jistič"),
+              (14, "Čidlo teploty TUV (T2)", "do jímky zásobníku, kabel k řídicí desce TČ")]
 for i, (n, a, b) in enumerate(parts):
-    col, row = (0, i) if i < 6 else (1, i - 6)
+    col, row = (0, i) if i < (7 if TUV else 6) else (1, i - (7 if TUV else 6))
     x = 52 + col * 345
     y = BY + 64 + row * 37
     num(x + 12, y, n)
@@ -372,10 +396,10 @@ how = [
     "vratné vody ohřívá AKU. Ovladač (7) slouží k nastavení a hlášení.",
     "Topení řídí samostatný okruh 230 V: termostat (10) → přijímač (8)",
     "→ sekundární čerpadlo (9). Oba okruhy jsou na sobě nezávislé.",
-]
+] + (["TUV: deska podle čidla T2 (14) přepne trojcestný ventil (12)."] if TUV else [])
 for i, s in enumerate(how):
     T(772, BY + 62 + i * 21, s, "ts")
-T(772, BY + 164, "POŽADAVKY Z NÁVODU", "hd")
+T(772, BY + 164 + (14 if TUV else 0), "POŽADAVKY Z NÁVODU", "hd")
 req = [
     "• Samostatný přívod, napětí v toleranci ±10 %, jednotka uzemněna",
     "\\u00a0\\u00a0\\u00a0— ochranný vodič nesmí být připojen na N.",
@@ -386,13 +410,13 @@ req = [
     "• Zapojení provádí osoba s odbornou kvalifikací dle ČSN / EN.",
 ]
 for i, s in enumerate(req):
-    T(772, BY + 190 + i * 21, s, "ts")
+    T(772, BY + 190 + (14 if TUV else 0) + i * 21, s, "ts")
 
 T(30, H - 12, "Zjednodušené orientační schéma — průřezy kabelů a hodnoty jističů určete podle typového štítku jednotky, "
   "návodu a platných norem.", "tx")
 T(W - 30, H - 12, "REO HEATING", "zone", "end")
 add('</svg>')
 
-dst = os.path.normpath(os.path.join(HERE, "..", "schema-kuncice-elektro.svg"))
+dst = os.path.normpath(os.path.join(HERE, "..", "schema-kuncice-elektro-tuv.svg" if TUV else "schema-kuncice-elektro.svg"))
 open(dst, "w", encoding="utf-8").write("\n".join(o).replace("\\u00a0", " "))
 print("zapsáno:", dst)

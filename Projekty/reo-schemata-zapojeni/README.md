@@ -11,6 +11,8 @@ seznamem součástí a krátkým „jak to funguje“. Značka REO HEATING (logo
 | `schema-kuncice-tuv.svg` / `.png` | Kunčice — schéma 2: vytápění s AKU + TUV (trojcestný ventil, zásobník se spirálou, čidlo T2, SV/TV s pojistným ventilem a exp. nádobou TUV); `src/gen_schema_kuncice_tuv.py` |
 | `kuncice/soupis-komponent.csv` | soupis komponent pro schéma 1 (generuje `src/soupis_kuncice.py`, zároveň vloží tabulku do stránky) |
 | `kuncice/index.html` | popis instalace (venku / uvnitř) s fotkami z realizace, artefakt S9apdYbzv8x7RiMdabc8xK |
+| `pokyny/` | **Pokyny k instalaci (bez hydroboxu)** — V1 vytápění s AKU, V2 AKU + TUV; PDF `REO-pokyny-instalace-V1-AKU.pdf`, `…-V2-AKU-TUV.pdf`; artefakty B1kNm4rR3A56NZ8vBEAeGU (V1), DC42DpVfQhRrkwxdTvX1xN (V2); build `src/build_pokyny.py` (po vygenerování schémat a PNG) |
+| `schema-kuncice-elektro-tuv.svg` / `.png` | elektrické schéma s TUV (`gen_schema_kuncice_elektro.py --tuv`) |
 | `schema-varianta-1.svg` / `.png` | **Varianta 1** (REO RH030–RH060) — pouze vytápění s akumulační nádrží; sekundární čerpadlo za AKU spíná bezdrátový termostat |
 
 Varianta 1 obsahuje: uzavírací ventily u venkovní jednotky (výstup i vratka), protizámrazový ventil Caleffi na vratce,
@@ -24,5 +26,6 @@ python3 reo-schemata-zapojeni/src/gen_schema.py
 PNG (2800 px) přes Chrome headless — příkaz viz historie / `REO/logo/build.sh` (stejný postup).
 
 ## Otevřené
+- **Další fáze: verze s hydroboxem** (V1 jen topení s AKU, V2 s TUV) — podle návodu `~/Downloads/REO_HEATING__Hydro_Box_installation_manual_CZ.pdf` a fotky instalace (hydrobox na zdi, AKU, zásobník TUV, exp. nádoby).
 - Kunčice: elektrické schéma pro TUV (svorka 3 trojcestný ventil, svorka 1 vložka, čidlo T2) — zatím jen v textu.
 - Další varianty (TUV, bivalence, FV) — doplnit jako `schema-varianta-N`.

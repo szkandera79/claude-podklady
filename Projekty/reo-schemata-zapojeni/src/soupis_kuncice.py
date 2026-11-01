@@ -18,7 +18,7 @@ ITEMS = [
     ("Hlavní zařízení", "5", "Akumulační nádrž 100 l (topná voda)", "1", "ks", "s jímkou, hrdly pro teploměr a pojistný ventil"),
 
     ("Venkovní část", "—", "Tvárnice ztraceného bednění + beton (2 ramena 200 × min. 500 mm, výška min. 300 mm)", "1", "sada", "dle výkresu REO-SCH-K1-P; štěrkový podsyp mezi rameny"),
-    ("Venkovní část", "—", "Antivibrační patky (silentbloky) s kotvením", "4", "ks", "návod je vyžaduje"),
+    ("Venkovní část", "—", "Antivibrační patky (silentbloky) s kotvením", "2", "ks", "jedna na každé rameno patky; návod je vyžaduje"),
     ("Venkovní část", "2", "Kulový uzávěr DN25 s holendrem (výstup, vratka)", "2", "ks", "co nejblíže hrdlům jednotky"),
     ("Venkovní část", "4", "Separátor vzduchu a nečistot s automatickým odvzdušněním a pojistným ventilem", "1", "ks", "na výstupu venku, nejvyšší bod venkovní části"),
     ("Venkovní část", "3", "Protizámrazový ventil DN25", "1", "ks", "na vratce venku, výpustí dolů"),
@@ -54,6 +54,22 @@ ITEMS = [
     ("Potrubí a fitinky", "—", "Objímky a kotvení potrubí", "dle trasy", "ks", "proti vibracím (návod)"),
     ("Potrubí a fitinky", "—", "Těsnicí materiál (konopí + pasta / těsnicí vlákno)", "1", "bal.", ""),
     ("Potrubí a fitinky", "—", "Izolace potrubí vnitřní (kaučuk min. 13 mm)", "dle trasy", "m", "celý primár i sekundár"),
+]
+
+# doplňky pro variantu 2 (vytápění + TUV), čísla dle REO-SCH-K2 / K2-E
+ITEMS_TUV = [
+    ("TUV — hydraulika", "18", "Trojcestný přepínací ventil DN25 s pohonem 230 V", "1", "ks", "A → AKU, B → spirála TUV; v režimu TUV pod napětím"),
+    ("TUV — hydraulika", "19", "Zásobník TUV se spirálou", "1", "ks", "výkon spirály ≥ jmenovitý výkon TČ (návod)"),
+    ("TUV — hydraulika", "2", "Kulový uzávěr (přívod a vratka spirály)", "2", "ks", "servis bez vypouštění"),
+    ("TUV — hydraulika", "22", "Uzávěr + zpětný ventil na přívodu studené vody", "1", "sada", ""),
+    ("TUV — hydraulika", "23", "Pojistný ventil TUV (obvykle 6 bar)", "1", "ks", "bez uzávěru, výfuk do odpadu; dle tlaku vodovodu"),
+    ("TUV — hydraulika", "24", "Expanzní nádoba pro pitnou vodu + držák", "1", "ks", "objem dle objemu zásobníku"),
+    ("TUV — hydraulika", "—", "Termostatický směšovač na výstupu teplé vody", "0–1", "ks", "doporučeno — voda nad 52 °C může opařit"),
+    ("TUV — hydraulika", "21", "Elektrická topná vložka do zásobníku (volitelně)", "0–1", "ks", "dohřev a antilegionella"),
+    ("TUV — elektro", "12", "Kabel k trojcestnému ventilu (3 × 0,75–1,5 mm²)", "dle trasy", "m", "svorky 3 (L) + 4 (N) + PE"),
+    ("TUV — elektro", "14", "Čidlo TUV T2 + prodlužovací kabel", "1", "sada", "do jímky zásobníku; ověřit, zda je součástí dodávky TČ"),
+    ("TUV — elektro", "13", "Stykač + jistič pro topnou vložku (volitelně)", "0–1", "sada", "ovládání ze svorky 1 + 4"),
+    ("TUV — fitinky", "—", "Šroubení, T-kusy a přechodky navíc pro okruh TUV a spirálu", "cca 10", "ks", "dle zvoleného materiálu"),
 ]
 
 MATERIALS = [
