@@ -101,7 +101,7 @@ def items_hydrobox(tuv=False):
                 continue            # trojcestný ventil je součástí hydroboxu
             out.append(it)
     else:
-        out.append(("Technická místnost — primár", "—", "Zátka výstupu B hydroboxu (TUV nevyužito)", "1", "ks", "DN25"))
+        out.append(("Technická místnost — primár", "—", "Zátka horního výstupu hydroboxu (TUV nevyužito)", "1", "ks", "DN25"))
     return out
 
 

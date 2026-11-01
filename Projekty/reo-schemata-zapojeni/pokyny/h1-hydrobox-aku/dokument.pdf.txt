@@ -61,17 +61,18 @@ Hydrobox
 obou stranách prostor pro servis. Rozměry 700 × 500 × 280 mm, 35 kg.
 2. Zdola 2× D
 N25 (vnitřní závit) — výstup a vratka od venkovní jednotky. Z boku 3× D
-N25 — výstup
-A do AKU, výstup B do TUV (v této variantě zaslepit) a společná vratka.
+N25: horní
+výstup do TUV (v této variantě zaslepit), prostřední výstup do AKU s topnou vodou a spodní
+vratka (podle schématu instalace v návodu hydroboxu).
 3. Uvnitř je oběhové čerpadlo primárního okruhu, elektrický dohřev 3 kW, trojcestný ventil, filtr,
 expanzní nádoba 8 l, pojistný ventil 3 bar a automatické odvzdušnění. Návod hydroboxu dále
 předepisuje v topném systému kulové kohouty, filtr topné vody, vypouštěcí ventil, zpětný ventil
 a pojistný ventil.
 AKU a topení
-1. Výstup A přes uzávěr 2 do horního hrdla AKU 5 ; vratka ze spodního hrdla přes uzávěr
-2 , magnetický filtr 16 a další uzávěr 2 zpět do hydroboxu.
-2. Na AKU: odvzdušnění 6 , teploměr s pojistným ventilem 8 , vypouštěcí kohout 15 .
+1. Prostřední výstup hydroboxu přes uzávěr 2 do horního hrdla AKU 5 ; vratka ze spodního
+hrdla přes uzávěr 2 , magnetický filtr 16 a další uzávěr 2 zpět do hydroboxu.
 --- strana 5 ---
+2. Na AKU: odvzdušnění 6 , teploměr s pojistným ventilem 8 , vypouštěcí kohout 15 .
 3. Výstup do topení: volitelně směšovací ventil 17 (podlahové topení max. 40 °C, ideálně 35 °C),
 uzávěr, sekundární čerpadlo 10 a uzávěr. Napájení čerpadla spíná a rozpíná přijímač 11
 podle termostatu 12 .
@@ -243,7 +244,9 @@ cca 12 ks dle zvoleného materiálu
 vlákno)
 — Izolace potrubí vnitřní (kaučuk min. 13 mm) dle trasy m celý primár i sekundár
 TECHNICKÁ MÍSTNOST — PRIMÁR
-— Zátka výstupu B hydroboxu (TUV nevyužito) 1 ks D
+— Zátka horního výstupu hydroboxu (TUV
+nevyužito)
+1 ks D
 N25
 Volba materiálu potrubí
 Investor si může vybrat, zda bude hydraulické propojení v mědi, uhlíkové oceli nebo
@@ -258,9 +261,9 @@ D
 N25)
 Měď tvrdé pájení nebo
 lisování
-lisování Uhlíková ocel
+Uhlíková ocel
 (lisovací systém)
-PPR polyfúzní
+lisování PPR polyfúzní
 svařování
 odolná, malé průměry, snese vysoké teploty; vyšší
 cena materiálu

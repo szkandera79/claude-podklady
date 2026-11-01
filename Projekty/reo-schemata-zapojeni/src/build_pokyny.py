@@ -182,7 +182,7 @@ def hb_sections(tuv):
         tuv_steps = '''
   <h3>Ohřev TUV</h3>
   <ol class="steps">
-    <li>Výstup <strong>B</strong> hydroboxu přes uzávěr <span class="n">2</span> do spirály zásobníku TUV <span class="n">19</span> (shora dolů). Výkon spirály ≥ jmenovitý výkon TČ. Trojcestný ventil hydroboxu přepíná v režimu TUV na výstup B; TUV má přednost.</li>
+    <li><strong>Horní výstup</strong> hydroboxu přes uzávěr <span class="n">2</span> do spirály zásobníku TUV <span class="n">19</span> (shora dolů). Výkon spirály ≥ jmenovitý výkon TČ. Trojcestný ventil hydroboxu přepíná v režimu TUV na horní výstup; TUV má přednost.</li>
     <li>Vratka ze spirály přes uzávěr <span class="n">2</span> se spojí s vratkou z AKU <strong>před magnetickým filtrem <span class="n">16</span></strong>. Uzávěr na spodním hrdle AKU umožní odpojit AKU, zatímco ohřev TUV běží dál.</li>
     <li>Čidlo TUV T2 <span class="n">20</span> v jímce zásobníku, kabel k řídicí desce venkovní jednotky.</li>
     <li>Studená voda: uzávěr a zpětný ventil <span class="n">22</span>, expanzní nádoba pro pitnou vodu <span class="n">24</span>, pojistný ventil TUV <span class="n">23</span> bez uzávěru s výfukem do odpadu. Na výstup teplé vody doporučujeme termostatický směšovač (voda nad 52 °C může opařit).</li>
@@ -204,12 +204,12 @@ def hb_sections(tuv):
   <h3>Hydrobox</h3>
   <ol class="steps">
     <li>Hydrobox <span class="n">18</span> na nehořlavou stěnu; prostředí 10–35 °C, relativní vlhkost trvale do 70 %, po obou stranách prostor pro servis. Rozměry 700 × 500 × 280 mm, 35 kg.</li>
-    <li>Zdola 2× DN25 (vnitřní závit) — výstup a vratka od venkovní jednotky. Z boku 3× DN25 — výstup A do AKU, výstup B do TUV{"" if tuv else " (v této variantě zaslepit)"} a společná vratka.</li>
+    <li>Zdola 2× DN25 (vnitřní závit) — výstup a vratka od venkovní jednotky. Z boku 3× DN25: <strong>horní výstup do TUV</strong>{"" if tuv else " (v této variantě zaslepit)"}, <strong>prostřední výstup do AKU</strong> s topnou vodou a <strong>spodní vratka</strong> (podle schématu instalace v návodu hydroboxu).</li>
     <li>Uvnitř je oběhové čerpadlo primárního okruhu, elektrický dohřev 3 kW, trojcestný ventil, filtr, expanzní nádoba 8 l, pojistný ventil 3 bar a automatické odvzdušnění. Návod hydroboxu dále předepisuje v topném systému kulové kohouty, filtr topné vody, vypouštěcí ventil, zpětný ventil a pojistný ventil.</li>
   </ol>
   <h3>AKU a topení</h3>
   <ol class="steps">
-    <li>Výstup A přes uzávěr <span class="n">2</span> do horního hrdla AKU <span class="n">5</span>; vratka ze spodního hrdla přes uzávěr <span class="n">2</span>, magnetický filtr <span class="n">16</span> a další uzávěr <span class="n">2</span> zpět do hydroboxu.</li>
+    <li>Prostřední výstup hydroboxu přes uzávěr <span class="n">2</span> do horního hrdla AKU <span class="n">5</span>; vratka ze spodního hrdla přes uzávěr <span class="n">2</span>, magnetický filtr <span class="n">16</span> a další uzávěr <span class="n">2</span> zpět do hydroboxu.</li>
     <li>Na AKU: odvzdušnění <span class="n">6</span>, teploměr s pojistným ventilem <span class="n">8</span>, vypouštěcí kohout <span class="n">15</span>.</li>
     <li>Výstup do topení: volitelně směšovací ventil <span class="n">17</span> (podlahové topení max. 40 °C, ideálně 35 °C), uzávěr, sekundární čerpadlo <span class="n">10</span> a uzávěr. Napájení čerpadla spíná a rozpíná přijímač <span class="n">11</span> podle termostatu <span class="n">12</span>.</li>
     <li>Za čerpadlem pojistná skupina <span class="n">7</span> a expanzní nádoba <span class="n">9</span>; odvzdušnění v nejvyšším bodě <span class="n">13</span> a ventilky radiátorů <span class="n">14</span>.</li>

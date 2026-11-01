@@ -62,16 +62,17 @@ Hydrobox
 obou stranách prostor pro servis. Rozměry 700 × 500 × 280 mm, 35 kg.
 2. Zdola 2× D
 N25 (vnitřní závit) — výstup a vratka od venkovní jednotky. Z boku 3× D
-N25 — výstup
-A do AKU, výstup B do TUV a společná vratka.
+N25: horní
+výstup do TUV, prostřední výstup do AKU s topnou vodou a spodní vratka (podle schématu
+instalace v návodu hydroboxu).
+--- strana 5 ---
 3. Uvnitř je oběhové čerpadlo primárního okruhu, elektrický dohřev 3 kW, trojcestný ventil, filtr,
 expanzní nádoba 8 l, pojistný ventil 3 bar a automatické odvzdušnění. Návod hydroboxu dále
---- strana 5 ---
 předepisuje v topném systému kulové kohouty, filtr topné vody, vypouštěcí ventil, zpětný ventil
 a pojistný ventil.
 AKU a topení
-1. Výstup A přes uzávěr 2 do horního hrdla AKU 5 ; vratka ze spodního hrdla přes uzávěr
-2 , magnetický filtr 16 a další uzávěr 2 zpět do hydroboxu.
+1. Prostřední výstup hydroboxu přes uzávěr 2 do horního hrdla AKU 5 ; vratka ze spodního
+hrdla přes uzávěr 2 , magnetický filtr 16 a další uzávěr 2 zpět do hydroboxu.
 2. Na AKU: odvzdušnění 6 , teploměr s pojistným ventilem 8 , vypouštěcí kohout 15 .
 3. Výstup do topení: volitelně směšovací ventil 17 (podlahové topení max. 40 °C, ideálně 35 °C),
 uzávěr, sekundární čerpadlo 10 a uzávěr. Napájení čerpadla spíná a rozpíná přijímač 11
@@ -79,9 +80,9 @@ podle termostatu 12 .
 4. Za čerpadlem pojistná skupina 7 a expanzní nádoba 9 ; odvzdušnění v nejvyšším bodě
 13 a ventilky radiátorů 14 .
 Ohřev TUV
-1. Výstup B hydroboxu přes uzávěr 2 do spirály zásobníku TUV 19 (shora dolů). Výkon spirály
-≥ jmenovitý výkon TČ. Trojcestný ventil hydroboxu přepíná v režimu TUV na výstup B; TUV má
-přednost.
+1. Horní výstup hydroboxu přes uzávěr 2 do spirály zásobníku TUV 19 (shora dolů). Výkon
+spirály ≥ jmenovitý výkon TČ. Trojcestný ventil hydroboxu přepíná v režimu TUV na horní
+výstup; TUV má přednost.
 2. Vratka ze spirály přes uzávěr 2 se spojí s vratkou z AKU před magnetickým filtrem 16 .
 Uzávěr na spodním hrdle
 AKU umožní odpojit AKU, zatímco ohřev TUV běží dál.

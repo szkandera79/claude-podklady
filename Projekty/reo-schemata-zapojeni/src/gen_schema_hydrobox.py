@@ -274,7 +274,7 @@ logo(36, 22, 190)
 T(256, 62, "Schéma hydraulického zapojení s hydroboxem", "ttl")
 T(256, 92, "Vytápění s AKU nádrží 100 l a ohřev TUV" if TUV else "Pouze vytápění s AKU nádrží 100 l", "sub")
 T(W - 36, 58, ("REO-SCH-H2" if TUV else "REO-SCH-H1") + " · RH030–RH060", "zone", "end")
-T(W - 36, 78, "rev. 0 · 11/2026", "tx", "end")
+T(W - 36, 78, "rev. 1 · 11/2026", "tx", "end")
 add(f'<line x1="30" y1="118" x2="{W - 30}" y2="118" stroke="{GRN}" stroke-width="3"/>')
 
 ZT, ZB = 140, (920 if TUV else 660)
@@ -302,7 +302,7 @@ HX, HY, HW, HH = 450, 250, 130, 320       # hydrobox
 TX, TY, TW, TH = 760, 320, 130, 240       # AKU 100 l
 TIN, TOUT = TY + 45, TY + TH - 45         # 365 / 515
 TOP = TX + TW / 2
-BY_ = 390                                 # výstup B hydroboxu (TUV)
+BY_ = 390                                 # prostřední výstup hydroboxu → AKU (horní FY = TUV, spodní TOUT = vratka)
 
 # TČ → hydrobox (výstup) a hydrobox → TČ (vratka)
 P(f"M250,{FY} L{HX},{FY}", RED)
@@ -313,7 +313,7 @@ T(HX + HW / 2, HY - 26, "HYDROBOX", "lab", "middle")
 T(HX + HW / 2, HY - 10, "RH-03H(/S) · RH-05H(/S)", "tx", "middle")
 P(f"M{HX},{FY} L{HX + HW},{FY}", RED, 4)                              # vnitřní výstup → A
 P(f"M{HX + HW},{TOUT} L{HX + 20},{TOUT} L{HX + 20},{RY} L{HX},{RY}", BLUE, 4)   # vnitřní vratka
-P(f"M{HX + 105},{FY + 14} L{HX + 105},{BY_} L{HX + HW},{BY_}", RED, 4)          # výstup B
+P(f"M{HX + 105},{FY + 14} L{HX + 105},{BY_} L{HX + HW},{BY_}", RED, 4)          # prostřední výstup → AKU
 heater(HX + 30, FY)
 air_vent(HX + 66, FY)
 three_way(HX + 105, FY)
@@ -322,10 +322,12 @@ P(f"M{HX + 100},{TOUT} L{HX + 100},{TOUT - 22}", BLUE, 3)
 exp_vessel(HX + 100, TOUT - 48)
 T(HX + HW / 2, HY + HH - 26, "+ filtr, pojistný", "tx", "middle")
 T(HX + HW / 2, HY + HH - 12, "ventil 3 bar, jistič", "tx", "middle")
-T(HX + HW - 6, FY - 8, "A", "rs", "end"); T(HX + HW - 6, BY_ - 8, "B", "rs", "end")
+if TUV:
+    T(HX + HW + 26, FY - 8, "→ TUV", "rs")
+T(HX + HW + 26, BY_ - 8, "→ AKU", "rs"); T(HX + HW - 6, TOUT - 8, "vratka", "rs", "end")
 
 # hydrobox (A) → AKU
-P(f"M{HX + HW},{FY} L720,{FY} L720,{TIN} L{TX},{TIN}", RED)
+P(f"M{HX + HW},{BY_} L720,{BY_} L720,{TIN} L{TX},{TIN}", RED)
 # AKU → magnetický filtr → hydrobox (vratka)
 P(f"M{TX},{TOUT} L{HX + HW},{TOUT}", BLUE)
 if TUV:
@@ -333,10 +335,10 @@ if TUV:
     add(f'<circle cx="722" cy="{TOUT}" r="5" fill="{BLUE}"/>')
 else:
     valve(712, TOUT); mag_filter(668, TOUT); valve(624, TOUT)
-    # výstup B nevyužit — zaslepit
-    add(f'<line x1="{HX + HW + 10}" y1="{BY_ - 10}" x2="{HX + HW + 10}" y2="{BY_ + 10}" stroke="{INK}" stroke-width="4"/>')
-    P(f"M{HX + HW},{BY_} L{HX + HW + 10},{BY_}", RED, 4)
-    T(HX + HW + 18, BY_ + 4, "B zaslepit (TUV nevyužito)", "tx")
+    # horní výstup (TUV) nevyužit — zaslepit
+    add(f'<line x1="{HX + HW + 10}" y1="{FY - 10}" x2="{HX + HW + 10}" y2="{FY + 10}" stroke="{INK}" stroke-width="4"/>')
+    P(f"M{HX + HW},{FY} L{HX + HW + 10},{FY}", RED, 4)
+    T(HX + HW + 18, FY - 12, "TUV zaslepit", "tx")
 valve(742, TIN)
 
 # sekundár: AKU → radiátory → AKU (jako schéma 1, posunuto)
@@ -392,7 +394,7 @@ T(1014, 302, "spíná / rozpíná přijímač", "tx", "end")
 if TUV:
     VX, VY, VW, VH = 740, 640, 130, 250
     SIN, SOUT = 700, 830
-    P(f"M{HX + HW},{BY_} L600,{BY_} L600,{TOUT - 10} A10,10 0 0 0 600,{TOUT + 10} L600,{SIN} L{VX},{SIN}", RED)
+    P(f"M{HX + HW},{FY} L600,{FY} L600,{BY_ - 10} A10,10 0 0 0 600,{BY_ + 10} L600,{TOUT - 10} A10,10 0 0 0 600,{TOUT + 10} L600,{SIN} L{VX},{SIN}", RED)
     P(f"M{VX},{SOUT} L722,{SOUT} L722,{SIN + 10} A10,10 0 0 1 722,{SIN - 10} L722,{TOUT}", BLUE)
     tank_tuv(VX, VY, VW, VH)
     add(f'<path d="M{VX},{SIN} ' + " ".join(f"L{VX + (28 if k % 2 == 0 else 6)},{SIN + 10 + k * 12}" for k in range(10)) + f' L{VX},{SOUT}" fill="none" stroke="{RED}" stroke-width="3" stroke-linejoin="round"/>')
@@ -461,7 +463,7 @@ if TUV:
     T(52, BY + 32, "SOUČÁSTI TUV", "hd")
     T(250, BY + 32, "prvky 1–18 viz schéma s hydroboxem H1", "tx")
     parts = [
-        (18, "Hydrobox — trojcestný ventil", "výstup A → AKU, výstup B → spirála TUV"),
+        (18, "Hydrobox — trojcestný ventil", "horní výstup → TUV, prostřední → AKU, spodní vratka"),
         (19, "Zásobník TUV se spirálou", "výkon spirály ≥ jmenovitý výkon TČ"),
         (20, "Čidlo teploty TUV (T2)", "do jímky zásobníku, kabel k řídicí desce TČ"),
         (21, "Elektrická topná vložka (volitelně)", "dohřev a antilegionella"),
@@ -506,13 +508,13 @@ R(750, BY, 620, 370, fill=GRNL, stroke=None, rx=10)
 T(772, BY + 32, "JAK TO FUNGUJE", "hd")
 how = [
     "Čerpadlo hydroboxu (18) žene vodu přes TČ (1); při mrazu pomáhá",
-    "elektrický dohřev 3 kW. Výstup A vede ohřátou vodu do AKU (5).",
+    "elektrický dohřev 3 kW. Prostřední výstup vede vodu do AKU (5).",
 ]
 how += ([
-    "Při požadavku na TUV přepne trojcestný ventil hydroboxu na výstup B",
+    "Při požadavku na TUV přepne trojcestný ventil na horní výstup",
     "do spirály zásobníku (19); teplotu hlídá čidlo T2 (20). TUV má přednost.",
 ] if TUV else [
-    "Výstup B (TUV) je zaslepen. Topení řídí termostat (12) přes",
+    "Horní výstup (TUV) je zaslepen. Topení řídí termostat (12) přes",
     "přijímač (11), který spíná napájení sekundárního čerpadla (10).",
 ])
 for i, s_ in enumerate(how):
