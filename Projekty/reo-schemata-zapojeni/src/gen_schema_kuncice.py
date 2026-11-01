@@ -181,6 +181,16 @@ def rad_vent(x, y):
     add(f'<g transform="translate({x},{y})"><rect x="-5" y="-12" width="10" height="12" fill="#fff" stroke="{INK}" stroke-width="2"/>'
         f'<path d="M0,-15 v-6 M-4,-24 l4,3 l4,-3" fill="none" stroke="{GREY}" stroke-width="1.6"/></g>')
 
+def mag_filter(x, y):
+    """Magnetický filtr: těleso pod potrubím s magnetem a vypouštěním."""
+    add(f'<g transform="translate({x},{y})">'
+        f'<rect x="-13" y="-10" width="26" height="40" rx="6" fill="#fff" stroke="{INK}" stroke-width="2.2"/>'
+        f'<path d="M-6,0 v12 a6,6 0 0 0 12,0 v-12" fill="none" stroke="{INK}" stroke-width="3"/>'
+        f'<line x1="-6" y1="0" x2="-6" y2="5" stroke="{RED}" stroke-width="3"/>'
+        f'<line x1="6" y1="0" x2="6" y2="5" stroke="{BLUE}" stroke-width="3"/>'
+        f'<line x1="0" y1="30" x2="0" y2="38" stroke="{INK}" stroke-width="2.4"/>'
+        f'<line x1="-6" y1="38" x2="6" y2="38" stroke="{INK}" stroke-width="2.6" stroke-linecap="round"/></g>')
+
 def tank100(x, y, w, h):
     add(f'<defs><linearGradient id="ak" x1="0" y1="0" x2="0" y2="1">'
         f'<stop offset="0" stop-color="#F7B9A6"/><stop offset="0.5" stop-color="#F3E3E6"/>'
@@ -213,10 +223,10 @@ R(0, 0, W, H, fill="#fff", stroke=None)
 
 # záhlaví
 logo(36, 22, 190)
-T(256, 62, "Schéma zapojení — AKU 100 l s venkovní jednotkou", "ttl")
-T(256, 92, "Podle realizace Kunčice pod Ondřejníkem · krok 1: pouze vytápění", "sub")
+T(256, 62, "Schéma hydraulického zapojení", "ttl")
+T(256, 92, "Pouze vytápění s AKU nádrží 100 l", "sub")
 T(W - 36, 58, "REO-SCH-K1 · RH030–RH060", "zone", "end")
-T(W - 36, 78, "rev. 3 · 11/2026", "tx", "end")
+T(W - 36, 78, "rev. 5 · 11/2026", "tx", "end")
 add(f'<line x1="30" y1="118" x2="{W - 30}" y2="118" stroke="{GRN}" stroke-width="3"/>')
 
 # zóny
@@ -248,7 +258,7 @@ P(f"M250,{FY} L560,{FY} L560,{TIN} L{TX},{TIN}", RED)
 P(f"M{TX},{TOUT} L540,{TOUT} L540,{RY} L250,{RY}", BLUE)
 # sekundár: AKU → radiátory → AKU
 SX, RAD = 1080, 1130
-PSX = 930                                 # stoupačka k pojistné skupině a expanzní nádobě (za čerpadlem)
+PSX = 945                                 # stoupačka k pojistné skupině a expanzní nádobě (za čerpadlem)
 P(f"M{TX + TW},{TIN} L{SX},{TIN} L{SX},{TIN + 100} L{RAD},{TIN + 100}", RED)
 P(f"M{SX},{TIN} L{RAD},{TIN}", RED)
 P(f"M{PSX},{TIN} L{PSX},{TIN - 92}", RED, 4)
@@ -286,7 +296,8 @@ add(f'<path d="M{TX + TW + 26},442 L{TX + TW + 40},450 L{TX + TW + 26},458 Z" fi
     f'<line x1="{TX + TW + 33}" y1="458" x2="{TX + TW + 33}" y2="486" stroke="{GREY}" stroke-width="2.2" stroke-dasharray="5 4"/>'
     f'<path d="M{TX + TW + 26},486 h14 l-4,8 h-6 Z" fill="#fff" stroke="{GREY}" stroke-width="1.8"/>')
 drain_cock(TOP, TY + TH)                             # 15 vypouštění
-valve(820, TIN); pump(870, TIN); valve(985, TIN)     # 10 sekundární čerpadlo
+mag_filter(806, TIN)                                 # 16 magnetický filtr na výstupu z AKU
+valve(845, TIN); pump(890, TIN); valve(995, TIN)     # 10 sekundární čerpadlo
 valve(960, 600)
 air_vent(SX, TIN)                                    # 13 odvzdušnění v nejvyšším bodě
 radiator(RAD, TIN - 12); radiator(RAD, TIN + 88)
@@ -294,11 +305,8 @@ rad_vent(RAD + 150, TIN - 12); rad_vent(RAD + 150, TIN + 88)
 thermostat(1295, 190)
 receiver(770, 196)
 
-# čidlo AKU → řízení TČ
-add(f'<circle cx="{TX + 22}" cy="482" r="9" fill="#fff" stroke="{INK}" stroke-width="2"/>')
-T(TX + 22, 486, "T", "rs", "middle")
-P(f"M{TX + 13},482 L250,482", YEL, 2.4, dash="7 5")
-P(f"M844,226 L870,226 L870,{TIN - 17}", YEL, 3)
+# TČ RH030–RH060 nemá vstup pro čidlo AKU — řídí podle vestavěného čidla vratné vody (T3), viz návod
+P(f"M844,226 L890,226 L890,{TIN - 17}", YEL, 3)
 waves(862, 182, 1)
 waves(1289, 214, -1)
 P("M900,186 L1251,210", YEL, 1.6, dash="2 7")
@@ -315,13 +323,13 @@ num(TOP + 28, TY - 40, 6)
 num(PSX + 48, 290, 7)
 num(TX + TW + 64, 432, 8)
 num(PSX + 48, TIN - 132, 9)
-num(870, 412, 10)
+num(890, 412, 10)
+num(806, TIN - 32, 16)
 num(756, 180, 11)
 num(1340, 270, 12)
 num(SX - 26, TIN - 38, 13)
 num(1210, 570, 14)
 num(TOP + 30, TY + TH + 22, 15)
-num(TX - 22, 450, 16)
 T(155, 518, "venkovní jednotka", "tx", "middle")
 
 # ---------------------------------------------------------------- spodní část
@@ -344,7 +352,7 @@ parts = [
     (13, "Odvzdušňovací ventil v nejvyšším bodě", "na stoupačce / nejvyšším místě rozvodu"),
     (14, "Radiátory s odvzdušňovacími ventilky", "stávající otopná soustava"),
     (15, "Vypouštěcí kohout AKU", "na dně nádrže — vypouštění, odkalení"),
-    (16, "Čidlo teploty AKU", "do jímky nádrže, kabel k řídicí jednotce TČ"),
+    (16, "Magnetický filtr", "na výstupu z AKU do topení — zachytí magnetit a kal"),
 ]
 for i, (n, a, b) in enumerate(parts):
     col, row = (0, i) if i < 8 else (1, i - 8)
@@ -364,8 +372,8 @@ for k, (c, lab, d) in enumerate([(RED, "výstup — teplá voda", None), (BLUE, 
 R(750, BY, 620, 370, fill=GRNL, stroke=None, rx=10)
 T(772, BY + 32, "JAK TO FUNGUJE", "hd")
 how = [
-    "TČ (1) ohřívá topnou vodu v AKU 100 l (5) podle čidla (16) —",
-    "samo se zapíná a vypíná, nezávisle na pokojovém termostatu.",
+    "TČ (1) ohřívá vodu v AKU 100 l (5). Řídí se vlastním čidlem teploty",
+    "vratné vody — samo se zapíná a vypíná, nezávisle na termostatu.",
     "Termostat (12) pošle rádiem signál přijímači (11), ten zapne",
     "čerpadlo (10) a voda z AKU jde do radiátorů (14). Po dosažení",
     "teploty v místnosti termostat čerpadlo (10) zase vypne.",
@@ -376,8 +384,7 @@ T(772, BY + 186, "BEZPEČNOST A TIPY", "hd")
 tips = [
     "• Pojistné ventily (7, 8) bez uzávěru, výfuk viditelně do odpadu.",
     "• Mezi pojistnou skupinou (7) a exp. nádobou (9) žádný uzávěr.",
-    "• Uzávěry u čerpadla (10) zavírat jen při servisu — přes ně",
-    "\u00a0\u00a0\u00a0chrání pojistná skupina (7) i AKU a okruh TČ.",
+    "• Uzávěry (2) a uzávěry u čerpadla (10) zavírat jen při servisu.",
     "• Odvzdušnění (4, 6, 13, 14) vždy v nejvyšších bodech potrubí.",
     "• Protizámrazový ventil (3) venku na vratce, výpustí dolů.",
     "• V místnosti s termostatem nechte hlavice radiátorů otevřené.",

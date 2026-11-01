@@ -67,10 +67,10 @@ footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line)
 
 <div class="wrap">
 <header>
-  <span class="eyebrow">REO HEATING · popis instalace · krok 1</span>
-  <h1>Zapojení AKU 100 l s venkovní jednotkou</h1>
+  <span class="eyebrow">REO HEATING · popis instalace · schéma 1</span>
+  <h1>Schéma hydraulického zapojení — pouze vytápění s AKU nádrží</h1>
   <p>Popis a schéma vychází z realizace v Kunčicích pod Ondřejníkem (rodinný dům, technická místnost ve sklepě). V tomto kroku řešíme jen vytápění: venkovní jednotku REO, akumulační nádrž 100 l s topnou vodou a její napojení do otopné soustavy včetně bezpečnostních a regulačních prvků. Ohřev TUV (velký zásobník na fotkách) bude popsán v dalším kroku.</p>
-  <div class="meta"><span><b>Jednotka:</b> REO RH030–RH060 (monoblok, R290)</span><span><b>AKU:</b> 100 l, topná voda</span><span><b>Regulace topení:</b> bezdrátový termostat → sekundární čerpadlo</span><span><b>Schéma:</b> REO-SCH-K1, rev. 3</span></div>
+  <div class="meta"><span><b>Jednotka:</b> REO RH030–RH060 (monoblok, R290)</span><span><b>AKU:</b> 100 l, topná voda</span><span><b>Regulace topení:</b> bezdrátový termostat → sekundární čerpadlo</span><span><b>Schémata:</b> hydraulika K1 rev. 5 · elektro K1-E · patka K1-P</span></div>
 </header>
 
 <figure>
@@ -87,13 +87,17 @@ footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line)
       <figure><img src="foto/venkovni-potrubi.jpg" alt="Boční pohled: izolované potrubí výstupu nahoře a vratky dole vedené po zdi do sklepa, kabely v chráničce."><figcaption>Výstup (nahoře) a vratka (dole) v izolaci s hliníkovým povrchem, kabely zvlášť v chráničce, prostup zdí do sklepa.</figcaption></figure>
     </div>
     <ol class="steps">
-      <li><div><h3>Osazení jednotky <span class="n">1</span></h3><p>Monoblok REO RH030–RH060 na pevném podkladu (betonové bloky) s antivibračními patkami, nad úrovní terénu a sněhu. Pod jednotkou musí odtéct kondenzát; ze zadní strany ponechat volný přívod vzduchu.</p></div></li>
+      <li><div><h3>Osazení jednotky <span class="n">1</span></h3><p>Monoblok REO RH030–RH060 stojí na betonové patce ze dvou ramen ze ztraceného bednění (viz výkres níže) a na antivibračních patkách, nad úrovní terénu a sněhu. Ramena jsou kolmo ke stěně, osově 700 mm od sebe, min. 500 mm od stěny kvůli sání vzduchu. Mezi rameny štěrk, aby odtékal kondenzát.</p></div></li>
       <li><div><h3>Uzávěr na výstupu, hned u jednotky <span class="n">2</span></h3><p>Na výstupu teplé vody do domu je jako první prvek kulový uzávěr, co nejblíže hrdlu jednotky. Umožní odpojit jednotku při servisu bez vypouštění soustavy.</p></div></li>
       <li><div><h3>Separátor s velkým bezpečnostním odvzdušňovacím ventilem <span class="n">4</span></h3><p>Za uzávěrem je na výstupu separátor vzduchu (a nečistot) s automatickým odvzdušňovacím ventilem nahoře a pojistným ventilem. Je to nejvyšší bod venkovní části potrubí. Zůstává venku: pokud by se do vody dostalo chladivo R290, odejde ventilem do volného prostoru, a ne do domu.</p></div></li>
       <li><div><h3>Uzávěr a protizámrazový ventil na vratce <span class="n">2</span> <span class="n">3</span></h3><p>Dole na vratce je kulový uzávěr a za ním protizámrazový ventil s výpustí směrem dolů. Při mrazu a výpadku proudu, kdy jednotka nemůže sama chránit výměník, ventil vypustí vodu z venkovního úseku.</p></div></li>
       <li><div><h3>Potrubí a kabely</h3><p>Venkovní úsek potrubí je co nejkratší, celý v izolaci odolné UV záření. Silový a komunikační kabel vedou samostatně v chráničce. Prostup zdí je utěsněný, potrubí v něm izolované.</p></div></li>
     </ol>
   </div>
+  <figure>
+    <div class="schema"><img src="schema-patka.png" alt="Betonová patka: půdorys dvou ramen ze ztraceného bednění 200 × min. 500 mm, osově 700 mm, odstup od stěny min. 500 mm, výška min. 300 mm; pohled zepředu s jednotkou na antivibračních patkách."></div>
+    <figcaption>Betonová patka venkovní jednotky (REO-SCH-K1-P) — překresleno z ručního nákresu; rozměry jsou minimální.</figcaption>
+  </figure>
   <div class="note"><strong>R290 je hořlavý plyn.</strong> Separátor s odvzdušňovacím ventilem (4) se nikdy nepřesouvá do domu. Automatické odvzdušňovací ventily uvnitř (6, 13) slouží jen pro topnou vodu sekundární strany a primárního okruhu za separátorem.</div>
 </section>
 
@@ -107,14 +111,45 @@ footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line)
     </div>
     <ol class="steps">
       <li><div><h3>Primární okruh: TČ → AKU <span class="n">2</span> <span class="n">5</span></h3><p>Výstup z tepelného čerpadla vstupuje do horního hrdla AKU, vratka k TČ odchází ze spodního hrdla. Stejně jako u venkovní jednotky jsou i u nádrže na vstupu a výstupu primáru kulové uzávěry (2). Díky nim lze AKU nebo potrubí k TČ odpojit a servisovat bez vypouštění celé soustavy. Nádrž 100 l odděluje okruh TČ od okruhu topení: TČ běží s vlastním průtokem a čerpadlem, nezávisle na tom, kolik radiátorů je zrovna otevřených, a nádrž zároveň dodá vodu pro odtávání.</p></div></li>
-      <li><div><h3>Čidlo AKU řídí TČ <span class="n">16</span></h3><p>Čidlo teploty v jímce nádrže je připojené k řídicí jednotce TČ. TČ drží v AKU nastavenou (ekvitermní) teplotu a samo se zapíná a vypíná. Pokojový termostat do chodu TČ nezasahuje.</p></div></li>
+      <li><div><h3>Řízení TČ</h3><p>Jednotky RH030–RH060 nemají vstup pro čidlo v AKU. TČ se řídí vlastním vestavěným čidlem teploty vratné vody, tedy vody, která se vrací ze spodní části nádrže. Podle ní (volitelně ekvitermně) se samo zapíná a vypíná. Pokojový termostat do chodu TČ nezasahuje.</p></div></li>
       <li><div><h3>Odvzdušnění, teploměr a pojistný ventil AKU <span class="n">6</span> <span class="n">8</span></h3><p>Nahoře na nádrži je automatický odvzdušňovací ventil (6). Na plášti AKU je společný vývod s teploměrem a pojistným (přetlakovým) ventilem s červenou hlavou (8). Když tlak v nádrži dosáhne mezní hodnoty, ventil přetlak vypustí. Výfuk musí být svedený viditelně do odpadu a mezi nádrží a ventilem nesmí být žádný uzávěr.</p></div></li>
       <li><div><h3>Sekundární čerpadlo do topení <span class="n">10</span></h3><p>Z horního hrdla AKU na druhé straně vede výstup do topení přes sekundární oběhové čerpadlo s uzávěry (výměna čerpadla bez vypouštění). Vratka z radiátorů se vrací přes uzávěr do spodního hrdla AKU.</p></div></li>
-      <li><div><h3>Pojistná skupina a expanzní nádoba za čerpadlem <span class="n">7</span> <span class="n">9</span></h3><p>Hned za čerpadlem stoupá z výstupu do topení potrubí k pojistné skupině (7). Je to mosazný blok, na kterém je pojistný (přetlakový) ventil a manometr. Výfuk pojistného ventilu musí být svedený viditelně do odpadu. Nad pojistnou skupinou je připojená expanzní nádoba topné soustavy (9). Mezi pojistnou skupinou a expanzní nádobou nesmí být žádný uzávěr. Uzávěry u čerpadla se zavírají jen při servisu, protože přes ně pojistná skupina chrání i AKU a okruh TČ.</p></div></li>
+      <li><div><h3>Magnetický filtr na výstupu z AKU <span class="n">16</span></h3><p>Hned za nádrží, před uzávěrem a čerpadlem, je magnetický filtr. Zachytí magnetit a kal z otopné soustavy dřív, než se dostanou k čerpadlu a do radiátorů. Filtr se čistí přes vypouštěcí kohout ve spodní části po vyjmutí magnetu.</p></div></li>
+      <li><div><h3>Pojistná skupina a expanzní nádoba za čerpadlem <span class="n">7</span> <span class="n">9</span></h3><p>Hned za čerpadlem stoupá z výstupu do topení potrubí k pojistné skupině (7). Je to mosazný blok, na kterém je pojistný (přetlakový) ventil a manometr. Výfuk pojistného ventilu musí být svedený viditelně do odpadu. Nad pojistnou skupinou je připojená expanzní nádoba topné soustavy (9). Mezi pojistnou skupinou a expanzní nádobou nesmí být žádný uzávěr. Uzávěry u čerpadla se zavírají jen při servisu.</p></div></li>
       <li><div><h3>Bezdrátový termostat a přijímač <span class="n">11</span> <span class="n">12</span></h3><p>Pokojový termostat v referenční obytné místnosti (asi 1,5 m nad podlahou, mimo přímé slunce a zdroje tepla) posílá rádiem signál přijímači u čerpadla. Přijímač je relé 230 V, které čerpadlo zapne při požadavku na teplo a po dosažení teploty vypne.</p></div></li>
       <li><div><h3>Odvzdušnění v nejvyšších bodech <span class="n">13</span> <span class="n">14</span></h3><p>Automatický odvzdušňovací ventil patří na nejvyšší místo rozvodu (stoupačka, horní ohyb potrubí), každý radiátor má ruční odvzdušňovací ventilek nahoře. Vzduch se drží v horních bodech; kde se nedá odvést, čerpadlo hlučí a radiátory netopí celé.</p></div></li>
       <li><div><h3>Vypouštění <span class="n">15</span></h3><p>Na dně AKU je vypouštěcí kohout pro vypuštění a odkalení nádrže.</p></div></li>
     </ol>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Elektrická část</span>
+  <h2>Schéma elektrického zapojení</h2>
+  <p>Podle návodu k RH030–RH060. Tepelné čerpadlo a topení mají dva na sobě nezávislé okruhy: TČ se řídí samo, sekundární čerpadlo spíná pokojový termostat přes přijímač.</p>
+  <figure>
+    <div class="schema"><img src="schema-elektro.png" alt="Elektrické schéma: rozvaděč TČ s proudovým chráničem, jističem TČ a jističem čerpadla; napájení jednotky L N PE nebo 3F; svorkovnice příslušenství 1 až 6; kabelový ovladač; přijímač termostatu spínající sekundární čerpadlo."></div>
+    <figcaption>REO-SCH-K1-E. Průřezy kabelů a hodnoty jističů podle typového štítku jednotky a platných norem.</figcaption>
+  </figure>
+  <div class="cols">
+    <div class="box">
+      <h3>Napájení a jištění</h3>
+      <ul>
+        <li>Samostatný přívod z domovního rozvaděče do rozvaděče TČ, napětí v toleranci ±10 %.</li>
+        <li>Proudový chránič a jistič (ne nožový vypínač) na 1,5násobek provozního proudu podle štítku; u 3F i ochrana proti výpadku fáze.</li>
+        <li>Svorky jednotky: RH030, RH040, RH050‑1F = L, N, PE (230 V); RH050‑3F, RH060 = R, S, T, N, PE (400 V). Kabel v chráničce.</li>
+        <li>Jednotka musí být uzemněna, ochranný vodič se nesmí připojit na N. Hlavní vypínač min. 1,4 m nad podlahou.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Řízení a příslušenství</h3>
+      <ul>
+        <li>Kabelový ovladač je připojen komunikačním kabelem k řídicí desce jednotky.</li>
+        <li>Svorkovnice příslušenství: 1 topná vložka TUV, 2 přídavný elektrokotel, 3 trojcestný ventil, 4 N, 5–6 vstup pro externí spínač. Svorky 1 a 3 využije schéma 2 s TUV.</li>
+        <li>Přijímač termostatu má vlastní jistič 230 V; jeho kontakt spíná fázi sekundárního čerpadla.</li>
+        <li>V zimě nevypínat napájení jednotky (ochrana proti zamrznutí). Zapojení provádí osoba s odbornou kvalifikací.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -135,7 +170,7 @@ footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line)
       <tr><td><span class="n">11</span></td><td>Přijímač (relé 230 V)</td><td>u čerpadla v technické místnosti</td><td>spíná čerpadlo podle termostatu</td></tr>
       <tr><td><span class="n">12</span></td><td>Bezdrátový pokojový termostat</td><td>referenční obytná místnost</td><td>požadavek na teplo, rádiem</td></tr>
       <tr><td><span class="n">13</span>&nbsp;<span class="n">14</span></td><td>Odvzdušňovací ventily</td><td>nejvyšší body rozvodu, radiátory</td><td>odvzdušnění otopné soustavy</td></tr>
-      <tr><td><span class="n">16</span></td><td>Čidlo teploty AKU</td><td>jímka nádrže, kabel k TČ</td><td>řízení chodu TČ</td></tr>
+      <tr><td><span class="n">16</span></td><td>Magnetický filtr</td><td>výstup z AKU do topení, před čerpadlem</td><td>zachycení magnetitu a kalu, ochrana čerpadla</td></tr>
     </tbody>
   </table></div>
 </section>
@@ -155,7 +190,7 @@ footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line)
     <div class="box">
       <h3>Kontrola funkce</h3>
       <ul>
-        <li>Spustit TČ a ověřit, že čidlo (16) vypíná TČ na nastavené teplotě AKU.</li>
+        <li>Spustit TČ a ověřit, že se po dosažení nastavené teploty vypne.</li>
         <li>Zvýšit teplotu na termostatu (12): přijímač (11) musí zapnout čerpadlo (10).</li>
         <li>Po zahřátí znovu odvzdušnit a doplnit tlak.</li>
         <li>V místnosti s termostatem nechat hlavice radiátorů otevřené.</li>
