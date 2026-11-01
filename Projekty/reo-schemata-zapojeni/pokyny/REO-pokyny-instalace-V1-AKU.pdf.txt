@@ -43,13 +43,18 @@ prostoru.
 2. Na vratce kulový uzávěr 2 a protizámrazový ventil 3 s výpustí dolů.
 3. Venkovní potrubí co nejkratší, v izolaci odolné UV; kabely samostatně v chráničce; prostup zdí
 utěsněný.
+--- strana 4 ---
+Příklad provedení venkovní části: jednotka na betonovém soklu, štěrkový podsyp pro kondenzát. Na výstupu (nahoře
+)
+separátor s odvzdušněním (svislý izolovaný díl) a kulový uzávěr; na vratce (dole
+) kulový uzávěr a protizámrazový ventil
+(odbočka dolů). Potrubí v izolaci s hliníkovým povrchem, kabely zvlášť v chráničce.
 Technická místnost
 1. Výstup z TČ do horního hrdla AKU 5 přes uzávěr 2 ; vratka ze spodního hrdla přes uzávěr
 2 , magnetický filtr 16 a další uzávěr 2 zpět k TČ. Filtr je zároveň filtr na vstupu vody do
 TČ, který vyžaduje návod.
 2. Na AKU: automatický odvzdušňovací ventil 6 nahoře, teploměr s pojistným ventilem 8
 na společném vývodu pláště (bez uzávěru, výfuk do odpadu), vypouštěcí kohout 15 dole.
---- strana 4 ---
 3. TČ se řídí vlastním čidlem teploty vratné vody; vstup pro čidlo v AKU jednotky RH030–RH060
 nemají.
 4. Výstup do topení: volitelně směšovací ventil 17 s obtokem z vratky — u podlahového topení z
@@ -57,11 +62,12 @@ bezpečnostních důvodů omezí teplotu na max. 40 °C, ideálně 35 °C. Dál 
 oběhové čerpadlo 10 a uzávěr.
 5. Napájení čerpadla 10 spíná a rozpíná přijímač 11 podle bezdrátového termostatu 12 —
 tím se zapíná a vypíná dodávka tepla do topení.
-6. Za čerpadlem stoupačka s pojistnou skupinou 7 (pojistný ventil + manometr) a nad ní
-expanzní nádoba 9 , mezi nimi žádný uzávěr.
+--- strana 5 ---
+6. Za čerpadlem stoupačka s pojistnou skupinou expanzní nádoba 9 , mezi nimi žádný uzávěr.
+7 (pojistný ventil + manometr) a nad ní
 7. Odvzdušnění v nejvyšším bodě rozvodu 13 a ventilky radiátorů 14 . Uzávěry zavírat jen při
 servisu.
---- strana 5 ---
+--- strana 6 ---
 3 Elektrické zapojení
 REO-SCH-K1-E — podle zapojovacích schémat v návodu (str. 17–19).
 MOD
@@ -85,11 +91,11 @@ Hlavní vypínač s proudovým chráničem min. 1,4 m nad podlahou. Jednotka uze
 ochranný vodič se nesmí připojit na N.
 Kabelový ovladač připojen komunikačním kabelem k řídicí desce. Svorky 5–6 = vstup externího
 spínače (volitelně).
---- strana 6 ---
+--- strana 7 ---
 Přijímač termostatu má vlastní jistič 230 V; jeho kontakt spíná fázi sekundárního čerpadla.
 V zimě nevypínat napájení jednotky (ochrana proti zamrznutí). Zapojení provádí osoba s
 odbornou kvalifikací dle ČSN / EN.
---- strana 7 ---
+--- strana 8 ---
 4 Soupis komponent
 Čísla odpovídají schématům. D
 élky potrubí a počty fitinek se upřesní podle skutečné
@@ -144,7 +150,7 @@ TECHNICKÁ MÍSTNOST — SEKUND
 schématu nekresleno
 1 ks napájení spíná přijímač 11
 3 ks dimenze dle rozvodu
---- strana 8 ---
+--- strana 9 ---
 Č. POLOŽKA POČET POZN
 ÁMKA
 7Pojistná skupina: pojistný ventil 2,5–3 bar +
@@ -194,7 +200,7 @@ PPR. Vždy je třeba počítat i s fitinky — napojovacími a šroubovacími pr
 kolena, T-kusy, přechodky). Návod doporučuje nerezové nebo PPR potrubí a každé
 zařízení připojit rozebíratelným šroubením.
 B
---- strana 9 ---
+--- strana 10 ---
 MATERIÁL SPOJOVÁ
 NÍ VLASTNOSTI PRIMÁR
 (ORIENTAČNĚ)
@@ -230,7 +236,7 @@ Jednotku nechat před prvním startem min. 12 h pod napětím (předehřev).
 Spustit TČ a ověřit, že se po dosažení nastavené teploty vypne.
 Zvýšit teplotu na termostatu: přijímač musí zapnout sekundární čerpadlo.
 Po odvzdušnění vyčistit magnetický filtr a doplnit tlak na 1,5 bar.
---- strana 10 ---
+--- strana 11 ---
 6 První spuštění a odvzdušnění systému
 Po instalaci je v potrubí, nádržích a radiátorech vzduch. Při prvním spuštění proto
 jednotka často skončí chybou Er 03 — Porucha průtoku vody (na displeji „Water flow
@@ -247,6 +253,9 @@ Příprava
 ventily (separátor venku, AKU, nejvyšší body rozvodu, radiátory) volné.
 2. TČ zapnout na jističi, na ovladači zapnout režim topení. Pokud se objeví Er 03, pokračovat
 jedním z postupů A nebo B.
+--- strana 12 ---
+Umístění průtokového spínače: po sejmutí předního panelu venkovní jednotky vpravo
+nahoře, pod elektrickou svorkovnicí — svislé tělo spínače, do kterého vede šedý kabel.
 Postup A — mechanické dočasné vyřazení prů
 1. Vypnout TČ na jističi.
 tokového spínače
@@ -264,10 +273,10 @@ použít náhradní víčko (viz foto).
 ventily. Průběžně sledovat tlak a doplňovat na 1,5 bar.
 7. Vypnout TČ na jističi, uzavřít uzávěry a vrátit průtokový spínač do původního funkčního
 stavu (odstranit pásku, packa se musí volně pohybovat), uzavřít víčkem.
+--- strana 13 ---
 8. Otevřít uzávěry, zapnout TČ na jističi a začít topit.
 9. Chybějící tlak dopustit na 1,5 bar z vodovodního řádu nebo z bojleru, jsou-li zásobník TUV a
 AKU pro dopouštění propojeny — což doporučujeme.
---- strana 11 ---
 Průtokový spínač uvnitř venkovní jednotky, dočasně zafixovaný lepicí páskou pro
 odvzdušnění. Spínač je uzavřen náhradním víčkem (černé rýhované
 ). Po odvzdušnění pásku
@@ -293,7 +302,7 @@ Tím se spínač elektronicky dočasně vyřadí.
 N
 3.
 6. Zapnout TČ na jističi, začít topit a doplnit tlak na 1,5 bar.
---- strana 12 ---
+--- strana 14 ---
 Po odvzdušnění vždy: průtokový spínač je zpět ve funkčním stavu, uzávěry jsou
 otevřené, tlak je 1,5 bar a magnetický filtr je vyčištěný. Pokud se Er 03 objeví i po
 odvzdušnění, vyčistěte filtry, zkontrolujte, že jsou všechny uzávěry otevřené, a

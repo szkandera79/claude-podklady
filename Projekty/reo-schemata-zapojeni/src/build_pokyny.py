@@ -63,6 +63,28 @@ VARIANTS = {
         codes="REO-SCH-H2 · H2-E · K1-P"),
 }
 
+DL_JS = r"""<script>
+(async () => {
+  const box = document.getElementById("dlbox"), btn = document.getElementById("dlbtn"), msg = document.getElementById("dlmsg");
+  const dl = window.claude && window.claude.use ? await window.claude.use("downloads") : null;
+  if (!dl) return;
+  box.hidden = false;
+  btn.addEventListener("click", async () => {
+    btn.disabled = true; msg.textContent = "Připravuji PDF…";
+    try {
+      const r = await fetch("dokument.pdf");
+      if (!r.ok) throw { code: "missing" };
+      await dl.save({ filename: "{PDFNAME}", data: await r.blob() });
+      msg.textContent = "PDF uloženo.";
+    } catch (e) {
+      const c = e && e.code;
+      msg.textContent = c === "declined" ? "Stažení zrušeno." : c === "rate_limited" ? "Chvíli počkejte a zkuste znovu." : "PDF se nepodařilo stáhnout.";
+      if (c === "unavailable" || c === "not_granted") box.hidden = true;
+    } finally { btn.disabled = false; }
+  });
+})();
+</script>"""
+
 CSS = """
 :root { --bg:#F7F9F8; --surface:#FFFFFF; --fg:#1F2624; --muted:#5B6764; --line:#DCE3E0;
   --accent:#26804B; --accent-soft:#E9F6EE; --warn:#A86B05; --warn-soft:#FFF4DA;
@@ -91,6 +113,9 @@ figure { margin:0; }
 figcaption { color:var(--muted); font-size:13.5px; margin-top:6px; }
 figure.photo img { display:block; width:100%; max-width:420px; border-radius:6px; }
 figure.photo figcaption { max-width:520px; }
+.photos2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; max-width:720px; }
+.photos2 img { display:block; width:100%; border-radius:6px; }
+@media (max-width:560px) { .photos2 { grid-template-columns:1fr; } }
 ul.list, ol.steps { margin:0; padding-left:22px; display:grid; gap:6px; max-width:80ch; }
 .n { display:inline-block; min-width:21px; padding:0 5px; border-radius:11px; background:var(--accent-soft); color:var(--accent);
   font:700 12.5px/21px var(--display); text-align:center; font-variant-numeric:tabular-nums; }
@@ -105,12 +130,18 @@ tr.grp td { background:var(--accent-soft); color:var(--accent); font:700 12px/1.
 td.q { white-space:nowrap; font-variant-numeric:tabular-nums; }
 .cols { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
 .box { background:var(--accent-soft); border-radius:6px; padding:16px 18px; display:grid; gap:8px; min-width:0; }
+.dl { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.dl button { font:700 14px/1 var(--display); color:#fff; background:var(--accent); border:0; border-radius:6px; padding:11px 18px; cursor:pointer; }
+.dl button:hover { filter:brightness(1.08); } .dl button:focus-visible { outline:3px solid var(--accent-soft); outline-offset:2px; }
+.dl button:disabled { opacity:.6; cursor:progress; }
+#dlmsg { color:var(--muted); font-size:14px; }
 footer { color:var(--muted); font-size:13.5px; border-top:1px solid var(--line); padding-top:14px; display:grid; gap:4px; }
 @media (max-width:720px) { .cols { grid-template-columns:1fr; } }
 @page { size:A4; margin:14mm 12mm; }
 @media print {
   :root { --bg:#fff; --surface:#fff; }
   body { padding:0; font-size:11pt; }
+  .dl, script { display:none !important; }
   .wrap { max-width:none; gap:22px; }
   .sheet { border:0; overflow:visible; } .sheet img { min-width:0; }
   section.pb { break-before:page; }
@@ -168,6 +199,8 @@ def hb_sections(tuv):
     <li>Na výstupu z jednotky kulový uzávěr <span class="n">2</span>, za ním separátor <span class="n">4</span> s bezpečnostním odvzdušňovacím ventilem — zůstává venku. Automatické odvzdušnění hydroboxu je v domě, proto musí být vzduch i případně uniklé R290 odvedeny už venku.</li>
     <li>Na vratce kulový uzávěr <span class="n">2</span> a protizámrazový ventil <span class="n">3</span> s výpustí dolů. Potrubí v izolaci odolné UV, prostup zdí utěsněný.</li>
   </ol>
+  <figure><div class="photos2"><img src="venku-1.jpg" alt="Venkovní jednotka na betonovém soklu ve štěrku, výstup nahoře a vratka dole v izolaci s hliníkovým povrchem, kulové uzávěry s červenými páčkami, kabel v černé chráničce."><img src="venku-2.jpg" alt="Detail připojení: na výstupu separátor s odvzdušněním a kulový uzávěr, na vratce kulový uzávěr a protizámrazový ventil."></div>
+    <figcaption>Příklad provedení venkovní části: jednotka na betonovém soklu, štěrkový podsyp pro kondenzát. Na výstupu (nahoře) separátor s odvzdušněním (svislý izolovaný díl) a kulový uzávěr; na vratce (dole) kulový uzávěr a protizámrazový ventil (odbočka dolů). Potrubí v izolaci s hliníkovým povrchem, kabely zvlášť v chráničce.</figcaption></figure>
   <h3>Hydrobox</h3>
   <ol class="steps">
     <li>Hydrobox <span class="n">18</span> na nehořlavou stěnu; prostředí 10–35 °C, relativní vlhkost trvale do 70 %, po obou stranách prostor pro servis. Rozměry 700 × 500 × 280 mm, 35 kg.</li>
@@ -248,7 +281,9 @@ def page(v):
         <li>Na vratce kulový uzávěr <span class="n">2</span> a protizámrazový ventil <span class="n">3</span> s výpustí dolů.</li>
         <li>Venkovní potrubí co nejkratší, v izolaci odolné UV; kabely samostatně v chráničce; prostup zdí utěsněný.</li>
       </ol>
-      <h3>Technická místnost</h3>
+      <figure><div class="photos2"><img src="venku-1.jpg" alt="Venkovní jednotka na betonovém soklu ve štěrku, výstup nahoře a vratka dole v izolaci s hliníkovým povrchem, kulové uzávěry s červenými páčkami, kabel v černé chráničce."><img src="venku-2.jpg" alt="Detail připojení: na výstupu separátor s odvzdušněním a kulový uzávěr, na vratce kulový uzávěr a protizámrazový ventil."></div>
+    <figcaption>Příklad provedení venkovní části: jednotka na betonovém soklu, štěrkový podsyp pro kondenzát. Na výstupu (nahoře) separátor s odvzdušněním (svislý izolovaný díl) a kulový uzávěr; na vratce (dole) kulový uzávěr a protizámrazový ventil (odbočka dolů). Potrubí v izolaci s hliníkovým povrchem, kabely zvlášť v chráničce.</figcaption></figure>
+  <h3>Technická místnost</h3>
       <ol class="steps">
         <li>Výstup z TČ do horního hrdla AKU <span class="n">5</span> přes uzávěr <span class="n">2</span>; vratka ze spodního hrdla přes uzávěr <span class="n">2</span>, magnetický filtr <span class="n">16</span> a další uzávěr <span class="n">2</span> zpět k TČ. Filtr je zároveň filtr na vstupu vody do TČ, který vyžaduje návod.</li>
         <li>Na AKU: automatický odvzdušňovací ventil <span class="n">6</span> nahoře, teploměr s pojistným ventilem <span class="n">8</span> na společném vývodu pláště (bez uzávěru, výfuk do odpadu), vypouštěcí kohout <span class="n">15</span> dole.</li>
@@ -322,6 +357,8 @@ def page(v):
     <li>Soustava je napuštěná a natlakovaná na 1,5 bar, všechny uzávěry otevřené, odvzdušňovací ventily (separátor venku, AKU, nejvyšší body rozvodu, radiátory) volné.</li>
     <li>TČ zapnout na jističi, na ovladači zapnout režim topení. Pokud se objeví Er 03, pokračovat jedním z postupů A nebo B.</li>
   </ol>
+  <figure class="photo"><img src="spinac-umisteni.jpg" alt="Otevřená venkovní jednotka; vpravo nahoře pod svorkovnicí je žlutě vyznačen průtokový spínač s šedým kabelem.">
+    <figcaption>Umístění průtokového spínače: po sejmutí předního panelu venkovní jednotky vpravo nahoře, pod elektrickou svorkovnicí — svislé tělo spínače, do kterého vede šedý kabel.</figcaption></figure>
   <h3>Postup A — mechanické dočasné vyřazení průtokového spínače</h3>
   <ol class="steps">
     <li>Vypnout TČ na jističi.</li>
@@ -358,10 +395,13 @@ def page(v):
   <span class="eyebrow">REO HEATING · Pokyny k instalaci · {"s hydroboxem · " if v.get("hb") else ""}varianta {"2" if tuv else "1"}</span>
   <h1>{e(v["h1"])}</h1>
   <p>{e(v["lead"])}</p>
+  <div class="dl" id="dlbox" hidden><button type="button" id="dlbtn">Stáhnout PDF</button><span id="dlmsg" role="status"></span></div>
   <div class="meta"><span><b>Jednotky:</b> REO RH030–RH060 (monoblok, R290), 1F i 3F</span><span><b>Schémata:</b> {e(v["codes"])}</span><span><b>Stav:</b> schválená schémata · {REV}</span></div>
 </header>
 
 {body}
+
+{DL_JS}
 
 <footer>
   <p>Zjednodušený orientační podklad. Dimenze potrubí, nastavení pojistných ventilů, velikost expanzních nádob, průřezy kabelů a hodnoty jističů určete podle návodu k TČ, typového štítku a konkrétního domu. Instalaci a elektrické zapojení provádí odborná firma.</p>
@@ -376,14 +416,15 @@ def main():
     for key, v in VARIANTS.items():
         d = os.path.join(out_root, key)
         os.makedirs(d, exist_ok=True)
-        for dst, src in {**v["imgs"], "prutokovy-spinac.jpg": "foto/prutokovy-spinac.jpg"}.items():
+        for dst, src in {**v["imgs"], "prutokovy-spinac.jpg": "foto/prutokovy-spinac.jpg", "spinac-umisteni.jpg": "foto/prutokovy-spinac-umisteni.jpg", "venku-1.jpg": "foto/venkovni-jednotka-pripojeni.jpg", "venku-2.jpg": "foto/venkovni-jednotka-detail.jpg"}.items():
             shutil.copyfile(os.path.join(ROOT, src), os.path.join(d, dst))
         p = os.path.join(d, "index.html")
-        open(p, "w", encoding="utf-8").write(page(v))
+        open(p, "w", encoding="utf-8").write(page(v).replace("{PDFNAME}", v["pdf"]))
         pdf = os.path.join(out_root, v["pdf"])
         subprocess.run([CHROME, "--headless", "--disable-gpu", "--no-pdf-header-footer",
                         f"--print-to-pdf={pdf}", "file://" + p], check=True,
                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        shutil.copyfile(pdf, os.path.join(d, "dokument.pdf"))
         print("zapsáno:", p, "|", pdf)
 
 

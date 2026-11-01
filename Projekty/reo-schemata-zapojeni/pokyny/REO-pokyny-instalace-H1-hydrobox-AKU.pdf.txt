@@ -51,6 +51,11 @@ proto musí být vzduch i případně uniklé R290 odvedeny už venku.
 2. Na vratce kulový uzávěr 2 a protizámrazový ventil 3 s výpustí dolů. Potrubí v izolaci
 odolné UV, prostup zdí utěsněný.
 --- strana 4 ---
+Příklad provedení venkovní části: jednotka na betonovém soklu, štěrkový podsyp pro kondenzát. Na výstupu (nahoře
+)
+separátor s odvzdušněním (svislý izolovaný díl) a kulový uzávěr; na vratce (dole
+) kulový uzávěr a protizámrazový ventil
+(odbočka dolů). Potrubí v izolaci s hliníkovým povrchem, kabely zvlášť v chráničce.
 Hydrobox
 1. Hydrobox 18 na nehořlavou stěnu; prostředí 10–35 °C, relativní vlhkost trvale do 70 %, po
 obou stranách prostor pro servis. Rozměry 700 × 500 × 280 mm, 35 kg.
@@ -66,12 +71,13 @@ AKU a topení
 1. Výstup A přes uzávěr 2 do horního hrdla AKU 5 ; vratka ze spodního hrdla přes uzávěr
 2 , magnetický filtr 16 a další uzávěr 2 zpět do hydroboxu.
 2. Na AKU: odvzdušnění 6 , teploměr s pojistným ventilem 8 , vypouštěcí kohout 15 .
+--- strana 5 ---
 3. Výstup do topení: volitelně směšovací ventil 17 (podlahové topení max. 40 °C, ideálně 35 °C),
 uzávěr, sekundární čerpadlo 10 a uzávěr. Napájení čerpadla spíná a rozpíná přijímač 11
 podle termostatu 12 .
 4. Za čerpadlem pojistná skupina 7 a expanzní nádoba 9 ; odvzdušnění v nejvyšším bodě
 13 a ventilky radiátorů 14 .
---- strana 5 ---
+--- strana 6 ---
 3 Elektrické zapojení s hydroboxem
 REO-SCH-H1-E — podle návodu hydraulického modulu (kap. 6) a návodu TČ.
 HYDROBOX N
@@ -93,7 +99,7 @@ Ovládání 230 V: svorka 1 hydroboxu (E-ohřev)
 D, FB
 (0–12 V DC)
 →
---- strana 6 ---
+--- strana 7 ---
 stejnojmenné svorky jednotky.
 Elektrické připojení hydroboxu zespodu, volná délka kabelu min. 2 m. Přední kryt hydroboxu
 nesnímat — obsahuje elektrické součásti.
@@ -101,7 +107,7 @@ Kabelový ovladač je připojen komunikačním kabelem k řídicí desce jednotk
 termostatu má vlastní přívod 230 V a spíná fázi sekundárního čerpadla.
 Jednotka i hydrobox uzemněny; v zimě nevypínat napájení. Zapojení provádí osoba s odbornou
 kvalifikací dle ČSN / EN.
---- strana 7 ---
+--- strana 8 ---
 4 Soupis komponent
 Čísla odpovídají schématům. D
 élky potrubí a počty fitinek se upřesní podle skutečné
@@ -158,7 +164,7 @@ N25 (s vypouštěním) 1 ks na vratce do TČ = filtr na vstupu dle návodu
 1 ks s uzavíracím ventilkem
 8 Teploměr + pojistný ventil (T-kus na plášti AKU) 1 sada pojistný ventil bez uzávěru, výfuk do
 odpadu
---- strana 8 ---
+--- strana 9 ---
 Č. POLOŽKA POČET POZN
 ÁMKA
 15 Vypouštěcí kohout AKU 1 ks na dně nádrže
@@ -222,7 +228,7 @@ N25 zdola, 3× D
 N25 z boku
 — Kolena 90° / 45° dle trasy ks počet kolen omezit (tlaková ztráta)
 B
---- strana 9 ---
+--- strana 10 ---
 Č. POLOŽKA POČET POZN
 ÁMKA
 — T-kusy (odbočky pro pojistnou skupinu, obtok
@@ -274,13 +280,13 @@ Napouštět pomalu přes plnicí sestavu, všechny uzávěry otevřené.
 Soustavu natlakovat na 1,5 bar (manometr pojistné skupiny).
 Doporučujeme trvale připojit dopouštění z vodovodu přes plnicí ventil s oddělovačem —
 chybějící tlak se pak snadno doplní.
---- strana 10 ---
+--- strana 11 ---
 Kontrola funkce
 Jednotku nechat před prvním startem min. 12 h pod napětím (předehřev).
 Spustit TČ a ověřit, že se po dosažení nastavené teploty vypne.
 Zvýšit teplotu na termostatu: přijímač musí zapnout sekundární čerpadlo.
 Po odvzdušnění vyčistit magnetický filtr a doplnit tlak na 1,5 bar.
---- strana 11 ---
+--- strana 12 ---
 6 První spuštění a odvzdušnění systému
 Po instalaci je v potrubí, nádržích a radiátorech vzduch. Při prvním spuštění proto
 jednotka často skončí chybou Er 03 — Porucha průtoku vody (na displeji „Water flow
@@ -297,6 +303,9 @@ Příprava
 ventily (separátor venku, AKU, nejvyšší body rozvodu, radiátory) volné.
 2. TČ zapnout na jističi, na ovladači zapnout režim topení. Pokud se objeví Er 03, pokračovat
 jedním z postupů A nebo B.
+--- strana 13 ---
+Umístění průtokového spínače: po sejmutí předního panelu venkovní jednotky vpravo
+nahoře, pod elektrickou svorkovnicí — svislé tělo spínače, do kterého vede šedý kabel.
 Postup A — mechanické dočasné vyřazení prů
 1. Vypnout TČ na jističi.
 tokového spínače
@@ -314,10 +323,10 @@ použít náhradní víčko (viz foto).
 ventily. Průběžně sledovat tlak a doplňovat na 1,5 bar.
 7. Vypnout TČ na jističi, uzavřít uzávěry a vrátit průtokový spínač do původního funkčního
 stavu (odstranit pásku, packa se musí volně pohybovat), uzavřít víčkem.
+--- strana 14 ---
 8. Otevřít uzávěry, zapnout TČ na jističi a začít topit.
 9. Chybějící tlak dopustit na 1,5 bar z vodovodního řádu nebo z bojleru, jsou-li zásobník TUV a
 AKU pro dopouštění propojeny — což doporučujeme.
---- strana 12 ---
 Průtokový spínač uvnitř venkovní jednotky, dočasně zafixovaný lepicí páskou pro
 odvzdušnění. Spínač je uzavřen náhradním víčkem (černé rýhované
 ). Po odvzdušnění pásku
@@ -343,7 +352,7 @@ Tím se spínač elektronicky dočasně vyřadí.
 N
 3.
 6. Zapnout TČ na jističi, začít topit a doplnit tlak na 1,5 bar.
---- strana 13 ---
+--- strana 15 ---
 Po odvzdušnění vždy: průtokový spínač je zpět ve funkčním stavu, uzávěry jsou
 otevřené, tlak je 1,5 bar a magnetický filtr je vyčištěný. Pokud se Er 03 objeví i po
 odvzdušnění, vyčistěte filtry (magnetický filtr a filtr v hydroboxu), zkontrolujte, že jsou
