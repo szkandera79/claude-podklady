@@ -61,6 +61,7 @@ ITEMS_TUV = [
     ("TUV — hydraulika", "18", "Trojcestný přepínací ventil DN25 s pohonem 230 V", "1", "ks", "A → AKU, B → spirála TUV; v režimu TUV pod napětím"),
     ("TUV — hydraulika", "19", "Zásobník TUV se spirálou", "1", "ks", "výkon spirály ≥ jmenovitý výkon TČ (návod)"),
     ("TUV — hydraulika", "2", "Kulový uzávěr (přívod a vratka spirály)", "2", "ks", "servis bez vypouštění"),
+    ("TUV — hydraulika", "2", "Kulový uzávěr na spodním hrdle AKU", "1", "ks", "AKU lze odpojit, ohřev TUV běží dál"),
     ("TUV — hydraulika", "22", "Uzávěr + zpětný ventil na přívodu studené vody", "1", "sada", ""),
     ("TUV — hydraulika", "23", "Pojistný ventil TUV (obvykle 6 bar)", "1", "ks", "bez uzávěru, výfuk do odpadu; dle tlaku vodovodu"),
     ("TUV — hydraulika", "24", "Expanzní nádoba pro pitnou vodu + držák", "1", "ks", "objem dle objemu zásobníku"),
@@ -71,6 +72,38 @@ ITEMS_TUV = [
     ("TUV — elektro", "13", "Stykač + jistič pro topnou vložku (volitelně)", "0–1", "sada", "ovládání ze svorky 1 + 4"),
     ("TUV — fitinky", "—", "Šroubení, T-kusy a přechodky navíc pro okruh TUV a spirálu", "cca 10", "ks", "dle zvoleného materiálu"),
 ]
+
+
+
+def items_hydrobox(tuv=False):
+    """Soupis pro verzi s hydroboxem (REO-SCH-H1 / H2): rozvaděč TČ nahrazuje hydrobox, přibývá kabeláž hydrobox ↔ jednotka."""
+    out = []
+    for it in ITEMS:
+        g, n, item = it[0], it[1], it[2]
+        if item.startswith("Rozvaděč TČ"):
+            out.append(("Regulace a elektro", "—", "Přívod do hydroboxu z domovního rozvaděče (jištění dle typu hydroboxu)", "1", "okruh", "jistič Q s chráničem je v hydroboxu: 40 / 25 / 50 / 32 A"))
+            continue
+        if item.startswith("Napájecí kabel TČ"):
+            out.append(("Regulace a elektro", "—", "Napájecí kabel hydrobox → venkovní jednotka (3 nebo 5 vodičů)", "dle trasy", "m", "v chráničce, průřez dle proudu"))
+            out.append(("Regulace a elektro", "—", "Ovládací kabel hydrobox ↔ jednotka (E-ohřev, čerpadlo, 3c ventil, N + PE)", "dle trasy", "m", "230 V, svorky 1–4 hydroboxu"))
+            out.append(("Regulace a elektro", "—", "Signální kabel čerpadla PWM / GND / FB", "dle trasy", "m", "0–12 V DC, vést odděleně od silových kabelů"))
+            continue
+        if item.startswith("Šroubení (holendry)"):
+            it = (g, n, "Šroubení (holendry) — rozebíratelné spoje u TČ, hydroboxu, AKU, filtru, čerpadla, separátoru", "cca 20", "ks", "hydrobox: 2× DN25 zdola, 3× DN25 z boku (vnitřní závit)")
+        out.append(it)
+        if g == "Hlavní zařízení" and n == "5":
+            out.append(("Hlavní zařízení", "18", "Hydrobox REO (RH-03H/S, RH-03H, RH-05H/S nebo RH-05H podle jednotky)", "1", "ks",
+                        "čerpadlo primáru, dohřev 3 kW, 3c ventil, filtr, exp. nádoba 8 l, pojistný ventil 3 bar, jistič"))
+            out.append(("Hlavní zařízení", "—", "Kotvení hydroboxu na nehořlavou stěnu", "1", "sada", "700 × 500 × 280 mm, 35 kg"))
+    if tuv:
+        for it in ITEMS_TUV:
+            if it[1] in ("18",) or it[2].startswith("Kabel k trojcestnému"):
+                continue            # trojcestný ventil je součástí hydroboxu
+            out.append(it)
+    else:
+        out.append(("Technická místnost — primár", "—", "Zátka výstupu B hydroboxu (TUV nevyužito)", "1", "ks", "DN25"))
+    return out
+
 
 MATERIALS = [
     ("Měď", "tvrdé pájení nebo lisování", "odolná, malé průměry, snese vysoké teploty; vyšší cena materiálu", "28 × 1,5 mm (DN25)"),

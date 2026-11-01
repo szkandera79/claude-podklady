@@ -1,0 +1,263 @@
+<title>Pokyny k instalaci — hydrobox, AKU a TUV</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+:root { --bg:#F7F9F8; --surface:#FFFFFF; --fg:#1F2624; --muted:#5B6764; --line:#DCE3E0;
+  --accent:#26804B; --accent-soft:#E9F6EE; --warn:#A86B05; --warn-soft:#FFF4DA;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif; --body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#141917; --surface:#1C2320; --fg:#E6ECE9;
+  --muted:#9DAAA5; --line:#2F3934; --accent:#5CC488; --accent-soft:#1F3328; --warn:#E8B54A; --warn-soft:#3A3020; color-scheme:dark } }
+:root[data-theme="dark"] { --bg:#141917; --surface:#1C2320; --fg:#E6ECE9; --muted:#9DAAA5; --line:#2F3934;
+  --accent:#5CC488; --accent-soft:#1F3328; --warn:#E8B54A; --warn-soft:#3A3020; color-scheme:dark }
+body { background:var(--bg); color:var(--fg); font:16.5px/1.55 var(--body);
+  padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-block:28px 48px; }
+.wrap { max-width:1040px; margin:0 auto; display:grid; gap:40px; }
+h1,h2,h3 { font-family:var(--display); line-height:1.15; text-wrap:balance; margin:0; }
+h1 { font-size:clamp(26px,4vw,38px); font-weight:800; }
+h2 { font-size:24px; font-weight:700; display:flex; gap:12px; align-items:baseline; }
+h2 .no { color:var(--accent); font-variant-numeric:tabular-nums; }
+h3 { font-size:17px; font-weight:700; }
+p { margin:0; max-width:72ch; }
+.eyebrow { font:700 12.5px/1 var(--display); letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
+header { display:grid; gap:12px; border-bottom:3px solid var(--accent); padding-bottom:22px; }
+.meta { display:flex; flex-wrap:wrap; gap:6px 22px; color:var(--muted); font-size:14.5px; }
+.meta b { color:var(--fg); font-weight:600; }
+section { display:grid; gap:16px; }
+figure { margin:0; }
+.sheet { background:#fff; border:1px solid var(--line); border-radius:6px; overflow-x:auto; }
+.sheet img { display:block; width:100%; min-width:680px; }
+figcaption { color:var(--muted); font-size:13.5px; margin-top:6px; }
+ul.list, ol.steps { margin:0; padding-left:22px; display:grid; gap:6px; max-width:80ch; }
+.n { display:inline-block; min-width:21px; padding:0 5px; border-radius:11px; background:var(--accent-soft); color:var(--accent);
+  font:700 12.5px/21px var(--display); text-align:center; font-variant-numeric:tabular-nums; }
+.note { background:var(--warn-soft); border-left:4px solid var(--warn); padding:12px 16px; border-radius:0 4px 4px 0; display:grid; gap:6px; }
+.note strong { color:var(--warn); }
+.tbl { overflow-x:auto; border:1px solid var(--line); border-radius:6px; background:var(--surface); }
+table { border-collapse:collapse; width:100%; min-width:640px; font-size:14.5px; }
+th,td { text-align:left; vertical-align:top; padding:7px 12px; border-bottom:1px solid var(--line); }
+th { font:700 11.5px/1.3 var(--display); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); background:var(--bg); }
+tr:last-child td { border-bottom:0; }
+tr.grp td { background:var(--accent-soft); color:var(--accent); font:700 12px/1.3 var(--display); letter-spacing:.06em; text-transform:uppercase; }
+td.q { white-space:nowrap; font-variant-numeric:tabular-nums; }
+.cols { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.box { background:var(--accent-soft); border-radius:6px; padding:16px 18px; display:grid; gap:8px; min-width:0; }
+footer { color:var(--muted); font-size:13.5px; border-top:1px solid var(--line); padding-top:14px; display:grid; gap:4px; }
+@media (max-width:720px) { .cols { grid-template-columns:1fr; } }
+@page { size:A4; margin:14mm 12mm; }
+@media print {
+  :root { --bg:#fff; --surface:#fff; }
+  body { padding:0; font-size:11pt; }
+  .wrap { max-width:none; gap:22px; }
+  .sheet { border:0; overflow:visible; } .sheet img { min-width:0; }
+  section.pb { break-before:page; }
+  .wrap, section { display:block; }
+  .wrap > * + * { margin-top:22px; }
+  section > * + * { margin-top:12px; }
+  h2, h3 { break-after:avoid; page-break-after:avoid; }
+  .cols { display:block; } .cols > .box + .box { margin-top:12px; }
+  figure, .note, .box, tr { break-inside:avoid; }
+  .tbl { overflow:visible; border:0; } table { min-width:0; font-size:9.5pt; }
+}
+</style>
+<div class="wrap">
+<header>
+  <span class="eyebrow">REO HEATING · Pokyny k instalaci · s hydroboxem · varianta 2</span>
+  <h1>Vytápění s hydroboxem, AKU nádrží 100 l a ohřev TUV</h1>
+  <p>Venkovní jednotka je propojena s hydroboxem v technické místnosti. Trojcestný ventil v hydroboxu přepíná mezi akumulační nádrží 100 l (topení) a spirálou zásobníku TUV; TUV má přednost. Topení řídí bezdrátový termostat přes přijímač a sekundární čerpadlo.</p>
+  <div class="meta"><span><b>Jednotky:</b> REO RH030–RH060 (monoblok, R290), 1F i 3F</span><span><b>Schémata:</b> REO-SCH-H2 · H2-E · K1-P</span><span><b>Stav:</b> schválená schémata · rev. 1 · 11/2026</span></div>
+</header>
+
+<section>
+  <h2><span class="no">1</span> Umístění venkovní jednotky a betonová patka</h2>
+  <ul class="list">
+    <li>Jednotka stojí venku na betonové patce ze dvou ramen ze ztraceného bednění a na dvou antivibračních patkách (silentblocích), nad úrovní terénu a sněhu.</li>
+    <li>Ramena: šířka 200 mm, délka min. 500 mm, výška min. 300 mm, kolmo ke stěně, osově 700 mm od sebe.</li>
+    <li>Odstup ramen od stěny <strong>min. 400 mm, doporučujeme 500 mm</strong>. Návod uvádí na straně sání vzduchu více než 0,5 m, kolem jednotky 1 m volného prostoru, před výfukem a nad jednotkou 2 m.</li>
+    <li>Mezi rameny štěrkový podsyp. Dno jednotky slouží jako vana na kondenzát, odtokové otvory musí zůstat volné.</li>
+  </ul>
+  <figure><div class="sheet"><img src="patka.png" alt="Výkres betonové patky: půdorys a pohled zepředu s kótami."></div>
+    <figcaption>REO-SCH-K1-P — betonová patka venkovní jednotky.</figcaption></figure>
+  <div class="note"><p><strong>Ochranná zóna R290.</strong> Okna, dveře a sklepní světlíky min. 1 m od půdorysu jednotky, nad horní hranou min. 0,5 m (okno nad jednotkou je přípustné). V zóně nesmí být šachty, vpusti a kanalizace, větrací otvory ani zdroje vznícení (zásuvky, vypínače, svítidla) a ani prohlubně — R290 je těžší než vzduch.</p>
+    <p><strong>Doporučení:</strong> na straně výfuku vzduchu min. 3 m k oknům obytných místností, terasám a chodníkům a min. 3 m od sousedního pozemku (hluk, proudění). Pevnou vzdálenost norma neuvádí; ČSN EN 378 a ČSN EN IEC 60335-2-40 ji svěřují výrobci.</p></div>
+</section>
+
+<section class="pb">
+  <h2><span class="no">2</span> Hydraulické zapojení s hydroboxem</h2>
+  <figure><div class="sheet"><img src="hydraulika.png" alt="Schéma hydraulického zapojení s hydroboxem."></div>
+    <figcaption>REO-SCH-H2 — hydrobox, AKU 100 l a ohřev TUV.</figcaption></figure>
+  <h3>Jak instalace vypadá</h3>
+  <p>Hydrobox visí na stěně technické místnosti; zespodu do něj vedou izolované trubky od venkovní jednotky a z boku odchází tři připojení k nádržím. Vedle stojí akumulační nádrž s expanzní nádobou topení nad sebou, za ní vyšší zásobník TUV s bílou expanzní nádobou pro pitnou vodu. Všechna připojení nádrží mají kulové kohouty; na spodním vývodu AKU je manometr, teploměr a pojistný ventil. Sekundární oběhové čerpadlo s uzávěry je u podlahy a vedle něj na stěně přijímač bezdrátového termostatu. Rozvody jsou izolované, soustava se napouští přes plnicí ventil s flexibilní hadicí.</p>
+  <h3>Venkovní část</h3>
+  <ol class="steps">
+    <li>Na výstupu z jednotky kulový uzávěr <span class="n">2</span>, za ním separátor <span class="n">4</span> s bezpečnostním odvzdušňovacím ventilem — zůstává venku. Automatické odvzdušnění hydroboxu je v domě, proto musí být vzduch i případně uniklé R290 odvedeny už venku.</li>
+    <li>Na vratce kulový uzávěr <span class="n">2</span> a protizámrazový ventil <span class="n">3</span> s výpustí dolů. Potrubí v izolaci odolné UV, prostup zdí utěsněný.</li>
+  </ol>
+  <h3>Hydrobox</h3>
+  <ol class="steps">
+    <li>Hydrobox <span class="n">18</span> na nehořlavou stěnu; prostředí 10–35 °C, relativní vlhkost trvale do 70 %, po obou stranách prostor pro servis. Rozměry 700 × 500 × 280 mm, 35 kg.</li>
+    <li>Zdola 2× DN25 (vnitřní závit) — výstup a vratka od venkovní jednotky. Z boku 3× DN25 — výstup A do AKU, výstup B do TUV a společná vratka.</li>
+    <li>Uvnitř je oběhové čerpadlo primárního okruhu, elektrický dohřev 3 kW, trojcestný ventil, filtr, expanzní nádoba 8 l, pojistný ventil 3 bar a automatické odvzdušnění. Návod hydroboxu dále předepisuje v topném systému kulové kohouty, filtr topné vody, vypouštěcí ventil, zpětný ventil a pojistný ventil.</li>
+  </ol>
+  <h3>AKU a topení</h3>
+  <ol class="steps">
+    <li>Výstup A přes uzávěr <span class="n">2</span> do horního hrdla AKU <span class="n">5</span>; vratka ze spodního hrdla přes uzávěr <span class="n">2</span>, magnetický filtr <span class="n">16</span> a další uzávěr <span class="n">2</span> zpět do hydroboxu.</li>
+    <li>Na AKU: odvzdušnění <span class="n">6</span>, teploměr s pojistným ventilem <span class="n">8</span>, vypouštěcí kohout <span class="n">15</span>.</li>
+    <li>Výstup do topení: volitelně směšovací ventil <span class="n">17</span> (podlahové topení max. 40 °C, ideálně 35 °C), uzávěr, sekundární čerpadlo <span class="n">10</span> a uzávěr. Napájení čerpadla spíná a rozpíná přijímač <span class="n">11</span> podle termostatu <span class="n">12</span>.</li>
+    <li>Za čerpadlem pojistná skupina <span class="n">7</span> a expanzní nádoba <span class="n">9</span>; odvzdušnění v nejvyšším bodě <span class="n">13</span> a ventilky radiátorů <span class="n">14</span>.</li>
+  </ol>
+  <h3>Ohřev TUV</h3>
+  <ol class="steps">
+    <li>Výstup <strong>B</strong> hydroboxu přes uzávěr <span class="n">2</span> do spirály zásobníku TUV <span class="n">19</span> (shora dolů). Výkon spirály ≥ jmenovitý výkon TČ. Trojcestný ventil hydroboxu přepíná v režimu TUV na výstup B; TUV má přednost.</li>
+    <li>Vratka ze spirály přes uzávěr <span class="n">2</span> se spojí s vratkou z AKU <strong>před magnetickým filtrem <span class="n">16</span></strong>. Uzávěr na spodním hrdle AKU umožní odpojit AKU, zatímco ohřev TUV běží dál.</li>
+    <li>Čidlo TUV T2 <span class="n">20</span> v jímce zásobníku, kabel k řídicí desce venkovní jednotky.</li>
+    <li>Studená voda: uzávěr a zpětný ventil <span class="n">22</span>, expanzní nádoba pro pitnou vodu <span class="n">24</span>, pojistný ventil TUV <span class="n">23</span> bez uzávěru s výfukem do odpadu. Na výstup teplé vody doporučujeme termostatický směšovač (voda nad 52 °C může opařit).</li>
+    <li>Topná vložka zásobníku <span class="n">21</span> volitelně — dohřev a antilegionella.</li>
+  </ol>
+</section>
+
+<section class="pb">
+  <h2><span class="no">3</span> Elektrické zapojení s hydroboxem</h2>
+  <figure><div class="sheet"><img src="elektro.png" alt="Schéma elektrického zapojení s hydroboxem."></div>
+    <figcaption>REO-SCH-H2-E — podle návodu hydraulického modulu (kap. 6) a návodu TČ.</figcaption></figure>
+  <div class="tbl"><table><thead><tr><th>Hydrobox</th><th>Napájení</th><th>Jistič Q</th><th>Pro jednotky</th><th>Čerpadlo</th></tr></thead><tbody>
+    <tr><td>RH-03H/S</td><td>230 V · 1F</td><td>40 A</td><td>RH030, RH040 (1F)</td><td>výtlak 9 m</td></tr>
+    <tr><td>RH-03H</td><td>400 V · 3F</td><td>25 A</td><td>RH040 (3F)</td><td>výtlak 9 m</td></tr>
+    <tr><td>RH-05H/S</td><td>230 V · 1F</td><td>50 A</td><td>RH050 (1F)</td><td>výtlak 12 m</td></tr>
+    <tr><td>RH-05H</td><td>400 V · 3F</td><td>32 A</td><td>RH050, RH060 (3F)</td><td>výtlak 12 m</td></tr>
+  </tbody></table></div>
+  <ul class="list">
+    <li>Přívod ze sítě vede do jističe Q s chráničem v hydroboxu. Z napájecích svorek hydroboxu (L, N, PE nebo R, S, T, N, PE) je napájena venkovní jednotka.</li>
+    <li>Ovládání 230 V: svorka 1 hydroboxu (E-ohřev) → E-Heater jednotky, 2 (čerpadlo) → PUMP, 3 (trojcestný ventil) → 3-way valve, 4 → N. Signál čerpadla PWM, GND, FB (0–12 V DC) → stejnojmenné svorky jednotky.</li>
+    <li>Elektrické připojení hydroboxu zespodu, volná délka kabelu min. 2 m. Přední kryt hydroboxu nesnímat — obsahuje elektrické součásti.</li>
+    <li>Kabelový ovladač je připojen komunikačním kabelem k řídicí desce jednotky. Přijímač termostatu má vlastní přívod 230 V a spíná fázi sekundárního čerpadla.</li>
+    <li>TUV: čidlo T2 do řídicí desky jednotky; topná vložka zásobníku volitelně přes stykač ze svorek 1 + 4 jednotky, s vlastním jističem. Trojcestný ventil je v hydroboxu a ovládá ho svorka 3.</li>
+    <li>Jednotka i hydrobox uzemněny; v zimě nevypínat napájení. Zapojení provádí osoba s odbornou kvalifikací dle ČSN / EN.</li>
+  </ul>
+</section>
+
+<section class="pb">
+  <h2><span class="no">4</span> Soupis komponent</h2>
+  <p>Čísla odpovídají schématům. Délky potrubí a počty fitinek se upřesní podle skutečné trasy.</p>
+  <div class="tbl"><table><thead><tr><th>Č.</th><th>Položka</th><th>Počet</th><th>Poznámka</th></tr></thead><tbody>
+<tr class="grp"><td colspan="4">Hlavní zařízení</td></tr>
+<tr><td><span class="n">1</span></td><td>Tepelné čerpadlo REO RH030–RH060 (monoblok R290)</td><td class="q">1 ks</td><td>včetně kabelového ovladače; model podle tepelné ztráty</td></tr>
+<tr><td><span class="n">5</span></td><td>Akumulační nádrž 100 l (topná voda)</td><td class="q">1 ks</td><td>s jímkou, hrdly pro teploměr a pojistný ventil</td></tr>
+<tr><td><span class="n">18</span></td><td>Hydrobox REO (RH-03H/S, RH-03H, RH-05H/S nebo RH-05H podle jednotky)</td><td class="q">1 ks</td><td>čerpadlo primáru, dohřev 3 kW, 3c ventil, filtr, exp. nádoba 8 l, pojistný ventil 3 bar, jistič</td></tr>
+<tr><td>—</td><td>Kotvení hydroboxu na nehořlavou stěnu</td><td class="q">1 sada</td><td>700 × 500 × 280 mm, 35 kg</td></tr>
+<tr class="grp"><td colspan="4">Venkovní část</td></tr>
+<tr><td>—</td><td>Tvárnice ztraceného bednění + beton (2 ramena 200 × min. 500 mm, výška min. 300 mm)</td><td class="q">1 sada</td><td>dle výkresu REO-SCH-K1-P; štěrkový podsyp mezi rameny</td></tr>
+<tr><td>—</td><td>Antivibrační patky (silentbloky) s kotvením</td><td class="q">2 ks</td><td>jedna na každé rameno patky; návod je vyžaduje</td></tr>
+<tr><td><span class="n">2</span></td><td>Kulový uzávěr DN25 s holendrem (výstup, vratka)</td><td class="q">2 ks</td><td>co nejblíže hrdlům jednotky</td></tr>
+<tr><td><span class="n">4</span></td><td>Separátor vzduchu a nečistot s automatickým odvzdušněním a pojistným ventilem</td><td class="q">1 ks</td><td>na výstupu venku, nejvyšší bod venkovní části</td></tr>
+<tr><td><span class="n">3</span></td><td>Protizámrazový ventil DN25</td><td class="q">1 ks</td><td>na vratce venku, výpustí dolů</td></tr>
+<tr><td>—</td><td>Izolace potrubí venkovní, odolná UV (min. 19 mm)</td><td class="q">dle trasy m</td><td>pro výstup i vratku</td></tr>
+<tr><td>—</td><td>Prostup obvodovou zdí — chránička, těsnění, izolace</td><td class="q">1 sada</td><td>prostup utěsnit</td></tr>
+<tr class="grp"><td colspan="4">Technická místnost — primár</td></tr>
+<tr><td><span class="n">2</span></td><td>Kulový uzávěr DN25 (vstup AKU, a před i za filtrem 16)</td><td class="q">3 ks</td><td>AKU a filtr lze odpojit bez vypouštění</td></tr>
+<tr><td><span class="n">16</span></td><td>Magnetický filtr DN25 (s vypouštěním)</td><td class="q">1 ks</td><td>na vratce do TČ = filtr na vstupu dle návodu</td></tr>
+<tr><td><span class="n">6</span></td><td>Automatický odvzdušňovací ventil 3/8″–1/2″ (horní vývod AKU)</td><td class="q">1 ks</td><td>s uzavíracím ventilkem</td></tr>
+<tr><td><span class="n">8</span></td><td>Teploměr + pojistný ventil (T-kus na plášti AKU)</td><td class="q">1 sada</td><td>pojistný ventil bez uzávěru, výfuk do odpadu</td></tr>
+<tr><td><span class="n">15</span></td><td>Vypouštěcí kohout AKU</td><td class="q">1 ks</td><td>na dně nádrže</td></tr>
+<tr><td>—</td><td>Plnicí sestava topné vody (ventil + oddělovač dle ČSN EN 1717)</td><td class="q">1 sada</td><td>návod vyžaduje plnicí ventil; ve schématu nekresleno</td></tr>
+<tr class="grp"><td colspan="4">Technická místnost — sekundár (topení)</td></tr>
+<tr><td><span class="n">10</span></td><td>Oběhové čerpadlo (elektronické, 230 V) se šroubením</td><td class="q">1 ks</td><td>napájení spíná přijímač 11</td></tr>
+<tr><td><span class="n">2</span></td><td>Kulový uzávěr (před a za čerpadlem, vratka z topení)</td><td class="q">3 ks</td><td>dimenze dle rozvodu</td></tr>
+<tr><td><span class="n">7</span></td><td>Pojistná skupina: pojistný ventil 2,5–3 bar + manometr (+ odvzdušnění)</td><td class="q">1 sada</td><td>na stoupačce za čerpadlem, výfuk do odpadu</td></tr>
+<tr><td><span class="n">9</span></td><td>Expanzní nádoba pro topení + držák a připojení</td><td class="q">1 ks</td><td>objem dle výpočtu objemu soustavy; bez uzávěru</td></tr>
+<tr><td><span class="n">13</span></td><td>Automatický odvzdušňovací ventil (nejvyšší bod rozvodu)</td><td class="q">1 ks</td><td>další dle počtu horních bodů</td></tr>
+<tr><td><span class="n">17</span></td><td>Trojcestný směšovací ventil + hlavice (volitelně)</td><td class="q">0–1 ks</td><td>jen pro podlahové topení: max. 40 °C, ideálně 35 °C</td></tr>
+<tr><td><span class="n">14</span></td><td>Odvzdušňovací ventilky radiátorů</td><td class="q">dle počtu ks</td><td>většinou stávající</td></tr>
+<tr class="grp"><td colspan="4">Regulace a elektro</td></tr>
+<tr><td><span class="n">11</span> <span class="n">12</span></td><td>Bezdrátový pokojový termostat + přijímač (relé 230 V)</td><td class="q">1 sada</td><td>přijímač spíná napájení čerpadla 10</td></tr>
+<tr><td>—</td><td>Přívod do hydroboxu z domovního rozvaděče (jištění dle typu hydroboxu)</td><td class="q">1 okruh</td><td>jistič Q s chráničem je v hydroboxu: 40 / 25 / 50 / 32 A</td></tr>
+<tr><td>—</td><td>Napájecí kabel hydrobox → venkovní jednotka (3 nebo 5 vodičů)</td><td class="q">dle trasy m</td><td>v chráničce, průřez dle proudu</td></tr>
+<tr><td>—</td><td>Ovládací kabel hydrobox ↔ jednotka (E-ohřev, čerpadlo, 3c ventil, N + PE)</td><td class="q">dle trasy m</td><td>230 V, svorky 1–4 hydroboxu</td></tr>
+<tr><td>—</td><td>Signální kabel čerpadla PWM / GND / FB</td><td class="q">dle trasy m</td><td>0–12 V DC, vést odděleně od silových kabelů</td></tr>
+<tr><td>—</td><td>Kabel 230 V k čerpadlu a přijímači (3 × 1,5 mm²)</td><td class="q">dle trasy m</td><td></td></tr>
+<tr><td>—</td><td>Komunikační kabel ovladače TČ</td><td class="q">dle trasy m</td><td>často součást dodávky TČ</td></tr>
+<tr class="grp"><td colspan="4">Potrubí a fitinky</td></tr>
+<tr><td>—</td><td>Potrubí — měď / uhlíková ocel / PPR (dle volby investora)</td><td class="q">dle trasy m</td><td>primár min. DN25 dle přípojek TČ</td></tr>
+<tr><td>—</td><td>Šroubení (holendry) — rozebíratelné spoje u TČ, hydroboxu, AKU, filtru, čerpadla, separátoru</td><td class="q">cca 20 ks</td><td>hydrobox: 2× DN25 zdola, 3× DN25 z boku (vnitřní závit)</td></tr>
+<tr><td>—</td><td>Kolena 90° / 45°</td><td class="q">dle trasy ks</td><td>počet kolen omezit (tlaková ztráta)</td></tr>
+<tr><td>—</td><td>T-kusy (odbočky pro pojistnou skupinu, obtok směšovače, odvzdušnění)</td><td class="q">cca 6 ks</td><td></td></tr>
+<tr><td>—</td><td>Přechodky závit vnější / vnitřní, redukce, přechody plast–kov</td><td class="q">cca 12 ks</td><td>dle zvoleného materiálu</td></tr>
+<tr><td>—</td><td>Objímky a kotvení potrubí</td><td class="q">dle trasy ks</td><td>proti vibracím (návod)</td></tr>
+<tr><td>—</td><td>Těsnicí materiál (konopí + pasta / těsnicí vlákno)</td><td class="q">1 bal.</td><td></td></tr>
+<tr><td>—</td><td>Izolace potrubí vnitřní (kaučuk min. 13 mm)</td><td class="q">dle trasy m</td><td>celý primár i sekundár</td></tr>
+<tr class="grp"><td colspan="4">TUV — hydraulika</td></tr>
+<tr><td><span class="n">19</span></td><td>Zásobník TUV se spirálou</td><td class="q">1 ks</td><td>výkon spirály ≥ jmenovitý výkon TČ (návod)</td></tr>
+<tr><td><span class="n">2</span></td><td>Kulový uzávěr (přívod a vratka spirály)</td><td class="q">2 ks</td><td>servis bez vypouštění</td></tr>
+<tr><td><span class="n">2</span></td><td>Kulový uzávěr na spodním hrdle AKU</td><td class="q">1 ks</td><td>AKU lze odpojit, ohřev TUV běží dál</td></tr>
+<tr><td><span class="n">22</span></td><td>Uzávěr + zpětný ventil na přívodu studené vody</td><td class="q">1 sada</td><td></td></tr>
+<tr><td><span class="n">23</span></td><td>Pojistný ventil TUV (obvykle 6 bar)</td><td class="q">1 ks</td><td>bez uzávěru, výfuk do odpadu; dle tlaku vodovodu</td></tr>
+<tr><td><span class="n">24</span></td><td>Expanzní nádoba pro pitnou vodu + držák</td><td class="q">1 ks</td><td>objem dle objemu zásobníku</td></tr>
+<tr><td>—</td><td>Termostatický směšovač na výstupu teplé vody</td><td class="q">0–1 ks</td><td>doporučeno — voda nad 52 °C může opařit</td></tr>
+<tr><td><span class="n">21</span></td><td>Elektrická topná vložka do zásobníku (volitelně)</td><td class="q">0–1 ks</td><td>dohřev a antilegionella</td></tr>
+<tr class="grp"><td colspan="4">TUV — elektro</td></tr>
+<tr><td><span class="n">14</span></td><td>Čidlo TUV T2 + prodlužovací kabel</td><td class="q">1 sada</td><td>do jímky zásobníku; ověřit, zda je součástí dodávky TČ</td></tr>
+<tr><td><span class="n">13</span></td><td>Stykač + jistič pro topnou vložku (volitelně)</td><td class="q">0–1 sada</td><td>ovládání ze svorky 1 + 4</td></tr>
+<tr class="grp"><td colspan="4">TUV — fitinky</td></tr>
+<tr><td>—</td><td>Šroubení, T-kusy a přechodky navíc pro okruh TUV a spirálu</td><td class="q">cca 10 ks</td><td>dle zvoleného materiálu</td></tr>
+</tbody></table></div>
+  <h3>Volba materiálu potrubí</h3>
+  <p>Investor si může vybrat, zda bude hydraulické propojení v mědi, uhlíkové oceli nebo PPR. Vždy je třeba počítat i s fitinky — napojovacími a šroubovacími prvky (šroubení, kolena, T-kusy, přechodky). Návod doporučuje nerezové nebo PPR potrubí a každé zařízení připojit rozebíratelným šroubením.</p>
+  <div class="tbl"><table><thead><tr><th>Materiál</th><th>Spojování</th><th>Vlastnosti</th><th>Primár (orientačně)</th></tr></thead><tbody><tr><td>Měď</td><td>tvrdé pájení nebo lisování</td><td>odolná, malé průměry, snese vysoké teploty; vyšší cena materiálu</td><td>28 × 1,5 mm (DN25)</td></tr><tr><td>Uhlíková ocel (lisovací systém)</td><td>lisování</td><td>rychlá montáž, nižší cena než měď; jen uzavřené topné okruhy, chránit před vlhkostí zvenku</td><td>28 mm (DN25)</td></tr><tr><td>PPR</td><td>polyfúzní svařování</td><td>nejlevnější; pro topení trubka s vložkou (hliník / sklo) kvůli roztažnosti; větší vnější průměr; venku chránit před UV</td><td>32 × 5,4 mm a víc</td></tr></tbody></table></div>
+</section>
+
+<section>
+  <h2><span class="no">5</span> Uvedení do provozu</h2>
+  <div class="cols">
+    <div class="box"><h3>Napuštění</h3><ul class="list">
+      <li>Zkontrolovat přednastavení expanzních nádob před napuštěním.</li>
+      <li>Napouštět pomalu přes plnicí sestavu, všechny uzávěry otevřené.</li>
+      <li>Soustavu natlakovat na <strong>1,5 bar</strong> (manometr pojistné skupiny).</li>
+      <li>Doporučujeme trvale připojit dopouštění z vodovodu nebo z TUV přes plnicí ventil s oddělovačem — chybějící tlak se pak snadno doplní.</li><li>Nejdřív napustit a odvzdušnit zásobník TUV (otevřít kohout teplé vody), teprve pak zapnout topnou vložku.</li>
+    </ul></div>
+    <div class="box"><h3>Kontrola funkce</h3><ul class="list">
+      <li>Jednotku nechat před prvním startem min. 12 h pod napětím (předehřev).</li>
+      <li>Spustit TČ a ověřit, že se po dosažení nastavené teploty vypne.</li>
+      <li>Zvýšit teplotu na termostatu: přijímač musí zapnout sekundární čerpadlo.</li><li>Vyvolat požadavek na TUV a ověřit přepnutí trojcestného ventilu na spirálu a zpět.</li>
+      <li>Po odvzdušnění vyčistit magnetický filtr a doplnit tlak na 1,5 bar.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section class="pb">
+  <h2><span class="no">6</span> První spuštění a odvzdušnění systému</h2>
+  <p>Po instalaci je v potrubí, nádržích a radiátorech vzduch. Při prvním spuštění proto jednotka často skončí chybou <strong>Er 03 — Porucha průtoku vody</strong> (na displeji „Water flow failure“): průtokový spínač ve venkovní jednotce nezaznamená dostatečný průtok. Tento postup slouží k prvnímu spuštění a odvzdušnění systému.</p>
+  <div class="note"><p><strong>Proč je průtokový spínač důležitý.</strong> Spínač hlídá, že výměníkem jednotky protéká voda. Při nedostatečném průtoku zastaví jednotku a chrání tak výměník tepelného čerpadla a čerpadlo primárního okruhu v hydroboxu. Čerpadlo, které běží naprázdno nebo ve vzduchu, se během krátké doby zničí. Proto se spínač smí vyřadit <strong>jen dočasně, po dobu odvzdušnění a pod dohledem</strong>, a vždy se musí vrátit do původního funkčního stavu.</p></div>
+  <h3>Příprava</h3>
+  <ol class="steps">
+    <li>Soustava je napuštěná a natlakovaná na 1,5 bar, všechny uzávěry otevřené, odvzdušňovací ventily (separátor venku, AKU, nejvyšší body rozvodu, radiátory) volné.</li>
+    <li>TČ zapnout na jističi, na ovladači zapnout režim topení. Pokud se objeví Er 03, pokračovat jedním z postupů A nebo B.</li>
+  </ol>
+  <h3>Postup A — mechanické dočasné vyřazení průtokového spínače</h3>
+  <ol class="steps">
+    <li>Vypnout TČ na jističi.</li>
+    <li><strong>Uzavřít uzávěry</strong> na výstupu i vratce u venkovní jednotky, aby se při rozebrání spínače nevylila voda ze systému.</li>
+    <li>Rozebrat průtokový spínač a jeho průtokovou packu zafixovat v sepnuté poloze, například lepicí páskou. Spínač uzavřít víčkem.</li>
+    <li>Otevřít uzávěry.</li>
+    <li>Zapnout TČ na jističi a zapnout režim topení.</li>
+    <li><strong>Zkušební topení nechat běžet 1 hodinu.</strong> Vzduch z topného systému uniká odvzdušňovacími ventily. Průběžně sledovat tlak a doplňovat na 1,5 bar.</li>
+    <li>Vypnout TČ na jističi, uzavřít uzávěry a <strong>vrátit průtokový spínač do původního funkčního stavu</strong> (odstranit pásku, packa se musí volně pohybovat), uzavřít víčkem.</li>
+    <li>Otevřít uzávěry, zapnout TČ na jističi a začít topit.</li>
+    <li>Chybějící tlak dopustit na <strong>1,5 bar</strong> z vodovodního řádu nebo z bojleru, jsou-li zásobník TUV a AKU pro dopouštění propojeny — což doporučujeme.</li>
+  </ol>
+  <h3>Postup B — elektrické přemostění vstupu IN3 (pouze elektrotechnik)</h3>
+  <ol class="steps">
+    <li>Vypnout TČ na jističi a vyčkat, až zhasne řídicí deska.</li>
+    <li>Na řídicí desce venkovní jednotky najít vstup <strong>IN3 — „Water flow switch“</strong> (průtokový spínač). Je vyznačen v zapojovacích schématech návodu TČ na str. 17–19, shodně pro RH030 / RH040, RH050 1F i RH050 3F / RH060. Sousední vstupy IN1, IN2 jsou tlakové spínače, IN4 externí spínač a IN5 ochrana krytu — ty se nepřemosťují.</li>
+    <li>Odpojit konektor průtokového spínače ze vstupu IN3 a vstup krátkodobě přemostit propojkou. Tím se spínač elektronicky dočasně vyřadí.</li>
+    <li>Zapnout TČ na jističi, zapnout režim topení a nechat 1 hodinu topit — systém se odvzdušní.</li>
+    <li>Vypnout TČ na jističi, <strong>propojku odstranit a konektor průtokového spínače vrátit na IN3</strong>.</li>
+    <li>Zapnout TČ na jističi, začít topit a doplnit tlak na 1,5 bar.</li>
+  </ol>
+  <div class="note"><p><strong>Po odvzdušnění vždy:</strong> průtokový spínač je zpět ve funkčním stavu, uzávěry jsou otevřené, tlak je 1,5 bar a magnetický filtr je vyčištěný. Pokud se Er 03 objeví i po odvzdušnění, vyčistěte filtry (magnetický filtr a filtr v hydroboxu), zkontrolujte, že jsou všechny uzávěry otevřené, a zkontrolujte průtokový spínač (případně jej vyměňte) — viz návod TČ, kapitola Chybové kódy.</p></div>
+</section>
+
+<footer>
+  <p>Zjednodušený orientační podklad. Dimenze potrubí, nastavení pojistných ventilů, velikost expanzních nádob, průřezy kabelů a hodnoty jističů určete podle návodu k TČ, typového štítku a konkrétního domu. Instalaci a elektrické zapojení provádí odborná firma.</p>
+  <p>REO HEATING · podle návodu k instalaci RH030–RH060</p>
+</footer>
+</div>

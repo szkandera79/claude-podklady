@@ -224,6 +224,8 @@ B
 Č. POLOŽKA POČET POZN
 ÁMKA
 2 Kulový uzávěr (přívod a vratka spirály) 2 ks servis bez vypouštění
+2 Kulový uzávěr na spodním hrdle
+AKU 1 ks AKU lze odpojit, ohřev TUV běží dál
 22 Uzávěr + zpětný ventil na přívodu studené vody 1 sada
 23Pojistný ventil TUV (obvykle 6 bar) 1 ks bez uzávěru, výfuk do odpadu; dle
 tlaku vodovodu
@@ -273,11 +275,12 @@ chránit před UV
 32 × 5,4 mm a víc
 --- strana 10 ---
 5 Uvedení do provozu
-Napuštění a odvzdušnění
+Napuštění
 Zkontrolovat přednastavení expanzních nádob před napuštěním.
-Napouštět pomalu přes plnicí sestavu, uzávěry otevřené.
-Odvzdušnit od nejnižšího po nejvyšší bod: separátor, AKU, stoupačky, radiátory.
-Tlak ve studeném stavu typicky 1–1,5 bar (manometr pojistné skupiny).
+Napouštět pomalu přes plnicí sestavu, všechny uzávěry otevřené.
+Soustavu natlakovat na 1,5 bar (manometr pojistné skupiny).
+Doporučujeme trvale připojit dopouštění z vodovodu nebo z TUV přes plnicí ventil s
+oddělovačem — chybějící tlak se pak snadno doplní.
 N
 ejdřív napustit a odvzdušnit zásobník TUV (otevřít kohout teplé vody), teprve pak zapnout
 topnou vložku.
@@ -286,7 +289,68 @@ Jednotku nechat před prvním startem min. 12 h pod napětím (předehřev).
 Spustit TČ a ověřit, že se po dosažení nastavené teploty vypne.
 Zvýšit teplotu na termostatu: přijímač musí zapnout sekundární čerpadlo.
 Vyvolat požadavek na TUV a ověřit přepnutí trojcestného ventilu na spirálu a zpět.
-Po zahřátí znovu odvzdušnit, doplnit tlak, vyčistit magnetický filtr.
+Po odvzdušnění vyčistit magnetický filtr a doplnit tlak na 1,5 bar.
+--- strana 11 ---
+6 První spuštění a odvzdušnění systému
+Po instalaci je v potrubí, nádržích a radiátorech vzduch. Při prvním spuštění proto
+jednotka často skončí chybou Er 03 — Porucha průtoku vody (na displeji „Water flow
+failure“): průtokový spínač ve venkovní jednotce nezaznamená dostatečný průtok.
+Tento postup slouží k prvnímu spuštění a odvzdušnění systému.
+Proč je průtokový spínač důležitý. Spínač hlídá, že výměníkem jednotky protéká
+voda. Při nedostatečném průtoku zastaví jednotku a chrání tak výměník tepelného
+čerpadla a oběhové čerpadlo vestavěné ve venkovní jednotce. Čerpadlo, které běží
+naprázdno nebo ve vzduchu, se během krátké doby zničí. Proto se spínač smí vyřadit
+jen dočasně, po dobu odvzdušnění a pod dohledem, a vždy se musí vrátit do
+původního funkčního stavu.
+Příprava
+1. Soustava je napuštěná a natlakovaná na 1,5 bar, všechny uzávěry otevřené, odvzdušňovací
+ventily (separátor venku, AKU, nejvyšší body rozvodu, radiátory) volné.
+2. TČ zapnout na jističi, na ovladači zapnout režim topení. Pokud se objeví Er 03, pokračovat
+jedním z postupů A nebo B.
+Postup A — mechanické dočasné vyřazení prů
+1. Vypnout TČ na jističi.
+tokového spínače
+2. Uzavřít uzávěry na výstupu i vratce u venkovní jednotky, aby se při rozebrání spínače nevylila
+voda ze systému.
+3. Rozebrat průtokový spínač a jeho průtokovou packu zafixovat v sepnuté poloze, například lepicí
+páskou. Spínač uzavřít víčkem.
+4. Otevřít uzávěry.
+5. Zapnout TČ na jističi a zapnout režim topení.
+6. Zkušební topení nechat běžet 1 hodinu. Vzduch z topného systému uniká odvzdušňovacími
+ventily. Průběžně sledovat tlak a doplňovat na 1,5 bar.
+7. Vypnout TČ na jističi, uzavřít uzávěry a vrátit průtokový spínač do původního funkčního
+stavu (odstranit pásku, packa se musí volně pohybovat), uzavřít víčkem.
+8. Otevřít uzávěry, zapnout TČ na jističi a začít topit.
+9. Chybějící tlak dopustit na 1,5 bar z vodovodního řádu nebo z bojleru, jsou-li zásobník TUV a
+AKU pro dopouštění propojeny — což doporučujeme.
+Postup B — elektrické přemostění vstupu IN3 (pouze elektrotechnik)
+1. Vypnout TČ na jističi a vyčkat, až zhasne řídicí deska.
+2. Na řídicí desce venkovní jednotky najít vstup I
+N
+3 — „Water flow switch“ (průtokový spínač). Je
+vyznačen v zapojovacích schématech návodu TČ na str. 17–19, shodně pro RH030 / RH040,
+RH050 1F i RH050 3F / RH060. Sousední vstupy I
+N1, I
+N2 jsou tlakové spínače, I
+N4 externí spínač
+a I
+N5 ochrana krytu — ty se nepřemosťují.
+--- strana 12 ---
+3. Odpojit konektor průtokového spínače ze vstupu I
+3 a vstup krátkodobě přemostit propojkou.
+N
+Tím se spínač elektronicky dočasně vyřadí.
+4. Zapnout TČ na jističi, zapnout režim topení a nechat 1 hodinu topit — systém se odvzdušní.
+5. Vypnout TČ na jističi, propojku odstranit a konektor průtokového spínače vrátit na I
+N
+3.
+6. Zapnout TČ na jističi, začít topit a doplnit tlak na 1,5 bar.
+Po odvzdušnění vždy: průtokový spínač je zpět ve funkčním stavu, uzávěry jsou
+otevřené, tlak je 1,5 bar a magnetický filtr je vyčištěný. Pokud se Er 03 objeví i po
+odvzdušnění, vyčistěte filtry, zkontrolujte, že jsou všechny uzávěry otevřené, a
+zkontrolujte průtokový spínač (případně jej vyměňte
+) — viz návod TČ, kapitola
+Chybové kódy.
 Zjednodušený orientační podklad. Dimenze potrubí, nastavení pojistných ventilů,
 velikost expanzních nádob, průřezy kabelů a hodnoty jističů určete podle návodu k
 TČ, typového štítku a konkrétního domu. Instalaci a elektrické zapojení provádí

@@ -12,6 +12,7 @@ seznamem součástí a krátkým „jak to funguje“. Značka REO HEATING (logo
 | `kuncice/soupis-komponent.csv` | soupis komponent pro schéma 1 (generuje `src/soupis_kuncice.py`, zároveň vloží tabulku do stránky) |
 | `kuncice/index.html` | popis instalace (venku / uvnitř) s fotkami z realizace, artefakt S9apdYbzv8x7RiMdabc8xK |
 | `pokyny/` | **Pokyny k instalaci (bez hydroboxu)** — V1 vytápění s AKU, V2 AKU + TUV; PDF `REO-pokyny-instalace-V1-AKU.pdf`, `…-V2-AKU-TUV.pdf`; artefakty B1kNm4rR3A56NZ8vBEAeGU (V1), DC42DpVfQhRrkwxdTvX1xN (V2); build `src/build_pokyny.py` (po vygenerování schémat a PNG) |
+| `pokyny/` (s hydroboxem) | H1 hydrobox + AKU, H2 hydrobox + AKU + TUV; PDF `REO-pokyny-instalace-H1-…`, `…-H2-…`; artefakty 5xTBM8VtwMfQqVpwBtn4wE (H1), 4p9rJAKaMWSNYJ7jrqTTJW (H2); schémata `src/gen_schema_hydrobox.py [--tuv]`, `src/gen_elektro_hydrobox.py [--tuv]` |
 | `schema-kuncice-elektro-tuv.svg` / `.png` | elektrické schéma s TUV (`gen_schema_kuncice_elektro.py --tuv`) |
 | `schema-varianta-1.svg` / `.png` | **Varianta 1** (REO RH030–RH060) — pouze vytápění s akumulační nádrží; sekundární čerpadlo za AKU spíná bezdrátový termostat |
 
@@ -26,6 +27,6 @@ python3 reo-schemata-zapojeni/src/gen_schema.py
 PNG (2800 px) přes Chrome headless — příkaz viz historie / `REO/logo/build.sh` (stejný postup).
 
 ## Otevřené
-- **Další fáze: verze s hydroboxem** (V1 jen topení s AKU, V2 s TUV) — podle návodu `~/Downloads/REO_HEATING__Hydro_Box_installation_manual_CZ.pdf` a fotky instalace (hydrobox na zdi, AKU, zásobník TUV, exp. nádoby).
+- Hydrobox: ověřit u dodavatele připojení čerpadla hydroboxu na svorky PUMP / PWM / GND / FB jednotky (vestavěné čerpadlo RH030–RH060) a typ RH-03H pro RH040 3F (návod TČ uvádí RH040 jen 1F).
 - Kunčice: elektrické schéma pro TUV (svorka 3 trojcestný ventil, svorka 1 vložka, čidlo T2) — zatím jen v textu.
 - Další varianty (TUV, bivalence, FV) — doplnit jako `schema-varianta-N`.
