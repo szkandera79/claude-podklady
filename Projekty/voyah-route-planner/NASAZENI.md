@@ -91,3 +91,13 @@ FastAPI (`backend/vrp_api`) + Docker + Caddy (`deploy/`) — pro případ, že b
 ```bash
 cp deploy/.env.example deploy/.env && docker compose -f deploy/docker-compose.yml up -d --build
 ```
+
+## Obnova balíku nabíječek (cca 1× měsíčně)
+```bash
+cd voyah-route-planner/backend
+~/.venvs/voyah-route-planner/bin/python tools/build_charger_tiles.py 36 6 55 25   # OSM (jih, západ, sever, východ)
+~/.venvs/voyah-route-planner/bin/python tools/build_ocm_tiles.py                   # doplnění z Open Charge Map
+cd .. && bash scripts/deploy-netlify.sh
+```
+Argumenty v zsh nepředávat v proměnné (`$t` se nerozdělí → skript vezme výchozí oblast).
+

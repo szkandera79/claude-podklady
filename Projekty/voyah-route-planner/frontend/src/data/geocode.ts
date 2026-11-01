@@ -70,6 +70,7 @@ export async function candidates(text: string): Promise<Place[]> {
   const pool = (feats.some(isPlace) ? feats.filter(isPlace) : feats)
     .map((f, i) => [f, i] as const).sort((a, b) => Number(isArea(a[0])) - Number(isArea(b[0])) || a[1] - b[1]).map(([f]) => f);
   const names: { name: string; at: [number, number] }[] = [];
+  const exact: boolean[] = [];
   for (const f of pool) {
     const p = f.properties || {};
     const name = norm(p.name || p.street || "");
@@ -83,6 +84,9 @@ export async function candidates(text: string): Promise<Place[]> {
     seen.add(key);
     names.push({ name, at: [pl.lat, pl.lon] });
     out.push(pl);
+    exact.push(name === first);
   }
-  return out.length >= 2 ? out : [];
+  // „řím“: když existuje obec přesně toho jména, Římov ani Římovice nenabízet
+  const res = exact.some(Boolean) ? out.filter((_, i) => exact[i]) : out;
+  return res.length >= 2 ? res : [];
 }

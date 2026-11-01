@@ -185,3 +185,7 @@ Odhad: několik pracovních sezení; každá etapa končí funkční verzí k na
 - Výpadek Photonu (31. 10. odpoledne, „photon.komoot.io: nedostupné“): geokódování i země pro mýtné mají zálohu Nominatim (OSM, 1 dotaz/s,
   zná české exonymy — „Řím“, „Záhřeb“). Nominatim se použije i tehdy, když Photon obec daného jména nenajde.
 - Hlášení „Ceník se změnil“ už se neukazuje, když se cena za kWh nezměnila (DC a HPC za stejnou cenu se slučují do jednoho pásma).
+- Itálie + Open Charge Map v balíku (31. 10. večer): dlaždice Itálie (lat 36–47, lon 6–19) a obnovená výchozí oblast; italské stanice
+  v OSM většinou nemají vyplněné zásuvky (Řím: 361 stanic, CCS jen 6), proto `backend/tools/build_ocm_tiles.py` doplní do každé
+  dlaždice stanice CCS z OCM (klíč jen při sestavení, do balíku se nezapisuje). Balík: 298 pokrytých dlaždic, OSM ≈ 10 800 + OCM 8 445
+  stanic, 4,6 MB. Plán Vendryně → Řím 9,8 s (dřív 44,6 s); u dotazu „řím“ se při přesné shodě nenabízí Římov ani Římovice.

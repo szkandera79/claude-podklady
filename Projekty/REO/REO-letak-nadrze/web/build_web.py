@@ -33,9 +33,30 @@ body = re.sub(r'<section class="page( [a-z]+)?">', lambda m: f'<section class="p
 body = body.replace('class="tblhead">Proti dvěma', 'class="tblhead gap">Proti dvěma').replace('class="tblhead">Jak postupovat','class="tblhead gap">Jak postupovat')
 body = body.replace('<div class="cta">Chci nezávaznou nabídku</div>', '<a class="cta" href="https://reoheating.cz" target="_blank" rel="noopener">Chci nezávaznou nabídku</a>')
 
+# technické výkresy (PDF + náhledy se publikují jako soubory artefaktu, viz vykresy/)
+DWG = [('REO AN-100', 'Akumulační nádrž', '100 l'), ('REO AN-200', 'Akumulační nádrž', '200 l'),
+       ('REO AN-300', 'Akumulační nádrž', '300 l'), ('REO ZV-200', 'Zásobník TV s vlnitým výměníkem', '200 l'),
+       ('REO ZV-300', 'Zásobník TV s vlnitým výměníkem', '300 l'), ('REO KN-300', 'Kombinovaná nádrž 2 v 1', '300 l (70 + 210 l)'),
+       ('REO KN-500', 'Kombinovaná nádrž 2 v 1', '500 l (120 + 330 l)')]
+cards = ''.join(f'''<a class="card" href="vykresy/pdf/{m.replace(' ', '_')}_technicky_vykres.pdf" target="_blank" rel="noopener">
+<div class="im"><img src="vykresy/nahled/{m.replace(' ', '_')}.jpg" alt="Technický výkres {m}" loading="lazy"></div>
+<div class="tx"><div class="code">{m}</div><b>{n}</b><span>{v}</span><span class="dl">Výkres PDF (A3) ↓</span></div></a>''' for m, n, v in DWG)
+dwg = f'''<section class="page" id="vykresy"><div class="pad">
+<div class="eyebrow">Technické podklady</div>
+<h2 class="sec">Technické výkresy</h2>
+<div class="intro"><p>Rozměrové výkresy vybraných modelů s polohou a dimenzí všech hrdel, technickými požadavky
+a značením nádrže. Popisky jsou česky a anglicky, formát PDF A3 — klepnutím výkres otevřete.</p></div>
+<div class="grid6 dwg">{cards}</div>
+<div class="note"><b>Poznámka:</b> výkresy zachycují konkrétní provedení s elektrickým topným tělesem 3 kW.
+U zakázkového provedení se rozměry, poloha hrdel i parametry výměníku mohou lišit; závazné jsou údaje
+v potvrzení objednávky.</div>
+</div></section>
+'''
+body = body.replace('<section class="page end" id="kontakt">', dwg + '<section class="page end" id="kontakt">')
+
 nav = '''<nav class="nav" aria-label="Typy nádrží"><div class="in">
 <a class="brand" href="#uvod"><img src="%s" alt="REO HEATING"></a>
-<div class="links"><a href="#an">AN</a><a href="#zv">ZV</a><a href="#zh">ZH</a><a href="#zd">ZD</a><a href="#kn">KN</a><a href="#zs">ZS</a><a href="#zakazka">Na míru</a><a href="#kontakt" class="k">Kontakt</a></div>
+<div class="links"><a href="#an">AN</a><a href="#zv">ZV</a><a href="#zh">ZH</a><a href="#zd">ZD</a><a href="#kn">KN</a><a href="#zs">ZS</a><a href="#zakazka">Na míru</a><a href="#vykresy">Výkresy</a><a href="#kontakt" class="k">Kontakt</a></div>
 </div></nav>''' % img_uri('logo-reo-heating.svg')
 
 css = open(os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), 'web.css'), encoding='utf-8').read()

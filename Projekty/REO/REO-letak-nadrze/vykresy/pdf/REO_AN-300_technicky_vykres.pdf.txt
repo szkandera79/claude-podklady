@@ -1,0 +1,87 @@
+[Text vytažený z REO_AN-300_technicky_vykres.pdf]
+
+--- strana 1 ---
+circulation inlet (Rp 1­1/2")
+Vstup topné vody (Rp 1 1/2")
+Fixings
+Konzola
+Temp. sensor
+Jímka čidla teploty
+circulation outlet (Rp 1­1/2")
+Výstup topné vody (Rp 1 1/2")
+Fixings
+Konzola
+Značení nádrže
+REO­AN­300­01
+Labels on the tank:
+1. Logo REO HEATING
+1. REO HEATING logo
+2. Štítky hrdel dle výkresu
+2. Nozzle labels according to the drawing
+3. Typový štítek
+3. Rating plate according to specification
+Air vent (Rp 1/2)
+4. Označení CE: ano
+4. CE marking: yes
+5. Čárový kód
+5. Barcode
+Odvzdušnění (Rp 1/2")
+Insulation layer
+Izolace
+circulation outlet (Rp 1­1/2")
+Výstup topné vody (Rp 1 1/2")
+Thermostat
+Termostat
+Electric heater 3 kW (Rp 1")
+El. topné těleso 3 kW (Rp 1")
+Water filler (1/2­M)
+Doplňování (G 1/2" vnější)
+circulation inlet (Rp 1­1/2")
+Vstup topné vody (Rp 1 1/2")
+Drain outlet (1/2­M)
+Drain outlet (1/2­M)
+Vypouštění (G 1/2" vnější)
+Vypouštění (G 1/2" vnější)
+Support foot
+Podstavec
+Odvzdušnění (Rp 1/2")
+circulation inlet (Rp 1­1/2")
+Vstup topné vody (Rp 1 1/2")
+circulation outlet (Rp 1­1/2")
+Výstup topné vody (Rp 1 1/2")
+Electric heater 3 kW (Rp 1")
+El. topné těleso 3 kW (Rp 1")
+Technické požadavky
+1. Vnější průměr nádrže: Ø560 mm.
+2. Vnitřní průměr nádoby: Ø460 mm.
+3. Izolace: PUR pěna, tloušťka 50 mm.
+4. Tolerance výšky pláště ±10 mm, tolerance výšky hrdel ±3
+mm.
+5. Povrch nádrže hladký a čistý, bez promáčklin a vyboulenin.
+6. Tlaková zkouška vnitřní nádoby 0,8–1,0 MPa po dobu 3
+minut: bez netěsnosti, poklesu tlaku a deformace.
+7. Jímky čidel teploty s bílou kabelovou průchodkou PG7.
+8. Balení: horní, spodní a 3 mezilehlé polystyrenové výplně,
+kartonová krabice s logem REO HEATING.
+Plášť
+Bílý lakovaný plech
+Akumulační nádrž
+Izolace
+PUR pěna 50 mm
+300 l
+Vnitřní nádoba
+Model REO AN­300
+Verze Formát Měřítko Datum
+2026/11/01
+Č. výkresu REO­AN­300­01
+Technical remarks
+1. Outer tank diameter: Ø560 mm.
+2. Inner tank diameter: Ø460 mm.
+3. Insulation: polyurethane foam, 50 mm.
+4. Tolerance of cylinder height ±10 mm, tolerance of nozzle heights ±3 mm.
+5. Tank surface smooth and clean, without dents or bulges.
+6. Inner tank pressure test 0.8–1.0 MPa for 3 minutes: no leakage, no pressure
+drop, no deformation.
+7. White PG7 cable glands on temperature sensor pockets.
+8. Packaging: top, bottom and 3 intermediate styrofoam protectors, carton box with
+REO HEATING logo.

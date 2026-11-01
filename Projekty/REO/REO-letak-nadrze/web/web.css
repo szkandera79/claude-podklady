@@ -142,3 +142,10 @@ table.spec td{ text-align:left; white-space:normal; color:var(--body); }
 .end .range li b{ color:var(--green); font-weight:800; margin-right:8px; }
 .end .fine{ font-size:13px; color:var(--muted); line-height:1.6; padding:24px 0 40px; max-width:90ch; }
 @media (max-width:680px){ .end .range ul{ grid-template-columns:1fr; } .end .adr{ padding-left:0; } .end .panel{ padding:22px; } }
+
+/* ── technické výkresy ── */
+.dwg .card{ text-decoration:none; color:inherit; }
+.dwg .card .im{ height:auto; aspect-ratio:1191/842; padding:10px; }
+.dwg .card .im img{ width:100%; height:auto; }
+.dwg .card .dl{ margin-top:10px; font-size:13px; font-weight:800; letter-spacing:.06em; color:var(--green-bright); }
+.dwg .card:hover .dl{ color:var(--green); }

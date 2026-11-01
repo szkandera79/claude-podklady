@@ -1,0 +1,118 @@
+[Text vytažený z REO_KN-300_technicky_vykres.pdf]
+
+--- strana 1 ---
+Značení nádrže
+1. Logo REO HEATING
+2. Štítky hrdel dle výkresu
+3. Typový štítek
+4. Označení CE: ano
+5. Čárový kód
+Fixings
+Konzola
+Technical remarks
+1. Outer tank diameter: Ø560 mm.
+2. Inner tank diameter: Ø470 mm.
+3. Insulation: polyurethane foam, 50 mm.
+4. Tolerance of cylinder height ±10 mm, tolerance of nozzle heights ±3 mm.
+5. Tank surface smooth and clean, without dents or bulges.
+6. Inner tank pressure test 0.8–1.0 MPa for 3 minutes: no leakage, no pressure drop, no
+deformation.
+7. White PG7 cable glands on temperature sensor pockets.
+8. Packaging: top, bottom and 3 intermediate styrofoam protectors, carton box with REO
+HEATING logo.
+9. Heat exchanger: corrugated stainless pipe Ø28 mm × 20 m, exchange area 2.6 m².
+Labels on the tank:
+REO­KN­300­01
+1. REO HEATING logo
+Air vent (Rp 1/2)
+2. Nozzle labels according to the drawing
+Odvzdušnění (Rp 1/2")
+3. Rating plate according to specification
+4. CE marking: yes
+5. Barcode
+Hot water outlet (Rp 3/4)
+PT valve (Rp 3/4)
+Výstup teplé vody (Rp 3/4")
+Pojistný ventil P/T (Rp 3/4")
+Fixings
+Coil circulation inlet (1" M)
+Insulation layer
+Konzola
+Izolace
+Vstup do výměníku (G 1" vnější)
+Thermostat
+Termostat
+20MΦ28 wave pipe
+Electric heater 3 kW (Rp 1")
+Vlnitý výměník Ø28 × 20 m
+El. topné těleso 3 kW (Rp 1")
+Temp. sensor
+Jímka čidla teploty
+Water return (Rp 3/4)
+Coil circulation outlet (1" M)
+Cirkulace TV (Rp 3/4")
+Cold water inlet (3/4­M)
+Temp. sensor
+Výstup z výměníku (G 1" vnější)
++ one­way safety valve (black handle)
+Jímka čidla teploty
+Air vent (1/2­M)
+Vstup studené vody (G 3/4" vnější)
+Odvzdušnění (G 1/2" vnější)
+Coil circulation inlet (Rp 1")
++ pojistný ventil (černá páčka)Coil circulation inlet (Rp 1")
+Drain outlet (1/2­M)
+Vstup topné vody (Rp 1")
+Vstup topné vody (Rp 1")
+Vypouštění (G 1/2" vnější)
+Coil circulation outlet (Rp 1")
+Drain outlet (1/2­M)
+Výstup topné vody (Rp 1")
+Odvzdušnění (G 1/2" vnější)
+Coil circulation outlet (Rp 1")
+Coil circulation inlet (Rp 1")
+Vstup topné vody (Rp 1")
+Výstup topné vody (Rp 1")
+Coil circulation outlet (Rp 1")
+Výstup topné vody (Rp 1")
+Drain outlet (1/2­M)
+Thermostat
+Vypouštění (G 1/2" vnější)
+Water filler (1/2­M)
+Termostat
+Doplňování (G 1/2" vnější)
+Support foot
+Electric heater 3 kW (Rp 1")
+Nožka
+El. topné těleso 3 kW (Rp 1")
+Odvzdušnění (Rp 1/2")
+Air vent (Rp 1/2)
+PT valve (Rp 3/4)
+Hot water outlet (Rp 3/4)
+Pojistný ventil P/T (Rp 3/4")
+Výstup teplé vody (Rp 3/4")
+Electric heater 3 kW (Rp 1")
+El. topné těleso 3 kW (Rp 1")
+Technické požadavky
+1. Vnější průměr nádrže: Ø560 mm.
+2. Vnitřní průměr nádoby: Ø470 mm.
+3. Izolace: PUR pěna, tloušťka 50 mm.
+4. Tolerance výšky pláště ±10 mm, tolerance výšky hrdel ±3 mm.
+5. Povrch nádrže hladký a čistý, bez promáčklin a vyboulenin.
+6. Tlaková zkouška vnitřní nádoby 0,8–1,0 MPa po dobu 3 minut: bez netěsnosti, poklesu
+tlaku a deformace.
+7. Jímky čidel teploty s bílou kabelovou průchodkou PG7.
+8. Balení: horní, spodní a 3 mezilehlé polystyrenové výplně, kartonová krabice s logem REO
+HEATING.
+9. Výměník: vlnitá nerezová trubka Ø28 mm × 20 m, teplosměnná plocha 2,6 m².
+Plášť
+Bílý lakovaný plech
+Kombinovaná nádrž 2 v 1
+Izolace
+PUR pěna 50 mm
+300 l (70 + 210 l)
+Vnitřní nádoba
+Model REO KN­300
+Verze Formát Měřítko Datum
+2026/11/01
+Č. výkresu REO­KN­300­01

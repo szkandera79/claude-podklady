@@ -1,0 +1,96 @@
+[Text vytažený z REO_ZV-200_technicky_vykres.pdf]
+
+--- strana 1 ---
+Air vent (Rp 1/2)
+Odvzdušnění (Rp 1/2")
+PT valve (Rp 3/4)
+Pojistný ventil P/T (Rp 3/4")
+Fixings
+Konzola
+Coil circulation inlet (1" M)
+Vstup do výměníku (G 1" vnější)
+Temp. sensor
+Jímka čidla teploty
+20MΦ28 wave pipe
+Vlnitý výměník Ø28 × 20 m
+Coil circulation outlet (1" M)
+Výstup z výměníku (G 1" vnější)
+Fixings
+Konzola
+PT valve (Rp 3/4)
+Pojistný ventil P/T (Rp 3/4")
+Electric heater 3 kW (Rp 1")
+El. topné těleso 3 kW (Rp 1")
+Technical remarks
+1. Outer tank diameter: Ø520 mm.
+2. Inner tank diameter: Ø420 mm.
+3. Insulation: polyurethane foam, 50 mm.
+4. Tolerance of cylinder height ±10 mm, tolerance of nozzle heights ±3 mm.
+5. Tank surface smooth and clean, without dents or bulges.
+6. Inner tank pressure test 0.8–1.0 MPa for 3 minutes: no leakage, no pressure drop, no
+deformation.
+7. White PG7 cable glands on temperature sensor pockets.
+8. Packaging: top, bottom and 2 intermediate styrofoam protectors, carton box with REO
+HEATING logo.
+9. Heat exchanger: corrugated stainless pipe Ø28 mm × 20 m, exchange area 2.6 m².
+Zásobník teplé vody
+s vlnitým výměníkem · 200 l
+Model REO ZV­200
+Značení nádrže
+Labels on the tank:
+REO­ZV­200­01
+1. Logo REO HEATING
+1. REO HEATING logo
+2. Štítky hrdel dle výkresu
+2. Nozzle labels according to the drawing
+3. Typový štítek
+3. Rating plate according to specification
+4. Označení CE: ano
+4. CE marking: yes
+5. Čárový kód
+5. Barcode
+Hot water outlet (Rp 3/4)
+Výstup teplé vody (Rp 3/4")
+Mg Anode (Rp 3/4)
+Hořčíková anoda (Rp 3/4")
+Insulation layer
+Izolace
+Thermostat
+Termostat
+Electric heater 3 kW (Rp 1")
+El. topné těleso 3 kW (Rp 1")
+Water return (Rp 3/4)
+Cirkulace TV (Rp 3/4")
+Cold water inlet (3/4­M)
++ one­way safety valve (black handle)
+Vstup studené vody (G 3/4" vnější)
++ pojistný ventil (černá páčka)Drain outlet (1/2­M)
+Vypouštění (G 1/2" vnější)
+Support foot
+Nožka
+Air vent (Rp 1/2)
+Odvzdušnění (Rp 1/2")
+Hot water outlet (Rp 3/4)
+Výstup teplé vody (Rp 3/4")
+Technické požadavky
+1. Vnější průměr nádrže: Ø520 mm.
+2. Vnitřní průměr nádoby: Ø420 mm.
+3. Izolace: PUR pěna, tloušťka 50 mm.
+4. Tolerance výšky pláště ±10 mm, tolerance výšky hrdel ±3 mm.
+5. Povrch nádrže hladký a čistý, bez promáčklin a vyboulenin.
+6. Tlaková zkouška vnitřní nádoby 0,8–1,0 MPa po dobu 3 minut: bez netěsnosti, poklesu
+tlaku a deformace.
+7. Jímky čidel teploty s bílou kabelovou průchodkou PG7.
+8. Balení: horní, spodní a 2 mezilehlé polystyrenové výplně, kartonová krabice s logem REO
+HEATING.
+9. Výměník: vlnitá nerezová trubka Ø28 mm × 20 m, teplosměnná plocha 2,6 m².
+Plášť
+Drain outlet (1/2­M)
+Vypouštění (G 1/2" vnější)
+Bílý lakovaný plech
+Izolace
+PUR pěna 50 mm
+Vnitřní nádoba
+Verze Formát Měřítko Datum
+2026/11/01
+Č. výkresu REO­ZV­200­01

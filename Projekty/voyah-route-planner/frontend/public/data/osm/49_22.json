@@ -1,1 +1,1 @@
-{"elements":[{"type":"node","id":11331300809,"lat":49.787919,"lon":22.765057,"tags":{"name":"Eko Energetyka","socket:type2_combo":"1"}}]}
+{"elements":[{"type":"node","id":11331300809,"lat":49.787919,"lon":22.765057,"tags":{"name":"Eko Energetyka","socket:type2_combo":"1"}}],"ocm":[{"id":"279050","lat":49.799112,"lon":22.952646,"name":"Екватор","operator":"Go ToU","kw":160,"points":1,"access":"public","operational":true,"updated":"2023-10-09","address":"Вул. Дружби 199, Шегині","notes":["cena dle OCM: 11,00 UAH/kWh"]}]}

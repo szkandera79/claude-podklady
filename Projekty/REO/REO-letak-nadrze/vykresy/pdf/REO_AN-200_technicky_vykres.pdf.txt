@@ -1,0 +1,88 @@
+[Text vytažený z REO_AN-200_technicky_vykres.pdf]
+
+--- strana 1 ---
+circulation outlet (Rp 1­1/4")
+Výstup topné vody (Rp 1 1/4")
+Fixings
+Konzola
+Temp. sensor
+Jímka čidla teploty
+circulation inlet (Rp 1­1/4")
+Vstup topné vody (Rp 1 1/4")
+Support foot
+Nožka
+Fixings
+Konzola
+Značení nádrže
+REO­AN­200­01
+Labels on the tank:
+1. Logo REO HEATING
+1. REO HEATING logo
+2. Štítky hrdel dle výkresu
+2. Nozzle labels according to the drawing
+3. Typový štítek
+3. Rating plate according to specification
+Air vent (Rp 1/2)
+4. Označení CE: ano
+4. CE marking: yes
+Odvzdušnění (Rp 1/2")
+Insulation layer
+Izolace
+5. Čárový kód
+5. Barcode
+circulation outlet (Rp 1­1/4")
+Výstup topné vody (Rp 1 1/4")
+Thermostat
+Termostat
+Electric heater 3 kW (Rp 1")
+El. topné těleso 3 kW (Rp 1")
+Water filler (1/2­M)
+Doplňování (G 1/2" vnější)
+circulation inlet (Rp 1­1/4")
+Vstup topné vody (Rp 1 1/4")
+Drain outlet (1/2­M)
+Drain outlet (1/2­M)
+Vypouštění (G 1/2" vnější)
+Vypouštění (G 1/2" vnější)
+Air vent (Rp 1/2)
+circulation outlet (Rp 1­1/4")
+Výstup topné vody (Rp 1 1/4")
+Odvzdušnění (Rp 1/2")
+circulation outlet (Rp 1­1/4")
+Výstup topné vody (Rp 1 1/4")
+Electric heater 3 kW (Rp 1")
+El. topné těleso 3 kW (Rp 1")
+Technical remarks
+Technické požadavky
+1. Outer tank diameter: Ø520 mm.
+1. Vnější průměr nádrže: Ø520 mm.
+2. Inner tank diameter: Ø420 mm.
+2. Vnitřní průměr nádoby: Ø420 mm.
+3. Insulation: polyurethane foam, 50 mm.
+3. Izolace: PUR pěna, tloušťka 50 mm.
+4. Tolerance of cylinder height ±10 mm, tolerance of nozzle heights ±3 mm.
+4. Tolerance výšky pláště ±10 mm, tolerance výšky hrdel ±3
+5. Tank surface smooth and clean, without dents or bulges.
+mm.
+6. Inner tank pressure test 0.8–1.0 MPa for 3 minutes: no leakage, no pressure
+5. Povrch nádrže hladký a čistý, bez promáčklin a vyboulenin.
+drop, no deformation.
+6. Tlaková zkouška vnitřní nádoby 0,8–1,0 MPa po dobu 3
+7. White PG7 cable glands on temperature sensor pockets.
+minut: bez netěsnosti, poklesu tlaku a deformace.
+8. Packaging: top, bottom and 2 intermediate styrofoam protectors, carton box with
+7. Jímky čidel teploty s bílou kabelovou průchodkou PG7.
+REO HEATING logo.
+8. Balení: horní, spodní a 2 mezilehlé polystyrenové výplně,
+kartonová krabice s logem REO HEATING.
+Plášť
+Bílý lakovaný plech
+Akumulační nádrž
+Izolace
+PUR pěna 50 mm
+200 l
+Vnitřní nádoba
+Model REO AN­200
+Verze Formát Měřítko Datum
+2026/11/01
+Č. výkresu REO­AN­200­01

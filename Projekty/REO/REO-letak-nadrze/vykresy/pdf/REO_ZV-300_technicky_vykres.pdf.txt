@@ -1,0 +1,98 @@
+[Text vytažený z REO_ZV-300_technicky_vykres.pdf]
+
+--- strana 1 ---
+Air vent (Rp 1/2)
+Odvzdušnění (Rp 1/2")
+PT valve (Rp 3/4)
+Pojistný ventil P/T (Rp 3/4")
+Coil circulation inlet (1" M)
+Vstup do výměníku (G 1" vnější)
+Temp. sensor
+Jímka čidla teploty
+40MΦ28 wave pipe
+Vlnitý výměník Ø28 × 40 m
+Temp. sensor
+Jímka čidla teploty
+Coil circulation outlet (1" M)
+Výstup z výměníku (G 1" vnější)
+Fixings
+Konzola
+Technical remarks
+1. Outer tank diameter: Ø560 mm.
+2. Inner tank diameter: Ø460 mm.
+3. Insulation: polyurethane foam, 50 mm.
+4. Tolerance of cylinder height ±10 mm, tolerance of nozzle heights ±3 mm.
+5. Tank surface smooth and clean, without dents or bulges.
+6. Inner tank pressure test 0.8–1.0 MPa for 3 minutes: no leakage, no pressure drop, no
+deformation.
+7. White PG7 cable glands on temperature sensor pockets.
+8. Packaging: top, bottom and 3 intermediate styrofoam protectors, carton box with REO
+HEATING logo.
+9. Heat exchanger: corrugated stainless pipe Ø28 mm × 40 m, exchange area 5.3 m².
+Značení nádrže
+REO­ZV­300­01
+Labels on the tank:
+1. Logo REO HEATING
+1. REO HEATING logo
+2. Štítky hrdel dle výkresu
+2. Nozzle labels according to the drawing
+3. Typový štítek
+3. Rating plate according to specification
+4. Označení CE: ano
+4. CE marking: yes
+5. Čárový kód
+5. Barcode
+Hot water outlet (Rp 3/4)
+Výstup teplé vody (Rp 3/4")
+Mg Anode (Rp 3/4)
+Fixings
+Konzola
+Hořčíková anoda (Rp 3/4")
+Insulation layer
+Izolace
+Thermostat
+Termostat
+Electric heater 3 kW (Rp 1")
+El. topné těleso 3 kW (Rp 1")
+Water return (Rp 3/4)
+Cirkulace TV (Rp 3/4")
+Cold water inlet (3/4­M)
++ one­way safety valve (black handle)
+Vstup studené vody (G 3/4" vnější)
++ pojistný ventil (černá páčka)
+Drain outlet (1/2­M)
+Drain outlet (1/2­M)
+Vypouštění (G 1/2" vnější)
+Support foot
+Nožka
+Vypouštění (G 1/2" vnější)
+Odvzdušnění (Rp 1/2")
+Air vent (Rp 1/2)
+PT valve (Rp 3/4)
+Pojistný ventil P/T (Rp 3/4")
+Hot water outlet (Rp 3/4)
+Výstup teplé vody (Rp 3/4")
+Electric heater 3 kW (Rp 1")
+El. topné těleso 3 kW (Rp 1")Technické požadavky
+1. Vnější průměr nádrže: Ø560 mm.
+2. Vnitřní průměr nádoby: Ø460 mm.
+3. Izolace: PUR pěna, tloušťka 50 mm.
+4. Tolerance výšky pláště ±10 mm, tolerance výšky hrdel ±3 mm.
+5. Povrch nádrže hladký a čistý, bez promáčklin a vyboulenin.
+6. Tlaková zkouška vnitřní nádoby 0,8–1,0 MPa po dobu 3 minut: bez netěsnosti, poklesu
+tlaku a deformace.
+7. Jímky čidel teploty s bílou kabelovou průchodkou PG7.
+8. Balení: horní, spodní a 3 mezilehlé polystyrenové výplně, kartonová krabice s logem REO
+HEATING.
+9. Výměník: vlnitá nerezová trubka Ø28 mm × 40 m, teplosměnná plocha 5,3 m².
+Plášť
+Bílý lakovaný plech
+Zásobník teplé vody
+Izolace
+PUR pěna 50 mm
+s vlnitým výměníkem · 300 l
+Vnitřní nádoba
+Model REO ZV­300
+Verze Formát Měřítko Datum
+2026/11/01
+Č. výkresu REO­ZV­300­01
