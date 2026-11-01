@@ -216,18 +216,18 @@ logo(36, 22, 190)
 T(256, 62, "Schéma zapojení — AKU 100 l s venkovní jednotkou", "ttl")
 T(256, 92, "Podle realizace Kunčice pod Ondřejníkem · krok 1: pouze vytápění", "sub")
 T(W - 36, 58, "REO-SCH-K1 · RH030–RH060", "zone", "end")
-T(W - 36, 78, "rev. 0 · 11/2026", "tx", "end")
+T(W - 36, 78, "rev. 3 · 11/2026", "tx", "end")
 add(f'<line x1="30" y1="118" x2="{W - 30}" y2="118" stroke="{GRN}" stroke-width="3"/>')
 
 # zóny
 ZT, ZB = 140, 660
 R(30, ZT, 390, ZB - ZT, fill="#F2F6F9", stroke=None, rx=10)
-R(1000, ZT, 370, ZB - ZT, fill="#FBF6EF", stroke=None, rx=10)
-for xx in (420, 1000):
+R(1040, ZT, 330, ZB - ZT, fill="#FBF6EF", stroke=None, rx=10)
+for xx in (420, 1040):
     add(f'<line x1="{xx}" y1="{ZT}" x2="{xx}" y2="{ZB}" stroke="{GREY}" stroke-width="2" stroke-dasharray="10 7"/>')
 T(48, ZT + 26, "VENKU", "zone")
 T(440, ZT + 26, "TECHNICKÁ MÍSTNOST (SKLEP)", "zone")
-T(1020, ZT + 26, "OBYTNÉ PROSTORY", "zone")
+T(1060, ZT + 26, "OBYTNÉ PROSTORY", "zone")
 T(424, ZB - 12, "obvodová zeď", "tx")
 R(46, 552, 358, 92, fill="#FFF4DA", stroke="#E3A71B", sw=2, rx=8)
 add(f'<path d="M66,572 L80,596 L52,596 Z" fill="#E3A71B"/>')
@@ -246,19 +246,17 @@ TOP = TX + TW / 2
 # primár: TČ → AKU (výstup) a AKU → TČ (vratka)
 P(f"M250,{FY} L560,{FY} L560,{TIN} L{TX},{TIN}", RED)
 P(f"M{TX},{TOUT} L540,{TOUT} L540,{RY} L250,{RY}", BLUE)
-# horní vývod AKU: odvzdušnění, pojistný ventil, manometr, expanzní nádoba
-P(f"M{TOP},{TY} L{TOP},{TY - 30}", RED, 4)
-P(f"M{TOP - 50},{TY - 30} L{TOP + 50},{TY - 30}", RED, 4)
-P(f"M{TOP - 50},{TY - 30} L{TOP - 50},{TY - 70} L{TOP - 110},{TY - 70} L{TOP - 110},{TY - 84}", RED, 4)
 # sekundár: AKU → radiátory → AKU
-SX = 1050
-P(f"M{TX + TW},{TIN} L{SX},{TIN} L{SX},{TIN + 100} L1100,{TIN + 100}", RED)
-P(f"M{SX},{TIN} L1100,{TIN}", RED)
-P(f"M1260,{TIN + 60} L1310,{TIN + 60} M1260,{TIN + 160} L1310,{TIN + 160}", BLUE)
-P(f"M1310,{TIN + 60} L1310,600 L850,600 L850,{TOUT} L{TX + TW},{TOUT}", BLUE)
+SX, RAD = 1080, 1130
+PSX = 930                                 # stoupačka k pojistné skupině a expanzní nádobě (za čerpadlem)
+P(f"M{TX + TW},{TIN} L{SX},{TIN} L{SX},{TIN + 100} L{RAD},{TIN + 100}", RED)
+P(f"M{SX},{TIN} L{RAD},{TIN}", RED)
+P(f"M{PSX},{TIN} L{PSX},{TIN - 92}", RED, 4)
+P(f"M{RAD + 160},{TIN + 60} L1335,{TIN + 60} M{RAD + 160},{TIN + 160} L1335,{TIN + 160}", BLUE)
+P(f"M1335,{TIN + 60} L1335,600 L850,600 L850,{TOUT} L{TX + TW},{TOUT}", BLUE)
 
 arrow(510, FY, 0, RED); arrow(470, RY, 180, BLUE)
-arrow(1020, TIN, 0, RED); arrow(1000, 600, 180, BLUE)
+arrow(1060, TIN, 0, RED); arrow(1040, 600, 180, BLUE)
 
 # ---------------------------------------------------------------- prvky
 heat_pump(60, 285, h=200)
@@ -266,45 +264,62 @@ separator(350, FY)                                   # 4 separátor + velký bez
 valve(285, FY); valve(290, RY)                       # 2 uzávěry
 antifreeze(360, RY)                                  # 3 protizámrazový ventil
 tank100(TX, TY, TW, TH)
-air_vent(TOP + 50, TY - 30)                          # 6 odvzdušnění AKU
-safety_valve(TOP + 18, TY - 30, drain=24)            # 7 pojistný ventil
-gauge(TOP - 22, TY - 30, "bar")                      # 8 manometr
-exp_vessel(TOP - 110, TY - 108)                      # 9 expanzní nádoba
-gauge(TX + TW + 2, 450, "°C"); add(f'<line x1="{TX + TW}" y1="450" x2="{TX + TW + 2}" y2="450" stroke="{INK}" stroke-width="2.6"/>')
+valve(605, TIN); valve(605, TOUT)                    # 2 uzávěry na vstupu / výstupu AKU (primár)
+air_vent(TOP, TY)                                    # 6 odvzdušnění AKU
+# 7 pojistná skupina (blok s pojistným ventilem a manometrem) na stoupačce za čerpadlem
+R(PSX - 9, 290, 18, 30, fill="#F3E4B8", stroke=INK, sw=2.2, rx=3)
+add(f'<line x1="{PSX - 9}" y1="305" x2="{PSX - 20}" y2="305" stroke="{INK}" stroke-width="2.4"/>'
+    f'<circle cx="{PSX - 32}" cy="305" r="12" fill="#fff" stroke="{INK}" stroke-width="2.2"/>'
+    f'<line x1="{PSX - 32}" y1="305" x2="{PSX - 26}" y2="298" stroke="{RED}" stroke-width="2" stroke-linecap="round"/>'
+    f'<text x="{PSX - 32}" y="313" class="g" text-anchor="middle">bar</text>')
+add(f'<line x1="{PSX + 9}" y1="305" x2="{PSX + 18}" y2="305" stroke="{INK}" stroke-width="2.4"/>'
+    f'<path d="M{PSX + 18},297 L{PSX + 32},305 L{PSX + 18},313 Z" fill="#fff" stroke="{INK}" stroke-width="2"/>'
+    f'<rect x="{PSX + 32}" y="299" width="9" height="12" rx="2" fill="{RED}"/>'
+    f'<line x1="{PSX + 32}" y1="305" x2="{PSX + 32}" y2="334" stroke="{GREY}" stroke-width="2.2" stroke-dasharray="5 4"/>'
+    f'<path d="M{PSX + 25},334 h14 l-4,8 h-6 Z" fill="#fff" stroke="{GREY}" stroke-width="1.8"/>')
+exp_vessel(PSX, TIN - 120)                           # 9 expanzní nádoba nad pojistnou skupinou
+# 8 teploměr + pojistný (přetlakový) ventil s červenou hlavou na společném vývodu z pláště AKU
+add(f'<line x1="{TX + TW}" y1="450" x2="{TX + TW + 26}" y2="450" stroke="{INK}" stroke-width="2.6"/>')
+gauge(TX + TW + 10, 450, "°C")
+add(f'<path d="M{TX + TW + 26},442 L{TX + TW + 40},450 L{TX + TW + 26},458 Z" fill="#fff" stroke="{INK}" stroke-width="2"/>'
+    f'<rect x="{TX + TW + 40}" y="444" width="9" height="12" rx="2" fill="{RED}"/>'
+    f'<line x1="{TX + TW + 33}" y1="458" x2="{TX + TW + 33}" y2="486" stroke="{GREY}" stroke-width="2.2" stroke-dasharray="5 4"/>'
+    f'<path d="M{TX + TW + 26},486 h14 l-4,8 h-6 Z" fill="#fff" stroke="{GREY}" stroke-width="1.8"/>')
 drain_cock(TOP, TY + TH)                             # 15 vypouštění
-valve(840, TIN); pump(900, TIN); valve(960, TIN)     # 10 sekundární čerpadlo
-valve(930, 600)
+valve(820, TIN); pump(870, TIN); valve(985, TIN)     # 10 sekundární čerpadlo
+valve(960, 600)
 air_vent(SX, TIN)                                    # 13 odvzdušnění v nejvyšším bodě
-radiator(1100, TIN - 12); radiator(1100, TIN + 88)
-rad_vent(1250, TIN - 12); rad_vent(1250, TIN + 88)
-thermostat(1280, 190)
-receiver(864, 194)
+radiator(RAD, TIN - 12); radiator(RAD, TIN + 88)
+rad_vent(RAD + 150, TIN - 12); rad_vent(RAD + 150, TIN + 88)
+thermostat(1295, 190)
+receiver(770, 196)
 
 # čidlo AKU → řízení TČ
 add(f'<circle cx="{TX + 22}" cy="482" r="9" fill="#fff" stroke="{INK}" stroke-width="2"/>')
 T(TX + 22, 486, "T", "rs", "middle")
 P(f"M{TX + 13},482 L250,482", YEL, 2.4, dash="7 5")
-P(f"M900,238 L900,{TIN - 17}", YEL, 3)
-waves(956, 188, 1)
-waves(1274, 214, -1)
-P("M990,196 L1236,210", YEL, 1.6, dash="2 7")
-T(1110, 192, "rádiový signál", "tx", "middle")
+P(f"M844,226 L870,226 L870,{TIN - 17}", YEL, 3)
+waves(862, 182, 1)
+waves(1289, 214, -1)
+P("M900,186 L1251,210", YEL, 1.6, dash="2 7")
+T(1140, 192, "rádiový signál", "tx", "middle")
 
 # ---------------------------------------------------------------- čísla
 num(80, 262, 1);  T(101, 267, "REO RH030–RH060", "lab")
 num(285, 370, 2); num(290, 458, 2)
 num(396, 458, 3)
 num(312, 252, 4)
-num(TX - 20, TY + 18, 5)
-num(TOP + 76, TY - 64, 6)
-num(TOP + 18, TY - 94, 7)
-num(TOP - 24, TY - 76, 8)
-num(TOP - 150, TY - 108, 9)
-num(900, 412, 10)
-num(838, 216, 11)
-num(1325, 270, 12)
+num(TX - 20, TY - 12, 5)
+num(605, 400, 2); num(605, 548, 2)
+num(TOP + 28, TY - 40, 6)
+num(PSX + 48, 290, 7)
+num(TX + TW + 64, 432, 8)
+num(PSX + 48, TIN - 132, 9)
+num(870, 412, 10)
+num(756, 180, 11)
+num(1340, 270, 12)
 num(SX - 26, TIN - 38, 13)
-num(1180, 570, 14)
+num(1210, 570, 14)
 num(TOP + 30, TY + TH + 22, 15)
 num(TX - 22, 450, 16)
 T(155, 518, "venkovní jednotka", "tx", "middle")
@@ -315,14 +330,14 @@ R(30, BY, 700, 370, fill="#fff", stroke="#DDE3E6", sw=1.5, rx=10)
 T(52, BY + 32, "SOUČÁSTI", "hd")
 parts = [
     (1, "Tepelné čerpadlo REO RH030–RH060", "venkovní monoblok, chladivo R290"),
-    (2, "Uzavírací ventily", "venku u jednotky — výstup (před separátorem) i vratka"),
+    (2, "Uzavírací ventily", "u jednotky (výstup před separátorem, vratka) i u AKU"),
     (3, "Protizámrazový ventil", "venku na vratce — při mrazu a výpadku vypustí vodu"),
     (4, "Separátor + bezpečnostní odvzdušňovací ventil", "venku na výstupu = nejvyšší bod venkovní části"),
     (5, "Akumulační nádrž 100 l (topná voda)", "hydraulicky odděluje okruh TČ a okruh topení"),
     (6, "Automatický odvzdušňovací ventil AKU", "na horním vývodu nádrže"),
-    (7, "Pojistný (přetlakový) ventil", "na horním vývodu, výfuk do odpadu, bez uzávěru"),
-    (8, "Manometr + teploměr", "kontrola tlaku (studená 1–1,5 bar) a teploty"),
-    (9, "Expanzní nádoba (topná)", "na horním vývodu AKU, bez uzávěru"),
+    (7, "Pojistná skupina (poj. ventil + manometr)", "na výstupu do topení za čerpadlem, výfuk do odpadu"),
+    (8, "Teploměr + pojistný ventil AKU", "společný vývod na plášti, výfuk do odpadu"),
+    (9, "Expanzní nádoba (topná)", "nad pojistnou skupinou, bez uzávěru"),
     (10, "Sekundární oběhové čerpadlo", "na výstupu z AKU do topení, s uzávěry"),
     (11, "Přijímač termostatu (relé 230 V)", "u čerpadla — spíná čerpadlo 10"),
     (12, "Bezdrátový pokojový termostat", "v obytné místnosti, 1,5 m nad podlahou"),
@@ -359,12 +374,14 @@ for i, s in enumerate(how):
     T(772, BY + 62 + i * 21, s, "ts")
 T(772, BY + 186, "BEZPEČNOST A TIPY", "hd")
 tips = [
-    "• Mezi AKU a pojistným ventilem (7) ani exp. nádobou (9) nesmí",
-    "   být žádný uzávěr. Výfuk ventilu (7) svést viditelně do odpadu.",
+    "• Pojistné ventily (7, 8) bez uzávěru, výfuk viditelně do odpadu.",
+    "• Mezi pojistnou skupinou (7) a exp. nádobou (9) žádný uzávěr.",
+    "• Uzávěry u čerpadla (10) zavírat jen při servisu — přes ně",
+    "\u00a0\u00a0\u00a0chrání pojistná skupina (7) i AKU a okruh TČ.",
     "• Odvzdušnění (4, 6, 13, 14) vždy v nejvyšších bodech potrubí.",
     "• Protizámrazový ventil (3) venku na vratce, výpustí dolů.",
     "• V místnosti s termostatem nechte hlavice radiátorů otevřené.",
-    "• Tlak v soustavě kontrolujte na manometru (8).",
+    "• Tlak (studená soustava cca 1–1,5 bar) hlídat na manometru (7).",
 ]
 for i, s in enumerate(tips):
     T(772, BY + 212 + i * 21, s, "ts")
