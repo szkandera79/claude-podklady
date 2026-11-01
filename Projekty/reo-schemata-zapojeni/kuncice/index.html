@@ -1,0 +1,170 @@
+<title>Zapojení AKU 100 l — Kunčice</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: technický list — schéma přes celou šířku, pak dvě části (venku / uvnitř) s fotkou vedle postupu, tabulka prvků, uvedení do provozu */
+:root {
+  --bg: #FAFBFA; --surface: #FFFFFF; --fg: #1F2624; --muted: #5E6A66; --line: #DCE3E0;
+  --accent: #26804B; --accent-soft: #E9F6EE; --supply: #D9342B; --return: #2468B3; --warn: #B7790E; --warn-soft: #FFF4DA;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #141917; --surface: #1C2320; --fg: #E6ECE9; --muted: #9DAAA5; --line: #2F3934;
+  --accent: #5CC488; --accent-soft: #1F3328; --supply: #F0645B; --return: #6AA4E8; --warn: #E8B54A; --warn-soft: #3A3020; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #141917; --surface: #1C2320; --fg: #E6ECE9; --muted: #9DAAA5; --line: #2F3934;
+  --accent: #5CC488; --accent-soft: #1F3328; --supply: #F0645B; --return: #6AA4E8; --warn: #E8B54A; --warn-soft: #3A3020; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font: 17px/1.55 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 32px 56px; }
+.wrap { max-width: 1080px; margin: 0 auto; display: grid; gap: 48px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(28px, 4.4vw, 42px); font-weight: 800; letter-spacing: -.01em; }
+h2 { font-size: 26px; font-weight: 700; }
+h3 { font-size: 18px; font-weight: 700; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow { font: 700 13px/1 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+header { display: grid; gap: 14px; border-bottom: 3px solid var(--accent); padding-bottom: 24px; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--muted); font-size: 15px; }
+.meta b { color: var(--fg); font-weight: 600; }
+
+figure { margin: 0; }
+.schema { background: #fff; border: 1px solid var(--line); border-radius: 6px; overflow-x: auto; }
+.schema img { display: block; width: 100%; min-width: 720px; }
+figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
+
+section { display: grid; gap: 20px; }
+.split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 28px; align-items: start; }
+.photos { display: grid; gap: 14px; }
+.photos img { width: 100%; border-radius: 4px; display: block; }
+.steps { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; counter-reset: s; min-width: 0; }
+.steps li { display: grid; grid-template-columns: 34px 1fr; gap: 12px; }
+.steps li::before { counter-increment: s; content: counter(s); width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: #fff; font: 700 14px/28px var(--display); text-align: center; }
+.n { display: inline-block; min-width: 22px; padding: 0 6px; border-radius: 11px; background: var(--accent-soft); color: var(--accent);
+  font: 700 13px/22px var(--display); text-align: center; font-variant-numeric: tabular-nums; }
+.sup { color: var(--supply); font-weight: 700; } .ret { color: var(--return); font-weight: 700; }
+
+.note { background: var(--warn-soft); border-left: 4px solid var(--warn); padding: 14px 18px; border-radius: 0 4px 4px 0; }
+.note strong { color: var(--warn); }
+
+.tbl { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 680px; font-size: 15.5px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+th { font: 700 12.5px/1.3 var(--display); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--bg); }
+tr:last-child td { border-bottom: 0; }
+td:first-child { white-space: nowrap; }
+
+.cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.box { background: var(--accent-soft); border-radius: 6px; padding: 20px 22px; display: grid; gap: 10px; }
+.box ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
+
+@media (max-width: 760px) { .split, .cols { grid-template-columns: 1fr; } body { font-size: 16px; } }
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">REO HEATING · popis instalace · krok 1</span>
+  <h1>Zapojení AKU 100 l s venkovní jednotkou</h1>
+  <p>Popis a schéma vychází z realizace v Kunčicích pod Ondřejníkem (rodinný dům, technická místnost ve sklepě). V tomto kroku řešíme jen vytápění: venkovní jednotku REO, akumulační nádrž 100 l s topnou vodou a její napojení do otopné soustavy včetně bezpečnostních a regulačních prvků. Ohřev TUV (velký zásobník na fotkách) bude popsán v dalším kroku.</p>
+  <div class="meta"><span><b>Jednotka:</b> REO RH030–RH060 (monoblok, R290)</span><span><b>AKU:</b> 100 l, topná voda</span><span><b>Regulace topení:</b> bezdrátový termostat → sekundární čerpadlo</span><span><b>Schéma:</b> REO-SCH-K1, rev. 0</span></div>
+</header>
+
+<figure>
+  <div class="schema"><img src="schema.png" alt="Schéma zapojení: venkovní jednotka, separátor, uzávěry, protizámrazový ventil, AKU 100 l s pojistným ventilem, odvzdušněním, manometrem a expanzní nádobou, sekundární čerpadlo s přijímačem a bezdrátovým termostatem, radiátory."></div>
+  <figcaption>Čísla v textu níže odpovídají číslům ve schématu. <span class="sup">Červeně</span> výstup (teplá voda), <span class="ret">modře</span> vratka.</figcaption>
+</figure>
+
+<section>
+  <span class="eyebrow">Venkovní část</span>
+  <h2>Venkovní jednotka a potrubí do domu</h2>
+  <div class="split">
+    <div class="photos">
+      <figure><img src="foto/venkovni-jednotka.jpg" alt="Venkovní jednotka REO na betonových blocích s antivibračními patkami u kamenné podezdívky domu."><figcaption>Jednotka stojí na betonových blocích s antivibračními patkami, odsazená od zdi.</figcaption></figure>
+      <figure><img src="foto/venkovni-potrubi.jpg" alt="Boční pohled: izolované potrubí výstupu nahoře a vratky dole vedené po zdi do sklepa, kabely v chráničce."><figcaption>Výstup (nahoře) a vratka (dole) v izolaci s hliníkovým povrchem, kabely zvlášť v chráničce, prostup zdí do sklepa.</figcaption></figure>
+    </div>
+    <ol class="steps">
+      <li><div><h3>Osazení jednotky <span class="n">1</span></h3><p>Monoblok REO RH030–RH060 na pevném podkladu (betonové bloky) s antivibračními patkami, nad úrovní terénu a sněhu. Pod jednotkou musí odtéct kondenzát; ze zadní strany ponechat volný přívod vzduchu.</p></div></li>
+      <li><div><h3>Uzávěr na výstupu, hned u jednotky <span class="n">2</span></h3><p>Na výstupu teplé vody do domu je jako první prvek kulový uzávěr, co nejblíže hrdlu jednotky. Umožní odpojit jednotku při servisu bez vypouštění soustavy.</p></div></li>
+      <li><div><h3>Separátor s velkým bezpečnostním odvzdušňovacím ventilem <span class="n">4</span></h3><p>Za uzávěrem je na výstupu separátor vzduchu (a nečistot) s automatickým odvzdušňovacím ventilem nahoře a pojistným ventilem. Je to nejvyšší bod venkovní části potrubí. Zůstává venku: pokud by se do vody dostalo chladivo R290, odejde ventilem do volného prostoru, a ne do domu.</p></div></li>
+      <li><div><h3>Uzávěr a protizámrazový ventil na vratce <span class="n">2</span> <span class="n">3</span></h3><p>Dole na vratce je kulový uzávěr a za ním protizámrazový ventil s výpustí směrem dolů. Při mrazu a výpadku proudu, kdy jednotka nemůže sama chránit výměník, ventil vypustí vodu z venkovního úseku.</p></div></li>
+      <li><div><h3>Potrubí a kabely</h3><p>Venkovní úsek potrubí je co nejkratší, celý v izolaci odolné UV záření. Silový a komunikační kabel vedou samostatně v chráničce. Prostup zdí je utěsněný, potrubí v něm izolované.</p></div></li>
+    </ol>
+  </div>
+  <div class="note"><strong>R290 je hořlavý plyn.</strong> Separátor s odvzdušňovacím ventilem (4) se nikdy nepřesouvá do domu. Automatické odvzdušňovací ventily uvnitř (6, 13) slouží jen pro topnou vodu sekundární strany a primárního okruhu za separátorem.</div>
+</section>
+
+<section>
+  <span class="eyebrow">Vnitřní část</span>
+  <h2>AKU 100 l a napojení do topné soustavy</h2>
+  <div class="split">
+    <div class="photos">
+      <figure><img src="foto/technicka-mistnost.jpg" alt="Technická místnost: vpravo nádrž REO HEATING (AKU) s manometrem a šedou expanzní nádobou nad ní, vlevo vyšší zásobník TUV."><figcaption>Vpravo menší nádrž (AKU) s manometrem a armaturami nahoře, nad ní šedá expanzní nádoba topné soustavy. Vyšší zásobník vlevo je TUV (další krok).</figcaption></figure>
+      <figure><img src="foto/aku-cerpadlo.jpg" alt="Boční pohled na AKU: oběhové čerpadlo s uzávěrem na horním vývodu, teploměr uprostřed, dole uzávěr a vypouštěcí kohout."><figcaption>Sekundární čerpadlo na horním vývodu z AKU do topení, teploměr na plášti, dole vypouštění.</figcaption></figure>
+    </div>
+    <ol class="steps">
+      <li><div><h3>Primární okruh: TČ → AKU <span class="n">5</span></h3><p>Výstup z tepelného čerpadla vstupuje do horního hrdla AKU, vratka k TČ odchází ze spodního hrdla. Nádrž 100 l odděluje okruh TČ od okruhu topení: TČ běží s vlastním průtokem a čerpadlem, nezávisle na tom, kolik radiátorů je zrovna otevřených, a nádrž zároveň dodá vodu pro odtávání.</p></div></li>
+      <li><div><h3>Čidlo AKU řídí TČ <span class="n">16</span></h3><p>Čidlo teploty v jímce nádrže je připojené k řídicí jednotce TČ. TČ drží v AKU nastavenou (ekvitermní) teplotu a samo se zapíná a vypíná. Pokojový termostat do chodu TČ nezasahuje.</p></div></li>
+      <li><div><h3>Bezpečnostní skupina na horním vývodu AKU <span class="n">6</span> <span class="n">7</span> <span class="n">8</span> <span class="n">9</span></h3><p>Horní vývod nádrže je nejvyšší bod v technické místnosti. Je na něm automatický odvzdušňovací ventil (6), pojistný (přetlakový) ventil (7) s výfukem svedeným viditelně do odpadu, manometr (8) a odbočka k expanzní nádobě (9). Mezi nádrží a pojistným ventilem ani expanzní nádobou nesmí být žádný uzávěr.</p></div></li>
+      <li><div><h3>Sekundární čerpadlo do topení <span class="n">10</span></h3><p>Z horního hrdla AKU na druhé straně vede výstup do topení přes sekundární oběhové čerpadlo s uzávěry před i za ním (výměna čerpadla bez vypouštění). Vratka z radiátorů se vrací přes uzávěr do spodního hrdla AKU.</p></div></li>
+      <li><div><h3>Bezdrátový termostat a přijímač <span class="n">11</span> <span class="n">12</span></h3><p>Pokojový termostat v referenční obytné místnosti (asi 1,5 m nad podlahou, mimo přímé slunce a zdroje tepla) posílá rádiem signál přijímači u čerpadla. Přijímač je relé 230 V, které čerpadlo zapne při požadavku na teplo a po dosažení teploty vypne.</p></div></li>
+      <li><div><h3>Odvzdušnění v nejvyšších bodech <span class="n">13</span> <span class="n">14</span></h3><p>Automatický odvzdušňovací ventil patří na nejvyšší místo rozvodu (stoupačka, horní ohyb potrubí), každý radiátor má ruční odvzdušňovací ventilek nahoře. Vzduch se drží v horních bodech; kde se nedá odvést, čerpadlo hlučí a radiátory netopí celé.</p></div></li>
+      <li><div><h3>Vypouštění <span class="n">15</span></h3><p>Na dně AKU je vypouštěcí kohout pro vypuštění a odkalení nádrže.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Přehled</span>
+  <h2>Bezpečnostní a regulační prvky</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Č.</th><th>Prvek</th><th>Umístění</th><th>Funkce</th></tr></thead>
+    <tbody>
+      <tr><td><span class="n">2</span></td><td>Kulové uzávěry</td><td>venku u jednotky: výstup (před separátorem) a vratka</td><td>servisní odpojení jednotky</td></tr>
+      <tr><td><span class="n">3</span></td><td>Protizámrazový ventil</td><td>venku na vratce za uzávěrem, výpust dolů</td><td>vypuštění vody při mrazu a výpadku proudu</td></tr>
+      <tr><td><span class="n">4</span></td><td>Separátor + bezpečnostní odvzdušňovací ventil</td><td>venku na výstupu, nejvyšší bod venkovní části</td><td>odloučení vzduchu a nečistot, bezpečný únik vzduchu i R290 mimo dům</td></tr>
+      <tr><td><span class="n">6</span></td><td>Automatický odvzdušňovací ventil</td><td>horní vývod AKU</td><td>odvod vzduchu z nádrže a primárního okruhu</td></tr>
+      <tr><td><span class="n">7</span></td><td>Pojistný (přetlakový) ventil</td><td>horní vývod AKU, bez uzávěru</td><td>ochrana proti přetlaku; otevírací tlak podle návodu TČ (u rodinných domů běžně 2,5–3 bar)</td></tr>
+      <tr><td><span class="n">8</span></td><td>Manometr, teploměr</td><td>horní vývod / plášť AKU</td><td>kontrola tlaku (ve studeném stavu zpravidla 1–1,5 bar) a teploty</td></tr>
+      <tr><td><span class="n">9</span></td><td>Expanzní nádoba</td><td>odbočka z horního vývodu AKU, bez uzávěru</td><td>vyrovnání objemové roztažnosti vody; velikost podle objemu soustavy</td></tr>
+      <tr><td><span class="n">10</span></td><td>Sekundární oběhové čerpadlo</td><td>výstup z AKU do topení, s uzávěry</td><td>dodávka tepla do radiátorů</td></tr>
+      <tr><td><span class="n">11</span></td><td>Přijímač (relé 230 V)</td><td>u čerpadla v technické místnosti</td><td>spíná čerpadlo podle termostatu</td></tr>
+      <tr><td><span class="n">12</span></td><td>Bezdrátový pokojový termostat</td><td>referenční obytná místnost</td><td>požadavek na teplo, rádiem</td></tr>
+      <tr><td><span class="n">13</span>&nbsp;<span class="n">14</span></td><td>Odvzdušňovací ventily</td><td>nejvyšší body rozvodu, radiátory</td><td>odvzdušnění otopné soustavy</td></tr>
+      <tr><td><span class="n">16</span></td><td>Čidlo teploty AKU</td><td>jímka nádrže, kabel k TČ</td><td>řízení chodu TČ</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <span class="eyebrow">Uvedení do provozu</span>
+  <div class="cols">
+    <div class="box">
+      <h3>Napuštění a odvzdušnění</h3>
+      <ul>
+        <li>Zkontrolovat přednastavení expanzní nádoby (9) před napuštěním.</li>
+        <li>Napouštět pomalu přes plnicí ventil, uzávěry (2) otevřené.</li>
+        <li>Odvzdušnit od nejnižšího po nejvyšší bod: separátor (4), AKU (6), stoupačky (13), radiátory (14).</li>
+        <li>Dopustit na tlak ve studeném stavu podle návodu, typicky 1–1,5 bar.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Kontrola funkce</h3>
+      <ul>
+        <li>Spustit TČ a ověřit, že čidlo (16) vypíná TČ na nastavené teplotě AKU.</li>
+        <li>Zvýšit teplotu na termostatu (12): přijímač (11) musí zapnout čerpadlo (10).</li>
+        <li>Po zahřátí znovu odvzdušnit a doplnit tlak.</li>
+        <li>V místnosti s termostatem nechat hlavice radiátorů otevřené.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Zjednodušený orientační popis. Dimenze potrubí, nastavení pojistného ventilu, velikost expanzní nádoby a průtoky určete podle návodu k TČ a konkrétního domu.</p>
+  <p>Fotografie: realizace Kunčice pod Ondřejníkem. REO HEATING</p>
+</footer>
+</div>

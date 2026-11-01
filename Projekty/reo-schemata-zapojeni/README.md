@@ -5,6 +5,8 @@ seznamem součástí a krátkým „jak to funguje“. Značka REO HEATING (logo
 
 | Soubor | Obsah |
 |---|---|
+| `schema-kuncice-aku100.svg` / `.png` | **Kunčice p. O., krok 1** — AKU 100 l (topná voda) + venkovní jednotka; uzávěr před separátorem na výstupu, uzávěr + protizámrazový ventil na vratce; bezpečnostní skupina na horním vývodu AKU; generátor `src/gen_schema_kuncice.py` |
+| `kuncice/index.html` | popis instalace (venku / uvnitř) s fotkami z realizace, artefakt S9apdYbzv8x7RiMdabc8xK |
 | `schema-varianta-1.svg` / `.png` | **Varianta 1** (REO RH030–RH060) — pouze vytápění s akumulační nádrží; sekundární čerpadlo za AKU spíná bezdrátový termostat |
 
 Varianta 1 obsahuje: uzavírací ventily u venkovní jednotky (výstup i vratka), protizámrazový ventil Caleffi na vratce,
@@ -18,4 +20,5 @@ python3 reo-schemata-zapojeni/src/gen_schema.py
 PNG (2800 px) přes Chrome headless — příkaz viz historie / `REO/logo/build.sh` (stejný postup).
 
 ## Otevřené
+- Kunčice krok 2: napojení zásobníku TUV (velký zásobník na fotkách).
 - Další varianty (TUV, bivalence, FV) — doplnit jako `schema-varianta-N`.
