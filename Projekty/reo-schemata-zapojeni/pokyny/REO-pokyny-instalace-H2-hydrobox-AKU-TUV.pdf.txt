@@ -340,7 +340,11 @@ tokového spínače
 2. Uzavřít uzávěry na výstupu i vratce u venkovní jednotky, aby se při rozebrání spínače nevylila
 voda ze systému.
 3. Rozebrat průtokový spínač a jeho průtokovou packu zafixovat v sepnuté poloze, například lepicí
-páskou. Spínač uzavřít víčkem.
+páskou. Packa musí být zafixovaná ve správné poloze podle směru proudění vody —
+vychýlená ve směru, kterým voda potrubím teče (směr bývá vyznačen šipkou na těle spínače
+),
+tak aby spínač nuceně sepnul stejně jako při skutečném průtoku. Spínač uzavřít víčkem — lze
+použít náhradní víčko (viz foto).
 4. Otevřít uzávěry.
 5. Zapnout TČ na jističi a zapnout režim topení.
 6. Zkušební topení nechat běžet 1 hodinu. Vzduch z topného systému uniká odvzdušňovacími
@@ -350,6 +354,11 @@ stavu (odstranit pásku, packa se musí volně pohybovat), uzavřít víčkem.
 8. Otevřít uzávěry, zapnout TČ na jističi a začít topit.
 9. Chybějící tlak dopustit na 1,5 bar z vodovodního řádu nebo z bojleru, jsou-li zásobník TUV a
 AKU pro dopouštění propojeny — což doporučujeme.
+--- strana 12 ---
+Průtokový spínač uvnitř venkovní jednotky, dočasně zafixovaný lepicí páskou pro
+odvzdušnění. Spínač je uzavřen náhradním víčkem (černé rýhované
+). Po odvzdušnění pásku
+odstranit a spínač vrátit do funkčního stavu.
 Postup B — elektrické přemostění vstupu IN3 (pouze elektrotechnik)
 1. Vypnout TČ na jističi a vyčkat, až zhasne řídicí deska.
 2. Na řídicí desce venkovní jednotky najít vstup I
@@ -362,7 +371,6 @@ N2 jsou tlakové spínače, I
 N4 externí spínač
 a I
 N5 ochrana krytu — ty se nepřemosťují.
---- strana 12 ---
 3. Odpojit konektor průtokového spínače ze vstupu I
 3 a vstup krátkodobě přemostit propojkou.
 N
@@ -372,6 +380,7 @@ Tím se spínač elektronicky dočasně vyřadí.
 N
 3.
 6. Zapnout TČ na jističi, začít topit a doplnit tlak na 1,5 bar.
+--- strana 13 ---
 Po odvzdušnění vždy: průtokový spínač je zpět ve funkčním stavu, uzávěry jsou
 otevřené, tlak je 1,5 bar a magnetický filtr je vyčištěný. Pokud se Er 03 objeví i po
 odvzdušnění, vyčistěte filtry (magnetický filtr a filtr v hydroboxu), zkontrolujte, že jsou

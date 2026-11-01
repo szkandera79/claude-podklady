@@ -37,8 +37,8 @@ IEC 60335-2-40 ji svěřují výrobci.
 2 Hydraulické zapojení s hydroboxem
 REO-SCH-H1 — hydrobox, pouze vytápění s AKU 100 l.
 Jak instalace vypadá
-Hydrobox visí na stěně technické místnosti; zespodu do něj vedou izolované trubky
-od venkovní jednotky a z boku odchází tři připojení k nádržím. Vedle stojí akumulační
+Hydrobox visí na stěně technické místnosti; zespodu do něj vedou izolované trubky od
+venkovní jednotky a z boku odchází tři připojení k nádržím. Vedle stojí akumulační
 nádrž s expanzní nádobou topení nad sebou. Všechna připojení nádrží mají kulové
 kohouty; na spodním vývodu AKU je manometr, teploměr a pojistný ventil.
 Sekundární oběhové čerpadlo s uzávěry je u podlahy a vedle něj na stěně přijímač
@@ -125,15 +125,15 @@ ventil
 filtr, exp. nádoba 8 l, pojistný ventil 3 bar,
 jistič
 700 × 500 × 280 mm, 35 kg
-1 sada dle výkresu REO-SCH-K1-P; štěrkový
-podsyp mezi rameny
-2 ks jedna na každé rameno patky; návod je
+1 sada dle výkresu REO-SCH-K1-P; štěrkový podsyp
+mezi rameny
+jedna na každé rameno patky; návod je
 vyžaduje
-2 Kulový uzávěr D
+co nejblíže hrdlům jednotky
+2 ks 2 Kulový uzávěr D
 N25 s holendrem (výstup,
 vratka)
-2 ks co nejblíže hrdlům jednotky
-4 Separátor vzduchu a nečistot s automatickým
+2 ks 4 Separátor vzduchu a nečistot s automatickým
 odvzdušněním a pojistným ventilem
 1 ks na výstupu venku, nejvyšší bod venkovní
 části
@@ -147,8 +147,8 @@ mm)
 izolace
 TECHNICKÁ MÍSTNOST — PRIMÁR
 2 Kulový uzávěr D
-N25 (vstup AKU, a před i za
 filtrem 16)
+N25 (vstup AKU, a před i za
 3 ks AKU a filtr lze odpojit bez vypouštění
 16 Magnetický filtr D
 N25 (s vypouštěním) 1 ks na vratce do TČ = filtr na vstupu dle návodu
@@ -206,27 +206,25 @@ dle trasy m v chráničce, průřez dle proudu
 dle trasy m 230 V, svorky 1–4 hydroboxu
 — Signální kabel čerpadla PWM / GN
 D / FB dle trasy m 0–12 V DC, vést odděleně od silových kabelů
-— Kabel 230 V k čerpadlu a přijímači (3 × 1,5
-dle trasy m
-mm²)
+— Kabel 230 V k čerpadlu a přijímači (3 × 1,5 mm²) dle trasy m
 — Komunikační kabel ovladače TČ dle trasy m často součást dodávky TČ
 POTRUBÍ A FITINKY
 — Potrubí — měď / uhlíková ocel / PPR (dle volby
 dle trasy m primár min. D
 N25 dle přípojek TČ
 investora)
-— Šroubení (holendry) — rozebíratelné spoje u
+—Šroubení (holendry) — rozebíratelné spoje u
 TČ, hydroboxu, AKU, filtru, čerpadla,
 separátoru
 cca 20 ks hydrobox: 2× D
 (vnitřní závit)
 N25 zdola, 3× D
 N25 z boku
+— Kolena 90° / 45° dle trasy ks počet kolen omezit (tlaková ztráta)
 B
 --- strana 9 ---
 Č. POLOŽKA POČET POZN
 ÁMKA
-— Kolena 90° / 45° dle trasy ks počet kolen omezit (tlaková ztráta)
 — T-kusy (odbočky pro pojistnou skupinu, obtok
 směšovače, odvzdušnění)
 cca 6 ks
@@ -292,8 +290,8 @@ Proč je průtokový spínač důležitý. Spínač hlídá, že výměníkem je
 voda. Při nedostatečném průtoku zastaví jednotku a chrání tak výměník tepelného
 čerpadla a čerpadlo primárního okruhu v hydroboxu. Čerpadlo, které běží naprázdno
 nebo ve vzduchu, se během krátké doby zničí. Proto se spínač smí vyřadit jen
-dočasně, po dobu odvzdušnění a pod dohledem, a vždy se musí vrátit do
-původního funkčního stavu.
+dočasně, po dobu odvzdušnění a pod dohledem, a vždy se musí vrátit do původního
+funkčního stavu.
 Příprava
 1. Soustava je napuštěná a natlakovaná na 1,5 bar, všechny uzávěry otevřené, odvzdušňovací
 ventily (separátor venku, AKU, nejvyšší body rozvodu, radiátory) volné.
@@ -305,7 +303,11 @@ tokového spínače
 2. Uzavřít uzávěry na výstupu i vratce u venkovní jednotky, aby se při rozebrání spínače nevylila
 voda ze systému.
 3. Rozebrat průtokový spínač a jeho průtokovou packu zafixovat v sepnuté poloze, například lepicí
-páskou. Spínač uzavřít víčkem.
+páskou. Packa musí být zafixovaná ve správné poloze podle směru proudění vody —
+vychýlená ve směru, kterým voda potrubím teče (směr bývá vyznačen šipkou na těle spínače
+),
+tak aby spínač nuceně sepnul stejně jako při skutečném průtoku. Spínač uzavřít víčkem — lze
+použít náhradní víčko (viz foto).
 4. Otevřít uzávěry.
 5. Zapnout TČ na jističi a zapnout režim topení.
 6. Zkušební topení nechat běžet 1 hodinu. Vzduch z topného systému uniká odvzdušňovacími
@@ -315,6 +317,11 @@ stavu (odstranit pásku, packa se musí volně pohybovat), uzavřít víčkem.
 8. Otevřít uzávěry, zapnout TČ na jističi a začít topit.
 9. Chybějící tlak dopustit na 1,5 bar z vodovodního řádu nebo z bojleru, jsou-li zásobník TUV a
 AKU pro dopouštění propojeny — což doporučujeme.
+--- strana 12 ---
+Průtokový spínač uvnitř venkovní jednotky, dočasně zafixovaný lepicí páskou pro
+odvzdušnění. Spínač je uzavřen náhradním víčkem (černé rýhované
+). Po odvzdušnění pásku
+odstranit a spínač vrátit do funkčního stavu.
 Postup B — elektrické přemostění vstupu IN3 (pouze elektrotechnik)
 1. Vypnout TČ na jističi a vyčkat, až zhasne řídicí deska.
 2. Na řídicí desce venkovní jednotky najít vstup I
@@ -327,7 +334,6 @@ N2 jsou tlakové spínače, I
 N4 externí spínač
 a I
 N5 ochrana krytu — ty se nepřemosťují.
---- strana 12 ---
 3. Odpojit konektor průtokového spínače ze vstupu I
 3 a vstup krátkodobě přemostit propojkou.
 N
@@ -337,12 +343,13 @@ Tím se spínač elektronicky dočasně vyřadí.
 N
 3.
 6. Zapnout TČ na jističi, začít topit a doplnit tlak na 1,5 bar.
+--- strana 13 ---
 Po odvzdušnění vždy: průtokový spínač je zpět ve funkčním stavu, uzávěry jsou
 otevřené, tlak je 1,5 bar a magnetický filtr je vyčištěný. Pokud se Er 03 objeví i po
-odvzdušnění, vyčistěte filtry (magnetický filtr a filtr v hydroboxu), zkontrolujte, že
-jsou všechny uzávěry otevřené, a zkontrolujte průtokový spínač (případně jej
-vyměňte
-) — viz návod TČ, kapitola Chybové kódy.
+odvzdušnění, vyčistěte filtry (magnetický filtr a filtr v hydroboxu), zkontrolujte, že jsou
+všechny uzávěry otevřené, a zkontrolujte průtokový spínač (případně jej vyměňte
+) —
+viz návod TČ, kapitola Chybové kódy.
 Zjednodušený orientační podklad. Dimenze potrubí, nastavení pojistných ventilů,
 velikost expanzních nádob, průřezy kabelů a hodnoty jističů určete podle návodu k
 TČ, typového štítku a konkrétního domu. Instalaci a elektrické zapojení provádí

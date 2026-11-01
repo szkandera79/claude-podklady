@@ -89,6 +89,8 @@ figure { margin:0; }
 .sheet { background:#fff; border:1px solid var(--line); border-radius:6px; overflow-x:auto; }
 .sheet img { display:block; width:100%; min-width:680px; }
 figcaption { color:var(--muted); font-size:13.5px; margin-top:6px; }
+figure.photo img { display:block; width:100%; max-width:420px; border-radius:6px; }
+figure.photo figcaption { max-width:520px; }
 ul.list, ol.steps { margin:0; padding-left:22px; display:grid; gap:6px; max-width:80ch; }
 .n { display:inline-block; min-width:21px; padding:0 5px; border-radius:11px; background:var(--accent-soft); color:var(--accent);
   font:700 12.5px/21px var(--display); text-align:center; font-variant-numeric:tabular-nums; }
@@ -324,7 +326,7 @@ def page(v):
   <ol class="steps">
     <li>Vypnout TČ na jističi.</li>
     <li><strong>Uzavřít uzávěry</strong> na výstupu i vratce u venkovní jednotky, aby se při rozebrání spínače nevylila voda ze systému.</li>
-    <li>Rozebrat průtokový spínač a jeho průtokovou packu zafixovat v sepnuté poloze, například lepicí páskou. Spínač uzavřít víčkem.</li>
+    <li>Rozebrat průtokový spínač a jeho průtokovou packu zafixovat v sepnuté poloze, například lepicí páskou. <strong>Packa musí být zafixovaná ve správné poloze podle směru proudění vody</strong> — vychýlená ve směru, kterým voda potrubím teče (směr bývá vyznačen šipkou na těle spínače), <strong>tak aby spínač nuceně sepnul</strong> stejně jako při skutečném průtoku. Spínač uzavřít víčkem — lze použít náhradní víčko (viz foto).</li>
     <li>Otevřít uzávěry.</li>
     <li>Zapnout TČ na jističi a zapnout režim topení.</li>
     <li><strong>Zkušební topení nechat běžet 1 hodinu.</strong> Vzduch z topného systému uniká odvzdušňovacími ventily. Průběžně sledovat tlak a doplňovat na 1,5 bar.</li>
@@ -332,6 +334,8 @@ def page(v):
     <li>Otevřít uzávěry, zapnout TČ na jističi a začít topit.</li>
     <li>Chybějící tlak dopustit na <strong>1,5 bar</strong> z vodovodního řádu nebo z bojleru, jsou-li zásobník TUV a AKU pro dopouštění propojeny — což doporučujeme.</li>
   </ol>
+  <figure class="photo"><img src="prutokovy-spinac.jpg" alt="Průtokový spínač uvnitř venkovní jednotky dočasně zafixovaný lepicí páskou, uzavřený náhradním černým rýhovaným víčkem.">
+    <figcaption>Průtokový spínač uvnitř venkovní jednotky, dočasně zafixovaný lepicí páskou pro odvzdušnění. Spínač je uzavřen náhradním víčkem (černé rýhované). Po odvzdušnění pásku odstranit a spínač vrátit do funkčního stavu.</figcaption></figure>
   <h3>Postup B — elektrické přemostění vstupu IN3 (pouze elektrotechnik)</h3>
   <ol class="steps">
     <li>Vypnout TČ na jističi a vyčkat, až zhasne řídicí deska.</li>
@@ -372,7 +376,7 @@ def main():
     for key, v in VARIANTS.items():
         d = os.path.join(out_root, key)
         os.makedirs(d, exist_ok=True)
-        for dst, src in v["imgs"].items():
+        for dst, src in {**v["imgs"], "prutokovy-spinac.jpg": "foto/prutokovy-spinac.jpg"}.items():
             shutil.copyfile(os.path.join(ROOT, src), os.path.join(d, dst))
         p = os.path.join(d, "index.html")
         open(p, "w", encoding="utf-8").write(page(v))
