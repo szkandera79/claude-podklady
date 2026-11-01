@@ -11,7 +11,7 @@ import os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 LOGO = os.path.expanduser("~/Claude/REO/logo/logo-reo-heating.svg")
 
-W, H = 1400, 990
+W, H = 1400, 1012
 RED, BLUE = "#D9342B", "#2468B3"      # výstup (topná) / vratka
 YEL = "#E3A71B"                       # elektrické ovládání, signál
 INK, GREY = "#22272A", "#6B7378"
@@ -182,7 +182,7 @@ logo(36, 22, 190)
 T(256, 62, "Betonová patka venkovní jednotky", "ttl")
 T(256, 92, "Základ ze ztraceného bednění · REO RH030–RH060", "sub")
 T(W - 36, 58, "REO-SCH-K1-P", "zone", "end")
-T(W - 36, 78, "rev. 1 · 11/2026", "tx", "end")
+T(W - 36, 78, "rev. 4 · 11/2026", "tx", "end")
 add(f'<line x1="30" y1="118" x2="{W - 30}" y2="118" stroke="{GRN}" stroke-width="3"/>')
 
 # ---------------------------------------------------------------- půdorys
@@ -193,7 +193,7 @@ add(f'<rect x="60" y="{WY - 22}" width="700" height="22" fill="url(#hatch)" stro
 add(f'<line x1="60" y1="{WY}" x2="760" y2="{WY}" stroke="{INK}" stroke-width="3"/>')
 T(410, WY - 30, "STĚNA DOMU", "lab", "middle")
 CX = 410
-SY = WY + 500 * S                           # začátek ramen (odstup 500 mm)
+SY = WY + 400 * S                           # začátek ramen (odstup min. 400 mm)
 SL, SW, AX = 500 * S, 200 * S, 700 * S      # délka ramene, šířka, osová vzdálenost
 xl, xr = CX - AX / 2, CX + AX / 2
 for xa in (xl, xr):
@@ -210,7 +210,8 @@ T(CX, SY - 50, "sání vzduchu (zadní strana jednotky)", "tx", "middle")
 for xx in (CX - 90, CX, CX + 90):
     add(f'<line x1="{xx}" y1="{SY - 14}" x2="{xx}" y2="{SY - 36}" stroke="{BLUE}" stroke-width="2" marker-end="url(#ar)"/>')
 # kóty
-dim(724, WY, 724, SY, "min. 500 mm", off=-10, vertical=True)
+dim(724, WY, 724, SY, "min. 400 mm", off=-10, vertical=True)
+add(f'<text x="{724 + 16}" y="{(WY + SY) / 2}" class="tx" text-anchor="middle" transform="rotate(-90 {724 + 16} {(WY + SY) / 2})">doporučeno 500 mm</text>')
 add(f'<line x1="{xr + SW / 2 + 4}" y1="{SY}" x2="734" y2="{SY}" stroke="{GREY}" stroke-width="1"/>')
 dim(118, SY, 118, SY + SL, "min. 500 mm", off=-10, vertical=True)
 add(f'<line x1="108" y1="{SY}" x2="{xl - SW / 2 - 4}" y2="{SY}" stroke="{GREY}" stroke-width="1"/>'
@@ -264,14 +265,15 @@ num(exr + 64, ub - 10, 2)
 # ---------------------------------------------------------------- poznámky
 NY = 800
 T(52, NY + 6, "1  Ramena: tvárnice ztraceného bednění vyplněné betonem — šířka 200 mm, délka min. 500 mm, výška min. 300 mm, kolmo ke stěně, osově 700 mm.", "ts")
-T(52, NY + 28, "2  Jednotka stojí na antivibračních patkách přišroubovaných do ramen. Odstup ramen od stěny min. 500 mm zajistí volné sání vzduchu.", "ts")
+T(52, NY + 28, "2  Jednotka stojí na antivibračních patkách přišroubovaných do ramen. Odstup ramen od stěny min. 400 mm, doporučujeme 500 mm — volné sání vzduchu.", "ts")
 T(52, NY + 50, "   Mezi rameny ponechte štěrkový podsyp — dno jednotky slouží jako vana na kondenzát a odtokové otvory musí zůstat volné.", "ts")
-R(30, NY + 70, 1340, 84, fill="#FFF4DA", stroke="#E3A71B", sw=2, rx=8)
+R(30, NY + 70, 1340, 106, fill="#FFF4DA", stroke="#E3A71B", sw=2, rx=8)
 add(f'<path d="M54,{NY + 92} L68,{NY + 116} L40,{NY + 116} Z" fill="#E3A71B"/>')
 T(54, NY + 113, "!", "num", "middle")
-T(84, NY + 96, "Ochranná zóna R290 — doporučení: min. 1 m kolem jednotky (do stran, dopředu i nahoru) až k terénu.", "lab")
-T(84, NY + 116, "V zóně nesmí být okna, dveře, sklepní světlíky a šachty, vpusti a kanalizace, větrací otvory ani zdroje vznícení (zásuvky, vypínače, svítidla).", "ts")
-T(84, NY + 136, "R290 je těžší než vzduch — žádné prohlubně v zóně. Pevnou vzdálenost norma neuvádí; ČSN EN 378 a ČSN EN IEC 60335-2-40 ji svěřují výrobci.", "ts")
+T(84, NY + 96, "Ochranná zóna R290: okna, dveře a světlíky min. 1 m od půdorysu jednotky, nad horní hranou min. 0,5 m (okno nad jednotkou je přípustné).", "lab")
+T(84, NY + 116, "Doporučení: na straně výfuku vzduchu min. 3 m k oknům obytných místností, terasám a chodníkům a min. 3 m od sousedního pozemku (hluk, proudění).", "lab")
+T(84, NY + 136, "V zóně nesmí být okna, dveře, sklepní světlíky a šachty, vpusti a kanalizace, větrací otvory ani zdroje vznícení (zásuvky, vypínače, svítidla).", "ts")
+T(84, NY + 156, "R290 je těžší než vzduch — žádné prohlubně v zóně. Pevnou vzdálenost norma neuvádí; ČSN EN 378 a ČSN EN IEC 60335-2-40 ji svěřují výrobci.", "ts")
 T(30, H - 12, "Orientační schéma — rozměry jsou minimální; únosnost a hloubku základu přizpůsobte podloží a hmotnosti jednotky (105–165 kg).", "tx")
 T(W - 30, H - 12, "REO HEATING", "zone", "end")
 add('</svg>')

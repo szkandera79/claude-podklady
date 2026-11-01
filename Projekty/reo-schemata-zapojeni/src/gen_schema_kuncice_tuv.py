@@ -268,7 +268,7 @@ logo(36, 22, 190)
 T(256, 62, "Schéma hydraulického zapojení", "ttl")
 T(256, 92, "Vytápění s AKU nádrží 100 l a ohřev teplé užitkové vody (TUV)", "sub")
 T(W - 36, 58, "REO-SCH-K2 · RH030–RH060", "zone", "end")
-T(W - 36, 78, "rev. 0 · 11/2026", "tx", "end")
+T(W - 36, 78, "rev. 2 · 11/2026", "tx", "end")
 add(f'<line x1="30" y1="118" x2="{W - 30}" y2="118" stroke="{GRN}" stroke-width="3"/>')
 
 # zóny

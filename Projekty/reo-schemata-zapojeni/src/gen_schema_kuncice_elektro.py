@@ -11,7 +11,7 @@ import os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 LOGO = os.path.expanduser("~/Claude/REO/logo/logo-reo-heating.svg")
 
-W, H = 1400, 1090
+W, H = 1400, 1270
 RED, BLUE = "#D9342B", "#2468B3"      # výstup (topná) / vratka
 YEL = "#E3A71B"                       # elektrické ovládání, signál
 INK, GREY = "#22272A", "#6B7378"
@@ -189,9 +189,9 @@ R(0, 0, W, H, fill="#fff", stroke=None)
 
 logo(36, 22, 190)
 T(256, 62, "Schéma elektrického zapojení", "ttl")
-T(256, 92, "Pouze vytápění s AKU nádrží 100 l", "sub")
+T(256, 92, "Pouze vytápění s AKU nádrží 100 l · jednotky 1F i 3F dle návodu", "sub")
 T(W - 36, 58, "REO-SCH-K1-E · RH030–RH060", "zone", "end")
-T(W - 36, 78, "rev. 0 · 11/2026", "tx", "end")
+T(W - 36, 78, "rev. 1 · 11/2026", "tx", "end")
 add(f'<line x1="30" y1="118" x2="{W - 30}" y2="118" stroke="{GRN}" stroke-width="3"/>')
 
 ZT, ZB = 140, 660
@@ -208,18 +208,20 @@ T(424, ZB - 12, "obvodová zeď", "tx")
 UX, UY, UW, UH = 56, 196, 336, 340
 R(UX, UY, UW, UH, fill="#F5F7F8", stroke=INK, sw=2.6, rx=12)
 # napájecí svorky (vlevo nahoře, kabel přichází shora)
-T(UX + 128, UY + 58, "NAPÁJENÍ", "rs")
+T(UX + 128, UY + 58, "1F 230 V", "rs")
 for i, l in enumerate(("L", "N", "PE")):
     terminal(UX + 18 + i * 36, UY + 40, l)
-T(UX + 18, UY + 84, "1F: RH030, RH040, RH050-1F", "tx")
-T(UX + 18, UY + 99, "3F: R S T N PE — RH050-3F, RH060", "tx")
+for i, l in enumerate(("R", "S", "T", "N", "PE")):
+    terminal(UX + 18 + i * 36, UY + 82, l, active=False)
+T(UX + 200, UY + 100, "3F 400 V", "rs")
+T(UX + 18, UY + 124, "napájení podle modelu — viz tabulka níže", "tx")
 # řídicí deska (vpravo nahoře)
 R(UX + 190, UY + 22, 128, 64, fill="#fff", stroke=INK, sw=2.2, rx=6)
 T(UX + 254, UY + 42, "ŘÍDICÍ DESKA", "rs", "middle")
 T(UX + 254, UY + 58, "vestavěné čerpadlo,", "tx", "middle")
 T(UX + 254, UY + 73, "čidla vody T3, T8", "tx", "middle")
 # svorkovnice příslušenství 1–6
-T(UX + 18, UY + 136, "SVORKOVNICE PŘÍSLUŠENSTVÍ", "rs")
+T(UX + 18, UY + 140, "SVORKOVNICE PŘÍSLUŠENSTVÍ (všechny modely)", "rs")
 names = [("1", "TUV", False), ("2", "E-ohřev", False), ("3", "3c. ventil", False),
          ("4", "N", True), ("5", "spínač", True), ("6", "COM", True)]
 for i, (n, nm, act) in enumerate(names):
@@ -247,8 +249,10 @@ def brk(x, y, label, sub, w=110):
         f'fill="none" stroke="{INK}" stroke-width="2.2" stroke-linecap="round"/>')
     T(x + 42, y + 28, label, "rs")
     T(x + 42, y + 44, sub, "tx")
-brk(RX + 70, RY_ + 54, "CHRÁNIČ", "proudový", w=120)
-brk(RX + 12, RY_ + 170, "JISTIČ TČ", "1F / 3F")
+brk(RX + 70, RY_ + 54, "CHRÁNIČ", "2P / 4P", w=120)
+brk(RX + 12, RY_ + 170, "JISTIČ TČ", "1P / 3P")
+T(RX + 80, RY_ + 256, "3F: + ochrana proti", "tx")
+T(RX + 80, RY_ + 270, "výpadku fáze", "tx")
 brk(RX + 128, RY_ + 170, "JISTIČ", "čerpadlo")
 P(f"M{RX + 130},{RY_ + 118} L{RX + 130},{RY_ + 142} M{RX + 67},{RY_ + 142} L{RX + 183},{RY_ + 142} "
   f"M{RX + 67},{RY_ + 142} L{RX + 67},{RY_ + 170} M{RX + 183},{RY_ + 142} L{RX + 183},{RY_ + 170}", PWR, 3)
@@ -261,7 +265,7 @@ T(RX + 142, RY_ - 8, "domovního rozvaděče", "tx")
 # ---------------------------------------------------------------- kabely
 # napájení TČ: jistič TČ → přes zeď → shora na svorky L N PE
 P(f"M{RX + 67},{RY_ + 234} L{RX + 67},{RY_ + 270} L440,{RY_ + 270} L440,182 L{UX + 69},182 L{UX + 69},{UY + 40}", PWR, 4)
-T(250, 176, "napájecí kabel TČ v chráničce", "tx", "middle")
+T(250, 176, "napájecí kabel TČ v chráničce · 1F 3 vodiče / 3F 5 vodičů", "tx", "middle")
 # jistič čerpadla → přijímač
 PX, PY = 800, 220
 R(PX, PY, 110, 70, fill="#fff", stroke=INK, sw=2.4, rx=6)
@@ -318,8 +322,26 @@ for k, (c, lab, d) in enumerate([(PWR, "silový kabel 230 / 400 V", None), (COM,
     add(f'<line x1="{lx}" y1="{yy}" x2="{lx + 34}" y2="{yy}" stroke="{c}" stroke-width="{4 if not d else 2.6}" stroke-linecap="round"{ds}/>')
     T(lx + 44, yy + 4, lab, "tx")
 
+# ---------------------------------------------------------------- varianty napájení dle návodu
+TY0 = 682
+T(30, TY0 + 14, "VARIANTY NAPÁJENÍ PODLE NÁVODU RH030–RH060 (str. 17–19)", "hd")
+cols = [30, 390, 545, 690, 820, 1100, 1370]
+heads = ["Model (schéma výrobce)", "Napájení", "Svorky jednotky", "Proudový chránič", "Jistič TČ", "Napájecí kabel"]
+rows = [["RH030, RH040 (803004-2772), RH050-1F (803004-2787)", "230 V · 1F · 50 Hz", "L · N · PE", "2pólový", "1pólový, 1,5× provozní proud (štítek)", "3 vodiče L, N, PE"],
+        ["RH050-3F, RH060 (803004-3000)", "400 V · 3F · 50 Hz", "R · S · T · N · PE", "4pólový", "3pólový + ochrana proti výpadku fáze", "5 vodičů L1–L3, N, PE"]]
+R(30, TY0 + 26, 1340, 30, fill=GRNL, stroke=None, rx=4)
+for j, h in enumerate(heads):
+    T(cols[j] + 12, TY0 + 46, h, "rs")
+for i, r in enumerate(rows):
+    yy = TY0 + 56 + i * 34
+    add(f'<line x1="30" y1="{yy + 34}" x2="1370" y2="{yy + 34}" stroke="#DDE3E6" stroke-width="1.2"/>')
+    for j, c in enumerate(r):
+        T(cols[j] + 12, yy + 22, c, "ts")
+T(30, TY0 + 146, "Svorky příslušenství 1–6 jsou u všech modelů stejné: výstupy 1 (vložka TUV), 2 (elektrokotel), 3 (trojcestný ventil) spínají 230 V proti N na svorce 4; 5–6 = vstup externího spínače. "
+  "Napětí ±10 %, při startu min. 90 % jmenovitého.", "tx")
+
 # ---------------------------------------------------------------- spodní část
-BY = 690
+BY = 870
 R(30, BY, 700, 370, fill="#fff", stroke="#DDE3E6", sw=1.5, rx=10)
 T(52, BY + 32, "SOUČÁSTI", "hd")
 parts = [
