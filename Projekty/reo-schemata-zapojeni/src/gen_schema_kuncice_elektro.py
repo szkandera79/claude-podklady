@@ -331,7 +331,7 @@ parts = [
     (6, "Jistič 230 V pro čerpadlo a přijímač", "samostatný okruh sekundáru"),
     (7, "Kabelový ovladač TČ", "na zdi v technické místnosti"),
     (8, "Přijímač termostatu (relé)", "napájení 230 V, kontakt spíná čerpadlo 9"),
-    (9, "Sekundární oběhové čerpadlo", "v hydraulickém schématu č. 10"),
+    (9, "Sekundární oběhové čerpadlo", "napájení spíná / rozpíná přijímač 8"),
     (10, "Bezdrátový pokojový termostat", "v hydraulickém schématu č. 12"),
     (11, "Externí spínač zap / vyp (volitelně)", "na svorky 5 a 6 (COM) jednotky"),
 ]

@@ -191,6 +191,22 @@ def mag_filter(x, y):
         f'<line x1="0" y1="30" x2="0" y2="38" stroke="{INK}" stroke-width="2.4"/>'
         f'<line x1="-6" y1="38" x2="6" y2="38" stroke="{INK}" stroke-width="2.6" stroke-linecap="round"/></g>')
 
+def y_strainer(x, y):
+    """Sítkový filtr (Y): šikmá komora se sítkem pod potrubím."""
+    add(f'<g transform="translate({x},{y})">'
+        f'<rect x="-14" y="-9" width="28" height="18" rx="4" fill="#fff" stroke="{INK}" stroke-width="2.2"/>'
+        f'<path d="M-4,7 L12,30" stroke="{INK}" stroke-width="14" stroke-linecap="round"/>'
+        f'<path d="M-4,7 L12,30" stroke="#fff" stroke-width="9" stroke-linecap="round"/>'
+        f'<path d="M-2,10 L10,27" stroke="{GREY}" stroke-width="1.6" stroke-dasharray="2 2"/></g>')
+
+def mix_valve(x, y, c=INK):
+    """Trojcestný směšovací ventil s ruční / motorovou hlavicí (vstup zdola = obtok z vratky)."""
+    add(f'<g transform="translate({x},{y})">'
+        f'<path d="M-14,-9 L0,0 L-14,9 Z M14,-9 L0,0 L14,9 Z M-9,14 L0,0 L9,14 Z" fill="#fff" stroke="{c}" stroke-width="2.2" stroke-linejoin="round"/>'
+        f'<line x1="0" y1="0" x2="0" y2="-14" stroke="{c}" stroke-width="2.2"/>'
+        f'<circle cx="0" cy="-20" r="7" fill="#fff" stroke="{c}" stroke-width="2.2"/>'
+        f'<path d="M-3,-20 h6" stroke="{c}" stroke-width="2"/></g>')
+
 def tank100(x, y, w, h):
     add(f'<defs><linearGradient id="ak" x1="0" y1="0" x2="0" y2="1">'
         f'<stop offset="0" stop-color="#F7B9A6"/><stop offset="0.5" stop-color="#F3E3E6"/>'
@@ -226,7 +242,7 @@ logo(36, 22, 190)
 T(256, 62, "Schéma hydraulického zapojení", "ttl")
 T(256, 92, "Pouze vytápění s AKU nádrží 100 l", "sub")
 T(W - 36, 58, "REO-SCH-K1 · RH030–RH060", "zone", "end")
-T(W - 36, 78, "rev. 5 · 11/2026", "tx", "end")
+T(W - 36, 78, "rev. 11 · 11/2026", "tx", "end")
 add(f'<line x1="30" y1="118" x2="{W - 30}" y2="118" stroke="{GRN}" stroke-width="3"/>')
 
 # zóny
@@ -255,10 +271,10 @@ TOP = TX + TW / 2
 
 # primár: TČ → AKU (výstup) a AKU → TČ (vratka)
 P(f"M250,{FY} L560,{FY} L560,{TIN} L{TX},{TIN}", RED)
-P(f"M{TX},{TOUT} L540,{TOUT} L540,{RY} L250,{RY}", BLUE)
+P(f"M{TX},{TOUT} L505,{TOUT} L505,{RY} L250,{RY}", BLUE)
 # sekundár: AKU → radiátory → AKU
 SX, RAD = 1080, 1130
-PSX = 945                                 # stoupačka k pojistné skupině a expanzní nádobě (za čerpadlem)
+PSX = 952                                 # stoupačka k pojistné skupině a expanzní nádobě (za čerpadlem)
 P(f"M{TX + TW},{TIN} L{SX},{TIN} L{SX},{TIN + 100} L{RAD},{TIN + 100}", RED)
 P(f"M{SX},{TIN} L{RAD},{TIN}", RED)
 P(f"M{PSX},{TIN} L{PSX},{TIN - 92}", RED, 4)
@@ -273,8 +289,9 @@ heat_pump(60, 285, h=200)
 separator(350, FY)                                   # 4 separátor + velký bezp. odvzdušňovací ventil
 valve(285, FY); valve(290, RY)                       # 2 uzávěry
 antifreeze(360, RY)                                  # 3 protizámrazový ventil
+mag_filter(578, TOUT)                                  # 16 magnetický filtr na vratce do TČ (= filtr na vstupu dle návodu)
 tank100(TX, TY, TW, TH)
-valve(605, TIN); valve(605, TOUT)                    # 2 uzávěry na vstupu / výstupu AKU (primár)
+valve(605, TIN); valve(615, TOUT); valve(540, TOUT)  # 2 uzávěry u AKU (primár); filtr 16 mezi dvěma uzávěry
 air_vent(TOP, TY)                                    # 6 odvzdušnění AKU
 # 7 pojistná skupina (blok s pojistným ventilem a manometrem) na stoupačce za čerpadlem
 R(PSX - 9, 290, 18, 30, fill="#F3E4B8", stroke=INK, sw=2.2, rx=3)
@@ -296,8 +313,10 @@ add(f'<path d="M{TX + TW + 26},442 L{TX + TW + 40},450 L{TX + TW + 26},458 Z" fi
     f'<line x1="{TX + TW + 33}" y1="458" x2="{TX + TW + 33}" y2="486" stroke="{GREY}" stroke-width="2.2" stroke-dasharray="5 4"/>'
     f'<path d="M{TX + TW + 26},486 h14 l-4,8 h-6 Z" fill="#fff" stroke="{GREY}" stroke-width="1.8"/>')
 drain_cock(TOP, TY + TH)                             # 15 vypouštění
-mag_filter(806, TIN)                                 # 16 magnetický filtr na výstupu z AKU
-valve(845, TIN); pump(890, TIN); valve(995, TIN)     # 10 sekundární čerpadlo
+# 17 volitelný směšovací ventil (podlahové topení) s obtokem z vratky sekundáru
+P(f"M830,{TIN + 14} L830,560 L850,560", BLUE, 4, dash="8 6")
+mix_valve(830, TIN)
+valve(862, TIN); pump(902, TIN); valve(1000, TIN)    # 10 sekundární čerpadlo
 valve(960, 600)
 air_vent(SX, TIN)                                    # 13 odvzdušnění v nejvyšším bodě
 radiator(RAD, TIN - 12); radiator(RAD, TIN + 88)
@@ -306,11 +325,13 @@ thermostat(1295, 190)
 receiver(770, 196)
 
 # TČ RH030–RH060 nemá vstup pro čidlo AKU — řídí podle vestavěného čidla vratné vody (T3), viz návod
-P(f"M844,226 L890,226 L890,{TIN - 17}", YEL, 3)
+P(f"M844,226 L902,226 L902,{TIN - 17}", YEL, 3)
 waves(862, 182, 1)
 waves(1289, 214, -1)
 P("M900,186 L1251,210", YEL, 1.6, dash="2 7")
 T(1140, 192, "rádiový signál", "tx", "middle")
+T(894, 288, "napájení čerpadla 230 V", "tx", "end")
+T(894, 302, "spíná / rozpíná přijímač", "tx", "end")
 
 # ---------------------------------------------------------------- čísla
 num(80, 262, 1);  T(101, 267, "REO RH030–RH060", "lab")
@@ -318,13 +339,14 @@ num(285, 370, 2); num(290, 458, 2)
 num(396, 458, 3)
 num(312, 252, 4)
 num(TX - 20, TY - 12, 5)
-num(605, 400, 2); num(605, 548, 2)
+num(605, 400, 2); num(615, 548, 2); num(540, 548, 2)
 num(TOP + 28, TY - 40, 6)
 num(PSX + 48, 290, 7)
-num(TX + TW + 64, 432, 8)
+num(TX + TW - 18, 482, 8)
 num(PSX + 48, TIN - 132, 9)
-num(890, 412, 10)
-num(806, TIN - 32, 16)
+num(902, 412, 10)
+num(806, 545, 17); T(806, 575, "volitelně", "tx", "middle")
+num(578, TOUT + 64, 16)
 num(756, 180, 11)
 num(1340, 270, 12)
 num(SX - 26, TIN - 38, 13)
@@ -346,18 +368,19 @@ parts = [
     (7, "Pojistná skupina (poj. ventil + manometr)", "na výstupu do topení za čerpadlem, výfuk do odpadu"),
     (8, "Teploměr + pojistný ventil AKU", "společný vývod na plášti, výfuk do odpadu"),
     (9, "Expanzní nádoba (topná)", "nad pojistnou skupinou, bez uzávěru"),
-    (10, "Sekundární oběhové čerpadlo", "na výstupu z AKU do topení, s uzávěry"),
+    (10, "Sekundární oběhové čerpadlo", "napájení spíná přijímač (11) dle termostatu (12)"),
     (11, "Přijímač termostatu (relé 230 V)", "u čerpadla — spíná čerpadlo 10"),
     (12, "Bezdrátový pokojový termostat", "v obytné místnosti, 1,5 m nad podlahou"),
     (13, "Odvzdušňovací ventil v nejvyšším bodě", "na stoupačce / nejvyšším místě rozvodu"),
     (14, "Radiátory s odvzdušňovacími ventilky", "stávající otopná soustava"),
     (15, "Vypouštěcí kohout AKU", "na dně nádrže — vypouštění, odkalení"),
-    (16, "Magnetický filtr", "na výstupu z AKU do topení — zachytí magnetit a kal"),
+    (16, "Magnetický filtr", "na vratce do TČ mezi dvěma uzávěry — čištění"),
+    (17, "Směšovací ventil (volitelně)", "pro podlahové topení: max. 40 °C, ideálně 35 °C"),
 ]
 for i, (n, a, b) in enumerate(parts):
-    col, row = (0, i) if i < 8 else (1, i - 8)
+    col, row = (0, i) if i < 9 else (1, i - 9)
     x = 52 + col * 345
-    y = BY + 64 + row * 37
+    y = BY + 62 + row * 34
     num(x + 12, y, n)
     T(x + 34, y - 2, a, "ts")
     T(x + 34, y + 13, b, "tx")
@@ -389,9 +412,10 @@ tips = [
     "• Protizámrazový ventil (3) venku na vratce, výpustí dolů.",
     "• V místnosti s termostatem nechte hlavice radiátorů otevřené.",
     "• Tlak (studená soustava cca 1–1,5 bar) hlídat na manometru (7).",
+    "• Podlahové topení: směšovací ventil (17) omezí výstup na max. 40 °C.",
 ]
 for i, s in enumerate(tips):
-    T(772, BY + 212 + i * 21, s, "ts")
+    T(772, BY + 210 + i * 19, s, "ts")
 
 T(30, H - 12, "Zjednodušené orientační schéma — dimenze potrubí, nastavení pojistného ventilu a velikost expanzní "
   "nádoby určete podle návodu k TČ a konkrétního domu.", "tx")

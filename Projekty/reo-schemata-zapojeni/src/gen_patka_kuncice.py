@@ -11,7 +11,7 @@ import os, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 LOGO = os.path.expanduser("~/Claude/REO/logo/logo-reo-heating.svg")
 
-W, H = 1400, 900
+W, H = 1400, 990
 RED, BLUE = "#D9342B", "#2468B3"      # výstup (topná) / vratka
 YEL = "#E3A71B"                       # elektrické ovládání, signál
 INK, GREY = "#22272A", "#6B7378"
@@ -182,7 +182,7 @@ logo(36, 22, 190)
 T(256, 62, "Betonová patka venkovní jednotky", "ttl")
 T(256, 92, "Základ ze ztraceného bednění · REO RH030–RH060", "sub")
 T(W - 36, 58, "REO-SCH-K1-P", "zone", "end")
-T(W - 36, 78, "rev. 0 · 11/2026", "tx", "end")
+T(W - 36, 78, "rev. 1 · 11/2026", "tx", "end")
 add(f'<line x1="30" y1="118" x2="{W - 30}" y2="118" stroke="{GRN}" stroke-width="3"/>')
 
 # ---------------------------------------------------------------- půdorys
@@ -266,6 +266,12 @@ NY = 800
 T(52, NY + 6, "1  Ramena: tvárnice ztraceného bednění vyplněné betonem — šířka 200 mm, délka min. 500 mm, výška min. 300 mm, kolmo ke stěně, osově 700 mm.", "ts")
 T(52, NY + 28, "2  Jednotka stojí na antivibračních patkách přišroubovaných do ramen. Odstup ramen od stěny min. 500 mm zajistí volné sání vzduchu.", "ts")
 T(52, NY + 50, "   Mezi rameny ponechte štěrkový podsyp — dno jednotky slouží jako vana na kondenzát a odtokové otvory musí zůstat volné.", "ts")
+R(30, NY + 70, 1340, 84, fill="#FFF4DA", stroke="#E3A71B", sw=2, rx=8)
+add(f'<path d="M54,{NY + 92} L68,{NY + 116} L40,{NY + 116} Z" fill="#E3A71B"/>')
+T(54, NY + 113, "!", "num", "middle")
+T(84, NY + 96, "Ochranná zóna R290 — doporučení: min. 1 m kolem jednotky (do stran, dopředu i nahoru) až k terénu.", "lab")
+T(84, NY + 116, "V zóně nesmí být okna, dveře, sklepní světlíky a šachty, vpusti a kanalizace, větrací otvory ani zdroje vznícení (zásuvky, vypínače, svítidla).", "ts")
+T(84, NY + 136, "R290 je těžší než vzduch — žádné prohlubně v zóně. Pevnou vzdálenost norma neuvádí; ČSN EN 378 a ČSN EN IEC 60335-2-40 ji svěřují výrobci.", "ts")
 T(30, H - 12, "Orientační schéma — rozměry jsou minimální; únosnost a hloubku základu přizpůsobte podloží a hmotnosti jednotky (105–165 kg).", "tx")
 T(W - 30, H - 12, "REO HEATING", "zone", "end")
 add('</svg>')
