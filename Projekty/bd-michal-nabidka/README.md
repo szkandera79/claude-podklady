@@ -4,6 +4,10 @@ Nabídka pro novostavbu bytového domu (24 b.j.) ve dvou výkonnostních variant
 i strukturou vychází z `vzor-bytove-domy/` (zelená kotelna) a technicky z
 `porovnani-x50-2-3/` (data RH X50) a `bd-michal/` (PENB, schémata kotelny).
 
+## ➜ Aktuální revize
+**`rhx30/` — rev. 1 (2. 11. 2026): 3× / 4× RHX30 Pro (TV-BDM-NAB-02) + podklad pro jednání společníků** — viz `rhx30/README.md`.
+Níže zářijová verze s RH X50 (nahrazena).
+
 ## Varianty
 | | Varianta A | Varianta B (doporučená) |
 |---|---|---|

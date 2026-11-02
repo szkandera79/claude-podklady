@@ -53,6 +53,7 @@ tbody tr:last-child td{border-bottom:none}
 td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 td .t{font-weight:600}
 td .m{color:var(--muted);font-size:12.5px}
+td .m.late{color:var(--bad);font-weight:600}
 .date{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--muted)}
 .chip{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;background:var(--soft);color:var(--muted)}
 .chip.rozpracovano,.chip.k-odeslani{background:var(--info-bg);color:var(--info)}
@@ -151,6 +152,8 @@ const $=id=>document.getElementById(id);
 const fmtKc=n=>typeof n==="number"&&isFinite(n)?n.toLocaleString("cs-CZ")+" Kč":"—";
 const fmtMil=n=>n>=1e6?(n/1e6).toLocaleString("cs-CZ",{maximumFractionDigits:2})+" mil. Kč":fmtKc(n);
 const fmtDate=d=>{if(!d)return"—";const p=String(d).split("-");return p.length===3?`${+p[2]}. ${+p[1]}. ${p[0]}`:p.length===2?`${+p[1]}/${p[0]}`:d};
+const today=new Date().toISOString().slice(0,10);
+const late=x=>OPEN.has(x.stav)&&x.termin&&x.termin<today;
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let items=[],db=null,canWrite=false,current=null;
 
@@ -174,7 +177,7 @@ function render(){
     <td class="hide-sm">${esc(x.reseni||"")}</td>
     <td class="num">${esc(fmtKc(+x.cena))}</td>
     <td><span class="chip ${esc(x.stav)}">${esc(STAV[x.stav]||x.stav||"—")}</span></td>
-    <td class="hide-sm">${esc(x.dalsiKrok||"")}${x.termin?`<div class="m">do ${esc(fmtDate(x.termin))}</div>`:""}</td></tr>`).join("")
+    <td class="hide-sm">${esc(x.dalsiKrok||"")}${x.termin?`<div class="m${late(x)?" late":""}">${late(x)?"po termínu · ":"do "}${esc(fmtDate(x.termin))}</div>`:""}</td></tr>`).join("")
     :`<tr><td colspan="6" class="empty">${items.length?"Filtru neodpovídá žádná nabídka.":"Zatím tu nejsou žádné nabídky. Přidejte první tlačítkem Nová nabídka."}</td></tr>`;
   $("vzory").innerHTML=vz.length?vz.map(x=>`<div class="vzor" tabindex="0" data-id="${esc(x.id)}"><div class="t">${esc(x.klient)}</div><div class="m">${esc(x.reseni||"")}</div><div class="m">${esc(x.cenaText||fmtKc(+x.cena))}</div></div>`).join(""):`<div class="note">Žádné vzory.</div>`;
 }
@@ -207,7 +210,7 @@ function showForm(x){
   };
   $("dBody").innerHTML=`<form id="frm"><div class="grid">
     ${inp("klient","Klient / objekt","text",true)}${inp("misto","Místo")}${inp("segment","Segment (SVJ, firma, RD…)")}
-    ${inp("znacka","Značka")}${inp("typ","Typ (nabídka, studie, smlouva)")}${inp("cislo","Č. nabídky")}${inp("datum","Datum","date")}
+    ${inp("znacka","Značka")}${inp("typ","Typ (nabídka, studie, smlouva)")}${inp("cislo","Č. nabídky")}${inp("datum","Datum (RRRR-MM-DD nebo RRRR-MM)")}
     ${inp("reseni","Řešení","text",true)}${inp("cena","Cena hlavní varianty (Kč bez DPH)","number")}${inp("stav","Stav")}
     ${inp("cenaText","Ceny variant / financování","area")}${inp("navratnost","Úspora / návratnost","text",true)}
     ${inp("dalsiKrok","Další krok","text")}${inp("termin","Termín","date")}${inp("kontakt","Kontakt","text",true)}
@@ -220,6 +223,7 @@ function showForm(x){
     const fd=new FormData(e.target),d={};
     for(const [k,v] of fd.entries()){const t=String(v).trim();if(t!=="")d[k]=k==="cena"?Number(t):t}
     if(!d.klient){$("fErr").textContent="Vyplňte klienta nebo objekt.";return}
+    if(d.datum&&!/^\d{4}-\d{2}(-\d{2})?$/.test(d.datum)){$("fErr").textContent="Datum zadejte jako RRRR-MM-DD nebo RRRR-MM.";return}
     d.upraveno=new Date().toISOString();
     try{
       const ref=isNew?db.collection("nabidky").doc():db.collection("nabidky").doc(x.id);

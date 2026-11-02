@@ -1,0 +1,162 @@
+<!--TITLE:Podklad pro jednání společníků — zdroj tepla BD u Dolu Michal (rev. 1) | ThermaVera Energy-->
+<div class="toolbar no-print">
+  <button class="btn primary" onclick="window.print()">Tisk / uložit jako PDF</button>
+  <button class="btn" onclick="document.getElementById('int').remove()">Skrýt interní poznámku</button>
+</div>
+<div class="internal no-print" id="int">
+  <h4>Interní — k čemu podklad slouží</h4>
+  <ol>
+    <li>Pro investora na jednání se společníky, kteří se v oboru orientují: čísla a srovnání, ne marketing. Cíl: vyzdvihnout přednosti, efektivitu a výhodnost nabídky rev. 1.</li>
+    <li>Sloupce konkurence v kap. 6 jsou záměrně prázdné — doplní se po vyhodnocení poptávky, kterou investor rozesílá.</li>
+    <li>Čísla z <code>bd-michal-nabidka/rhx30/src/model.py</code> (metoda s částečným výkonem; zářijová varianta přepočtena stejně). Žádné garance úspor.</li>
+    <li>Celkové náklady 15 let = investice + elektřina, bez servisu, inflace a diskontování — v textu tak označeno.</li>
+  </ol>
+</div>
+
+<div class="doc">
+
+<div class="head">
+  <div class="logo">7</div>
+  <div>
+    <div class="eyebrow">Podklad pro jednání společníků · revize 1</div>
+    <h1>Zdroj tepla pro bytový dům<br>u Dolu Michal</h1>
+    <div class="sub">Proč kaskáda RHX30 Pro · efektivita, celkové náklady a záloha · k nabídce TV-BDM-NAB-02</div>
+  </div>
+  <div class="meta">
+    ThermaVera Energy<br>
+    24 bytových jednotek<br>
+    tepelná ztráta 53 kW<br>
+    2. 11. 2026 · bez DPH
+  </div>
+</div>
+
+<h2>1 · Shrnutí na jednu stranu</h2>
+<p class="lead">Navrhujeme kaskádu čtyř tepelných čerpadel RHX30 Pro pro vytápění i teplou vodu. Za prakticky stejnou cenu
+jako zářijová doporučená varianta spotřebuje dům o 13 % méně elektřiny, zdroj je tišší, jemněji regulovaný a při poruše
+kterékoli jednotky pokryje 127 % tepelné ztráty bez přímotopu.</p>
+<div class="metrics four">
+  <div class="metric"><div class="k">Investice</div><div class="v">2 100 000 Kč</div><div class="s">bez DPH · 87 500 Kč na byt</div></div>
+  <div class="metric"><div class="k">Náklad na teplo</div><div class="v">0,94 Kč/kWh</div><div class="s">elektřina, vytápění i teplá voda</div></div>
+  <div class="metric"><div class="k">Na byt</div><div class="v">≈ 510 Kč</div><div class="s">měsíčně za vytápění i teplou vodu</div></div>
+  <div class="metric"><div class="k">15 let proti září</div><div class="v">−330 000 Kč</div><div class="s">investice + elektřina celkem</div></div>
+</div>
+
+<div class="reasons">
+  <div class="reason"><b>Stejná cena, levnější provoz</b><span>2 100 000 Kč proti 2 090 000 Kč v září — a o 22 600 Kč nižší účet za elektřinu každý rok.</span></div>
+  <div class="reason"><b>Účinnost, kde se počítá</b><span>SCOP 5,25 při 35 °C (EN 14825). Podlahové vytápění 35/30 °C je pro tyto jednotky ideální.</span></div>
+  <div class="reason"><b>Plná záloha tepelným čerpadlem</b><span>Při poruše kterékoli jednotky zbývá 67,2 kW, tedy 127 % ztráty. Bez elektrokotle.</span></div>
+  <div class="reason"><b>Čtvrtá jednotka se slevou 40 %</b><span>Záloha za 210 000 Kč místo 350 000 Kč, tedy 8 750 Kč na byt.</span></div>
+  <div class="reason"><b>Tišší kaskáda</b><span>59 dB(A) na jednotku, celá kaskáda asi o 6 dB(A) tišší než tři RH X50. Méně rizika při povolování.</span></div>
+  <div class="reason"><b>Jemná regulace</b><span>Nejmenší stupeň 12,7 kW při +7 °C. Méně startů, delší životnost kompresorů.</span></div>
+  <div class="reason"><b>Spojení s fotovoltaikou</b><span>Panely lze připojit přímo k jednotkám bez střídače, vedle stávající FVE 46 kWp.</span></div>
+  <div class="reason"><b>Argument pro prodej bytů</b><span>Teplo a teplá voda orientačně za 6 150 Kč na byt ročně — bez plynu a bez dodavatele tepla.</span></div>
+</div>
+
+<h2>2 · Efektivita v číslech</h2>
+<p>Stejný dům, stejná potřeba tepla 157,5 MWh za rok, stejná metoda výpočtu (výkonové mapy výrobce, provoz při částečném
+výkonu, teplotní křivka trvání pro Ostravu). Cena elektřiny 3 500 Kč/MWh bez DPH.</p>
+<table>
+  <thead><tr><th>Způsob výroby tepla</th><th class="num">Elektřina za rok</th><th class="num">SCOP</th><th class="num">Roční náklad</th><th class="num">Na byt a rok</th></tr></thead>
+  <tbody>
+    <tr><td>Přímý elektrický ohřev (elektrokotel)</td><td class="num">157,5 MWh</td><td class="num">1,00</td><td class="num">551 300 Kč</td><td class="num">22 970 Kč</td></tr>
+    <tr><td>Zářijová nabídka — 3 × RH X50</td><td class="num">48,6 MWh</td><td class="num">3,24</td><td class="num">170 100 Kč</td><td class="num">7 090 Kč</td></tr>
+    <tr class="total"><td>Rev. 1 — 4 × RHX30 Pro</td><td class="num">42,1 MWh</td><td class="num">3,74</td><td class="num">147 500 Kč</td><td class="num">6 150 Kč</td></tr>
+  </tbody>
+</table>
+
+<div class="callout green">
+  <h3>Proč nové jednotky vycházejí lépe, i když mají podobný výkon v mrazu</h3>
+  <p>Při −15 °C mají obě jednotky téměř stejný topný faktor (2,13 proti 2,10). Rozdíl dělá zbytek roku: dům většinu
+  topné sezóny potřebuje jen zlomek návrhového výkonu a jednotky běží na částečný výkon. RHX30 Pro je při sníženém výkonu
+  účinnější než při plném (COP 5,36 při +7 °C), RH X50 naopak méně (4,30). Čtyři menší jednotky se navíc lépe přizpůsobí
+  okamžité potřebě. Proto je roční spotřeba o 6,5 MWh nižší.</p>
+</div>
+
+<h2>3 · Výhodnost: celkové náklady za 15 let</h2>
+<table>
+  <thead><tr><th>Bez DPH, dnešní ceny</th><th class="num">Září — 3 × RH X50</th><th class="num">A — 3 × RHX30 Pro</th><th class="num">B — 4 × RHX30 Pro</th></tr></thead>
+  <tbody>
+    <tr><td>Investice</td><td class="num">2 090 000 Kč</td><td class="num">1 890 000 Kč</td><td class="num">2 100 000 Kč</td></tr>
+    <tr><td>Elektřina za 15 let</td><td class="num">2 551 800 Kč</td><td class="num">2 227 200 Kč</td><td class="num">2 212 200 Kč</td></tr>
+    <tr class="total"><td>Celkem za 15 let</td><td class="num">4 641 800 Kč</td><td class="num">4 117 200 Kč</td><td class="num">4 312 200 Kč</td></tr>
+    <tr><td>Na byt</td><td class="num">193 400 Kč</td><td class="num">171 500 Kč</td><td class="num">179 700 Kč</td></tr>
+    <tr class="hl"><td>Rozdíl proti zářijové nabídce</td><td class="num">—</td><td class="num">−524 600 Kč</td><td class="num">−329 600 Kč</td></tr>
+    <tr><td>Plná záloha tepelným čerpadlem</td><td class="num">ano</td><td class="num">ne — spirály v AKU</td><td class="num">ano</td></tr>
+  </tbody>
+</table>
+<p class="small">Prostý součet investice a elektřiny bez inflace, diskontování a servisu. Při dražší elektřině se rozdíl ve prospěch
+RHX30 Pro zvětšuje úměrně ceně. Jde o modelový propočet, ne o záruku spotřeby.</p>
+
+<h2>4 · Spolehlivost a záloha</h2>
+<table>
+  <thead><tr><th>Situace při −15 °C (ztráta 53 kW)</th><th>Září — 3 × RH X50</th><th>B — 4 × RHX30 Pro</th></tr></thead>
+  <tbody>
+    <tr><td>Běžný provoz</td><td>92,7 kW · 175 %</td><td>89,6 kW · 169 %</td></tr>
+    <tr><td>Ohřev teplé vody, dům topí</td><td>61,8 kW · bez deficitu</td><td>67,2 kW · bez deficitu</td></tr>
+    <tr class="hl"><td>Porucha jedné jednotky</td><td>61,8 kW · 117 %</td><td><strong>67,2 kW · 127 %</strong></td></tr>
+    <tr><td>Porucha jednotky a zároveň ohřev teplé vody</td><td>30,9 kW + spirály</td><td><strong>44,8 kW</strong> + spirály</td></tr>
+    <tr><td>Podíl výkonu, který vypadne s jednou jednotkou</td><td>třetina</td><td><strong>čtvrtina</strong></td></tr>
+  </tbody>
+</table>
+<p>Kotelna je pod vzdáleným dohledem, takže servis o poruše ví dřív než obyvatelé. Elektrokotel ani průtokový dohřev nejsou
+potřeba; spirály 9 kW v nádržích slouží k dezinfekci teplé vody a k ukládání přebytků z fotovoltaiky.</p>
+
+<h2>5 · Co z toho má developer</h2>
+<div class="reasons one">
+  <div class="reason"><b>Prodejní argument</b><span>Nízké provozní náklady na byt jsou konkrétní číslo do prodejní prezentace: vytápění i teplá voda orientačně za 510 Kč měsíčně na byt při dnešní ceně elektřiny.</span></div>
+  <div class="reason"><b>Méně rizika při povolování a kolaudaci</b><span>Tišší venkovní jednotky usnadní splnění hygienických limitů hluku v obytné zástavbě. Umístění potvrdí hluková studie.</span></div>
+  <div class="reason"><b>Méně reklamací po předání</b><span>Plná záloha tepelným čerpadlem a vzdálený dohled: porucha jedné jednotky se v bytech neprojeví.</span></div>
+  <div class="reason"><b>Bez plynu a bez dodavatele tepla</b><span>Dům nepotřebuje plynovou přípojku, komín ani smlouvu na dodávku tepla. Budoucí společenství platí jen elektřinu.</span></div>
+  <div class="reason"><b>Využití vlastní fotovoltaiky</b><span>Tepelné čerpadlo promění přebytek z FVE na dvoj- až trojnásobek tepla proti přímotopu; část panelů lze připojit přímo k jednotkám.</span></div>
+  <div class="reason"><b>Jeden dodavatel na klíč</b><span>Jednotky, strojovna, regulace, dohled i servis od jednoho dodavatele. Na přání i pronájem jednotek se splátkami.</span></div>
+</div>
+
+<h2>6 · Jak porovnat s konkurencí</h2>
+<p>Nabídky jsou porovnatelné jen ve stejných bodech. Výkon při +7 °C je katalogový a o krytí ztráty nevypovídá — dimenzuje
+se na −15 °C. Tabulku doplníme po vyhodnocení poptávky.</p>
+<table>
+  <thead><tr><th>Ukazatel</th><th class="num">Naše nabídka B</th><th class="num">Konkurence 1</th><th class="num">Konkurence 2</th></tr></thead>
+  <tbody>
+    <tr><td>Investice bez DPH, řešení se zálohou</td><td class="num">2 100 000 Kč</td><td></td><td></td></tr>
+    <tr><td>Výkon kaskády při −15 °C / 35 °C</td><td class="num">89,6 kW</td><td></td><td></td></tr>
+    <tr><td>Výkon na vytápění během ohřevu teplé vody</td><td class="num">67,2 kW</td><td></td><td></td></tr>
+    <tr><td>Výkon při poruše jedné jednotky</td><td class="num">67,2 kW</td><td></td><td></td></tr>
+    <tr><td>Nejmenší výkonový stupeň (+7 °C)</td><td class="num">12,7 kW</td><td></td><td></td></tr>
+    <tr><td>SCOP při 35 °C (EN 14825)</td><td class="num">5,25</td><td></td><td></td></tr>
+    <tr><td>Akustický výkon jednotky</td><td class="num">59 dB(A)</td><td></td><td></td></tr>
+    <tr><td>Rezervovaný příkon</td><td class="num">≈ 44 kW</td><td></td><td></td></tr>
+    <tr><td>Elektrokotel / průtokový dohřev</td><td class="num">není potřeba</td><td></td><td></td></tr>
+  </tbody>
+</table>
+
+<h2>7 · Co ještě ověříme</h2>
+<ul>
+  <li>Tepelnou ztrátu výpočtem podle ČSN EN 12831 (PENB 53 kW, investor 52 kW) a odběrový diagram teplé vody.</li>
+  <li>Umístění venkovních jednotek a hlukovou studii.</li>
+  <li>Rezervovaný příkon a sazbu s distributorem.</li>
+  <li>Napojení fotovoltaiky — kolik panelů připojit přímo k jednotkám.</li>
+</ul>
+
+<div class="callout green">
+  <h3>Doporučení</h3>
+  <p>Doporučujeme variantu B se čtyřmi jednotkami RHX30 Pro za 2 100 000 Kč bez DPH. Proti zářijové nabídce stojí
+  o 10 000 Kč víc a za 15 let ušetří na elektřině orientačně 340 000 Kč. Pokud je prioritou nejnižší investice,
+  varianta A se třemi jednotkami za 1 890 000 Kč pokryje ztrátu s rezervou 27 % a má nejnižší celkové náklady —
+  záloha při poruše ale dotápí spirálami v akumulaci.</p>
+</div>
+
+<div class="sign">
+  S pozdravem
+  <div class="brand-name">ThermaVera Energy</div>
+  <div class="contact">
+    <div><span class="lbl">E-mail</span>info@thermavera.cz</div>
+    <div><span class="lbl">Telefon</span>+420 774 872 467</div>
+    <div><span class="lbl">Web</span><span class="web">www.thermavera.cz</span></div>
+  </div>
+</div>
+
+<div class="footnote">Podklad shrnuje cenovou nabídku TV-BDM-NAB-02 z 2. 11. 2026. Provozní čísla jsou výpočtem podle uvedených
+předpokladů (potřeba tepla 157,5 MWh, cena elektřiny 3 500 Kč/MWh bez DPH, výkonové mapy výrobce); nejde o záruku spotřeby,
+úspory ani návratnosti. ThermaVera Energy · TV-BDM-SPOL-02 · 11/2026.</div>
+
+</div>
