@@ -1,30 +1,30 @@
 [Text vytažený z BD-Michal-nabidka-RHX30-Pro-rev1.pdf]
 
 --- strana 1 ---
-C E N O V Á N A B Í D K A · R E V I Z E 1
 7
+C E N O V Á N A B Í D K A · R E V I Z E 1
 Zelená kotelna pro bytový dům
 u Dolu Michal, Ostrava-
 Michálkovice
+Kaskáda tepelných čerpadel RHX30 Pro — vytápění i ohřev teplé vody pro 24
+b
+ytů
 č. nabídky TV-BDM-NAB-02
 nahrazuje TV-BDM-NAB-01 (9/2026)
 zpracováno 2. 11. 2026
 platnost 60 dnů · ceny
 bez DPH
-Kaskáda tepelných čerpadel RHX30 Pro — vytápění i ohřev teplé vody pro 24
-b
-ytů
-Vážený pane Boku
-,
-děkuji za zářijové jednání. Předkládám aktualizovanou nabídku zdroje tepla pro b
+Vážení pánové,
+dovolujeme si předložit vám aktualizovanou nabídku kotelny pro b
 ytový dům
-zářijové verzi jsme kaskádu
+jsme kaskádu
 postavili na nových jednotkách RHX30 Pro. Za prakticky stejnou
-u Dolu Michal. Proti
-cenu jako
-doporu
-čená zářijová varianta dostane dům účinnější, tišší a jemněji regulovaný zdroj se stejnou úrovní zálohy
-čtyři menší jednotky místo tří velkých, z nichž čtvrtou nabízíme se slevou 40 %.
+varianta dostane dům účinnější, tišší a jemněji regulovaný zdroj se stejnou úrovní zálohy
+místo tří velkých, z nichž čtvrtou nabízíme se slevou 40 %.
+u Dolu Michal. Proti zářijové verzi
+cenu jako doporu
+čená zářijová
+: čtyři menší jednotky
 INVESTICE
 (DOPO
 R
@@ -38,14 +38,13 @@ ročně · 6 150 Kč na b
 yt
 PR
 OTI ZÁŘIJ
-OVÉ
 NABÍDCE
-SEZÓNNÍ ÚČINNOST
+OVÉ
 −13 %
 elektřiny · −22 600 Kč ročně
+SEZÓNNÍ ÚČINNOST
 SCOP 3,74
 vytápění i teplá voda, model
-:
 1 · Dům a jeho potřeba tepla
 Vstu
 py se proti zářijové nabídce nemění (PENB č. 530077.2, TRIPLAN s.r.o., 12/2023).
@@ -362,7 +361,7 @@ py.
 3. Rezervovaný příkon a sazba — potvrdit s distributorem.
 4. Napojení fotovoltaiky — posoudit s projektantem FVE, kolik panelů připojit přímo k jednotkám.
 5. Závazná nabídka s harmonogramem a platebním kalendářem.
-Další krok: rád nabídku osobně představím vám i vašim společníkům — pro jejich jednání je připravený samostatný
+Další krok: rádi nabídku osobně představíme vám i vašim společníkům — pro jejich jednání je připravený samostatný
 podklad s přednostmi nabídky, efektivitou
 provozu a celkovými náklady za 15 let.
 S pozdravem

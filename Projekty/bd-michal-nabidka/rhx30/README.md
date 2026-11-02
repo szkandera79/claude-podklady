@@ -1,7 +1,7 @@
 # BD u Dolu Michal — nabídka rev. 1 s jednotkami RHX30 Pro (2. 11. 2026)
 
 Aktualizace nabídky TV-BDM-NAB-A/B (9/2026, 2× / 3× RH X50) → **TV-BDM-NAB-02: kaskáda RHX30 Pro**, po vzoru
-`bd-jandova/rhx30/`. Investor (developer) Jiří Bok, novostavba 24 b.j., ztráta 53 kW, podlahovka 35/30 °C.
+`bd-jandova/rhx30/`. Investor (developer), oslovení „Vážení pánové“, novostavba 24 b.j., ztráta 53 kW, podlahovka 35/30 °C.
 
 ## Varianty (bez DPH)
 | | A — 3× RHX30 Pro | B — 4× RHX30 Pro (doporučená) | září B — 3× RH X50 |
@@ -14,7 +14,7 @@ Aktualizace nabídky TV-BDM-NAB-A/B (9/2026, 2× / 3× RH X50) → **TV-BDM-NAB-
 | Investice + elektřina 15 let | 4 117 200 Kč | 4 312 200 Kč | 4 641 800 Kč |
 
 Cena = vnitřek 740 000 + spirály 60 000 + rozvaděč 40 000 + 3 × 350 000 (+ 4. jednotka 210 000, sleva 40 %).
-Ceny jednotek převzaty z BD Jandova (2. 11. 2026) — **potvrdit pro tohoto investora**.
+Ceny jednotek stejné jako u BD Jandova — **potvrzeno uživatelem 2. 11. 2026**.
 
 ## Model (`src/model.py`)
 Přebírá dům, binovou křivku a TUV z `../src/model.py`. **Nově provoz při částečném výkonu**: kaskáda v každém binu volí
@@ -43,9 +43,7 @@ https://claude.ai/artifact/6FH8VjLb28LZHDfpVCph6b — dvě záložky + „Stáhn
 a `files` = `pdf/<název>.pdf` ← `bd-michal-nabidka/rhx30/pdf/`.
 
 ## ⚠️ Otevřené body
-1. Ceny jednotek a sleva 40 % na 4. jednotku — potvrdit (převzato z BD Jandova).
-2. Oslovení „pane Boku“ — ověřit adresáta (osoba / společnost).
-3. Hluk: LWA 59 dB(A) (štítek RHX30 Pro) vs 66 (RH X50); hluková studie není v ceně.
-4. FV přímo do jednotek (1 × 10 panelů / jednotku) vs projektovaná FVE 46 kWp — jen jako možnost, posoudit s projektantem FVE.
-5. Servis (~40 000 Kč/rok za 4 jednotky) není v propočtu; pronájem jednotek jen zmíněn bez splátek.
-6. Otevřené body původní nabídky platí dál (ztráta výpočtem, TUV objem, rezervovaný příkon, cena elektřiny) — `../README.md`.
+1. Hluk: LWA 59 dB(A) (štítek RHX30 Pro) vs 66 (RH X50); hluková studie není v ceně.
+2. FV přímo do jednotek (1 × 10 panelů / jednotku) vs projektovaná FVE 46 kWp — jen jako možnost, posoudit s projektantem FVE.
+3. Servis (~40 000 Kč/rok za 4 jednotky) není v propočtu; pronájem jednotek jen zmíněn bez splátek.
+4. Otevřené body původní nabídky platí dál (ztráta výpočtem, TUV objem, rezervovaný příkon, cena elektřiny) — `../README.md`.
