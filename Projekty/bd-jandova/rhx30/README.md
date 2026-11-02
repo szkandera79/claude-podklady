@@ -39,3 +39,8 @@ PDF: headless Chrome jako v `bd-jandova/README.md` (`file://…/nabidka.html`).
 4. **Smlouva s Veolií**: stálé platby při ponechané přípojce, sjednaný výkon; úpravy předávací stanice pro zálohu.
 5. FV u RHX Pro: limity dle výrobce 21. 10. 2026 (20 A, Uoc < 537 V, 1 × 10 ks); cena sady je odhad.
 6. Otevřené body původní nabídky (ztráta výpočtem, jistič, teplotní spád, DPH) platí dál — `../README.md`.
+
+## Artefakt
+https://claude.ai/artifact/TjT8mDwuuLQSmHWtZCsAqQ — tři záložky + tlačítko „Stáhnout PDF k tisku“ v každé.
+`python3 bd-jandova/rhx30/src/build_artefakt.py <výstup.html>` → publikovat na stejnou URL s `capabilities {"downloads": true}`
+a `files` = `pdf/<název>.pdf` ← `bd-jandova/rhx30/pdf/` (PDF předem vytisknout, viz výše).

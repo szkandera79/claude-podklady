@@ -1,0 +1,247 @@
+<title>Evidence nabídek</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+<style>
+/* Layout: pracovní přehled — souhrn nahoře, filtry, tabulka nabídek, vzory pod ní; detail a úprava v dialogu. */
+:root{
+  --bg:#F3F5F2; --panel:#FFFFFF; --ink:#18221D; --muted:#5B6A62; --line:#D9E0DA; --soft:#EEF3EF;
+  --accent:#1E8F5B; --accent-ink:#0F3D2E; --accent-bg:#E4F2EA;
+  --warn:#9A5B12; --warn-bg:#FCF1E2; --bad:#A33A2E; --bad-bg:#FBE9E6; --info:#2B5B8F; --info-bg:#E7EFF8;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111814; --panel:#18211C; --ink:#E5ECE7; --muted:#9AAAA1; --line:#2C3832; --soft:#1E2923;
+  --accent:#4CC08A; --accent-ink:#BFE8D2; --accent-bg:#1C3328;
+  --warn:#E6B26A; --warn-bg:#352816; --bad:#F09284; --bad-bg:#3A1F1B; --info:#8DB6E6; --info-bg:#1B2738; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111814; --panel:#18211C; --ink:#E5ECE7; --muted:#9AAAA1; --line:#2C3832; --soft:#1E2923;
+  --accent:#4CC08A; --accent-ink:#BFE8D2; --accent-bg:#1C3328;
+  --warn:#E6B26A; --warn-bg:#352816; --bad:#F09284; --bad-bg:#3A1F1B; --info:#8DB6E6; --info-bg:#1B2738; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--sans)}
+.wrap{max-width:1180px;margin:0 auto;padding-block:28px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:20px}
+h1{font:600 32px/1.1 var(--display);margin:0;text-wrap:balance}
+.sub{color:var(--muted);font-size:13.5px;margin-top:4px}
+h2{font:600 20px/1.2 var(--display);margin:34px 0 10px}
+.btn{font:600 14px var(--sans);border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:9px 14px;border-radius:9px;cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+:root:not([data-theme="light"]) .btn.primary{color:#fff}
+.btn.danger{color:var(--bad);border-color:var(--bad)}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,tr:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn[hidden]{display:none!important}
+
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
+.stat .k{font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--muted)}
+.stat .v{font:600 26px/1.15 var(--display);margin-top:4px;font-variant-numeric:tabular-nums}
+.stat .s{font-size:12.5px;color:var(--muted)}
+
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 12px}
+.tools input,.tools select{font:14px var(--sans);padding:9px 12px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink)}
+.tools input{flex:1 1 240px;min-width:0}
+
+.tablebox{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11.5px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);font-weight:700;background:var(--soft);white-space:nowrap}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--soft)}
+tbody tr:last-child td{border-bottom:none}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td .t{font-weight:600}
+td .m{color:var(--muted);font-size:12.5px}
+.date{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--muted)}
+.chip{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;background:var(--soft);color:var(--muted)}
+.chip.rozpracovano,.chip.k-odeslani{background:var(--info-bg);color:var(--info)}
+.chip.odeslano,.chip.jednani{background:var(--accent-bg);color:var(--accent-ink)}
+.chip.vyhrano{background:var(--accent);color:#fff}
+.chip.prohrano{background:var(--bad-bg);color:var(--bad)}
+.chip.doplnit{background:var(--warn-bg);color:var(--warn)}
+.brand{font-size:11.5px;color:var(--muted)}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+.note{font-size:12.5px;color:var(--muted);margin-top:8px}
+.banner{background:var(--warn-bg);color:var(--warn);border-radius:9px;padding:9px 12px;font-size:13px;margin-bottom:12px}
+
+.vzory{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.vzor{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;min-width:0}
+.vzor:hover{border-color:var(--accent)}
+.vzor .t{font-weight:600}
+.vzor .m{color:var(--muted);font-size:13px}
+
+dialog{border:none;border-radius:14px;padding:0;width:min(720px,calc(100vw - 32px));background:var(--panel);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.3)}
+dialog::backdrop{background:rgba(10,20,15,.45)}
+.dh{display:flex;justify-content:space-between;gap:12px;padding:18px 22px;border-bottom:1px solid var(--line)}
+.dh h3{font:600 22px/1.2 var(--display);margin:0}
+.db{padding:18px 22px;max-height:70vh;overflow:auto}
+.df{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;padding:14px 22px;border-top:1px solid var(--line)}
+.df .left{margin-right:auto;display:flex;gap:10px;align-items:center}
+dl.kv{display:grid;grid-template-columns:150px 1fr;gap:8px 16px;margin:0;font-size:14px}
+dl.kv dt{color:var(--muted)}
+dl.kv dd{margin:0;min-width:0;overflow-wrap:anywhere}
+dl.kv a{color:var(--accent)}
+code{font-size:12.5px;background:var(--soft);padding:1px 5px;border-radius:5px}
+form .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form label{display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:var(--muted);font-weight:600;min-width:0}
+form label.full{grid-column:1/-1}
+form input,form select,form textarea{font:14px var(--sans);padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+form textarea{min-height:64px;resize:vertical}
+.err{color:var(--bad);font-size:13px}
+
+@media (max-width:760px){
+  .stats{grid-template-columns:1fr 1fr}
+  form .grid{grid-template-columns:1fr}
+  dl.kv{grid-template-columns:1fr}
+  dl.kv dt{margin-top:6px}
+  .hide-sm{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Evidence nabídek</h1>
+      <div class="sub">ThermaVera · REO HEATING — nabídky, studie a smlouvy na jednom místě · ceny bez DPH</div>
+    </div>
+    <button class="btn primary" id="addBtn" type="button" hidden>Nová nabídka</button>
+  </header>
+
+  <div id="banner" class="banner" hidden></div>
+
+  <section class="stats" aria-label="Souhrn">
+    <div class="stat"><div class="k">Otevřené nabídky</div><div class="v" id="sOpen">–</div><div class="s" id="sOpenS">rozpracováno, odesláno, jednání</div></div>
+    <div class="stat"><div class="k">Objem otevřených</div><div class="v" id="sVol">–</div><div class="s">hlavní varianta, bez DPH</div></div>
+    <div class="stat"><div class="k">Vyhráno</div><div class="v" id="sWon">–</div><div class="s" id="sWonS">&nbsp;</div></div>
+    <div class="stat"><div class="k">Doplnit stav</div><div class="v" id="sTodo">–</div><div class="s">nabídky bez ověřeného stavu</div></div>
+  </section>
+
+  <div class="tools">
+    <input id="q" type="search" placeholder="Hledat klienta, místo, řešení…" aria-label="Hledat">
+    <select id="fStav" aria-label="Stav"><option value="">Všechny stavy</option></select>
+    <select id="fZnacka" aria-label="Značka"><option value="">Obě značky</option><option>ThermaVera</option><option>REO HEATING</option></select>
+  </div>
+
+  <div class="tablebox">
+    <table>
+      <thead><tr><th>Datum</th><th>Klient / objekt</th><th class="hide-sm">Řešení</th><th style="text-align:right">Cena</th><th>Stav</th><th class="hide-sm">Další krok</th></tr></thead>
+      <tbody id="rows"><tr><td colspan="6" class="empty">Načítám nabídky…</td></tr></tbody>
+    </table>
+  </div>
+  <p class="note">Klikněte na řádek pro detail, odkazy na podklady a úpravu stavu.</p>
+
+  <h2>Vzorové nabídky a šablony</h2>
+  <div class="vzory" id="vzory"><div class="note">Načítám…</div></div>
+</div>
+
+<dialog id="dlg" aria-labelledby="dTitle">
+  <div class="dh"><div><h3 id="dTitle"></h3><div class="sub" id="dSub"></div></div><button class="btn" type="button" id="dClose" aria-label="Zavřít">✕</button></div>
+  <div class="db" id="dBody"></div>
+  <div class="df" id="dFoot"></div>
+</dialog>
+
+<script>
+const STAVY=[["rozpracovano","rozpracováno"],["k-odeslani","k odeslání"],["odeslano","odesláno"],["jednani","jednání"],["vyhrano","vyhráno"],["prohrano","prohráno"],["nahrazeno","nahrazeno novou verzí"],["doplnit","doplnit stav"],["vzor","vzor / šablona"]];
+const STAV=Object.fromEntries(STAVY);
+const OPEN=new Set(["rozpracovano","k-odeslani","odeslano","jednani"]);
+const FIELDS=[["klient","Klient / objekt"],["misto","Místo"],["segment","Segment"],["znacka","Značka"],["typ","Typ"],["cislo","Č. nabídky"],["datum","Datum"],["reseni","Řešení"],["cena","Cena (Kč, hlavní varianta)"],["cenaText","Ceny variant / financování"],["navratnost","Úspora / návratnost"],["stav","Stav"],["dalsiKrok","Další krok"],["termin","Termín dalšího kroku"],["kontakt","Kontakt"],["odkaz","Odkaz (artefakt, PDF)"],["slozka","Složka v Projektech"],["poznamka","Poznámka"]];
+const $=id=>document.getElementById(id);
+const fmtKc=n=>typeof n==="number"&&isFinite(n)?n.toLocaleString("cs-CZ")+" Kč":"—";
+const fmtMil=n=>n>=1e6?(n/1e6).toLocaleString("cs-CZ",{maximumFractionDigits:2})+" mil. Kč":fmtKc(n);
+const fmtDate=d=>{if(!d)return"—";const p=String(d).split("-");return p.length===3?`${+p[2]}. ${+p[1]}. ${p[0]}`:p.length===2?`${+p[1]}/${p[0]}`:d};
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let items=[],db=null,canWrite=false,current=null;
+
+STAVY.forEach(([v,l])=>{if(v!=="vzor")$("fStav").insertAdjacentHTML("beforeend",`<option value="${v}">${l}</option>`)});
+["q","fStav","fZnacka"].forEach(id=>$(id).addEventListener("input",render));
+
+function render(){
+  const offers=items.filter(x=>x.stav!=="vzor"), vz=items.filter(x=>x.stav==="vzor");
+  const open=offers.filter(x=>OPEN.has(x.stav)), won=offers.filter(x=>x.stav==="vyhrano");
+  $("sOpen").textContent=open.length;
+  $("sVol").textContent=fmtMil(open.reduce((a,x)=>a+(+x.cena||0),0));
+  $("sWon").textContent=won.length;
+  $("sWonS").textContent=won.length?fmtMil(won.reduce((a,x)=>a+(+x.cena||0),0)):" ";
+  $("sTodo").textContent=offers.filter(x=>x.stav==="doplnit").length;
+  const q=$("q").value.trim().toLowerCase(), fs=$("fStav").value, fz=$("fZnacka").value;
+  const list=offers.filter(x=>(!fs||x.stav===fs)&&(!fz||x.znacka===fz)&&(!q||[x.klient,x.misto,x.reseni,x.cislo,x.poznamka,x.kontakt].join(" ").toLowerCase().includes(q)))
+    .sort((a,b)=>String(b.datum||"").localeCompare(String(a.datum||"")));
+  $("rows").innerHTML=list.length?list.map(x=>`<tr tabindex="0" data-id="${esc(x.id)}">
+    <td class="date">${esc(fmtDate(x.datum))}</td>
+    <td><div class="t">${esc(x.klient)}</div><div class="m">${esc([x.misto,x.typ].filter(Boolean).join(" · "))} <span class="brand">· ${esc(x.znacka||"")}</span></div></td>
+    <td class="hide-sm">${esc(x.reseni||"")}</td>
+    <td class="num">${esc(fmtKc(+x.cena))}</td>
+    <td><span class="chip ${esc(x.stav)}">${esc(STAV[x.stav]||x.stav||"—")}</span></td>
+    <td class="hide-sm">${esc(x.dalsiKrok||"")}${x.termin?`<div class="m">do ${esc(fmtDate(x.termin))}</div>`:""}</td></tr>`).join("")
+    :`<tr><td colspan="6" class="empty">${items.length?"Filtru neodpovídá žádná nabídka.":"Zatím tu nejsou žádné nabídky. Přidejte první tlačítkem Nová nabídka."}</td></tr>`;
+  $("vzory").innerHTML=vz.length?vz.map(x=>`<div class="vzor" tabindex="0" data-id="${esc(x.id)}"><div class="t">${esc(x.klient)}</div><div class="m">${esc(x.reseni||"")}</div><div class="m">${esc(x.cenaText||fmtKc(+x.cena))}</div></div>`).join(""):`<div class="note">Žádné vzory.</div>`;
+}
+function openRow(e){const el=e.target.closest("[data-id]");if(!el)return;if(e.type==="keydown"&&e.key!=="Enter")return;showDetail(items.find(x=>x.id===el.dataset.id))}
+["rows","vzory"].forEach(id=>{$(id).addEventListener("click",openRow);$(id).addEventListener("keydown",openRow)});
+$("dClose").addEventListener("click",()=>$("dlg").close());
+
+function showDetail(x){
+  if(!x)return;current=x;
+  $("dTitle").textContent=x.klient;$("dSub").textContent=[x.cislo,x.znacka,fmtDate(x.datum)].filter(v=>v&&v!=="—").join(" · ");
+  const val=(k,v)=>k==="cena"?fmtKc(+v):k==="stav"?`<span class="chip ${esc(v)}">${esc(STAV[v]||v)}</span>`:k==="datum"||k==="termin"?esc(fmtDate(v)):k==="odkaz"&&/^https:\/\//.test(v)?`<a href="${esc(v)}" target="_blank" rel="noopener">${esc(v)}</a>`:k==="slozka"?`<code>${esc(v)}</code>`:esc(v);
+  $("dBody").innerHTML=`<dl class="kv">${FIELDS.filter(([k])=>x[k]!==undefined&&x[k]!==""&&k!=="klient").map(([k,l])=>`<dt>${l}</dt><dd>${val(k,x[k])}</dd>`).join("")}</dl>`+(x.upraveno?`<p class="note">Naposledy upraveno ${esc(new Date(x.upraveno).toLocaleString("cs-CZ"))}</p>`:"");
+  $("dFoot").innerHTML=canWrite?`<div class="left"><button class="btn danger" type="button" id="bDel">Smazat</button><span id="delAsk"></span></div><button class="btn primary" type="button" id="bEdit">Upravit</button>`:`<button class="btn" type="button" onclick="document.getElementById('dlg').close()">Zavřít</button>`;
+  if(canWrite){$("bEdit").onclick=()=>showForm(x);$("bDel").onclick=askDelete}
+  if(!$("dlg").open)$("dlg").showModal();
+}
+function askDelete(){
+  $("delAsk").innerHTML=`Opravdu smazat? <button class="btn danger" type="button" id="bDelYes">Ano, smazat</button>`;
+  $("bDelYes").onclick=async()=>{try{await db.collection("nabidky").doc(current.id).delete();$("dlg").close()}catch(e){$("delAsk").textContent="Smazání se nepodařilo, zkuste to znovu."}};
+}
+function showForm(x){
+  const isNew=!x;x=x||{stav:"rozpracovano",znacka:"ThermaVera",typ:"nabídka",datum:new Date().toISOString().slice(0,10)};
+  $("dTitle").textContent=isNew?"Nová nabídka":x.klient;$("dSub").textContent=isNew?"Vyplňte aspoň klienta a stav":"Úprava záznamu";
+  const inp=(k,l,type="text",full=false)=>{
+    const v=esc(x[k]??"");
+    if(k==="stav")return`<label>${l}<select id="f_stav" name="stav">${STAVY.map(([s,t])=>`<option value="${s}"${x.stav===s?" selected":""}>${t}</option>`).join("")}</select></label>`;
+    if(k==="znacka")return`<label>${l}<select id="f_znacka" name="znacka">${["ThermaVera","REO HEATING"].map(s=>`<option${x.znacka===s?" selected":""}>${s}</option>`).join("")}</select></label>`;
+    if(type==="area")return`<label class="full">${l}<textarea id="f_${k}" name="${k}">${v}</textarea></label>`;
+    return`<label${full?' class="full"':""}>${l}<input id="f_${k}" name="${k}" type="${type}" value="${v}"${k==="klient"?" required":""}></label>`;
+  };
+  $("dBody").innerHTML=`<form id="frm"><div class="grid">
+    ${inp("klient","Klient / objekt","text",true)}${inp("misto","Místo")}${inp("segment","Segment (SVJ, firma, RD…)")}
+    ${inp("znacka","Značka")}${inp("typ","Typ (nabídka, studie, smlouva)")}${inp("cislo","Č. nabídky")}${inp("datum","Datum","date")}
+    ${inp("reseni","Řešení","text",true)}${inp("cena","Cena hlavní varianty (Kč bez DPH)","number")}${inp("stav","Stav")}
+    ${inp("cenaText","Ceny variant / financování","area")}${inp("navratnost","Úspora / návratnost","text",true)}
+    ${inp("dalsiKrok","Další krok","text")}${inp("termin","Termín","date")}${inp("kontakt","Kontakt","text",true)}
+    ${inp("odkaz","Odkaz (https://…)","url",true)}${inp("slozka","Složka v Projektech","text",true)}${inp("poznamka","Poznámka","area")}
+  </div><p class="err" id="fErr"></p></form>`;
+  $("dFoot").innerHTML=`<button class="btn" type="button" id="bCancel">Zrušit</button><button class="btn primary" type="submit" form="frm">Uložit</button>`;
+  $("bCancel").onclick=()=>isNew?$("dlg").close():showDetail(x);
+  $("frm").addEventListener("submit",async e=>{
+    e.preventDefault();
+    const fd=new FormData(e.target),d={};
+    for(const [k,v] of fd.entries()){const t=String(v).trim();if(t!=="")d[k]=k==="cena"?Number(t):t}
+    if(!d.klient){$("fErr").textContent="Vyplňte klienta nebo objekt.";return}
+    d.upraveno=new Date().toISOString();
+    try{
+      const ref=isNew?db.collection("nabidky").doc():db.collection("nabidky").doc(x.id);
+      await ref.set(d);
+      showDetail({...d,id:ref.id});
+    }catch(err){$("fErr").textContent=err&&err.code==="quota_exceeded"?"Databáze je plná, smažte prosím staré záznamy.":"Uložení se nepodařilo. Zkontrolujte připojení a zkuste to znovu."}
+  });
+  if(!$("dlg").open)$("dlg").showModal();
+}
+$("addBtn").addEventListener("click",()=>showForm(null));
+
+(async()=>{
+  const timer=setTimeout(()=>{$("banner").hidden=false;$("banner").textContent="Data se zatím nepodařilo načíst. Zkontrolujte připojení; stránka to zkouší dál."},10000);
+  db=await window.claude?.use?.("db");
+  if(!db){clearTimeout(timer);$("rows").innerHTML=`<tr><td colspan="6" class="empty">Evidence je dostupná po přihlášení k účtu, se kterým je stránka sdílená.</td></tr>`;$("vzory").innerHTML="";return}
+  const user=await window.claude?.use?.("user");
+  const w=user?await user.can("data.write"):null;
+  canWrite=w!==false; $("addBtn").hidden=!canWrite;
+  db.collection("nabidky").onSnapshot(snap=>{
+    if(!snap.metadata.fromCache){clearTimeout(timer);$("banner").hidden=true}
+    items=snap.docs.map(d=>({...d.data(),id:d.id}));render();
+    if(current&&$("dlg").open&&!$("frm")){const c=items.find(x=>x.id===current.id);if(c)showDetail(c)}
+  },e=>{clearTimeout(timer);$("banner").hidden=false;$("banner").textContent="Spojení s evidencí se přerušilo. Obnovte stránku."});
+})();
+</script>
