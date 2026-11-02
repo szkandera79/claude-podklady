@@ -32,10 +32,10 @@ RA
 354 900 Kč
 ročně · o 67 % méně
 NÁVRATNOST
-4,4 roku
-investice 1 565 000 Kč
+4,6 roku
+investice 1 650 000 Kč
 Teplo za třetinu dnešní ceny
-1 Investice se vrátí za 4,4 roku
+1 Investice se vrátí za 4,6 roku
 2
 Vyrobené teplo vyjde asi na 400 Kč/GJ místo
 Při úhradě z fondu oprav. Za 15 let provozu zůstane
@@ -43,7 +43,7 @@ dnešních 1 209 Kč/GJ. Dům
 ušetří orientačně 355
 dom
 u
-po odečtení investice asi 3,8 mil. Kč.
+po odečtení investice asi 3,7 mil. Kč.
 000 Kč ročně
 .
 Lze splácet — a přesto platit méně než dnes
@@ -56,7 +56,7 @@ Splátky jdou do vlastního majetku
 kotelny z úvěru
 : dům nedá nic předem a ročně
 dodavatele. Po 10 letech klesnou roční náklady na
-zaplatí asi o 89 500 Kč méně než Veolii.
+zaplatí asi o 69 000 Kč méně než Veolii.
 zhruba 178 000 Kč.
 Teplovod zůstává
 5 Poru
@@ -70,9 +70,9 @@ Dvě jednotky pokryjí celou ztrátu dom
 u do −15 °C.
 Třetí je rezerva a záloha. Za ní je ještě teplovod.
 7 Topí ze sluníčka
-Záložní jednotka za poloviční cenu
+Záložní jednotka se slevou 40 %
 8
-Třetí čerpadlo stojí 165 000 Kč místo 330 000 Kč.
+Třetí čerpadlo stojí 210 000 Kč místo 350 000 Kč.
 Panely jdou
 přímo do jednotky
 bez střídače a
@@ -98,10 +98,10 @@ Způsob PředemRočně 1.–10. rok Na b
 yt měsíčně Úspora proti dnešku
 Dnes — teplo od Veolie 0 Kč 533 100 Kč 2 613 Kč —
 Bez vlastních peněz (pronájem +
-0 Kč 443 600 Kč 2 175 Kč 89 500 Kč
+0 Kč 464 000 Kč 2 275 Kč 69 100 Kč
 úvěr)
-Pronájem čerpadel, vnitřek z fondu 740 000 Kč 347 200 Kč 1 702 Kč 185 900 Kč
-Celá kotelna z fondu oprav 1 565 000 Kč 178 200 Kč 874 Kč 354 900 Kč
+Pronájem čerpadel, vnitřek z fondu 740 000 Kč 367 600 Kč 1 802 Kč 165 500 Kč
+Celá kotelna z fondu oprav 1 650 000 Kč 178 200 Kč 874 Kč 354 900 Kč
 Na b
 yt = průměr na 17 b
 200 Kč ročně
@@ -117,7 +117,7 @@ yvatelé. Navíc zůstává přípojka teplovodu
 .
 Co když zdraží elektřina?
 I při elektřině dražší o polovinu (5 250 Kč/MWh) dům
-ušetří asi 283 000 Kč ročně a investice se vrátí asi za 5,5 roku
+ušetří asi 283 000 Kč ročně a investice se vrátí asi za 5,8 roku
 lze navíc vysoutěžit a část vyrobit vlastními panely. Cenu tepla z CZT si dům vy
 brat nemůže.
 . Elektřinu

@@ -22,9 +22,11 @@ SERVICE = 35_000                      # Kč/rok, 3 jednotky (vzor RHX30)
 
 # ---- ceny (bez DPH) — stejný obchodní model jako nabídka s X50
 INNER = 740_000                       # vnitřní část kotelny (1 600 000 − 2 × 430 000)
-UNIT = 330_000                        # RHX30 Pro, ceník 2026
-EXTRA_DISC = 0.5                      # sleva na 3. (záložní) jednotku — K POTVRZENÍ
-SPL = {60: 8_400, 120: 6_800}         # splátka za jednotku/měs, servis v ceně (přepočet z Jandovy 330/430)
+UNIT = 350_000                        # RHX30 Pro, jednotky 1 a 2 (uživatel 2. 11. 2026)
+EXTRA = 210_000                       # 3. (záložní) jednotka (uživatel 2. 11. 2026) = sleva 40 %
+SPL_330 = {60: 8_400, 120: 6_800}     # splátka za jednotku 330 tis./měs, servis v ceně (vzor RHX30)
+SPL = {m: round(v * UNIT / 330_000, -2) for m, v in SPL_330.items()}        # poměrem ceny
+SPL_X = {m: round(v * EXTRA / 330_000, -2) for m, v in SPL_330.items()}
 LOAN_RATE, LOAN_Y = 0.055, 10         # orientační úvěr SVJ na vnitřní část
 
 FV_PER_UNIT_KWP = 5.0                 # 1 string 10 × ~500 Wp na jednotku (výrobce 21. 10.: RHX 1 × 10 ks)
@@ -43,7 +45,7 @@ def r(x, k=100):
 
 
 now = GJ * PRICE_GJ
-extra = UNIT * (1 - EXTRA_DISC)
+extra = EXTRA
 price = INNER + N_BASE * UNIT + extra
 el_mwh = UT_MWH / SCOP_UT + TUV_MWH / SCOP_TUV
 el = el_mwh * EL
@@ -56,11 +58,13 @@ print(f"Cena: {INNER:,} + {N_BASE}×{UNIT:,} + {extra:,.0f} = {price:,.0f} Kč (
 print(f"Elektřina {el_mwh:.1f} MWh = {el:,.0f}; servis {SERVICE:,}; provoz {run:,.0f} ({run/BYTY:,.0f}/byt) "
       f"→ {run/GJ:.0f} Kč/GJ; úspora {save:,.0f} ({save/now:.0%}); návratnost {price/save:.1f} r; "
       f"15 let {(save*15-price)/1e6:.1f} mil. čistého")
+el2 = el_mwh * 5250 + SERVICE
+print(f"El. +50 %: úspora {now-el2:,.0f}, návratnost {price/(now-el2):.1f} r")
 
 for m, s in SPL.items():
-    mon = s * N_BASE + s * (1 - EXTRA_DISC) * N_EXTRA
+    mon = s * N_BASE + SPL_X[m] * N_EXTRA
     yr = mon * 12 + el
-    print(f"Pronájem {m} m: splátka {mon:,.0f}/měs; ročně vč. el. {yr:,.0f}; úspora {now-yr:,.0f} "
+    print(f"Pronájem {m} m: {s:,.0f}+{s:,.0f}+{SPL_X[m]:,.0f} → splátka {mon:,.0f}/měs; ročně vč. el. {yr:,.0f}; úspora {now-yr:,.0f} "
           f"({(now-yr)/BYTY/12:,.0f}/byt/měs); vstup {INNER:,} → návratnost vstupu {INNER/(now-yr):.1f} r")
     ln = annuity(INNER, LOAN_RATE, LOAN_Y)
     yr2 = yr + ln * 12
