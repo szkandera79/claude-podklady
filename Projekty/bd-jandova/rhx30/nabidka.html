@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cenová nabídka rev. 1 — kotelna BD Jandova 7 (RHX30 Pro) | ThermaVera Energy</title>
+<style>
+:root{
+  --bg:#eef1ee; --panel:#fff; --ink:#1b2420; --muted:#5d6b64; --line:#d8ded9;
+  --accent:#1E8F5B; --accent-2:#0F3D2E; --accent-bg:#E7F3EC;
+  --amber:#F2A33A; --amber-deep:#DA8718; --amber-bg:#FFF6E9; --amber-ink:#8A5312;
+  --radius:14px; --shadow:0 1px 2px rgba(20,40,30,.05), 0 6px 22px rgba(20,40,30,.07);
+  --serif:Georgia,"Times New Roman","Iowan Old Style",serif;
+  --sans:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:26px 20px 60px}
+.doc{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:44px 52px}
+
+/* ---- interní blok (netiskne se) ---- */
+.internal{background:#fff8e6;border:2px dashed var(--amber-deep);border-radius:12px;padding:16px 20px;margin-bottom:22px}
+.internal h4{margin:0 0 8px;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;color:var(--amber-ink)}
+.internal ol{margin:6px 0 0;padding-left:20px;font-size:13.5px}
+.internal li{margin:4px 0}
+.toolbar{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.btn{font:600 13.5px var(--sans);border:1px solid var(--line);background:#fff;color:var(--ink);
+     padding:9px 14px;border-radius:10px;cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* ---- hlavička dokumentu ---- */
+.head{border-bottom:2px solid var(--accent);padding-bottom:16px;margin-bottom:6px;display:flex;gap:18px;align-items:flex-start}
+.logo{width:46px;height:46px;flex:none;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:grid;place-items:center;color:#fff;font-weight:700;font-size:20px}
+.head .eyebrow{font-size:11.5px;letter-spacing:2.4px;text-transform:uppercase;color:var(--accent);font-weight:700}
+.head h1{font-family:var(--serif);font-size:27px;margin:6px 0 4px;line-height:1.2}
+.head .sub{color:var(--muted);font-size:13.5px}
+.head .meta{margin-left:auto;text-align:right;font-size:12px;color:var(--muted);line-height:1.7;white-space:nowrap}
+
+h2{font-family:var(--serif);font-size:18px;margin:30px 0 8px;color:var(--accent-2);padding-left:12px;border-left:3px solid var(--accent)}
+h3{font-size:14.5px;margin:18px 0 4px}
+p{margin:9px 0;font-size:14.5px;color:#26302b}
+ul{margin:8px 0;padding-left:20px;font-size:14.5px}
+li{margin:4px 0}
+.lead{font-size:15.5px}
+.small{font-size:12.5px;color:var(--muted)}
+
+/* ---- metriky ---- */
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 6px}
+.metric{border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;position:relative;overflow:hidden;background:#fbfdfb}
+.metric::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--accent),var(--accent-2))}
+.metric .k{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.metric .v{font-family:var(--serif);font-size:25px;margin-top:5px;color:var(--accent-2);line-height:1.15}
+.metric .s{font-size:11.5px;color:var(--muted);margin-top:3px}
+
+/* ---- tabulky ---- */
+table{width:100%;border-collapse:collapse;margin:12px 0 6px;font-size:13.8px}
+caption{text-align:left;font-weight:700;padding:6px 0;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f4f7f4;font-weight:600;color:var(--muted)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.total td{font-weight:700;background:var(--accent-bg);color:var(--accent-2);border-bottom:none}
+tr.hl td{font-weight:700}
+.tiers td:first-child{white-space:nowrap}
+.pill{display:inline-block;min-width:26px;text-align:center;background:var(--accent-2);color:#fff;border-radius:999px;font-weight:700;font-size:12px;padding:2px 8px}
+.pill.o{background:#fff;color:var(--accent-2);border:1.5px dashed var(--accent)}
+
+/* ---- karty variant ---- */
+.vars{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+.var{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fbfdfb;display:flex;flex-direction:column}
+.var.reco{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
+.var .vh{background:var(--accent-2);color:#fff;padding:12px 16px}
+.var .vh .t{font-family:var(--serif);font-size:16.5px}
+.var .vh .p{font-size:12.5px;color:#CFE6D9;margin-top:2px}
+.var .vb{padding:14px 16px;font-size:13.5px;flex:1}
+.var .vb .tagline{margin-bottom:4px}
+.var .vb ul{padding-left:18px;margin:6px 0;font-size:13.3px}
+.var .price{border-top:1px solid var(--line);padding:12px 16px;background:#fff}
+.var .price .c{font-family:var(--serif);font-size:21px;color:var(--accent-2)}
+.var .price .n{font-size:11.5px;color:var(--muted)}
+.tagline{display:inline-block;background:var(--accent-bg);color:var(--accent-2);font-size:11px;font-weight:700;
+         padding:3px 9px;border-radius:999px;letter-spacing:.4px;text-transform:uppercase}
+.pros{color:var(--accent-2);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.5px;margin-top:10px}
+.cons{color:var(--amber-ink);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.5px;margin-top:10px}
+
+/* ---- zvýrazněné bloky ---- */
+.callout{border-radius:12px;padding:16px 20px;margin:16px 0;border:1px solid transparent}
+.callout.green{background:var(--accent-bg);border-color:#bfe0cd}
+.callout.amber{background:var(--amber-bg);border-color:#f0d3bf}
+.callout h3{margin-top:0;color:var(--accent-2)}
+.callout.amber h3{color:var(--amber-ink)}
+.callout p:last-child{margin-bottom:0}
+
+figure{margin:16px 0 6px}
+figure img,figure svg{display:block;width:100%;height:auto;max-width:100%;border:1px solid var(--line);border-radius:10px;background:#fff}
+figcaption{font-size:12px;color:var(--muted);margin-top:7px}
+
+.footnote{margin-top:20px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted)}
+.sign{margin-top:26px;font-size:14px;page-break-inside:avoid}
+.sign .brand-name{font-family:var(--serif);font-size:20px;color:var(--accent-2);margin:10px 0 10px}
+.contact{display:flex;flex-wrap:wrap;gap:8px 30px;background:var(--accent-bg);border:1px solid #bfe0cd;
+         border-radius:12px;padding:15px 20px;font-size:15px;color:var(--accent-2);font-weight:600}
+.contact .lbl{display:block;font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;
+              color:var(--accent);font-weight:700;margin-bottom:1px}
+.contact .web{font-weight:700;border-bottom:2px solid var(--accent)}
+
+@media screen and (max-width:760px){
+  .doc{padding:26px 22px}
+  .metrics{grid-template-columns:1fr}
+  .vars{grid-template-columns:1fr}
+  .head{flex-wrap:wrap}
+  .head .meta{margin-left:0;text-align:left;white-space:normal}
+}
+@media print{
+  /* Tisk drží stejnou sazbu jako náhled: šířka obsahu 796 px (jako .doc v náhledu)
+     se poměrově zmenší na tiskovou šířku A4 (186 mm ≈ 703 px). Tím sedí zalomení
+     řádků, počet sloupců i vzájemné velikosti písma. */
+  @page{size:A4 portrait;margin:12mm}
+  html,body{background:#fff}
+  .wrap{max-width:none;margin:0;padding:0;width:796px;zoom:0.8825}
+  .doc{box-shadow:none;border:none;border-radius:0;padding:0;background:#fff}
+  .no-print{display:none !important}
+  h2{page-break-after:avoid}
+  table,.metric,.var,.callout,figure{page-break-inside:avoid}
+  ul,ol{page-break-inside:avoid}
+  .page-break{page-break-before:always}
+}
+
+/* ---- doplňky pro BD Jandova rev. 1 a podklady ---- */
+.metrics.four{grid-template-columns:repeat(4,1fr)}
+.metrics.four .metric .v{font-size:22px}
+.reasons{counter-reset:r;display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;margin:14px 0}
+.reason{counter-increment:r;border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 54px;position:relative;background:#fbfdfb;page-break-inside:avoid}
+.reason::before{content:counter(r);position:absolute;left:14px;top:12px;width:28px;height:28px;border-radius:50%;
+  background:var(--accent-2);color:#fff;font-weight:700;font-size:14px;display:grid;place-items:center}
+.reason b{display:block;color:var(--accent-2);font-size:14.5px;margin-bottom:2px}
+.reason span{font-size:13.3px;color:#26302b}
+.reasons.one{grid-template-columns:1fr}
+.qa dt{font-weight:700;color:var(--accent-2);margin-top:12px;font-size:14px}
+.qa dd{margin:3px 0 0;font-size:13.8px;color:#26302b}
+.check{list-style:none;padding-left:0}
+.check li{padding-left:26px;position:relative}
+.check li::before{content:"";position:absolute;left:2px;top:4px;width:13px;height:13px;border:2px solid var(--accent);border-radius:3px}
+.big{font-family:var(--serif);font-size:30px;color:var(--accent-2);line-height:1.1}
+.vote{border:2px solid var(--accent);border-radius:14px;padding:16px 20px;margin:18px 0;background:#fff;page-break-inside:avoid}
+.vote h3{margin-top:0;color:var(--accent-2)}
+.vote .line{border-bottom:1px dotted var(--muted);display:inline-block;min-width:150px}
+@media screen and (max-width:760px){.reasons{grid-template-columns:1fr}.metrics.four{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- ====================== INTERNÍ POZNÁMKA (netiskne se) ====================== -->
+<div class="toolbar no-print">
+  <button class="btn primary" onclick="window.print()">Tisk / uložit jako PDF</button>
+  <button class="btn" onclick="document.getElementById('int').remove()">Skrýt interní poznámku</button>
+</div>
+<div class="internal no-print" id="int">
+  <h4>Interní — před odesláním ověřit</h4>
+  <ol>
+    <li><strong>Sleva na 3. (záložní) jednotku 50 %</strong> (165 000 Kč místo 330 000 Kč, splátka poloviční) — můj návrh „velmi výhodných podmínek", potvrdit. Nákup RHX30 Pro 4 190 USD ≈ 90–100 tis. Kč vč. dopravy, marže zůstává kladná.</li>
+    <li><strong>Ceny a splátky</strong> převzaty z obchodního modelu nabídky s X50 / vzoru RHX30: vnitřní část 740 000 Kč, jednotka 330 000 Kč, splátka 8 400 / 6 800 Kč za jednotku (60 / 120 měs.) — podléhá potvrzení financující stranou.</li>
+    <li><strong>Úvěr SVJ na vnitřní část</strong> počítán orientačně 5,5 % p. a. na 10 let (8 031 Kč/měs.) — ověřit aktuální nabídku bank pro SVJ.</li>
+    <li><strong>Umístění na střeše</strong>: statika (hmotnost jednotek + rám), kotvení a antivibrační uložení, jeřáb, trasa potrubí střecha → kotelna (šachta / stoupačka), ochrana proti zamrznutí, akustika vůči sousedním domům. Rám a statika jsou zatím v „není v ceně".</li>
+    <li><strong>Ponechání přípojky CZT</strong>: prověřit smlouvu s Veolií — stálé platby (rezervovaný výkon / stálý plat), minimální odběr, podmínky snížení výkonu. Pokud jsou fixní platby vysoké, zvážit snížení sjednaného výkonu. Napojení předávací stanice jako zálohy upřesní projekt (zatím „není v ceně").</li>
+    <li><strong>FV přímo do TČ u RHX Pro</strong>: výrobce 21. 10. 2026: Imax 20 A, Uoc &lt; 537 V, 1 string × 10 panelů na jednotku, bez předimenzování. Cena 55 000 Kč za sadu je odhad (panely, konstrukce, DC rozvod, ochrany, montáž, deska MPPT) — nacenit.</li>
+    <li><strong>Výkon 19,0 kW při A−15/W55</strong> dle výkonové mapy výrobce (KEYMARK uvádí více). 2 jednotky = 38 kW proti ztrátě 30 kW (odhad ze spotřeby — ověřit výpočtem).</li>
+    <li>Nepsat „nejtišší na trhu" ani „účinnější než všichni" — srovnání jen s X50 a s „většinou značkové konkurence" (SCOP při 35 °C).</li>
+    <li>Čísla = výstup <code>bd-jandova/rhx30/src/model.py</code>; po změně předpokladů přepsat ručně ve všech třech dokumentech.</li>
+  </ol>
+</div>
+
+<div class="doc">
+
+<!-- ====================== HLAVIČKA ====================== -->
+<div class="head">
+  <div class="logo">7</div>
+  <div>
+    <div class="eyebrow">Cenová nabídka · revize 1</div>
+    <h1>Zelená kotelna pro bytový dům<br>Jandova 7, Ostrava-Zábřeh</h1>
+    <div class="sub">Tepelná čerpadla RHX30 Pro na střeše domu — vytápění i ohřev teplé vody, přípojka CZT zůstává</div>
+  </div>
+  <div class="meta">
+    č. nabídky <strong>2026-11-BDJ-02</strong><br>
+    nahrazuje 2026-09-BDJ-01<br>
+    zpracováno 2. 11. 2026<br>
+    platnost 60 dnů · ceny bez DPH
+  </div>
+</div>
+
+<p class="lead">Vážený pane Matějů,<br>
+děkuji za dosavadní jednání. Předkládám aktualizovanou nabídku zelené kotelny pro váš dům. Proti zářijové
+verzi jsme zdroj postavili na nových jednotkách <strong>RHX30 Pro</strong> — mají vyšší účinnost, jsou tišší,
+umí topit přímo ze sluníčka a osadíme je na střechu domu. Obchodní model zůstává stejný: kotelnu můžete
+zaplatit najednou, nebo tepelná čerpadla splácet. Nově navrhujeme <strong>tři jednotky</strong> — dvě pokryjí
+tepelnou ztrátu domu, třetí je výkonová rezerva a záloha za zvýhodněnou cenu. A dům <strong>zůstává připojen
+na teplovod</strong>.</p>
+
+<div class="metrics four">
+  <div class="metric">
+    <div class="k">Roční úspora</div>
+    <div class="v">≈ 355 000 Kč</div>
+    <div class="s">o 67 % méně než dnes</div>
+  </div>
+  <div class="metric">
+    <div class="k">Prostá návratnost</div>
+    <div class="v">4,4 roku</div>
+    <div class="s">při úhradě z vlastních zdrojů</div>
+  </div>
+  <div class="metric">
+    <div class="k">Se splátkami</div>
+    <div class="v">od 1. roku</div>
+    <div class="s">platíte méně než dnes Veolii</div>
+  </div>
+  <div class="metric">
+    <div class="k">Cena tepla</div>
+    <div class="v">≈ 400 Kč/GJ</div>
+    <div class="s">dnes 1 209 Kč/GJ</div>
+  </div>
+</div>
+
+<!-- ====================== 1 VSTUPY ====================== -->
+<h2>1 · Z čeho vycházíme</h2>
+<p>Podkladem je vyúčtování dodávek tepla od společnosti Veolia, ve kterém jsou vytápění a ohřev teplé
+vody vyčísleny odděleně. Cena tepla je <strong>1 354 Kč/GJ včetně DPH</strong>, tedy 1 209 Kč/GJ bez DPH
+(v první verzi nabídky byla chybně vedena jako cena bez DPH — propočty jsou opravené). Tepelná ztráta
+objektu je odhadnuta ze spotřeby na <strong>30 kW při venkovní teplotě −15 °C</strong>.</p>
+
+<table>
+  <caption>Současný stav — roční bilance (bez DPH)</caption>
+  <thead><tr><th>Položka</th><th class="num">Spotřeba tepla</th><th class="num">Náklad</th></tr></thead>
+  <tbody>
+    <tr><td>Vytápění</td><td class="num">210 GJ · 58,3 MWh</td><td class="num">253 875 Kč</td></tr>
+    <tr><td>Ohřev teplé vody</td><td class="num">231 GJ · 64,2 MWh</td><td class="num">279 263 Kč</td></tr>
+    <tr class="total"><td>Celkem</td><td class="num">441 GJ · 122,5 MWh</td><td class="num">533 138 Kč</td></tr>
+  </tbody>
+</table>
+<p class="small">S DPH dům platí 597 114 Kč ročně. V přepočtu na jednu bytovou jednotku stojí teplo a teplá voda
+31 361 Kč ročně bez DPH, tedy asi 2 600 Kč měsíčně. Odběr teplé vody 701 m³ za rok.</p>
+
+<!-- ====================== 2 ŘEŠENÍ ====================== -->
+<h2>2 · Co navrhujeme</h2>
+<p>V kotelně vznikne nový zdroj tepla: akumulace 2 × 1 000 l, zásobníky teplé vody 3 × 1 000 l,
+strojovna a regulace. Venkovní jednotky — <strong>tři tepelná čerpadla RHX30 Pro v kaskádě</strong> —
+osadíme na <strong>střechu domu</strong>. Otopná soustava v bytech se nemění.</p>
+
+<table>
+  <caption>Dimenzování zdroje při −15 °C a teplotě otopné vody 55 °C</caption>
+  <thead><tr><th>Stav</th><th class="num">Výkon zdroje</th><th class="num">Tepelná ztráta</th><th>Výsledek</th></tr></thead>
+  <tbody>
+    <tr><td>Běžný provoz — jednotky 1 a 2</td><td class="num">2 × 19 = 38 kW</td><td class="num">30 kW</td><td><strong>ztráta pokryta zcela</strong>, bez elektrického dotápění</td></tr>
+    <tr><td>Mrazy + souběžný ohřev teplé vody</td><td class="num">3 × 19 = 57 kW</td><td class="num">30 kW + TUV</td><td>třetí jednotka dodá chybějící výkon</td></tr>
+    <tr class="hl"><td>Porucha kterékoli jednotky</td><td class="num">38 kW</td><td class="num">30 kW</td><td>dům to nepocítí — zbylé dvě pokryjí vše</td></tr>
+    <tr><td>Krajní záloha</td><td class="num" colspan="2">stávající přípojka CZT</td><td>druhá, na čerpadlech nezávislá záloha</td></tr>
+  </tbody>
+</table>
+<p class="small">Výkon 19 kW na jednotku je hodnota z výkonové mapy výrobce při −15 °C a 55 °C — nikoli katalogový
+výkon při +7 °C. Tepelnou ztrátu ověříme výpočtem po prohlídce objektu.</p>
+
+<div class="callout green">
+  <h3>Třetí jednotka jako efektivní bivalence — za poloviční cenu</h3>
+  <p>Místo elektrických patron, které topí s účinností 1 : 1, kryje výkonový deficit v nejchladnějších dnech
+  <strong>další tepelné čerpadlo</strong> se stejnou účinností jako ostatní. Zároveň je to plnohodnotná záloha:
+  při poruše nebo servisu kterékoli jednotky převezmou provoz zbylé dvě a dům to vůbec nepocítí. Jednotky se
+  v provozu střídají, což prodlužuje jejich životnost. Třetí jednotku nabízíme <strong>se slevou 50 %</strong>
+  — za 165 000 Kč místo 330 000 Kč.</p>
+</div>
+
+<div class="callout green">
+  <h3>Teplovod zůstává — vybíráte si, čím a jak topit</h3>
+  <p>Dům se od centrálního zásobování <strong>neodpojuje</strong>. Předávací stanice zůstává a slouží jako
+  další nezávislá záloha. Společenství si tak samo vybírá, z jakého zdroje bude topit, a nic tím nepálí
+  za sebou. Podmínky dalšího odběru (případné stálé platby) prověříme ve smlouvě s Veolií před realizací.</p>
+</div>
+
+<!-- ====================== 3 CO SE MĚNÍ ====================== -->
+<h2>3 · Co se mění proti zářijové nabídce</h2>
+<table>
+  <thead><tr><th></th><th>Září — 2 × REO X50</th><th>Nyní — 3 × RHX30 Pro</th></tr></thead>
+  <tbody>
+    <tr><td>Výkon při −15 °C / 55 °C</td><td>50 kW (2 jednotky)</td><td><strong>57 kW</strong> (3 jednotky)</td></tr>
+    <tr><td>Při poruše jedné jednotky</td><td>25 kW — pod tepelnou ztrátou</td><td><strong>38 kW — nad tepelnou ztrátou</strong></td></tr>
+    <tr><td>Sezónní účinnost SCOP při 55 °C</td><td>3,21</td><td><strong>3,90</strong> (asi o pětinu vyšší)</td></tr>
+    <tr><td>Akustický výkon jednotky</td><td>65 dB(A)</td><td><strong>59 dB(A)</strong>, noční tichý režim</td></tr>
+    <tr><td>Topení ze sluníčka</td><td>ne</td><td><strong>ano</strong> — panely přímo do jednotky</td></tr>
+    <tr><td>Umístění</td><td>u objektu</td><td><strong>na střeše</strong></td></tr>
+    <tr><td>Přípojka CZT</td><td>odpojení</td><td><strong>zůstává jako záloha</strong></td></tr>
+    <tr class="total"><td>Cena bez DPH</td><td>1 600 000 Kč</td><td>1 565 000 Kč</td></tr>
+  </tbody>
+</table>
+
+<!-- ====================== 4 PROČ RHX30 PRO ====================== -->
+<h2>4 · Proč jednotky RHX30 Pro</h2>
+<div class="vars">
+  <div class="var">
+    <div class="vh"><div class="t">Vysoká účinnost</div><div class="p">Nižší účet za elektřinu každý rok</div></div>
+    <div class="vb">
+      <p>Sezónní topný faktor <strong>SCOP 3,90 při 55 °C</strong> a <strong>5,25 při 35 °C</strong>
+      (EN 14825, průměrné klima).</p>
+      <ul>
+        <li>Při nízkoteplotním provozu víc než většina značkových tepelných čerpadel s chladivem R290.</li>
+        <li>Proti dříve nabízeným jednotkám X50 asi o pětinu méně elektřiny na stejné teplo.</li>
+        <li>V propočtu počítáme konzervativně se sezónní účinností 3,4 pro vytápění a 2,7 pro teplou vodu.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="var">
+    <div class="vh"><div class="t">Na střeše, mimo dosah lidí</div><div class="p">Nikomu nepřekáží a nikoho neruší</div></div>
+    <div class="vb">
+      <p>Jednotky osadíme na střechu domu — <strong>mimo okna, chodníky, parkoviště i zahrady</strong>.
+      Nezabírají pozemek a nejsou na očích.</p>
+      <ul>
+        <li>Akustický výkon 59 dB(A), o 6 dB(A) méně než X50 — zhruba poloviční hlasitost.</li>
+        <li>Noční tichý režim ve dvou stupních.</li>
+        <li>Antivibrační uložení na nosném rámu; statiku střechy a hluk vůči okolí posoudí projekt.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="callout amber">
+  <h3>Topí ze sluníčka — i s minimální investicí do fotovoltaiky</h3>
+  <p>Každá jednotka má <strong>vlastní vstup pro fotovoltaické panely</strong>. Panely se připojí přímo
+  ke kompresoru — <strong>bez střídače, bez baterie a bez přetoků do sítě</strong>. Přes den jede kotelna
+  přednostně ze slunce, co sluníčko nepokryje, si plynule dobere ze sítě. Nejvíc to pomáhá od jara do podzimu
+  a při ohřevu teplé vody, který u vás běží celoročně a spotřebuje víc tepla než vytápění.</p>
+  <table>
+    <thead><tr><th>Orientačně (Ostrava)</th><th class="num">1 sada panelů</th><th class="num">3 sady (na každou jednotku)</th></tr></thead>
+    <tbody>
+      <tr><td>Panely / výkon</td><td class="num">10 ks · ≈ 5 kWp</td><td class="num">30 ks · ≈ 15 kWp</td></tr>
+      <tr><td>Investice vč. montáže</td><td class="num">≈ 55 000 Kč</td><td class="num">≈ 165 000 Kč</td></tr>
+      <tr><td>Úspora elektřiny za rok</td><td class="num">9 000 – 12 000 Kč</td><td class="num">27 000 – 35 000 Kč</td></tr>
+      <tr class="hl"><td>Návratnost</td><td class="num">5 – 6 let</td><td class="num">5 – 6 let</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Klasická fotovoltaika stejného výkonu se střídačem, bateriemi a připojením k distribuční soustavě
+  stojí několikanásobně víc. Začít lze jednou sadou panelů a přidávat postupně. Panely mohou být na téže střeše
+  vedle jednotek. Hodnoty jsou orientační; počet panelů, rozsah a cenu potvrdíme v projektu. Fotovoltaika
+  není součástí ceny kotelny a v propočtu úspor níže ji nezapočítáváme.</p>
+</div>
+
+<!-- ====================== 5 EKONOMIKA ====================== -->
+<h2>5 · Provozní ekonomika</h2>
+<p>Propočet vychází z tepelné potřeby 441 GJ ročně, sezónní účinnosti 3,4 pro vytápění a 2,7 pro ohřev
+teplé vody a ceny elektřiny 3 500 Kč/MWh. Fotovoltaika ani dotace nejsou započteny.</p>
+<table>
+  <caption>Roční provozní náklady (bez DPH)</caption>
+  <thead><tr><th>Položka</th><th class="num">Dnes — CZT</th><th class="num">Zelená kotelna</th></tr></thead>
+  <tbody>
+    <tr><td>Nakoupené teplo</td><td class="num">533 138 Kč</td><td class="num">—</td></tr>
+    <tr><td>Elektřina pro tepelná čerpadla (40,9 MWh)</td><td class="num">—</td><td class="num">143 200 Kč</td></tr>
+    <tr><td>Servis a údržba</td><td class="num">—</td><td class="num">35 000 Kč</td></tr>
+    <tr class="total"><td>Roční náklady celkem</td><td class="num">533 138 Kč</td><td class="num">178 200 Kč</td></tr>
+    <tr class="hl"><td>Roční úspora</td><td class="num">—</td><td class="num">354 900 Kč</td></tr>
+    <tr><td>Výrobní cena tepla</td><td class="num">1 209 Kč/GJ</td><td class="num">404 Kč/GJ</td></tr>
+    <tr><td>Náklad na bytovou jednotku a rok</td><td class="num">31 361 Kč</td><td class="num">10 485 Kč</td></tr>
+  </tbody>
+</table>
+
+<!-- ====================== 6 NÁVRATNOST ====================== -->
+<h2>6 · Cena a návratnost investice</h2>
+<table>
+  <caption>Cena díla (bez DPH)</caption>
+  <tbody>
+    <tr><td>Vnitřní část kotelny — akumulace, zásobníky TUV, strojovna, elektro, regulace, montáž</td><td class="num">740 000 Kč</td></tr>
+    <tr><td>Tepelná čerpadla RHX30 Pro — jednotky 1 a 2 (2 × 330 000 Kč)</td><td class="num">660 000 Kč</td></tr>
+    <tr><td>Tepelné čerpadlo RHX30 Pro — jednotka 3, rezerva a záloha (sleva 50 %)</td><td class="num">165 000 Kč</td></tr>
+    <tr class="total"><td>Cena celkem</td><td class="num">1 565 000 Kč</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th>Při úhradě z fondu oprav</th><th class="num"></th></tr></thead>
+  <tbody>
+    <tr><td>Investice na bytovou jednotku</td><td class="num">92 100 Kč</td></tr>
+    <tr><td>Roční úspora</td><td class="num">354 900 Kč</td></tr>
+    <tr class="total"><td>Prostá návratnost</td><td class="num">4,4 roku</td></tr>
+    <tr><td>Čistá úspora za 15 let provozu (po odečtení investice)</td><td class="num">≈ 3,8 mil. Kč</td></tr>
+  </tbody>
+</table>
+<p class="small">Prostá návratnost nezohledňuje inflaci, budoucí vývoj cen tepla ani elektřiny a případnou dotaci.
+Počítáme konzervativně se současnou cenovou hladinou. I při ceně elektřiny o polovinu vyšší (5 250 Kč/MWh)
+vychází návratnost kolem 5,5 roku.</p>
+
+<!-- ====================== 7 FINANCOVÁNÍ ====================== -->
+<h2>7 · Nemusíte platit všechno najednou</h2>
+<p>Stejně jako v zářijové nabídce nabízíme <strong>pronájem tepelných čerpadel se splátkovým kalendářem</strong>.
+Společenství hradí vnitřní část kotelny, tepelná čerpadla se splácejí měsíčně. <strong>Servis a údržba jsou
+ve splátce.</strong> Po skončení zařízení přechází do majetku společenství za odkupní cenu. Třetí, záložní jednotka
+má i ve splátkách poloviční sazbu.</p>
+<table>
+  <caption>Pronájem tří tepelných čerpadel (bez DPH)</caption>
+  <thead><tr><th></th><th class="num">60 měsíců</th><th class="num">120 měsíců</th></tr></thead>
+  <tbody>
+    <tr><td>Vstupní investice (vnitřní část kotelny)</td><td class="num">740 000 Kč</td><td class="num">740 000 Kč</td></tr>
+    <tr><td>Měsíční splátka za technologii vč. servisu</td><td class="num">21 000 Kč</td><td class="num">17 000 Kč</td></tr>
+    <tr><td>Roční náklady vč. splátek a elektřiny</td><td class="num">395 200 Kč</td><td class="num">347 200 Kč</td></tr>
+    <tr class="total"><td>Roční úspora proti dnešku</td><td class="num">137 900 Kč</td><td class="num">185 900 Kč</td></tr>
+    <tr><td>Odkupní cena po skončení</td><td class="num">15 % z ceny</td><td class="num">1 Kč</td></tr>
+  </tbody>
+</table>
+
+<div class="callout green">
+  <h3>Splácíte vlastní kotelnu — a platíte méně než dnes Veolii</h3>
+  <p>Pokud společenství nechce sáhnout do fondu oprav vůbec, lze i vnitřní část kotelny financovat úvěrem pro SVJ
+  (orientačně 5,5 % ročně na 10 let, asi 8 000 Kč měsíčně). Pak dům <strong>neplatí nic předem</strong> a ročně
+  vydá za splátky čerpadel, splátku úvěru a elektřinu asi <strong>443 600 Kč — o 89 500 Kč méně, než dnes platí
+  za teplo</strong>. Po deseti letech je kotelna splacená, patří domu a roční náklady klesnou na zhruba
+  178 000 Kč.</p>
+</div>
+<table>
+  <caption>Srovnání ročních výdajů domu (bez DPH, splátky na 10 let)</caption>
+  <thead><tr><th>Způsob</th><th class="num">Předem</th><th class="num">Ročně roky 1–10</th><th class="num">Ročně od 11. roku</th></tr></thead>
+  <tbody>
+    <tr><td>Dnes — teplo od Veolie</td><td class="num">0 Kč</td><td class="num">533 100 Kč</td><td class="num">533 100 Kč*</td></tr>
+    <tr><td>Bez vlastních peněz — pronájem čerpadel + úvěr</td><td class="num">0 Kč</td><td class="num">443 600 Kč</td><td class="num">178 200 Kč</td></tr>
+    <tr><td>Pronájem čerpadel, vnitřek z fondu oprav</td><td class="num">740 000 Kč</td><td class="num">347 200 Kč</td><td class="num">178 200 Kč</td></tr>
+    <tr class="total"><td>Celá kotelna z fondu oprav</td><td class="num">1 565 000 Kč</td><td class="num">178 200 Kč</td><td class="num">178 200 Kč</td></tr>
+  </tbody>
+</table>
+<p class="small">* Při dnešní ceně tepla. Splátky, odkupní ceny a úvěrové podmínky jsou orientační a podléhají
+potvrzení financující stranou a schválení žádosti. Ceny jsou bez DPH.</p>
+
+<!-- ====================== 8 SCHÉMA ====================== -->
+<div class="page-break"></div>
+<h2>8 · Schéma kotelny</h2>
+<figure>
+<!--SCHEMA:1-->
+<svg role="img" aria-label="Koncepční schéma kotelny BD Jandova 7 — kaskáda tří tepelných čerpadel RHX30 Pro s akumulací a zásobníky TUV" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 875 1005" width="875" height="1005" preserveAspectRatio="xMidYMid meet" font-family="Arial, Helvetica, sans-serif">
+<style>
+     .pipe{fill:none;stroke-linecap:round;stroke-linejoin:round}
+     .sym{fill:#fff;stroke:#16201C;stroke-width:2}
+     .symk{fill:#16201C}
+     .t{fill:#16201C;font-size:12px}
+     .ts{fill:#16201C;font-size:11px}
+     .tx{fill:#5F6B64;font-size:10.5px}
+     .tb{fill:#16201C;font-size:15px;font-weight:bold}
+     .tbs{fill:#16201C;font-size:12px;font-weight:bold}
+     .wt{fill:#fff;font-size:13px;font-weight:bold}
+     .wts{fill:#CFE6D9;font-size:12px;font-weight:bold}
+     .eb{fill:#1E8F5B;font-size:12px;font-weight:bold;letter-spacing:2.4px}
+     .zt{fill:#0F3D2E;font-size:11px;font-weight:bold;letter-spacing:1.2px}
+     .ttl{fill:#0F3D2E;font-size:22px;font-weight:bold}
+     .amb{fill:#8A5312;font-size:11px;font-weight:bold}
+    </style>
+<defs>
+<g id="v"><path class="sym" d="M-10,-7 L0,0 L-10,7 Z"/><path class="sym" d="M10,-7 L0,0 L10,7 Z"/></g>
+<g id="chk"><path class="sym" d="M-10,-7 L9,0 L-10,7 Z"/><line x1="10" y1="-8" x2="10" y2="8" stroke="#16201C" stroke-width="2.2"/></g>
+<g id="pump"><circle class="sym" r="13"/><path class="symk" d="M-5,-6.5 L7,0 L-5,6.5 Z"/></g>
+<g id="flt"><rect class="sym" x="-12" y="-10" width="24" height="20"/><line x1="-12" y1="-10" x2="12" y2="10" stroke="#16201C" stroke-width="1.5"/><line x1="-12" y1="10" x2="12" y2="-10" stroke="#16201C" stroke-width="1.5"/></g>
+<g id="exp"><rect class="sym" x="-13" y="-22" width="26" height="40" rx="12"/><line x1="-13" y1="-2" x2="13" y2="-2" stroke="#16201C" stroke-width="1.5"/></g>
+<g id="sv"><path class="sym" d="M-9,-6 L0,0 L-9,6 Z"/><path fill="none" stroke="#16201C" stroke-width="2" d="M0,0 L0,-9 L8,-9"/><path fill="none" stroke="#5F6B64" stroke-width="1.3" d="M-3,-13 l6,3 l-6,3 l6,3"/></g>
+<g id="mix"><path class="sym" d="M-10,-7 L0,0 L-10,7 Z"/><path class="sym" d="M10,-7 L0,0 L10,7 Z"/><path class="sym" d="M-7,16 L0,0 L7,16 Z"/><circle class="sym" cx="0" cy="-18" r="9"/><text x="0" y="-14" text-anchor="middle" style="font-size:10px;fill:#16201C;font-weight:bold">M</text><line x1="0" y1="-9" x2="0" y2="0" stroke="#16201C" stroke-width="1.6"/></g>
+<g id="ts"><circle class="sym" r="9"/><text x="0" y="4" text-anchor="middle" style="font-size:10px;fill:#16201C;font-weight:bold">T</text></g>
+<marker id="ar" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#16201C"/></marker>
+</defs>
+<rect x="0" y="0" width="875" height="1005" rx="0" fill="#fff" stroke="none"/>
+<rect x="14" y="14" width="847" height="977" rx="0" fill="none" stroke="#16201C" stroke-width="2"/>
+<text x="36" y="48" class="eb" text-anchor="start">THERMAVERA ENERGY</text>
+<text x="36" y="78" class="ttl" text-anchor="start">Kotelna BD Jandova 7 — koncepční schéma</text>
+<text x="839" y="48" class="zt" text-anchor="end">TV-BDJ-04 · rev. 1</text>
+<text x="839" y="72" class="tx" text-anchor="end">17 b.j. · tepelná ztráta 30 kW při −15 °C · 3 × RHX30 Pro</text>
+<line x1="30" y1="94" x2="845" y2="94" stroke="#1E8F5B" stroke-width="2.5"/>
+<rect x="30" y="110" width="815" height="690" rx="8" fill="#FBFDFC" stroke="#DCE6DF" stroke-width="1.5"/>
+<path d="M30,118 a8,8 0 0 1 8,-8 h799 a8,8 0 0 1 8,8 v34 h-815 z" fill="#0F3D2E"/>
+<text x="46" y="137" class="wt" text-anchor="start">KASKÁDA 3 × RHX30 Pro — 2 kryjí ztrátu, 3. rezerva a záloha</text>
+<text x="829" y="137" class="wts" text-anchor="end">57 kW při −15 °C / 55 °C</text>
+<line x1="50" y1="283" x2="825" y2="283" stroke="#16201C" stroke-width="2" stroke-dasharray="12 6"/>
+<text x="822" y="172" class="zt" text-anchor="end">STŘECHA DOMU</text>
+<text x="490" y="351" class="zt" text-anchor="start">STROJOVNA / KOTELNA</text>
+<rect x="70" y="180" width="143" height="85" rx="8" fill="#F4F8F5" stroke="#16201C" stroke-width="2.2"/>
+<text x="141" y="205" class="tbs" text-anchor="middle">TČ 1 — RHX30 Pro</text>
+<text x="141" y="223" class="ts" text-anchor="middle">19 kW při −15 °C / 55 °C</text>
+<text x="141" y="240" class="tx" text-anchor="middle">priorita: vytápění</text>
+<text x="141" y="255" class="tx" text-anchor="middle"></text>
+<rect x="222" y="180" width="143" height="85" rx="8" fill="#F4F8F5" stroke="#16201C" stroke-width="2.2"/>
+<text x="293" y="205" class="tbs" text-anchor="middle">TČ 2 — RHX30 Pro</text>
+<text x="293" y="223" class="ts" text-anchor="middle">19 kW při −15 °C / 55 °C</text>
+<text x="293" y="240" class="tx" text-anchor="middle">priorita: teplá voda</text>
+<text x="293" y="255" class="tx" text-anchor="middle"></text>
+<rect x="374" y="180" width="143" height="85" rx="8" fill="#F4F8F5" stroke="#16201C" stroke-width="2.2"/>
+<text x="445" y="205" class="tbs" text-anchor="middle">TČ 3 — RHX30 Pro</text>
+<text x="445" y="223" class="ts" text-anchor="middle">19 kW při −15 °C / 55 °C</text>
+<text x="445" y="240" class="tx" text-anchor="middle">rezerva výkonu</text>
+<text x="445" y="255" class="tx" text-anchor="middle">a záloha při poruše</text>
+<rect x="530" y="180" width="125" height="85" rx="8" fill="#FFF8EC" stroke="#DA8718" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="592" y="203" class="amb" text-anchor="middle">FV PANELY</text>
+<text x="592" y="221" class="ts" text-anchor="middle">volitelně · 10 ks</text>
+<text x="592" y="237" class="tx" text-anchor="middle">na jednotku, přímo</text>
+<text x="592" y="252" class="tx" text-anchor="middle">do TČ bez střídače</text>
+<path d="M530,222 L520,222" stroke="#DA8718" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+<rect x="670" y="180" width="155" height="85" rx="8" fill="#EEF3F9" stroke="#1D4E89" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="747" y="203" class="tbs" text-anchor="middle">PŘÍPOJKA CZT</text>
+<text x="747" y="221" class="ts" text-anchor="middle">zůstává zachována</text>
+<text x="747" y="237" class="tx" text-anchor="middle">druhá nezávislá záloha</text>
+<text x="747" y="252" class="tx" text-anchor="middle">napojení upřesní projekt</text>
+<rect x="245" y="390" width="75" height="230" rx="32" fill="#EAF1EC" stroke="#16201C" stroke-width="2.3"/>
+<text x="282.5" y="503.0" class="tbs" text-anchor="middle">AKU 1</text>
+<text x="282.5" y="520.0" class="tx" text-anchor="middle">1 000 l</text>
+<rect x="335" y="390" width="75" height="230" rx="32" fill="#EAF1EC" stroke="#16201C" stroke-width="2.3"/>
+<text x="372.5" y="503.0" class="tbs" text-anchor="middle">AKU 2</text>
+<text x="372.5" y="520.0" class="tx" text-anchor="middle">1 000 l</text>
+<path class="pipe" d="M320,420 L335,420" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#16201C" stroke-width="4"/>
+<path class="pipe" d="M320,590 L335,590" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#16201C" stroke-width="4"/>
+<rect x="530" y="390" width="75" height="230" rx="32" fill="#FDF3EA" stroke="#16201C" stroke-width="2.3"/>
+<text x="567.5" y="503.0" class="tbs" text-anchor="middle">TUV 1</text>
+<text x="567.5" y="520.0" class="tx" text-anchor="middle">1 000 l</text>
+<rect x="620" y="390" width="75" height="230" rx="32" fill="#FDF3EA" stroke="#16201C" stroke-width="2.3"/>
+<text x="657.5" y="503.0" class="tbs" text-anchor="middle">TUV 2</text>
+<text x="657.5" y="520.0" class="tx" text-anchor="middle">1 000 l</text>
+<rect x="710" y="390" width="75" height="230" rx="32" fill="#FDF3EA" stroke="#16201C" stroke-width="2.3"/>
+<text x="747.5" y="503.0" class="tbs" text-anchor="middle">TUV 3</text>
+<text x="747.5" y="520.0" class="tx" text-anchor="middle">1 000 l</text>
+<path class="pipe" d="M605,420 L620,420" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#16201C" stroke-width="4"/>
+<path class="pipe" d="M605,590 L620,590" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#16201C" stroke-width="4"/>
+<path class="pipe" d="M695,420 L710,420" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#16201C" stroke-width="4"/>
+<path class="pipe" d="M695,590 L710,590" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#16201C" stroke-width="4"/>
+<path d="M538.0,440 l4.833333333333333,-11 l4.833333333333333,11 l4.833333333333333,11 l4.833333333333333,-11 l4.833333333333333,-11 l4.833333333333333,11 l4.833333333333333,11 l4.833333333333333,-11 l4.833333333333333,-11 l4.833333333333333,11 l4.833333333333333,11 l4.833333333333333,-11" fill="none" stroke="#D62828" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M628.0,440 l4.833333333333333,-11 l4.833333333333333,11 l4.833333333333333,11 l4.833333333333333,-11 l4.833333333333333,-11 l4.833333333333333,11 l4.833333333333333,11 l4.833333333333333,-11 l4.833333333333333,-11 l4.833333333333333,11 l4.833333333333333,11 l4.833333333333333,-11" fill="none" stroke="#D62828" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M718.0,440 l4.833333333333333,-11 l4.833333333333333,11 l4.833333333333333,11 l4.833333333333333,-11 l4.833333333333333,-11 l4.833333333333333,11 l4.833333333333333,11 l4.833333333333333,-11 l4.833333333333333,-11 l4.833333333333333,11 l4.833333333333333,11 l4.833333333333333,-11" fill="none" stroke="#D62828" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path class="pipe" d="M596,440 L628,440" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D62828" stroke-width="3"/>
+<path class="pipe" d="M686,440 L718,440" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D62828" stroke-width="3"/>
+<rect x="130" y="690" width="270" height="68" rx="8" fill="#EEF3F9" stroke="#16201C" stroke-width="1.8"/>
+<text x="265" y="716" class="tbs" text-anchor="middle">ÚSTŘEDNÍ TOPENÍ OBJEKTU</text>
+<text x="265" y="736" class="tx" text-anchor="middle">stávající otopná soustava — 17 bytů</text>
+<rect x="500" y="690" width="315" height="68" rx="8" fill="#FDF3EA" stroke="#16201C" stroke-width="1.8"/>
+<text x="657" y="716" class="tbs" text-anchor="middle">ROZVOD TUV DO BYTŮ</text>
+<text x="657" y="736" class="tx" text-anchor="middle">701 m³ / rok · s cirkulací</text>
+<path class="pipe" d="M400,620 L400,785 L100,785 L100,265" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="5"/>
+<path class="pipe" d="M100,330 L252,330 L252,265" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="5"/>
+<path class="pipe" d="M252,330 L404,330 L404,265" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="5"/>
+<line x1="141" y1="330" x2="159" y2="330" stroke="#fff" stroke-width="13"/>
+<line x1="252" y1="296" x2="252" y2="314" stroke="#fff" stroke-width="13"/>
+<line x1="404" y1="296" x2="404" y2="314" stroke="#fff" stroke-width="13"/>
+<path class="pipe" d="M282,390 L282,345 L215,345 L215,690" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D62828" stroke-width="5"/>
+<line x1="215" y1="421" x2="215" y2="439" stroke="#fff" stroke-width="13"/>
+<path class="pipe" d="M260,690 L260,620" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="5"/>
+<path class="pipe" d="M372,390 L372,360 L820,360 L820,440 L776,440" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D62828" stroke-width="5"/>
+<path class="pipe" d="M538,440 L500,440 L500,530 L410,530" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="5"/>
+<line x1="796" y1="360" x2="814" y2="360" stroke="#fff" stroke-width="13"/>
+<path class="pipe" d="M150,265 L150,430 L245,430" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D62828" stroke-width="5"/>
+<path class="pipe" d="M302,265 L302,305 L150,305" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D62828" stroke-width="5"/>
+<path class="pipe" d="M302,305 L454,305 L454,265" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D62828" stroke-width="5"/>
+<path class="pipe" d="M567,620 L567,655 L482,655" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="5"/>
+<path d="M492,649 L480,655 L492,661 Z" fill="#1D4E89"/>
+<text x="476" y="659" class="tx" text-anchor="end">studená voda</text>
+<path class="pipe" d="M747,390 L747,340 L805,340 L805,690" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#D9761C" stroke-width="5"/>
+<path class="pipe" d="M720,690 L720,645 L747,645 L747,620" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#E9A85F" stroke-width="4" stroke-dasharray="9 6"/>
+<use href="#chk" transform="translate(150,370) rotate(90)"/>
+<use href="#v" transform="translate(150,405) rotate(90)"/>
+<use href="#pump" transform="translate(100,480)"/>
+<use href="#flt" transform="translate(100,560)"/>
+<path class="pipe" d="M100,360 L76,360" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="3"/>
+<use href="#sv" transform="translate(74,360) rotate(180)"/>
+<path class="pipe" d="M100,412 L72,412 L72,418" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#1D4E89" stroke-width="3"/>
+<use href="#exp" transform="translate(72,440)"/>
+<use href="#pump" transform="translate(460,360)"/>
+<use href="#mix" transform="translate(215,500)"/>
+<use href="#pump" transform="translate(215,585)"/>
+<use href="#ts" transform="translate(282,345)"/>
+<use href="#chk" transform="translate(302,285) rotate(90)"/>
+<use href="#chk" transform="translate(454,285) rotate(90)"/>
+<text x="815" y="782" class="tx" text-anchor="end">Koncepční schéma — detaily upřesní prováděcí projekt.</text>
+<rect x="30" y="815" width="815" height="152" rx="8" fill="#fff" stroke="#DCE6DF" stroke-width="1.5"/>
+<text x="48" y="840" class="tbs" text-anchor="start">LEGENDA</text>
+<line x1="52" y1="863" x2="94" y2="863" stroke="#D62828" stroke-width="5" stroke-linecap="round"/>
+<text x="104" y="867" class="ts" text-anchor="start">topná voda ze zdroje</text>
+<line x1="52" y1="887" x2="94" y2="887" stroke="#1D4E89" stroke-width="5" stroke-linecap="round"/>
+<text x="104" y="891" class="ts" text-anchor="start">vratná voda</text>
+<line x1="52" y1="911" x2="94" y2="911" stroke="#D9761C" stroke-width="5" stroke-linecap="round"/>
+<text x="104" y="915" class="ts" text-anchor="start">teplá užitková voda</text>
+<line x1="52" y1="935" x2="94" y2="935" stroke="#E9A85F" stroke-width="5" stroke-linecap="round" stroke-dasharray="9 6"/>
+<text x="104" y="939" class="ts" text-anchor="start">cirkulace TUV</text>
+<use href="#pump" transform="translate(280,863)"/>
+<text x="300" y="867" class="ts" text-anchor="start">oběhové čerpadlo</text>
+<use href="#chk" transform="translate(280,887)"/>
+<text x="300" y="891" class="ts" text-anchor="start">zpětná klapka</text>
+<use href="#v" transform="translate(280,911)"/>
+<text x="300" y="915" class="ts" text-anchor="start">uzávěr</text>
+<use href="#flt" transform="translate(280,935)"/>
+<text x="300" y="939" class="ts" text-anchor="start">filtr</text>
+<use href="#exp" transform="translate(420,863)"/>
+<text x="440" y="867" class="ts" text-anchor="start">expanzní nádoba</text>
+<use href="#sv" transform="translate(420,887)"/>
+<text x="440" y="891" class="ts" text-anchor="start">pojistný ventil</text>
+<use href="#mix" transform="translate(420,911)"/>
+<text x="440" y="915" class="ts" text-anchor="start">směšovací ventil</text>
+<use href="#ts" transform="translate(420,935)"/>
+<text x="440" y="939" class="ts" text-anchor="start">teplotní čidlo</text>
+<path d="M570.0,863 l3.3333333333333335,-11 l3.3333333333333335,11 l3.3333333333333335,11 l3.3333333333333335,-11 l3.3333333333333335,-11 l3.3333333333333335,11 l3.3333333333333335,11 l3.3333333333333335,-11 l3.3333333333333335,-11 l3.3333333333333335,11 l3.3333333333333335,11 l3.3333333333333335,-11" fill="none" stroke="#D62828" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="620" y="867" class="ts" text-anchor="start">topný had v zásobníku TUV</text>
+<rect x="572" y="879" width="38" height="18" rx="4" fill="#FFF8EC" stroke="#DA8718" stroke-width="1.8" stroke-dasharray="5 3"/>
+<text x="620" y="891" class="ts" text-anchor="start">volitelné — FV panely</text>
+<rect x="572" y="903" width="38" height="18" rx="4" fill="#EEF3F9" stroke="#1D4E89" stroke-width="1.8" stroke-dasharray="5 3"/>
+<text x="620" y="915" class="ts" text-anchor="start">stávající přípojka CZT</text>
+<text x="620" y="931" class="tx" text-anchor="start">(zůstává jako záloha)</text>
+<text x="30" y="990" class="tx" text-anchor="start">ThermaVera Energy · koncepční schéma k cenové nabídce 2026-11-BDJ-02</text>
+<text x="845" y="990" class="tx" text-anchor="end">rev. 1 · 11/2026</text>
+</svg>
+<!--/SCHEMA:1-->
+<figcaption>Kaskáda tří tepelných čerpadel RHX30 Pro na střeše. TČ 1 přednostně vytápí, TČ 2 přednostně ohřívá vodu,
+TČ 3 kryje výkonový deficit a zastoupí kteroukoli jednotku při poruše. Přípojka CZT zůstává jako další záloha.
+Koncepční schéma — dimenze potrubí, armatury a rozsah měření a regulace upřesní prováděcí projekt.</figcaption>
+</figure>
+
+<!-- ====================== 9 V CENĚ ====================== -->
+<h2>9 · Co je a co není v ceně</h2>
+<table>
+  <thead><tr><th>V ceně je</th><th>V ceně není</th></tr></thead>
+  <tbody><tr>
+    <td><ul>
+      <li>Dodávka a montáž 3 tepelných čerpadel RHX30 Pro</li>
+      <li>Akumulace 2 × 1 000 l a zásobníky TUV 3 × 1 000 l s topnými hady</li>
+      <li>Čerpadla, armatury, expanzní a pojistné prvky</li>
+      <li>Propojovací potrubí ve strojovně včetně izolace</li>
+      <li>Elektroinstalace a rozvaděč v kotelně</li>
+      <li>Řízení kaskády, regulace, měření a vzdálený dohled</li>
+      <li>Uvedení do provozu, zaškolení, revize</li>
+      <li>Dokumentace skutečného provedení</li>
+    </ul></td>
+    <td><ul>
+      <li>Nosný rám a kotvení na střeše, statické posouzení, jeřáb</li>
+      <li>Trasa potrubí ze střechy do kotelny (upřesníme po prohlídce)</li>
+      <li>Úpravy předávací stanice CZT pro záložní provoz</li>
+      <li>Případné posílení elektrické přípojky a hlavního jističe</li>
+      <li>Fotovoltaické panely (volitelně, viz kap. 4)</li>
+      <li>Úpravy otopné soustavy v bytech</li>
+      <li>Projektová dokumentace nad rámec dílenské</li>
+      <li>Administrace dotace (zajistíme samostatně)</li>
+    </ul></td>
+  </tr></tbody>
+</table>
+
+<!-- ====================== 10 PŘEDPOKLADY ====================== -->
+<h2>10 · Předpoklady propočtu</h2>
+<ul class="small">
+  <li>Spotřeby a náklady dle vyúčtování dodávek tepla předaného objednatelem; cena tepla 1 354 Kč/GJ s DPH (1 209 Kč/GJ bez DPH).</li>
+  <li>Tepelná ztráta 30 kW při −15 °C — odhad ze spotřeby, k ověření výpočtem.</li>
+  <li>Výkon RHX30 Pro 19 kW při −15 °C a 55 °C (výkonová mapa výrobce); SCOP 3,90 / 5,25 při 55 / 35 °C dle EN 14825.</li>
+  <li>V propočtu sezónní účinnost 3,4 pro vytápění a 2,7 pro ohřev teplé vody; cena elektřiny 3 500 Kč/MWh; servis 35 000 Kč ročně.</li>
+  <li>Bez inflace, bez dotace, bez fotovoltaiky; případné stálé platby za ponechanou přípojku CZT nejsou zahrnuty.</li>
+  <li>Úvěr SVJ orientačně 5,5 % p. a. na 10 let. Sazba DPH bude potvrzena podle charakteru díla.</li>
+</ul>
+
+<!-- ====================== 11 POSTUP ====================== -->
+<h2>11 · Jak postupovat dál</h2>
+<ol style="font-size:14.5px">
+  <li><strong>Prohlídka objektu, kotelny a střechy</strong> — umístění jednotek, statika, trasa potrubí, akustika vůči okolí.</li>
+  <li><strong>Ověření tepelné ztráty výpočtem</strong> a kontrola teplotního spádu otopné soustavy.</li>
+  <li><strong>Prověření elektrické přípojky</strong> — rezervovaný příkon, hlavní jistič, sazba.</li>
+  <li><strong>Prověření smlouvy s Veolií</strong> — podmínky ponechání přípojky jako zálohy.</li>
+  <li><strong>Schválení shromážděním vlastníků</strong> — podklady pro hlasování připravíme.</li>
+  <li><strong>Finální nabídka a smlouva</strong> s pevnou cenou a termínem; realizace obvykle 8–12 týdnů, přepojení mimo topnou sezónu.</li>
+</ol>
+
+<!-- ====================== 12 SHRNUTÍ ====================== -->
+<h2>12 · Shrnutí</h2>
+<table>
+  <tbody>
+    <tr><td>Zdroj tepla</td><td class="num">3 × RHX30 Pro v kaskádě na střeše</td></tr>
+    <tr><td>Výkon při −15 °C / 55 °C</td><td class="num">57 kW (ztráta 30 kW pokryta dvěma jednotkami)</td></tr>
+    <tr><td>Krytí špiček a záloha</td><td class="num">třetí čerpadlo + ponechaná přípojka CZT</td></tr>
+    <tr><td>Cena bez DPH</td><td class="num">1 565 000 Kč</td></tr>
+    <tr><td>Roční náklady / úspora</td><td class="num">178 200 Kč / 354 900 Kč</td></tr>
+    <tr class="total"><td>Prostá návratnost</td><td class="num">4,4 roku</td></tr>
+    <tr><td>Bez vlastních peněz (pronájem + úvěr)</td><td class="num">o 89 500 Kč ročně méně než dnes</td></tr>
+  </tbody>
+</table>
+
+<div class="callout green">
+  <h3>Další krok</h3>
+  <p>Stačí odpovědět na tento e-mail nebo zavolat a domluvíme prohlídku objektu, kotelny a střechy. Rád nabídku osobně
+  představím výboru i shromáždění vlastníků — podklady pro předsedu a pro jednání shromáždění jsou připravené zvlášť.
+  Prohlídka je zdarma a nezavazuje k objednávce.</p>
+</div>
+
+<div class="sign">
+  S pozdravem
+  <div class="brand-name">ThermaVera Energy</div>
+  <div class="contact">
+    <div><span class="lbl">E-mail</span>info@thermavera.cz</div>
+    <div><span class="lbl">Telefon</span>+420 774 872 467</div>
+    <div><span class="lbl">Web</span><span class="web">www.thermavera.cz</span></div>
+  </div>
+</div>
+
+<div class="footnote">Nabídka je orientační a vychází z podkladů předaných objednatelem. Nejde o projektovou dokumentaci;
+konečné technické řešení, dimenze a ceny potvrdí prováděcí projekt a prohlídka objektu. Uvedené úspory a návratnost
+jsou propočtem podle uvedených předpokladů, nikoli zárukou. ThermaVera Energy · cenová nabídka č. 2026-11-BDJ-02 · 2. 11. 2026.</div>
+
+</div>
+
+</div><!-- /wrap -->
+</body>
+</html>

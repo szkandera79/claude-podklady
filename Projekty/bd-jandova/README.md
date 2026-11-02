@@ -5,6 +5,7 @@ tepla z CZT (Veolia) tepelnými čerpadly vzduch/voda REO X50. Nejde o web Therm
 samostatné projektové podklady mimo `index.html`.
 
 ## Soubory
+- **`rhx30/`** — **aktuální rev. 1 (2. 11. 2026): 3× RHX30 Pro na střeše, CZT zůstává**, + podklady pro předsedu SVJ a na schůzi vlastníků — viz `rhx30/README.md`.
 - **`nabidka.html`** — cenová nabídka ve dvou variantách (tisk / uložení do PDF z prohlížeče).
   Obsahuje interní blok „před odesláním ověřit", který se **netiskne** a jde skrýt tlačítkem.
 - **`schema-kotelny.svg`** — přehledový výkres obou variant na jednom listu (A3 na šířku),

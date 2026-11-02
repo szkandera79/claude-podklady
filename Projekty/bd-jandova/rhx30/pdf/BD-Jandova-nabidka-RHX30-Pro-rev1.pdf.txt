@@ -1,0 +1,415 @@
+[Text vytažený z BD-Jandova-nabidka-RHX30-Pro-rev1.pdf]
+
+--- strana 1 ---
+7
+C E N O V Á N A B Í D K A · R E V I Z E 1
+Zelená kotelna pro bytový dům
+Jandova 7, Ostrava-Zábřeh
+Tepelná čerpadla RHX30 Pro na střeše dom
+u — vytápění i ohřev teplé vody, přípojka
+CZT zůstává
+č. nabídky 2026-11-BDJ-02
+nahrazuje 2026-09-BDJ-01
+zpracováno 2. 11. 2026
+platnost 60 dnů · ceny
+bez DPH
+Vážený pane Matějů,
+děkuji za dosavadní jednání. Předkládám aktualizovanou nabídku zelené kotelny pro váš dům. Proti zářijové verzi
+jsme zdroj postavili na nových jednotkách RHX30 Pro — mají vyšší účinnost, jsou tišší,
+u
+mí topit přímo ze
+sluníčka a osadíme je na střechu dom
+u
+b
+. O
+chodní model zůstává stejný: kotelnu
+můžete zaplatit najednou
+, nebo
+tepelná čerpadla splácet. Nově navrhujeme tři jednotky — dvě pokryjí tepelnou ztrátu dom
+u
+, třetí je výkonová
+rezerva a záloha za zvýhodněnou
+cenu
+. A dům zůstává připojen na teplovod.
+R
+OČNÍ ÚSPO
+RA
+≈ 355 000 Kč
+o 67 % méně než dnes
+PR
+OSTÁ NÁVRATNOST
+4,4 roku
+při úhradě z vlastních zdrojů
+SE SPLÁTKAMI
+od 1. roku
+platíte méně než dnes Veolii
+CENA TEPLA
+≈ 400 Kč/GJ
+dnes 1 209 Kč/GJ
+1 · Z čeho vycházíme
+Podkladem je vyúčtování dodávek tepla od společnosti Veolia, ve kterém jsou vytápění a ohřev teplé vody vyčísleny
+odděleně
+. Cena tepla je 1 354 Kč/GJ včetně DPH, tedy 1 209 Kč/GJ bez DPH (v první verzi nabídky
+b
+vedena jako cena bez DPH — propočty jsou opravené). Tepelná ztráta objektu je odhadnuta ze spotřeb
+yla chy
+bně
+y na 30 kW při
+venkovní teplotě −15 °C.
+SOUČASNÝ STAV — R
+OČNÍ BILANCE (BEZ DPH)
+Položka Spotřeba tepla Náklad
+Vytápění 210 GJ · 58,3 MWh 253 875 Kč
+Ohřev teplé vody 231 GJ · 64,2 MWh 279 263 Kč
+Celkem 441 GJ · 122,5 MWh 533 138 Kč
+S DPH dům platí 597 114 Kč ročně
+. V přepočtu na jednu b
+600 Kč měsíčně
+. Odběr teplé vody 701 m³ za rok.
+ytovou jednotku stojí teplo a teplá voda 31 361 Kč ročně bez DPH, tedy asi 2
+2 · Co navrhujeme
+V kotelně vznikne nový zdroj tepla: aku
+m
+ulace 2 × 1 000 l, zásobníky teplé vody 3 × 1 000 l, strojovna a regulace.
+Venkovní jednotky — tři tepelná čerpadla RHX30 Pro v kaskádě — osadíme na střechu dom
+u
+. Otopná soustava v
+b
+ytech se nemění.
+--- strana 2 ---
+DIMENZOVÁNÍ ZDR
+O
+JE PŘI −15 °C A TEPLOTĚ OTOPNÉ VODY 55 °C
+Stav Běžný provoz — jednotky 1 a 2 Mrazy + souběžný ohřev teplé
+vody
+Poru
+cha kterékoli jednotky Krajní záloha Výkon zdroje Tepelná ztráta Výsledek
+2 × 19 = 38 kW 30 kW ztráta pokryta zcela,
+bez elektrického
+dotápění
+3 × 19 = 57 kW 30 kW + TUV třetí jednotka dodá chy
+bějící výkon
+38 kW 30 kW dům to nepocítí — zb
+ylé dvě pokryjí vše
+stávající přípojka CZT druhá, na čerpadlech nezávislá záloha
+Výkon 19 kW na jednotku je hodnota z výkonové mapy výrob
+ověříme výpočtem po prohlídce objektu
+.
+ce při −15 °C a 55 °C — nikoli katalogový výkon při +7 °C. Tepelnou ztrátu
+Třetí jednotka jako efektivní bivalence — za poloviční cenu
+Místo elektrických patron, které topí s účinností 1 : 1, kryje výkonový deficit v nejchladnějších dnech další tepelné
+čerpadlo se stejnou účinností jako ostatní. Zároveň je to plnohodnotná záloha: při poruše nebo servisu kterékoli
+jednotky převezmou
+provoz zb
+ylé dvě a dům to vů
+bec nepocítí. Jednotky se v provozu střídají, což prodlužuje
+jejich životnost. Třetí jednotku nabízíme se slevou 50 % — za 165 000 Kč místo 330 000 Kč.
+Teplovod zůstává — vybíráte si, čím a jak topit
+Dům se od centrálního zásobování neodpojuje. Předávací stanice zůstává a slouží jako další nezávislá záloha.
+Společenství si tak samo vy
+bírá, z jakého zdroje bude topit, a nic tím nepálí za sebou
+. Podmínky dalšího odběru
+(případné stálé platb
+y) prověříme ve smlouvě s Veolií před realizací.
+3 · Co se mění proti zářijové nabídce
+Výkon při −15 °C / 55 °C Při poruše jedné jednotky Sezónní účinnost SCOP při 55 °C Akustický výkon jednotky Topení ze sluníčka Září — 2 × REO X50 50 kW (2 jednotky) 25 kW — pod tepelnou ztrátou 3,21 65 dB(A) ne Nyní — 3 × RHX30 Pro
+57 kW (3 jednotky)
+38 kW — nad tepelnou ztrátou
+3,90 (asi o pětinu vyšší)
+59 dB(A), noční tichý režim
+ano — panely přímo do jednotky
+Umístěníu objektu na střeše
+Přípojka CZT odpojení zůstává jako záloha
+Cena bez DPH 1 600 000 Kč 1 565 000 Kč
+--- strana 3 ---
+4 · Proč jednotky RHX30 Pro
+Vysoká účinnost
+Nižší účet za elektřinu každý rok
+Na střeše, mimo dosah lidí
+Nikom
+u nepřekáží a nikoho neruší
+Sezónní topný faktor SCOP 3,90 při 55 °C a 5,25
+při 35 °C (EN 14825, průměrné klima).
+Při nízkoteplotním provozu víc než většina značkových
+tepelných čerpadel s chladivem R290.
+Proti dříve nabízeným jednotkám X50 asi o pětinu
+méně elektřiny na stejné teplo.
+V propočtu
+počítáme konzervativně se sezónní
+účinností 3,4 pro vytápění a 2,7 pro teplou vodu
+.
+Jednotky osadíme na střechu dom
+u — mimo okna,
+chodníky, parkoviště i zahrady. Nezabírají pozemek
+a nejsou na očích.
+Akustický výkon 59 dB(A), o 6 dB(A) méně než X50 —
+zhruba poloviční hlasitost.
+Noční tichý režim ve dvou stu
+pních.
+Antivibrační uložení na nosném rám
+u; statiku střechy a
+hluk vůči okolí posoudí projekt.
+Topí ze sluníčka — i s minimální investicí do fotovoltaiky
+Každá jednotka má vlastní vstu
+p pro fotovoltaické panely. Panely se připojí přímo ke kompresoru — bez
+střídače, bez baterie a bez přetoků do sítě
+. Přes den jede kotelna přednostně ze slunce, co sluníčko nepokryje,
+si plynule dobere ze sítě
+. Nejvíc to pomáhá od jara do podzim
+u a při ohřevu teplé vody, který u vás běží celoročně
+a spotřebuje víc tepla než vytápění.
+Orientačně (Ostrava) 1 sada panelů 3 sady (na každou jednotku)
+Panely / výkon 10 ks · ≈ 5 kWp 30 ks · ≈ 15 kWp
+Investice vč. montáže ≈ 55 000 Kč ≈ 165 000 Kč
+Úspora elektřiny za rok 9 000 – 12 000 Kč 27 000 – 35 000 Kč
+Návratnost 5 – 6 let 5 – 6 let
+Klasická fotovoltaika stejného výkonu se střídačem,
+bateriemi a připojením k distribu
+ční soustavě stojí několikanásobně víc. Začít
+lze jednou sadou
+panelů a přidávat postu
+pně
+. Panely mohou být na téže střeše vedle jednotek. Hodnoty jsou orientační; počet
+panelů, rozsah a cenu
+potvrdíme v projektu
+. Fotovoltaika není sou
+částí ceny kotelny a v propočtu úspor níže ji nezapočítáváme.
+5 · Provozní ekonomika
+Propočet vychází z tepelné potřeb
+y 441 GJ ročně
+, sezónní účinnosti 3,4 pro vytápění a 2,7 pro ohřev teplé vody a ceny
+elektřiny 3 500 Kč/MWh. Fotovoltaika ani dotace nejsou započteny.
+--- strana 4 ---
+R
+OČNÍ PR
+OVOZNÍ NÁKLADY (BEZ DPH)
+Položka Dnes — CZT Zelená kotelna
+Nakou
+pené teplo 533 138 Kč —
+Elektřina pro tepelná čerpadla (40,9 MWh) — 143 200 Kč
+Servis a údržba — 35 000 Kč
+Roční náklady celkem 533 138 Kč 178 200 Kč
+Roční úspora — 354 900 Kč
+Výrobní cena tepla 1 209 Kč/GJ 404 Kč/GJ
+Náklad na b
+ytovou jednotku a rok 31 361 Kč 10 485 Kč
+6 · Cena a návratnost investice
+CENA DÍLA (BEZ DPH)
+Vnitřní část kotelny — aku
+m
+ulace, zásobníky TUV, strojovna, elektro, regulace, montáž Tepelná čerpadla RHX30 Pro — jednotky 1 a 2 (2 × 330 000 Kč) Tepelné čerpadlo RHX30 Pro — jednotka 3, rezerva a záloha (sleva 50 %) Cena celkem 740 000 Kč
+660 000 Kč
+165 000 Kč
+1 565 000 Kč
+Při úhradě z fondu oprav
+Investice na b
+ytovou jednotku 92 100 Kč
+Roční úspora 354 900 Kč
+Prostá návratnost 4,4 roku
+Čistá úspora za 15 let provozu (po odečtení investice) ≈ 3,8 mil. Kč
+Prostá návratnost nezohledňuje inflaci,
+budou
+cí vývoj cen tepla ani elektřiny a případnou dotaci. Počítáme konzervativně se sou
+cenovou hladinou
+. I při ceně elektřiny o polovinu vyšší (5 250 Kč/MWh) vychází návratnost kolem 5,5 roku
+.
+časnou
+7 · Nemusíte platit všechno najednou
+Stejně jako v zářijové nabídce nabízíme pronájem tepelných čerpadel se splátkovým kalendářem. Společenství hradí
+vnitřní část kotelny, tepelná čerpadla se splácejí měsíčně
+. Servis a údržba jsou ve splátce. Po skončení zařízení
+přechází do majetku společenství za odku
+pní cenu
+. Třetí, záložní jednotka má i ve splátkách poloviční sazbu
+.
+--- strana 5 ---
+PR
+ONÁJEM TŘÍ TEPELNÝCH ČERPADEL (BEZ DPH)
+Vstu
+pní investice (vnitřní část kotelny) Měsíční splátka za technologii vč. servisu Roční náklady vč. splátek a elektřiny Roční úspora proti dnešku Odku
+pní cena po skončení 60 měsíců 120 měsíců
+740 000 Kč 21 000 Kč 395 200 Kč 137 900 Kč 15 % z ceny 740 000 Kč
+17 000 Kč
+347 200 Kč
+185 900 Kč
+1 Kč
+Splácíte vlastní kotelnu — a platíte méně než dnes Veolii
+Pokud společenství nechce sáhnout do fondu oprav vů
+bec, lze i vnitřní část kotelny financovat úvěrem pro SVJ
+(orientačně 5,5 % ročně na 10 let, asi 8 000 Kč měsíčně). Pak dům neplatí nic předem a ročně vydá za splátky
+čerpadel, splátku úvěru a elektřinu asi 443 600 Kč — o 89 500 Kč méně, než dnes platí za teplo. Po deseti
+letech je kotelna splacená, patří dom
+u a roční náklady klesnou na zhruba 178 000 Kč.
+SR
+OVNÁNÍ R
+OČNÍCH VÝDAJŮ DO
+M
+U (BEZ DPH, SPLÁTKY NA 10 LET)
+Způsob PředemRočně roky 1–10Ročně od 11. roku
+Dnes — teplo od Veolie 0 Kč 533 100 Kč 533 100 Kč*
+Bez vlastních peněz — pronájem čerpadel + úvěr 0 Kč 443 600 Kč 178 200 Kč
+Pronájem čerpadel, vnitřek z fondu oprav 740 000 Kč 347 200 Kč 178 200 Kč
+Celá kotelna z fondu oprav 1 565 000 Kč 178 200 Kč 178 200 Kč
+* Při dnešní ceně tepla. Splátky, odku
+pní ceny a úvěrové podmínky jsou orientační a podléhají potvrzení financující stranou a schválení
+žádosti. Ceny jsou bez DPH.
+--- strana 6 ---
+8 · Schéma kotelny
+T H E R M AV E R A E N E R G Y
+Kotelna BD Jandova 7 — koncepční schéma
+TV-BDJ-04 · rev. 1
+17 b.j.
+· tepelná ztráta 30 kW při −15 °C · 3 × RHX30 Pro
+KASKÁDA 3 × RHX30 Pro — 2 kryjí ztrátu, 3. rezerva a záloha 57 kW při −15 °C / 55 °C
+TČ 1 — RHX30 Pro
+19 kW při −15 °C / 55 °C
+priorita: vytápění
+TČ 3 — RHX30 Pro
+19 kW při −15 °C / 55 °C
+rezerva výkonu
+a záloha při poruše
+FV PANELY
+volitelně · 10 ks
+na jednotku, přímo
+do TČ bez střídače
+STŘECHA DOMU
+PŘÍPOJKA CZT
+zůstává zachována
+druhá nezávislá záloha
+napojení upřesní projekt
+TČ 2 — RHX30 Pro
+19 kW při −15 °C / 55 °C
+priorita: teplá voda
+T
+STROJOVNA / KOTELNA
+M
+AKU 1
+1 000 l
+AKU 2
+1 000 l
+TUV 1
+1 000 l
+TUV 2
+1 000 l
+TUV 3
+1 000 l
+studená voda
+ÚSTŘEDNÍ TOPENÍ OBJEKTU
+stávající otopná soustava — 17 bytů
+ROZVOD TUV DO BYTŮ
+701 m³ / rok · s cirkulací
+Koncepční schéma — detaily upřesní prováděcí projekt.
+LEGENDA
+topná voda ze zdroje
+vratná voda
+teplá užitková voda
+cirkulace TUV
+oběhové čerpadlo
+zpětná klapka
+uzávěr
+filtr
+M
+expanzní nádoba
+pojistný ventil
+směšovací ventil
+T teplotní čidlo
+topný had v zásobníku TUV
+volitelné — FV panely
+stávající přípojka CZT
+(zůstává jako záloha)
+ThermaVera Energy · koncepční schéma k cenové nabídce 2026-11-BDJ-02 rev. 1 · 11/2026
+Kaskáda tří tepelných čerpadel RHX30 Pro na střeše. TČ 1 přednostně vytápí, TČ 2 přednostně ohřívá vodu
+, TČ 3 kryje výkonový deficit a
+zastou
+pí kteroukoli jednotku
+při poruše. Přípojka CZT zůstává jako další záloha. Koncepční schéma — dimenze potrubí, armatury a rozsah
+měření a regulace u
+přesní prováděcí projekt.
+--- strana 7 ---
+9 · Co je a co není v ceně
+V ceně je V ceně není
+Dodávka a montáž 3 tepelných čerpadel RHX30 Pro
+Aku
+m
+ulace 2 × 1 000 l a zásobníky TUV 3 × 1 000 l s
+topnými hady
+Čerpadla, armatury, expanzní a pojistné prvky
+Propojovací potrubí ve strojovně včetně izolace
+Elektroinstalace a rozvaděč v kotelně
+Řízení kaskády, regulace, měření a vzdálený dohled
+Uvedení do provozu
+, zaškolení, revize
+Doku
+mentace skutečného provedení
+Nosný rám a kotvení na střeše, statické posouzení,
+jeřá
+b
+Trasa potrubí ze střechy do kotelny (u
+přesníme po
+prohlídce)
+Úpravy předávací stanice CZT pro záložní provoz
+Případné posílení elektrické přípojky a hlavního
+jističe
+Fotovoltaické panely (volitelně
+, viz kap. 4)
+Úpravy otopné soustavy v b
+ytech
+Projektová doku
+mentace nad rámec dílenské
+Administrace dotace (zajistíme samostatně)
+10 · Předpoklady propočtu
+Spotřeb
+y a náklady dle vyúčtování dodávek tepla předaného objednatelem; cena tepla 1 354 Kč/GJ s DPH (1 209 Kč/GJ bez DPH).
+Tepelná ztráta 30 kW při −15 °C — odhad ze spotřeb
+y, k ověření výpočtem.
+Výkon RHX30 Pro 19 kW při −15 °C a 55 °C (výkonová mapa výrob
+ce); SCOP 3,90 / 5,25 při 55 / 35 °C dle EN 14825.
+V propočtu sezónní účinnost 3,4 pro vytápění a 2,7 pro ohřev teplé vody; cena elektřiny 3 500 Kč/MWh; servis 35 000 Kč ročně
+.
+Bez inflace,
+bez dotace,
+bez fotovoltaiky; případné stálé platb
+y za ponechanou
+přípojku CZT nejsou zahrnuty.
+Úvěr SVJ orientačně 5,5 % p. a. na 10 let. Sazba DPH bude potvrzena podle charakteru díla.
+11 · Jak postupovat dál
+1. Prohlídka objektu
+, kotelny a střechy — u
+místění jednotek, statika, trasa potrubí, akustika vůči okolí.
+2. Ověření tepelné ztráty výpočtem a kontrola teplotního spádu otopné soustavy.
+3. Prověření elektrické přípojky — rezervovaný příkon, hlavní jistič, sazba.
+4. Prověření smlouvy s Veolií — podmínky ponechání přípojky jako zálohy.
+5. Schválení shromážděním vlastníků — podklady pro hlasování připravíme.
+6. Finální nabídka a smlouva s pevnou
+cenou a termínem; realizace obvykle 8–12 týdnů, přepojení mimo topnou
+sezónu
+.
+12 · Shrnutí
+Zdroj tepla Výkon při −15 °C / 55 °C Krytí špiček a záloha Cena bez DPH Roční náklady / úspora 3 × RHX30 Pro v kaskádě na střeše
+57 kW (ztráta 30 kW pokryta dvěma jednotkami)
+třetí čerpadlo + ponechaná přípojka CZT
+1 565 000 Kč
+178 200 Kč / 354 900 Kč
+Prostá návratnost 4,4 roku
+Bez vlastních peněz (pronájem + úvěr) o 89 500 Kč ročně méně než dnes
+--- strana 8 ---
+Další krok
+Stačí odpovědět na tento e-mail nebo zavolat a domluvíme prohlídku objektu
+, kotelny a střechy. Rád nabídku
+osobně představím výboru i shromáždění vlastníků — podklady pro předsedu a pro jednání shromáždění jsou
+připravené zvlášť. Prohlídka je zdarma a nezavazuje k objednávce.
+S pozdravem
+ThermaVera Energy
+E-MAIL
+info@thermavera.cz
+TELEFON
++420 774 872 467
+WEB
+www.thermavera.cz
+Nabídka je orientační a vychází z podkladů předaných objednatelem. Nejde o projektovou doku
+potvrdí prováděcí projekt a prohlídka objektu
+. Uvedené úspory a návratnost jsou
+ThermaVera Energy · cenová nabídka č. 2026-11-BDJ-02 · 2. 11. 2026.
+mentaci; konečné technické řešení, dimenze a ceny
+propočtem podle uvedených předpokladů, nikoli zárukou
+.

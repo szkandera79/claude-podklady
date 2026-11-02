@@ -24,7 +24,7 @@ CLAUDE.md** a drž se pravidel tam uvedených.
 | `vzor-bytove-domy/` | obecná vzorová nabídka zelené kotelny pro SVJ / BD (25–100 kW), jednotky RH X50 |
 | `vzor-bytove-domy-rhx30/` | tatáž nabídka ve verzi s jednotkami RHX30 Pro (tišší, vyšší SCOP, FV přímo do TČ) |
 | `mala-zelena-kotelna/` | malá zelená kotelna pro menší BD (≈ 12–22 kW): 2 × REO RH060, AKU 1 000 l, TUV 1 000 l; ceny k doplnění |
-| `bd-jandova/` | nabídka BD Jandova 7, Ostrava-Zábřeh (17 b.j., náhrada CZT tepelnými čerpadly) |
+| `bd-jandova/` | nabídka BD Jandova 7, Ostrava-Zábřeh (17 b.j., náhrada CZT tepelnými čerpadly); `rhx30/` = rev. 1 s 3× RHX30 Pro + podklady pro SVJ |
 | `bd-michal/` | BD Michal — koncepční schémata kotelny, PENB, smlouva o dílo |
 | `bd-michal-nabidka/` | cenová nabídka BD u Dolu Michal (24 b.j.), varianty A/B, podklady pro společníky |
 | `porovnani-x50-2-3/` | porovnání 2× vs. 3× REO X50 (podklad pro výbor SVJ) |
