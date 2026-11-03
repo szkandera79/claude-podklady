@@ -1,0 +1,181 @@
+[Text vytažený z REO-RH-X50-X100_letak-CZ.pdf]
+
+--- strana 1 ---
+RH X50 ∙ RH X100
+Komerční řada R290
+COMMERCIAL
+Špičkové řešení navržené pro maximální účinnost a všestrannost v komerčních aplikacích.
+Plně invertorové tepelné čerpadlo Vlastnos
+Vytápění Chlazení Teplá voda
+78
+Vysoká teplota
+výstupní vody
+Chladivo R290, ODP = 0, nízké GWP (GWP = 3)
+Dvojitá DC invertorová technologie: přesné a účinné vytápění
+s výstupní teplotou až 78 °C.
+Nejvyšší účinnost: energecká třída A+++ (při 35 °C), COP až
+5,62.
+Vestavěný Wi‑Fi modul: spolehlivé připojení a dálkové
+ovládání.
+Vícejazyčné ovládání: snadná obsluha v řadě jazyků.
+Funkce SG Ready (Smart Grid): lepší řízení spotřeby a napojení
+na energecký systém.
+Automacká regulace teploty: vždy opmální provoz.
+Noční režim: pohodlné ovládání mimo špičku.
+Kaskádové řízení: až 8 jednotek pro snadné rozšíření výkonu.
+Časovaná dezinfekce vysokou teplotou: bezpečná a zdravotně
+nezávadná teplá voda.
+Cloudová plaorma IoT pro správu
+Volitelná výbava: vestavěné oběhové čerpadlo a snímač úniku
+chladiva, řízení externího zdroje tepla a zásobníku vody.
+A+++
+A++
+A+
+A
+B
+C
+D
+REO HEATING RH X50
+55 °C 35 °C
+26
+27
+28
+A+++
+A++
+27
+28
+29
+kW kW
+Dva chladicí okruhy, vysoký výkon,
+vynikající stabilita
+00
+dB
+66
+dB
+2019 811/2013
++++ A šetrné ke klimatu Úsporné
+78℃
+Vysoká
+teplota vody
+R-290
+35°C/55°C
+A+++
+380V/3Ph/50-60Hz
+--- strana 2 ---
+Bezemisní vytápění, chlazení a ohřev TUV
+Prémiová výbava, spolehlivá kvalita
+Wi‑Fi v provozu TEPELNÉ ČERPADLO S DC INVERTOREM PRO VYTÁPĚNÍ, CHLAZENÍ A TUV (R290)
+Model
+RH X50 RH X100
+Režim vytápění
+Režim TUV TUV – teplota vzduchu (DB/WB): 20/15 °C, teplota vody (vstup/výstup): 15/55 °C
+Rozsah topného výkonu (kW)
+23.8~68 40.0~120
+Časovač
+Režim vytápění
+Režim TUV
+Režim chlazení
+Režim AUTO
+Požadovaná teplota Aktuální teplota
+Zámek displeje Porucha
+Teplota TUV
+Provozní stav
+Dotaz Nastavení
+Volba režimu
+Rozsah příkonu (kW)
+4.23~15.46 9.0~29.5
+Rozsah COP
+4.39~5.62 4.06~5.5
+Množství ohřáté vody (l/h)
+1462 2580
+Vytápění – teplota vzduchu (DB/WB): 7/6 °C, teplota vody (vstup/výstup): 30/35 °C
+Rozsah topného výkonu (kW)
+18.4~49.25 35.2~92
+Rozsah příkonu (kW)
+4.23~12.96 7.0~23.8
+Rozsah COP
+3.8~4.3 3.86~5.02
+Chlazení – teplota vzduchu (DB/WB): 35/24 °C, teplota vody (vstup/výstup): 12/7 °C
+Rozsah chladicího výkonu (kW)
+13.8~34.5 25~66
+Rozsah příkonu při chlazení (kW)
+5.2~16.2 8.92~30.7
+Rozsah EER
+2.12~2.65 2.15~2.8
+Energecká třída (35 °C)
+A+++ A+++
+Energecká třída (55 °C)
+A++ A++
+Napájení
+380V/3Ph/50‐60Hz 380V/3Ph/50‐60Hz
+Max. příkon (kW)
+20 40
+Max. proud (A)
+Jisč (A)
+Průřez vodiče (mm²)
+Připojení potrubí
+Snímač úniku chladiva R290
+Při koncentraci 15 % LFL se spus alarm.
+Lamelový výměník s plochými žebry
+1. Hydrofilní povlak: odolnost promlze a oxidaci.  korozi, solné
+2. Ploché lamely omezují usazování vody, ledu a
+prachu, snadno se čis a snižují odpor vzduchu –
+vhodné i do náročných podmínek.
+Velký barevný dotykový LCD ovladač
+Vestavěný Wi‑Fi modul, řízení systému i
+koncových zařízení, jednoduchá obsluha. Akuscký výkon (dB(A))
+Víceúrovňové snížení hluku
+Patentovaná řešení, hladina hluku jen 62
+Akuscký tlak (dB(A))
+dB(A) ve vzdálenos 1 m.
+Manometr
+Elektrorozvaděč
+Sběrač chladiva
+Deskový výměník
+Velký DC venlátor s plynulou regulací (14 000 m³/h)
+Plynulá regulace otáček, přesné řízení, nízký
+hluk, méně pohyblivých dílů a vyšší účinnost. Hmotnost neo (kg)
+Rozměry Š×H×V (mm)
+32 64
+40 80
+10mm² 22mm²
+G1.5" G2"
+≤77 ≤85
+62 65
+Průtok vody (m³/h)
+5.8 11.6
+Tlaková ztráta vody (max.) kPa
+80 120
+370 745
+1195×980×1900 2510×979×1882
+Rozměry balení Š×H×V (mm)
+1275*1060*2100 2560*1030*2000
+Stupeň kry IP
+IPX4 IPX4
+Třída ochrany (el.)
+I I
+Chladivo
+R290 R290
+Značka kompresoru
+HIGHLY
+HIGHLY
+Odvodňovací otvory v
+základně
+Kondenzát odtéká přímo, voda
+se nehromadí a netvoří se led.
+Plně invertorový kompresor HIGHLY
+(dva okruhy) Nízké vibrace, chý chod a účinný
+provoz i v mrazu do −25 °C. Provozní teplota vzduchu (°C)
+‐25~43 °C
+‐25~43 °C
+Teplota výstupní vody (°C)
+20~78 °C (TUV)
+20~78 °C (TUV)
+Teplota výstupní vody (°C)
+20~78 °C (vytápění)
+20~78 °C (vytápění)
+Teplota výstupní vody (°C)
+7~35 °C (chlazení)
+7~35 °C (chlazení)
+Poznámka:
+Parametry výrobků se mohou v rámci průběžného zlepšování měnit. Platné údaje jsou uvedeny na výrobku.

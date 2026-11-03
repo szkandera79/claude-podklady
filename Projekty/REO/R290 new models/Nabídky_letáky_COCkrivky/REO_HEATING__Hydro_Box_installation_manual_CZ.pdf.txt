@@ -1,0 +1,367 @@
+[Text vytažený z REO_HEATING__Hydro_Box_installation_manual_CZ.pdf]
+
+--- strana 1 ---
+REO HEATING
+Návod k instalaci
+hydraulického modulu
+REO HEATING
+REO HEATING
+--- strana 2 ---
+www.reoheating.cz
+1
+--- strana 3 ---
+OBSAH
+1
+2
+2.1
+2.2
+Prohlášení k dokumentu
+Bezpečnost použití
+Nebezpečí smrti v důsledku změn na výrobku
+nebo v jeho okolí
+Nebezpečí úrazu a materiálních škod v důsledku
+nesprávně nebo vůbec neprovedené
+údržby a oprav
+3
+3.1
+3.2
+3.2.1
+3.2.2
+3.3
+3.3.3
+3.3.4
+popis výrobku
+účel výrobku
+Vzhled výrobku
+Rozměrový výkres
+Rozpadový výkres výrobku
+Tabulka parametrů výrobku
+čerpadlo APM25-9-130/180 PWM1 – provoz
+a zobrazení na panelu
+čerpadlo APF25-12-130E FPWM1 – provoz
+a zobrazení na panelu
+4
+4.1
+4.2
+4.3
+4.4
+4.5
+4.6
+4.6.1
+4.6.2
+Instalace
+podmínky prostředí
+prostorové požadavky
+Schéma instalace systému
+Součásti pojistného ventilu
+Elektrická příprava
+Čištění a údržba
+Způsob čištění
+na co si dát pozor
+5
+5.1
+5.2
+Záruka a servis
+Poprodejní záruka
+zákaznický servis
+6
+6.1
+6.2
+Schéma elektrického zapojení
+Napájení jednofázového hydraulického modulu –
+schéma zapojení
+Napájení třífázového hydraulického modulu –
+schéma zapojení
+www.reoheating.cz
+4
+4
+4
+12
+19
+19
+19
+19
+19
+23
+23
+23
+24
+24
+24
+25
+25
+25
+25
+25
+25
+26
+26
+26
+26
+26
+26
+2
+--- strana 4 ---
+1. Prohlášení k dokumentu
+Pokud nejsou tyto pokyny dodrženy při instalaci, provozu
+a údržbě, zanikají povinnosti společnosti REO HEATING
+vyplývající z podmínek záruky.
+REO HEATING si vyhrazuje právo provádět
+změny kterékoli části dokumentace a specifikací
+bez předchozího upozornění.
+Vždy dodržujte všechny provozní pokyny přiložené
+k instalačním součástem.
+Uchovejte tyto pokyny a všechny další příslušné dokumenty
+pro další použití.
+Tyto pokyny platí pouze pro: RH-03H/S
+RH-03H
+RH-05H/S RH-05H
+2. Bezpečnost použití
+Zařízení nesmějí obsluhovat osoby se sníženými duševními schopnostmi
+nebo nedostatkem zkušeností a znalostí (včetně dětí), pokud
+nejsou pod dohledem poučené osoby odpovědné za
+jejich bezpečnost.
+Při nesprávném nebo neúmyslném použití může dojít
+ke zranění uživatelů či jiných osob nebo k poškození
+výrobku a jiného majetku.
+2.1. Nebezpečí smrti v důsledku změn na výrobku nebo
+v jeho okolí
+Dodržujte provozní pokyny uvedené u výrobku a
+u všech dalších instalačních součástí a řiďte se pokyny uvedenými
+ve všech podmínkách kontroly a údržby.
+Nikdy neodstraňujte, nepřemosťujte ani neblokujte bezpečnostní prvky.
+Nemanipulujte s žádným z bezpečnostních prvků.
+Nepoškozujte ani neodstraňujte ochranné plomby na
+součástech.
+Neprovádějte žádné změny:
+samotného výrobku
+přívodů vody a elektřiny
+expanzního pojistného ventilu
+odpadního potrubí
+konstrukčních podmínek, které mohou ovlivnit
+provozní spolehlivost výrobku
+2.2. Nebezpečí úrazu a materiálních škod v důsledku
+nesprávně nebo vůbec neprovedené
+údržby a oprav
+Nikdy se nepokoušejte sami provádět údržbu ani opravy
+svého výrobku.
+Závady a poškození musí neprodleně odstranit
+kvalifikovaná osoba.
+Dodržujte stanovené intervaly údržby.
+www.reoheating.cz
+3
+--- strana 5 ---
+3. Popis výrobku
+3.1. Účel výrobku
+Tento výrobek je systémová součást pro řízení topných
+okruhů a přípravy teplé užitkové vody ve spojení s
+tepelným čerpadlem pomocí systémového řízení.
+Určené použití zahrnuje následující:
+dodržování provozních pokynů přiložených k
+výrobku a všem dalším instalačním součástem.
+dodržování všech podmínek kontroly a údržby
+uvedených v pokynech.
+3.2. Vzhled výrobku
+3.2.1. Rozměrový výkres
+500
+700
+18 35
+2-DN25
+vnitřní závit
+www.reoheating.cz
+3-DN25
+vnitřní závit
+275
+90.5
+165.5
+302.5
+162.5
+81.5
+81.5
+90.5
+105
+105
+4
+--- strana 6 ---
+3.2.2. Rozpadový výkres výrobku
+Náhradní díly
+Náhradní díly
+Expanzní nádoba
+Jistič
+Elektrické topení
+Přední panel
+Čerpadlo
+Trojcestný ventil
+Filtr
+Zámek dvířek
+Skříň
+Pojistný ventil
+Nosná deska rozvaděče
+Odvzdušňovací ventil
+Elektrický rozvaděč
+Zadní panel
+Svorkovnice
+Lemování
+Stykač
+Svorkovnice
+www.reoheating.cz
+5
+--- strana 7 ---
+3.3. Tabulka parametrů výrobku
+www.reoheating.cz
+6
+--- strana 8 ---
+3.3.1. Čerpadlo
+3.3.2. Technické parametry
+3.3.3. Čerpadlo APM25-9-130/180 PWM1
+Provoz a zobrazení na panelu
+A. Přehled ovládání a panelu
+Když čerpadlo nemá na vstupu žádný
+PWM signál, běží podle křivky
+maximálního konstantního výkonu;
+je-li na vstupu PWM signál, běží
+podle logiky regulace otáček
+PWM; obrázek vpravo je
+přehled panelu.
+Po zapnutí napájení všechny zelené LED 3× bliknou
+a režim regulace otáček se zobrazí takto:
+Upozornění
+Oběhové čerpadlo je součást, kterou lze případně
+nahradit podle dostupnosti na trhu. Model
+oběhového čerpadla je uveden na jeho štítku. Pokud je
+použita některá z náhrad, navštivte web výrobce,
+kde najdete provozní pokyny pro oběhové čerpadlo.
+B. Zobrazení poruch
+Poznámky k ochranným funkcím: výše uvedené poruchy lze vymazat
+zadáním pohotovostního signálu.
+www.reoheating.cz
+7
+--- strana 9 ---
+3.3.4.
+čerpadlo APF25-12-130E FPWM1
+Provoz a zobrazení na panelu
+A. Přehled ovládání a panelu
+Když čerpadlo nemá na vstupu žádný
+PWM signál, běží podle křivky
+maximálního konstantního výkonu;
+je-li na vstupu PWM signál, běží
+podle logiky regulace otáček
+PWM; obrázek vpravo je
+přehled panelu.
+Po zapnutí napájení všechny zelené LED 4× bliknou
+a režim regulace otáček se zobrazí takto:
+B. Zobrazení poruch
+Popis ochrany proti poruchám:
+Funkce
+– název
+Popis Kód na displeji panelu
+Poznámky k ochranným funkcím: výše uvedené poruchy lze vymazat
+zadáním pohotovostního signálu.
+4. Instalace
+4.1. Podmínky prostředí
+Technická místnost musí být dostatečně prostorná a suchá.
+Teplota vzduchu musí být 10–35 °C a relativní
+vlhkost nesmí trvale překročit 70 %.
+Hydraulický modul nesmí být za žádných okolností instalován
+na stěny z hořlavých materiálů!
+4.2. Prostorové požadavky
+Prostorové požadavky na zařízení jsou uvedeny níže, kde
+jsou uvedeny minimální vzdálenosti od překážek.
+Zajistěte dostatečný prostor po obou stranách výrobku,
+aby byl umožněn přístup pro údržbu a opravy.
+Při použití příslušenství dodržujte minimální
+vzdálenosti / instalační odstupy.
+Zajistěte, aby se žádné vysoce hořlavé části nedostaly do styku
+se součástmi, protože mohou dosahovat teplot
+přes 80 °C.
+Zajistěte minimální odstup mezi vysoce
+hořlavými částmi a horkými součástmi.
+www.reoheating.cz
+8
+--- strana 10 ---
+4.3. Schéma instalace systému
+Schéma instalace systému je znázorněno na obrázku
+níže.
+M
+Hořčíková anoda
+www.reoheating.cz
+M
+čidlo Nádrž
+M
+9
+--- strana 11 ---
+4.4. Součásti pojistného ventilu
+Pro zajištění bezpečného provozu a možné výměny
+zařízení je nutné použít následující součásti na
+vhodných místech topného systému.
+◎
+◎
+◎
+◎
+◎
+Filtr topné vody
+Kulové kohouty
+Vypouštěcí ventil
+Zpětný ventil
+Pojistný ventil
+4.5. Elektrická příprava
+Elektrické připojení se provádí ze spodní strany, kde
+ponechte volnou délku kabelu alespoň 2 m.
+4.6. Čištění a údržba
+4.6.1. Způsob čištění
+Hydraulický modul čistěte prostředky určenými pro
+nerezové materiály.
+V okolí hydraulického modulu nepoužívejte žádné spreje.
+To platí zejména pro:
+◎
+◎
+◎
+◎
+Rozpouštědla
+Čisticí prostředky obsahující chlor
+Barvy
+Lepidla
+4.6.2. Na co si dát pozor
+Hydraulický modul obsahuje elektrické součásti,
+a proto se nesmí snímat přední kryt!
+5. Záruka a servis
+5.1. Poprodejní záruka
+Všechna zařízení musí být plně uvedena do provozu v souladu s
+naším instalačním návodem a kontrolním seznamem uvedení do provozu
+(bude součástí instalačního návodu). Ten musí
+být podepsán a předán uživateli k uschování během
+předání. Instalatér by měl uživatele rovněž informovat
+o požadavcích na roční servis a doporučit
+vhodnou servisní smlouvu.
+Výrobce poskytuje na výrobek záruku v rámci
+doby, výkonu a za podmínek uvedených v
+záručním listu. Záruční list je součástí dodávky
+a pro platnost musí být vyplněn.
+Aby byla záruka po jednom roce platná, musí být zařízení
+servisováno v souladu s naším instalačním návodem a
+servisními pokyny. Servisní historie musí být řádně
+vyplněna. Pozn. – veškeré náklady na tento servis jsou
+ze záruky vyloučeny. Nesprávná instalace a uvedení do provozu
+tohoto zařízení v rozporu s pokyny
+výrobce vede k zániku záruky (tím nejsou dotčena
+zákonná práva zákazníka).
+5.2. Zákaznický servis
+Servisní práce na výrobku smějí provádět pouze
+autorizovaní servisní technici. Více vám sdělí topenářská
+firma, která instalaci provedla.
+Pro zajištění pravidelného servisu důrazně doporučujeme
+uzavřít smlouvu o údržbě. Podrobnosti vám
+sdělí servisní oddělení.
+6. Schéma elektrického zapojení
+6.1. Zapojení napájení jednofázového hydr. modulu
+schéma platí pro: RH-03H/S
+Pokyny k připojení svorek jednofázového
+hydraulického režimu
+www.reoheating.cz
+10
+--- strana 12 ---
+6.2. Zapojení napájení třífázového hydr. modulu
+schéma platí pro: RH-03H
+Pokyny k připojení svorek třífázového hydraulického režimu
+www.reoheating.cz
+11

@@ -1,0 +1,139 @@
+[Text vytažený z Spare Part List - revised.pdf]
+
+--- strana 1 ---
+BOM code Name Specification Unit Qty Unit price
+CP-RW0300114 RH030-PW8-A2, R290
+801019-0116 Electronic expansion valve DPF(TS1)1.65C-49,diameterφ6.35 Pcs 1 US$13.65
+802026-3358 Pressure Switch Low pressure switch, 0.05MPa(OFF)-0.15MPa(ON),1.5 meter cable with VH-2Y terminal, copper tube length 38*41mm Pcs 1 US$3.43
+802026-1255 Pressure Switch High pressure switch, 2.6MPa(ON)-3.2MPa(OFF)1.5 meter cable with VH-2Y terminal,copper tube length 38*41mm Pcs 1 US$3.43
+802006-0204 Pressure Sensor 35CP02-03158020XS00F5H-ENV,0-20bar, cable 1.5 meter Pcs 1 US$34.45
+801012-0002 Needle valve φ6.35*80,KAE KSE Pcs 2 US$1.87
+802002-3267 Circuit board PW58381-CC1010B Frequency conversion triple supply controller Pcs 1 US$161.20
+802003-2111 Controller panel PW58410-CC1247 Pcs 1 US$105.00
+802007-1116 Signal cable CCX330.45,XH-4Y white,length 500mm Pcs 1 US$1.04
+802007-1143 Signal cable CCX330.64,XH-4Y white and SM-4Y black,length 400mm+300mm Pcs 1 US$1.04
+802007-1144 Signal cable CCX306.07, SM-4A black/SM-4Y black，length 10000mm Pcs 1 US$5.20
+802010-0209 Reactor R25027 I：25A L：2.7mH-90CM 12AWG cable-5.5-5round terminal Pcs 1 US$20.80
+802004-2080 Temperature Sensor CC.T94(5K plastic seal - PVC pipe 950mm, XH-2Y white, length 1000mm) Pcs 1 US$1.43
+802004-2083 Temperature Sensor CC.T98(5K plastic seal - PVC pipe 950mm, XH-2Y white, length 1000mm) Pcs 1 US$1.43
+802004-2030 Temperature Sensor CC.T257（50K high temperature copper sealing tape XH-2Y, red wire length 1200mm） Pcs 1 US$2.08
+802004-2093 Temperature Sensor CC.T186(5K copper seal - PVC pipe 1000mm, XH-2Y white, length 10000mm) Pcs 1 US$3.85
+802004-2055 Temperature Sensor CC.T43(5K copper seal - PVC pipe 1000mm, XH-2Y white cable, length 1200mm) Pcs 3 US$1.43
+802004-2027 Temperature Sensor CC.T245（5K copper sealing tape XH-2Y, black wire length 1500mm） Pcs 1 US$1.82
+801001-0091 Compressor Highly/R290/Inverter Pcs 1 US$353.60
+801015-0100 Circulation pump Shimge, APM25-9-130 PWM1/cable length 1.5m Pcs 1 US$145.00
+802042-1106 Motor RD150HA,150W, DC, 850rpm 8P 310V Pcs 1 US$64.20
+802043-0304 Fan blade φ552*142, 3 blades, ASG20, blue Pcs 1 US$10.60
+801014-0309 Pressure gauge 0-3.8,M4 thread Pcs 1 US$8.20
+802039-0001 Flow switch WFS27020PF（30）plastic ，1/6 female thread，cable length 2 meters Pcs 1 US$18.00
+--- strana 2 ---
+BOM code Name Specification Unit Qty Unit price
+CP-RW0400086 RH040-PW12-A2,R290
+801019-0118 Electronic expansion valve DPF(TS1)2.2C-34,Diameter φ7.94 Pcs 1 US$16.50
+802026-3358 Pressure Switch Low pressure switch, 0.05MPa(OFF)-0.15MPa(ON),1.5 meter cable with VH-2Y terminal, copper tube length 38*41mm Pcs 1 US$3.43
+802026-1255 Pressure Switch High pressure switch, 2.6MPa(ON)-3.2MPa(OFF)1.5 meter cable with VH-2Y terminal,copper tube length 38*41mm Pcs 1 US$3.43
+802006-0204 Pressure Sensor 35CP02-03158020XS00F5H-ENV,0-20bar, cable 1.5 meter Pcs 1 US$34.45
+801012-0001 Needle valve φ6.35*40,KAE KSE Pcs 1 US$1.73
+801012-0002 Needle valve φ6.35*80,KAE KSE Pcs 2 US$1.87
+802002-3266 Circuit board PW58381-CC1010B Frequency conversion triple supply controller Pcs 1 US$244.00
+802003-2111 Controller panel PW58410-CC1247 Pcs 1 US$125.60
+802007-1116 Signal cable CCX330.45,XH-4Y white,length 500mm Pcs 1 US$1.04
+802007-1143 Signal cable CCX330.64,XH-4Y white and SM-4Y black,length 400mm+300mm Pcs 1 US$1.04
+802007-1144 Signal cable CCX306.07, SM-4A black/SM-4Y black，length 10000mm Pcs 1 US$5.20
+802010-0211 Reactor R25027 I：25A L：2.7mH-90CM 12AWG cable-5.5-5round terminal Pcs 1 US$20.80
+802004-2055 Temperature Sensor CC.T43(5K copper seal - PVC pipe 1000mm, XH-2Y white cable, length 1200mm) Pcs 3 US$1.43
+802004-2083 Temperature Sensor CC.T98(5K plastic seal - PVC pipe 950mm, XH-2Y white, length 1000mm) Pcs 1 US$1.43
+802004-2093 Temperature Sensor CC.T186(5K copper seal - PVC pipe 1000mm, XH-2Y white, length 10000mm) Pcs 1 US$3.85
+802004-2030 Temperature Sensor CC.T257（50K high temperature copper sealing tape XH-2Y, red wire length 1200mm） Pcs 1 US$2.08
+802004-2027 Temperature Sensor CC.T245（5K copper sealing tape XH-2Y, black wire length 1500mm） Pcs 2 US$1.82
+801001-0089 Compressor Highly/R290/Inverter Pcs 1 US$452.00
+801015-0105 Circulation pump Shimge, APM25-9-130 PWM1/cable length 1.5m Pcs 1 US$145.00
+802043-0305 Fan blade φ552*142, 3 blades, ASG20, blue Pcs 1 US$10.60
+802042-1102 Motor RD150HA,150W, DC, 850rpm 8P 310V Pcs 1 US$64.20
+801014-0309 Pressure gauge 0-3.8,M4 thread Pcs 1 US$8.20
+802039-0004 Flow switch WFS27020PF（30）plastic ，1/6 female thread，cable length 2 meters Pcs 1 US$18.00
+--- strana 3 ---
+BOM code Name Specification Unit Qty Unit price
+CP-RW0500125 RH050-PW15-A2,R290
+801019-0119 Electronic expansion valve DPF(TS1)2.2C-34,Diameter φ7.94(inner φ6.5) Pcs 1 US$19.00
+802026-3354 Pressure Switch Low pressure switch, 0.05MPa(OFF)-0.15MPa(ON),1.5 meter cable with VH-2Y terminal,copper tube length 38*41mm Pcs 1 US$3.43
+802026-1252 Pressure Switch High pressure switch, 2.6MPa(ON)-3.2MPa(OFF)1.5 meter cable with VH-2Y terminal,copper tube length 38*41mm Pcs 1 US$3.43
+802006-0204 Pressure Sensor 35CP02-03158020XS00F5H-ENV,0-20bar, cable 1.5 meter Pcs 1 US$34.45
+801012-0002 Needle valve φ6.35*80,KAE KSE Pcs 3 US$1.87
+802002-3265 Circuit board PW58385-CC902 for DC circulation pump Pcs 1 US$52.00
+802002-3009 Circuit board Driver module PW58344 6.0KW inverter Pcs 1 282.00
+802002-2610 Circuit board Filter board 03-0600508 L30A01 Pcs 1 42.40
+802003-2111 Controller panel PW58410-CC1247 Pcs 1 US$125.60
+802007-1143 Signal cable CCX330.64,XH-4Y white and SM-4Y black,length 400mm+300mm Pcs 1 US$1.04
+802007-1144 Signal cable CCX306.07, SM-4A black/SM-4Y black，length 10000mm Pcs 1 US$5.20
+802007-1120 Signal cable CCX327.18 length 1500mm Pcs 1 US$1.04
+802007-1116 Signal cable CCX330.45 length 500mm Pcs 1 US$1.04
+802004-2080 Temperature Sensor CC.T94(5K copper seal - PVC pipe 950mm, XH-2Y white cable, length 1000mm) Pcs 2 US$1.43
+802004-2057 Temperature Sensor CC.T45(5K plastic seal - PVC pipe 750mm, XH-2Y white, length 800mm) Pcs 1 US$1.43
+802004-2033 Temperature Sensor CC.T286(50K high temperature copper sealing tape XH-2Y, red wire length 1500mm) Pcs 1 US$2.08
+802004-2093 Temperature Sensor CC.T186(5K copper seal - PVC pipe 1000mm, XH-2Y white, length 10000mm) Pcs 1 US$3.85
+802004-2027 Temperature Sensor CC.T245（5K copper sealing tape XH-2Y, black wire length 1500mm） Pcs 3 US$1.82
+801001-0092 Compressor Highly/R290/Inverter Pcs 1 US$521.00
+801015-0100 Circulation pump Shimge, APM25-9-130, cable length 1.5m US$145.00
+802043-0307 Fan blade φ608*198, blue Pcs 1 US$26.20
+802042-1113 Motor RD200HC1, 200W DC motor 850rpm 8P 310V Pcs 1 US$69.60
+801014-0309 Pressure gauge 0-3.8,M4 thread Pcs 1 US$8.20
+802039-0004 Flow switch WFS27020PF（30）plastic ，1/6 female thread，cable length 2 meters Pcs 1 US$18.00
+--- strana 4 ---
+BOM code Name Specification Unit Qty Unit price
+CP-RW0500126 RH050-PW15-A3,R290
+801019-0119 Electronic expansion valve DPF(TS1)2.4C-34,Diameter φ7.94(inner φ6.5） Pcs 1 US$19.00
+802026-3354 Pressure Switch Low pressure switch, 0.05MPa(OFF)-0.15MPa(ON),1.5 meter cable with VH-2Y terminal,copper tube length 38*41mm Pcs 1 US$3.43
+802026-1252 Pressure Switch High pressure switch, 2.6MPa(ON)-3.2MPa(OFF)1.5 meter cable with VH-2Y terminal,copper tube length 38*41mm Pcs 1 US$3.43
+802006-0204 Pressure Sensor 35CP02-03158020XS00F5H-ENV,0-20bar, cable 1.5 meter Pcs 1 US$34.45
+801012-0002 Needle valve φ6.35*80,KAE KSE Pcs 3 US$1.87
+802002-3263 Circuit board PW58384-CC902 for DC circulation pump Pcs 1 US$52.00
+802002-3008 Circuit board PW58343-T10A02 driver module Pcs 1 US$321.00
+802002-3200 Circuit board PW58362-CC1211A current power detection board Pcs 1 US$16.64
+802003-2111 Controller panel PW58410-CC1247 Pcs 1 US$125.60
+802007-1143 Signal cable CCX330.64,XH-4Y white and SM-4Y black,length 400mm+300mm Pcs 1 US$1.04
+802007-1144 Signal cable CCX306.07, SM-4A black/SM-4Y black，length 10000mm Pcs 1 US$5.20
+802007-1120 Signal cable CCX327.18 length 1500mm Pcs 1 US$1.04
+802007-1116 Signal cable CCX330.45 length 500mm Pcs 1 US$1.04
+802010-0210 Reactor R20035(AL)-90CM 12AWG cable-5.5-5round terminal Pcs 1 US$19.11
+802004-2080 Temperature Sensor CC.T94(5K copper seal - PVC pipe 950mm, XH-2Y white cable, length 1000mm) Pcs 2 US$1.43
+802004-2057 Temperature Sensor CC.T45(5K plastic seal - PVC pipe 750mm, XH-2Y white, length 800mm) Pcs 1 US$1.43
+802004-2033 Temperature Sensor CC.T286(50K high temperature copper sealing tape XH-2Y, red wire length 1500mm) Pcs 1 US$2.08
+802004-2093 Temperature Sensor CC.T186(5K copper seal - PVC pipe 1000mm, XH-2Y white, length 10000mm) Pcs 1 US$3.85
+802004-2027 Temperature Sensor CC.T245（5K copper sealing tape XH-2Y, black wire length 1500mm） Pcs 3 US$1.82
+801021-0000 Coil 1.0～3.2,PQ-M10012-000058,DC12V,cable length 1.5 meter Pcs 1 US$9.36
+801021-1155 Coil SQ-A2522G-002223/cable length 1.8 meter,AC220-240V,50/60HZ Pcs 1 US$4.55
+801001-0092 Compressor Highly/R290/Inverter Pcs 1 US$521.00
+801015-0100 Circulation pump Shimge, APM25-9-130, cable length 1.5m Pcs 1 US$145.00
+802043-0307 Fan blade φ608*198, blue Pcs 1 US$26.20
+802042-1113 Motor RD200HC1, 200W DC motor 850rpm 8P 310V Pcs 1 US$69.60
+801014-0309 Pressure gauge 0-3.8,M4 thread Pcs 1 US$8.20
+802039-0004 Flow switch WFS27020PF（30）plastic ，1/6 female thread，cable length 2 meters Pcs 1 US$18.00
+--- strana 5 ---
+BOM code Name Specification Unit Qty Unit price
+CP-RW0600061 RH060-PW22-A3
+801019-0120 Electronic expansion valve DPF(TS1)3.0C-01,Diameter φ7.94 Pcs 1 US$21.40
+802026-3354 Pressure Switch Low pressure switch, 0.05MPa(OFF)-0.15MPa(ON),1.5 meter cable with VH-2Y terminal, copper tube length 38*41mm Pcs 1 US$3.43
+802026-1252 Pressure Switch High pressure switch, 2.6MPa(ON)-3.2MPa(OFF)1.5 meter cable with VH-2Y terminal,copper tube length 38*41mm Pcs 1 US$3.43
+802006-0204 Pressure Sensor 35CP02-03158020XS00F5H-ENV,0-20bar, cable 1.5 meter Pcs 1 US$34.45
+801012-0002 Needle valve φ6.35*80,KAE KSE Pcs 3 US$1.87
+801023-0051 Non-return valve For fluorine, V-6 diaphragm type φ9.52 inlet with filter Pcs 1 US$8.45
+802002-3007 Circuit board PW58338-T12A02 Driver module 6.5KW inverter module Pcs 1 US$365.80
+802002-3264 Circuit board PW58382-CC902 for circulation pump Pcs 1 US$52.00
+802003-2111 Controller panel PW58410-CC1247 Pcs 1 US$105.40
+802010-0210 Reactor R20035(AL)-90CM12AWG cable-5.5-5round terminal Pcs 1 US$19.10
+802007-1143 Signal cable CCX330.64（XH-4Y white,SM-4Y black,length 400mm+300mm） Pcs 1 US$1.04
+802007-1144 Signal cable CCX306.07（SM-4A black/SM-4Y black, length 10000mm) Pcs 1 US$5.20
+802007-1120 Signal cable CCX327.18(XH-3Y white, length 1500mm) Pcs 1 US$1.04
+802007-1116 Signal cable CCX330.45（XH-4Y white, length 500mm） Pcs 1 US$1.04
+802004-2080 Temperature Sensor CC.T94(5K copper seal - PVC pipe 950mm,XH-2Y white cable, length 1000mm) Pcs 2 US$1.43
+802004-2057 Temperature Sensor CC.T45(5K plastic seal - PVC pipe 750mm,XH-2Y white, length 800mm) Pcs 1 US$1.43
+802004-2033 Temperature Sensor CC.T286(50K high temperature copper sealing tape XH-2Y red, length 1500mm) Pcs 1 US$2.08
+802004-2093 Temperature Sensor CC.T186(5K copper seal - PVC pipe 1000mm, XH-2Y white, length 10000mm) Pcs 1 US$3.82
+802004-2027 Temperature Sensor CC.T245（5K copper sealing tape XH-2Y, black wire length 1500mm） Pcs 3 US$1.82
+801001-0093 Compressor Highly/R290/Inverter Pcs 1 US$810.00
+802039-0004 Flow switch WFS27020PF（30）plastic ，1/6 female thread，cable length 2 meters Pcs 1 US$18.10
+801014-0309 Pressure gauge 0-3.8,M4 thread Pcs 1 US$8.20
+802042-1102 Motor RD150HA,150W, DC, 850rpm 8P 310V Pcs 2 US$64.20
+802043-0305 Fan blade φ552*142, 3 blades, ASG20, blue Pcs 2 US$10.60
+801015-0104 Circulation pump APF25-12-130E FPWM1，cable length 1.6m Pcs 1 US$223.60
