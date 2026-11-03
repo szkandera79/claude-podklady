@@ -15,6 +15,7 @@ Zdrojové soubory výrobce zůstávají v nadřazené složce `RH X50 komerční
 | `RH-X50-energeticky-stitek.pdf` | Energetický štítek podle 811/2013, přeznačený na REO HEATING / RH X50. |
 | `RH-X50-operating-manual-EN.pdf` | Návod k použití, 53 stran, anglicky — z anglického originálu výrobce (`rebrand-navod-en.py`). Snímky aplikace: název Wi‑Fi výrobce „pwwm“ → „MyWiFi“ (`ssid_fix.py`, i v CZ verzi). |
 | `RH-X50-navod-k-pouziti.pdf` | Návod k použití, 53 stran, česky. Modelové kódy přeznačeny, logo a modelová řádka na titulce. |
+| `prezentace/REO-RH-X50-X100_prezentace-CZ.pdf`, `…_presentation-EN.pdf` | Prezentace „Komerční tepelné čerpadlo R290“, 60 snímků, česky a anglicky — rebrand a překlad prezentace výrobce (popis, instalace, zapojení, kaskáda, Wi‑Fi/IoT, ovladač, uvedení do provozu, chybové kódy); postup v `prezentace/README.md`. |
 | `rebrand-stitek.py`, `rebrand-navod.py`, `rebrand-navod-en.py`, `ssid_fix.py` | Skripty, kterými výstupy vznikly — spouštět ze složky `RH X50 komerční`. |
 
 ## Co se NEpřebrandovalo a proč

@@ -1,406 +1,455 @@
 [Text vytažený z REO-RH-X50-X100_prezentace-CZ.pdf]
 
 --- strana 1 ---
-Updating date: 20250411
+Aktualizace: 11. 4. 2025
 --- strana 2 ---
-CO NTENTS
-0 1 R290 Commercial HP Introduction
-0 2 WiFi APP & IoT Monitoring Platform
-0 3 Wired Controller Operation
-0 4 Commissioning
-0 5 Error Code & Troubleshooting
+0 1
+Představení komerčního TČ R290
+0 2
+Aplikace Wi‑Fi a platforma IoT
+OBSAH Ovládání kabelovým ovladačem
+0 3
+0 4
+Uvedení do provozu
+0 5
+Chybové kódy a odstraňování poruch
 --- strana 3 ---
-1
-R290 Commercial HP Introduction
+1 Představení komerčního TČ R290
 --- strana 4 ---
-Basic Information
-Model PW150-DKZLRS-E
-R290 Commercial HP
-Heating/Cooling/DHW
-ERP A+++(35℃)
-HIGHLY DC Inverter
-Compressor *2
-Operational Water Pump
-LED Control Panel
-WiFi Smart Control
-Power Supply 380V/3Ph/50-60Hz
-Body Size(W*D*H)/mm 1195×980×1900
-Operation Ambinet Temp(℃) -25~43℃
+Základní informace
+Model RH X50
+Komerční TČ R290
+Vytápění / chlazení / TUV
+ErP A+++ (35 °C)
+Invertorový kompresor
+HIGHLY DC × 2
+Oběhové čerpadlo
+LED ovládací panel
+Ovládání přes Wi­Fi
+Napájení
+Rozměry Š×H×V (mm)
+Provozní venkovní teplota (°C)
+380V/3Ph/50-60Hz
+1195×980×1900
+-25~43℃
 --- strana 5 ---
-Basic Information
-Model PW300-DKZLRS-E
-R290 Commercial HP
-Heating/Cooling/DHW
-ERP A+++(35℃)
-HIGHLY DC Inverter
-Compressor *4
-Operational Water Pump
-LED Control Panel
-WiFi Smart Control
-Power Supply 380V/3Ph/50-60Hz
-Body Size(W*D*H)/mm 2510×979×1882
-Operation Ambinet Temp(℃) -25~43℃
+Základní informace
+Model RH X100
+Komerční TČ R290
+Vytápění / chlazení / TUV
+ErP A+++ (35 °C)
+Invertorový kompresor
+HIGHLY DC × 4
+Oběhové čerpadlo
+LED ovládací panel
+Ovládání přes Wi­Fi
+Napájení
+Rozměry Š×H×V (mm)
+Provozní venkovní teplota (°C)
+380V/3Ph/50-60Hz
+2510×979×1882
+-25~43℃
 --- strana 6 ---
-Product Data & Main Features
-Model PW150-DKZLRS-E PW300-DKZLRS-E
-Heating Condition - Ambient Temp.（DB/WB）: 7/6℃，Water Temp.（In/Out）：30/35℃
-Heating Capacity Range (kW) 18.4~49.25 35.2~92
-Heating Power Input Range(kW) 4.23~12.96 7.0~23.8
-COP Range 3.8~4.3 3.86~5.02
-DHW Condition-Ambient Temp.（DB/WB）: 20/15℃，Water Temp.（In/Out）：15/55℃
-Heating Capacity Range (kW) 23.8~68 40.0~120
-Heating Power Input Range(kW) 4.23~15.46 9.0~29.5
-COP Range 4.46~5.62 4.06~5.5
-Heated water output (L/H) 1462 2580
-Cooling Condition - Ambient Temp.（DB/WB）:35/24℃，Water Temp.（In/Out）：12/7℃
-Cooling Capacity Range (kW) 13.8~34.5 25~66
-Cooling Power Input Range(kW) 5.2~16.2 8.92~30.7
-EER Range 2.1~2.65 2.15~2.8
-Power supply 380~415V/3Ph/50-60Hz
-Max. power input（kW） 20 40
-Max. current （A） 32 64
-Fuse or circuit breaker (A) 40 80
-Wire diameter (mm²) 10mm² 22mm²
-Diameter of pipe (mm) G1.5" G2''
-Sound power level (dB(A)) ≤77 ≤85
-Sound pressure level (dB(A)) ≤62 ≤65
-Max Water Flow(m3/h) 8.6 17.2
-Water Pressure Drop (max) kPa 80 120
-Net Weight (kg) 370 745
-Body size(W*D*H) (mm) 1195×980×1900 2510×979×1882
-Packing size(W*D*H)(Polywood) 1275×1060×2100 2560×1030×2000
-IP Grade (Level of protection) IPX4 IPX4
-Anti-electric shock Rate I I
-Refrigerant R290/4.0kg R290/8.0Kg
-Compressor Brand HIGHLY HIGHLY
-Compressor Model WHP37600PSKTQ9JK WHP37600PSKTQ9JK
-Operation Ambient Temp. (℃) -25~43℃
-Operating water temperature (℃) 20~78℃(DHW )
-Operating water temperature (℃) 20~78℃(Heating)
-Operating water temperature (℃) 7~30℃(Cooling)
+Model
+Technické údaje a hlavní vlastnosti
+RH X50 RH X100
+Vytápění – venkovní teplota (DB/WB): 7/6 °C, voda (vstup/výstup): 30/35 °C
+Topný výkon – rozsah (kW)
+18.4~49.25 35.2~92
+Příkon – rozsah (kW)
+Rozsah COP
+4.23~12.96 7.0~23.8
+3.8~4.3 3.86~5.02
+Ohřev TUV – venkovní teplota (DB/WB): 20/15 °C, voda (vstup/výstup): 15/55 °C
+Topný výkon – rozsah (kW)
+23.8~68 40.0~120
+Příkon – rozsah (kW)
+Rozsah COP
+Výkon ohřevu vody (l/h)
+Chlazení – venkovní teplota (DB/WB): 35/24 °C, voda (vstup/výstup): 12/7 °C
+4.23~15.46 9.0~29.5
+4.46~5.62 4.06~5.5
+1462 2580
+Chladicí výkon – rozsah (kW)
+13.8~34.5 25~66
+Příkon při chlazení – rozsah (kW)
+Rozsah EER
+Napájení
+Max. příkon (kW)
+Max. proud (A)
+Jistič (A)
+Průřez vodiče (mm²)
+Připojení potrubí
+Hladina akustického výkonu dB(A)
+Hladina akustického tlaku dB(A)
+Max. průtok vody (m³/h)
+Tlaková ztráta vody (max.) kPa
+Čistá hmotnost (kg)
+Rozměry Š×H×V (mm)
+5.2~16.2 8.92~30.7
+2.1~2.65 2.15~2.8
+380~415V/3Ph/50-60Hz
+20 40
+32 64
+40 80
+10mm² 22mm²
+G1.5" G2''
+≤77 ≤85
+≤62 ≤65
+8.6 17.2
+80 120
+370 745
+1195×980×1900 2510×979×1882
+Rozměry balení Š×H×V (překližka)
+1275×1060×2100 2560×1030×2000
+Stupeň krytí
+Třída ochrany před úrazem el.
+proudem Chladivo
+Značka kompresoru
+Typ kompresoru
+IPX4 IPX4
+I I
+R290/4.0kg R290/8.0Kg
+HIGHLY HIGHLY
+WHP37600PSKTQ9JK WHP37600PSKTQ9JK
+Provozní venkovní teplota (°C)
+-25~43℃
+Provozní teplota vody (°C)
+Provozní teplota vody (°C)
+Provozní teplota vody (°C)
+20~78 °C (TUV)
+20~78 °C (vytápění)
+7~30 °C (chlazení)
 --- strana 7 ---
-Working Principle
-Air source heat pump absorbs free energy from the air, and then transports the energy to cold water through the compressor doing work to heat large amounts of energy efficient hot water, thus realising the needs of central
-heating and domestic hot water.
-This commercial heat pump is designed with two independent refrigerant systems, both of which have the same configuration. A complete refrigeration cycle system consists of four major parts: Compressor, Evaporator,
-Condenser and Throttle device.
-* Evaporator: low temperature, low pressure refrigerant go through evaporator, vaporizes into low-temperature and low-pressure steam;
-* Compressor: compresses the refrigerant steam into high-temp high-pressure gas, which is discharged into the condenser.
-* Condenser: refrigerant release heat energy to heat exchanger, and it returns from gas status to liquid status.The heat energy is absorbed by water, then the hot water is sent to indoor user’s end through the water pressure.
-* EEV: at last the refrigerant go through the electronic expansion valve, where its pressure is reduced, and then continues to the evaporator.
-Hot water out
-Cold water in
-Note: AI3~AI12 are the temperature sensors that are standard from factory.
+Princip činnosti
+Tepelné čerpadlo vzduch–voda odebírá ze vzduchu energii zdarma a s pomocí práce kompresoru ji předává studené vodě; tak účinně ohřívá velké množství teplé vody pro ústřední vytápění i přípravu teplé užitkové vody.
+Toto komerční tepelné čerpadlo má dva nezávislé chladivové okruhy, oba ve stejné konfiguraci. Úplný chladicí okruh tvoří čtyři hlavní části: kompresor, výparník, kondenzátor a expanzní (škrticí) ventil.
+* Výparník: chladivo o nízké teplotě a nízkém tlaku prochází výparníkem a odpařuje se na páru o nízké teplotě a nízkém tlaku;
+* Kompresor: stlačuje páru chladiva na plyn o vysoké teplotě a vysokém tlaku, který odchází do kondenzátoru.
+* Kondenzátor: chladivo předává teplo výměníku a z plynného stavu přechází zpět do kapalného. Teplo přebírá voda, která je pak tlakem vody dopravována ke spotřebičům v objektu.
+* EEV: nakonec chladivo prochází elektronickým expanzním ventilem, kde se sníží jeho tlak, a pokračuje do výparníku.
+Výstup teplé vody
+Vstup studené
+vody
+Pozn.: AI3~AI12 jsou teplotní čidla dodávaná standardně z výroby.
 --- strana 8 ---
-Configuration
+Konstrukce
 --- strana 9 ---
-Reliable Stable & High Efficiency A+++
-The Full DC inverter technology makes the unit can intelligently adjust the operating frequency and control the water
-temperature to keep the room at a constant-temps.
-Under low ambient temperature, Power World's R290 FULL DC INVERTER heat pump can operate stably and efficiently in
-extremely cold regions of -25°C without EVI technology.
-Its COP is as high as 5.0 and energy efficiency class reaches A+++(35℃) and outputting 78°C hot water to ensure the heating and
-cooling of the house need. It can save up to 50% energy electricity compared to ON-OFF units and up to 75% energy compared to
-traditional boiler electric heat pumps.
-2 * DC Inverter
-HIGHLY Compressor
-78℃
-Hot Water
--25℃
-Outdoor
-Temps
-COP
-Up to
+Spolehlivost, stabilita a vysoká účinnost A+++
+Plně invertorová technologie DC umožňuje jednotce inteligentně měnit pracovní frekvenci a řídit teplotu vody tak, aby v místnosti
+byla stálá teplota.
+Plně invertorové tepelné čerpadlo REO HEATING R290 pracuje stabilně a účinně i při nízkých venkovních teplotách, v extrémně
+chladných oblastech až do −25 °C, a to bez technologie EVI.
+COP dosahuje až 5,0, energetická třída A+++ (35 °C) a výstupní teplota vody 78 °C pokryje potřebu vytápění i chlazení objektu.
+Oproti jednotkám ON/OFF a tradičním elektrokotlům lze u vhodných projektů orientačně dosáhnout výrazné úspory elektrické
+energie.
+2 × DC invertorový
+kompresor HIGHLY
+78℃ -25℃
+Venkovní
+Teplá voda COP 1 × velký DC invertorový
+motor ventilátoru (14 000 m³/h)
+až
+1 × účinný deskový
+teplota výměník
 5.0
-1 * Big DC inverter
-Stepless Fan Moto(14000m³/h)
-1 * Efficient Plate heat
-exchanger
-2 * Efficient finned heat
-exchanger
+2 × účinný lamelový
+výměník
 --- strana 10 ---
 Smart Grid
-Power World’s Heat Pumps support connect smart grid and photovoltaic system to store energy.
-When connecting the SG and EVU signal, the heat pump will run in hot water mode priority to heat the water, then, according to
-peak electricity consumption or other conditions, provide hot water to users.
-It can store energy well, monitor energy use and allocate it reasonably, and reduce energy consumption.
-Mainboard
+Tepelná čerpadla REO HEATING podporují připojení k chytré síti (Smart Grid) a k fotovoltaickému systému pro akumulaci energie.
+Při připojení signálů SG a EVU pracuje tepelné čerpadlo přednostně v režimu ohřevu teplé vody a podle špiček odběru elektřiny či
+jiných podmínek pak dodává teplou vodu spotřebitelům.
+Umí dobře akumulovat energii, sledovat její spotřebu, rozumně ji rozdělovat a snižovat spotřebu energie.
+Řídicí deska
 COM
 COM
-SG: Smart grid signal
-EVU: Photovoltaic signal
-Smart grid module
+SG: signál Smart Grid
+EVU: signál z fotovoltaiky
+Modul Smart Grid
 --- strana 11 ---
 Smart Grid
-(1) When SG signal is ON, and EVU signal is ON, the hot water mode is set to be valid, heat pump will operate hot water mode priority and the hot
-water mode setting temp will be changed to 70℃. When THWt < 69℃, the TBH is on; When THWt ≥ 70℃, the TBH is off.
-(2) When SG signal is OFF, and EVU signal is ON, and the hot water mode is set to be valid, heat pump will operate hot water mode priority. When
-THWt< TWHTs-2, the TBH is on; When THWt ≥ THWTs+3℃, the TBH is off.
-(3) When SG signal is ON, and EVU signal is OFF, the unit operates normally according to actual needs.
-(4) When SG signal is OFF, and EVU signal is OFF, the unit will not operate hot water mode priority automatically, and the TBH is invalid, disinfect
-function is invalid. Heat pump forced operation energy-saving mode, and the max running time for cooling/heating is ‘Energy-saving operating time’
-,
-then unit will be off.
+(1) Je­li signál SG zapnutý (ON) a signál EVU zapnutý (ON) a je povolen režim ohřevu TUV, tepelné čerpadlo pracuje přednostně v režimu TUV a
+nastavená teplota TUV se změní na 70 °C. Při THWt < 69 °C se TBH zapne, při THWt ≥ 70 °C se TBH vypne.
+(2) Je­li signál SG vypnutý (OFF), signál EVU zapnutý (ON) a je povolen režim ohřevu TUV, tepelné čerpadlo pracuje přednostně v režimu TUV. Při
+THWt < THWTs − 2 se TBH zapne, při THWt ≥ THWTs + 3 °C se TBH vypne.
+(3) Je­li signál SG zapnutý (ON) a signál EVU vypnutý (OFF), jednotka pracuje normálně podle skutečné potřeby.
+(4) Je­li signál SG vypnutý (OFF) a signál EVU vypnutý (OFF), jednotka automaticky neupřednostňuje režim TUV, TBH je zablokováno a funkce
+dezinfekce je zablokována. Tepelné čerpadlo pracuje vynuceně v úsporném režimu; maximální doba chlazení/vytápění je dána parametrem „Energysaving
+operating time“, poté se jednotka vypne.
 Smart Grid
-Operation State SG EVU
+Provozní stav
+Zvýšený provoz
+Stav levné elektřiny (FV)
+Běžný provoz
+Stav nízké spotřeby
+Omezený provoz
+Stav špičky odběru
+SG EVU
 ON ON
 OFF ON
-Increased Operation
-Free Electricity Status(PV)
-Normal Operation
-Low Power Consumption Status
-Decreased Operation
-Peak Power Consumption Status
 ON OFF
 OFF OFF
-* THWt: Water tank temp
-* THWTs: Water tank set temp
-* TBH: Water tank heater
+* THWt: teplota v zásobníku TUV
+* THWTs: žádaná teplota TUV
+* TBH: el. těleso zásobníku TUV
 --- strana 12 ---
-R290 Refrigerant Leakage Detection
-The heat pump is built in a refrigerant leakage sensor from factory, it’s used to detect and monitor the leakage of R290 refrigerant, ensuring the safety and
-efficiency of the system. When the leakage concentration exceeds 15% LFL, the system will sound an alarm and display fault code 209, reminding users
-to handle it in a timely manner to ensure safe use.
-The compressor and all electric heating will stop, and the fan is running at the lowest speed.
-Solution:
-required to operate it)
-Power off the unit immediately, keep good ventilate, check the refrigerant leakage point of the unit, and repair it. (Professional installation personnel are
+Detekce úniku chladiva R290
+Tepelné čerpadlo má z výroby vestavěné čidlo úniku chladiva, které detekuje a sleduje případný únik chladiva R290, a zajišťuje tak bezpečnost a účinnost
+systému. Když koncentrace úniku překročí 15 % LFL, systém spustí alarm a zobrazí chybový kód 209, aby uživatel mohl včas zasáhnout a byl zajištěn
+bezpečný provoz.
+Kompresor a veškerý elektrický dohřev se zastaví, ventilátor běží na nejnižší otáčky.
+Řešení:
+technik.)
+Jednotku okamžitě odpojte od napájení, zajistěte dobré větrání, vyhledejte místo úniku chladiva a opravte je. (Smí provádět pouze odborný servisní
 --- strana 13 ---
-Exhaust Air
-The heat pump is built in an exhaust valve, which can discharge the air that enters the heat pump in real time during
-operation, ensuring more stable and efficient system operation.
+Odvzdušnění
+Tepelné čerpadlo má vestavěný odvzdušňovací ventil, který za provozu průběžně odvádí vzduch, jenž se dostane do
+tepelného čerpadla, a zajišťuje tak stabilnější a účinnější provoz systému.
 --- strana 14 ---
-Application
-The secondary system operates stably and is mostly used in medium to large commercial heating places.
-Blue/Green: Return cold water
-Red: Supply hot water
+Použití
+Sekundární okruh pracuje stabilně a používá se především ve středních a velkých komerčních objektech.
+Modrá/zelená: vratná studená voda
+Červená: přívod teplé vody
 --- strana 15 ---
-Water pipeline installation accessories
-Pass valve Pressure relief valve Exhaust valve Two way valve
-Air pressure tank Automatic water
-replenishment valve
-Y-filter Check valve
-Thermometer Pressure gage Three way valve Ball valve
+Příslušenství pro instalaci vodního potrubí
+Průchozí
+ventil Pojistný ventil Odvzdušňovací
+ventil
+Dvoucestný ventil
+Automatický
+Expanzní nádoba Filtr Y Zpětná klapka
+napouštěcí ventil
+Teploměr Manometr Trojcestný ventil Kulový
+kohout
 --- strana 16 ---
-Installation Location
-1. The heat pump installation area must have good ventilation and the air inlet/outlet must not be hindered.
-2. The installation area must have good drainage and be built on a solid foundation.
-3. Do not install the unit in areas accumulated with pollution like aggressive gas (chlorine or acidic), dust, sand and leaves etc.
-4. For easier and better maintenance and troubleshooting, no obstacles around the unit should be closer than 0.5m. And no obstructions within 2m
-vertically from the unit for air ventilation.
-5. The heat pump must be equipped with shock-absorbing bushings to prevent vibration and/or imbalance;
-6. The pipeline must be installed with appropriate support to prevent possible damage due to vibration. The pressure of tap water should be maintained
-above 200kPa. Otherwise, a booster pump should be installed.
+Místo instalace
+1. Místo instalace tepelného čerpadla musí být dobře větrané a přívod/výstup vzduchu nesmí být ničím omezen.
+2. Místo instalace musí mít dobrý odvod vody a pevný základ.
+3. Jednotku neinstalujte v prostředí se znečištěním, jako jsou agresivní plyny (chlor, kyseliny), prach, písek, listí apod.
+4. Pro snadnou údržbu a odstraňování poruch nesmí být žádná překážka blíže než 0,5 m od jednotky a kvůli proudění vzduchu žádná překážka do 2 m
+nad jednotkou.
+5. Tepelné čerpadlo musí být osazeno antivibračními podložkami proti vibracím a/nebo nevyváženosti;
+6. Potrubí musí být vhodně podepřeno, aby nedošlo k poškození vibracemi. Tlak vody z vodovodu musí být trvale nad 200 kPa, jinak je nutné osadit
+posilovací čerpadlo.
 --- strana 17 ---
-Base Installation and Drainage
-1. The installation height should be ≥0.3m.(It’s up to the drain height and the snow height in local). There are a total of 8 fixed holes reserved on the 4
-sides of the heat pump chassis(Circled in red below), and the customer needs to use M8 bolts to fix unit to the installation base.
-2. The chassis is designed with 4 drainage holes(Circled in purple below), which can directly drain condensate water and prevent water accumulation
-from causing freezing.
+Základ a odvod kondenzátu
+1. Výška instalace má být ≥ 0,3 m (podle výšky odtoku a místní výšky sněhové pokrývky). Na 4 stranách rámu tepelného čerpadla je celkem 8
+kotevních otvorů (níže zakroužkováno červeně); jednotku je nutné ke stanovišti připevnit šrouby M8.
+2. Rám má 4 odtokové otvory (níže zakroužkováno fialově), kterými přímo odtéká kondenzát, aby se nehromadila voda a nezamrzala.
 --- strana 18 ---
-Water Pipeline Installation
-• Installation Requirements
-1. It is recommended to install quick connect fittings at the connection between the inlet and outlet.
-2. Suggest using stainless steel or PPR pipes for water pipelines.
-3. When water pressure exceeds 0.8MPA, please use reducing valve to reduce the water pressure below 0.8MPA.
-4. Each part connected to unit needs to be connected with method of loose joint and installed with intermediate valve.
-5. Ensure that all plumbing has been properly completed and then proceed to do a water leakage and pressure test.
-6. All the pipelines and pipe fittings must be insulated to prevent heat loss.
-7. Install a drain valve at the lowest point of the system to enable the system to be drained during freezing conditions.
-8. Install a check valve on the water outlet connection in order to prevent back siphoning when water pump stops.
-9. In order to reduce the back pressure, the pipes should be installed horizontally.
-10. Minimize the elbows (90 degrees connections). If a higher flow rate is required, install a bypass valve.
-PPR Pipe
-Stainless steel pipe
-Drain valve Check valve
+Instalace vodního potrubí
+•
+Požadavky na instalaci
+1. Na připojení vstupu a výstupu doporučujeme osadit rychlospojky.
+2. Pro vodní potrubí doporučujeme nerezové nebo PPR potrubí.
+3. Pokud tlak vody překračuje 0,8 MPa, osaďte redukční ventil, který sníží tlak vody pod 0,8 MPa.
+4. Každá část připojená k jednotce musí být připojena rozebíratelným spojem a s uzavíracím ventilem.
+5. Po řádném dokončení všech rozvodů proveďte zkoušku těsnosti a tlakovou zkoušku.
+6. Veškeré potrubí a tvarovky musí být izolovány proti tepelným ztrátám.
+7. V nejnižším bodě systému osaďte vypouštěcí ventil, aby bylo možné systém při mrazu vypustit.
+8. Na výstup vody osaďte zpětnou klapku, aby po zastavení čerpadla nedocházelo ke zpětnému sání.
+9. Pro snížení protitlaku veďte potrubí vodorovně.
+10. Omezte počet kolen (90°). Je­li potřeba vyšší průtok, osaďte obtokový ventil.
+Potrubí PPR Nerezové potrubí Vypouštěcí
+ventil
+Zpětná klapka
 --- strana 19 ---
-Water Pipeline Installation
-11.Domestic hot water tank
-The capacity of the water tank is determined based on the daily water consumption of each person. According to the standards, 50L/person/day is taken,
-and the target water temperature is 55 ℃.
-For example, if the building area is 400m² and there are 20 persons, the total hot water demand is 1000L per day. The standard heating capacity of
-PW150 is 40KW in ambinet temp 0 ℃. Calculate the time to heat hot water using the following formula:
+Instalace vodního potrubí
+11. Zásobník teplé užitkové vody
+Objem zásobníku se určuje podle denní spotřeby vody na osobu. Podle norem se uvažuje 50 l/osobu/den a cílová teplota vody 55 °C.
+Příklad: budova o ploše 400 m² s 20 osobami má celkovou potřebu teplé vody 1 000 l za den. Jmenovitý topný výkon RH X50 je 40 kW při
+venkovní teplotě 0 °C. Dobu ohřevu vypočtete podle vzorce:
 Q=C×M×△T=4.1868×1000×45=188406KJ=52.3KW
-Q：Total heating load kJ
-M：daily water consumption (kg or L)
-C：Specific heat of water 4.1868kJ/kg·℃
-△T：Water temperature difference between inlet and outlet （55-10）℃
-Heat Time=Q÷P=52.3÷40=1.3h
-Note: The above calculations are under ideal conditions and are for reference only. In actual use, we should
-consider the pipeline heat loss, building insulation, changes in environmental temperature conditions, etc.,
-based on the actual heating time.
-Model Stainless steel coil pipe Area
-PW150 Φ32*40m 5.6m²
-Recommended values for coils in hot water tanks are shown in above table
+Q: celková potřeba tepla kJ
+M: denní spotřeba vody (kg nebo l)
+C: měrná tepelná kapacita vody 4,1868 kJ/kg·°C
+ΔT: rozdíl teplot vody na vstupu a výstupu (55 − 10) °C
+Doba ohřevu = Q ÷ P = 52,3 ÷ 40 = 1,3 h
+Pozn.: Výpočet platí pro ideální podmínky a je pouze orientační. Ve skutečném provozu je nutné zohlednit
+tepelné ztráty potrubí, izolaci budovy, změny venkovních teplot apod. a vycházet ze skutečné doby ohřevu.
+Model Nerezový trubkový výměník Plocha
+RH X50
+Φ32*40m 5.6m²
+Doporučené hodnoty výměníku v zásobníku TUV jsou uvedeny v tabulce výše
 --- strana 20 ---
-Water Pipeline Installation
-12. Buffer water tank: To prevent frequent tripping of the unit due to low load during operation, users must install a buffer water tank. The selection of
-buffer water tank can refer to the following empirical values.
-Model PW150
-V olume of buffer water tank 300-500L
-13. Air pressure tank: Suggest installing an air pressure tank on the water supply pipe to stabilize the pressure.
-Model Capacity(KW) V olume(L) Air pressure tank
-PW150 45~70 19
-1. It is best to choose 304 stainless steel flange air pressure tanks, as
-carbon steel galvanized is more prone to rusting.
-2. The pre filling pressure of the expansion tank is equal to the set
-pressure of the water replenishment valve.
-3. It is recommended to check the inflation pressure of the expansion
-tank every 1-2 years.
-14. An exhaust valve must be installed at the highest point of the circulating water system, and also at locally elevated areas.
+Instalace vodního potrubí
+12. Akumulační nádrž: aby jednotka při nízkém zatížení příliš často nevypínala, je nutné osadit akumulační nádrž. Při volbě akumulační nádrže lze
+vycházet z následujících empirických hodnot.
+Model RH X50
+Objem akumulační nádrže
+300-500L
+13. Expanzní nádoba: na přívodní potrubí vody doporučujeme osadit expanzní nádobu pro stabilizaci tlaku.
+Model Výkon (kW) Objem (l) Expanzní nádoba
+RH X50
+45~70 19
+1. Nejvhodnější jsou expanzní nádoby s přírubou z nerezové oceli 304;
+pozinkovaná uhlíková ocel snáze koroduje.
+2. Předtlak expanzní nádoby se rovná nastavenému tlaku napouštěcího
+ventilu.
+3. Tlak plynu v expanzní nádobě doporučujeme kontrolovat každé 1–2
+roky.
+14. Odvzdušňovací ventil musí být osazen v nejvyšším bodě oběhového systému a také v místně vyvýšených úsecích.
 --- strana 21 ---
-Water Pipeline Installation
-15. Heat Pump Circulating water pump: First, match the flow rate of the water pump, then match the head, and finally determine the power.
-(1)The water flow rate of the circulating water pump is ≥ the rated water flow of the heat pump×(1.1~1.2)
-(2) The water head: Hmax1=K(△P1+△P2+△P3)
-△P1——Unit water pressure drop head (please check product parameters, usually 1mH2O=10KPa)
-△P2——Horizontal pipeline resistance head (usually 5 meters head is required for every 100 meters of pipe length)
-△P3——Pipeline height difference(m)
-K——Represents a safety factor ranging from 1.1 to 1.2.
-The water pump should be horizontally installed on the main pipe. On the one hand, it is easy to vacuum, and on the other hand, it can ensure the flow
-and efficiency of the water pump.
+Instalace vodního potrubí
+15. Oběhové čerpadlo tepelného čerpadla: nejprve zvolte průtok čerpadla, pak dopravní výšku a nakonec příkon.
+(1) Průtok oběhového čerpadla ≥ jmenovitý průtok vody tepelného čerpadla × (1,1~1,2)
+(2) Dopravní výška: Hmax1 = K(ΔP1 + ΔP2 + ΔP3)
+ΔP1 – tlaková ztráta jednotky (viz technické údaje, obvykle 1 m H₂O = 10 kPa)
+ΔP2 – tlaková ztráta vodorovného potrubí (obvykle 5 m na každých 100 m délky potrubí)
+ΔP3 – výškový rozdíl potrubí (m)
+K – součinitel bezpečnosti 1,1 až 1,2.
+Čerpadlo má být osazeno vodorovně na hlavním potrubí. Usnadní to odvzdušnění a zároveň zajistí průtok a účinnost čerpadla.
 --- strana 22 ---
-Water Pipeline Installation
-16. User’s End water pump: First, match the flow rate of the water pump, then match the head, and finally determine the power.
-(1)The water flow rate of the circulating water pump is ≥ the rated water flow of the heat pump×(1.1~1.3)
-(2) The water head: Hmax2=K(△P1+△P2)
-△P1——Maximum height of the user’s end (m, based on the highest point designed by the user)
-△P2——The most unfavorable loop pipeline resistance head (m, usually 5 meters of head is required for every 100 meters of pipe length)
-K——Represents a safety factor ranging from 1.1 to 1.2
-The water pump should be horizontally installed on the main pipe. On the one hand, it is easy to vacuum, and on the other hand, it can ensure the flow
-and efficiency of the water pump.
+Instalace vodního potrubí
+16. Čerpadlo na straně spotřebičů: nejprve zvolte průtok čerpadla, pak dopravní výšku a nakonec příkon.
+(1) Průtok oběhového čerpadla ≥ jmenovitý průtok vody tepelného čerpadla × (1,1~1,3)
+(2) Dopravní výška: Hmax2 = K(ΔP1 + ΔP2)
+ΔP1 – maximální výška strany spotřebičů (m, podle nejvyššího bodu soustavy)
+ΔP2 – tlaková ztráta nejnepříznivějšího okruhu (m, obvykle 5 m na každých 100 m délky potrubí)
+K – součinitel bezpečnosti 1,1 až 1,2
+Čerpadlo má být osazeno vodorovně na hlavním potrubí. Usnadní to odvzdušnění a zároveň zajistí průtok a účinnost čerpadla.
 --- strana 23 ---
-Water Pipeline Installation
-• Diameter Requirements of water pipe
-Please refer to the parameter table for the selection of pipe diameter:
-Model Water pipe diameter Material
-PW150 G1.5" Stainless steel or PPR pipes
-High temperature resistance：Stainless steel: ＞500℃ PPR：85℃
-• Pipeline Insulation Requirements
-1. All hot water pipelines must be wrapped with insulation materials;
-2. Wrap the insulation pipe flat on the hot water pipeline and wrap the tie wrap around it;
-3. Wrap the insulation skin material (such as thin aluminum plate, aluminum foil, etc.) flat on the pipeline that has already been wrapped with the
-insulation pipe;
-4. The wall thickness of the insulation pipe should be reasonably selected based on the local climate, and insulation cotton thickness should be ≥ 20mm;
-Finally, wrap a layer of wrapping tape on the insulation cotton.
+Instalace vodního potrubí
+•
+Požadavky na průměr potrubí
+Průměr potrubí zvolte podle tabulky parametrů:
+Model RH X50 Průměr potrubí G1.5"
+Materiál Nerezové nebo PPR potrubí
+Odolnost vůči vysoké teplotě: nerezová ocel > 500 °C, PPR 85 °C
+•
+Požadavky na izolaci potrubí
+1. Veškeré potrubí teplé vody musí být izolováno;
+2. Izolační trubici nasaďte rovně na potrubí teplé vody a zajistěte stahovací páskou;
+3. Na potrubí s izolační trubicí rovně naviňte krycí vrstvu (např. tenký hliníkový plech, hliníkovou fólii apod.);
+4. Tloušťku stěny izolace zvolte podle místního klimatu, tloušťka izolace má být ≥ 20 mm;
+Nakonec izolaci oviňte ochrannou páskou.
 --- strana 24 ---
-Water Pipeline Installation
-• Water Quality Requirements
-1. When the water quality is poor, more sediment such as scale and sand will be generated. Therefore, water must be filtered and softened with a soft
-water device before flowing into the water system;
-2. Before using the unit, the water quality should be analyzed, such as pH value, conductivity, chloride ion concentration, Sulfate concentration, etc. The
-following are the water quality standards applicable to this unit.
-3. The return water main pipe must be equipped with a system filter to keep the water quality, and ensure that the direction indicated by the filter arrow
-is consistent with the direction of the water flow inside the pipe. Sufficient maintenance space must be reserved around the filter.
-Item Unit Standard requirements
-PH Value 7.5~9.0
-Chlorid ion mg/L ≤50
-Sulfate mg/L ≤100
-Total hardness mg/L ≤200
-Y filter
+Instalace vodního potrubí
+•
+Požadavky na kvalitu vody
+1. Při špatné kvalitě vody vzniká více usazenin, např. vodního kamene a písku. Voda proto musí být před vstupem do systému filtrována a změkčena
+úpravnou vody;
+2. Před uvedením jednotky do provozu nechte vodu rozebrat – pH, vodivost, koncentrace chloridů, síranů apod. Pro tuto jednotku platí níže uvedené
+požadavky na kvalitu vody.
+3. Na hlavním vratném potrubí musí být osazen filtr pro udržení kvality vody; šipka na filtru musí souhlasit se směrem proudění vody v potrubí. Kolem
+filtru ponechte dostatečný prostor pro údržbu.
+Položka
+pH
+Chloridy
+Sírany
+Celková tvrdost
+Jednotka Požadovaná hodnota
+7.5~9.0
+mg/L ≤50
+mg/L ≤100
+mg/L ≤200
+Filtr Y
 --- strana 25 ---
-Water Pipeline Installation
-• Water Supply and Pipeline Exhausting
-1. Open the exhaust valve and all valves on the water distributor first for exhausting;
-2. Make up water at the pipeline filling port(Water pressure of tap water ≥ 0.2MPa);
-3. During the water replenishment process, it is necessary to observe whether there is water overflow from the exhaust valve and drainage valve. If there
-is water overflow, it indicates that the system has been filled with water;
-4. Close the exhaust valve and then take a look at the water pressure gauge. If the pointer is greater than 0.2MPa, close the makeup valve and the water
-pipeline already be emptied successfully.
-Note: The water system pressure of the heat pump design is 0.8MPA.
-Exhaust valve Water pressure gauge
+Instalace vodního potrubí
+•
+Napouštění vody a odvzdušnění potrubí
+1. Nejprve otevřete odvzdušňovací ventil a všechny ventily na rozdělovači a odvzdušněte;
+2. Doplňte vodu plnicím otvorem potrubí (tlak vody z vodovodu ≥ 0,2 MPa);
+3. Během napouštění sledujte, zda z odvzdušňovacího a vypouštěcího ventilu vytéká voda. Pokud ano, je systém naplněn vodou;
+4. Zavřete odvzdušňovací ventil a zkontrolujte manometr. Ukazuje­li více než 0,2 MPa, zavřete napouštěcí ventil – potrubí je úspěšně odvzdušněno.
+Pozn.: Návrhový tlak vodního systému tepelného čerpadla je 0,8 MPa.
+Odvzdušňovací
+ventil
+Manometr
 --- strana 26 ---
-Electrical Wiring
-WARNING
-• Before starting the installation of the heat pump, ensure that all high-voltage circuits are disconnected.
-• When repairing a heat pump, mark all wires before disconnecting them. Wiring errors can lead to improper and dangerous operation.
-• Electrical Wiring
-1. If the supply voltage is too low or too high, it can cause damage and/or result in unstable operation of the heat pump unit, due to high in rush currents on
-start up.
-2. The minimum starting voltage should be above 90% of rated voltage.The acceptable operating voltage range should be within ±10% of the rated voltage.
-3. Ensure the cable specifications meet the correct requirements for the specific installation.The distance between the installation site and mains power
-supply will affect the cable thickness. Follow the local electrical standards to select the cables, circuit breakers and isolation breakers.
-4. The compressor, fan coil unit, electric heater and water pump all have AC-contactor and thermo relay protection.
-5. Please ensure that all power supplies, electrical mainboard, compressors, motors, etc. are grounded.
-Model PW150-DKZLRS-E
-Power supply 380V/3Ph/50Hz/60Hz
-Max. current (A) 30
-Fuse/circuit breaker (A) 40
-Wire diameter 10mm²
-Three-phase power input
+Elektrické zapojení
+UPOZORNĚNÍ
+•
+•
+Před zahájením instalace tepelného čerpadla se ujistěte, že jsou odpojeny všechny silové obvody. Při opravě tepelného čerpadla
+před odpojením označte všechny vodiče. Chybné zapojení může vést k nesprávnému a nebezpečnému provozu.
+•
+Elektrické zapojení
+1. Příliš nízké nebo vysoké napájecí napětí může jednotku poškodit nebo způsobit její nestabilní provoz vlivem vysokých záběrových proudů při rozběhu.
+2. Minimální napětí při rozběhu musí být vyšší než 90 % jmenovitého napětí. Přípustný rozsah provozního napětí je ± 10 % jmenovitého napětí. 3. Kabely
+musí odpovídat požadavkům konkrétní instalace. Průřez kabelu ovlivňuje vzdálenost místa instalace od přípojky. Kabely, jističe a odpojovače volte podle
+místních elektrotechnických norem. 4. Kompresor, ventilátorová jednotka, elektrický ohřev i oběhové čerpadlo mají ochranu stykačem a tepelným relé. 5.
+Zajistěte uzemnění všech napájecích zdrojů, hlavní desky, kompresorů, motorů atd.
+Model RH X50
+Napájení 380V/3Ph/50Hz/60Hz
+Max. proud (A)
+30
+Jistič (A)
+40
+Průřez vodiče 10mm²
+Třífázové napájení
 --- strana 27 ---
-Electrical Wiring
-• Water tank heater wiring: Please use a 2-core power cable (1.0~1.5mm²×2) of appropriate length that meets local safety regulations. The electric
-heating wire for the water tank is a 220V signal wire, and the electric heating power exceeds 1KW. Please connect it with a suitable relay or
-contactor externally.
-• E-heater wiring: Please use a 2-core power cable (1.0~1.5mm²×2) of appropriate length that meets local safety regulations. The electric heating
-wire for the water tank is a 220V signal wire, and the electric heating power exceeds 1KW. Please connect it with a suitable relay or contactor
-externally.
-01 Water tank heater
-02 E-Heater
-03 Neutral line
-04 Three way valve 1
-05 Three way valve 2
-06 Neutral line
-AC Contactor
-AC Contactor
+Elektrické zapojení
+•
+Elektrický ohřev zásobníku: Použijte dvoužilový kabel (1,0–1,5 mm² × 2) vhodné délky podle místních bezpečnostních předpisů. Výstup pro
+elektrický ohřev zásobníku je signál 220 V a příkon ohřevu přesahuje 1 kW. Ohřev připojte externě přes vhodné relé nebo stykač.
+•
+Elektrický dohřev: Použijte dvoužilový kabel (1,0–1,5 mm² × 2) vhodné délky podle místních bezpečnostních předpisů. Výstup pro elektrický
+dohřev je signál 220 V a příkon dohřevu přesahuje 1 kW. Dohřev připojte externě přes vhodné relé nebo stykač.
+01 Ohřev zásobníku
+02 El. dohřev
+03 Nulový vodič
+04 Trojcestný ventil 1
+05 Trojcestný ventil 2
+06 Nulový vodič
+Stykač
+Stykač
 --- strana 28 ---
-Electrical Wiring
-• Three way valve: ①Please use a 3-core power cable (1.0mm²×3) that meets local safety regulations. Brown to fire wire port (R), yellow to neutral wire port,
-blue wire to 3-way valve control port.
-②Please refer to the diameter of the inlet and outlet pipes of the heat pump to select the diameter of the three-way valve.
-• When in hot water mode, defrost mode, antifreeze mode, the three-way valve is turned on. Other modes, the three way valve is off.
+Elektrické zapojení
+• Trojcestný ventil: ①Použijte třížilový kabel (1,0 mm² × 3) podle místních bezpečnostních předpisů. Hnědý na svorku fáze (R), žlutý na nulový vodič, modrý
+na ovládací svorku ventilu. ②Průměr trojcestného ventilu volte podle průměru vstupního a výstupního potrubí tepelného čerpadla. • V režimu TUV,
+odmrazování a protimrazové ochrany je trojcestný ventil sepnut, v ostatních režimech je vypnut.
 B
 A
-A port: Connect to the outlet
-water pipe of heat pump
-B port: Connect to the inlet water
-pipe of buffer tank
-C port: Connect to the inlet water
-pipe of DHW tank
-• Note: Three way valve 2 port is used for other types that three way valves with 2 control lines, one line connects to 4-three way valve 1, another line connects to
-5-three way valve 2, the neutral wire connects to 6-Neutral line.
+Port A: výstup vody z
+tepelného čerpadla
+Port B: vstup do akumulační
+nádrže
+Port C: vstup do zásobníku TUV
+• Pozn.: Svorka trojcestného ventilu 2 slouží pro ventily se dvěma řídicími vodiči: jeden vodič na svorku 4 (trojcestný ventil 1), druhý na svorku 5 (trojcestný
+ventil 2), nulový vodič na svorku 6.
 --- strana 29 ---
-Electrical Wiring
-• Linkage switch control: The linkage switches 5 and 6 need to be short circuited in order to perform normal cooling or heating(Factory setting);
-• If the customer needs to connect the room thermostat, the communication wire needs to be connected to the linkage switche 5 and 6 terminals in
-order to control the heat pump.
-• A suiable thermostat can control the user’s end water pump, fan coil and other parts.
-Linkage ports
+Elektrické zapojení
+•
+•
+Spínací kontakt (linkage): Svorky 5 a 6 musí být pro běžný provoz chlazení či vytápění propojeny (nastavení z výroby). Pokud zákazník
+připojuje prostorový termostat, připojí se jeho vodiče na svorky 5 a 6, kterými pak termostat řídí tepelné čerpadlo. Vhodný termostat může
+ovládat i oběhové čerpadlo otopné soustavy, fancoily apod.
+•
+Svorky 5 a 6
 L N
-Power supply 220V
-Heat pump terminals
-Thermostat
-AC Contractor User’s end water pump
-Note: If the power of the water pump is greater than 500W, it is recommended to install a suitable AC contactor to control the start and stop of the water pump.
+Napájení 220 V
+Svorky TČ Termostat Stykač
+Čerpadlo otopné soustavy
+Pozn.: Má­li oběhové čerpadlo příkon vyšší než 500 W, doporučujeme jeho spínání přes vhodný stykač.
 --- strana 30 ---
-Electrical Wiring
-• Water tank sensor wiring: The heat pump is standard with a water tank sensor(AI22) from factory, the length is about 12m, users can directly
-install the sensor probe to the corresponding position in the hot water tank.
+•
+Elektrické zapojení
+Čidlo zásobníku TUV: Tepelné čerpadlo se dodává s čidlem teploty zásobníku (AI22) o délce cca 12 m. Čidlo stačí umístit do jímky na
+odpovídající pozici v zásobníku TUV.
 --- strana 31 ---
-Auxiliary Heat Source
-Water pipeline diagram
+Doplňkový zdroj tepla
+Hydraulické schéma
 --- strana 32 ---
-Auxiliary Heat Source
-Electrical wiring : Please use a 2-core power cable (1.0-1.5 mm² x 2) that complies with local safety regulations. The Auxiliary heat source is
-a 220V signal line, and please connect it with an appropriate relay or contactor.
-The control ports 5 and 6 reserved at the factory of the heat pump are connected to the boiler control wire.
-01 Water tank heater
-02 E-Heater
-03 Neutral line
-04 Three way valve 1
-05 Three way valve 2
-06 Neutral line
-Neutral line
-Control line
-AC Contactor
+Doplňkový zdroj tepla
+Elektrické zapojení: Použijte dvoužilový kabel (1,0–1,5 mm² × 2) podle místních bezpečnostních předpisů. Výstup pro doplňkový zdroj
+tepla je signál 220 V, připojte jej přes vhodné relé nebo stykač. Na ovládací vodič kotle se připojují svorky 5 a 6, které jsou pro tento účel
+vyhrazeny z výroby.
+01 Ohřev zásobníku
+02 El. dohřev
+03 Nulový vodič
+04 Trojcestný ventil 1
+05 Trojcestný ventil 2
+06 Nulový vodič
+Nulový vodič
+Ovládací vodič
+Stykač
 --- strana 33 ---
-Auxiliary Heat Source
-You need to put the total outlet temperature sensor of the unit and auxiliary heat source into the total water outlet pipeline, and then enter the
-Advanced settings, and then enter Para then enter Sensoruse, click 21 pwm
-_
-area to change the default “disable” to “enable” to enable the
-total outlet temperature probe.
+Doplňkový zdroj tepla
+Čidlo teploty společného výstupu jednotky a doplňkového zdroje umístěte do společného výstupního potrubí, poté otevřete "Advanced
+setting" → "Para" → "Sensoruse" a u položky 21 pwm_area změňte výchozí „disable“ na „enable“, čímž aktivujete čidlo společného
+výstupu.
 S
 e
 n
@@ -411,9 +460,9 @@ u
 s
 e
 --- strana 34 ---
-Cascading Multi-units
-The heat pump support cascading up to 8 units, When conducting a cascade connection, set the dialing number for each mode on
-the main control board.
+Kaskádové zapojení
+Tepelná čerpadla lze zapojit do kaskády až 8 jednotek. Při kaskádovém zapojení nastavte adresu každé jednotky DIP přepínači
+na hlavní desce.
 A3
 B3
 1#
@@ -421,182 +470,224 @@ B3
 。。。。。。
 15# 4# 3#
 --- strana 35 ---
-Cascading Multi-units
-SW2.5-SW2.8 sets the cascading address, 0=OFF; 1=ON. The detailed dialing codes are listed below:
-Unit SW2.5 SW2.6 SW2.7 SW2.8
-00 OFF OFF OFF OFF
-01 ON OFF OFF OFF
-02 OFF ON OFF OFF
-03 ON ON OFF OFF
-04 OFF OFF ON OFF
-05 ON OFF ON OFF
-06 OFF ON ON OFF
-07 ON ON ON OFF
-08 OFF OFF OFF ON
-09 ON OFF OFF ON
-10 OFF ON OFF ON
-11 ON ON OFF ON
-12 OFF OFF ON ON
-13 ON OFF ON ON
-14 OFF ON ON ON
-15 ON ON ON ON
+Kaskádové zapojení
+SW2.5–SW2.8 nastavují adresu v kaskádě, 0 = OFF, 1 = ON. Kombinace přepínačů jsou uvedeny níže:
+Jednotka SW2.5 SW2.6 SW2.7 SW2.8
+00
+OFF OFF OFF OFF
+01
+ON OFF OFF OFF
+02
+OFF ON OFF OFF
+03
+ON ON OFF OFF
+04
+OFF OFF ON OFF
+05
+ON OFF ON OFF
+06
+OFF ON ON OFF
+07
+ON ON ON OFF
+08
+OFF OFF OFF ON
+09
+ON OFF OFF ON
+10
+OFF ON OFF ON
+11
+ON ON OFF ON
+12
+OFF OFF ON ON
+13
+ON OFF ON ON
+14
+OFF ON ON ON
+15
+ON ON ON ON
 --- strana 36 ---
-Cascading Multi-unitsYou need to put the total outlet temperature sensor of the master unit into the total water outlet pipeline(If there is an auxiliary heat source
-(such as boiler, etc.), the sensor needs to be put into the heat pump and the auxiliary heat source total outlet pipe), and then enter the
-Advanced settings, 17 Item 21 for SENSOR Settings, change the default DISABLE to USE for the SYSTEM total WATER outlet
-temperature probe setting.
+Kaskádové zapojení
+Čidlo teploty společného výstupu řídicí (master) jednotky umístěte do společného výstupního potrubí (je­li instalován doplňkový zdroj
+tepla, např. kotel, umístěte čidlo do společného výstupu tepelných čerpadel a doplňkového zdroje). Poté v nabídce
+"Advanced setting", položka 17, parametr 21 (nastavení čidel), změňte u čidla teploty společného výstupu systému výchozí
+hodnotu DISABLE na USE.
 --- strana 37 ---
-Cascading Multi-units Installation Diagram
+Schéma kaskádového zapojení
 --- strana 38 ---
-Electrical Wiring
-User’s load ports
-Set the address
-of cascade units
-DO8
-Auxiliary heat source control
-Water pump connection port
+Elektrické zapojení DO8
+Ovládání doplňkového zdroje tepla
+Svorky otopné
+soustavy
+Svorky oběhového čerpadla
+Nastavení adresy jednotek v kaskádě
 A4 B4
-RS485 communication port
-A3 B3
-Cascading port
-P1 P2 GND
-R290 detection port(Standard)
+Komunikace RS485 A3 B3
+Kaskáda P1 P2
+GND
+Detekce úniku R290 (standard)
 --- strana 39 ---
-2
-WiFi APP & IoT Monitoring Platform
+2 Aplikace Wi‑Fi a platforma IoT
 --- strana 40 ---
-WiFi Connection
-1) Step 1: Enter the settings menu interface, select "WIFI setting"
-. Check if the message "Smart mode is being configured" is displayed in the interface, if other messages
-are displayed, press and hold the < Reset WIF > key to reset the WiFi.
-2) Step 2: Turn on the Bluetooth and WIFI functions of the mobile phone and connect the WIFI hotspot. The WIFI hotspot must be able to connect to the Internet normally,
-as shown in the figure: Connect the WIFI hotspot "pwwm;
-3) Step 3:
-Open the "Smart Life or Tuya smart" app, log in to the main interface, click "+" or “Add device”
-, enter the device type selection, select "Large Home Appliance" → select
-"Water Heater" → enter WiFi information → complete.
+Připojení k Wi‑Fi
+1) Krok 1: V nabídce nastavení zvolte "WIFI setting". Zkontrolujte, zda se zobrazuje hlášení "Smart mode is being configured"; pokud se zobrazuje jiné, podržte tlačítko
+"Reset wifi" a Wi‑Fi resetujte. 2) Krok 2: Zapněte v mobilním telefonu Bluetooth a Wi‑Fi a připojte se k Wi‑Fi síti s funkčním připojením k internetu, např. podle obrázku k
+síti „MyWiFi“. 3) Krok 3: Otevřete aplikaci "Smart Life" nebo "Tuya Smart", přihlaste se, klikněte na „+“ nebo "Add device", ve výběru typu zařízení zvolte "Large Home
+Appliance" → "Water Heater" → zadejte údaje Wi‑Fi → dokončete.
 --- strana 41 ---
-WiFi APP Control
-Return
-Mode switching: Click to
-select the mode to be switched
-More: You can change the device name,
-select the device installation location, check
-the network status, add shared users, create a
-device group, view device information, etc.
-Fault information: Display fault
-information when a fault occurs.
-Power button: Click to turn on/off.
-Parameters query: View unit status data.
+Ovládání aplikací
+Zpět
+Změna režimu: výběr
+provozního režimu Více: změna názvu zařízení, umístění
+instalace, stav sítě, sdílení s dalšími uživateli,
+skupiny zařízení, informace o zařízení atd.
+Poruchy: zobrazení poruchy,
+pokud nastane.
+Vypínač: zapnutí/vypnutí.
+Parametry: stavové údaje jednotky.
 --- strana 42 ---
-IoT Operation
-Real-time monitoring, data operation and maintance, saving time and costs for users, dealers and manufactures.
-IoT Operation Link
+Vzdálená správa IoT
+Sledování v reálném čase, provozní data a údržba – úspora času i nákladů pro uživatele, prodejce a servis.
 --- strana 43 ---
-3
-Wired Controller Operation
+3 Ovládání kabelovým ovladačem
 --- strana 44 ---
-Controller Panel
-• After being powered on, it will display in full screen for before entering normal working mode;
-• You can use the menu structure to read out and configure settings that are NOT meant for daily usage. What you can see and do in the menu structure is described where applicable.
-• When turned on, the main interface displays the clock, setting temperature, water tank temperature, working mode, and timing status.
-Icon Meaning Icon Meaning
-Heating mode Low power status
-Hot water mode Peak electricity status
-Cooling mode Free electricity status
-Automatic mode Aptitude test
-Button Description Function
-Lock screen Frequency variable pump output
-On/off Query Set
-Mode Turn on or turn off the heat pump.
-Query running parameters, current fault code,
-software version, Come back to the up level
-Go to the next step when programming a
-schedule in the menu structure and confirm a
-selection to enter in the submenu of the
-menu structure.
-Switch the operating mode of the heat pump.
-Defrost Compressor (indicates preheating
-when flashing)
-Disinfect Timing
-WIFI regular work Error
+•
+•
+•
+Ovládací panel
+Po zapnutí se zobrazí úvodní obrazovka a poté ovladač přejde do běžného provozu.
+V nabídce lze číst a měnit nastavení, která NEJSOU určena pro každodenní použití; význam je popsán u jednotlivých funkcí.
+Hlavní obrazovka zobrazuje čas, nastavenou teplotu, teplotu zásobníku, provozní režim a stav časovače.
+Ikona Význam Ikona Význam
+Vytápění Nízký odběr
+Ohřev TUV Špička (drahá elektřina)
+Chlazení Levná elektřina
+Automatický režim Zkušební provoz
+Tlačítko Popis Funkce Zámek
+obrazovky Výstup řízení čerpadla
+Zap./
+vyp.
+Zapnutí nebo vypnutí tepelného čerpadla. Odmrazování
+Kompresor (bliká = předehřev)
+Dotaz
+Provozní parametry, aktuální porucha,
+verze SW; návrat o úroveň výš.
+Další krok při programování,
+potvrzení volby a vstup
+do podnabídky.
+Dezinfekce Časovač
+Wi‑Fi v provozu Porucha
+Režim Přepnutí provozního režimu tepelného čerpadla.
 --- strana 45 ---
-Basic Setting
-• ON&OFF
-Click in the main interface to pop up the "Confirm ON" box, and then click "√" to confirm the start of heating, as shown below:
-• Target temperature setting
-In the main interface, firstly click the temperature number (Figure 1 below), then pop up a window (Figure 2 below), input the setting value according to the demand, click "√" to
-confirm, and directly return to the main interface to complete the temperature setting (Figure 3 below).
+Základní nastavení
+• ZAP./VYP.
+na hlavní obrazovce: vyvolejte okno "Confirm ON"; klepnutím na „√“ potvrdíte spuštění, viz obrázek:
+• Nastavení požadované teplotyNa hlavní obrazovce klikněte na údaj teploty (obr. 1), zobrazí se okno (obr. 2), zadejte požadovanou hodnotu a potvrďte „√“; ovladač se vrátí na hlavní obrazovku a teplota je
+nastavena (obr. 3).
 --- strana 46 ---
-Basic Setting
-• Mode Settings
-Click “M” on the main interface (Figure 1 below), and a mode selection window (Figure 2 below) pops up. Click on the mode to select and return to the main interface directly.
-There are auto, cooling, heating, hot water, cooling + hot water, heating + hot water 6 working modes to choose from; In the boot process can not change the working mode, if want to
-operate you need to shut down the unit.
+Základní nastavení
+• Nastavení režimuNa hlavní obrazovce klikněte na „M“ (obr. 1 níže) a zobrazí se okno výběru režimu (obr. 2 níže). Kliknutím zvolte režim a vrátíte se přímo na hlavní obrazovku. K dispozici je 6
+provozních režimů: automatický, chlazení, vytápění, TUV, chlazení + TUV, vytápění + TUV. Za chodu nelze provozní režim měnit – pro změnu je nutné jednotku vypnout.
 --- strana 47 ---
-Timed ON/OFF
-• Timing of day:
-Click the main interface to enter the menu, select the third item "Timer" to enter the timing setting, you can set the timing on&off, high temperature sterilization timing.
-• Timing of week
-Select the second item in the on&off timing menu, click to enter the weekly timing interface, and click the weekly scale according to the actual situation;
-Click "NEXT" to enter the weekly timing interface to view the timing settings of each group. The remaining operations are consistent with the daily timing.
-Daily Schedule
-Daily Schedule Weekly Schedule
-• Cancel Timer
-pop-up window;
-Select the third item in the timing switch menu, after clicking it, a pop-up window will pop up , click to confirm cancel the timing and close the pop-up window, and click to close the
-Note: If the controller does not operate for 10S, it will automatically save the set time and return to the main interface.
+Časové zapnutí/vypnutí
+• Denní časovač:
+na hlavní obrazovce: vstupte do menu, zvolte třetí položku „Timer“ a vstupte do nastavení časovače; lze nastavit časové zapnutí a vypnutí a časovou dezinfekci vysokou teplotou.
+Týdenní časovač V menu časového zapnutí/vypnutí zvolte druhou položku, kliknutím vstupte do týdenního časovače a podle potřeby označte dny v týdnu;
+•
+kliknutím na „NEXT“ zobrazíte nastavení jednotlivých skupin. Další postup je stejný jako u denního časovače.
+Denní program
+Denní program Týdenní program
+Zrušení časovače V menu časovače zvolte třetí položku; zobrazí se okno, potvrzením zrušíte časovač a okno zavřete, případně okno jen zavřete.
+•
+Poznámka: Pokud se ovladače 10 s nikdo nedotkne, nastavený čas se automaticky uloží a zobrazí se hlavní obrazovka.
 --- strana 48 ---
-User Parameters Setting
-• Click the main interface to enter the menu, select the last item, advanced parameters, enter the normal password, enter the user parameter setting;
-No. Setting item Setting range Default Unit
-1 Mode
-Cooling mode
-Heating mode
-Auto mode
-Hot water mode
-Hot woter&Cooling mode
-Hot&Heating mode
-Heating /
-2 Cooling setting temp min…max 12 ℃
-3 Heating setting temp min…max 40 ℃
-4 Hot watersetting
-min…max 50 ℃
-temp
-6 The power-on energy
-asjustment function
+Nastavení uživatelských parametrů
+na hlavní obrazovce: vstupte do menu, zvolte poslední položku (pokročilé parametry), zadejte běžné heslo a vstupte do nastavení uživatelských parametrů;
+Č. Položka Rozsah Výchozí Jednotka
+Chlazení
+Vytápění
+Automatický
+Režim Vytápění
+1 /
+TUV
+TUV + chlazení
+TUV + vytápění
+Teplota chlazení
+min…max
+2 12 ℃
+Teplota vytápění
+min…max
+3 40 ℃
+Teplota TUV
+min…max
+4 50 ℃
+Úprava výkonu po
 disable
-available
-available /
+6 /
+zapnutí
+available available
 ........
 --- strana 49 ---
-Operation Parameters
-• On the main interface, click the parameter check menu to query the current fault code of the unit, the state parameters of the unit, and the software version number.
-Code Description Remark
-1 Envtemp（Ambient temp）-30~99℃
-2 Sys.evap.out T（System outlet temp）-30~99℃
-3 Sys.evap.inlet（System inlet temp）-30~99℃
-4 Sys.hottemp（System hot water temp）-30~99℃
-5 （System main pipe outlet temp）-30~99℃
-6 EHeater（Heating electric heater） ON/OFF
-7 AHS（Auxiliry heat source） ON/OFF
-8 TBH（Water tank electric heater） ON/OFF
-9 3PV1（3-way valve 1） ON/OFF
-10 3PV2（3-way valve 2） ON/OFF
+Provozní parametry
+•
+Na hlavní obrazovce klikněte na menu kontroly parametrů – zobrazí se aktuální kód poruchy, stavové parametry jednotky a verze softwaru.
+Kód
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Popis
+Envtemp（venkovní teplota）
+Sys.evap.out T（výstup systému）
+Sys.evap.inlet（vstup systému）
+Sys.hottemp（teplota TUV）
+（výstup hlavního potrubí）
+EHeater（el. dohřev topení）
+AHS（doplňkový zdroj tepla）
+TBH（el. dohřev zásobníku）
+3PV1（trojcestný ventil 1）
+3PV2（trojcestný ventil 2）
+Pozn.
+­30~99℃
+­30~99℃
+­30~99℃
+­30~99℃
+­30~99℃
+ON/OFF
+ON/OFF
+ON/OFF
+ON/OFF
+ON/OFF
 ........
 --- strana 50 ---
-Target Temp Compensation Fuction
-The target temp is automatically adjusted according to the ambient temp: parameter ：“Heating/Cooling target compensation” is set to “available” to enable the automatic temp
-adjustment function, and the target temp is automatically adjusted according to the ambient temp.
-For example:
-Heating Compensation Curve
-8 Heating target compensation
-disable disable
+Ekvitermní korekce cílové teploty
+Cílová teplota se automaticky upravuje podle venkovní teploty: nastavením parametru ：„Heating/Cooling target compensation“ na „available“ se zapne automatická korekce a cílová
+teplota se řídí venkovní teplotou. Příklad:
+Ekvitermní křivka vytápění
+8
+9
+10
+11
+12
+Ekvitermní korekce vytápění
+Korekční teplota vytápění 1
+Korekční teplota vytápění 2
+Korekční venkovní teplota 1 min…max
+Korekční venkovní teplota 2 min…max
+disable
 available
-9 Heating compensation temp 1 min…max 40
-10 Heating compensation temp 2 min…max 55
-11 Heating compensation ambient temp 1 min…max 5
-12 Heating compensation ambient temp 2 min…max -20
+min…max
+min…max
+disable
+40
+55
+5
+­20
 60
 55
 50
@@ -607,205 +698,179 @@ available
 55 55
 40 40
 -20 5
-Note:
-1. The curve and formula of this function are not fixed, but change according
-to the parameters set by the user.
-2. The function is disable if there is fault of the main module ambient temp
-sensor.
-3. According to the ambient temp of the main module, the unit calculates the
-cooling/heating target value every “compensation update cycle”
-, and
-compares with the last value.
-When the absolute value of the difference is ≥0.5℃, this calculated value is
-used as an update.
-Target Heating Temp Compensation Formula
-Current ambient temp-X Target heating temp-Y
-X≥5℃ Y=40℃
+Poznámka: 1. Křivka a vzorec nejsou pevné, mění se podle parametrů
+nastavených uživatelem. 2. Při poruše čidla venkovní teploty hlavního
+modulu je funkce vypnutá. 3. Jednotka podle venkovní teploty hlavního
+modulu vypočítá cílovou hodnotu chlazení/vytápění v každém „cyklu
+aktualizace korekce“ a porovná ji s předchozí. Je­li absolutní rozdíl ≥ 0,5 ℃,
+použije se nová hodnota.
+Venkovní teplota X X≥5℃
 -20℃＜X＜5℃
-Y=0.6*(5-X)+40
-Note: 0.6 is not fixed, which will change with the parameters chenges.
-0.6=55-40/5-(-20) (Slope caculation)
-X≤-20℃ Y=55℃
+Vzorec ekvitermní korekce cílové teploty vytápění
+Cílová teplota vytápění Y
+Y=40℃
+Y=0,6*(5­X)+40 Pozn.: 0,6 není pevné, mění se s parametry.
+0,6=(55­40)/(5­(­20)) (výpočet sklonu)
+Y=55℃
+X≤-20℃
 --- strana 51 ---
-Timed Sterilization Function
-Click the main interface to enter the menu, select the third "Timer" to enter the timing setting, click the second "sterilization timing" to enter the setting interface, according to the
-actual needs, set the start time, week day (the green button), start the sterilization timing function;
-When the parameter 30”Timed sterilization function” is available, and the parameter 27, 28, 29 is set by user, this function will start in time.
-When this fuction runs, the compressor, the auxiliry electric heater and the water tank electric heater will run in different time.
-The compressor raise the water temp firstly, then the compressor will be shut down and the water temp will be heated and keep in a high temp constantly by the auxiliry electric
-heater and the water tank heater.
-Different componet will run by a preset special logic.
+Časová dezinfekce (antilegionela)
+na hlavní obrazovce: vstupte do menu, zvolte třetí položku „Timer“, poté druhou „Sterilization timing“ a podle potřeby nastavte čas spuštění a dny v týdnu (zelené
+tlačítko); tím časovou dezinfekci zapnete;
+Je­li parametr 30 „Timed sterilization function“ nastaven na „available“ a uživatel nastavil parametry 27, 28, 29, funkce se spustí v nastaveném čase.
+Během funkce pracují kompresor, doplňkový el. dohřev a el. dohřev zásobníku v různých časech.
+Nejprve ohřeje vodu kompresor, poté se vypne a vodu dohřeje a na vysoké teplotě udržuje doplňkový el. dohřev a el. dohřev zásobníku. Jednotlivé komponenty pracují podle
+přednastavené logiky.
 --- strana 52 ---
-On-duty Function
-• The function is meant to change the setting temp by unit itself when there are some special durations(like 20:00 to 5:00), which replace the user
-action and make it more convenient.
-• The unit automatically sets the cooling/heating setting temp basing on the parameter 20, 21 “Cooling/Heating on-duty temp” during the on-duty time.
-• You can set the on-duty start and stop time to define the on-duty duration through parameter 22, 23, 24, 25 “On duty start/stop hour/min”
+•
+•
+•
+Útlumový režim
+Funkce umožňuje, aby jednotka v určených obdobích (např. 20:00–5:00) sama změnila nastavenou teplotu místo uživatele,
+což zvyšuje pohodlí.
+Během útlumu jednotka automaticky nastaví teplotu chlazení/vytápění podle parametrů 20, 21 „Cooling/Heating on­duty temp“.
+Začátek a konec útlumu nastavíte parametry 22, 23, 24, 25 „On duty start/stop hour/min“.
 --- strana 53 ---
-Other Functions
-• Manual Defrosting
-Click the main interface to enter the menu, select the fifth item "Mnl defrost" to enter the manual defrost interface, you can choose compressor 1 or compressor 2 to defrost alone.
-• Lock and Unlock
-If the lock icon appears on the screen, the controller is locked. Display the following interface; Press anywhere on the screen, you will be prompted to long press the "lock" icon to
-unlock. Long press lock icon for two seconds, the lock icon will disappear, the interface can be controlled. If there is no action for a long time (about 90 seconds), the interface will
-be locked.
+Další funkce
+• Ruční odtávání
+na hlavní obrazovce: vstupte do menu, zvolte pátou položku „Mnl defrost“ a vstupte do ručního odtávání; lze zvolit samostatné odtávání kompresoru 1 nebo 2.
+• Zamknutí a odemknutí
+Pokud je na displeji ikona zámku, ovladač je zamčený a zobrazí se následující obrazovka; po dotyku kdekoli na displeji se zobrazí výzva k dlouhému stisku ikony „lock“. Po stisku
+ikony zámku na 2 s ikona zmizí a ovladač lze ovládat. Bez obsluhy po delší dobu (asi 90 s) se obrazovka znovu zamkne.
 --- strana 54 ---
-Display Setting
-• Language switch
-Click on the main interface to enter the user setting menu, click the first item “Display setting” to enter the display setting of the wired controller, and then click the first
-item“Language” to enter the language selection interface(Figure 1). After selecting the language, the prompt in Figure 2 will appear. After clicking "√"
-, the wired controller will
-restart, and the language switch will be successful after the restart.（Chinese, Polish, English ）
-• Display brightness adjustment
-Click “Screen
-on the main interface to enter the user setting menu, click the first item “Display setting” to enter the display setting of the wired controller, and then click the
-_
-bright” to set. Additional, others such as the system time can be set through the item “Display setting”
-.
+Nastavení displeje
+• Změna jazyka
+na hlavní obrazovce: vstupte do uživatelského menu, zvolte první položku „Display setting“ (nastavení displeje kabelového ovladače) a poté první položku „Language“ –
+zobrazí se výběr jazyka (obr. 1). Po výběru jazyka se zobrazí výzva podle obr. 2. Po kliknutí na „√“ se kabelový ovladač restartuje a jazyk se po restartu změní.（čínština, polština,
+angličtina）
+• Nastavení jasu displeje
+např. systémový čas.
+na hlavní obrazovce: vstupte do uživatelského menu, zvolte první položku „Display setting“ a poté „Screen_bright“. V položce „Display setting“ lze nastavit i další údaje,
 --- strana 55 ---
-4
-Commissioning
+4 Uvedení do provozu
 --- strana 56 ---
-Installation & Commissioning
-1 Measure the user's power supply voltage with a multi-meter, check the tap water pressure, and check if the installation position is
-appropriate;(Water pressure of tap water ≥ 0.2MPa, 0.25~0.4MPa is normal) 2 Wear gloves and unpack to inspect the appearance of the heat pump for any damage; Check the gas pressure value(With the ambient
-temp 10~25℃, the normal Static pressure a bit lower than 0.6(10℃)-1.0(25℃)MPA).
+Instalace a uvedení do provozu
+1
+Multimetrem změřte napájecí napětí, zkontrolujte tlak vody z vodovodu a vhodnost místa instalace;(tlak vody z vodovodu ≥ 0,2
+MPa, běžně 0,25–0,4 MPa) Závěr
+2
+V rukavicích vybalte TČ a zkontrolujte, zda není poškozené; zkontrolujte tlak chladiva (při venkovní teplotě 10–25 ℃ je běžný
+klidový tlak mírně pod 0,6 (10 ℃) – 1,0 (25 ℃) MPa).
+Závěr
 3
-Install the heat pump on a solid foundation, install shock rubber pads to fix the device, fix the water tank, and reserve the
-installation position of the water pump and valves; Reserve heat pump floor drainage; Reserve the position of the heat pump power
-supply port;
-4 According to the installation diagram, check the connection of pipeline joints for accessories such as heat pumps, water tanks,
-valves, filters, and water pumps; Ensure the installation direction of the water pump, and valve components is correct.
-According to the installation diagram, check if the installed pipeline accessories are correct, conduct water pressure and leakage
-testing, exhaust the water pump, and exhaust the water tank; (Water pressure of tap water ≥ 0.2MPa);
-Water pump exhausts air: First, turn off the water pump, close the inlet and outlet valves, open the exhaust valve on the water
-pump circulation pipe, and patiently wait for a few minutes to completely discharge the air.
+TČ osaďte na pevný základ s antivibračními pryžovými podložkami, upevněte nádrž, připravte místo pro čerpadlo a armatury;
+zajistěte odvodnění pod TČ a místo pro přívod napájení;
+Závěr
+4
+Podle schématu zkontrolujte spoje potrubí u TČ, nádrží, armatur, filtrů a čerpadel; ověřte správný směr montáže čerpadla a
+armatur. Podle schématu zkontrolujte namontované příslušenství, proveďte tlakovou zkoušku a zkoušku těsnosti, odvzdušněte
+čerpadlo a nádrž (tlak vody z vodovodu ≥ 0,2 MPa);
+Odvzdušnění čerpadla: vypněte čerpadlo, zavřete vstupní a výstupní ventil, otevřete odvzdušňovací ventil na oběhovém
+potrubí čerpadla a vyčkejte několik minut do úplného odvzdušnění.
+Závěr
 5
-Water tank exhaust air: Simply open the exhaust valve at the top of the water tank and let it out for a few minutes; Or open the
-valve reserved on the circulating pipe of the heat pump and exhaust for a few minutes.
-Water pipeline exhaust air: Open the exhaust port at the terminal (such as radiators, underfloor heaters, etc.) and exhaust directly
-until no creaking gas sound, indicating that the exhaust has been completed.
-6 According to the wiring diagram of the heat pump, connect the power wires of the heat pump, install the water tank sensor, install
-the wired controller, and other necessary circuits to connect the heat pump;
-Conclusion
-Conclusion
-Conclusion
-Conclusion
-Conclusion
-Conclusion
-Qualified□
-Abnormal:
-Qualified□
-Abnormal
-Qualified□
-Abnormal:
-Qualified□
-Abnormal:
-Qualified□
-Abnormal:
-Qualified□
-Abnormal:
+Odvzdušnění nádrže: otevřete odvzdušňovací ventil nahoře na nádrži a nechte odvzdušnit několik minut, nebo otevřete ventil
+připravený na oběhovém potrubí TČ.
+Odvzdušnění rozvodů: otevřete odvzdušnění na koncových prvcích (otopná tělesa, podlahové topení ap.) a odvzdušňujte, dokud
+neustane zvuk unikajícího vzduchu.
+Závěr
+6
+Podle schématu zapojení připojte napájecí kabely TČ, osaďte čidlo zásobníku, kabelový ovladač a další potřebné obvody; Závěr
+Vyhovuje□
+Nevyhovuje:
+Vyhovuje□
+Nevyhovuje
+Vyhovuje□
+Nevyhovuje:
+Vyhovuje□
+Nevyhovuje:
+Vyhovuje□
+Nevyhovuje:
+Vyhovuje□
+Nevyhovuje:
 --- strana 57 ---
-Installation & Commissioning
-7 According to the wiring diagram of the heat pump, check whether the power cord is tightened, whether the sensor
-position is correct, and whether the wiring position is fixed to ensure the protection of the circuit 8
-After the above checks are normal, open all water valves; Power on for inspection, first use a multi-meter to check if
-the power supply voltage is normal (The voltage fluctuation range of the inverter unit is ± 10%) 9
-According to the instructions in the manual, use the wired controller to start up and run, check the operation of the
-water pump, and recheck whether there is any water leakage problem in the pipeline;
-If no water leakage, insulation should be applied to all pipelines(≥20mm)
-10 Check if the drainage of the heat pump chassis is reasonable and smooth without water accumulation (if the weather
-is dry and does not produce condensation, tap water can be used to simulate the drainage situation) 11
+Instalace a uvedení do provozu
+7
+8
+9
+10
+11
 12
-According to the heat pump manual, check the temperature status and pressure gauge values of the heat pump after
-10 minutes of normal operation; Checking if the water outlet temp, water inlet temp, exhaust temp, high pressure and
-the voltage are reasonable.
-After installation and commissioning, the customer can operate the heat pump control panel according to the
-instructions, such as adjusting the temperature, checking the temperature status of the heat pump, daily maintenance
-and protection of the heat pump, and regular maintenance and inspection.
-Conclusion
-Conclusion
-Conclusion
-Conclusion
-Conclusion
-Conclusion
-Qualified□
-Abnormal:
-Qualified□
-Abnormal:
-Qualified□
-Abnormal:
-Qualified□
-Abnormal:
-Qualified□
-Abnormal:
-Qualified□
-Abnormal:
+Vyhovuje□
+Podle schématu zapojení zkontrolujte dotažení napájecích vodičů, správnou polohu čidel a upevnění vodičů pro
+ochranu obvodů Závěr Nevyhovuje:
+Vyhovuje□
+Jsou­li kontroly v pořádku, otevřete všechny ventily; zapněte napájení a multimetrem ověřte, zda je napájecí napětí v pořádku (tolerance napětí invertorové jednotky ± 10 %) Závěr
+Nevyhovuje:
+Podle návodu spusťte jednotku kabelovým ovladačem, zkontrolujte chod oběhového čerpadla a znovu ověřte těsnost
+potrubí; nejsou­li úniky, zaizolujte všechna potrubí (≥ 20 mm) Závěr Vyhovuje□
+Nevyhovuje:
+Vyhovuje□
+Zkontrolujte, zda odvod kondenzátu ze dna TČ funguje bez hromadění vody (za sucha, kdy kondenzát nevzniká, lze
+odvodnění vyzkoušet vodou z vodovodu) Závěr Nevyhovuje:
+Podle návodu zkontrolujte po 10 minutách běžného provozu teploty a hodnoty na manometrech; ověřte, zda jsou
+teplota výstupní a vstupní vody, výtlaku, vysoký tlak a napětí v přiměřeném rozsahu. Závěr Vyhovuje□
+Nevyhovuje:
+Po instalaci a uvedení do provozu zaškolte zákazníka v obsluze ovladače podle návodu: nastavení teploty, kontrola
+stavu TČ, běžná péče a pravidelná údržba a kontroly. Závěr Vyhovuje□
+Nevyhovuje:
 --- strana 58 ---
-5
-Error Code & Troubleshooting
+5 Chybové kódy a odstraňování poruch
 --- strana 59 ---
-Error Code & Troubleshooting (Appendix of list)
-Error
-Code
-Fault name Reset mode Alarm action Solution suggestion
-2 System Module:
-EEPROM data error fault
-Power On Reset Serious failure, stop the unit.
-3 System Module:
-External Interlock Failure
-M Serious failure, stop the unit.
-Initial all parameters and re-power up, if the fault cannot be
-eliminated, please contact us.
-1. Check whether the corresponding "normally open and
-normally closed" settings of the inputs are consistent, and
-the inconsistency indicates a fault state.
-2. If there is no problem with the "Normally open, normally
-closed" setting, check the cause of the unit abnormality.
-9 System Module:
-Insufficient water flow
-178
-Module xx:
-Insufficient water flow
-for unitary module
-A/M
-l When [insufficient water flow to
-open the pump] is used, stop all
-compressors and the water pump
-does not stop;
-l When [insufficient water flow to
-open the pump] is disable,
-stop all compressors, stop water
-pumps.
-A/M Stop module xx.
-1.Check whether the corresponding "normally open and
-normally closed" settings of the inputs are consistent, and
-the inconsistency indicates a fault state.
-2. If there is no problem with the "Normally open, normally
-closed" setting, check the cause of the unit abnormality.
-177 System Module:
-Power supply failure
-M Serious faults, stop the unit
-(directly stop the compressor).
-1. Check the three-phase power error phase detection J1,
-wiring is normal .
-2. Check whether the corresponding "normally open and
-normally closed" settings of the inputs are consistent, and
-the inconsistency indicates a fault state.
-3. If there is no problem with the "Normally open, normally
-closed" setting, check the cause of the abnormality.
-1 Module xx:
-Power supply failure
-41
-System Module:
-System outlet water temp
-is too low
-M Stop module xx.
-A Stop all compressors and fans.
-1. Check if all the relevant set temperature parameters are in
-normal range.
-2. Check that the outlet temp probe is mounted in the
-correct position or damaged.
-3. Check what is causing the abnormality in the associated
-temperature.
-Detailed Troubleshooting List
+Kód
+chyby
+2
+Chybové kódy a odstraňování poruch (výňatek)
+Název poruchy
+Systémový modul:
+chyba dat EEPROM
+Systémový modul: porucha
+3 M
+externího blokování Způsob resetu Reakce na
+poruchu Doporučené řešení
+Inicializujte všechny parametry a znovu zapněte; pokud
+Reset po zapnutí Závažná porucha, jednotka stop.
+porucha trvá, kontaktujte nás. 1. Zkontrolujte, zda odpovídá
+nastavení vstupů „rozpínací/spínací“; neshoda znamená
+poruchu.
+Závažná porucha, jednotka stop.
+2. Je­li nastavení „rozpínací/spínací“ v pořádku, zjistěte
+příčinu poruchy jednotky.
+Systémový modul:
+9 A/M
+nedostatečný průtok vody
+l Je­li [nedostatečný průtok –
+zapnout čerpadlo] aktivní,
+kompresory stop, čerpadlo běží; l
+je­li [nedostatečný průtok –
+zapnout čerpadlo] neaktivní,
+kompresory i čerpadla stop.
+1. Zkontrolujte, zda odpovídá nastavení vstupů „rozpínací/
+spínací“; neshoda znamená poruchu.
+2. Je­li nastavení „rozpínací/spínací“ v pořádku, zjistěte
+příčinu poruchy jednotky.
+Modul xx:
+nedostatečný průtok
+178 A/M
+vody modulu
+Stop modulu xx.
+Systémový modul:
+177 M
+porucha napájení
+Závažná porucha, jednotka stop
+(okamžitý stop kompresoru).
+1. Zkontrolujte hlídání fází J1 a zapojení. 2. Zkontrolujte,
+zda odpovídá nastavení vstupů „rozpínací/spínací“; neshoda
+znamená poruchu. 3. Je­li nastavení v pořádku, zjistěte
+příčinu poruchy.
+Modul xx: porucha
+1 M
+napájení Stop modulu xx.
+Systémový modul: příliš
+nízká teplota výstupní
+41 A
+vody
+Stop všech kompresorů a ventilátorů.
+1. Zkontrolujte, zda jsou nastavené teploty v běžném rozsahu.
+2. Zkontrolujte umístění a stav čidla výstupní teploty. 3.
+Zjistěte příčinu odchylky dané teploty.

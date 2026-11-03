@@ -11,6 +11,8 @@ Sazba, fotky a schémata zůstávají; mění se značka a jazyk:
     python3 prezentace.py extract   → cz/segments.json (odstavce s pozicí a stylem)
     (překlad: cz/cs.json  {id: "český text"}; "" = text odstranit; značky [[k|…]] = úsek v jiném stylu)
     python3 prezentace.py build     → REO-RH-X50-X100_prezentace-CZ.pdf (+ kontrola odkazů na výrobce)
+    python3 prezentace.py build en  → REO-RH-X50-X100_presentation-EN.pdf: anglický originál jen s rebrandem
+                                      (úseky se značkou/překlepy v en/en_fix.json, titulek a „Thanks!“ beze změny)
 Texty na displeji ovladače a v aplikaci zůstávají anglicky (ovladač je anglický).
 """
 import io, json, math, pathlib, re, sys
@@ -20,8 +22,10 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = pathlib.Path(__file__).parent
 SRC = ROOT.parents[1] / "R290 Commercial Heat Pump Introduction 20250411.pdf"   # zdroj výrobce (RH X50 komerční/)
-OUT = ROOT / "REO-RH-X50-X100_prezentace-CZ.pdf"
+LANG = sys.argv[2] if len(sys.argv) > 2 else "cz"        # cz = překlad, en = jen rebrand anglického originálu
+OUT = ROOT / {"cz": "REO-RH-X50-X100_prezentace-CZ.pdf", "en": "REO-RH-X50-X100_presentation-EN.pdf"}[LANG]
 CZ = ROOT / "cz"
+TX = ROOT / LANG          # texty: cz/cs_*.json (vše) nebo en/en_fix.json (jen změněné úseky)
 A = ROOT.parent / "letak" / "assets"
 SUP = pathlib.Path("/System/Library/Fonts/Supplemental")
 CAL = pathlib.Path("/Applications/Microsoft Word.app/Contents/Resources/DFonts")
@@ -85,6 +89,8 @@ def kaskada(im):
         t = t.rotate(-90, expand=True)
         cx, cy = (x0 + x1) // 2, (y0 + y1) // 2
         im.paste(t, (cx - t.width // 2, cy - t.height // 2), t)
+    if LANG == "en":
+        return im
     # „3t buffer tank“ v kruhu, „DHW“ pod zásobníkem, drobné popisky potrubí
     def relabel(box, lines, size, font="Arial.ttf", anchor_x=None):
         x0, y0, x1, y1 = ink_bbox(im, box)
@@ -109,7 +115,7 @@ def wifi(im):
     """Str. 40, snímek aplikace: síť „pwwm“ a heslo → neutrální."""
     d = ImageDraw.Draw(im)
     f = ImageFont.truetype(HELV, 31)
-    for box, base, t in (((153, 849, 250, 876), 868, "MyWiFi"), ((153, 969, 357, 1003), 994, "heslo1234")):
+    for box, base, t in (((153, 849, 250, 876), 868, "MyWiFi"), ((153, 969, 357, 1003), 994, "heslo1234" if LANG == "cz" else "password")):
         d.rectangle(box, fill="white")
         d.text((box[0] + 2, base), t, font=f, fill=(25, 25, 25), anchor="ls")
     return im
@@ -143,14 +149,24 @@ def rebrand(doc):
     hero = hero.resize((math.ceil(hero.width * s), math.ceil(hero.height * s)), Image.LANCZOS)
     x = int((hero.width - W) * .55)
     doc[1].replace_image(30, stream=jpg(hero.crop((x, 0, x + W, H))))
-    # titulek titulky (dva rastry) → jeden český, závěr „Thanks!“ → „Děkujeme!“
-    p1.replace_image(17, stream=png(Image.new("RGBA", (8, 8), (0, 0, 0, 0))))
-    p1.replace_image(19, stream=png(Image.new("RGBA", (8, 8), (0, 0, 0, 0))))
-    p1.insert_image(fitz.Rect(70, 236, 890, 304), stream=png(text_image((2460, 204), "Komerční tepelné čerpadlo R290", str(FONTS["tr"]))))
-    doc[59].replace_image(401, stream=png(text_image((844, 196), "Děkujeme!", str(FONTS["tr"]))))
+    # titulek titulky (dva rastry) → jeden český, závěr „Thanks!“ → „Děkujeme!“ (EN: originál bez značky zůstává)
+    if LANG == "cz":
+        p1.replace_image(17, stream=png(Image.new("RGBA", (8, 8), (0, 0, 0, 0))))
+        p1.replace_image(19, stream=png(Image.new("RGBA", (8, 8), (0, 0, 0, 0))))
+        p1.insert_image(fitz.Rect(70, 236, 890, 304), stream=png(text_image((2460, 204), "Komerční tepelné čerpadlo R290", str(FONTS["tr"]))))
+        doc[59].replace_image(401, stream=png(text_image((844, 196), "Děkujeme!", str(FONTS["tr"]))))
     # schéma kaskády, snímek Wi‑Fi
     doc[36].replace_image(272, stream=png(kaskada(pil(doc, 272))))
     doc[39].replace_image(281, stream=jpg(wifi(pil(doc, 281))))
+    # žluté zvýraznění originálu, které po překladu nesedí na text (str. 26, 50, 51, 52) – pryč
+    for pn in ((25, 49, 50, 51) if LANG == "cz" else ()):
+        page = doc[pn]
+        for g in page.get_drawings():
+            f = g.get("fill")
+            if f and f[0] > .9 and f[1] > .9 and f[2] < .3:
+                page.add_redact_annot(g["rect"] + (1, 1, -1, -1), fill=False)
+        page.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_REMOVE_IF_TOUCHED,
+                              text=fitz.PDF_REDACT_TEXT_NONE)
     # ikony vložených příloh výrobce (náhled OLE) – v PDF nejsou, pryč
     for pn, xref in ((41, 294), (47, 345), (48, 351), (58, 397)):
         doc[pn].delete_image(xref)
@@ -253,9 +269,20 @@ def css_style(st):
     return f"font-family:{k};font-size:{size}px;color:#{color:06x};font-weight:normal;line-height:1.15"
 
 
+def line_rows(s):
+    """Svislé pozice řádků segmentu (z obdélníků úseků)."""
+    rows = []
+    for y0, y1 in sorted({(round(r[1], 1), round(r[3], 1)) for r in s["spans"]}):
+        if rows and y0 < rows[-1][1] - (y1 - y0) * .5:
+            rows[-1][1] = max(rows[-1][1], y1)
+        else:
+            rows.append([y0, y1])
+    return rows
+
+
 def load_cs():
     cs = {}
-    for f in sorted(CZ.glob("cs*.json")):
+    for f in sorted(TX.glob("cs*.json" if LANG == "cz" else "en_fix.json")):
         cs.update(json.loads(f.read_text(encoding="utf-8")))
     return cs
 
@@ -263,7 +290,7 @@ def load_cs():
 def build():
     segs = json.loads((CZ / "segments.json").read_text(encoding="utf-8"))
     cs = load_cs()
-    over = json.loads((CZ / "override.json").read_text(encoding="utf-8")) if (CZ / "override.json").exists() else {}
+    over = json.loads((TX / "override.json").read_text(encoding="utf-8")) if (TX / "override.json").exists() else {}
     doc = fitz.open(SRC)
     rebrand(doc)
     arch = fitz.Archive()
@@ -271,7 +298,7 @@ def build():
         arch.add((f.read_bytes(), f.name))
     css = "".join(f"@font-face{{font-family:{k};src:url('{p.name}');}}" for k, p in FONTS.items()) + "*{margin:0;padding:0}"
     missing = [s["id"] for s in segs if s["id"] not in cs]
-    if missing:
+    if missing and LANG == "cz":
         print("chybí překlad:", len(missing), missing[:15])
     segs_by_id = {s["id"]: s for s in segs}
     by_page = {}
@@ -306,13 +333,37 @@ def build():
                                  color=tuple(((color >> sh) & 255) / 255 for sh in (16, 8, 0)), morph=(org, fitz.Matrix(-ang)))
                 continue
 
+            if "{IKONA}" in t:
+                ic = [im["bbox"] for im in page.get_image_info() if im["bbox"][1] < r.y0 + size * 1.4
+                      and im["bbox"][3] > r.y0 and im["bbox"][0] > r.x0 - 1 and im["bbox"][2] - im["bbox"][0] < 40]
+                gap = (min(ic, key=lambda b: b[0])[2] + 3 - r.x0) if ic else 30
+                n = math.ceil(gap / (size * .25))
+                t = t.replace("{IKONA}", "\u00a0" * n)
+
             def rep(m):
                 a = s["alts"][int(m.group(1))]
                 return f'<span style="{css_style(a)}">{m.group(2)}</span>'
             body = re.sub(r"\[\[(\d+)\|(.*?)\]\]", rep, t.replace("&", "&amp;").replace("<", "&lt;")).replace("\n", "<br>")
             align = o.get("align", s["align"])
+            rows = line_rows(s)
+            parts = t.split("\n")
+            if len(parts) > 1 and len(parts) == len(rows) and not o.get("flow"):
+                # řádky tabulky: každý řádek překladu na místo původního řádku
+                for (y0, y1), ln in zip(rows, parts):
+                    if not ln.strip():
+                        continue
+                    b2 = body.split("<br>")[parts.index(ln)] if False else re.sub(r"\[\[(\d+)\|(.*?)\]\]", rep, ln.replace("&", "&amp;").replace("<", "&lt;"))
+                    h = f'<div style="{css_style((k, size, color))};text-align:{align}">{b2}</div>'
+                    g = o.get("grow", 2)
+                    bx = fitz.Rect(r.x0 - 1 - (g if align != "left" else 0), y0 - 1.5, r.x1 + g, y1 + max(2, size * .4))
+                    spare, scale = page.insert_htmlbox(bx, h, css=css, archive=arch, scale_low=0.5)
+                    if scale < 0.75 or spare < 0:
+                        print(f"  {s['id']}: řádek zmenšen {scale:.2f}  „{ln[:40]}“")
+                continue
             html = f'<div style="{css_style((k, size, color))};text-align:{align}">{body}</div>'
             g = o.get("grow", 2)
+            if size >= 24 and r.y0 < 60 and "grow" not in o:   # nadpis snímku: smí se roztáhnout až k logu
+                g = max(g, 820 - r.x1)
             box = fitz.Rect(r.x0 - 1, r.y0 - 1, r.x1 + g, r.y1 + max(2, size * .4) + o.get("growy", 0))
             if align == "right":
                 box.x0 -= g + 1; box.x1 = r.x1 + 1
@@ -321,10 +372,16 @@ def build():
             spare, scale = page.insert_htmlbox(box, html, css=css, archive=arch, scale_low=0.5)
             if scale < 0.75 or spare < 0:
                 print(f"  {s['id']}: zmenšeno {scale:.2f}  „{t[:50]}“")
-    doc.set_metadata({"title": "Komerční tepelné čerpadlo R290 – RH X50 / RH X100", "author": "REO HEATING",
-                      "subject": "Prezentace: popis, instalace, ovládání, uvedení do provozu a chybové kódy RH X50 / RH X100",
-                      "keywords": "REO HEATING, RH X50, RH X100, tepelné čerpadlo, R290", "creator": "REO HEATING", "producer": ""})
+    meta = {"cz": ("Komerční tepelné čerpadlo R290 – RH X50 / RH X100",
+                   "Prezentace: popis, instalace, ovládání, uvedení do provozu a chybové kódy RH X50 / RH X100",
+                   "REO HEATING, RH X50, RH X100, tepelné čerpadlo, R290"),
+            "en": ("R290 Commercial Heat Pump – RH X50 / RH X100",
+                   "Presentation: introduction, installation, wiring, controller operation, commissioning and error codes RH X50 / RH X100",
+                   "REO HEATING, RH X50, RH X100, heat pump, R290")}[LANG]
+    doc.set_metadata({"title": meta[0], "author": "REO HEATING", "subject": meta[1], "keywords": meta[2],
+                      "creator": "REO HEATING", "producer": ""})
     doc.del_xml_metadata()
+    doc.subset_fonts()
     doc.save(OUT, garbage=4, deflate=True, clean=True)
     print("PDF", OUT, round(OUT.stat().st_size / 1e6, 1), "MB")
     check()
@@ -339,7 +396,8 @@ def check():
     left = [(i + 1, w[4]) for i, p in enumerate(doc) for w in p.get_text("words")
             if re.fullmatch(r"(?i)(the|and|of|is|to|with|unit|water|pump|heat|please|click|setting)", w[4])]
     print("odkazy na výrobce:", hits or "žádné", meta or "", raw or "")
-    print("zbylá angličtina (ukázka):", left[:25], len(left))
+    if LANG == "cz":
+        print("zbylá angličtina (ukázka):", left[:25], len(left))
 
 
 if __name__ == "__main__":

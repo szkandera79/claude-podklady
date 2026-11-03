@@ -1,0 +1,22 @@
+{
+ "p4_002": "RH X50",
+ "p5_002": "RH X100",
+ "p6_002": "RH X50",
+ "p6_003": "RH X100",
+ "p4_014": "Operation Ambient Temp(℃)",
+ "p5_014": "Operation Ambient Temp(℃)",
+ "p9_001": "[[0|The full DC inverter technology lets the unit intelligently adjust the operating frequency and control the water temperature to keep the room at a constant temperature.]]\n[[0|At low ambient temperatures, the REO HEATING R290 full DC inverter heat pump operates stably and efficiently]] in extremely cold regions down to -25[[1|°]]C without EVI technology. Its COP reaches up to 5.0, the energy efficiency class is A+++ (35℃) and it delivers 78[[1|°]]C hot water for the heating and cooling needs of the building. Compared with ON-OFF units and traditional electric boilers, it can achieve significant electricity savings in suitable projects (indicative).",
+ "p10_001": "REO HEATING heat pumps support connection to a smart grid and a photovoltaic system to store energy. When the SG and EVU signals are connected, the heat pump runs with hot water priority to heat the water and then, depending on peak electricity consumption or other conditions, provides hot water to users. It can store energy well, monitor energy use, allocate it reasonably and reduce energy consumption.",
+ "p19_003": "For example, if the building area is 400 m² and there are 20 persons, the total hot water demand is 1000 L per day. The standard heating capacity of RH X50 is [[0|40 kW at ambient temp 0 ℃]]. Calculate the time to heat hot water using the following formula:",
+ "p19_011": "RH X50",
+ "p20_003": "RH X50",
+ "p20_012": "RH X50",
+ "p23_008": "RH X50",
+ "p26_008": "RH X50",
+ "p40_001": "[[0|1) Step 1:]] Enter the settings menu interface, select \"WIFI setting\". Check if the message \"Smart mode is being configured\" is displayed in the interface; if other messages are displayed, press and hold the \"Reset wifi\" key to reset the WiFi.\n[[0|2) Step 2]]: [[1|Turn on the Bluetooth and WIFI functions of the mobile phone]] and connect to the WIFI hotspot. The WIFI hotspot must be able to connect to the Internet normally, as shown in the figure: connect to the WIFI hotspot \"MyWiFi\";\n[[0|3) Step 3:]]\nOpen the \"Smart Life\" or \"Tuya Smart\" app, log in to the main interface, click \"+\" or \"Add device\", enter the device type selection, select \"Large Home Appliance\" → select \"Water Heater\" → enter WiFi information → complete.",
+ "p42_001": "Real-time monitoring, data operation and maintenance, saving time and costs for users, dealers and service partners.",
+ "p42_002": "",
+ "p59_024": "",
+ "p50_000": "Target Temp Compensation Function",
+ "p51_003": "When this function runs, the compressor, the auxiliary electric heater and the water tank electric heater run at different times."
+}
