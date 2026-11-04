@@ -175,6 +175,11 @@ MAN = ROOT.parent / "PW R290" / "RH030-RH060 - REO HEATING" / "RH030-RH060-navod
 if MAN.exists():
     (ROOT / "navody" / MAN.name).write_bytes(MAN.read_bytes())
     index = index.replace("/*MAN_SIZE*/", f"{MAN.stat().st_size/1e6:.1f} MB".replace(".", ","))
+# návod pro jednotky s novějším ovladačem (originál 2024)
+MAN2 = ROOT.parent / "R290 new models" / "RH030-RH060 novy ovladac - REO HEATING" / "RH030-RH060-novy-ovladac-navod-CZ_REO-HEATING.pdf"
+if MAN2.exists():
+    (ROOT / "navody" / MAN2.name).write_bytes(MAN2.read_bytes())
+    index = index.replace("/*MAN2_SIZE*/", f"{MAN2.stat().st_size/1e6:.1f} MB".replace(".", ","))
 # prezentace RHX20 Pro / RHX30 Pro (lehké komerční použití)
 PRES = ROOT.parent / "PW Helios" / "REO R290 Smart" / "prezentace-komercni" / "REO-R290-Smart_RHX20-RHX30-Pro_prezentace-CZ.pdf"
 if PRES.exists():

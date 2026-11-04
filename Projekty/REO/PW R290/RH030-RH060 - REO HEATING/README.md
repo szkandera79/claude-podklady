@@ -2,8 +2,8 @@
 
 Česká verze originálního návodu výrobce `../Power World R290 Heat Pump User Manual.pdf` (11/2022, 50 stran),
 v designu manuálu X30/Helios: originální layout, český text vysázený na místo anglického, logo REO HEATING na titulce.
-Platí pro jednotky se **starším ovladačem**; pro novější panel vznikne samostatný návod z verze výrobce 2024
-(`../../R290 new models/Power World New Version Software R290 Heat Pump.pdf`).
+Platí pro jednotky se **starším ovladačem**; návod pro novější panel (originál 2024) je hotový v
+`../../R290 new models/RH030-RH060 novy ovladac - REO HEATING/`.
 
 | Originál | REO HEATING |
 |---|---|

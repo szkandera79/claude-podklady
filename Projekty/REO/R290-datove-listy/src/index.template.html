@@ -194,9 +194,14 @@ table.ntable .ok{ color:var(--s-lwa); font-weight:600; }
             Stáhnout prezentaci</button>
         </div>
       </div>
-      <div class="doc soon">
-        <div class="di"><b>RH030 – RH060 s novějším ovladačem</b><span>Samostatný návod podle nové verze ovládacího panelu</span></div>
-        <span class="tag">Připravujeme</span>
+      <div class="doc">
+        <div class="di"><b>RH030 – RH060 s novějším ovladačem</b><span>Jednotky s novějším dotykovým ovladačem (vč. RH040 3F, RH055, RH070) · 62 stran A4 · PDF /*MAN2_SIZE*/</span></div>
+        <div class="act">
+          <span class="status" id="man2Status" role="status"></span>
+          <button class="btn" id="man2Btn" type="button">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v8M4.5 6.8 8 10.3l3.5-3.5M2.5 13.5h11"/></svg>
+            Stáhnout návod</button>
+        </div>
       </div>
     </div>
   </section>
@@ -353,6 +358,7 @@ pdfAll.addEventListener('click', async () => {
 const DOCS = [
   { btn:'manBtn', st:'manStatus', path:'navody/RH030-RH060-navod-CZ_REO-HEATING.pdf', file:'RH030-RH060-navod-CZ_REO-HEATING.pdf' },
   { btn:'presBtn', st:'presStatus', path:'navody/REO-R290-Smart_RHX20-RHX30-Pro_prezentace-CZ.pdf', file:'REO-R290-Smart_RHX20-RHX30-Pro_prezentace-CZ.pdf' },
+  { btn:'man2Btn', st:'man2Status', path:'navody/RH030-RH060-novy-ovladac-navod-CZ_REO-HEATING.pdf', file:'RH030-RH060-novy-ovladac-navod-CZ_REO-HEATING.pdf' },
 ];
 for (const D of DOCS) {
   const btn = document.getElementById(D.btn), st = document.getElementById(D.st);

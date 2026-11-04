@@ -1,0 +1,162 @@
+{
+ "3_15": {
+  "en": "The DC Inverter Air Source Heat Pumps are designed and manufactured to provide years of safe and reliable service when installed, operated and maintained according to the information in this manual and the installation codes referred to in later sections. Throughout the manual, safety warnings and cautions are identified by the “{I1}“symbol. Be sure to read and comply with all of the warnings and cautions.",
+  "icons": [
+   {
+    "xref": 99,
+    "bbox": [
+     212.75999450683594,
+     712.5599975585938,
+     231.47999572753906,
+     732.0
+    ],
+    "line": [
+     56.63999938964844,
+     720.5690307617188,
+     538.6831665039062,
+     735.6301879882812
+    ]
+   }
+  ]
+ },
+ "30_0": {
+  "en": "◎Click “{I1}” in the “SET TIME” Interface to enter Timing silent interface, The unit will runs as Silent Mode during the scheduled mute time.",
+  "icons": [
+   {
+    "xref": 270,
+    "bbox": [
+     98.27999877929688,
+     31.19999885559082,
+     122.15999603271484,
+     62.7599983215332
+    ],
+    "line": [
+     56.63999938964844,
+     51.951446533203125,
+     538.5729370117188,
+     66.1948013305664
+    ]
+   }
+  ]
+ },
+ "32_28": {
+  "en": "curve” to enter the energy consumption curve interface, click{I1}",
+  "icons": [
+   {
+    "xref": 279,
+    "bbox": [
+     356.2799987792969,
+     404.52001953125,
+     390.239990234375,
+     425.0400085449219
+    ],
+    "line": [
+     56.63999938964844,
+     413.6090393066406,
+     350.76409912109375,
+     428.6701965332031
+    ]
+   }
+  ]
+ },
+ "32_29": {
+  "en": "and{I1}",
+  "icons": [
+   {
+    "xref": 280,
+    "bbox": [
+     419.6400146484375,
+     405.0,
+     453.6000061035156,
+     425.0400085449219
+    ],
+    "line": [
+     395.7590026855469,
+     413.6090393066406,
+     414.1418762207031,
+     428.6701965332031
+    ]
+   }
+  ]
+ },
+ "54_5": {
+  "en": "◎By default, it can be connected within 10s after the first power-on, and it needs to be connected by pressing buttons after 10 seconds. (10s is the delay for wifi to enter low power consumption) ◎Manually enter the smart distribution mode: select \"SMART MODE\"or \"AP MODE\" on the WIFI interface of the wired controller, click \"Add Device\" to enter the smart distribution mode, the \"{I1}\" icon on the main interface flashes, and the mobile phone can start to configure the network.",
+  "icons": [
+   {
+    "xref": 387,
+    "bbox": [
+     513.3599853515625,
+     521.8800048828125,
+     534.3599853515625,
+     541.3200073242188
+    ],
+    "line": [
+     56.63999938964844,
+     529.76904296875,
+     538.6306762695312,
+     544.8302001953125
+    ]
+   }
+  ]
+ },
+ "55_0": {
+  "en": "◎Exit the network configuration status after 3 minutes, the \"{I1}\" icon stops flashing, and the WIFI module is no longer networked. If you want to configure the network again, you need to click the \"Add Device\" button on the WIFI interface again. The 2nd step:",
+  "icons": [
+   {
+    "xref": 387,
+    "bbox": [
+     350.1600036621094,
+     27.719999313354492,
+     371.1600036621094,
+     47.15999984741211
+    ],
+    "line": [
+     56.63999938964844,
+     35.728050231933594,
+     538.6202392578125,
+     50.78919982910156
+    ]
+   }
+  ]
+ },
+ "61_3": {
+  "en": "◎APP removal Click{I1}",
+  "icons": [
+   {
+    "xref": 423,
+    "bbox": [
+     88.19999694824219,
+     581.280029296875,
+     104.75999450683594,
+     595.4400024414062
+    ],
+    "line": [
+     56.63999938964844,
+     583.8890380859375,
+     80.40409851074219,
+     598.9501953125
+    ]
+   }
+  ]
+ },
+ "61_4": {
+  "en": "in the upper right corner of device operation main interface to enter device details interface, and click ”Remove Device” interface to enter the intelligent network configuration mode. \"{I1}\" Corresponding indicator light does not flash, and the network can be reconfigured within 3 minutes. If it exceeds 3mins, it will exit the distribution network.",
+  "icons": [
+   {
+    "xref": 387,
+    "bbox": [
+     61.439998626708984,
+     615.9600219726562,
+     82.44000244140625,
+     635.4000244140625
+    ],
+    "line": [
+     56.63999938964844,
+     623.9690551757812,
+     538.5838012695312,
+     639.0302124023438
+    ]
+   }
+  ]
+ }
+}

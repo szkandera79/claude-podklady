@@ -1,0 +1,10 @@
+{
+ "3_15": "Invertorová tepelná čerpadla vzduch–voda jsou navržena a vyrobena tak, aby léta sloužila bezpečně a spolehlivě, pokud jsou instalována, provozována a udržována podle tohoto návodu a předpisů uvedených dále. Bezpečnostní varování a<br>upozornění jsou v návodu označena symbolem „{I1}“. Přečtěte si je a dodržujte.",
+ "30_0": "◎Klepnutím na „{I1}“ v obrazovce „SET TIME“ otevřete časový tichý režim; v nastaveném čase jednotka pracuje v tichém režimu.",
+ "54_5": "◎Ve výchozím stavu lze modul připojit do 10 s po prvním zapnutí, později je nutné připojení spustit tlačítkem. (Po 10 s přejde Wi-Fi modul do úsporného režimu.)<br>◎Ruční spuštění párování: na obrazovce WIFI kabelového ovladače zvolte \"SMART MODE\" nebo \"AP MODE\" a stiskněte \"Add Device\"; ikona \"{I1}\" na hlavní obrazovce bliká a v telefonu lze začít s nastavením sítě.",
+ "55_0": "◎Po 3 minutách se režim párování ukončí, ikona \"{I1}\" přestane blikat a Wi-Fi modul se již nepřipojuje. Pro nové nastavení sítě stiskněte znovu \"Add Device\" na obrazovce WIFI.<br><b>2. krok:</b>",
+ "61_4": "vpravo nahoře na hlavní ovládací obrazovce zařízení, otevřou se podrobnosti zařízení; kliknutím na \"Remove Device\" přejde zařízení do režimu párování. Příslušná ikona \"{I1}\" bliká a síť lze znovu nastavit do 3 minut. Po 3 minutách se režim párování ukončí.",
+ "32_28": "curve“ – otevře se obrazovka křivek; tlačítky {I1}",
+ "32_29": "a {I1}",
+ "61_3": "◎<b>Odebrání v aplikaci</b> Klikněte na {I1}"
+}
