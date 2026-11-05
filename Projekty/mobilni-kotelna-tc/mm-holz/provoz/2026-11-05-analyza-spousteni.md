@@ -1,0 +1,74 @@
+# Alignum – analýza spouštění kotelny (3.–5. 11. 2026)
+
+**Zdroje:**
+- WhatsApp vlákno „Alignum CZ boiler room“ (70 zpráv, 3.–5. 11.; podpora výrobce Sophie Deng, elektrikář Sam),
+- snímky statusu aplikace z 5. 11. (8:56),
+- návod RH X50 (kap. 3.5 pomocný zdroj, 3.6 provozní parametry, 4.2 chybové kódy).
+
+## Průběh
+
+| Kdy | Co se dělo |
+|---|---|
+| 3. 11. odpoledne | V balení chybí kabel pro kaskádu a oběhové čerpadlo (RH X50 nemá vestavěné). Dotaz, zda lze použít čerpadlo z RH050. |
+| 3. 11. večer | Provizorní čerpadlo zapojené napřímo (bez řízení z jednotky). Teplota nepřekročí ≈ 37–40 °C, chyba zhruba po každém nárůstu o 10 K. |
+| 3. 11. 22:50 | Výrobce: čerpadlo může být libovolné značky, musí ale splnit průtok a výtlak. Čerpadlo z RH050 je malé. Problém je nedostatečný průtok, kompresor proto jen krátce běží a vypíná. Odvzdušnit, čerpadlo musí běžet trvale. |
+| 4. 11. 02:32–02:51 | V historii opakovaně **Airflowerr** (porucha průtoku vody, průtokový spínač). |
+| 4. 11. 03:01 a 03:12 | **Chyba 204 – Unitwaterdif**: abnormální rozdíl teplot výstup/vstup modulu. Podle návodu automatický reset, modul se zastaví. |
+| 4. 11. ráno | Výrobce: na 1 jednotku je potřeba průtok ≥ 8,6 × 1,1 ≈ **9,5 m³/h**, na 2 jednotky ≈ **19 m³/h**, plus **samostatné čerpadlo pro soustavu**. Kabel kaskády se nedodává: stíněný komunikační kabel ≈ 1 mm² koupit lokálně. Výstup pro čerpadlo je jen reléový (bez měniče). Jednofázové čerpadlo lze použít, stíněný kabel kvůli EMC. |
+| 4. 11. večer | Po montáži výkonnějšího čerpadla se chyba stále objevuje při ΔT ≈ 15 K. Dotaz na zvýšení povoleného ΔT. |
+| 5. 11. 07:48 | Výrobce: **velký rozdíl teplot není příčina, ale projev nesprávného provozu**. Analyzují. |
+| 5. 11. 08:45 | Výrobce žádá vypnout a znovu zapnout jednotku, v jejich systému chybí data. |
+| 5. 11. 08:56 | Status: jedna jednotka běží bez chyby, výstup 56,1 °C, vstup 52,8 °C. |
+
+## Hodnocení
+
+1. **Příčinou chyb byl nedostatečný průtok vody, ne nastavení jednotky.**
+   - Při jmenovitém průtoku 8,6–10,3 m³/h a výkonu 30–45 kW má být rozdíl výstup/vstup jen ≈ 3–5 K.
+   - ΔT 15 K znamená průtok ≈ 2–3× nižší, ΔT 30 K ≈ 6× nižší.
+   - Chyba 204 i Airflowerr jsou ochrany jednotky před právě tímto stavem. Zvyšovat povolené ΔT nemá smysl.
+   - Krátká vzdálenost k AKU nestačí, rozhoduje průtok a tlaková ztráta jednotky. Výrobce udává max. 80 kPa, tj. ≈ 8 m vodního sloupce.
+2. **Dnes (5. 11.) je průtok zřejmě v pořádku.**
+   - ΔT přes jednotku je 3,3 K a odhadovaný výkon při +3 °C a 56 °C ≈ 35–40 kW. Z toho vychází průtok ≈ 9–10 m³/h, tedy jmenovitý.
+   - Po výměně čerpadla jednotka běží bez chyby.
+3. **Dimenzování čerpadla** podle výrobce (kap. 4.3): průtok ≥ jmenovitý × 1,1–1,2, výtlak H = K × (ΔP jednotky + ΔP potrubí + výškový rozdíl).
+
+   | Varianta | Průtok | Výtlak | Poznámka |
+   |---|---|---|---|
+   | Čerpadlo pro každou jednotku zvlášť (doporučeno) | ≈ 9,5–11 m³/h | ≈ 10–12 m | spínané reléovým výstupem své jednotky, zpětná klapka v každé větvi |
+   | Jedno společné čerpadlo pro obě jednotky | ≈ 19–21 m³/h | ≈ 10–12 m | — |
+
+   Výtlak počítá s 80 kPa na jednotku, krátkým potrubím a filtrem, K = 1,15.
+4. **Druhé čerpadlo pro soustavu** (strana AKU → výměníková stanice) výrobce požaduje. Je nutné: dříve primár výměníku poháněl tlak teplovodu, teď ho musí zajistit kotelna. Ověřit, že je osazené.
+5. **Čerpadla musí řídit jednotka, ne přímé zapojení.** Je to důležité i pro protimrazovou ochranu, protože jednotky jsou bez glykolu: jednotka si čerpadlo v mrazu sama spouští.
+
+## Další body ze statusu 5. 11.
+
+- **Žádaná teplota 63 °C je při +3 °C zbytečně vysoká.**
+  - Podle odhadu potřeby stačí ≈ 40–45 °C při 0 °C.
+  - Snížit, ideálně nastavit ekvitermní křivku.
+- **Elektrokotel pravděpodobně přitápí i při +3 °C.**
+  - Voda do soustavy má 59,1 °C, voda z jednotky 56,1 °C.
+  - Ověřit položku AHS (č. 7) ve stavu.
+  - Nastavit:
+
+    | Parametr | Doporučení |
+    |---|---|
+    | 26 – venkovní teplota pro povolení pomocného zdroje | −7 až −10 °C |
+    | 23 – zpoždění zapnutí | prodloužit |
+    | 24 – rozdíl teplot pro zapnutí | 5–8 K |
+- **Kompresor 2#CM má přehřátí 8,4 K proti cíli 19,8 K.** Sledovat. Pokud po ustálení zůstane nízké, řešit s výrobcem.
+- **R290 CONC 2,80 %.** Ověřit s výrobcem jednotku údaje a že hodnota neroste. Bez úniku by měla být ≈ 0.
+- **Čidlo TUV (4,9 °C)** se nepoužívá, režim TUV v jednotce nechat vypnutý.
+
+## Úkoly
+
+1. Druhou jednotku zapojit do kaskády.
+   - Stíněný komunikační kabel ≈ 1 mm², kroucený pár, mezi deskami (RS485), stínění uzemnit jednostranně.
+   - Nastavit adresu podřízené jednotky.
+2. Ověřit čerpadlo pro druhou jednotku (≈ 9,5–11 m³/h, ≈ 10–12 m), případně jedno společné čerpadlo na 19–21 m³/h.
+3. Obě čerpadla zapojit na reléové výstupy jednotek (stíněný kabel), zrušit přímé zapojení.
+4. Zkontrolovat čerpadlo soustavy (AKU → výměníková stanice).
+5. Odvzdušnit okruh a vyčistit filtr ve zpátečce.
+6. Snížit žádanou teplotu a nastavit parametry pomocného zdroje (23, 24, 26).
+7. Restart jednotky podle požadavku výrobce (5. 11.).
+8. **Bezpečnost:** v jednom z obrázků ve vlákně jsou viditelné přihlašovací údaje do aplikace (smart321.com). Doporučeno **změnit heslo** a snímek ve skupině smazat.
