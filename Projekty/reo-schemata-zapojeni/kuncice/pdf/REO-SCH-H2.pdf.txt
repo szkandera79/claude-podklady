@@ -1,0 +1,105 @@
+[Text vytažený z REO-SCH-H2.pdf]
+
+--- strana 1 ---
+Schéma hydraulického zapojení s hydroboxem
+Vytápění s AKU nádrží 100 l a ohřev TUV
+R E O -S C H - H 2 · R H 0 3 0 – R H 0 6 0
+rev. 1 · 11/2026
+5
+→ TUV
+→ AKU
+V E N K U T E C H N I C KÁ M Í ST N O ST O B Y T N É P R O STO RY
+11
+rádiový signál
+HYDROBOX
+RH-03H(/S) · RH-05H(/S)
+18
+PŘIJÍMAČ
+relé
+9
+4
+1 REO RH030–RH060
+napájení čerpadla 230 V
+6 7
+spíná / rozpíná přijímač
+M
+bar
+13
+10
+°C
+8
+17
+volitelně
+21 °C
+12
+2
+2
+16
+14
+teplá voda do domu
+24
+2
+21
+2 3
+AKU
+100 l
+topná voda
+vratka
+venkovní jednotka
++ filtr, pojistný
+ventil 3 bar, jistič
+2
+2
+2
+výstup — teplá voda
+vratka — ochlazená voda
+elektrické ovládání / signál
+teplá užitková voda
+studená voda
+!
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním patří VENKU hned
+za jednotku — vzduch i případně uniklé chladivo
+musí odejít do volného prostoru, nikdy ne do domu.
+obvodová zeď
+SOUČÁSTI TUV prvky 1–18 viz schéma s hydroboxem H1
+18 Hydrobox — trojcestný ventil
+horní výstup → TUV, prostřední → AKU, spodní vratka
+19 Zásobník TUV se spirálou
+výkon spirály ≥ jmenovitý výkon TČ
+20 Čidlo teploty TUV (T2)
+do jímky zásobníku, kabel k řídicí desce TČ
+21 Elektrická topná vložka (volitelně)
+dohřev a antilegionella
+22 Uzávěr + zpětný ventil studené vody
+na přívodu z vodovodu
+23 Pojistný ventil TUV
+bez uzávěru, výfuk do odpadu
+24 Expanzní nádoba TUV
+pro pitnou vodu
+2 Uzávěry spirály a u AKU
+AKU lze odpojit, TUV běží dál
+2
+15
+19
+TUV
+zásobník
+se spirálou
+T
+20
+studená voda z vodovodu
+23
+22
+JAK TO FUNGUJE
+Čerpadlo hydroboxu (18) žene vodu přes TČ (1); při mrazu pomáhá
+elektrický dohřev 3 kW. Prostřední výstup vede vodu do AKU (5).
+Při požadavku na TUV přepne trojcestný ventil na horní výstup
+do spirály zásobníku (19); teplotu hlídá čidlo T2 (20). TUV má přednost.
+BEZPEČNOST A TIPY
+• Hydrobox na nehořlavou stěnu; prostor 10–35 °C, vlhkost do 70 %.
+• Kolem hydroboxu prostor pro servis; kabely zespodu, rezerva 2 m.
+• Separátor (4) venku — odvzdušnění R290 nesmí ústit do domu.
+• Filtr (16) mezi dvěma uzávěry — čištění bez vypouštění.
+• Pojistné ventily bez uzávěru, výfuk viditelně do odpadu.
+• Pojistný ventil TUV (23) a exp. nádoba (24) pro pitnou vodu.
+Zjednodušené orientační schéma — podle návodu TČ RH030–RH060 a návodu k instalaci hydraulického modulu REO HEATING. R E O H E AT I N G

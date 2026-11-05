@@ -1,0 +1,108 @@
+[Text vytažený z REO-SCH-H1.pdf]
+
+--- strana 1 ---
+Schéma hydraulického zapojení s hydroboxem
+Pouze vytápění s AKU nádrží 100 l
+R E O -S C H - H 1 · R H 0 3 0 – R H 0 6 0
+rev. 1 · 11/2026
+21 °C
+12
+5
+V E N K U T E C H N I C KÁ M Í ST N O ST O B Y T N É P R O STO RY
+HYDROBOX
+RH-03H(/S) · RH-05H(/S)
+18
+4
+1 REO RH030–RH060
+M
+11
+rádiový signál
+PŘIJÍMAČ
+relé
+9
+napájení čerpadla 230 V
+6 7
+spíná / rozpíná přijímač
+bar
+13
+10
+AKU
+°C
+100 l
+topná voda
+8
+2
+TUV zaslepit
+→ AKU
+2
+2 3
+2
+17
+volitelně
+14
+vratka
+venkovní jednotka
++ filtr, pojistný
+ventil 3 bar, jistič
+2
+!
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním patří VENKU hned
+za jednotku — vzduch i případně uniklé chladivo
+musí odejít do volného prostoru, nikdy ne do domu.
+16
+výstup — teplá voda
+vratka — ochlazená voda
+elektrické ovládání / signál
+obvodová zeď
+SOUČÁSTI
+1 Tepelné čerpadlo REO RH030–RH060
+venkovní monoblok, chladivo R290
+2 Uzavírací ventily
+u jednotky, u AKU a kolem filtru 16
+3 Protizámrazový ventil
+venku na vratce
+4 Separátor + bezpečnostní odvzdušnění
+venku na výstupu za uzávěrem
+5 Akumulační nádrž 100 l
+odděluje primár a topení
+6 Automatický odvzdušňovací ventil AKU
+na horním vývodu
+7 Pojistná skupina (ventil + manometr)
+za sekundárním čerpadlem
+8 Teploměr + pojistný ventil AKU
+společný vývod na plášti
+9 Expanzní nádoba topení
+nad pojistnou skupinou
+10 Sekundární oběhové čerpadlo
+napájení spíná přijímač 11
+11 Přijímač termostatu (relé 230 V)
+u čerpadla
+12 Bezdrátový pokojový termostat
+v obytné místnosti
+13 Odvzdušňovací ventil v nejvyšším bodě
+rozvod topení
+14 Radiátory s odvzdušňovacími ventilky
+otopná soustava
+15 Vypouštěcí kohout AKU
+na dně nádrže
+16 Magnetický filtr
+na vratce do hydroboxu mezi uzávěry
+17 Směšovací ventil (volitelně)
+podlahovka max. 40 °C, ideálně 35 °C
+18 Hydrobox
+čerpadlo primáru, dohřev 3 kW, 3c ventil, exp. 8 l
+15
+JAK TO FUNGUJE
+Čerpadlo hydroboxu (18) žene vodu přes TČ (1); při mrazu pomáhá
+elektrický dohřev 3 kW. Prostřední výstup vede vodu do AKU (5).
+Horní výstup (TUV) je zaslepen. Topení řídí termostat (12) přes
+přijímač (11), který spíná napájení sekundárního čerpadla (10).
+BEZPEČNOST A TIPY
+• Hydrobox na nehořlavou stěnu; prostor 10–35 °C, vlhkost do 70 %.
+• Kolem hydroboxu prostor pro servis; kabely zespodu, rezerva 2 m.
+• Separátor (4) venku — odvzdušnění R290 nesmí ústit do domu.
+• Filtr (16) mezi dvěma uzávěry — čištění bez vypouštění.
+• Pojistné ventily bez uzávěru, výfuk viditelně do odpadu.
+• Podlahové topení: směšovací ventil (17) — max. 40 °C.
+Zjednodušené orientační schéma — podle návodu TČ RH030–RH060 a návodu k instalaci hydraulického modulu REO HEATING. R E O H E AT I N G

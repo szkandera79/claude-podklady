@@ -1,0 +1,118 @@
+[Text vytažený z REO-SCH-H2-E.pdf]
+
+--- strana 1 ---
+Schéma elektrického zapojení s hydroboxem
+Vytápění s AKU 100 l a ohřev TUV · jednotky a hydroboxy 1F i 3F
+R E O -S C H - H 2 - E · R H 0 3 0 – R H 0 6 0
+rev. 0 · 11/2026
+1
+2
+V E N K U T E C H N I C KÁ M Í ST N O ST O B Y T N É P R O STO RY
+napájení TČ z hydroboxu · 1F 3 vodiče / 3F 5 vodičů
+přívod z domovního rozvaděče
+(jištění dle typu hydroboxu)
+ŘÍDICÍ DESKA
+L N PE
+1F 230 V
+čidla T2, T3, T8
+R S T N PE 3F 400 V
+SVORKOVNICE PŘÍSLUŠENSTVÍ
+1 2 3 4 5 6
+→ 2, 3, 4, PUMP
+ČERPADLO HYDROBOXU
+PUMP PWM GND FB
+1 vložka TUV · 2 E-ohřev · 3 3c ventil · 4 N · 5–6 spínač
+VENKOVNÍ JEDNOTKA
+REO RH030–RH060 · napájení z hydroboxu
+230 V z dom. rozvaděče
+3
+HYDROBOX RH-03H(/S) · RH-05H(/S)
+JISTIČ Q
+s chráničem
+4 5
+STYKAČ
+→ dohřev 3 kW
+PŘIJÍMAČ
+relé 230 V
+NAPÁJENÍ → TČ
+L N PE
+R S T N PE
+ŘÍZENÍ Z JEDNOTKY (230 V)
+1 2 3 4
+10
+M
+1 ohřev · 2 čerpadlo · 3 ventil · 4 N
+SIGNÁL ČERPADLA 0–12 V
+čerpadlo
+PWM GND FB
+M
+3c ventil
+komunikační kabel ovladače
+ČIDLO TUV T2
+jímka zásobníku TUV
+obvodová zeď
+TYPY HYDROBOXU PODLE NÁVODU HYDRAULICKÉHO MODULU
+L N │ COM NO
+7
+spínaná fáze + N + PE
+8
+M
+sekundární
+čerpadlo
+6
+40 °C
+kabelový ovladač TČ
+11
+STYKAČ → VLOŽKA TUV
+svorky 1 + 4 · volitelně
+9
+21 °C
+na baterie
+silový / ovládací kabel 230 / 400 V
+komunikační kabel ovladače
+signál (PWM, čidla, rádio)
+volitelné
+Hydrobox Napájení Jistič Q Pro jednotky Čerpadlo · vložka · exp. nádoba · pojistný ventil
+RH-03H/S 230 V · 1F 40 A RH030, RH040 (1F) výtlak 9 m · 3 kW / 230 V · 8 l · 3 bar
+12
+RH-03H 400 V · 3F 25 A RH040 (3F) výtlak 9 m · 3 kW / 230 V · 8 l · 3 bar
+RH-05H/S 230 V · 1F 50 A RH050 (1F) výtlak 12 m · 3 kW / 230 V · 8 l · 3 bar
+RH-05H 400 V · 3F 32 A RH050, RH060 (3F) výtlak 12 m · 3 kW / 230 V · 8 l · 3 bar
+SOUČÁSTI
+1 Venkovní jednotka — svorky napájení
+1F: L, N, PE · 3F: R, S, T, N, PE — z hydroboxu
+2 Svorkovnice jednotky + PUMP , PWM/GND/FB
+ovládání hydroboxu
+3 Hydrobox
+napájí jednotku, čerpadlo, dohřev, 3c ventil
+4 Jistič Q s chráničem (v hydroboxu)
+40 / 25 / 50 / 32 A dle typu
+5 Stykač + elektrický dohřev 3 kW
+spíná výstup E-ohřev jednotky
+6 Kabelový ovladač TČ
+komunikační kabel k řídicí desce
+7 Přijímač termostatu (relé 230 V)
+vlastní přívod 230 V
+8 Sekundární oběhové čerpadlo
+napájení spíná / rozpíná přijímač 7
+9 Bezdrátový pokojový termostat
+v obytné místnosti
+10 Svorky řízení 1–4 a signál čerpadla
+1 E-ohřev · 2 čerpadlo · 3 3c ventil · 4 N
+11 Čidlo teploty TUV (T2)
+do jímky zásobníku, k řídicí desce
+12 Stykač + topná vložka TUV (volitelně)
+ze svorek 1 + 4 jednotky
+JAK TO FUNGUJE
+Přívod ze sítě vede do jističe Q hydroboxu (3); z hydroboxu je napájena
+venkovní jednotka (1). Jednotka řídí hydrobox: výstupy E-ohřev, PUMP ,
+3c ventil a N (230 V) a signál PWM / GND / FB pro otáčky čerpadla.
+Topení řídí samostatný okruh 230 V: termostat (9) → přijímač (7) → čerpadlo (8).
+TUV: deska podle čidla T2 (11) přepne 3c ventil hydroboxu.
+POŽADAVKY
+• Elektrické připojení hydroboxu zespodu, kabel s rezervou min. 2 m.
+• Přední kryt hydroboxu nesnímat za provozu — elektrické součásti.
+• Jednotka i hydrobox uzemněny; napětí ±10 % (návod TČ).
+• V zimě nevypínat napájení (ochrana proti zamrznutí).
+• Zapojení provádí osoba s odbornou kvalifikací dle ČSN / EN.
+Zjednodušené orientační schéma — podle návodu TČ RH030–RH060 a návodu hydraulického modulu (kap. 6). Průřezy kabelů dle proudu a délky. R E O H E AT I N G

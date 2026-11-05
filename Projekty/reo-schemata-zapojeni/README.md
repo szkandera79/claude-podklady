@@ -10,6 +10,7 @@ seznamem součástí a krátkým „jak to funguje“. Značka REO HEATING (logo
 | `schema-kuncice-patka.svg` / `.png` | Kunčice — betonová patka venkovní jednotky (2 ramena ze ztraceného bednění 200 × 500+ mm, osově 700, od stěny min. 400, doporučeno 500, výška 300+); `src/gen_patka_kuncice.py` |
 | `schema-kuncice-tuv.svg` / `.png` | Kunčice — schéma 2: vytápění s AKU + TUV (trojcestný ventil, zásobník se spirálou, čidlo T2, SV/TV s pojistným ventilem a exp. nádobou TUV); `src/gen_schema_kuncice_tuv.py` |
 | `kuncice/soupis-komponent.csv` | soupis komponent pro schéma 1 (generuje `src/soupis_kuncice.py`, zároveň vloží tabulku do stránky) |
+| `kuncice/pdf/`, `kuncice/nahledy/` | sekce „Pokyny k instalaci“ na stránce S9apdYbzv8x7RiMdabc8xK: 4 pokyny + 9 schémat jako PDF ke stažení, PDF celé stránky; build `src/build_rozcestnik.py` (spustit po `build_pokyny.py`) |
 | `kuncice/index.html` | popis instalace (venku / uvnitř) s fotkami z realizace, artefakt S9apdYbzv8x7RiMdabc8xK |
 | `pokyny/` | **Pokyny k instalaci (bez hydroboxu)** — V1 vytápění s AKU, V2 AKU + TUV; PDF `REO-pokyny-instalace-V1-AKU.pdf`, `…-V2-AKU-TUV.pdf`; artefakty B1kNm4rR3A56NZ8vBEAeGU (V1), DC42DpVfQhRrkwxdTvX1xN (V2); build `src/build_pokyny.py` (po vygenerování schémat a PNG) |
 | `pokyny/` (s hydroboxem) | H1 hydrobox + AKU, H2 hydrobox + AKU + TUV; PDF `REO-pokyny-instalace-H1-…`, `…-H2-…`; artefakty 5xTBM8VtwMfQqVpwBtn4wE (H1), 4p9rJAKaMWSNYJ7jrqTTJW (H2); schémata `src/gen_schema_hydrobox.py [--tuv]`, `src/gen_elektro_hydrobox.py [--tuv]` |

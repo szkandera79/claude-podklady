@@ -1,0 +1,573 @@
+[Text vytažený z REO-popis-instalace-Kuncice.pdf]
+
+--- strana 1 ---
+REO HEATING · POPIS INSTALACE · SCHÉMA 1
+Schéma hydraulického zapojení
+— pouze vytápění s AKU nádrží
+Popis a schéma vychází z realizace v Kunčicích pod Ondřejníkem (rodinný dům,
+technická místnost ve sklepě). V tomto kroku řešíme jen vytápění: venkovní
+jednotku REO, akumulační nádrž 100 l s topnou vodou a její napojení do otopné
+soustavy včetně bezpečnostních a regulačních prvků. Ohřev TUV (velký zásobník
+na fotkách) bude popsán v dalším kroku.
+Jednotka: REO RH030–RH060 (monoblok, R290)
+AKU: 100 l, topná voda
+Regulace topení: bezdrátový termostat → sekundární čerpadlo
+Schémata: hydraulika K1 rev. 11 · TUV K2 · elektro K1-E · patka K1-P
+POKYNY K INSTALACI
+Pokyny k instalaci a schválená schémata
+Všechny dokumenty a schémata zapojení REO RH030–RH060 na jednom místě.
+Kaž
+dý lze stáhnout jako PDF.
+Pokyny k instalaci
+V1 · bez hydroboxu
+Vytápění s AKU 100 l
+patka, hydraulika, elektro 1F/3F, soupis, uvedení do
+provozu, první spuštění
+V2 · bez hydroboxu
+Vytápění s AKU 100 l a ohřev TUV
+patka, hydraulika, elektro 1F/3F, soupis, uvedení do
+provozu, první spuštění
+H1 · s hydroboxem
+Vytápění s hydroboxem a AKU 100 l
+patka, hydraulika, elektro 1F/3F, soupis, uvedení do
+provozu, první spuštění
+H2 · s hydroboxem
+Hydrobox,
+AKU 100 l a ohřev TUV
+patka, hydraulika, elektro 1F/3F, soupis, uvedení do
+provozu, první spuštění
+Schémata zapojení
+--- strana 2 ---
+B
+EZ HYDROBOXU
+REO-SCH-K1
+Hydraulika — pouze vytápění s AKU
+REO-SCH-K1-E
+Elektro — pouze vytápění s AKU
+S HYDROBOXEM
+REO-SCH-K2
+Hydraulika — AKU a ohřev TUV
+REO-SCH-K2-E
+Elektro — AKU a ohřev TUV
+--- strana 3 ---
+REO-SCH-H1
+Hydraulika — hydrobox a AKU
+REO-SCH-H1-E
+Elektro — hydrobox a AKU
+SPOLEČNÉ
+REO-SCH-H2
+Hydraulika — hydrobox, AKU a TUV
+REO-SCH-H2-E
+Elektro — hydrobox, AKU a TUV
+--- strana 4 ---
+B
+REO-SCH-K1-P
+etonová patka venkovní jednotky
+Čísla v textu níž
+e odpovídají číslům ve schématu. Červeně výstup (teplá voda), modře vratka.
+--- strana 5 ---
+VENKOVNÍ ČÁST
+Venkovní jednotka a potrubí do domu
+Jednotka stojí na betonových blocích s antivibračními patkami, odsazená od zdi.
+--- strana 6 ---
+1 Osazení jednotky 1
+Monoblok REO RH030–RH060 stojí na betonové patce ze dvou ramen ze
+ztraceného bednění (viz výkres níž
+e
+) a na antivibračních patkách, nad úrovní
+terénu a sněhu. Ramena jsou kolmo ke stěně, osově 700 mm od sebe, od stěny
+min. 400 mm, doporučujeme však 500 mm (volné sání vzduchu, návod uvádí na
+straně sání více než
+0,5 m). Mezi rameny štěrk, aby odtékal kondenzát.
+2 Uzávěr na výstupu, hned u jednotky 2
+Na výstupu teplé vody do domu je jako první prvek kulový uzávěr, co nejblíž
+e
+hrdlu jednotky. Umožní odpojit jednotku při servisu bez vypouštění soustavy.
+Výstup (nahoře
+) a vratka (dole
+) v izolaci s hliníkovým povrchem, kabely zvlášť v chráničce, prostup zdí do sklepa.
+3 Separátor s velkým bezpečnostním odvzdušň
+ovacím ventilem 4
+Za uzávěrem je na výstupu separátor vzduchu (a nečistot) s automatickým
+odvzdušňovacím ventilem nahoře a pojistným ventilem. Je to nejvyšší bod
+venkovní části potrubí. Zůstává venku: pokud by se do vody dostalo chladivo
+R290, odejde ventilem do volného prostoru, a ne do domu.
+4 Uzávěr a protizámrazový ventil na vratce 2 3
+Dole na vratce je kulový uzávěr a za ním protizámrazový ventil s výpustí směrem
+dolů. Při mrazu a výpadku proudu, kdy jednotka nemů
+ž
+e sama chránit výměník,
+ventil vypustí vodu z venkovního úseku.
+5 Potrubí a kabely
+Venkovní úsek potrubí je co nejkratší, celý v izolaci odolné UV záření. Silový a
+komunikační kabel vedou samostatně v chráničce. Prostup zdí je utěsněný,
+potrubí v něm izolované.
+--- strana 7 ---
+B
+etonová patka venkovní jednotky (REO-SCH-K1-P
+) — překresleno z ručního nákresu; rozměry jsou minimální.
+Ochranná zóna R290 a vzdálenost od oken. Žádná norma neuvádí jednu pevnou vzdálenost od okna. ČSN EN
+378 a ČSN EN
+IEC 60335‑2‑40 ukládají výrobci, aby ochrannou zónu stanovil, a návod RH030–RH060 ji neuvádí
+(jen odstupy pro proudění vzduchu a servis: min. 0,5 m od stěny, 1 m kolem, 2 m před výfukem a nad jednotkou).
+Výrobci jednotek s R290 (
+Bosch, Buderus, iDM, Viessmann) uvádějí ochrannou zónu min. 1 m od půdorysu
+jednotky až k terénu, nad horní hranou jednotky min. 0,5 m (okno nad jednotkou je přípustné
+). V zóně nesmí být
+okna, dveře, sklepní světlíky a šachty, vpusti a kanalizace, větrací otvory ani zdroje vznícení (zásuvky, vypínače,
+svítidla). Doporučujeme navíc na straně výfuku vzduchu min. 3 m k oknům obytných místností, terasám a
+chodníkům a min. 3 m od sousedního pozemku, kvůli hluku a proudění studeného vzduchu. R290 je těžší než
+vzduch, proto v zóně nesmí být ani prohlubně.
+R290 je hořlavý plyn. Separátor s odvzdušňovacím ventilem (4) se nikdy nepřesouvá do domu. Automatické
+odvzdušňovací ventily uvnitř (6, 13
+) slouží jen pro topnou vodu sekundární strany a primárního okruhu za
+separátorem.
+--- strana 8 ---
+VNITŘNÍ ČÁST
+AKU 100 l a napojení do topné soustavy
+Vpravo menší nádrž
+(
+AKU). Nad ní na stoupačce výstupu do topení je pojistná skupina s manometrem a šedá expanzní
+nádoba topné soustavy. Vyšší zásobník vlevo je TUV (schéma 2).
+--- strana 10 ---
+Sekundární čerpadlo na horním vývodu z AKU do topení. Za ním stoupá potrubí k pojistné skupině (pojistný ventil s červenou
+hlavou, manometr) a expanzní nádobě. Na plášti teploměr a vedle něj pojistný ventil s červenou hlavou, dole vypouštění.
+1 Primární okruh: TČ →
+AKU 2 5
+Výstup z tepelného čerpadla vstupuje do horního hrdla AKU, vratka k TČ odchází
+ze spodního hrdla. Stejně jako u venkovní jednotky jsou i u nádrž
+e na vstupu a
+výstupu primáru kulové uzávěry (2). Díky nim lze
+AKU nebo potrubí k TČ odpojit a
+servisovat bez vypouštění celé soustavy. Nádrž 100 l odděluje okruh TČ od
+okruhu topení: TČ běží s vlastním průtokem a čerpadlem, nezávisle na tom, kolik
+radiátorů je zrovna otevřených, a nádrž zároveň dodá vodu pro odtávání.
+2 Magnetický filtr na vratce do TČ 16
+Na vratce k venkovní jednotce je u spodního hrdla AKU magnetický filtr, před ním
+i za ním je uzavírací ventil (2). Zachytí magnetit, kal a nečistoty dřív, než se
+dostanou do výměníku TČ, a splňuje tak požadavek návodu RH030–RH060 na filtr
+na vstupu vody do jednotky. Je uvnitř, takž
+e se dá pohodlně čistit a nehrozí mu
+zamrznutí. Po uzavření obou ventilů se filtr vyčistí bez vypouštění soustavy.
+3 Řízení TČ
+Jednotky RH030–RH060 nemají vstup pro čidlo v AKU. TČ se řídí vlastním
+vestavěným čidlem teploty vratné vody, tedy vody, která se vrací ze spodní části
+nádrž
+e. Podle ní (volitelně ekvitermně) se samo zapíná a vypíná. Pokojový
+termostat do chodu TČ nezasahuje.
+4 Odvzdušnění, teploměr a pojistný ventil AKU 6 8
+Nahoře na nádrži je automatický odvzdušňovací ventil (6). Na plášti AKU je
+společný vývod s teploměrem a pojistným (přetlakovým) ventilem s červenou
+hlavou (
+8). Když tlak v nádrži dosáhne mezní hodnoty, ventil přetlak vypustí.
+Výfuk musí být svedený viditelně do odpadu a mezi nádrží a ventilem nesmí být
+ž
+ádný uzávěr.
+5 Sekundární čerpadlo do topení 10
+Z horního hrdla AKU na druhé straně vede výstup do topení přes sekundární
+oběhové čerpadlo s uzávěry (výměna čerpadla bez vypouštění). Vratka z
+radiátorů se vrací přes uzávěr do spodního hrdla AKU. Napájení čerpadla 230 V
+vede přes kontakt přijímače (11): přijímač ho podle bezdrátového termostatu (12)
+spíná a rozpíná, a tím zapíná a vypíná dodávku teplé vody z AKU do topení.
+6
+Směšovací ventil — volitelně 17
+Na výstupu teplé vody z AKU do topení lze před čerpadlo osadit trojcestný
+směšovací ventil s obtokem z vratky. U radiátorů není nutný. Pokud se ale netopí
+přímo do radiátorů, nýbrž
+do podlahového topení, je tam z bezpečnostních
+--- strana 11 ---
+důvodů: přimíchává vratnou vodu a jeho nastavení sníží teplotu vody do podlahy
+na povolenou mez, max. 40 °C, ideálně 35 °C. Chrání tak podlahu, potěr i
+podlahové krytiny před přehřátím.
+7
+Pojistná skupina a expanzní nádoba za čerpadlem 7 9
+Hned za čerpadlem stoupá z výstupu do topení potrubí k pojistné skupině (7). Je
+to mosazný blok, na kterém je pojistný (přetlakový) ventil a manometr. Výfuk
+pojistného ventilu musí být svedený viditelně do odpadu. Nad pojistnou
+skupinou je připojená expanzní nádoba topné soustavy (
+9). Mezi pojistnou
+skupinou a expanzní nádobou nesmí být ž
+ádný uzávěr. Uzávěry u čerpadla se
+zavírají jen při servisu.
+8 Bezdrátový termostat a přijímač 11 12
+Pokojový termostat v referenční obytné místnosti (asi 1,5 m nad podlahou, mimo
+přímé slunce a zdroje tepla) posílá rádiem signál přijímači u čerpadla. Přijímač je
+relé 230 V, které čerpadlo zapne při požadavku na teplo a po dosaž
+ení teploty
+vypne.
+9 Odvzdušnění v nejvyšších bodech 13 14
+Automatický odvzdušňovací ventil patří na nejvyšší místo rozvodu (stoupačka,
+horní ohyb potrubí), kaž
+dý radiátor má ruční odvzdušňovací ventilek nahoře.
+Vzduch se drží v horních bodech; kde se nedá odvést, čerpadlo hlučí a radiátory
+netopí celé.
+10 Vypouštění 15
+Na dně AKU je vypouštěcí kohout pro vypuštění a odkalení nádrž
+e.
+SCHÉMA 2
+Vytápění s AKU a ohřev TUV
+Rozšíření schématu 1 o zásobník teplé užitkové vody se spirálou (na fotkách vyšší
+zásobník vlevo). Zapojení vychází z návodu RH030–RH060 (obrázek 2); prvky 1–17
+jsou stejné jako ve schématu 1.
+--- strana 12 ---
+REO-SCH-K2. Uzávěry ve schématu mají číslo 2; nové prvky jsou 18–24.
+1 Trojcestný ventil 18
+Hned za vstupem výstupu z TČ do technické místnosti. B
+ez napětí pouští vodu do
+AKU (větev A
+), v režimu TUV je pod napětím a přepne na spirálu zásobníku (větev
+). Ovládá ho jednotka přes svorku 3 (a N na svorce 4). Pokud chybí teplo pro
+topení i pro TUV, má podle návodu přednost TUV.
+2 Zásobník TUV se spirálou 19 20
+Topná voda prochází spirálou shora dolů. Výkon spirály musí být alespoň takový
+jako jmenovitý výkon TČ. Čidlo teploty TUV (T2) je v jímce zásobníku a vede k
+B
+--- strana 13 ---
+řídicí desce jednotky. Na přívodu i vratce spirály jsou uzávěry (2).
+3 Společná vratka přes filtr 16
+Vratka ze spirály se spojí s vratkou z AKU ještě před magnetickým filtrem, takž
+e
+filtr chrání TČ v obou režimech.
+4 Studená a teplá voda 22 23 24
+Studená voda z vodovodu jde přes uzávěr a zpětný ventil (22). Za nimi je expanzní
+nádoba pro pitnou vodu (24, bílá nádoba na fotkách) a pojistný ventil TUV (23
+)
+bez uzávěru, s výfukem do odpadu. Teplá voda odchází z horní části zásobníku do
+domu. Voda nad 52 °C mů
+ž
+e opařit, proto doporučujeme na výstup termostatický
+směšovač.
+5 Topná vložka — volitelně 21
+Elektrická topná vložka v zásobníku slouží k dohřevu a antilegionelle (1× za 7 dní
+ohřev na 70 °C podle parametrů P17–P20). Ovládá ji jednotka přes svorku 1, u
+větších příkonů přes stykač.
+ELEKTRICKÁ ČÁST
+Schéma elektrického zapojení
+Podle návodu k RH030–RH060. Tepelné čerpadlo a topení mají dva na sobě
+nezávislé okruhy: TČ se řídí samo, sekundární čerpadlo spíná pokojový termostat
+přes přijímač.
+--- strana 14 ---
+REO-SCH-K1-E. Průřezy kabelů a hodnoty jističů podle typového štítku jednotky a platných norem.
+Napájení a jištění
+Samostatný přívod z domovního rozvaděče do rozvaděče TČ, napětí v toleranci ±10 %.
+1F (RH030, RH040, RH050‑1F): 230 V, svorky L, N, PE, 2pólový proudový chránič a 1pólový jistič, kabel 3
+vodiče.
+3F (RH050‑3F, RH060): 400 V, svorky R, S, T, N, PE, 4pólový proudový chránič, 3pólový jistič a ochrana proti
+výpadku fáze, kabel 5 vodičů.
+Jistič (ne nožový vypínač) na 1,5násobek provozního proudu podle typového štítku.
+Napájecí kabel vede v chráničce. Podklad: zapojovací schémata v návodu, str. 17–19.
+--- strana 15 ---
+Jednotka musí být uzemněna, ochranný vodič se nesmí připojit na N. Hlavní vypínač min. 1,4 m nad
+podlahou.
+Řízení a příslušenství
+Kabelový ovladač je připojen komunikačním kabelem k řídicí desce jednotky.
+Svorkovnice příslušenství: 1 topná vložka TUV, 2 přídavný elektrokotel, 3 trojcestný ventil, 4 N, 5–6 vstup pro
+externí spínač. Svorky 1 a 3 využije schéma 2 s TUV.
+Přijímač termostatu má vlastní jistič 230 V; jeho kontakt spíná fázi sekundárního čerpadla.
+V zimě nevypínat napájení jednotky (ochrana proti zamrznutí). Zapojení provádí osoba s odbornou
+kvalifikací.
+PŘEHLE
+D
+Bezpečnostní a regulační prvky
+Č. PRVEK UMÍSTĚNÍ FUNKCE
+2 Kulové uzávěry venku u jednotky: výstup
+(před separátorem) a
+vratka; u AKU: vstup a
+výstup primáru
+servisní odpojení jednotky a nádrž
+e
+3 Protizámrazový ventil venku na vratce za
+uzávěrem, výpust dolů
+venku na výstupu,
+nejvyšší bod venkovní
+části
+horní vývod AKU 4 Separátor +
+bezpečnostní
+odvzdušňovací ventil
+6Automatický
+odvzdušňovací ventil
+7 Pojistná skupina:
+pojistný (přetlakový)
+ventil + manometr
+stoupačka na výstupu do
+topení hned za
+čerpadlem
+vypuštění vody při mrazu a
+výpadku proudu
+odloučení vzduchu a nečistot,
+bezpečný únik vzduchu i R290
+mimo dům
+odvod vzduchu z nádrž
+e a
+primárního okruhu
+ochrana proti přetlaku, otevírací
+tlak podle návodu TČ (u rodinných
+domů běžně 2,5–3 bar); kontrola
+tlaku, ve studeném stavu zpravidla
+1–1,5 bar
+--- strana 16 ---
+Č. PRVEK UMÍSTĚNÍ FUNKCE
+8 Teploměr + pojistný
+(přetlakový) ventil
+společný vývod na plášti
+AKU, bez uzávěru
+9 Expanzní nádoba nad pojistnou skupinou,
+bez uzávěru
+kontrola teploty; při dosaž
+ení
+mezního tlaku vypustí přetlak z
+nádrž
+e do odpadu
+vyrovnání objemové roztažnosti
+vody; velikost podle objemu
+soustavy
+dodávka tepla do radiátorů
+10 Sekundární oběhové
+čerpadlo
+výstup z AKU do topení, s
+uzávěry
+11
+Přijímač (relé 230 V) u čerpadla v technické
+místnosti
+12
+ezdrátový pokojový
+termostat
+referenční obytná
+místnost
+13 14Odvzdušňovací ventily nejvyšší body rozvodu,
+radiátory
+17 Směšovací ventil
+(volitelně)
+výstup z AKU do topení
+před čerpadlem, obtok z
+vratky
+16 Magnetický filtr vratka do TČ u AKU, s
+uzávěrem před i za
+filtrem
+spíná čerpadlo podle termostatu
+B
+požadavek na teplo, rádiem
+odvzdušnění otopné soustavy
+u podlahového topení omezí
+teplotu na max. 40 °C, ideálně 35 °C
+zachycení magnetitu a kalu,
+ochrana výměníku TČ (filtr na
+vstupu podle návodu)
+SOUPIS KOMPONENT
+Co budeme k instalaci potřebovat — schéma 1
+Soupis pro hydraulické zapojení pouze pro vytápění s AKU nádrží 100 l. Čísla
+odpovídají schématu REO-SCH-K1. Délky potrubí a počty fitinek se upřesní podle
+skutečné trasy na místě.
+Č. POLOŽKA POČET POZN
+ÁMKA
+HLAVNÍ ZAŘÍZENÍ
+--- strana 17 ---
+Č. POLOŽKA POČET POZN
+ÁMKA
+1 Tepelné čerpadlo REO RH030–RH060
+(monoblok R290)
+5
+Akumulační nádrž 100 l (topná voda) 1 ks včetně kabelového ovladače;
+model podle tepelné ztráty
+1 ks s jímkou, hrdly pro teploměr
+a pojistný ventil
+VENKOVNÍ ČÁST
+— Tvárnice ztraceného bednění + beton (2
+ramena 200 × min. 500 mm, výška min.
+300 mm)
+1 sada dle výkresu REO-SCH-K1-P;
+štěrkový podsyp mezi
+rameny
+— Antivibrační patky (silentbloky) s
+kotvením
+2 ks jedna na kaž
+dé rameno
+patky; návod je vyžaduje
+2 Kulový uzávěr D
+vratka)
+N25 s holendrem (výstup,
+2 ks co nejblíž
+e hrdlům jednotky
+4 Separátor vzduchu a nečistot s
+automatickým odvzdušněním a pojistným
+ventilem
+1 ks na výstupu venku, nejvyšší
+bod venkovní části
+3 Protizámrazový ventil D
+N25 1 ks na vratce venku, výpustí dolů
+— Izolace potrubí venkovní, odolná UV (min.
+dle trasy m pro výstup i vratku
+19 mm)
+— Prostup obvodovou zdí — chránička,
+těsnění, izolace
+1 sada prostup utěsnit
+TECHNICKÁ MÍSTNOST — PRIMÁR
+2 Kulový uzávěr D
+filtrem 16)
+N25 (vstup AKU, a před i za
+3 ks AKU a filtr lze odpojit bez
+vypouštění
+16 Magnetický filtr D
+N25 (s vypouštěním) 1 ks na vratce do TČ = filtr na
+vstupu dle návodu
+1 ks s uzavíracím ventilkem
+6Automatický odvzdušňovací ventil 3/8
+″–
+1/2″
+(horní vývod AKU)
+8 Teploměr + pojistný ventil (T-kus na plášti
+AKU)
+1 sada pojistný ventil bez uzávěru,
+výfuk do odpadu
+--- strana 18 ---
+Č. POLOŽKA POČET POZN
+ÁMKA
+15 Vypouštěcí kohout AKU 1 ks na dně nádrž
+e
+— Plnicí sestava topné vody (ventil +
+oddělovač dle ČSN EN 1717)
+1 sada návod vyžaduje plnicí ventil;
+ve schématu nekresleno
+TECHNICKÁ MÍSTNOST — SEKUND
+ÁR (TOPENÍ)
+10Oběhové čerpadlo (elektronické, 230 V) se
+šroubením
+1 ks napájení spíná přijímač 11
+2 Kulový uzávěr (před a za čerpadlem,
+vratka z topení)
+3 ks dimenze dle rozvodu
+7 Pojistná skupina: pojistný ventil 2,5–3 bar
++ manometr (+ odvzdušnění)
+1 sada na stoupačce za čerpadlem,
+výfuk do odpadu
+9 Expanzní nádoba pro topení + drž
+ák a
+připojení
+1 ks objem dle výpočtu objemu
+soustavy; bez uzávěru
+13
+Automatický odvzdušňovací ventil
+(nejvyšší bod rozvodu)
+1 ks další dle počtu horních bodů
+17 Trojcestný směšovací ventil + hlavice
+(volitelně)
+0–1 ks jen pro podlahové topení:
+max. 40 °C, ideálně 35 °C
+14Odvzdušňovací ventilky radiátorů dle počtu ks většinou stávající
+REGULACE A ELEKTRO
+11 12B
+ezdrátový pokojový termostat + přijímač
+(relé 230 V)
+1 sada přijímač spíná napájení
+čerpadla 10
+— Rozvaděč TČ: proudový chránič, jistič TČ
+(1F/3F), jistič 230 V čerpadla
+1 sada jistič 1,5× provozní proud dle
+štítku
+— Napájecí kabel TČ (3 nebo 5 vodičů
+chráničce
+) v
+dle trasy m průřez dle proudu a délky
+— Kabel 230 V k čerpadlu a přijímači (3 × 1,5
+dle trasy m
+mm²)
+— Komunikační kabel ovladače TČ dle trasy m často součást dodávky TČ
+--- strana 19 ---
+Č. POLOŽKA POČET POZN
+POTRUBÍ A FITINKY
+— Potrubí — měď / uhlíková ocel / PPR (dle
+volby investora)
+dle trasy m — Šroubení (holendry) — rozebíratelné spoje
+u TČ, AKU, filtru, čerpadla, separátoru
+— Kolena 90° / 45° ÁMKA
+primár min. D
+přípojek TČ
+N25 dle
+cca 16 ks návod: kaž
+dé zařízení
+připojit šroubením
+dle trasy ks počet kolen omezit (tlaková
+ztráta)
+— T-kusy (odbočky pro pojistnou skupinu,
+obtok směšovače, odvzdušnění)
+cca 6 ks
+— Přechodky závit vnější / vnitřní, redukce,
+přechody plast–kov
+cca 12 ks dle zvoleného materiálu
+— Objímky a kotvení potrubí dle trasy ks proti vibracím (návod)
+— Těsnicí materiál (konopí + pasta / těsnicí
+vlákno)
+1 bal.
+— Izolace potrubí vnitřní (kaučuk min. 13
+dle trasy m celý primár i sekundár
+mm)
+Volba materiálu potrubí
+Investor si mů
+ž
+e vybrat, zda bude hydraulické propojení v mědi, uhlíkové oceli
+nebo PPR. Ke kaž
+dé variantě je vž
+dy třeba počítat s fitinky, tedy s napojovacími a
+šroubovacími prvky (kolena, T-kusy, přechodky a šroubení). Návod RH030–RH060
+doporučuje pro rozvody TČ nerezové nebo PPR potrubí a připojení kaž
+dého
+zařízení rozebíratelným šroubením.
+MATERIÁL SPOJOVÁ
+Měď tvrdé pájení
+nebo lisování
+NÍ VLASTNOSTI PRIMÁR
+odolná, malé průměry, snese
+vysoké teploty; vyšší cena
+materiálu
+(ORIENTAČNĚ)
+28 × 1,5 mm
+D
+(
+N25)
+--- strana 20 ---
+MATERIÁL SPOJOVÁ
+NÍ VLASTNOSTI PRIMÁR
+Uhlíková ocel (lisovací systém) lisování rychlá montáž, nižší cena než
+měď; jen uzavřené topné
+okruhy, chránit před vlhkostí
+zvenku
+Dimenze sekundárního okruhu podle stávajícího rozvodu. U výkonnějších
+PPR polyfúzní
+nejlevnější; pro topení trubka s
+svařování
+jednotek (RH050, RH060) ověřit průtok a případně zvětšit dimenzi primáru.
+vložkou (hliník / sklo) kvůli
+Návod dále doporučuje zpětný ventil na výstupu z jednotky; ve schématu zatím
+roztažnosti; větší vnější
+není. Seznam ke staž
+ení jako tabulka: soupis-komponent.csv ve slož
+ce projektu.
+průměr; venku chránit před UV
+(ORIENTAČNĚ)
+D
+28 mm (
+N25)
+32 × 5,4 mm a víc
+UVE
+D
+ENÍ DO PROVOZU
+Napuštění a odvzdušnění
+Zkontrolovat přednastavení expanzní nádoby (
+9) před napuštěním.
+Napouštět pomalu přes plnicí ventil, uzávěry (2) otevřené.
+Odvzdušnit od nejnižšího po nejvyšší bod: separátor (4), AKU (6), stoupačky (13
+Dopustit na tlak ve studeném stavu podle návodu, typicky 1–1,5 bar.
+), radiátory (14).
+Kontrola funkce
+Spustit TČ a ověřit, ž
+e se po dosaž
+ení nastavené teploty vypne.
+Zvýšit teplotu na termostatu (12): přijímač (11) musí zapnout čerpadlo (10).
+Po zahřátí znovu odvzdušnit a doplnit tlak.
+V místnosti s termostatem nechat hlavice radiátorů otevřené.
+Zjednodušený orientační popis. Dimenze potrubí, nastavení pojistného ventilu,
+velikost expanzní nádoby a průtoky určete podle návodu k TČ a konkrétního
+--- strana 21 ---
+domu.
+Fotografie: realizace Kunčice pod Ondřejníkem. REO HEATI
+NG

@@ -1,0 +1,100 @@
+[Text vytažený z REO-SCH-K1.pdf]
+
+--- strana 1 ---
+Schéma hydraulického zapojení
+Pouze vytápění s AKU nádrží 100 l
+R E O -S C H - K 1 · R H 0 3 0 – R H 0 6 0
+rev. 11 · 11/2026
+21 °C
+12
+5
+13
+2
+2
+2 3
+2
+2
+14
+V E N K U T E C H N I C KÁ M Í ST N O ST ( S K L E P ) O B Y T N É P R O STO RY
+11
+rádiový signál
+PŘIJÍMAČ
+relé
+9
+4
+1 REO RH030–RH060
+napájení čerpadla 230 V
+6 7
+spíná / rozpíná přijímač
+bar
+10
+AKU
+100 l
+topná voda
+°C
+8
+venkovní jednotka
+17
+!
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním patří VENKU hned
+za jednotku — vzduch i případně uniklé chladivo
+musí odejít do volného prostoru, nikdy ne do domu.
+volitelně
+16
+15
+obvodová zeď
+výstup — teplá voda
+vratka — ochlazená voda
+elektrické ovládání / signál
+SOUČÁSTI
+JAK TO FUNGUJE
+1 Tepelné čerpadlo REO RH030–RH060
+venkovní monoblok, chladivo R290
+2 Uzavírací ventily
+u jednotky (výstup před separátorem, vratka) i u AKU
+3 Protizámrazový ventil
+venku na vratce — při mrazu a výpadku vypustí vodu
+4 Separátor + bezpečnostní odvzdušňovací ventil
+venku na výstupu = nejvyšší bod venkovní části
+5 Akumulační nádrž 100 l (topná voda)
+hydraulicky odděluje okruh TČ a okruh topení
+6 Automatický odvzdušňovací ventil AKU
+na horním vývodu nádrže
+7 Pojistná skupina (poj. ventil + manometr)
+na výstupu do topení za čerpadlem, výfuk do odpadu
+8 Teploměr + pojistný ventil AKU
+společný vývod na plášti, výfuk do odpadu
+9 Expanzní nádoba (topná)
+nad pojistnou skupinou, bez uzávěru
+10 Sekundární oběhové čerpadlo
+napájení spíná přijímač (11) dle termostatu (12)
+11 Přijímač termostatu (relé 230 V)
+u čerpadla — spíná čerpadlo 10
+12 Bezdrátový pokojový termostat
+v obytné místnosti, 1,5 m nad podlahou
+13 Odvzdušňovací ventil v nejvyšším bodě
+na stoupačce / nejvyšším místě rozvodu
+14 Radiátory s odvzdušňovacími ventilky
+stávající otopná soustava
+15 Vypouštěcí kohout AKU
+na dně nádrže — vypouštění, odkalení
+16 Magnetický filtr
+na vratce do TČ mezi dvěma uzávěry — čištění
+17 Směšovací ventil (volitelně)
+pro podlahové topení: max. 40 °C, ideálně 35 °C
+TČ (1) ohřívá vodu v AKU 100 l (5). Řídí se vlastním čidlem teploty
+vratné vody — samo se zapíná a vypíná, nezávisle na termostatu.
+Termostat (12) pošle rádiem signál přijímači (11), ten zapne
+čerpadlo (10) a voda z AKU jde do radiátorů (14). Po dosažení
+teploty v místnosti termostat čerpadlo (10) zase vypne.
+BEZPEČNOST A TIPY
+• Pojistné ventily (7, 8) bez uzávěru, výfuk viditelně do odpadu.
+• Mezi pojistnou skupinou (7) a exp. nádobou (9) žádný uzávěr.
+• Uzávěry (2) a uzávěry u čerpadla (10) zavírat jen při servisu.
+• Odvzdušnění (4, 6, 13, 14) vždy v nejvyšších bodech potrubí.
+• Protizámrazový ventil (3) venku na vratce, výpustí dolů.
+• V místnosti s termostatem nechte hlavice radiátorů otevřené.
+• Tlak (studená soustava cca 1–1,5 bar) hlídat na manometru (7).
+• Podlahové topení: směšovací ventil (17) omezí výstup na max. 40 °C.
+Zjednodušené orientační schéma — dimenze potrubí, nastavení pojistného ventilu a velikost expanzní nádoby určete podle návodu k TČ a konkrétního domu. R E O H E AT I N G

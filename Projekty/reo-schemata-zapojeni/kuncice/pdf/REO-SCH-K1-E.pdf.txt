@@ -1,0 +1,116 @@
+[Text vytažený z REO-SCH-K1-E.pdf]
+
+--- strana 1 ---
+Schéma elektrického zapojení
+Pouze vytápění s AKU nádrží 100 l · jednotky 1F i 3F dle návodu
+R E O -S C H - K 1 - E · R H 0 3 0 – R H 0 6 0
+rev. 1 · 11/2026
+1
+2
+V E N K U T E C H N I C KÁ M Í ST N O ST ( S K L E P ) O B Y T N É P R O STO RY
+napájecí kabel TČ v chráničce · 1F 3 vodiče / 3F 5 vodičů
+L N PE
+1F 230 V
+ŘÍDICÍ DESKA
+vestavěné čerpadlo,
+čidla vody T3, T8
+R S T N PE 3F 400 V
+napájení podle modelu — viz tabulka níže
+SVORKOVNICE PŘÍSLUŠENSTVÍ (všechny modely)
+1
+2
+3
+4
+5
+6
+TUV
+E-ohřev
+3c. ventil
+N
+spínač
+COM
+1–3 pro příslušenství TUV — v této variantě volné
+11
+ext. spínač
+volitelně
+VENKOVNÍ JEDNOTKA
+REO RH030–RH060
+přívod z hlavního
+domovního rozvaděče
+ROZVADĚČ TČ
+4
+3
+CHRÁNIČ
+2P / 4P
+5 6
+JISTIČ TČ
+1P / 3P
+JISTIČ
+čerpadlo
+3F: + ochrana proti
+výpadku fáze
+PŘIJÍMAČ
+relé 230 V
+L N │ COM NO
+8
+spínaná fáze
++ N + PE
+rádiový signál
+9
+10
+21 °C
+na baterie
+M
+sekundární
+čerpadlo
+7
+40 °C kabelový
+ovladač TČ
+silový kabel 230 / 400 V
+komunikační kabel ovladače
+rádiový signál termostatu
+volitelné
+komunikační kabel ovladače
+obvodová zeď
+VARIANTY NAPÁJENÍ PODLE NÁVODU RH030–RH060 (str. 17–19)
+Model (schéma výrobce) Napájení Svorky jednotky Proudový chránič Jistič TČ Napájecí kabel
+RH030, RH040 (803004-2772), RH050-1F (803004-2787) 230 V · 1F · 50 Hz L · N · PE 2pólový 1pólový, 1,5× provozní proud (štítek) 3 vodiče L, N, PE
+RH050-3F, RH060 (803004-3000) 400 V · 3F · 50 Hz R · S · T · N · PE 4pólový 3pólový + ochrana proti výpadku fáze 5 vodičů L1–L3, N, PE
+Svorky příslušenství 1–6 jsou u všech modelů stejné: výstupy 1 (vložka TUV), 2 (elektrokotel), 3 (trojcestný ventil) spínají 230 V proti N na svorce 4; 5–6 = vstup externího spínače. Napětí ±10 %, při startu min. 90 % jmenovitého.
+SOUČÁSTI
+1 Venkovní jednotka — svorky napájení
+1F: L, N, PE 230 V · 3F: R, S, T, N, PE 400 V
+2 Svorkovnice příslušenství 1–6
+1 vložka TUV · 2 elektrokotel · 3 trojc. ventil
+3 Rozvaděč TČ
+samostatný přívod pro tepelné čerpadlo
+4 Proudový chránič
+povinný u hlavního vypínače jednotky
+5 Jistič TČ
+1,5× provozní proud dle štítku; 3F i hlídání fází
+6 Jistič 230 V pro čerpadlo a přijímač
+samostatný okruh sekundáru
+7 Kabelový ovladač TČ
+na zdi v technické místnosti
+8 Přijímač termostatu (relé)
+napájení 230 V, kontakt spíná čerpadlo 9
+9 Sekundární oběhové čerpadlo
+napájení spíná / rozpíná přijímač 8
+10 Bezdrátový pokojový termostat
+v hydraulickém schématu č. 12
+11 Externí spínač zap / vyp (volitelně)
+na svorky 5 a 6 (COM) jednotky
+JAK TO FUNGUJE
+Tepelné čerpadlo (1) se řídí samo: vestavěným čerpadlem a čidlem
+vratné vody ohřívá AKU. Ovladač (7) slouží k nastavení a hlášení.
+Topení řídí samostatný okruh 230 V: termostat (10) → přijímač (8)
+→ sekundární čerpadlo (9). Oba okruhy jsou na sobě nezávislé.
+POŽADAVKY Z NÁVODU
+• Samostatný přívod, napětí v toleranci ±10 %, jednotka uzemněna
+— ochranný vodič nesmí být připojen na N.
+• Jistič (ne nožový vypínač) na 1,5× provozní proud dle štítku.
+• Hlavní vypínač s proudovým chráničem, min. 1,4 m nad podlahou.
+• V zimě nevypínat napájení (ochrana proti zamrznutí); před
+sezónou nechat jednotku min. 12 h pod napětím.
+• Zapojení provádí osoba s odbornou kvalifikací dle ČSN / EN.
+Zjednodušené orientační schéma — průřezy kabelů a hodnoty jističů určete podle typového štítku jednotky, návodu a platných norem. R E O H E AT I N G

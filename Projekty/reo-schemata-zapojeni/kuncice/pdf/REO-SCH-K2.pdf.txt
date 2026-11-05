@@ -1,0 +1,98 @@
+[Text vytažený z REO-SCH-K2.pdf]
+
+--- strana 1 ---
+Schéma hydraulického zapojení
+Vytápění s AKU nádrží 100 l a ohřev teplé užitkové vody (TUV)
+R E O -S C H - K 2 · R H 0 3 0 – R H 0 6 0
+rev. 2 · 11/2026
+4
+2
+2 3
+M
+5
+13
+2
+V E N K U T E C H N I C KÁ M Í ST N O ST ( S K L E P ) O B Y T N É P R O STO RY
+1 REO RH030–RH060
+18
+11
+rádiový signál
+PŘIJÍMAČ
+relé
+9
+napájení čerpadla 230 V
+6 7
+spíná / rozpíná přijímač
+8
+°C
+17
+volitelně
+bar
+10
+AKU
+100 l
+topná voda
+15
+19
+TUV
+zásobník
+se spirálou
+T
+20
+21 °C
+12
+16
+14
+teplá voda do domu
+24
+21
+studená voda z vodovodu
+venkovní jednotka
+2
+2
+2
+výstup — teplá voda
+vratka — ochlazená voda
+elektrické ovládání / signál
+teplá užitková voda
+studená voda
+2
+2
+!
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním patří VENKU hned
+za jednotku — vzduch i případně uniklé chladivo
+musí odejít do volného prostoru, nikdy ne do domu.
+obvodová zeď
+SOUČÁSTI TUV prvky 1–17 viz schéma hydraulického zapojení (schéma 1)
+18 Trojcestný přepínací ventil s pohonem
+A → AKU, B → spirála TUV; v režimu TUV pod napětím
+19 Zásobník TUV se spirálou
+výkon spirály ≥ jmenovitý výkon TČ
+20 Čidlo teploty TUV (T2)
+do jímky zásobníku, kabel k řídicí desce TČ
+21 Elektrická topná vložka (volitelně)
+dohřev a antilegionella, svorka 1 TČ
+22 Uzávěr + zpětný ventil studené vody
+na přívodu z vodovodu
+23 Pojistný ventil TUV
+na studené vodě bez uzávěru, výfuk do odpadu
+24 Expanzní nádoba TUV
+pro pitnou vodu (bílá)
+2 Uzávěry spirály
+na přívodu i vratce spirály — servis
+23
+22
+JAK TO FUNGUJE
+Při požadavku na TUV přepne TČ trojcestný ventil (18) na spirálu
+zásobníku (19). Teplotu hlídá čidlo T2 (20). TUV má přednost —
+po ohřátí ventil přepne zpět a TČ ohřívá AKU (5) pro topení.
+Topení dál řídí termostat (12) přes sekundární čerpadlo (10).
+BEZPEČNOST A TIPY
+• Pojistný ventil TUV (23) bez uzávěru, výfuk viditelně do odpadu.
+• Expanzní nádoba TUV (24) musí být určena pro pitnou vodu.
+• Voda nad 52 °C může opařit — na výstup TV doporučen termostatický
+směšovač. Antilegionella: 1× za 7 dní ohřev na 70 °C (vložka 21).
+• Filtr (16) je na společné vratce — chrání TČ i z okruhu spirály.
+• Uzávěry (2) na spirále zavírat jen při servisu.
+Zjednodušené orientační schéma — dimenze potrubí, nastavení pojistného ventilu a velikost expanzní nádoby určete podle návodu k TČ a konkrétního domu. R E O H E AT I N G

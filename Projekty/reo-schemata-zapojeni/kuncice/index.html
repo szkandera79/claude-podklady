@@ -67,6 +67,30 @@ section h3 { margin-top: 8px; }
 footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
 
 @media (max-width: 760px) { .split, .cols { grid-template-columns: 1fr; } body { font-size: 16px; } }
+/* POKYNY:CSS */
+.guides { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.guide { background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:16px 18px; display:grid; gap:8px; min-width:0; }
+.guide .code { font:700 12.5px/1 var(--display); letter-spacing:.1em; color:var(--accent); }
+.guide h3 { font-size:17px; }
+.guide .sub { color:var(--muted); font-size:14px; }
+.acts { display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; }
+.dlb { font:700 13.5px/1 var(--display); color:#fff; background:var(--accent); border:0; border-radius:6px; padding:9px 14px; cursor:pointer; }
+.dlb:hover { filter:brightness(1.08); } .dlb:focus-visible { outline:3px solid var(--accent-soft); outline-offset:2px; }
+.dlb:disabled { opacity:.6; cursor:progress; }
+.acts a { color:var(--accent); font-weight:600; font-size:14.5px; }
+.sgrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.scard { background:var(--surface); border:1px solid var(--line); border-radius:6px; overflow:hidden; display:grid; grid-template-rows:auto 1fr; min-width:0; }
+.scard img { display:block; width:100%; aspect-ratio:14/10; object-fit:cover; object-position:top; background:#fff; border-bottom:1px solid var(--line); }
+.scard .b { padding:12px 14px; display:grid; gap:8px; align-content:start; }
+.scard .code { font:700 12px/1 var(--display); letter-spacing:.08em; color:var(--muted); }
+.sgroup { font:700 13px/1 var(--display); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-top:6px; }
+.dlstat { color:var(--muted); font-size:14px; min-height:1.2em; }
+.nodl .dlb { display:none; }
+@media (max-width:860px) { .sgrid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:620px) { .guides, .sgrid { grid-template-columns:1fr; } }
+@media print { .dlb, .dlstat, .acts a { display:none !important; } .schema img { min-width:0 !important; } .schema { overflow:visible; border:0; }
+  body { padding:0; font-size:11pt; } figure, .guide, .scard, .note, tr { break-inside:avoid; } }
+/* POKYNY:CSS-END */
 </style>
 
 <div class="wrap">
@@ -76,6 +100,42 @@ footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line)
   <p>Popis a schéma vychází z realizace v Kunčicích pod Ondřejníkem (rodinný dům, technická místnost ve sklepě). V tomto kroku řešíme jen vytápění: venkovní jednotku REO, akumulační nádrž 100 l s topnou vodou a její napojení do otopné soustavy včetně bezpečnostních a regulačních prvků. Ohřev TUV (velký zásobník na fotkách) bude popsán v dalším kroku.</p>
   <div class="meta"><span><b>Jednotka:</b> REO RH030–RH060 (monoblok, R290)</span><span><b>AKU:</b> 100 l, topná voda</span><span><b>Regulace topení:</b> bezdrátový termostat → sekundární čerpadlo</span><span><b>Schémata:</b> hydraulika K1 rev. 11 · TUV K2 · elektro K1-E · patka K1-P</span></div>
 </header>
+
+<!-- POKYNY:START -->
+<section id="pokyny">
+  <span class="eyebrow">Pokyny k instalaci</span>
+  <h2>Pokyny k instalaci a schválená schémata</h2>
+  <p>Všechny dokumenty a schémata zapojení REO RH030–RH060 na jednom místě. Každý lze stáhnout jako PDF.</p>
+  <div class="acts"><button type="button" class="dlb" data-file="pdf/REO-popis-instalace-Kuncice.pdf" data-name="REO-popis-instalace-Kuncice.pdf">Stáhnout tuto stránku v PDF</button></div>
+  <h3>Pokyny k instalaci</h3>
+  <div class="guides">
+    <div class="guide"><span class="code">V1 · bez hydroboxu</span><h3>Vytápění s AKU 100 l</h3><span class="sub">patka, hydraulika, elektro 1F/3F, soupis, uvedení do provozu, první spuštění</span><div class="acts"><button type="button" class="dlb" data-file="pdf/REO-pokyny-instalace-V1-AKU.pdf" data-name="REO-pokyny-instalace-V1-AKU.pdf">Stáhnout PDF</button><a href="https://claude.ai/artifact/B1kNm4rR3A56NZ8vBEAeGU" target="_blank" rel="noopener">Otevřít artefakt</a></div></div>
+    <div class="guide"><span class="code">V2 · bez hydroboxu</span><h3>Vytápění s AKU 100 l a ohřev TUV</h3><span class="sub">patka, hydraulika, elektro 1F/3F, soupis, uvedení do provozu, první spuštění</span><div class="acts"><button type="button" class="dlb" data-file="pdf/REO-pokyny-instalace-V2-AKU-TUV.pdf" data-name="REO-pokyny-instalace-V2-AKU-TUV.pdf">Stáhnout PDF</button><a href="https://claude.ai/artifact/DC42DpVfQhRrkwxdTvX1xN" target="_blank" rel="noopener">Otevřít artefakt</a></div></div>
+    <div class="guide"><span class="code">H1 · s hydroboxem</span><h3>Vytápění s hydroboxem a AKU 100 l</h3><span class="sub">patka, hydraulika, elektro 1F/3F, soupis, uvedení do provozu, první spuštění</span><div class="acts"><button type="button" class="dlb" data-file="pdf/REO-pokyny-instalace-H1-hydrobox-AKU.pdf" data-name="REO-pokyny-instalace-H1-hydrobox-AKU.pdf">Stáhnout PDF</button><a href="https://claude.ai/artifact/5xTBM8VtwMfQqVpwBtn4wE" target="_blank" rel="noopener">Otevřít artefakt</a></div></div>
+    <div class="guide"><span class="code">H2 · s hydroboxem</span><h3>Hydrobox, AKU 100 l a ohřev TUV</h3><span class="sub">patka, hydraulika, elektro 1F/3F, soupis, uvedení do provozu, první spuštění</span><div class="acts"><button type="button" class="dlb" data-file="pdf/REO-pokyny-instalace-H2-hydrobox-AKU-TUV.pdf" data-name="REO-pokyny-instalace-H2-hydrobox-AKU-TUV.pdf">Stáhnout PDF</button><a href="https://claude.ai/artifact/4p9rJAKaMWSNYJ7jrqTTJW" target="_blank" rel="noopener">Otevřít artefakt</a></div></div>
+  </div>
+  <h3>Schémata zapojení</h3>
+  <div class="sgroup">Bez hydroboxu</div>
+  <div class="sgrid">
+    <div class="scard"><img src="nahledy/REO-SCH-K1.jpg" alt="Náhled schématu REO-SCH-K1" loading="lazy"><div class="b"><span class="code">REO-SCH-K1</span><strong>Hydraulika — pouze vytápění s AKU</strong><div class="acts"><button type="button" class="dlb" data-file="pdf/REO-SCH-K1.pdf" data-name="REO-SCH-K1.pdf">Stáhnout PDF</button></div></div></div>
+    <div class="scard"><img src="nahledy/REO-SCH-K2.jpg" alt="Náhled schématu REO-SCH-K2" loading="lazy"><div class="b"><span class="code">REO-SCH-K2</span><strong>Hydraulika — AKU a ohřev TUV</strong><div class="acts"><button type="button" class="dlb" data-file="pdf/REO-SCH-K2.pdf" data-name="REO-SCH-K2.pdf">Stáhnout PDF</button></div></div></div>
+    <div class="scard"><img src="nahledy/REO-SCH-K1-E.jpg" alt="Náhled schématu REO-SCH-K1-E" loading="lazy"><div class="b"><span class="code">REO-SCH-K1-E</span><strong>Elektro — pouze vytápění s AKU</strong><div class="acts"><button type="button" class="dlb" data-file="pdf/REO-SCH-K1-E.pdf" data-name="REO-SCH-K1-E.pdf">Stáhnout PDF</button></div></div></div>
+    <div class="scard"><img src="nahledy/REO-SCH-K2-E.jpg" alt="Náhled schématu REO-SCH-K2-E" loading="lazy"><div class="b"><span class="code">REO-SCH-K2-E</span><strong>Elektro — AKU a ohřev TUV</strong><div class="acts"><button type="button" class="dlb" data-file="pdf/REO-SCH-K2-E.pdf" data-name="REO-SCH-K2-E.pdf">Stáhnout PDF</button></div></div></div>
+  </div>
+  <div class="sgroup">S hydroboxem</div>
+  <div class="sgrid">
+    <div class="scard"><img src="nahledy/REO-SCH-H1.jpg" alt="Náhled schématu REO-SCH-H1" loading="lazy"><div class="b"><span class="code">REO-SCH-H1</span><strong>Hydraulika — hydrobox a AKU</strong><div class="acts"><button type="button" class="dlb" data-file="pdf/REO-SCH-H1.pdf" data-name="REO-SCH-H1.pdf">Stáhnout PDF</button></div></div></div>
+    <div class="scard"><img src="nahledy/REO-SCH-H2.jpg" alt="Náhled schématu REO-SCH-H2" loading="lazy"><div class="b"><span class="code">REO-SCH-H2</span><strong>Hydraulika — hydrobox, AKU a TUV</strong><div class="acts"><button type="button" class="dlb" data-file="pdf/REO-SCH-H2.pdf" data-name="REO-SCH-H2.pdf">Stáhnout PDF</button></div></div></div>
+    <div class="scard"><img src="nahledy/REO-SCH-H1-E.jpg" alt="Náhled schématu REO-SCH-H1-E" loading="lazy"><div class="b"><span class="code">REO-SCH-H1-E</span><strong>Elektro — hydrobox a AKU</strong><div class="acts"><button type="button" class="dlb" data-file="pdf/REO-SCH-H1-E.pdf" data-name="REO-SCH-H1-E.pdf">Stáhnout PDF</button></div></div></div>
+    <div class="scard"><img src="nahledy/REO-SCH-H2-E.jpg" alt="Náhled schématu REO-SCH-H2-E" loading="lazy"><div class="b"><span class="code">REO-SCH-H2-E</span><strong>Elektro — hydrobox, AKU a TUV</strong><div class="acts"><button type="button" class="dlb" data-file="pdf/REO-SCH-H2-E.pdf" data-name="REO-SCH-H2-E.pdf">Stáhnout PDF</button></div></div></div>
+  </div>
+  <div class="sgroup">Společné</div>
+  <div class="sgrid">
+    <div class="scard"><img src="nahledy/REO-SCH-K1-P.jpg" alt="Náhled schématu REO-SCH-K1-P" loading="lazy"><div class="b"><span class="code">REO-SCH-K1-P</span><strong>Betonová patka venkovní jednotky</strong><div class="acts"><button type="button" class="dlb" data-file="pdf/REO-SCH-K1-P.pdf" data-name="REO-SCH-K1-P.pdf">Stáhnout PDF</button></div></div></div>
+  </div>
+  <p class="dlstat" id="dlstat" role="status"></p>
+</section>
+<!-- POKYNY:END -->
 
 <figure>
   <div class="schema"><img src="schema.png" alt="Schéma zapojení: venkovní jednotka, separátor, uzávěry, protizámrazový ventil, AKU 100 l s odvzdušněním, sekundární čerpadlo, za ním pojistná skupina s pojistným ventilem a manometrem a expanzní nádoba, přijímač s bezdrátovým termostatem, radiátory."></div>
@@ -289,6 +349,30 @@ footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line)
     </div>
   </div>
 </section>
+
+
+<script>
+(async () => {
+  const stat = document.getElementById("dlstat");
+  const dl = window.claude && window.claude.use ? await window.claude.use("downloads") : null;
+  if (!dl) { document.body.classList.add("nodl"); return; }
+  document.querySelectorAll(".dlb[data-file]").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      btn.disabled = true; stat.textContent = "Připravuji " + btn.dataset.name + "…";
+      try {
+        const r = await fetch(btn.dataset.file);
+        if (!r.ok) throw { code: "missing" };
+        await dl.save({ filename: btn.dataset.name, data: await r.blob() });
+        stat.textContent = "Uloženo: " + btn.dataset.name;
+      } catch (err) {
+        const c = err && err.code;
+        stat.textContent = c === "declined" ? "Stažení zrušeno." : c === "rate_limited" ? "Chvíli počkejte a zkuste znovu." : "PDF se nepodařilo stáhnout.";
+        if (c === "unavailable" || c === "not_granted") document.body.classList.add("nodl");
+      } finally { btn.disabled = false; }
+    });
+  });
+})();
+</script>
 
 <footer>
   <p>Zjednodušený orientační popis. Dimenze potrubí, nastavení pojistného ventilu, velikost expanzní nádoby a průtoky určete podle návodu k TČ a konkrétního domu.</p>
