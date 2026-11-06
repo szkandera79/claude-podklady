@@ -4,7 +4,7 @@
 Přehled zakázky – kotelna Alignum
 MM Holz (pronájem) · Alignum (možný odkup) · interní, nepředávat
 Riva Trade, s.r.o.
-6. 11. 2026
+6. 11. 2026 (aktualizace)
 bez DPH
 1 · Náklady
 Položka Bez DPH
@@ -50,6 +50,6 @@ Akumulace: 2× MG0 1200 l, Ø 900 mm (LU-MI), uhrazeno zálohou 23. 10. 2026.
 Rozvaděč: v nabídce pro Alignum „není součástí dodávky“, ale nakoupen a osazen námi (ARGOS 40
 560 Kč) – rozhodnout, zda ho zahrnout do odkupu, nebo fakturovat zvlášť.
 --- strana 2 ---
-Provoz: běží TČ1, TČ2 se zapojí po dodání kabelu kaskády; průtok čerpadlem ≈ 15 m³/h na hraně
-(sledovat ΔT ≤ 5 K).
+Provoz: obě tepelná čerpadla zapojena v kaskádě a v provozu; sledovat rozdíl výstup/vstup u každé
+jednotky (≤ 5 K při plném výkonu).
 Smlouva: třístranná (MM Holz / Alignum / Riva Trade) – návrh v2 čeká na dořešení.

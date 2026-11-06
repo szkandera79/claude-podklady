@@ -1,0 +1,258 @@
+[Text vytažený z priloha1-soupis-majetku.pdf]
+
+--- strana 1 ---
+Příloha č. 1 k předávacímu protokolu
+Soupis zařízení ve vlastnictví společnosti Riva Trade, s.r.o. – kotelna v areálu Alignum
+CZ
+k protokolu č.
+……………
+ze dne ……………
+Vlastník: Riva Trade, s.r.o., Korunní 2569/108, 101 00 Praha 10, IČO 08864811, DIČ CZ08864811
+Umístění: technické prostory společnosti Alignum CZ, Staříč 542, 739 43 Staříč; venkovní jednotky u
+objektu
+Uživatel: Alignum CZ · Objednatel (nájemce): Mayr-Melnhof Holz Paskov s.r.o.
+Všechna níže uvedená zařízení, včetně jejich příslušenství, jsou výhradním majetkem společnosti Riva
+Trade, s.r.o. Do objektu jsou umístěna pouze dočasně a nestávají se součástí ani příslušenstvím stavby či
+pozemku (§ 506 a § 510 občanského zákoníku). Bez písemného souhlasu vlastníka je nelze přemístit,
+demontovat, zastavit, pronajmout ani s nimi jinak nakládat. Zařízení jsou označena štítkem s inventárním
+číslem. Vlastnictví dokládají uvedené nabývací doklady.
+Soupis odpovídá skutečnému stavu – zařízení skutečně dodanému a instalovanému k datu předání.
+Zařízení dodané později se zapíše dodatkem k této příloze; položka, která při předání instalována není, se v
+soupisu škrtne.
+Inv. č. Zařízení Množství Výrobní číslo Nabývací
+doklad
+1 ks sklad Riva
+Trade
+1 ks sklad Riva
+Trade
+RT-ALG-01 Tepelné čerpadlo REO
+HEATING RH X50 – TČ1
+(master), venkovní jednotka
+RT-ALG-02 Tepelné čerpadlo REO
+HEATING RH X50 – TČ2,
+venkovní jednotka
+RT-ALG-03 Akumulační nádrž MG0 1200 l,
+Ø 900 mm, s izolací UNI Vlies –
+AKU1
+RT-ALG-04 Akumulační nádrž MG0 1200 l,
+Ø 900 mm, s izolací UNI Vlies –
+AKU2
+RT-ALG-05 Elektrokotel
+TRINNITY/COSMOTHERM E 24
+kW (ekvitermní čidlo, čerpadlo) –
+EK1
+RT-ALG-06 Elektrokotel
+TRINNITY/COSMOTHERM E 24
+kW (ekvitermní čidlo, čerpadlo) –
+EK2
+RT-ALG-07 Topná jednotka TJ 6/4" 9 kW v
+akumulační nádrži
+RT-ALG-08 Oběhové čerpadlo okruhu TČ (≈
+15 m³/h)
+RT-ALG-09 Expanzní nádoba COSMO
+MAG-H 50 l, 6 bar
+1 ks LU-MI fa
+20260448
+1 ks LU-MI fa
+20260448
+1 ks GIENGER fa
+1860450386
+Umístění Stav při
+předání
+venku u
+objektu
+venku u
+objektu
+technické
+prostory
+technické
+prostory
+technické
+prostory
+instalováno,
+v provozu
+instalováno,
+v provozu
+(kaskáda)
+instalováno
+instalováno
+instalováno
+1 ks GIENGER fa
+1860450386
+technické
+prostory
+instalováno
+2 ks GIENGER fa
+1860450386
+1 ks doplnit
+doklad
+2 ks GIENGER fa
+1860450386
+v AKU1 /
+AKU2
+technické
+prostory
+technické
+prostory
+instalováno
+instalováno
+instalováno
+--- strana 2 ---
+Inv. č. Zařízení Množství Výrobní číslo Nabývací
+RT-ALG-10 Pojistný ventil TRINNITY 1" ×
+5/4"
+, 2,5 bar
+RT-ALG-11 Rozvaděč kotelny Schneider
+S3D 1000×600×300 vč.
+odpínače 3VA 250 A, jističů 4×
+B40 3P, rozbočovacích bloků a
+svorek
+RT-ALG-12 Přívodní kabel 1-AYKY-J
+3×240+120 (8 m) se spojkami
+RT-ALG-13 Silové a ovládací kabely CYKY-J
+5×10 (50 m), 5×16, CYA 70,
+CYSY; kabelové žlaby, kanály,
+nosníky
+RT-ALG-14 Hydraulické rozvody SteelPres
+54 a 35 mm s izolací, kulové
+kohouty, šroubení,
+odvzdušňovací ventily, tvarovky,
+uchycení
+RT-ALG-15 Měření: termomanometry DN80,
+manometry, teploměrové jímky
+doklad
+3 ks GIENGER fa
+1860450386
+1 ks ARGOS fa
+2600211211
+komplet ARGOS fa
+2600211211
+komplet ARGOS fa
+2600211211
+komplet GIENGER fa
+1860450386
+komplet GIENGER fa
+1860450386
+Umístění Stav při
+předání
+technické
+prostory
+technické
+prostory
+přívod k
+rozvaděči
+technické
+prostory /
+venku
+technické
+prostory /
+venku
+technické
+prostory
+instalováno
+instalováno
+instalováno
+instalováno
+instalováno
+instalováno
+Nabývací doklady: GIENGER spol. s r.o., fa 1860450386 ze dne 31. 10. 2026 · ARGOS ELEKTRO, a. s., fa 2600211211 ze dne
+31. 10. 2026 · LU-MI servis s.r.o., fa 20260448 ze dne 24. 10. 2026 · tepelná čerpadla ze skladových zásob Riva Trade, s.r.o.
+Kopie dokladů jsou k dispozici u vlastníka.
+Potvrzení
+Uživatel a objednatel svým podpisem potvrzují, že zařízení dle tohoto soupisu převzali do užívání, berou na
+vědomí vlastnické právo společnosti Riva Trade, s.r.o. a že zařízení byla při předání označena štítky s
+inventárními čísly. Změna vlastnictví je možná pouze na základě samostatné písemné kupní smlouvy.
+Za vlastníka (Riva Trade, s.r.o.)
+jméno, podpis, datum
+Za uživatele (Alignum CZ)
+jméno, podpis, datum
+Za objednatele (MM Holz)
+jméno, podpis, datum
+--- strana 3 ---
+Štítky k označení zařízení
+Vytisknout, vystřihnout a nalepit (doporučeno na samolepicí fólii odolnou vůči vlhkosti; venkovní jednotky přelaminovat).
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-01
+Tepelné čerpadlo REO HEATING RH X50
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-02
+Tepelné čerpadlo REO HEATING RH X50
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-03
+Akumulační nádrž MG0 1200 l, Ø 900 mm, s izolací UNI
+Vlies
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-04
+Akumulační nádrž MG0 1200 l, Ø 900 mm, s izolací UNI
+Vlies
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-05
+Elektrokotel TRINNITY/COSMOTHERM E 24 kW
+(ekvitermní čidlo, čerpadlo)
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-06
+Elektrokotel TRINNITY/COSMOTHERM E 24 kW
+(ekvitermní čidlo, čerpadlo)
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-07
+Topná jednotka TJ 6/4" 9 kW v akumulační nádrži
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-08
+Oběhové čerpadlo okruhu TČ (≈ 15 m³/h)
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+--- strana 4 ---
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-09
+Expanzní nádoba COSMO MAG-H 50 l, 6 bar
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-11
+Rozvaděč kotelny Schneider S3D 1000×600×300 vč.
+odpínače 3VA 250 A, ji
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-13
+Silové a ovládací kabely CYKY-J 5×10 (50 m), 5×16, CYA
+70, CYSY; kabel
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-15
+Měření: termomanometry DN80, manometry, teploměrové
+jímky
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-10
+Pojistný ventil TRINNITY 1" × 5/4"
+, 2,5 bar
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-12
+Přívodní kabel 1-AYKY-J 3×240+120 (8 m) se spojkami
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.
+MAJETEK RIVA TRADE, s.r.o.
+RT-ALG-14
+Hydraulické rozvody SteelPres 54 a 35 mm s izolací, kulové
+kohouty, šr
+IČO 08864811 · tel. +420 774 872 467 · Bez souhlasu
+vlastníka nemanipulovat.

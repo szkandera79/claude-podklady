@@ -16,8 +16,11 @@ technické prostory společnosti Alignum, areál Staříč / Paskov – Žabeň;
 jednotky u objektu
 Předmět předání
 Kotelna s tepelnými čerpadly pro vytápění výrobní haly a správní budovy a ohřev teplé vody ve stávajícím
-zásobníku, napojená na primární stranu stávající výměníkové stanice. Kotelna je předávána do užívání;
-vlastnické právo zůstává předávajícímu, nesjednají-li strany jinak.
+zásobníku, napojená na primární stranu stávající výměníkové stanice. Kotelna je předávána do užívání.
+Veškerá dodaná a instalovaná technika zůstává majetkem předávajícího (Riva Trade, s.r.o.); je
+označena štítky s inventárními čísly a podrobně uvedena v příloze č. 1 – Soupis zařízení ve vlastnictví
+Riva Trade, s.r.o., která je nedílnou součástí tohoto protokolu. Rozhoduje skutečný stav dodávky k datu
+předání.
 Zařízení Množství Výrobní číslo / poznámka
 Tepelné čerpadlo REO HEATING RH X50 (vzduch/voda, R290) – TČ1
 (master)
@@ -42,8 +45,8 @@ komplet
 komplet
 komplet
 komplet
-Provozní údaje při předání
 --- strana 2 ---
+Provozní údaje při předání
 Venkovní teplota °C
 Tlak v soustavě (studený / provozní) Nastavená teplota topné vody / ekvitermní křivka
 Teplota výstup / vstup TČ1 · TČ2
@@ -64,6 +67,8 @@ výkonu
 ☐ Ochrana proti zamrznutí (provoz bez glykolu) ověřena, obsluha poučena
 ☐ Dálkový dohled / aplikace funkční, přístupové údaje předány samostatně
 ☐ Uzávěry teplovodu MM Holz uzavřeny a označeny
+☐ Zařízení označena štítky „Majetek Riva Trade, s.r.o.
+“ s inventárními čísly dle přílohy č. 1
 Předané doklady
 ☐ Návod k použití RH X50 (CZ)
 ☐ Návody elektrokotlů a topných jednotek
@@ -88,8 +93,9 @@ Důležité upozornění pro provoz: Okruh tepelných čerpadel je plněn vodou 
 Kotelnu v zimním období nevypínejte a každé přerušení dodávky elektřiny neprodleně hlaste servisu.
 Do nastavení regulace nezasahujte. Teplovod MM Holz a kotelna s TČ nesmí pracovat současně.
 Servis / havarijní linka:
-Přebírající potvrzuje, že kotelnu převzal v uvedeném rozsahu a stavu. Vady a nedodělky uvedené výše
-nebrání užívání kotelny, není-li u nich uvedeno jinak.
+Přebírající potvrzuje, že kotelnu převzal v uvedeném rozsahu a stavu a bere na vědomí vlastnické právo
+předávajícího k zařízení dle přílohy č. 1. Vady a nedodělky uvedené výše nebrání užívání kotelny, není-li u
+nich uvedeno jinak.
 Předal (Riva Trade, s.r.o.)
 jméno, podpis
 Převzal (Alignum s.r.o.)
