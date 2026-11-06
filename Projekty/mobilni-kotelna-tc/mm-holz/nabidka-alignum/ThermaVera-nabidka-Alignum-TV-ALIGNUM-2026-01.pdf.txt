@@ -14,14 +14,17 @@ správní budovy, ohřev teplé vody
 M-2026-01
 21. 10. 2026
 platnost 30 dní
-ceny bez DPH
+ceny
+bez DPH
 Vážený pane Poloku
 ,
-děkujeme za zaslané podklady, statistiku dodávky tepla a za možnost prohlédnout si objekt na místě. Na jejich
+děkujeme za zaslané podklady, statistiku dodávky tepla a za možnost prohlédnout si objekt na místě
+. Na jejich
 základě předkládáme nabídku na odku
 p zelené kotelny s tepelnými čerpadly pro areál společnosti Alignu
 m v
-Paskově. Kotelna je náhradou za dodávku tepla teplovodem ze sousední společnosti MM Holz, který je po
+Paskově
+. Kotelna je náhradou za dodávku tepla teplovodem ze sousední společnosti MM Holz, který je po
 havárii momentálně nedostu
 pný. Kotelnu nainstalujeme do Vašich technických prostor a po dobu
 pronájm
@@ -46,7 +49,8 @@ ZŮSTATKOVÁ CENA
 1 250 000 Kč
 bez DPH, odku
 p po skončení pronájm
-u
++ rozvaděč 70 000 Kč
+u ·
 1 · Výchozí stav
 Výrobní hala 1 182 m², provozní teplota cca 17 °C, 5 teplovzdušných jednotek SAHARA W3634 (projektový spád
 80/60 °C).
@@ -75,7 +79,8 @@ Napojení Regulace a
 dohled
 Umístění 2 × REO
 RH X50 (vzdu
-ch/voda, chladivo R290) v kaskádě, s řízením a střídáním jednotek. Jednotky
+ch/voda, chladivo R290) v kaskádě
+, s řízením a střídáním jednotek. Jednotky
 jsou napojeny přímo do aku
 m
 ulace (bez mezivýměníku), s ochranou
@@ -107,7 +112,8 @@ RH X50 jsou
 podle výkonové mapy výrob
 ce schopny dodávat topnou vodu až 70 °C na výstu
 venkovní teploty −10 °C. Předpokládáme proto, že do −10 °C venkovní teploty kaskáda tepelných čerpadel objekt
-vytopí samotnými kompresory, bez elektrického dohřevu
+vytopí samotnými kompresory,
+bez elektrického dohřevu
 . Pod −10 °C nebo při výkonovém deficitu se postu
 p
 u do
@@ -138,7 +144,8 @@ vody jen tak vysokou
 , jak je potřeba.
 --- strana 3 ---
 Do ≈ −10 °C topí jen tepelná čerpadla.
-Pod −10 °C doplňuje chybějící výkon elektrokotel — při −15 °C orientačně 20–25 kW. Elektřina tak dodá jen malý
+Pod −10 °C doplňuje chy
+bějící výkon elektrokotel — při −15 °C orientačně 20–25 kW. Elektřina tak dodá jen malý
 podíl ročního tepla.
 Při výpadku jedné jednotky pokryje druhá jednotka s elektrokotlem potřebu orientačně do −15 °C.
 Při výpadku obou jednotek topí elektrokotel samostatně v rozsahu svého výkonu (≈ 50 kW pokryje potřebu
@@ -154,7 +161,8 @@ Třetí jednotka REO
 RH X50
 NÁHRADA TEPLOVODU
 2 × REO
-RH X50 v kaskádě, aku
+RH X50 v kaskádě
+, aku
 m
 ulace 2 × 1 200 l,
 elektrokotel pro bivalenci (≈ 50 kW), napojení na
@@ -174,9 +182,10 @@ výkonový deficit v nejchladnějších dnech a slouží
 jako záloha při výpadku kterékoli jednotky.
 Tři jednotky pokryjí potřebu orientačně do −15 °C bez
 elektřiny.
-Při výpadku jedné jednotky běží dál dvě tepelná
+Při výpadku jedné jednotky
 čerpadla.
 Elektrokotel zůstává jako rezerva.
+běží dál dvě tepelná
 1 250 000 Kč
 bez DPH · zůstatková cena po skončení pronájm
 u
@@ -196,23 +205,30 @@ zůstatkovou
 cenu
 1 250 000 Kč, se třetí jednotkou
 1 500 000 Kč
-bez DPH. K
+bez DPH. Silový rozvaděč kotelny, který jsme
+pro připojení osadili, není sou
+částí zůstatkové ceny; jeho odku
+p činí 70 000 Kč (celkem 1 320 000 Kč, resp. 1 570
+000 Kč
+bez DPH). K
 u
 p
 ujete kotelnu
-, kterou už máte ve
-vlastních prostorách nainstalovanou a během pronájm
-u vyzkoušenou v provozu — bez další instalace. Odku
-p je
-možný i před skončením pronájm
+, kterou už máte ve vlastních prostorách nainstalovanou a během pronájm
+u
+vyzkoušenou v provozu — bez další instalace. Odku
+p je možný i před skončením pronájm
 u
 .
 5 · Elektrické připojení
 Dvě jednotky RH X50 odebírají nejvýše 2 × 32 A, elektrokotel ≈ 50 kW přibližně 72 A na fázi. Kotelna potřebuje
-vyhrazený přívod 3 × 160 A a silový rozvaděč, které nejsou sou
-částí dodávky. Regulace hlídá souběh tepelných
-čerpadel a elektrokotle a v případě potřeb
-y elektrický dohřev omezí — tepelná čerpadla mají vždy přednost.
+vyhrazený přívod 3 × 160 A. Silový rozvaděč kotelny jsme osadili; není sou
+částí zůstatkové ceny a lze ho odkou
+pit za
+70 000 Kč
+bez DPH. Regulace hlídá souběh tepelných čerpadel a elektrokotle a v případě potřeb
+y elektrický dohřev
+omezí — tepelná čerpadla mají vždy přednost.
 --- strana 4 ---
 UZ-K1
 primár
@@ -303,7 +319,8 @@ doku
 mentace.
 ulaci, elektrokotel dohřívá přívod při deficitu výkonu
 , kotelna napájí stávající výměníkovou stanici.
-časně. Dimenze a rozsah měření a regulace u
+časně
+. Dimenze a rozsah měření a regulace u
 přesní prováděcí
 --- strana 5 ---
 7 · Co je a co není v ceně
@@ -314,22 +331,26 @@ m
 ulace 2 × 1 200 l, přímé napojení jednotek s
 protimrazovou ochranou
 Elektrokotel pro bivalenci
-Čerpadla, armatury, expanzní a pojistné prvky, filtrace
+Čerpadla, armatury, expanzní a pojistné prvky,
+filtrace
 Napojení na stávající výměníkovou stanici
 Regulace (PLC) a vzdálený dohled
-Doprava, instalace, uvedení do provozu
+Doprava, instalace,
+uvedení do provozu
 , revize
 Zaškolení obsluhy, doku
-mentace skutečného provedení
+mentace skutečného
+provedení
 V ceně není
-Silový rozvaděč kotelny a elektrický přívod 3 × 160
-A
+Silový rozvaděč kotelny (odku
+p zvlášť za 70 000 Kč) a
+elektrický přívod 3 × 160 A
 Stavební úpravy, zpevněná plocha a základy pro
 venkovní jednotky
 Úpravy stávající otopné soustavy a ohřevu vody
 Elektrická energie pro provoz
-Pravidelný servis po uvedení do provozu
-(nabídneme samostatně)
+Pravidelný servis po uvedení do provozu (nabídneme
+samostatně)
 Projektová doku
 mentace nad rámec dílenské
 8 · Další postup
@@ -346,25 +367,32 @@ u
 u
 , zaškolení obsluhy.
 9 · Shrnutí
-Varianta Sestava — kaskáda, aku
+Varianta Tepelná čerpadla Zůstatková cena bez DPH
+Sestava — kaskáda, aku
 instalovaná a v provozu
 m
 ulace 2 × 1 200 l, elektrokotel ≈ 50 kW,
-Alternativa — třetí jednotka (výkon a záloha) Sestava se třetí jednotkou Tepelná čerpadla Zůstatková cena bez DPH
 2 × REO
-+ 1 × REO
-RH X50 RH X50 3 × REO
 RH X50 1 250 000 Kč
-+ 250 000 Kč
-1 500 000 Kč
-Další krok
-Potvrďte nám prosím preferovanou variantu (se dvěma, nebo třemi jednotkami). K
+Alternativa — třetí jednotka (výkon a záloha) + 1 × REO
+RH X50 + 250 000 Kč
+Sestava se třetí jednotkou 3 × REO
+RH X50 1 500 000 Kč
+Silový rozvaděč kotelny (osazen námi, k odku
+p
+u) — + 70 000 Kč
+Celkem k odku
+p
+u včetně rozvaděče 2 / 3 × REO
+RH X50 1 320 000 / 1 570 000 Kč
+Další krok: Potvrďte nám prosím preferovanou variantu (se dvěma, nebo třemi jednotkami). K
 u
 pní smlouvu
-konci pronájm
+ke konci pronájm
 u
-, případně dříve podle Vašeho přání. Rádi vše probereme i osobně.
-připravíme ke
+, případně dříve podle Vašeho přání. Rádi vše probereme i osobně
+.
+připravíme
 S pozdravem
 ThermaVera Energy
 E‑MAIL

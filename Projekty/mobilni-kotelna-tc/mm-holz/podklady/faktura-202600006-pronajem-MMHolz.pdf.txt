@@ -1,0 +1,51 @@
+[Text vytažený z faktura-202600006-pronajem-MMHolz.pdf]
+
+--- strana 1 ---
+ISDOC
+FAKTURA - DAŇOVÝ DOKLAD
+č. 202600006
+Riva Trade, s.r.o.
+Korunní 2569/108
+101 00 Praha
+IČ: 08864811
+DIČ: CZ08864811
+E-mail: szkandera@rivatrade.cz
+Zapsáno v obchodním rejstříku vedeném u Městského soudu v Praze, oddíl C, vložka
+325996
+ODBĚRATEL: PLATBA
+Mayr Melnhof Holz Paskov s.r.o
+Staříč 544
+73943 Staříč
+IČ: 26729407
+DIČ: CZ26729407
+Číslo účtu: 2701756635/2010
+IBAN: CZ74 2010 0000 0027 0175 6635
+Variabilní symbol: 202600006
+Konstantní symbol: 0308
+Datum vystavení: 05.11.2026
+Datum splatnosti: 12.11.2026
+Datum uskutečnění plnění: 05.11.2026
+Forma úhrady: Převodem
+Označení dodávky Množství J.cena Cena Sazba
+DPH
+DPH Celkem
+Fakturujeme Vám:
+Fakturujem vám dle objednávky 4500090045
+pronájem kotelny 150kw za období 11/2026,
+12/2026, 1/2026
+1 ks 240 000,00 240 000,00 21 % 50 400,00 290 400,00
+Doprava 1 ks 30 000,00 30 000,00 21 % 6 300,00 36 300,00
+Instalace 1 ks 50 000,00 50 000,00 21 % 10 500,00 60 500,00
+Součet položek 320 000,00 67 200,00 387 200,00
+CELKEM K ÚHRADĚ 387 200,00 Kč
+Vystavil:
+Dle objednávky č.
+4500090045
+Dovolujeme si Vás upozornit, že v případě nedodržení data splatnosti uvedeného na faktuře Vám budeme účtovat úrok z prodlení v dohodnuté, resp. zákonné výši a smluvní
+pokutu (byla-li sjednána).
+Faktura byla vystavena pomocí generujfakturu.cz
+Rekapitulace DPH v Kč:
+Základ v Kč Sazba DPH v Kč Celkem s DPH v Kč
+320 000,00 21% 67 200,00 387 200,00
+QR Platba
+Převzal: Razítko:
