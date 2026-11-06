@@ -1,0 +1,71 @@
+[Text vytažený z kalkulace-nakladu.pdf]
+
+--- strana 1 ---
+Kalkulace nákladů – kotelna s tepelnými čerpadly
+Alignum Paskov (zakázka MM Holz) · interní podklad
+Riva Trade, s.r.o.
+6. 11. 2026
+ceny bez DPH
+Položka Množství Cena/MJ Celkem Zdroj
+A · Tepelná čerpadla 210 000,00 Kč
+REO HEATING RH X50 – tepelné čerpadlo vzduch/voda 2 ks 105 000,00 210 000,00 Kč sklad
+(zadavatel)
+B · Akumulace – LU-MI servis s.r.o., fa 20260448 (23. 10. 2026) 58 928,92 Kč
+Akumulační nádrž MG0 1200 l, Ø 900 2 ks 18 818,18 37 636,36 Kč faktura
+Izolace IZO MG 1200 l Ø 900 (UNI Vlies) 2 ks 9 654,55 19 309,09 Kč faktura
+Doprava 1 1 983,47 1 983,47 Kč faktura
+C · Hydraulika a bivalence – GIENGER spol. s r.o., fa 1860450386 (31. 10. 2026) 106 066,44 Kč
+Elektrokotel TRINNITY/COSMOTHERM E 24 kW (vč. ekv.
+čidla, čerpadla) + recykl. poplatek
+2 ks 17 981,26 36 016,51 Kč faktura
+Topná jednotka TJ 6/4" 9 kW (do akumulace) + recykl.
+2 ks 4 373,46 8 752,44 Kč faktura
+poplatek
+Expanzní nádoba COSMO MAG-H 50 l, 6 bar 2 ks 1 413,50 2 827,00 Kč faktura
+Pojistný ventil TRINNITY 1" × 5/4"
+, 2,5 bar 3 ks 739,69 2 219,08 Kč faktura
+Měření: termomanometry, manometry, teploměrové jímky — — 1 247,62 Kč faktura
+Potrubí SteelPres 54/35, tvarovky, kulové kohouty, šroubení,
+odvzdušnění, izolace, uchycení a spojovací materiál
+— — 55 003,79 Kč faktura
+D · Elektroinstalace – ARGOS ELEKTRO, a. s., fa 2600211211 (31. 10. 2026) 40 559,81 Kč
+Rozvaděč Schneider S3D 1000×600×300, odpínač 3VA 250
+A, jističe 4× B40 3P, propojovací lišty, rozbočovací bloky,
+svorky
+— — 16 873,77 Kč faktura
+Kabely: 1-AYKY-J 3×240+120 (8 m), CYKY-J 5×10 (50 m),
+CYKY-J 5×16 (3 m), CYA 70, CYSY 5G1,5
+— — 14 270,18 Kč faktura
+Kabelové spojky, oka, dutinky, bužírky, štítky, vázací pásky — — 2 656,06 Kč faktura
+Kabelové trasy: žlab, kanál, oblouky, nosníky, průchodka,
+spojovací materiál
+— — 6 759,80 Kč faktura
+Celkem doložené náklady (A–D) 415 555,17 Kč
+Souhrn
+Skupina Bez DPH Podíl
+A · Tepelná čerpadla 210 000,00 Kč 50,5 %
+B · Akumulace 58 928,92 Kč 14,2 %
+C · Hydraulika a bivalence 106 066,44 Kč 25,5 %
+D · Elektroinstalace 40 559,81 Kč 9,8 %
+Celkem 415 555,17 Kč 100 %
+Náklady, které na fakturách nejsou (doplnit)
+--- strana 2 ---
+Položka Bez DPH
+Oběhové čerpadlo okruhu TČ (≈ 15 m³/h) – na fakturách není Komunikační kabel kaskády (stíněný ≈ 1 mm²) Regulace / dálkový dohled (pokud je dodáván nad rámec jednotek) Montážní práce (vlastní / subdodávky) Doprava a manipulace (jeřáb, vlastní doprava) doplnit
+doplnit
+doplnit
+doplnit
+doplnit
+Revize elektro, tlakové zkoušky doplnit
+Porovnání s tržbami (orientačně)
+Položka Bez DPH
+Pronájem 6 měsíců (MM Holz) – 6 × 80 000 Kč 480 000,00 Kč
+Instalace + doprava (MM Holz) 80 000,00 Kč
+Tržby z pronájmu celkem 560 000,00 Kč
+Doložené náklady (A–D) −415 555,17 Kč
+Rozdíl před nedoloženými náklady a prací 144 444,83 Kč
+Případný odkup Alignem za zůstatkovou cenu (sestava 2 × RH X50) 1 250 000,00 Kč
+Poznámky: Bivalence je podle faktur provedena jako 2 × elektrokotel 24 kW + 2 × topná jednotka 9 kW v akumulaci = 66 kW
+(nabídka uvádí ≈ 50 kW). Akumulace: 2 × MG0 1200 l, Ø 900 mm. Faktura LU-MI uvedena podle ISDOC (k úhradě 0 Kč –
+pravděpodobně již uhrazeno). Částky faktury GIENGER rozděleny do skupin podle položek; „potrubí a tvarovky“ je dopočet do
+celkové sumy faktury (106 066,44 Kč). Cena RH X50 105 000 Kč/ks podle zadavatele.

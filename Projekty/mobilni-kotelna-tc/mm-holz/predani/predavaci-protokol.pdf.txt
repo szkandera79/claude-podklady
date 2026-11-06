@@ -1,0 +1,98 @@
+[Text vytažený z predavaci-protokol.pdf]
+
+--- strana 1 ---
+Předávací protokol
+Kotelna s tepelnými čerpadly – areál Alignum, Paskov
+č. protokolu: …………………
+datum předání: …………………
+Smluvní strany
+Předávající Přebírající (uživatel) Objednatel (nájemce) Místo instalace Riva Trade, s.r.o., Korunní 2569/108, 101 00 Praha 10, IČO 08864811, DIČ CZ08864811
+zastoupená: ……………………………………
+Alignum s.r.o., Staříč 542, 739 43 Staříč, IČO ……………………
+zastoupená: ……………………………………
+Mayr-Melnhof Holz Paskov s.r.o., Staříč 544, 739 43 Staříč
+zastoupená: ……………………………………
+technické prostory společnosti Alignum, areál Staříč / Paskov – Žabeň; venkovní
+jednotky u objektu
+Předmět předání
+Kotelna s tepelnými čerpadly pro vytápění výrobní haly a správní budovy a ohřev teplé vody ve stávajícím
+zásobníku, napojená na primární stranu stávající výměníkové stanice. Kotelna je předávána do užívání;
+vlastnické právo zůstává předávajícímu, nesjednají-li strany jinak.
+Zařízení Množství Výrobní číslo / poznámka
+Tepelné čerpadlo REO HEATING RH X50 (vzduch/voda, R290) – TČ1
+(master)
+Tepelné čerpadlo REO HEATING RH X50 (vzduch/voda, R290) – TČ2 Akumulační nádrž MG0 1200 l, Ø 900 mm, s izolací UNI Vlies Elektrokotel TRINNITY/COSMOTHERM E 24 kW (ekvitermní čidlo,
+vestavěné čerpadlo) – bivalence
+Topná jednotka TJ 6/4" 9 kW v akumulaci – bivalence / záloha Oběhové čerpadlo okruhu TČ (≈ 15 m³/h) Expanzní nádoba COSMO MAG-H 50 l, 6 bar Pojistný ventil 2,5 bar Rozvaděč kotelny Schneider S3D 1000×600×300 s odpínačem 250 A,
+jištění 4× B40 3P
+Přívodní kabel 1-AYKY-J 3×240+120, rozvody CYKY-J 5×10 / 5×16 Hydraulické rozvody SteelPres 54/35 mm s izolací, armatury,
+odvzdušnění, filtrace
+Měření: termomanometry, manometry, teploměrové jímky Napojení na primár stávající výměníkové stanice (přípojka teplovodu
+zachována, uzavřena)
+1 ks v. č.:
+1 ks v. č.:
+2 ks
+2 ks v. č.:
+2 ks
+1 ks typ:
+2 ks
+3 ks
+1 ks
+komplet
+komplet
+komplet
+komplet
+Provozní údaje při předání
+--- strana 2 ---
+Venkovní teplota °C
+Tlak v soustavě (studený / provozní) Nastavená teplota topné vody / ekvitermní křivka
+Teplota výstup / vstup TČ1 · TČ2
+Stav elektroměru kotelny (je-li osazen) Stav kalorimetru (je-li osazen) bar
+Provozní hodiny kompresorů TČ1 · TČ2 h
+kWh
+kWh / GJ
+Provedené zkoušky a kontroly
+☐ Tlaková zkouška hydrauliky provedena (tlak ……… bar, doba ……… min)
+☐ Soustava napuštěna, propláchnuta a odvzdušněna; filtr ve zpátečce vyčištěn
+☐ Revize elektroinstalace provedena (č. zprávy ……………………)
+☐ Funkční zkouška TČ1 (master) – provoz bez poruchy
+☐ Funkční zkouška TČ2 a kaskády (komunikační kabel zapojen, adresa nastavena)
+☐ Oběhové čerpadlo řízeno z jednotky (reléový výstup), průtok ověřen – rozdíl výstup/vstup ≤ 5 K při plném
+výkonu
+☐ Funkční zkouška bivalence – elektrokotle a topné jednotky
+☐ Nastavení regulace: žádaná teplota / ekviterm, parametry pomocného zdroje (23, 24, 26)
+☐ Ochrana proti zamrznutí (provoz bez glykolu) ověřena, obsluha poučena
+☐ Dálkový dohled / aplikace funkční, přístupové údaje předány samostatně
+☐ Uzávěry teplovodu MM Holz uzavřeny a označeny
+Předané doklady
+☐ Návod k použití RH X50 (CZ)
+☐ Návody elektrokotlů a topných jednotek
+☐ Prohlášení o shodě / technické listy dodaných výrobků
+☐ Revizní zpráva elektroinstalace
+☐ Protokol o tlakové zkoušce
+☐ Schéma zapojení kotelny
+☐ Kontakty na servis a havarijní linku
+Zaškolení obsluhy
+Obsluha přebírajícího byla seznámena s ovládáním kotelny, aplikací dálkového dohledu, hlášením poruch a s
+postupem při výpadku elektřiny.
+Zaškolená osoba: podpis:
+Zjištěné vady a nedodělky
+--- strana 3 ---
+# Popis Termín
+odstranění
+1
+2
+3
+4
+Důležité upozornění pro provoz: Okruh tepelných čerpadel je plněn vodou bez nemrznoucí směsi.
+Kotelnu v zimním období nevypínejte a každé přerušení dodávky elektřiny neprodleně hlaste servisu.
+Do nastavení regulace nezasahujte. Teplovod MM Holz a kotelna s TČ nesmí pracovat současně.
+Servis / havarijní linka:
+Přebírající potvrzuje, že kotelnu převzal v uvedeném rozsahu a stavu. Vady a nedodělky uvedené výše
+nebrání užívání kotelny, není-li u nich uvedeno jinak.
+Předal (Riva Trade, s.r.o.)
+jméno, podpis
+Převzal (Alignum s.r.o.)
+jméno, podpis
+Za objednatele (MM Holz)
+jméno, podpis
