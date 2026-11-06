@@ -38,15 +38,16 @@ Demontáž a odvoz, pokud Alignum nekoupí (návrh – k dohodě s MM Holz) 40 0
 Scénář Tržby Náklady Rozdíl Poznámka
 S1 – jen pronájem, kotelna
 se vrací
-480 000 Kč 485 555 Kč −5 555 Kč + případně 40 000 Kč za demontáž (= 34 445
-Kč); technologie zůstává nám k dalšímu
-nasazení
-1 800 000 Kč 485 555 Kč 1 314 445 Kč cílový scénář
 S2 – pronájem + odkup (2×
 RH X50 + rozvaděč)
 S3 – pronájem + odkup se
 3. jednotkou (+ rozvaděč)
-2 050 000 Kč 590 555 Kč 1 459 445 Kč 3. RH X50 ze skladu 105 000 Kč + montáž
+480 000 Kč 1 800 000 Kč 2 050 000 Kč 485 555 Kč 485 555 Kč 590 555 Kč −5 555 Kč 1 314 445 Kč 1 459 445 Kč + případně 40 000 Kč za demontáž (= 34 445
+Kč); technologie zůstává nám k dalšímu
+nasazení
+cílový scénář; při navýšení o chybějící měsíc
+nájmu +80 000 Kč (= 1 394 445 Kč)
+3. RH X50 ze skladu 105 000 Kč + montáž
 (doplnit)
 --- strana 2 ---
 Rozdíl je před odečtením nedoložených nákladů (čerpadlo, kabel kaskády, doprava, revize) a před daněmi. Pronájem trvá 5
@@ -54,7 +55,10 @@ měsíců (11/2026–03/2027).
 5 · Otevřené body
 Faktura 202600006: v textu je období „11/2026, 12/2026, 1/2026“ – správně má být 1/2027. Zvážit
 opravu (opravný doklad) nebo uvést správně v dalších fakturách.
-Doba pronájmu: fakturuje se 5 měsíců (11/2026–03/2027), návrh smlouvy počítal s 6 měsíci – sladit.
+Doba pronájmu: MM Holz uhradí max. 5 měsíců (11/2026–03/2027); zůstatková cena odkupu
+předpokládala 6 měsíců. Chybějící měsíc (80 000 Kč) je k jednání s Alignum: navýšit odkup na 1
+400 000 Kč (s rozvaděčem; se 3. jednotkou 1 650 000 Kč), nebo poskytnout slevu. Uvedeno v nabídce
+odkupu. Návrh smlouvy počítal s 6 měsíci – sladit.
 Bivalence: osazeno 66 kW (2× 24 kW + 2× 9 kW), nabídka uvádí ≈ 50 kW.
 Rozvaděč: nakoupen a osazen námi (ARGOS 40 560 Kč) – není součástí zůstatkové ceny, při
 odkupu + 70 000 Kč (doplněno i v nabídce pro Alignum).

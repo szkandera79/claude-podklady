@@ -19,7 +19,7 @@ Za zvýhodněných podmínek si můžete doobjednat třetí jednotku stejného v
 
 **Podmínky nabídky**
 
-Prosím, aby nabídka zatím zůstala jen mezi námi. Zvýhodněná cena odkupu vychází z předpokladu, že společnost MM Holz u nás objedná a uhradí pronájem kotelny na 6 měsíců.
+Prosím, aby nabídka zatím zůstala jen mezi námi. Zvýhodněná cena odkupu vychází z předpokladu, že společnost MM Holz u nás objedná a uhradí pronájem kotelny na 6 měsíců. Pronájem bude ze strany MM Holz hrazen 5 měsíců (11/2026–03/2027). Rozdíl jednoho měsíce nájmu bychom proto při odkupu vyrovnali – navýšením zůstatkové ceny o jeden měsíc nájmu, nebo jinou dohodou. Rád to s Vámi proberu.
 
 V případě dotazů jsem Vám k dispozici, rád vše proberu i osobně.
 

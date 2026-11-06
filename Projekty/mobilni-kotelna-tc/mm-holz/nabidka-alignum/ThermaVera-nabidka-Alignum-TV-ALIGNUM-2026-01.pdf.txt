@@ -220,6 +220,24 @@ vyzkoušenou v provozu — bez další instalace. Odku
 p je možný i před skončením pronájm
 u
 .
+Podmínka zůstatkové ceny
+: zvýhodněná zůstatková cena vychází z předpokladu
+, že pronájem kotelny
+bude
+hrazen po dobu 6 měsíců. Pronájem sjednaný se společností MM Holz bude hrazen 5 měsíců (11/2026–
+03/2027). Rozdíl jednoho měsíce nájm
+u
+proto při odku
+p
+u vyrovnáme – bu
+ď navýšením zůstatkové ceny o jeden
+měsíc nájm
+u
+, nebo jinou dohodou
+. Konečnou výši ku
+pní ceny
+u
+přesníme jednáním.
 5 · Elektrické připojení
 Dvě jednotky RH X50 odebírají nejvýše 2 × 32 A, elektrokotel ≈ 50 kW přibližně 72 A na fázi. Kotelna potřebuje
 vyhrazený přívod 3 × 160 A. Silový rozvaděč kotelny jsme osadili; není sou
@@ -376,23 +394,24 @@ ulace 2 × 1 200 l, elektrokotel ≈ 50 kW,
 RH X50 1 250 000 Kč
 Alternativa — třetí jednotka (výkon a záloha) + 1 × REO
 RH X50 + 250 000 Kč
-Sestava se třetí jednotkou 3 × REO
-RH X50 1 500 000 Kč
 Silový rozvaděč kotelny (osazen námi, k odku
 p
 u) — + 70 000 Kč
 Celkem k odku
 p
-u včetně rozvaděče 2 / 3 × REO
+u včetně rozvaděče* 2 / 3 × REO
 RH X50 1 320 000 / 1 570 000 Kč
-Další krok: Potvrďte nám prosím preferovanou variantu (se dvěma, nebo třemi jednotkami). K
+* Při 6 měsících hrazeného pronájm
+u; rozdíl jednoho měsíce nájm
+u se vyrovná při odku
 u
+p
+podle dohody (viz oddíl 4).
+Další krok: potvrďte nám prosím preferovanou variantu; ku
 pní smlouvu
-ke konci pronájm
+připravíme ke konci pronájm
 u
-, případně dříve podle Vašeho přání. Rádi vše probereme i osobně
-.
-připravíme
+, případně dříve.
 S pozdravem
 ThermaVera Energy
 E‑MAIL
