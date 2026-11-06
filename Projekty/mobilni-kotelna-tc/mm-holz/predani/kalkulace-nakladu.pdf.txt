@@ -66,6 +66,6 @@ Doložené náklady (A–D) −415 555,17 Kč
 Rozdíl před nedoloženými náklady a prací 144 444,83 Kč
 Případný odkup Alignem za zůstatkovou cenu (sestava 2 × RH X50) 1 250 000,00 Kč
 Poznámky: Bivalence je podle faktur provedena jako 2 × elektrokotel 24 kW + 2 × topná jednotka 9 kW v akumulaci = 66 kW
-(nabídka uvádí ≈ 50 kW). Akumulace: 2 × MG0 1200 l, Ø 900 mm. Faktura LU-MI uvedena podle ISDOC (k úhradě 0 Kč –
-pravděpodobně již uhrazeno). Částky faktury GIENGER rozděleny do skupin podle položek; „potrubí a tvarovky“ je dopočet do
-celkové sumy faktury (106 066,44 Kč). Cena RH X50 105 000 Kč/ks podle zadavatele.
+(nabídka uvádí ≈ 50 kW). Akumulace: 2 × MG0 1200 l, Ø 900 mm. Faktura LU-MI 20260448 ověřena podle PDF: ceny po slevě 10
+%, uhrazeno zálohou FVZ26092 (platba přijata 23. 10. 2026), k úhradě 0 Kč. Částky faktury GIENGER rozděleny do skupin podle
+položek; „potrubí a tvarovky“ je dopočet do celkové sumy faktury (106 066,44 Kč). Cena RH X50 105 000 Kč/ks podle zadavatele.

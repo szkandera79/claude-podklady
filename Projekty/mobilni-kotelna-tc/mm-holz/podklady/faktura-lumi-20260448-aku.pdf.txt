@@ -1,0 +1,90 @@
+[Text vytažený z faktura-lumi-20260448-aku.pdf]
+
+--- strana 1 ---
+LU-MI servis s.r.o. FAKTURA - DAŇOVÝ DOKLAD č. 20260448
+Dodavatel:
+LU-MI servis s.r.o.
+Průmyslová 455/17
+568 02 SVITAVY
+IČ: 28800109
+DIČ: CZ28800109
+E-mail: info@lumiservis.cz
+www.lumiservis.cz
+Variabilní symbol: 20260448
+Konstantní symbol: 0308
+Objednávka č.: Telefon
+ze dne:
+20.10.2026
+Odběratel:
+IČ:
+Riva Trade, s.r.o.
+Riva Trade, s.r.o.
+Korunní 2569/108
+101 00 Praha
+08864811
+DIČ: CZ08864811
+Číslo účtu:
+238187960
+0300
+Datum vystavení:
+Datum splatnosti:
+Datum uskutečnění plnění: Forma úhrady:
+24.10.2026
+07.11.2026
+23.10.2026
+Konečný příjemce:
+Alignum cz
+Alignum cz, Staříč 542
+739 43 Staříč
+Příkazem
+Množství
+Označení dodávky J.cena Sleva Cena %DPH DPH Kč Celkem
+Fakturujeme Vám dle dodacího listu č.
+MG1049:MG0 1200l d900,
+2
+ks 10,00% 21% 7 903,64 45 540,00
+25 300,00
+37 636,36
+akumulační nádrž/Tank
+MG3029:IZO MG 1200l d900,
+2
+ks 10,00% 21% 4 054,91 23 364,00
+12 980,00
+19 309,09
+izolace/ UNI Vlies grey
+2
+1 200,00
+1 983,47
+DOPR:Dopravné pro zákazníka ks 21% 416,53 2 400,00
+Uhrazená záloha, č. FVZ26092,
+1
+-71 304,00
+-58 928,92
+21% -12 375,08 -71 304,00
+daň. dokl. ID26236 (platba přijata
+23.10.2026)
+Součet položek
+58 928,92 12 375,08
+71 304,00
+Uhrazené zálohy -71 304,00
+CELKEM K ÚHRADĚ 0,00
+Vystavil: Jaroslava Tmejová
+Krajský soud Hradec Králové, spisová značka C28104
+Dovolujeme si Vás upozornit, že v případě nedodržení data splatnosti uvedeného na faktuře Vám budeme účtovat úrok z prodlení v dohodnuté, resp. zákonné výši a
+smluvní pokutu (byla-li sjednána).
+Rekapitulace DPH v Kč:
+Základ v Kč Sazba 0,00
+0,00
+0,00
+0%
+12%
+21%
+DPH v Kč Celkem s DPH v Kč
+0,00
+0,00
+0,00
+0,00
+QR Faktura
+Převzal:
+Ekonomický a informační systém POHODA
+Razítko:

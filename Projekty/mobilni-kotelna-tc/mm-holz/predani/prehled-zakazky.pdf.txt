@@ -1,0 +1,55 @@
+[Text vytažený z prehled-zakazky.pdf]
+
+--- strana 1 ---
+Přehled zakázky – kotelna Alignum
+MM Holz (pronájem) · Alignum (možný odkup) · interní, nepředávat
+Riva Trade, s.r.o.
+6. 11. 2026
+bez DPH
+1 · Náklady
+Položka Bez DPH
+A · 2× REO RH X50 (sklad, 105 000 Kč/ks) 210 000 Kč
+B · Akumulace 2× 1200 l (LU-MI, fa 20260448) 58 929 Kč
+C · Hydraulika a bivalence 66 kW (GIENGER, fa 1860450386) 106 066 Kč
+D · Elektroinstalace, rozvaděč (ARGOS, fa 2600211211) 40 560 Kč
+Doložené náklady celkem 415 555 Kč
+Zatím bez faktury / k doplnění: oběhové čerpadlo ≈ 15 m³/h, kabel kaskády, montážní práce, doprava a jeřáb,
+doplnit
+revize
+2 · Tržby
+Položka Plátce Bez DPH
+Pronájem 6 měsíců × 80 000 Kč MM Holz 480 000 Kč
+Instalace, napojení, uvedení do provozu MM Holz 50 000 Kč
+Doprava MM Holz 30 000 Kč
+Tržby z pronájmu celkem 560 000 Kč
+Odkup kotelny – zůstatková cena (2× RH X50) Alignum 1 250 000 Kč
+Volitelně 3. jednotka RH X50 Alignum 250 000 Kč
+Demontáž a odvoz, pokud Alignum nekoupí (návrh smlouvy) MM Holz 40 000 Kč
+3 · Výsledek zakázky podle scénáře
+Scénář Tržby Doložené náklady Rozdíl Poznámka
+S1 – jen pronájem,
+kotelna se vrací
+600 000 Kč 415 555 Kč 184 445 Kč technologie zůstává nám (TČ, AKU, EK,
+rozvaděč) k dalšímu nasazení; část
+montážního materiálu je nevratná
+S2 – pronájem +
+odkup (2× RH X50)
+1 810 000 Kč 415 555 Kč 1 394 445 Kč nejpravděpodobnější scénář podle zájmu
+Alignum
+S3 – pronájem +
+odkup se 3.
+jednotkou
+2 060 000 Kč 520 555 Kč 1 539 445 Kč 3. RH X50 ze skladu za 105 000 Kč + montáž
+(doplnit)
+Rozdíl je před odečtením nedoložených nákladů (čerpadlo, kabel kaskády, práce, doprava, revize) a před daněmi. Při odkupu dříve
+než po 6 měsících zůstává nájemné MM Holz za celé období splatné (návrh smlouvy v2).
+4 · Rozdíly proti nabídce a otevřené body
+Bivalence: nabídka uvádí ≈ 50 kW, osazeno 2× elektrokotel 24 kW + 2× topná jednotka 9 kW v AKU =
+66 kW.
+Akumulace: 2× MG0 1200 l, Ø 900 mm (LU-MI), uhrazeno zálohou 23. 10. 2026.
+Rozvaděč: v nabídce pro Alignum „není součástí dodávky“, ale nakoupen a osazen námi (ARGOS 40
+560 Kč) – rozhodnout, zda ho zahrnout do odkupu, nebo fakturovat zvlášť.
+--- strana 2 ---
+Provoz: běží TČ1, TČ2 se zapojí po dodání kabelu kaskády; průtok čerpadlem ≈ 15 m³/h na hraně
+(sledovat ΔT ≤ 5 K).
+Smlouva: třístranná (MM Holz / Alignum / Riva Trade) – návrh v2 čeká na dořešení.
