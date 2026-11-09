@@ -9,6 +9,6 @@
 
 Otevřené body:
 - Výpočet výkonu (RH040 vs. RH050): potřebujeme PENB nebo spotřebu paliva.
-- Bod 7: instalace ještě v listopadu. Bod 8: bez další slevy, běžné ceny RH050 159 000 (e-shop), AKU 100 15 000 (e-shop), TUV 300 45 980 (standardní nabídková cena; e-shop 9. 11. ukazuje 30 000) → úspora 53 080 Kč; výprodej jen do doprodání skladu.
+- Bod 7: instalace ještě v listopadu. Bod 8: bez další slevy, běžné ceny RH050 159 000 (e-shop), AKU 100 22 000, TUV 300 45 980 (běžné ceny; e-shop ukazuje zvýhodněné ceny v setu s TČ 15 000 / 30 000) → úspora 60 080 Kč; výprodej jen do doprodání skladu.
 - Zbývá doplnit: lhůta pro nabídku FV (bod 10).
 - Samostatná nabídka FV 10 kWp: chybí podklady od klienta.

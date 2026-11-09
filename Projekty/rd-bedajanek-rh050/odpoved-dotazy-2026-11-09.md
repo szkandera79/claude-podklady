@@ -56,10 +56,10 @@ Tepelné čerpadlo Vám můžeme nainstalovat ještě v listopadu. Konkrétní d
 Ceny v nabídce jsou už výrazně zlevněné, jde o výprodej skladu. Pro srovnání uvádím naše běžné ceny (bez DPH):
 
 - Tepelné čerpadlo RH050 15 kW: běžně 159 000 Kč, ve výprodeji 124 900 Kč, sleva 34 100 Kč
-- Vyrovnávací nádoba AKU 100 l nerez se spirálou 3 kW: běžně 15 000 Kč, v nabídce 12 000 Kč, sleva 3 000 Kč
+- Vyrovnávací nádoba AKU 100 l nerez se spirálou 3 kW: běžně 22 000 Kč, v nabídce 12 000 Kč, sleva 10 000 Kč
 - Zásobník TUV 300 l nerez se spirálou 3 kW: běžně 45 980 Kč, v nabídce 30 000 Kč (25 000 Kč + doplatek 5 000 Kč), sleva 15 980 Kč
 
-Na zařízení tak oproti běžným cenám ušetříte 53 080 Kč bez DPH. Výprodejové ceny platí pouze do doprodání skladu, potom už nebudou k dispozici. Další slevu nad tyto ceny Vám bohužel nabídnout nemohu, nechci ji získat úsporou na komponentech ani na kvalitě montáže.
+Na zařízení tak oproti běžným cenám ušetříte 60 080 Kč bez DPH. (Ceny nádrží uvedené na našem e-shopu jsou už zvýhodněné ceny v setu s tepelným čerpadlem, nikoli běžné ceny.) Výprodejové ceny platí pouze do doprodání skladu, potom už nebudou k dispozici. Další slevu nad tyto ceny Vám bohužel nabídnout nemohu, nechci ji získat úsporou na komponentech ani na kvalitě montáže.
 
 9. Fotovoltaika 10 kWp a propojení s TČ
 Ano, fotovoltaiku Vám dodáme i namontujeme. Tepelné čerpadlo RH050 má vstup SG-Ready, takže jej propojíme se střídačem FV. TČ pak přednostně využívá přebytky ze střechy, hlavně pro ohřev TUV a nahřátí topné vody. Přesný způsob propojení navrhneme podle zvoleného střídače, případně baterie.
@@ -70,7 +70,7 @@ Rád ji připravím. Pošlete mi prosím:
 - roční spotřebu elektřiny (vyúčtování) a hodnotu hlavního jističe,
 - zda chcete i baterii, případně jaké kapacity.
 
-Nabídku na FV Vám pak zašlu do [DOPLNIT] dnů.
+Nabídku na FV Vám pak zašleme do 14 dnů.
 
 V případě dotazů mě kdykoli kontaktujte.
 
