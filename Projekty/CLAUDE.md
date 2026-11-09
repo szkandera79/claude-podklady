@@ -28,6 +28,7 @@ CLAUDE.md** a drž se pravidel tam uvedených.
 | `bd-jandova/` | nabídka BD Jandova 7, Ostrava-Zábřeh (17 b.j., náhrada CZT tepelnými čerpadly); `rhx30/` = rev. 1 s 3× RHX30 Pro + podklady pro SVJ |
 | `bd-michal/` | BD Michal — koncepční schémata kotelny, PENB, smlouva o dílo |
 | `bd-michal-nabidka/` | cenová nabídka BD u Dolu Michal (24 b.j.), varianty A/B, podklady pro společníky; `rhx30/` = rev. 1 s 3×/4× RHX30 Pro + podklad pro jednání společníků |
+| `rd-bedajanek-rh050/` | RD Stará Bělá (p. Bědajanek): TČ REO RH050 15 kW + TUV 300 l, odpověď na 10 dotazů (likvidace kotle, vyrovnávací nádoba, patka, FV 10 kWp) |
 | `porovnani-x50-2-3/` | porovnání 2× vs. 3× REO X50 (podklad pro výbor SVJ) |
 | `konkurence-tc-smart/` | konkurenční srovnání REO R290 Smart / REO R290 vs. 10 značek R290 monobloků (cena, COP/SCOP, hluk, výbava) |
 | `plot-fve/` | FV panely na vnější straně stávajícího plotu (40 m, JV, svah) — varianty konstrukce, sklon, předběžná statika, výkresy, rozpočet |
