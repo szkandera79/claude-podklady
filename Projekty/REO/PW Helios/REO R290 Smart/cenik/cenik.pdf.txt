@@ -1,0 +1,69 @@
+[Text vytažený z cenik.pdf]
+
+--- strana 1 ---
+Ceník REO R290 Smart a RHX Pro
+Tepelná čerpadla vzduch–voda R290 · 6–40 kW · platnost od 11/2026
+T opí přímo ze sluníčka
+75
+°C
+·
+provoz do
+−25
+–
+FV bez střídače SCOP až 5,29
+·
+A+++ 35 i 55
+°C Kompresor Mitsubishi Electric
+°C Kaskáda až 8 jednotek
+·
+Modbus
+Rodinné domy
+–
+REO R290 Smart
+Model Napájení Výkon A7/W35
+jmen. / rozsah
+SCOP
+35 / 55
+°C Lp 1 m Cena bez DPH
+RH06 1F 230 V 6 kW / 3,4–8,5 kW 5,00 / 3,84 38 dB(A) 129 000 Kč
+RH08 3F 400 V 8 kW / 4,1–11,0 kW 5,15 / 3,90 35 dB(A) 139 000 Kč
+RH10 3F 400 V 10 kW / 4,2–12,9 kW 5,20 / 3,90 39 dB(A) 149 000 Kč
+RH12 3F 400 V 12 kW / 6,3–17,0 kW 5,11 / 3,94 40 dB(A) 159 000 Kč
+RH14 3F 400 V 14 kW / 6,6–19,3 kW 5,29 / 3,91 41 dB(A) 169 000 Kč
+RH16 3F 400 V 16 kW / 7,8–22,0 kW 5,09 / 3,88 39 dB(A) 189 000 Kč
+V ceně RH06–RH16: venkovní jednotka s kompresorem Mitsubishi Electric, DC oběhové čerpadlo, záložní el. dohřev 3 kW, expanzní nádoba 6 l,
+pojistný ventil 3 bar, odvzdušnění, průtokový spínač, 7″ dotykový ovladač, Wi-Fi aplikace.
+Bytové domy, SVJ, firmy
+–
+RHX Pro
+Model Napájení Výkon A7/W35
+jmen. / rozsah
+SCOP
+35 / 55
+°C Lp 1 m Cena bez DPH
+RHX20 Pro 3F 400 V 20 kW / 10,2–28,0 kW 5,23 / 3,97 35 dB(A) 300 000 Kč
+RHX30 Pro 3F 400 V 30 kW / 12,7–40,0 kW 5,25 / 3,90 39 dB(A) 350 000 Kč
+RHX Pro: oběhové čerpadlo v jednotce (13 / 15 m), přípojky DN40, kompresor Mitsubishi Electric APB100 / APB119; dohřev a expanze se navrhují
+v kotelně. Kaskáda až 8 jednotek na jeden ovladač, Modbus RS485 / BMS.
+Zásobníky REO (nerez SUS 304)
+Zásobník Popis Cena bez DPH
+Watertank 210/70 l kombinovaný: 210 l TUV + 70 l akumulace, výměník 3,5 m²
+, ⌀ 56 × 190 cm Watertank 330/120 l kombinovaný: 330 l TUV + 120 l akumulace TUV 200 l TUV 300 l AKU 100 l AKU 500 l zásobník teplé vody, výměník 2,7 m²
+, spirála 3 kW, ⌀ 52 × 156 cm zásobník teplé vody, výměník 4,3 m²
+, ⌀ 56 × 186 cm akumulační / vyrovnávací, spirála 3 kW, ⌀ 47 × 104,5 cm akumulační, možnost doplnit spirálu 9 kW 39 000 Kč
+s naším TČ 25 000 Kč
+45 000 Kč
+s naším TČ 31 000 Kč
+25 000 Kč
+30 000 Kč
+15 000 Kč
+35 000 Kč
+Oceňuje se podle projektu
+deska MPPT pro přímé připojení FV panelů (1F 200–400 V DC, 3F 250–600 V DC, 3,5–5,5 kW FV), FV panely a DC jištění
+montáž, vnitřní hydraulika (trojcestný ventil TUV, filtrace, armatury, příp. další expanze), elektroinstalace, uvedení do
+provozu
+návrh výkonu / kaskády, dimenzování FV stringu a hydraulického zapojení zdarma ke konkrétnímu projektu
+Ceny v Kč bez DPH (21 %) za zařízení bez montáže podle e-shopu eko4home.cz / reoheating.cz, stav 11. 11. 2026; změny cen vyhrazeny. Výkon a
+COP/SCOP podle technické specifikace výrobce (EN 14511, EN 14825 průměrné klima), hluk Lp ve vzdálenosti 1 m podle ErP (35 °C). Přímé napájení z FV
+vyžaduje volitelnou desku MPPT.
+REO HEATING · Riva Trade s.r.o., IČ 08864811 · Smetanova 555, 739 61 Třinec · +420 774 872 467 · info@reoheating.cz · reoheating.cz · eko4home.cz
