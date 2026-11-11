@@ -37,18 +37,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --green:#2E6B33;
-    --green-bright:#5BA32E;
-    --green-tint:#EAF4DE;
-    --amber:#FCC83C;
-    --amber-deep:#EAAE1C;
-    --ink:#16201C;
-    --muted:#5F6B64;
+    --green:#3E8A2F;
+    --green-bright:#5AA23C;
+    --green-tint:#EEF6E8;
+    --amber:#F2C230;
+    --amber-deep:#E0AE1C;
+    --ink:#1F2421;
+    --muted:#5D6460;
     --bg:#FFFFFF;
-    --bg-alt:#F5F9F1;
-    --line:#E6EEE0;
-    --shadow:0 20px 44px -26px rgba(16,40,30,.30);
-    --shadow-sm:0 8px 22px -14px rgba(16,40,30,.30);
+    --bg-alt:#F6F8F4;
+    --line:#E6EBE2;
+    --shadow:0 18px 40px -24px rgba(30,40,30,.22);
+    --shadow-sm:0 8px 20px -14px rgba(30,40,30,.22);
     --maxw:1180px;
     --r:18px;
   }
@@ -435,6 +435,71 @@
   .lb-close:hover,.lb-nav:hover{background:rgba(255,255,255,.3)}
   .lb-cap{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#fff;font-size:.88rem;padding:0 24px;opacity:.9}
   @media(max-width:620px){.lb-nav{width:42px;height:42px;font-size:24px}.lb-prev{left:6px}.lb-next{right:6px}}
+
+  /* ---------- REFRESH 11/2026 podle FB kreativ: světlý hero, ikony s obrysem, jasně zelené bloky, světlá patička ---------- */
+  /* ---------- HERO: světlý panel vlevo, fotka vpravo (jako na bannerech) ---------- */
+  .hero{background:#FAFAF8}
+  .hero-slide{background-position:70% center}
+  .hero::after{background:linear-gradient(90deg,rgba(250,250,248,.98) 0%,rgba(250,250,248,.94) 34%,rgba(250,250,248,.55) 52%,rgba(250,250,248,0) 70%)}
+  .hero .eyebrow{color:var(--green-bright)}
+  .hero h1{color:var(--ink);text-shadow:none}
+  .hero h1 .acc{color:var(--green-bright)}
+  .hero .sub{color:var(--muted)}
+  .hero .btn-outline{border-color:var(--line);color:var(--green);background:#fff}
+  .hero .btn-outline:hover{background:var(--green-tint);border-color:var(--green-bright)}
+  .hero-flag{background:#fff;border:1px solid var(--line);border-left:4px solid var(--green-bright);color:var(--ink);box-shadow:var(--shadow-sm);backdrop-filter:none}
+  .hero-flag strong{color:var(--green)}
+  .hero-flag-ico{background:var(--green-tint);box-shadow:none}
+  .hero-trust span{color:var(--ink)}
+  .hero-trust svg{stroke:var(--green-bright)}
+  .hero-dots button{background:rgba(31,36,33,.25)}
+  /* zelené a žluté oblouky u spodního okraje hero (motiv z bannerů) */
+  .hero::before{content:"";position:absolute;left:0;right:0;bottom:-1px;height:90px;z-index:2;pointer-events:none;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 90' preserveAspectRatio='none'%3E%3Cpath d='M0 70 C 420 20 900 20 1440 60 L1440 90 L0 90Z' fill='%23ffffff'/%3E%3Cpath d='M0 70 C 420 20 900 20 1440 60' fill='none' stroke='%235AA23C' stroke-width='5'/%3E%3Cpath d='M0 80 C 460 34 920 34 1440 72' fill='none' stroke='%23F2C230' stroke-width='3'/%3E%3C/svg%3E") center bottom/100% 100% no-repeat}
+  @media(max-width:620px){
+    .hero::after{background:linear-gradient(180deg,rgba(250,250,248,.9) 0%,rgba(250,250,248,.82) 55%,rgba(250,250,248,.45) 100%)}
+    .hero-slide{background-position:center bottom}
+    .hero::before{height:40px}
+  }
+
+  /* ---------- ikony v kolečku s tenkým zeleným obrysem ---------- */
+  .feature .badge,.svc .badge,.dnode .nic,.servicebar .sb-ic,.loanwin-ico{background:#fff;border:2px solid var(--green-bright)}
+  .aud .badge{background:#fff;border:2px solid var(--green-bright);border-radius:50%}
+  .feature,.svc,.sol,.model,.aud,.qa,.pcard,.diagram,.formbox{box-shadow:var(--shadow-sm)}
+
+  /* ---------- zvýrazněné bloky: jasně zelená místo tmavé ---------- */
+  .model.featured{background:var(--green-bright);border-color:var(--green-bright)}
+  .model.featured .mfoot{color:#fff}
+  .cardinfo,.control-bar{background:var(--green-bright)}
+  .cardinfo .row span{color:#fff}
+  .cardinfo .note{color:#EAF5E2}
+  .band{background:linear-gradient(120deg,var(--green-bright),#4C9433);position:relative;overflow:hidden}
+  .band p{color:#F1F8EC}
+  .band .btn-amber{box-shadow:0 10px 24px -12px rgba(0,0,0,.35)}
+  .btn-green{background:var(--green-bright)}
+  .ck-accept{background:var(--green-bright)!important}
+
+  /* ---------- patička: světlá se zeleným pruhem nahoře ---------- */
+  footer{background:#F3F6F0;color:var(--muted);border-top:6px solid var(--green-bright)}
+  .fgrid .logo,.fgrid .logo .b{color:var(--ink)}
+  .fgrid p{color:var(--muted)}
+  .fcol h4{color:var(--green)}
+  .fcol a,.fcol p{color:#3E4541}
+  .fcol a:hover{color:var(--green-bright)}
+  .legal{border-top:1px solid var(--line);color:#7A817D}
+
+  /* ---------- menu: položky na jeden řádek (po přidání „Mobilní kotelny“ se lámaly) ---------- */
+  .menu{gap:14px}
+  .menu a.link{white-space:nowrap;font-size:.86rem}
+  .navright{flex:0 0 auto}
+  /* Když se menu nevejde (např. delší německé názvy), JS přidá headeru třídu .compact = stejné chování jako pod 980 px */
+  header.compact .topcontact{display:none}
+  header.compact .menu{position:fixed;top:74px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:10px 24px 22px;transform:translateY(-130%);transition:transform .3s ease;box-shadow:0 20px 30px -20px rgba(0,0,0,.25);max-height:calc(100vh - 74px);overflow:auto}
+  header.compact .menu.show{transform:translateY(0)}
+  header.compact .menu a.link{padding:14px 0;border-bottom:1px solid var(--line);color:var(--ink);font-size:.95rem}
+  header.compact .menu .btn{display:inline-flex;margin-top:14px;justify-content:center}
+  header.compact .burger{display:flex}
+  @media(max-width:1500px){.topcontact a[href^="mailto"]{display:none}}
 </style>
 </head>
 <body>
@@ -1319,6 +1384,19 @@
 <script>
   const burger=document.getElementById('burger'), menu=document.getElementById('menu');
   burger.addEventListener('click',()=>{const open=menu.classList.toggle('show');burger.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);});
+  // Menu, které se nevejde na řádek (delší názvy v jiných jazycích), přepnout na ☰, aby přepínač jazyka nezmizel za okraj
+  (function(){
+    const hdr=document.querySelector('header'), nav=hdr.querySelector('.nav'), right=hdr.querySelector('.navright');
+    function fit(){
+      hdr.classList.remove('compact');
+      if(innerWidth<=980)return;
+      if(right.getBoundingClientRect().right>nav.getBoundingClientRect().right+1||nav.scrollWidth>nav.clientWidth+1)hdr.classList.add('compact');
+    }
+    addEventListener('resize',fit);
+    new MutationObserver(()=>requestAnimationFrame(fit)).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+    fit();
+  })();
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('show');burger.classList.remove('open');burger.setAttribute('aria-expanded','false');}));
 
   document.querySelectorAll('.qa button').forEach(btn=>{

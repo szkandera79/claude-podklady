@@ -1,7 +1,8 @@
-# Návrh refreshe thermavera.cz podle FB kreativ (11. 11. 2026)
+# Refresh thermavera.cz podle FB kreativ (11. 11. 2026) — ZAPRACOVÁNO
 
 Světlý styl podle bannerů REO HEATING (bílý podklad, jasně zelená, žlutá CTA, antracitový text, zelené a žluté oblouky).
-**Jen návrh:** `refresh.css` přepisuje interní styly `index.html`, ostrý web ani `dist/` se nemění.
+Zapracováno 11. 11. 2026 do `index.html` (paleta v `:root` + blok „REFRESH 11/2026“ na konci `<style>`), `kalkulacka.html` (`:root`)
+a `../mobilni-kotelny-web/assets/style.css`. `refresh.css` zůstává jako záznam návrhu.
 Texty se nemění, takže není potřeba nic překládat.
 
 ## Náhled

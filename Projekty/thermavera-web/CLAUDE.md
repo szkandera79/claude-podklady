@@ -59,16 +59,20 @@ Alternativní koncepty (needituj, dokud o to uživatel nepožádá) jsou v `refe
 - `reference/thermavera-dark.html` — tmavá technická varianta (deep green hero).
 - `reference/vireo.html` — starší koncept značky VIREO.
 
-## Barevná paleta (CSS proměnné v `:root`)
-    --green:#0F3D2E         /* hluboká zelená, tmavé prvky, footer */
-    --green-bright:#1E8F5B  /* akcent: eyebrow, ikony, odkazy */
-    --green-tint:#E7F3EC    /* světlé pozadí ikon/odznaků */
-    --amber:#F2A33A         /* CTA tlačítka */
-    --amber-deep:#DA8718    /* CTA hover */
-    --ink:#16201C           /* hlavní text */
-    --muted:#5F6B64         /* tlumený text */
-    --bg:#FFFFFF / --bg-alt:#F4F8F5 / --line:#E5ECE7
-Změna firemního akcentu = úprava `--green-bright` (a případně `--amber`).
+## Barevná paleta (CSS proměnné v `:root`) — světlý refresh 11. 11. 2026 podle FB kreativ
+    --green:#3E8A2F         /* tmavší zelená jen pro text na světlém pozadí, hover */
+    --green-bright:#5AA23C  /* hlavní zelená: zvýraznění v nadpisech, ikony, zvýrazněné bloky, pruh patičky */
+    --green-tint:#EEF6E8    /* světlé pozadí odznaků */
+    --amber:#F2C230         /* žlutá CTA tlačítka */
+    --amber-deep:#E0AE1C    /* CTA hover */
+    --ink:#1F2421           /* antracitový text */
+    --muted:#5D6460         /* tlumený text */
+    --bg:#FFFFFF / --bg-alt:#F6F8F4 / --line:#E6EBE2
+- Hero je světlý: bílý přechod zleva, fotka vpravo, tmavé písmo, zelený a žlutý oblouk dole (`.hero::before`).
+- Ikony v bílém kolečku s tenkým zeleným obrysem, zvýrazněné bloky jasně zelené, patička světlá se zeleným pruhem.
+- Pravidla refreshe jsou na konci `<style>` (blok „REFRESH 11/2026“); původní návrh v `navrh-refresh/`.
+- Logo (tmavě zelený čtverec #2E6B33 se žlutou sedmičkou) se nemění.
+- Stejnou paletu má `kalkulacka.html` (`:root`) a `../mobilni-kotelny-web/assets/style.css`.
 
 ## Struktura sekcí (kotvy / id)
 header → `#top` hero → `#proc` (Proč) → `#reseni` (Co dodáváme) → Naše řešení →
