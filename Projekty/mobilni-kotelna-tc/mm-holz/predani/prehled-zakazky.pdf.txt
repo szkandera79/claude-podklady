@@ -10,12 +10,11 @@ bez DPH
 Položka Bez DPH
 A · 2× REO RH X50 (sklad, 105 000 Kč/ks) 210 000 Kč
 B · Akumulace 2× 1200 l (LU-MI, fa 20260448) 58 929 Kč
-C · Hydraulika a bivalence 66 kW (GIENGER, fa 1860450386) 106 066 Kč
+C · Hydraulika, bivalence 66 kW, oběhová čerpadla MAGNA3 a TRINNITY (GIENGER, fa 1860450386
+170 960 Kč
+a 1860453050–53)
 D · Elektroinstalace, rozvaděč (ARGOS, fa 2600211211) 40 560 Kč
 E · Montážní práce: topenářské 50 000 Kč + elektroinstalační 20 000 Kč 70 000 Kč
-F · Hydraulika – čerpadla MAGNA3 a TRINNITY, doplňky, lisovací čelisti (GIENGER, fa 1860453050–
-64 893 Kč
-53)
 Náklady celkem 550 449 Kč
 Zatím bez dokladu / k doplnění: kabel kaskády, doprava a jeřáb, revize doplnit
 2 · Tržby – pronájem (platí MM Holz, objednávka 4500090045)
