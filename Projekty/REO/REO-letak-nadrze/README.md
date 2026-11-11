@@ -74,3 +74,6 @@ za nové vždy zkontrolovat, zda na plášti nezůstal štítek.
 - Publikováno jako artefakt https://claude.ai/artifact/EPYT2QCFdGPg3cduyU1vGL (2026-10-15).
   Po změně `letak.html` přegenerovat a znovu publikovat na stejnou URL.
   **22. 10. 2026: nové logo v `letak.html` i `build_web.py`, artefakt přepublikován (verze 2).**
+- **11. 11. 2026 (verze 3):** tlačítko „Stáhnout katalog v PDF“ (obálka, navigace, kontakt) přes schopnost `downloads`
+  a sekce technických výkresů. Publikovat vždy se soubory: `REO_HEATING_Katalog_nadrzi.pdf`, `vykresy/pdf/*.pdf`,
+  `vykresy/nahled/*.jpg` (root = tato složka) a `capabilities: {downloads: true}` — jinak tlačítka i výkresy nefungují.
