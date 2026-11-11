@@ -149,3 +149,15 @@ table.spec td{ text-align:left; white-space:normal; color:var(--body); }
 .dwg .card .im img{ width:100%; height:auto; }
 .dwg .card .dl{ margin-top:10px; font-size:13px; font-weight:800; letter-spacing:.06em; color:var(--green-bright); }
 .dwg .card:hover .dl{ color:var(--green); }
+
+/* ── stažení PDF ── */
+.nav .links a.p{ border:1.5px solid var(--green-bright); }
+.cover .pdfbtn{ display:inline-flex; align-items:baseline; gap:10px; margin-top:16px; margin-left:0; color:var(--green); font-weight:800; font-size:15px; text-decoration:none; border:2px solid var(--green-bright); padding:9px 20px; border-radius:40px; }
+.cover .pdfbtn span{ font-weight:600; font-size:12.5px; color:var(--body); }
+.cover .pdfbtn:hover{ background:var(--green-tint); }
+.cover .badge{ margin-right:12px; }
+.end .ctas{ display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
+.end .ctas .cta{ margin-top:0; }
+.end .cta.pdf{ background:#fff; color:var(--green); border:2px solid var(--green-bright); padding:11px 28px; }
+.end .cta.pdf:hover{ background:var(--green-tint); }
+a[aria-busy="true"]{ opacity:.6; cursor:progress; }

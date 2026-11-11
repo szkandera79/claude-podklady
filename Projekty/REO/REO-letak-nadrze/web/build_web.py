@@ -31,7 +31,12 @@ ids = ['uvod','prehled','an','zv','zh','zd','kn','zs','zakazka','kontakt']
 it = iter(ids)
 body = re.sub(r'<section class="page( [a-z]+)?">', lambda m: f'<section class="page{m.group(1) or ""}" id="{next(it)}">', body)
 body = body.replace('class="tblhead">Proti dvěma', 'class="tblhead gap">Proti dvěma').replace('class="tblhead">Jak postupovat','class="tblhead gap">Jak postupovat')
-body = body.replace('<div class="cta">Chci nezávaznou nabídku</div>', '<a class="cta" href="https://reoheating.cz" target="_blank" rel="noopener">Chci nezávaznou nabídku</a>')
+body = body.replace('<div class="cta">Chci nezávaznou nabídku</div>', '<div class="ctas"><a class="cta" href="https://reoheating.cz" target="_blank" rel="noopener">Chci nezávaznou nabídku</a>'
+                    '<a class="cta pdf" href="REO_HEATING_Katalog_nadrzi.pdf" target="_blank" rel="noopener" data-pdf>Stáhnout katalog v PDF ↓</a></div>')
+# PDF ke stažení i na obálce (publikuje se jako soubor artefaktu vedle stránky)
+body = body.replace('<div class="badge">Objem, přípojky i materiál na míru projektu</div>',
+                    '<div class="badge">Objem, přípojky i materiál na míru projektu</div>\n'
+                    '    <a class="pdfbtn" href="REO_HEATING_Katalog_nadrzi.pdf" target="_blank" rel="noopener" data-pdf>Stáhnout katalog v PDF ↓ <span>10 stran A4 · 2 MB</span></a>', 1)
 
 # technické výkresy (PDF + náhledy se publikují jako soubory artefaktu, viz vykresy/)
 DWG = [('REO AN-100', 'Akumulační nádrž', '100 l'), ('REO AN-200', 'Akumulační nádrž', '200 l'),
@@ -56,7 +61,7 @@ body = body.replace('<section class="page end" id="kontakt">', dwg + '<section c
 
 nav = '''<nav class="nav" aria-label="Typy nádrží"><div class="in">
 <a class="brand" href="#uvod"><img src="%s" alt="REO HEATING"></a>
-<div class="links"><a href="#an">AN</a><a href="#zv">ZV</a><a href="#zh">ZH</a><a href="#zd">ZD</a><a href="#kn">KN</a><a href="#zs">ZS</a><a href="#zakazka">Na míru</a><a href="#vykresy">Výkresy</a><a href="#kontakt" class="k">Kontakt</a></div>
+<div class="links"><a href="#an">AN</a><a href="#zv">ZV</a><a href="#zh">ZH</a><a href="#zd">ZD</a><a href="#kn">KN</a><a href="#zs">ZS</a><a href="#zakazka">Na míru</a><a href="#vykresy">Výkresy</a><a href="REO_HEATING_Katalog_nadrzi.pdf" target="_blank" rel="noopener" class="p" data-pdf>PDF ↓</a><a href="#kontakt" class="k">Kontakt</a></div>
 </div></nav>''' % img_uri('logo-reo-heating.svg')
 
 css = open(os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), 'web.css'), encoding='utf-8').read()
@@ -70,6 +75,34 @@ html = f'''<title>Katalog nádrží REO HEATING</title>
 <main>
 {body}
 </main>
+<script>
+/* Stažení PDF: v claude.ai přes schopnost „downloads“ (odkaz v rámu artefaktu sám stahovat nesmí),
+   jinde zůstává obyčejný odkaz na publikovaný soubor. */
+(function(){{
+  var links = document.querySelectorAll('a[data-pdf]');
+  if (!window.claude || !window.claude.use) return;
+  window.claude.use('downloads').then(function(dl){{
+    if (!dl) return;
+    links.forEach(function(a){{
+      a.addEventListener('click', function(ev){{
+        ev.preventDefault();
+        var label = a.firstChild.nodeValue;
+        a.setAttribute('aria-busy','true');
+        fetch(a.getAttribute('href')).then(function(r){{
+          if (!r.ok) throw {{code:'fetch'}};
+          return r.blob();
+        }}).then(function(b){{
+          return dl.save({{filename:'REO_HEATING_Katalog_nadrzi.pdf', data:b}});
+        }}).catch(function(e){{
+          var c = e && e.code;
+          if (c === 'declined' || c === 'rate_limited') return;
+          window.open(a.href, '_blank', 'noopener');
+        }}).then(function(){{ a.removeAttribute('aria-busy'); }});
+      }});
+    }});
+  }});
+}})();
+</script>
 '''
 open(OUT,'w',encoding='utf-8').write(html)
 print(len(html)//1024, 'KB')
