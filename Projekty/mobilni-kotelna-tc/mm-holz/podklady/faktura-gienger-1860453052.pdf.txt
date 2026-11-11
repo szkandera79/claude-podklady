@@ -1,0 +1,123 @@
+[Text vytažený z faktura-gienger-1860453052.pdf]
+
+--- strana 1 ---
+Faktura č. 1860453052
+Datum vystavení 09.11.2026
+Faktura ev. č. 1860453052
+Tento doklad je zároveň daňovým dokladem
+Datum UZP: 09.11.2026 Datum splatnosti: 23.11.2026
+Variabilní symbol: 1860453052
+Tento symbol uvádějte, prosím, při platbě
+Dodavatel
+IČ: 29700272
+DIČ: CZ29700272
+Zápis do OR : KOS Brno oddíl C, vl. 152655
+GIENGER spol. s r.o.
+Kvítkovická 1633
+763 61 Napajedla
+Provozovna: Ostrava-Kunčičky
+Účet:1388196891/2700 UniCredit Bank
+Pro zahraniční platby naleznete údaje níže.
+Odběratel
+Riva Trade, s.r.o.
+Korunní 2569/108
+CZ - 101 00 Praha
+IČO: 08864811 DIČ: CZ08864811
+POZOR ZMĚNA IČO, DIČ OD 1.7.2026.
+Zboží Množství Netto/MJ Daň % Netto DPH Brutto
+Zakázka: AT/2026/429558 Netto: 15 498,89 Kč Objednávka: Biocel
+Dodací list: AT/2026/454413 Netto: 5 125,17 Kč
+38 008 KKV 32 FM Kohout kulový 5/4" páka M/F, voda 4,00 ks 256,99 21 1 027,94 215,87
+1 243,81 Kč
+38 035 MOSKZ 40 Klapka zpětná 6/4" voda 2,00 ks 244,63 21 591,99 Kč
+489,25 102,74
+277 282 STP390 200 054 Přechodka SteelPres s vnitřním závitem 54
+6,00 ks 301,85 21 2 191,44 Kč
+1 811,11 380,33
+x 2"
+103 486 FIT241 208 C Redukce 2"x6/4" černá 6,00 ks 39,60 21 287,50 Kč
+237,60 49,90
+103 571 FIT280 150 C Vsuvka 6/4" černá 6,00 ks 32,40 21 235,22 Kč
+194,40 40,82
+103 472 FIT130 158 C T kus 6/4"x1"x6/4" černý 2,00 ks 77,10 21 186,58 Kč
+154,20 32,38
+38 007 KKV 25 FM Kohout kulový 1" páka M/F, voda 2,00 ks 155,53 21 376,38 Kč
+311,06 65,32
+216 616 STP389 102 035 T kus SteelPres s vniřním závitem 35 x
+4,00 ks 224,90 21 1 088,52 Kč
+899,61 188,92
+1/2" x 35 mm
+Dodací list: AT/2026/454911 Netto: 1 865,89 Kč
+579 740 TRISE15 Ventil TRINNITY 1/2" odvzdušňovací
+4,00 ks 183,00 21 885,72 Kč
+732,00 153,72
+automatický vč. zpětné klapky
+449 715 GCMOSP1550 Prodloužení 1/2"x50 mosazné, TRINNITY 3,00 ks 90,85 21 329,77 Kč
+272,54 57,23
+7 153 UPTO35 Objímka jednošroubová 1" M8 32-37mm 15,00 ks 13,34 21 200,08 42,02
+242,09 Kč
+216 513 STP316 035 005 Trubka SteelPres z uhlíkové oceli průměr
+6,00 m 110,21 21 800,15 Kč
+661,28 138,87
+35 x 1,5 mm vnější zinkování
+Dodací list: AT/2026/455046 Netto: 3 601,95 Kč
+601 157 TRICOE256N Čerpadlo oběhové ekonomické Trinnity
+1,00 ks 2 390,00 21 2 891,90 Kč
+2 390,00 501,90
+NEW 25/6/180mm, plně automatický
+režim AUTOmode, vč. šroubení a izolace
+101 837 IVAI01832112 Šroubení k čerpadlu uzavírací 1"x6/4",
+2,00 ks 236,25 21 571,73 Kč
+472,50 99,22
+vnitřní-vnitřní závit, typ: IVAR.KUC, mosaz
+OT 58
+38 027 MOSF 25 Filtr voda 1" mosaz 1,00 ks 135,96 21 164,51 Kč
+135,96 28,55
+38 007 KKV 25 FM Kohout kulový 1" páka M/F, voda 1,00 ks 155,53 21 188,19 Kč
+155,53 32,66
+38 082 MOS V 25 Vsuvka 1" mosaz 4,00 ks 43,16 21 208,91 Kč
+172,66 36,26
+220 553 MOS R 50 25 Redukce 2"x1", mosaz 2,00 ks 137,65 21 333,12 Kč
+275,31 57,81
+Dodací list: AT/2026/455211 Netto: 4 903,87 Kč
+216 533 STP381 035 900 Koleno 90° SteelPres 35 mm 15,00 ks 167,73 21 3 044,27 Kč
+2 515,92 528,34
+561 601 TRIIZOAC89-25 Izolace kaučuková AC 89x25, černá,
+10,00 m 217,59 21 2 632,90 Kč
+2 175,95 456,95
+TRINNITY
+610 345 TRIPENAMON Pěna montážní nízkoexpanzní pistolová
+1,00 ks 212,00 21 256,52 Kč
+212,00 44,52
+750 ml, TRINNITY
+Dodací list: Netto: 2,00 Kč
+145 922 NEZB_EO Recyklační poplatek k položce TRICOE256N 1,00 - 2,00 21 2,00 0,42
+2,42 Kč
+Daň % Netto DPH Brutto
+21
+Základní sazba DPH 3 254,77
+15 498,89 18 753,66Kč
+Celkem: 15 498,89 3 254,77 18 753,66Kč
+Strana: 1/2
+--- strana 2 ---
+Faktura č. 1860453052
+Datum vystavení 09.11.2026
+Faktura ev. č. 1860453052
+Tento doklad je zároveň daňovým dokladem
+Datum UZP: 09.11.2026 Datum splatnosti: 23.11.2026
+Variabilní symbol: 1860453052
+Tento symbol uvádějte, prosím, při platbě
+Daň % Netto DPH Brutto
+Celkem k úhradě Zaokrouhlení: 0,34 18 754,00 Kč
+Pro zahraniční platby :
+EUR IBAN: CZ4303001549150017698513
+EUR SWIFT: CEKOCZPP
+CZK IBAN: CZ2703000000000017698513
+CZK SWIFT: CEKOCZPP
+Vystavil Šembera František, Email: fsembera@gienger.cz, Tel.: , Mob.: +420 730 163 949
+GIENGER spol. s r.o. tímto prohlašuje, že na všechny dodávané výrobky má k dispozici "PROHLÁŠENÍ O SHODĚ" podle §12 ods. 4, pís. b zák.
+22/1997 Sb.
+Zboží je až do úplného zaplacení majetkem firmy GIENGER spol. s r.o..
+Vaše případné reklamace vyřeší Vaše Oddělení zákaznických služeb - tel : 596229088
+E-mail: reklamace.os@gienger.cz
+Strana: 2/2

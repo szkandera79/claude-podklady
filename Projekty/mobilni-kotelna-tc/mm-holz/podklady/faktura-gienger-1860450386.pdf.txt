@@ -1,0 +1,324 @@
+[Text vytažený z faktura-gienger-1860450386.pdf]
+
+--- strana 1 ---
+Faktura č. 1860450386
+Datum vystavení 31.10.2026
+Faktura ev. č. 1860450386
+Tento doklad je zároveň daňovým dokladem
+Datum UZP: 31.10.2026 Datum splatnosti: 14.11.2026
+Variabilní symbol: 1860450386
+Tento symbol uvádějte, prosím, při platbě
+Dodavatel
+IČ: 29700272
+DIČ: CZ29700272
+Zápis do OR : KOS Brno oddíl C, vl. 152655
+GIENGER spol. s r.o.
+Kvítkovická 1633
+763 61 Napajedla
+Provozovna: Ostrava-Kunčičky
+Účet:1388196891/2700 UniCredit Bank
+Odběratel
+Riva Trade, s.r.o.
+Korunní 2569/108
+CZ - 101 00 Praha
+IČO: 08864811 DIČ: CZ08864811
+POZOR ZMĚNA IČO, DIČ OD 1.7.2026.
+Zboží Množství Netto/MJ Daň % Netto DPH Brutto
+Zakázka: AT/2026/428993 Netto: 106 066,44 Kč Objednávka:
+Dodací list: AT/2026/453254 Netto: 32 090,94 Kč
+40 462 FIT290 150 C Zátka 6/4" černá 2,00 ks 19,80 21 47,92 Kč
+39,60 8,32
+103 630 FIT241 133 C Redukce 5/4"x1" černá 8,00 ks 22,50 21 217,80 Kč
+180,00 37,80
+38 007 KKV 25 FM Kohout kulový 1" páka M/F, voda 6,00 ks 155,53 21 933,18 195,97
+1 129,15 Kč
+103 478 FIT241 105 C Redukce 1"x1/2" černá 4,00 ks 14,40 21 69,70 Kč
+57,60 12,10
+579 740 TRISE15 Ventil TRINNITY 1/2" odvzdušňovací
+6,00 ks 183,00 21 1 328,58 Kč
+1 098,00 230,58
+automatický vč. zpětné klapky
+103 501 FIT331 125 C Šroubení 5/4" FM černé 6,00 ks 91,20 21 662,11 Kč
+547,20 114,91
+103 490 FIT280 125 C Vsuvka 5/4" černá 12,00 ks 23,70 21 344,12 Kč
+284,40 59,72
+103 462 FIT092 125 C Koleno 92 I/E 5/4" černé 4,00 ks 42,30 21 204,73 Kč
+169,20 35,53
+103 468 FIT130 125 C T kus 5/4" černý 4,00 ks 42,30 21 204,73 Kč
+169,20 35,53
+38 008 KKV 32 FM Kohout kulový 5/4" páka M/F, voda 4,00 ks 256,99 21 1 027,94 215,87
+1 243,81 Kč
+103 568 FIT241 206 C Redukce 2"x5/4" černá 6,00 ks 41,70 21 302,74 Kč
+250,20 52,54
+221 960 STP387 200 054 Přechodka SteelPres s vnějším závitem 54
+2,00 ks 318,97 21 771,90 Kč
+637,93 133,97
+x 2"
+277 282 STP390 200 054 Přechodka SteelPres s vnitřním závitem 54
+8,00 ks 301,85 21 2 921,92 Kč
+2 414,81 507,11
+x 2"
+103 490 FIT280 125 C Vsuvka 5/4" černá 4,00 ks 23,70 21 114,71 Kč
+94,80 19,91
+216 535 STP381 054 900 Koleno 90° SteelPres 54 mm 16,00 ks 329,51 21 6 379,32 Kč
+5 272,16 1 107,15
+216 555 STP381 054 450 Koleno 45° SteelPres 54 mm 4,00 ks 227,99 21 1 103,45 Kč
+911,94 191,51
+216 565 STP381 054 451 Koleno 45° SteelPres s jedním zásuvným
+4,00 ks 225,57 21 1 091,75 Kč
+902,28 189,48
+koncem 54 mm
+305 865 UPTOD52 Objímka dvoušroubová Top 6/4" 48-53mm 16,00 ks 19,47 21 376,88 Kč
+331 822 CHG50 Nádoba expanzní COSMO MAG-H 50l, max.
+311,47 65,41
+1,00 ks 1 413,50 21 1 710,34 Kč
+1 413,50 296,83
+tlak 6bar, topení, bílá
+37 620 REF6830100 Kohout kulový se zajištěním MK 3/4" 1,00 ks 477,20 21 577,41 Kč
+477,20 100,21
+221 957 STP387 304 028 Přechodka SteelPres s vnějším závitem 28
+2,00 ks 133,59 21 323,29 Kč
+267,18 56,11
+x 3/4"
+568 398 TRISV252TR Ventil pojistný, TRINNITY - 1" x 5/4" 2,5
+3,00 ks 739,69 21 2 685,09 Kč
+2 219,08 466,01
+bar
+140 524 MANT80/4Z15 Termomanometr DN80 0-4 bar G1/2" 0-
+2,00 ks 223,85 21 541,72 Kč
+447,70 94,02
+120°C zadní
+216 575 STP382 054 000 T kus SteelPres jednoznačný 54 mm 4,00 ks 379,35 21 1 836,04 Kč
+216 620 STP389 102 054 T kus SteelPres s vniřním závitem 54 x
+1 517,39 318,65
+2,00 ks 389,99 21 943,78 Kč
+779,98 163,80
+1/2" x 54 mm
+216 515 STP316 054 005 Trubka SteelPres z uhlíkové oceli průměr
+18,00 m 184,78 21 4 024,49 Kč
+3 326,03 698,47
+54 x 1,5 mm vnější zinkování
+215 097 TEPJ150 Jímka teploměrová 1/2" délka 150 mm,
+4,00 ks 152,77 21 739,40 Kč
+611,08 128,33
+mosaz
+103 492 FIT290 100 C Zátka 1" černá 4,00 ks 11,70 21 56,63 Kč
+46,80 9,83
+216 535 STP381 054 900 Koleno 90° SteelPres 54 mm 4,00 ks 329,51 21 1 594,83 Kč
+1 318,04 276,79
+561 548 TRIIZOAC54-13 Izolace kaučuková AC 54x13, černá,
+14,00 m 60,52 21 1 025,25 Kč
+847,32 177,94
+TRINNITY
+188 935 CCLHKB850 Svorník posuvný CONEL CLIC M8x50 20,00 ks 13,55 21 327,88 Kč
+270,98 56,91
+5 123 UPSK8100 Šroub KOMBI M8x100 mm TORX ZB 100,00 ks 5,41 21 654,12 Kč
+540,60 113,53
+5 124 UPSK8120 Šroub KOMBI M8x120 mm TORX ZB 100,00 ks 6,41 21 775,83 Kč
+641,18 134,65
+Strana: 1/3
+--- strana 2 ---
+Faktura č. 1860450386
+Datum vystavení 31.10.2026
+Faktura ev. č. 1860450386
+Tento doklad je zároveň daňovým dokladem
+Datum UZP: 31.10.2026 Datum splatnosti: 14.11.2026
+Variabilní symbol: 1860450386
+Tento symbol uvádějte, prosím, při platbě
+Zboží Množství Netto/MJ Daň % Netto DPH Brutto
+5 122 UPSK880 Šroub KOMBI M8x80 mm TORX ZB 100,00 ks 3,86 21 466,49 Kč
+385,53 80,96
+101 142 UPS830 Matice spojovací DIN6334 M8x13x30mm
+30,00 ks 7,66 21 278,09 Kč
+229,82 48,26
+ZB
+640 364 FIS568010 Hmoždinka SX Plus 10x50 100,00 ks 3,27 21 395,55 Kč
+326,90 68,65
+109 192 UPT22000008 Závěs trapézový TZ M8 regulační matice,
+10,00 ks 20,22 21 244,66 Kč
+202,20 42,46
+pozink
+400 771 FIT092 200 C Koleno 92 I/E 2" černé 2,00 ks 73,20 21 177,14 Kč
+146,40 30,74
+103 460 FIT090 200 C Koleno 90° I/I 2" černé 2,00 ks 68,10 21 164,80 Kč
+136,20 28,60
+221 960 STP387 200 054 Přechodka SteelPres s vnějším závitem 54
+2,00 ks 318,97 21 771,90 Kč
+637,93 133,97
+x 2"
+Dodací list: AT/2026/453255 Netto: 363,14 Kč
+561 548 TRIIZOAC54-13 Izolace kaučuková AC 54x13, černá,
+TRINNITY
+Dodací list: AT/2026/453259 Netto: 2 707,21 Kč
+6,00 m 60,52 21 439,39 Kč
+363,14 76,26
+216 545 216 545 STP381 054 901 STP381 054 901 Dodací list: AT/2026/453650 Koleno 90° SteelPres s jedním zásuvným
+koncem 54 mm
+Koleno 90° SteelPres s jedním zásuvným
+koncem 54 mm
+Netto: 15 181,41 Kč
+4,00 ks 338,40 21 1 637,86 Kč
+1 353,60 284,26
+4,00 ks 338,40 21 1 637,86 Kč
+1 353,60 284,26
+103 500 FIT331 100 C Šroubení 1" FM černé 4,00 ks 61,50 21 297,66 Kč
+246,00 51,66
+300 658 FIT280 100 C Vsuvka 1" černá 8,00 ks 15,90 21 153,91 Kč
+127,20 26,71
+277 570 STP387 100 035 Přechodka SteelPres s vnějším závitem 35
+8,00 ks 173,65 21 1 680,97 Kč
+1 389,23 291,74
+x 1"
+331 822 CHG50 Nádoba expanzní COSMO MAG-H 50l, max.
+1,00 ks 1 413,50 21 1 710,34 Kč
+1 413,50 296,83
+tlak 6bar, topení, bílá
+37 620 REF6830100 Kohout kulový se zajištěním MK 3/4" 1,00 ks 726,54 21 879,11 Kč
+726,54 152,57
+216 513 STP316 035 005 Trubka SteelPres z uhlíkové oceli průměr
+6,00 m 110,21 21 800,15 Kč
+661,28 138,87
+35 x 1,5 mm vnější zinkování
+402 025 WBV257400 Pasta těsnící LOCHER speciál tuba 250gr 1,00 ks 134,57 21 162,83 Kč
+644 535 HKL2959052 TANGIT Uni-Lock vlákno těsnící na
+134,57 28,26
+1,00 ks 273,87 21 331,39 Kč
+273,87 57,51
+potrubní závity 160 m
+271 037 HAA5299 Nit konopná, načesaná, navinutá na špulce
+1,00 ks 82,01 21 99,24 Kč
+82,01 17,22
+v zásobníku 80 g
+44 221 FIT130 133 C T kus 5/4"x1"x5/4" černý 2,00 ks 62,10 21 150,28 Kč
+124,20 26,08
+103 628 FIT130 200 C T kus 2" černý 2,00 ks 90,30 21 218,53 Kč
+180,60 37,93
+103 468 FIT130 125 C T kus 5/4" černý 2,00 ks 42,30 21 102,37 Kč
+84,60 17,77
+38 069 MOS T 32 T kus 5/4" mosaz 2,00 ks 173,54 21 419,97 Kč
+347,08 72,89
+103 465 FIT130 100 C T kus 1" černý 4,00 ks 29,10 21 140,84 Kč
+116,40 24,44
+103 485 FIT241 204 C Redukce 2" x1" černá 2,00 ks 44,10 21 106,72 Kč
+88,20 18,52
+20 252 FIT280 200 C Vsuvka 2" černá 2,00 ks 45,00 21 108,90 Kč
+90,00 18,90
+103 501 FIT331 125 C Šroubení 5/4" FM černé 2,00 ks 91,20 21 220,70 Kč
+182,40 38,30
+103 568 FIT241 206 C Redukce 2"x5/4" černá 4,00 ks 41,70 21 201,83 Kč
+166,80 35,03
+603 431 DRAPR TJ6/4-9 KW PCHC Jednotka topná TJ 6/4"-9 kW +
+2,00 ks 4 373,46 21 10 583,77 Kč
+8 746,92 1 836,85
+prodloužená chladící část izolovaná,
+L1=690 mm
+Dodací list: AT/2026/453655 Netto: 35 962,51 Kč
+444 197 MOREK24.SB.N130.GIE Elektrokotel TRINNITY/COSMOTHERM E:
+24kW vč. ekv. čidla, tiché relé, vysoce
+účinné čerpadlo (D)
+Dodací list: AT/2026/454148 Netto: 17 466,17 Kč
+2,00 ks 17 981,26 21 43 514,64 Kč
+35 962,51 7 552,13
+277 570 STP387 100 035 Přechodka SteelPres s vnějším závitem 35
+6,00 ks 173,65 21 1 260,73 Kč
+1 041,92 218,80
+x 1"
+221 968 STP390 100 035 Přechodka SteelPres s vnitřním závitem 35
+4,00 ks 155,86 21 754,34 Kč
+623,43 130,92
+x 1"
+216 533 STP381 035 900 Koleno 90° SteelPres 35 mm 30,00 ks 167,73 21 6 088,53 Kč
+5 031,85 1 056,69
+38 009 KKV 40 FM Kohout kulový 6/4" páka M/F, voda 4,00 ks 365,65 21 1 462,60 307,15
+1 769,75 Kč
+277 282 STP390 200 054 Přechodka SteelPres s vnitřním závitem 54
+6,00 ks 301,85 21 2 191,44 Kč
+1 811,11 380,33
+x 2"
+216 575 STP382 054 000 T kus SteelPres jednoznačný 54 mm 3,00 ks 379,35 21 1 377,03 Kč
+216 637 STP391 054 035 Redukce SteelPres s jedním zásuvným
+1 138,04 238,99
+1,00 ks 360,24 21 435,89 Kč
+360,24 75,65
+koncem 54 x 35 mm
+221 968 STP390 100 035 Přechodka SteelPres s vnitřním závitem 35
+1,00 ks 155,86 21 188,59 Kč
+155,86 32,73
+x 1"
+134 497 MOS R 25 15 Redukce 1"x1/2" mosaz 1,00 ks 37,06 21 44,85 Kč
+37,06 7,78
+305 865 UPTOD52 Objímka dvoušroubová Top 6/4" 48-53mm 10,00 ks 19,47 21 194,67 40,88
+90 691 UPTOD37 Objímka dvoušroubová Top 1" 32-36mm 20,00 ks 13,34 21 266,77 56,02
+235,55 Kč
+322,79 Kč
+Strana: 2/3
+--- strana 3 ---
+Faktura č. 1860450386
+Datum vystavení 31.10.2026
+Faktura ev. č. 1860450386
+Tento doklad je zároveň daňovým dokladem
+Datum UZP: 31.10.2026 Datum splatnosti: 14.11.2026
+Variabilní symbol: 1860450386
+Tento symbol uvádějte, prosím, při platbě
+Zboží Množství Netto/MJ Daň % Netto DPH Brutto
+134 497 MOS R 25 15 Redukce 1"x1/2" mosaz 2,00 ks 37,06 21 89,69 Kč
+74,12 15,57
+312 752 MAN63/4Z8 Manometr RF63 0-4bar G1/4" zadní 2,00 ks 94,42 21 228,50 Kč
+188,84 39,66
+177 159 MOS R 15 08 Redukce 1/2"x1/4" mosaz 2,00 ks 13,85 21 33,51 Kč
+27,69 5,82
+216 553 STP381 035 450 Koleno 45° SteelPres 35 mm 3,00 ks 153,45 21 557,02 Kč
+460,34 96,67
+216 563 STP381 035 451 Koleno 45° SteelPres s jedním zásuvným
+5,00 ks 151,04 21 913,76 Kč
+755,18 158,59
+koncem 35 mm
+87 844 MOS VR 25 20 Vsuvka redukovaná 1"x3/4" mosaz 2,00 ks 41,33 21 100,02 Kč
+82,66 17,36
+216 513 STP316 035 005 Trubka SteelPres z uhlíkové oceli průměr
+24,00 m 110,21 21 3 200,59 Kč
+2 645,12 555,47
+35 x 1,5 mm vnější zinkování
+216 515 STP316 054 005 Trubka SteelPres z uhlíkové oceli průměr
+6,00 m 184,78 21 1 341,50 Kč
+1 108,68 232,82
+54 x 1,5 mm vnější zinkování
+Dodací list: AT/2026/454151 Netto: 1 220,34 Kč
+216 553 STP381 035 450 Koleno 45° SteelPres 35 mm 5,00 ks 153,45 21 928,36 Kč
+767,24 161,12
+216 563 STP381 035 451 Koleno 45° SteelPres s jedním zásuvným
+3,00 ks 151,04 21 548,26 Kč
+453,11 95,15
+koncem 35 mm
+Dodací list: AT/2026/454152 Netto: 1 015,20 Kč
+216 545 STP381 054 901 Dodací list: Netto: 59,52 Kč
+Koleno 90° SteelPres s jedním zásuvným
+koncem 54 mm
+3,00 ks 338,40 21 1 228,40 Kč
+1 015,20 213,19
+145 922 NEZB_EO Recyklační poplatek k položce DRAPR
+TJ6/4-9 KW PCHC
+145 922 NEZB_EO Recyklační poplatek k položce MOREK24.
+SB.N130.GIE
+2,00 - 2,76 21 6,68 Kč
+5,52 1,16
+2,00 - 27,00 21 65,34 Kč
+54,00 11,34
+Daň % Netto DPH Brutto
+21
+Základní sazba DPH 22 273,95
+106 066,44 128 340,39Kč
+Celkem: 106 066,44 22 273,95 128 340,39Kč
+Celkem k úhradě Zaokrouhlení: -0,39 128 340,00 Kč
+Pro zahraniční platby :
+EUR IBAN: CZ4303001549150017698513
+EUR SWIFT: CEKOCZPP
+CZK IBAN: CZ2703000000000017698513
+CZK SWIFT: CEKOCZPP
+Vystavil Hanko Libor, Email: lhanko@gienger.cz, Tel.: , Mob.: +420 730 570 069
+GIENGER spol. s r.o. tímto prohlašuje, že na všechny dodávané výrobky má k dispozici "PROHLÁŠENÍ O SHODĚ" podle §12 ods. 4, pís. b zák.
+22/1997 Sb.
+Zboží je až do úplného zaplacení majetkem firmy GIENGER spol. s r.o..
+Vaše případné reklamace vyřeší Vaše Oddělení zákaznických služeb - tel : 596229088
+E-mail: reklamace.os@gienger.cz
+Strana: 3/3

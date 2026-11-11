@@ -1,0 +1,98 @@
+[Text vytažený z faktura-gienger-1860453050.pdf]
+
+--- strana 1 ---
+Faktura č. 1860453050
+Datum vystavení 09.11.2026
+Faktura ev. č. 1860453050
+Tento doklad je zároveň daňovým dokladem
+Datum UZP: 09.11.2026 Datum splatnosti: 23.11.2026
+Variabilní symbol: 1860453050
+Tento symbol uvádějte, prosím, při platbě
+Dodavatel
+IČ: 29700272
+DIČ: CZ29700272
+Zápis do OR : KOS Brno oddíl C, vl. 152655
+GIENGER spol. s r.o.
+Kvítkovická 1633
+763 61 Napajedla
+Provozovna: Ostrava-Kunčičky
+Účet:1388196891/2700 UniCredit Bank
+Pro zahraniční platby naleznete údaje níže.
+Odběratel
+Riva Trade, s.r.o.
+Korunní 2569/108
+CZ - 101 00 Praha
+IČO: 08864811 DIČ: CZ08864811
+POZOR ZMĚNA IČO, DIČ OD 1.7.2026.
+Zboží Množství Netto/MJ Daň % Netto DPH Brutto
+Zakázka: AT/2026/429609 Netto: 14 901,82 Kč Objednávka:
+Dodací list: AT/2026/454523 Netto: 12 948,00 Kč
+510 559 CONCTOOLPB2M54PSL Čelist lisovací M54, pro mezičelist, CONEL 1,00 ks 9 149,00 21 9 149,00 1 921,29
+11 070,29 Kč
+510 570 CONCTOOLPB2ZB Mezičelist PM2, CONEL 1,00 ks 3 799,00 21 4 596,79 Kč
+3 799,00 797,79
+Dodací list: AT/2026/454554 Netto: 1 950,92 Kč
+135 710 TRITSNGES39 Těsnění univerzální vláknitopryžové - pro
+topenářská závit. šroubení - 6/4"; 56x43,
+5x1,8mm, TRINNITY
+27 184 TRITSNGES38 Těsnění univerzální vláknitopryžové - pro
+topenářská závit. šroubení - 5/4"; 43,
+5x33x1,8mm, TRINNITY
+27 165 TRITSNGES20 Těsnění univerzální vláknitopryžové - pro
+holandské závit. šroubení - 5/4"; 56x44x1,
+8mm; TRINNITY
+361 073 TRITSNGES19 Těsnění univerzální vláknitopryžové - pro
+holandské závit. šroubení - 1"; 44,5x36x1,
+8mm; TRINNITY
+675 590 TRIELFLSN5 Flexo šňůra, 5m, 3 x 1.5mm2, gumová
+H07RN-F3, černá, TRINNITY
+188 947 CCLSF27181 Úchyt stěnový CONEL CLIC 27/18+28/30
+vodorovný
+188 918 CCLS28302M Lišta montážní CONEL CLIC 28x30x1,75, 2
+m
+10,00 ks 17,09 21 206,76 Kč
+170,88 35,88
+10,00 ks 11,81 21 142,93 Kč
+118,13 24,81
+10,00 ks 12,61 21 152,60 Kč
+126,11 26,48
+10,00 ks 10,48 21 126,82 Kč
+104,81 22,01
+1,00 ks 279,00 21 337,59 Kč
+279,00 58,59
+5,00 ks 65,13 21 394,04 Kč
+325,65 68,39
+2,00 ks 368,02 21 890,60 Kč
+736,04 154,57
+103 628 FIT130 200 C T kus 2" černý 1,00 ks 90,30 21 109,26 Kč
+90,30 18,96
+Dodací list: Netto: 2,90 Kč
+145 922 NEZB_EO Recyklační poplatek k položce TRIELFLSN5 1,00 - 2,90 21 2,90 0,61
+3,51 Kč
+Daň % Netto DPH Brutto
+21
+Základní sazba DPH 3 129,38
+14 901,82 18 031,20Kč
+Celkem: 14 901,82 3 129,38 18 031,20Kč
+Celkem k úhradě Zaokrouhlení: -0,20 18 031,00 Kč
+Pro zahraniční platby :
+EUR IBAN: CZ4303001549150017698513
+EUR SWIFT: CEKOCZPP
+CZK IBAN: CZ2703000000000017698513
+CZK SWIFT: CEKOCZPP
+Vystavil Zdrálek Zdeněk, Email: zzdralek@gienger.cz, Tel.: , Mob.: +420 730 163 903
+GIENGER spol. s r.o. tímto prohlašuje, že na všechny dodávané výrobky má k dispozici "PROHLÁŠENÍ O SHODĚ" podle §12 ods. 4, pís. b zák.
+22/1997 Sb.
+Strana: 1/2
+--- strana 2 ---
+Faktura č. 1860453050
+Datum vystavení 09.11.2026
+Faktura ev. č. 1860453050
+Tento doklad je zároveň daňovým dokladem
+Datum UZP: 09.11.2026 Datum splatnosti: 23.11.2026
+Variabilní symbol: 1860453050
+Tento symbol uvádějte, prosím, při platbě
+Zboží je až do úplného zaplacení majetkem firmy GIENGER spol. s r.o..
+Vaše případné reklamace vyřeší Vaše Oddělení zákaznických služeb - tel : 596229088
+E-mail: reklamace.os@gienger.cz
+Strana: 2/2

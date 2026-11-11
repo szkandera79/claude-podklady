@@ -4,8 +4,9 @@
 Kalkulace nákladů – kotelna s tepelnými čerpadly
 Alignum Paskov (zakázka MM Holz) · interní podklad
 Riva Trade, s.r.o.
-6. 11. 2026
+11. 11. 2026
 ceny bez DPH
+--- strana 2 ---
 Položka Množství Cena/MJ Celkem Zdroj
 A · Tepelná čerpadla 210 000,00 Kč
 REO HEATING RH X50 – tepelné čerpadlo vzduch/voda 2 ks 105 000,00 210 000,00 Kč sklad
@@ -43,19 +44,40 @@ spojovací materiál
 E · Montážní práce 70 000,00 Kč
 Topenářské práce 1 50 000,00 50 000,00 Kč zadavatel
 Elektroinstalační práce 1 20 000,00 20 000,00 Kč zadavatel
-Celkem náklady (A–E) 485 555,17 Kč
+F · Hydraulika – doplňky, oběhová čerpadla a nářadí – GIENGER spol. s r.o., fa
+1860453050–53 (9. 11. 2026)
+64 893,49 Kč
+Oběhové čerpadlo Grundfos MAGNA3 32-120 F (okruh TČ) 1 ks 24 941,28 24 941,28 Kč fa
+Příruby, klapka, kohouty, filtr, nátrubky, těsnění k čerpadlu Oběhové čerpadlo TRINNITY 25/6/180, kohouty, zpětné
+klapky, SteelPres, odvzdušňovače, filtr, izolace
+Potrubí SteelPres 54 (12 m), kolena, redukce, přechodky,
+řezné kotouče
+Lisovací čelist M54 + mezičelist PM2 (nářadí) 1860453053
+— — 2 226,23 Kč fa
+1860453053
+— — 15 498,89 Kč fa
+1860453052
+— — 7 325,27 Kč fa
+1860453051
+— — 12 948,00 Kč fa
+1860453050
+--- strana 3 ---
+Položka Množství Cena/MJ Celkem Zdroj
+Těsnění, úchyty a lišty Conel, T-kus 2"
+, recyklační poplatek — — 1 953,82 Kč fa
+1860453050
+Celkem náklady (A–F) 550 448,66 Kč
 Souhrn
---- strana 2 ---
 Skupina Bez DPH Podíl
-A · Tepelná čerpadla 210 000,00 Kč 43,2 %
-B · Akumulace 58 928,92 Kč 12,1 %
-C · Hydraulika a bivalence 106 066,44 Kč 21,8 %
-D · Elektroinstalace 40 559,81 Kč 8,4 %
-E · Montážní práce 70 000,00 Kč 14,4 %
-Celkem 485 555,17 Kč 100 %
+A · Tepelná čerpadla B · Akumulace C · Hydraulika a bivalence D · Elektroinstalace E · Montážní práce F · Hydraulika – doplňky, čerpadla, nářadí Celkem 210 000,00 Kč 38,1 %
+58 928,92 Kč 10,7 %
+106 066,44 Kč 19,3 %
+40 559,81 Kč 7,4 %
+70 000,00 Kč 12,7 %
+64 893,49 Kč 11,8 %
+550 448,66 Kč 100 %
 Náklady, které na fakturách nejsou (doplnit)
 Položka Bez DPH
-Oběhové čerpadlo okruhu TČ (≈ 15 m³/h) – na fakturách není doplnit
 Komunikační kabel kaskády (stíněný ≈ 1 mm²) doplnit
 Regulace / dálkový dohled (pokud je dodáván nad rámec jednotek) doplnit
 Doprava a manipulace (jeřáb, vlastní doprava) doplnit
@@ -65,11 +87,21 @@ Položka Bez DPH
 Pronájem 11/2026–01/2027 + doprava + instalace (MM Holz, fa 202600006) 320 000,00 Kč
 Pronájem 02/2027 a 03/2027 (k vystavení, 2 × 80 000 Kč) 160 000,00 Kč
 Tržby z pronájmu celkem 480 000,00 Kč
-Náklady (A–E) −485 555,17 Kč
-Rozdíl před nedoloženými náklady −5 555,17 Kč
+Náklady (A–F) −550 448,66 Kč
+Rozdíl před nedoloženými náklady −70 448,66 Kč
 Odkup Alignum CZ po skončení pronájmu – zůstatková cena (2× RH X50) 1 250 000,00 Kč
 Odkup silového rozvaděče (není součástí zůstatkové ceny) 70 000,00 Kč
 Poznámky: Bivalence je podle faktur provedena jako 2 × elektrokotel 24 kW + 2 × topná jednotka 9 kW v akumulaci = 66 kW
 (nabídka uvádí ≈ 50 kW). Akumulace: 2 × MG0 1200 l, Ø 900 mm. Faktura LU-MI 20260448 ověřena podle PDF: ceny po slevě 10
 %, uhrazeno zálohou FVZ26092 (platba přijata 23. 10. 2026), k úhradě 0 Kč. Částky faktury GIENGER rozděleny do skupin podle
 položek; „potrubí a tvarovky“ je dopočet do celkové sumy faktury (106 066,44 Kč). Cena RH X50 105 000 Kč/ks podle zadavatele.
+Lisovací čelisti (12 948 Kč) jsou nářadí – zvážit, zda je ponechat v nákladech zakázky.
+Úhrady dodavatelům – GIENGER (neuhrazeno)
+--- strana 4 ---
+Faktura Vystavena Splatnost Bez DPH DPH K úhradě
+1860450386 31. 10. 2026 14. 11. 2026 106 066,44 22 273,95 128 340,00 Kč
+1860453050 9. 11. 2026 23. 11. 2026 14 901,82 3 129,38 18 031,00 Kč
+1860453051 9. 11. 2026 23. 11. 2026 7 325,27 1 538,31 8 864,00 Kč
+1860453052 9. 11. 2026 23. 11. 2026 15 498,89 3 254,77 18 754,00 Kč
+1860453053 9. 11. 2026 23. 11. 2026 27 167,51 5 705,18 32 873,00 Kč
+Celkem GIENGER 170 959,93 35 901,59 206 862,00 Kč

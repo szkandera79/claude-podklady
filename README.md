@@ -4,8 +4,8 @@ Automaticky generované textové zrcadlo pracovních složek z Macu pro hlasové
 Obsahuje jen texty; z PDF, Wordu, Excelu a PowerPointu je vytažený text do souborů `*.txt`.
 Fotky, videa a tajné údaje se nezrcadlí. **Needitovat ručně** — přepíše se při další synchronizaci.
 
-Poslední synchronizace: 10. 11. 2026 09:20
+Poslední synchronizace: 11. 11. 2026 07:50
 
 ## Složky
 
-- `Projekty/` — všechny pracovní projekty — web ThermaVera (thermavera-web), nabídky pro bytové domy, porovnání TČ, REO (REO HEATING: návody, datové listy, katalogy, letáky, web), banner-generator, BD Michal Claude, ThermaVera nabídky, marketing, Claude Voice. Rozcestník: Projekty/CLAUDE.md (4452 souborů)
+- `Projekty/` — všechny pracovní projekty — web ThermaVera (thermavera-web), nabídky pro bytové domy, porovnání TČ, REO (REO HEATING: návody, datové listy, katalogy, letáky, web), banner-generator, BD Michal Claude, ThermaVera nabídky, marketing, Claude Voice. Rozcestník: Projekty/CLAUDE.md (4457 souborů)

@@ -1,0 +1,85 @@
+[Text vytažený z faktura-gienger-1860453053.pdf]
+
+--- strana 1 ---
+Faktura č. 1860453053
+Datum vystavení 09.11.2026
+Faktura ev. č. 1860453053
+Tento doklad je zároveň daňovým dokladem
+Datum UZP: 09.11.2026 Datum splatnosti: 23.11.2026
+Variabilní symbol: 1860453053
+Tento symbol uvádějte, prosím, při platbě
+Dodavatel
+IČ: 29700272
+DIČ: CZ29700272
+Zápis do OR : KOS Brno oddíl C, vl. 152655
+GIENGER spol. s r.o.
+Kvítkovická 1633
+763 61 Napajedla
+Provozovna: Ostrava-Kunčičky
+Účet:1388196891/2700 UniCredit Bank
+Pro zahraniční platby naleznete údaje níže.
+Odběratel
+Riva Trade, s.r.o.
+Korunní 2569/108
+CZ - 101 00 Praha
+IČO: 08864811 DIČ: CZ08864811
+POZOR ZMĚNA IČO, DIČ OD 1.7.2026.
+Zboží Množství Netto/MJ Daň % Netto DPH Brutto
+Zakázka: AT/2026/430006 Netto: 27 167,51 Kč Objednávka:
+Dodací list: AT/2026/455223 Netto: 27 147,47 Kč
+293 538 GRU97924259 Čerpadlo oběhové MAGNA3 32-120 F
+1,00 ks 24 941,28 21 30 178,95 Kč
+24 941,28 5 237,67
+1x230V PN6/10
+183 566 PRIZV 1 1/4 32 16 Příruba závitová 5/4" DN32 PN16 2,00 ks 163,80 21 327,60 68,80
+396,40 Kč
+38 083 MOS V 32 Vsuvka 5/4" mosaz 2,00 ks 73,53 21 177,94 Kč
+147,06 30,88
+38 034 MOSKZ 32 Klapka zpětná 5/4" voda 1,00 ks 170,98 21 206,89 Kč
+170,98 35,91
+37 990 KKV 32 FF Kohout kulový 5/4" páka F/F, voda 2,00 ks 238,96 21 578,28 Kč
+477,92 100,36
+250 450 MOS VR 50 32 Vsuvka redukovaná 2"x5/4", mosaz 2,00 ks 171,98 21 416,18 Kč
+343,95 72,23
+38 083 MOS V 32 Vsuvka 5/4" mosaz 2,00 ks 73,53 21 177,94 Kč
+147,06 30,88
+216 525 STP383 054 000 Nátrubek SteelPres 54 mm 2,00 ks 127,22 21 307,86 Kč
+254,43 53,43
+35 604 TSN3213 Těsnění přírubové bezazbestové TEMASIL
+2,00 ks 28,00 21 67,76 Kč
+56,00 11,76
+38-43 x 79 x 2 mm, PN 10-16, DN 32
+38 028 MOSF 32 Filtr voda 5/4" mosaz 1,00 ks 281,19 21 340,24 Kč
+281,19 59,05
+Dodací list: Netto: 20,04 Kč
+145 922 NEZB_EO Recyklační poplatek k položce
+GRU97924259
+1,00 - 20,04 21 24,25 Kč
+20,04 4,21
+Daň % Netto DPH Brutto
+21
+Základní sazba DPH 5 705,18
+27 167,51 32 872,69Kč
+Celkem: 27 167,51 5 705,18 32 872,69Kč
+Celkem k úhradě Zaokrouhlení: 0,31 32 873,00 Kč
+Pro zahraniční platby :
+EUR IBAN: CZ4303001549150017698513
+EUR SWIFT: CEKOCZPP
+CZK IBAN: CZ2703000000000017698513
+CZK SWIFT: CEKOCZPP
+Vystavil Šembera František, Email: fsembera@gienger.cz, Tel.: , Mob.: +420 730 163 949
+GIENGER spol. s r.o. tímto prohlašuje, že na všechny dodávané výrobky má k dispozici "PROHLÁŠENÍ O SHODĚ" podle §12 ods. 4, pís. b zák.
+22/1997 Sb.
+Zboží je až do úplného zaplacení majetkem firmy GIENGER spol. s r.o..
+Vaše případné reklamace vyřeší Vaše Oddělení zákaznických služeb - tel : 596229088
+E-mail: reklamace.os@gienger.cz
+Strana: 1/2
+--- strana 2 ---
+Faktura č. 1860453053
+Datum vystavení 09.11.2026
+Faktura ev. č. 1860453053
+Tento doklad je zároveň daňovým dokladem
+Datum UZP: 09.11.2026 Datum splatnosti: 23.11.2026
+Variabilní symbol: 1860453053
+Tento symbol uvádějte, prosím, při platbě
+Strana: 2/2

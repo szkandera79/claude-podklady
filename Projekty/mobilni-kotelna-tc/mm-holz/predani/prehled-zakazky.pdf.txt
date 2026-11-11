@@ -13,8 +13,11 @@ B · Akumulace 2× 1200 l (LU-MI, fa 20260448) 58 929 Kč
 C · Hydraulika a bivalence 66 kW (GIENGER, fa 1860450386) 106 066 Kč
 D · Elektroinstalace, rozvaděč (ARGOS, fa 2600211211) 40 560 Kč
 E · Montážní práce: topenářské 50 000 Kč + elektroinstalační 20 000 Kč 70 000 Kč
-Náklady celkem 485 555 Kč
-Zatím bez dokladu / k doplnění: oběhové čerpadlo ≈ 15 m³/h, kabel kaskády, doprava a jeřáb, revize doplnit
+F · Hydraulika – čerpadla MAGNA3 a TRINNITY, doplňky, lisovací čelisti (GIENGER, fa 1860453050–
+64 893 Kč
+53)
+Náklady celkem 550 449 Kč
+Zatím bez dokladu / k doplnění: kabel kaskády, doprava a jeřáb, revize doplnit
 2 · Tržby – pronájem (platí MM Holz, objednávka 4500090045)
 Položka Doklad / stav Bez DPH
 Pronájem kotelny 11/2026, 12/2026, 01/2027 (3 × 80 000
@@ -35,23 +38,23 @@ Odkup celkem (2× RH X50 + rozvaděč) 1 320 000 Kč
 Volitelně 3. jednotka RH X50 250 000 Kč
 Demontáž a odvoz, pokud Alignum nekoupí (návrh – k dohodě s MM Holz) 40 000 Kč
 4 · Výsledek zakázky podle scénáře
+--- strana 2 ---
 Scénář Tržby Náklady Rozdíl Poznámka
 S1 – jen pronájem, kotelna
 se vrací
-S2 – pronájem + odkup (2×
-RH X50 + rozvaděč)
+480 000 Kč 550 449 Kč −70 449 Kč + případně 40 000 Kč za demontáž (= −30
+449 Kč); technologie zůstává nám k dalšímu
+nasazení
+S2 – pronájem + odkup
+(2× RH X50 + rozvaděč)
+1 800 000 Kč 550 449 Kč 1 249 551 Kč cílový scénář; při navýšení o chybějící měsíc
+nájmu +80 000 Kč (= 1 329 551 Kč)
 S3 – pronájem + odkup se
 3. jednotkou (+ rozvaděč)
-480 000 Kč 1 800 000 Kč 2 050 000 Kč 485 555 Kč 485 555 Kč 590 555 Kč −5 555 Kč 1 314 445 Kč 1 459 445 Kč + případně 40 000 Kč za demontáž (= 34 445
-Kč); technologie zůstává nám k dalšímu
-nasazení
-cílový scénář; při navýšení o chybějící měsíc
-nájmu +80 000 Kč (= 1 394 445 Kč)
-3. RH X50 ze skladu 105 000 Kč + montáž
+2 050 000 Kč 655 449 Kč 1 394 551 Kč 3. RH X50 ze skladu 105 000 Kč + montáž
 (doplnit)
---- strana 2 ---
-Rozdíl je před odečtením nedoložených nákladů (čerpadlo, kabel kaskády, doprava, revize) a před daněmi. Pronájem trvá 5
-měsíců (11/2026–03/2027).
+Rozdíl je před odečtením nedoložených nákladů (kabel kaskády, doprava, revize) a před daněmi. Pronájem trvá 5 měsíců
+(11/2026–03/2027).
 5 · Otevřené body
 Faktura 202600006: v textu je období „11/2026, 12/2026, 1/2026“ – správně má být 1/2027. Zvážit
 opravu (opravný doklad) nebo uvést správně v dalších fakturách.
@@ -62,5 +65,7 @@ odkupu. Návrh smlouvy počítal s 6 měsíci – sladit.
 Bivalence: osazeno 66 kW (2× 24 kW + 2× 9 kW), nabídka uvádí ≈ 50 kW.
 Rozvaděč: nakoupen a osazen námi (ARGOS 40 560 Kč) – není součástí zůstatkové ceny, při
 odkupu + 70 000 Kč (doplněno i v nabídce pro Alignum).
+GIENGER – neuhrazeno: 5 faktur, k úhradě celkem 206 862 Kč s DPH (170 960 Kč bez DPH); fa
+1860450386 (128 340 Kč) splatná 14. 11. 2026, fa 1860453050–53 (78 522 Kč) splatné 23. 11. 2026.
 Provoz: obě tepelná čerpadla v kaskádě v provozu; sledovat rozdíl výstup/vstup (≤ 5 K při plném
 výkonu).
