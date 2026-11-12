@@ -20,7 +20,7 @@ th{background:#E7F3EC;color:#0F3D2E}td.n{text-align:right;white-space:nowrap}.sm
 <ul><li>uzavřené kryty rozvaděče a elektrokotlů,</li>
 <li>kontrolu dotažení svorek a termovizi při zatížení,</li>
 <li>ověření, že je osazená ochrana proudovým chráničem. Návod RH X50 ji vyžaduje a na fotografii rozvaděče není vidět.</li></ul></li>
-<li>Omezit souběh elektrokotlů. Prověřit, zda příčinou výpadku nebylo přetížení přívodu.</li>
+<li>Elektrokotle <strong>nevypínat</strong>, jsou provozně nutné (odběrové špičky VZT, defrost). Hlídat jejich souběh s TČ omezovačem příkonu nebo postupným spínáním. Prověřit, zda příčinou výpadku nebylo přetížení přívodu.</li>
 <li>Ověřit oprávnění TIČR elektrikáře.</li></ul></td><td>Riva Trade + revizní technik · <span class="p1">P1</span>, revize do 7 dnů</td></tr>
 <tr><td>2</td><td><strong>Ochrana proti zamrznutí a postup při výpadku proudu</strong></td><td>
 <ul><li>Okruh TČ je <strong>bez glykolu</strong> a potrubí vede venku. Výpadek proudu už jednou nastal.</li>
@@ -97,7 +97,7 @@ th{background:#E7F3EC;color:#0F3D2E}td.n{text-align:right;white-space:nowrap}.sm
 <tr><td>Akumulace, hydraulika</td><td>2× AKU 1 200 l. Čerpadla Grundfos MAGNA3 32-120 F 220 (P/N 97924259, 230 V, 15–333 W) a TRINNITY 25/6/180. Potrubí SteelPres 54/35, expanze 2× 50 l, pojistné ventily 2,5 bar.</td><td><span class="b bf">F</span></td></tr>
 <tr><td>Glykol</td><td><strong>Okruh TČ je bez glykolu</strong> (rozhodnutí rev1 Z17). Venkovní potrubí je izolované, na venkovním potrubí je automatický odvzdušňovač.</td><td><span class="b bf">F</span></td></tr>
 <tr><td>Spouštění</td><td>3.–5. 11.: chyby 204 a Airflowerr způsobené nedostatečným průtokem, odstraněno výměnou čerpadla. Řešeno s výrobcem.</td><td><span class="b bf">F</span></td></tr>
-<tr><td>Nedokončeno</td><td><ul><li>MaR: nadřazená regulace, dálkový dohled, omezovač příkonu,</li><li>kalorimetr a podružný elektroměr,</li><li>komunikační kabel kaskády (ověřit, zda je osazen definitivně),</li><li>čerpadla řízená z jednotek,</li><li>nastavení bivalence a ekvitermy,</li><li>případné posílení napájecích kabelů,</li><li>provozní zkoušky,</li><li>dokumentace skutečného provedení.</li></ul></td><td><span class="b bt">T</span></td></tr>
+<tr><td>Nedokončeno</td><td><div class="box warn" style="margin:0 0 4px"><span class="b bf">F</span> <strong>Dílo „řízení, regulace a monitoring topení“ není hotové ani předané.</strong> Technologie už vytápí objekt, ale Alignum <strong>nedodalo žádnou elektro dokumentaci</strong> objektu (rozvody, napájení VZT a čerpadel větví, signály, jištění). Údaje potřebné pro řízení proto zjišťujeme za provozu a testováním výkonu v době odstávek.</div><ul><li>MaR: nadřazená regulace, dálkový dohled, omezovač příkonu,</li><li>kalorimetr a podružný elektroměr,</li><li>komunikační kabel kaskády (ověřit, zda je osazen definitivně),</li><li>čerpadla řízená z jednotek,</li><li>nastavení bivalence a ekvitermy,</li><li>případné posílení napájecích kabelů,</li><li>provozní zkoušky,</li><li>dokumentace skutečného provedení.</li></ul></td><td><span class="b bt">T</span></td></tr>
 <tr><td>Údaj „R290 CONC 2,80 %“</td><td>Ve statusu jednotky 5. 11. Nevíme, zda jde o měřenou koncentraci (detektor úniku), nebo o jiný parametr. Ověřit s výrobcem.</td><td><span class="b bo">O</span></td></tr>
 </tbody></table>
 <h3>Postřehy z fotodokumentace z průběhu realizace</h3>
@@ -149,18 +149,21 @@ th{background:#E7F3EC;color:#0F3D2E}td.n{text-align:right;white-space:nowrap}.sm
 <h3>5.4 Je nutné omezit provoz do provedení kontrol?</h3>
 <div class="box warn"><span class="b bt">T</span> Úplné odstavení dnes nedoporučuji. V listopadu by hrozilo vychladnutí objektu a zamrznutí technologie, což je samo o sobě riziko škody. Provoz je však vhodné omezit takto:
 <ul>
-<li><strong>elektrokotle a topné jednotky</strong> do výchozí revize jen jako nouzový zdroj (vysoký proud, neověřené dimenzování přívodu),</li>
+<li><strong>elektrokotle ponechat v provozu</strong>, protože kryjí odběrové špičky VZT a defrost a bez nich TČ padají do chyby. Do revize ale <strong>omezit jejich současný příkon</strong> (postupné spínání, blokace topných jednotek 2× 9 kW při běhu obou EK) a ověřit, že přívod a jištění soudobý odběr unesou,</li>
 <li>uzavřené rozvaděče a kryty, přístup jen pro poučené osoby, označení „Pod napětím“,</li>
 <li>prozatímní kontrola elektrikářem: dotažení, termovize při zatížení, funkce chráničů a měření smyčky. Zapsat do záznamu o prozatímní kontrole.</li>
 </ul>
 Pokud prozatímní kontrola zjistí nebezpečný stav (chybějící ochrana před nebezpečným dotykem, přehřívání spojů), <strong>dotčenou část vypnout ihned</strong>, bez ohledu na rozpracovanost a platby.</div>
 <h3>5.5 Co musí dodat Alignum CZ</h3>
+<p class="small">Žádná elektro dokumentace objektu zatím dodána nebyla. Bez ní nelze dokončit řízení a regulaci, termín dokončení MaR proto závisí na součinnosti Alignum. Do té doby se údaje zjišťují za provozu a zkouškami v době odstávek.</p>
 <ul>
 <li>Poslední revizní zprávu elektroinstalace objektu a hlavního rozvaděče (ze kterého je vyveden náš přívod).</li>
 <li>Hodnotu hlavního jističe, rezervovaný příkon a průběh odběru (faktury za elektřinu nebo data distributora), schéma rozvodny.</li>
 <li>Údaje o uzemnění a hromosvodu.</li>
 <li>Kontakt na osobu odpovědnou za elektro zařízení a provozní řád objektu.</li>
 <li>Informaci o výpadku: kdy, jak dlouho, příčina, co vypnulo.</li>
+<li>Dokumentaci napájení a řízení vzduchotechniky a čerpadel větví (výkony, způsob spouštění, signály), aby bylo možné navázat řízení kotelny.</li>
+<li>Termíny odstávek, ve kterých lze provést zkoušky výkonu a měření.</li>
 </ul>
 
 <h2>6 · Požární bezpečnost, stavebně-právní zařazení, R290</h2>
@@ -202,6 +205,20 @@ Pokud prozatímní kontrola zjistí nebezpečný stav (chybějící ochrana pře
 </ul>
 
 <h2>7 · Výkon: co jsme slíbili a kde končí naše odpovědnost</h2>
+<div class="box crit"><strong>Stanovisko Riva Trade:</strong> teplo neprodáváme, <strong>pouze pronajímáme technologii</strong>. Splnění výkonových požadavků objektu <strong>negarantujeme</strong>. V současné situaci to není možné, protože objekt má skokové odběry tepla v předem nepredikovatelném čase.</div>
+<h3>Proč nelze výkon garantovat: odběrové špičky vzduchotechniky</h3>
+<ul>
+<li><span class="b bf">F</span> Vzduchotechnika (teplovzdušné jednotky haly) odebírá v krátkém čase enormní výkon, a to <strong>bez předchozí signalizace</strong>. Velké množství akumulované vody se tím ochladí o velký rozdíl teplot.</li>
+<li><span class="b bf">F</span> Studená zpátečka se dostane do akumulace a na vstup tepelných čerpadel. Při rozdílu výstup/vstup ≈ <strong>15 K</strong> jednotka hlásí chybu (204 Unitwaterdif, ochrana jednotky) a vypne.</li>
+<li><span class="b bf">F</span> Aby k tomu nedošlo, <strong>krátkodobě pomáhají oba elektrokotle</strong>. Pomáhají i při <strong>odtávání (defrostu)</strong>, kdy tepelná čerpadla dočasně nedodávají teplo.</li>
+<li><span class="b bt">T</span> Elektrokotle proto nejsou jen záložní zdroj pro mrazy, ale <strong>provozně nutná součást</strong> kotelny při současném charakteru odběru.</li>
+<li><span class="b bt">T</span> Možná opatření (součinnost Alignum, posoudit):
+<ul><li>signál o spuštění VZT do regulace kotelny s předstihem (beznapěťový kontakt), aby se dohřev spustil dřív,</li>
+<li>omezení rychlosti náběhu VZT (pomalejší otevírání směšovacích ventilů),</li>
+<li>úprava zapojení AKU tak, aby se studená zpátečka nedostala přímo na vstup TČ,</li>
+<li>vyšší teplota v akumulaci před známými špičkami.</li></ul></li>
+</ul>
+<h3>Co je v nabídce</h3>
 <ul>
 <li><span class="b bf">F</span> Nabídka uvádí výkon <strong>„orientačně“</strong>, vychází z naměřené dodávky tepla 2021–2025 a výslovně upozorňuje, že se výpočty mohou změnit při změně provozu.
 <ul><li>TČ samy pokryjí potřebu orientačně do −10 °C, pod touto teplotou se připíná bivalence.</li>

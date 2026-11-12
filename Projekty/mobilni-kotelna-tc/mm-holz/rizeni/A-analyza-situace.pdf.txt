@@ -31,7 +31,9 @@ kontrolu dotažení svorek a termovizi při zatížení,
 ověření, že je osazená ochrana proudovým chráničem.
 Návod RH X50 ji vyžaduje a na fotografii rozvaděče není
 vidět.
-Omezit souběh elektrokotlů. Prověřit, zda příčinou výpadku
+Elektrokotle nevypínat, jsou provozně nutné (odběrové špičky
+VZT, defrost). Hlídat jejich souběh s TČ omezovačem příkonu
+nebo postupným spínáním. Prověřit, zda příčinou výpadku
 nebylo přetížení přívodu.
 Ověřit oprávnění TIČR elektrikáře.
 Okruh TČ je bez glykolu a potrubí vede venku. Výpadek
@@ -209,7 +211,13 @@ F
 Spouštění 3.–5. 11.: chyby 204 a Airflowerr způsobené nedostatečným průtokem,
 odstraněno výměnou čerpadla. Řešeno s výrobcem.
 F
-Nedokončeno MaR: nadřazená regulace, dálkový dohled, omezovač příkonu,
+Nedokončeno F Dílo „řízení, regulace a monitoring topení“ není hotové ani předané.
+Technologie už vytápí objekt, ale Alignum nedodalo žádnou elektro
+dokumentaci objektu (rozvody, napájení VZT a čerpadel větví, signály,
+jištění). Údaje potřebné pro řízení proto zjišťujeme za provozu a testováním
+výkonu v době odstávek.
+T
+MaR: nadřazená regulace, dálkový dohled, omezovač příkonu,
 kalorimetr a podružný elektroměr,
 komunikační kabel kaskády (ověřit, zda je osazen definitivně),
 čerpadla řízená z jednotek,
@@ -217,7 +225,6 @@ nastavení bivalence a ekvitermy,
 případné posílení napájecích kabelů,
 provozní zkoušky,
 dokumentace skutečného provedení.
-T
 Údaj „R290 CONC 2,80 %“ Ve statusu jednotky 5. 11. Nevíme, zda jde o měřenou koncentraci (detektor
 úniku), nebo o jiný parametr. Ověřit s výrobcem.
 O
@@ -247,12 +254,12 @@ Vyžádat kopii oprávnění a osvědčení elektrikáře. O
 Bez nich revizní technik nemusí instalaci převzít a vzniká riziko u pojišťovny.
 Kontrola přívodu. Ověřit:
 kabel 1-AYKY-J 3×240+120 a jeho jištění v rozvodně Alignum,
+--- strana 5 ---
 selektivitu jištění,
 impedanci smyčky,
-soudobý příkon TČ + EK + topné jednotky (až ≈ 40 + 66 kW) proti hlavnímu jističi a rezervovanému příkonu
 objektu.
+soudobý příkon TČ + EK + topné jednotky (až ≈ 40 + 66 kW) proti hlavnímu jističi a rezervovanému příkonu
 T Možná příčina výpadku: přetížení hlavního jističe Alignum.
---- strana 5 ---
 5.2 Dokumentace k individuálně sestavenému rozvaděči
 Výrobcem sestavy je ten, kdo rozvaděč sestavil a uvedl do provozu. Smluvně za něj vůči klientovi odpovídá
 Riva Trade. Podle ČSN EN IEC 61439-1/-2 potřebujeme:
@@ -274,8 +281,9 @@ odstranění. Formální vady: termín odstranění podle zprávy.
 5.4 Je nutné omezit provoz do provedení kontrol?
 T Úplné odstavení dnes nedoporučuji. V listopadu by hrozilo vychladnutí objektu a zamrznutí technologie, což
 je samo o sobě riziko škody. Provoz je však vhodné omezit takto:
-elektrokotle a topné jednotky do výchozí revize jen jako nouzový zdroj (vysoký proud, neověřené
-dimenzování přívodu),
+elektrokotle ponechat v provozu, protože kryjí odběrové špičky VZT a defrost a bez nich TČ padají do
+chyby. Do revize ale omezit jejich současný příkon (postupné spínání, blokace topných jednotek 2× 9 kW
+při běhu obou EK) a ověřit, že přívod a jištění soudobý odběr unesou,
 uzavřené rozvaděče a kryty, přístup jen pro poučené osoby, označení „Pod napětím“
 ,
 prozatímní kontrola elektrikářem: dotažení, termovize při zatížení, funkce chráničů a měření smyčky. Zapsat
@@ -283,12 +291,18 @@ do záznamu o prozatímní kontrole.
 Pokud prozatímní kontrola zjistí nebezpečný stav (chybějící ochrana před nebezpečným dotykem, přehřívání
 spojů), dotčenou část vypnout ihned, bez ohledu na rozpracovanost a platby.
 5.5 Co musí dodat Alignum CZ
+Žádná elektro dokumentace objektu zatím dodána nebyla. Bez ní nelze dokončit řízení a regulaci, termín dokončení MaR proto závisí
+na součinnosti Alignum. Do té doby se údaje zjišťují za provozu a zkouškami v době odstávek.
 Poslední revizní zprávu elektroinstalace objektu a hlavního rozvaděče (ze kterého je vyveden náš přívod).
 Hodnotu hlavního jističe, rezervovaný příkon a průběh odběru (faktury za elektřinu nebo data distributora),
 schéma rozvodny.
 Údaje o uzemnění a hromosvodu.
 Kontakt na osobu odpovědnou za elektro zařízení a provozní řád objektu.
 Informaci o výpadku: kdy, jak dlouho, příčina, co vypnulo.
+Dokumentaci napájení a řízení vzduchotechniky a čerpadel větví (výkony, způsob spouštění, signály), aby bylo
+možné navázat řízení kotelny.
+--- strana 6 ---
+Termíny odstávek, ve kterých lze provést zkoušky výkonu a měření.
 6 · Požární bezpečnost, stavebně-právní zařazení, R290
 6.1 Dočasná stavba, technologie, nebo změna stavby?
 T Jde o technologické zařízení instalované do stávající technické místnosti a o venkovní jednotky na
@@ -298,7 +312,6 @@ Instalace tepelných čerpadel a technických zařízení zpravidla nevyžaduje 
 (zákon č. 283/2021 Sb.).
 Napojení na otopnou soustavu a nový elektrický přívod však může být posouzeno jako změna dokončené
 stavby (stavební úprava).
---- strana 6 ---
 O Ověřit u projektanta nebo stavebního úřadu, zejména kvůli umístění venkovních jednotek u fasády a
 hluku (NV č. 272/2011 Sb.).
 Vlastnicky jde o movitou věc Riva Trade, která není součástí stavby.
@@ -333,7 +346,26 @@ Tlaková zkouška a proplach soustavy s protokolem (ČSN EN 14336). Zabezpečova
 2,5 bar, expanze) podle ČSN 06 0830.
 O Ověřit s revizním technikem tlakových zařízení, zda AKU 1 200 l / max. 3 bar nebo expanzní nádoby
 nespadají mezi vyhrazená tlaková zařízení (NV č. 192/2022 Sb.).
+--- strana 7 ---
 7 · Výkon: co jsme slíbili a kde končí naše odpovědnost
+Stanovisko Riva Trade: teplo neprodáváme, pouze pronajímáme technologii. Splnění výkonových
+požadavků objektu negarantujeme. V současné situaci to není možné, protože objekt má skokové odběry
+tepla v předem nepredikovatelném čase.
+Proč nelze výkon garantovat: odběrové špičky vzduchotechniky
+F Vzduchotechnika (teplovzdušné jednotky haly) odebírá v krátkém čase enormní výkon, a to bez předchozí
+signalizace. Velké množství akumulované vody se tím ochladí o velký rozdíl teplot.
+F Studená zpátečka se dostane do akumulace a na vstup tepelných čerpadel. Při rozdílu výstup/vstup ≈ 15 K
+jednotka hlásí chybu (204 Unitwaterdif, ochrana jednotky) a vypne.
+F Aby k tomu nedošlo, krátkodobě pomáhají oba elektrokotle. Pomáhají i při odtávání (defrostu), kdy
+tepelná čerpadla dočasně nedodávají teplo.
+T Elektrokotle proto nejsou jen záložní zdroj pro mrazy, ale provozně nutná součást kotelny při současném
+charakteru odběru.
+T Možná opatření (součinnost Alignum, posoudit):
+signál o spuštění VZT do regulace kotelny s předstihem (beznapěťový kontakt), aby se dohřev spustil dřív,
+omezení rychlosti náběhu VZT (pomalejší otevírání směšovacích ventilů),
+úprava zapojení AKU tak, aby se studená zpátečka nedostala přímo na vstup TČ,
+vyšší teplota v akumulaci před známými špičkami.
+Co je v nabídce
 F Nabídka uvádí výkon „orientačně“
 , vychází z naměřené dodávky tepla 2021–2025 a výslovně upozorňuje,
 že se výpočty mohou změnit při změně provozu.
@@ -346,7 +378,6 @@ bivalence 72 kW,
 podružné měření elektřiny a tepla,
 nadřazená regulace s dálkovým dohledem,
 napojení na sekundár výměníku.
---- strana 7 ---
 F Náš e‑mail uvádí, že kotelnu stavíme „podle specifikací Alignum“
 . To je argument, že konkrétní provedení
 určily požadavky Alignum, ne původní nabídka. O Máme specifikace Alignum písemně (e‑mail, WhatsApp,
@@ -367,6 +398,8 @@ svou škodu, pokud nezanedbala sjednaná
 opatření.
 Riva Trade: alarm a protimrazová opatření.
 Alignum: oznámení a umožnění zásahu.
+--- strana 8 ---
+Příčina Odpovídá Povinnost / důsledek
 Porucha nebo přetížení
 vnitřní instalace Alignum
 (hlavní jistič, rozvodna, jiné
@@ -408,7 +441,6 @@ Kč,
 4. poté elektronický platební rozkaz.
 Topení kvůli dluhu nevypínat bez právní konzultace. V zimě hrozí škoda na objektu a protinároky. Smluvně
 lze sjednat právo přerušit plnění po předchozí výzvě a přiměřené lhůtě.
---- strana 8 ---
 Vlastnictví:
 soupis RT-ALG-01 až 15 se štítky,
 doplnit výrobní čísla (MAGNA3: P/N 97924259, výrobní číslo opsat ze štítku),
@@ -416,10 +448,15 @@ fotodokumentace uložená v projektu,
 písemné uznání vlastnictví od Alignum CZ.
 10 · Hlavní rizika
 Riziko Závažnost Opatření
-Provoz bez výchozí elektrorevize Zamrznutí okruhu bez glykolu při
+Provoz bez výchozí elektrorevize vysoká Revize do 7 dnů, prozatímní kontrola, omezení EK (kap. 5).
+Zamrznutí okruhu bez glykolu při
 výpadku
+vysoká Alarm, postup, protimrazové prvky, záložní napájení čerpadel.
 R290: ochranná zóna u otvorů do
 budovy
+střední Ověřit podle návodu, případně přesunout nebo uzavřít otvor.
+--- strana 9 ---
+Riziko Závažnost Opatření
 Spor o rozsah plnění (odchylky od
 nabídky)
 Prokazování ústní dohody a
@@ -428,12 +465,9 @@ Pojištění nekryje škodu (chybí
 revize, oprávnění)
 Nejasné vlastnictví při sporu nebo
 insolvenci Alignum
-Licence na teplo (prodej tepla) vysoká vysoká střední střední střední střední nízká až
+Licence na teplo (prodej tepla) střední střední střední nízká až
 střední
-nízká Revize do 7 dnů, prozatímní kontrola, omezení EK (kap. 5).
-Alarm, postup, protimrazové prvky, záložní napájení čerpadel.
-Ověřit podle návodu, případně přesunout nebo uzavřít otvor.
-Oznámit odchylky, dokončit měření, třístranná smlouva.
+nízká Oznámit odchylky, dokončit měření, třístranná smlouva.
 Potvrzující e‑mail, objednávka v podkladech.
 Oznámit pojišťovně, doplnit revize a oprávnění.
 Štítky, protokol, uznání vlastnictví.
@@ -455,22 +489,20 @@ text.)
 Dokument Obsah Navazuje na
 F Dopis MM Holz: potvrzení platebních podmínek a splatnosti, stav služby, oznámení
 odchylek, návrh třístranné smlouvy.
-objednávka (bod 11.1)
 B Akční plán na 14 dní: úkoly, odpovědnost, termíny; průběžně vedený seznam úkolů a
-odpovědi na kap. 11
 rizik.
 E Dopis Alignum CZ: stav technologie, plán revizí, dokončovací práce, požadované
 podklady (kap. 5.5, 6.2).
-požadavky Alignum
-(bod 11.6)
 C Revize předávacího protokolu: dočasné užívání, výrobní čísla, předané a chybějící
 dokumenty, nedodělky, plánované zkoušky. Bez potvrzení dokončení a bezpečnostní
 způsobilosti.
-stávající protokol a
-příloha 1
---- strana 9 ---
-Dokument Obsah Navazuje na
 D Třístranná smlouva v3 (z návrhu v2): navazuje na objednávku, nenahrazuje ji;
 součinnost, elektro parametry, výpadky, pojištění, demontáž, odkup samostatnou
 dohodou.
+objednávka (bod 11.1)
+odpovědi na kap. 11
+požadavky Alignum
+(bod 11.6)
+stávající protokol a
+příloha 1
 F, odpověď MM Holz

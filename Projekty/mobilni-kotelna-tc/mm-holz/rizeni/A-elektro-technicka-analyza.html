@@ -1,0 +1,132 @@
+<!doctype html><html lang="cs"><head><meta charset="utf-8"><title>Elektroinstalace kotelny Alignum – technická analýza</title><style>@page{size:A4;margin:13mm}body{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;color:#1b2420;font-size:10pt;line-height:1.42}
+h1{font-size:17pt;color:#0F3D2E;margin:0 0 2px}.sub{color:#5d6b64}.head{border-bottom:2px solid #1E8F5B;padding-bottom:8px;margin-bottom:10px;display:flex;justify-content:space-between;gap:12px}
+.meta{text-align:right;font-size:9pt;color:#5d6b64}h2{font-size:12.5pt;color:#0F3D2E;border-left:3px solid #1E8F5B;padding-left:8px;margin:18px 0 6px;page-break-after:avoid}h3{font-size:10.6pt;color:#0F3D2E;margin:12px 0 4px;page-break-after:avoid}
+table{border-collapse:collapse;width:100%;font-size:9pt;margin:4px 0 8px}tr{page-break-inside:avoid}th,td{border-bottom:1px solid #d8ded9;padding:3.5px 5px;text-align:left;vertical-align:top}
+th{background:#E7F3EC;color:#0F3D2E}.small{font-size:8.6pt;color:#5d6b64}
+.box{border:1px solid #d8ded9;border-radius:6px;padding:7px 10px;margin:6px 0}.warn{border-color:#d9a400;background:#fff9e6}
+.b{display:inline-block;font-size:7.6pt;font-weight:700;border-radius:3px;padding:0 4px;margin-right:3px;vertical-align:1px}.bf{background:#dff1e6;color:#13633f}.bt{background:#e5ecf8;color:#2b4f8a}.bo{background:#fde9cc;color:#8a5400}
+.p1{color:#c0392b;font-weight:700}.p2{color:#b06f00;font-weight:700}.p3{color:#5d6b64;font-weight:700}ul,ol{margin:3px 0 6px;padding-left:20px}li{margin:1.5px 0}</style></head><body>
+<div class="head"><div><h1>Elektroinstalace kotelny s tepelnými čerpadly</h1><div class="sub">Objekt Alignum CZ s.r.o., Staříč / Paskov · technická analýza a požadavky na dokončení</div></div><div class="meta">Riva Trade, s.r.o.<br>stav k 12. 11. 2026<br>pracovní podklad</div></div>
+
+<p class="small">Podklad pro elektroinženýra, který provedl elektroinstalaci kotelny. Shrnuje stav, požadavky na revizi a dokumentaci a dokončovací práce. Značení: <span class="b bf">F</span> zjištěný stav, <span class="b bt">T</span> náš předpoklad, <span class="b bo">O</span> nutno ověřit. Priority: <span class="p1">P1</span> do 3 dnů, <span class="p2">P2</span> do 14 dnů, <span class="p3">P3</span> průběžně.</p>
+
+<h2>1 · Okamžité kroky (elektro a bezpečnost)</h2>
+<table><thead><tr><th style="width:3%">#</th><th style="width:30%">Krok</th><th>Co konkrétně</th><th style="width:12%">Priorita</th></tr></thead><tbody>
+<tr><td>1</td><td><strong>Výchozí revize</strong></td><td>Revize celé nové instalace:
+<ul><li>přívod z rozvodny objektu,</li>
+<li>rozvaděč kotelny,</li>
+<li>napájení TČ, elektrokotlů, topných jednotek a čerpadel.</li></ul>
+Termín dohodnout s revizním technikem, cíl do 7 dnů.</td><td><span class="p1">P1</span></td></tr>
+<tr><td>2</td><td><strong>Prozatímní kontrola do revize</strong></td><td>
+<ul><li>Kontrola dotažení svorek, termovize při zatížení.</li>
+<li>Měření impedance smyčky, funkce proudových chráničů.</li>
+<li>Uzavřené kryty rozvaděče a elektrokotlů.</li>
+<li>Zápis o kontrole.</li></ul></td><td><span class="p1">P1</span></td></tr>
+<tr><td>3</td><td><strong>Ochrana proudovým chráničem</strong></td><td>Návod RH X50 předepisuje pro každou jednotku jistič 40 A s proudovým chráničem. Na fotografii rozvaděče z montáže chránič není vidět. Ověřit, případně doplnit.</td><td><span class="p1">P1</span></td></tr>
+<tr><td>4</td><td><strong>Souběh elektrokotlů a TČ</strong></td><td>
+<ul><li>Elektrokotle jsou provozně nutné (kap. 4), vypnout je nelze.</li>
+<li>Do revize omezit současný příkon: postupné spínání, blokace topných jednotek 2× 9 kW při běhu obou EK.</li>
+<li>Ověřit, že přívod a jištění soudobý odběr unesou.</li></ul></td><td><span class="p1">P1</span></td></tr>
+<tr><td>5</td><td><strong>Výpadek napájení</strong></td><td>
+<ul><li>Zjistit příčinu proběhlého výpadku: náš obvod, hlavní jistič objektu, nebo distribuční síť.</li>
+<li>Navrhnout alarm výpadku napájení (SMS / aplikace).</li>
+<li>Navrhnout záložní napájení oběhových čerpadel. Okruh TČ je plněn vodou bez glykolu a venkovní potrubí hrozí zamrznutím.</li></ul></td><td><span class="p1">P1</span>–<span class="p2">P2</span></td></tr>
+</tbody></table>
+
+<h2>2 · Popis technologie</h2>
+<table><thead><tr><th style="width:26%">Část</th><th>Provedení</th></tr></thead><tbody>
+<tr><td>Zdroje</td><td>2× tepelné čerpadlo REO HEATING RH X50 (chladivo R290), venkovní monobloky u fasády, kaskáda. Max. příkon ≈ 20 kW / 32 A na jednotku podle návodu. <span class="b bf">F</span></td></tr>
+<tr><td>Bivalence</td><td>2× elektrokotel TRINNITY/COSMOTHERM E 24 kW (vlastní regulace, čerpadlo, ekvitermní čidlo) + 2× topná jednotka TJ 9 kW v akumulačních nádržích. Celkem 66 kW. <span class="b bf">F</span></td></tr>
+<tr><td>Hydraulika</td><td>2× AKU 1 200 l. Oběhová čerpadla Grundfos MAGNA3 32-120 F (1× 230 V, 15–333 W) a TRINNITY 25/6/180. <span class="b bf">F</span></td></tr>
+<tr><td>Rozvaděč kotelny</td><td>Schneider S3D 1000×600×300, odpínač 250 A, 4× jistič B40 3P, rozbočovací bloky, svorky. <span class="b bf">F</span></td></tr>
+<tr><td>Přívod a rozvody</td><td>1-AYKY-J 3×240+120 (≈ 8 m) z rozvodny objektu. CYKY-J 5×10, 5×16, CYA 70 (pospojení), CYSY 5G1,5. Kabelové žlaby a kanály. <span class="b bf">F</span></td></tr>
+<tr><td>Soudobý příkon</td><td>TČ ≈ 2× 20 kW + EK 2× 24 kW + TJ 2× 9 kW + čerpadla: teoreticky až ≈ 110 kW (≈ 160 A). Bez omezení souběhu je to nad rámec běžného přívodu. <span class="b bt">T</span></td></tr>
+</tbody></table>
+
+<h2>3 · Stav díla</h2>
+<div class="box warn"><span class="b bf">F</span> Kotelna je v provozu a vytápí objekt. <strong>Řízení, regulace a monitoring topení však nejsou hotové ani předané.</strong> Provozovatel objektu nedodal <strong>žádnou elektro dokumentaci</strong>, tj. rozvody, napájení a řízení vzduchotechniky a čerpadel větví, jištění, hlavní jistič. Údaje potřebné pro řízení technologie proto zjišťujeme za provozu a zkouškami výkonu v době odstávek.</div>
+<p>Zbývá dokončit:</p>
+<ul>
+<li>nadřazená regulace, dálkový dohled a hlášení poruch, omezovač příkonu (řízení souběhu EK a TČ),</li>
+<li>podružný elektroměr kotelny, kalorimetr (měření dodaného tepla),</li>
+<li>komunikační kabel kaskády TČ: stíněný kroucený pár ≈ 1 mm², RS485, stínění uzemněné jednostranně; ověřit, zda je osazen definitivně,</li>
+<li>napojení oběhových čerpadel na reléové výstupy jednotek (stíněný kabel). Zrušit případné přímé zapojení, aby jednotka čerpadla řídila i kvůli protimrazové ochraně,</li>
+<li>případné posílení napájecích kabelů podle výsledku měření zatížení a revize,</li>
+<li>alarm výpadku napájení, záložní napájení čerpadel, případně topné kabely na venkovním potrubí,</li>
+<li>dokumentace skutečného provedení.</li>
+</ul>
+
+<h2>4 · Charakter odběru a role elektrokotlů</h2>
+<ul>
+<li><span class="b bf">F</span> Vzduchotechnika haly odebírá v krátkém čase velmi vysoký výkon, a to bez předchozí signalizace. Akumulovaná voda se rychle ochladí o velký rozdíl teplot.</li>
+<li><span class="b bf">F</span> Při rozdílu výstup/vstup ≈ <strong>15 K</strong> jdou tepelná čerpadla do ochranné chyby (204 Unitwaterdif) a vypnou se.</li>
+<li><span class="b bf">F</span> Aby k tomu nedošlo, krátkodobě pomáhají oba elektrokotle. Pomáhají i při odtávání (defrostu) venkovních jednotek.</li>
+<li><strong>Elektrokotle jsou proto provozně nutná součást kotelny</strong>, ne jen záložní zdroj. Elektroinstalace i řízení musí počítat s jejich častým krátkodobým spínáním.</li>
+<li>Pro řízení navrhujeme (podle možností objektu):
+<ul><li>signál o spuštění vzduchotechniky do regulace kotelny (beznapěťový kontakt), aby se dohřev spustil s předstihem,</li>
+<li>postupné spínání EK po stupních s časovým zpožděním, aby nevznikaly proudové špičky,</li>
+<li>blokace topných jednotek v AKU při současném běhu obou EK.</li></ul></li>
+</ul>
+
+<h2>5 · Revize a dokumentace</h2>
+<h3>5.1 Výchozí revize</h3>
+<ul>
+<li>Výchozí revize podle ČSN 33 2000-6 a ČSN 33 1500 (zákon č. 250/2021 Sb., NV č. 190/2022 Sb.).
+<ul><li>Kotelna už běží, proto revizi provést bez odkladu.</li>
+<li>Měření vyžadující odpojení (izolační odpor) naplánovat do krátké odstávky. Akumulace drží teplo zhruba 1–2 hodiny.</li></ul></li>
+<li>Prosíme o kopii <strong>oprávnění TIČR</strong> k montáži vyhrazených elektrických zařízení a osvědčení o odborné způsobilosti (NV č. 194/2022 Sb.). Revizní technik a pojišťovna je budou vyžadovat.</li>
+<li>Každá další úprava (posílení kabelů, MaR, elektroměr, záložní napájení) znamená doplňkovou revizi dotčené části. Úpravy proto sdružit a revidovat najednou.</li>
+<li>Závady, které ohrožují bezpečnost (chybějící ochrana před nebezpečným dotykem, přehřívání spojů), znamenají okamžité vypnutí dotčeného obvodu do odstranění.</li>
+</ul>
+<h3>5.2 Dokumentace k rozvaděči (ČSN EN IEC 61439-1/-2)</h3>
+<ol>
+<li>Jednopólové schéma a výkresy skutečného provedení.</li>
+<li>Protokol o kusovém ověření: izolační stav, ochranný obvod, funkce, dotažení spojů.</li>
+<li>Doklad o návrhovém ověření (oteplení, zkratová odolnost); obvykle od výrobce systému skříní.</li>
+<li>Typový štítek rozvaděče: výrobce sestavy, jmenovitý proud, Icc, IP, norma.</li>
+<li>EU prohlášení o shodě (NV č. 117/2016 Sb., NV č. 118/2016 Sb.).</li>
+</ol>
+<p class="small">Prosíme o potvrzení, kdo bude uveden jako výrobce sestavy rozvaděče, a o termín dodání bodů 1–5.</p>
+<h3>5.3 Kontrola přívodu</h3>
+<ul>
+<li>Průřez a jištění kabelu 1-AYKY-J 3×240+120 v rozvodně objektu, selektivita jištění, impedance smyčky.</li>
+<li>Soudobý příkon kotelny proti hlavnímu jističi a rezervovanému příkonu objektu. Údaje od provozovatele objektu zatím nemáme.</li>
+<li>Měření zatížení fází v provozu se špičkou vzduchotechniky a při běhu elektrokotlů. Podle výsledku rozhodnout o posílení kabelů.</li>
+</ul>
+
+<h2>6 · Chladivo R290 a požární bezpečnost (vazba na elektro)</h2>
+<ul>
+<li>Chladivo R290 (propan, A3) je jen ve venkovních hermetických jednotkách. Uvnitř objektu je voda.</li>
+<li>Jednotky stojí ≈ 0,3–0,6 m od fasády. U země je hned vedle větrací mřížka do objektu a dveře kotelny. V ochranné zóně podle návodu výrobce a ČSN EN 378 nesmějí být zdroje zapálení. Zkontrolovat <strong>umístění elektrických prvků u jednotek</strong>: svorkovnice, rozbočovací krabice, vypínače, osvětlení.</li>
+<li>Prostupy kabelů stěnou: pokud jde o hranici požárního úseku, je nutná certifikovaná ucpávka. Zařazení ověří provozovatel objektu.</li>
+<li>Ve stavu jednotky se zobrazuje údaj „R290 CONC 2,80 %“. Ověřujeme s výrobcem, o jakou veličinu jde. Do vyjasnění nezasahovat do elektroinstalace jednotek bez konzultace.</li>
+</ul>
+
+<h2>7 · Postřehy z fotodokumentace z průběhu realizace</h2>
+<ul>
+<li>Rozvaděč: hlavní odpínač a 4× jistič 3P. Proudový chránič na snímku není vidět. Přední kryt chybí (snímek je z montáže).</li>
+<li>Elektrokotle mají na snímcích sejmuté kryty. Ověřit, že jsou nasazené.</li>
+<li>Kabelová trasa po stěně a prostup do kotelny: ověřit upevnění a utěsnění prostupu.</li>
+<li>V kotelně zůstal montážní materiál a sprej. Před revizí uklidit.</li>
+</ul>
+
+<h2>8 · Podklady od provozovatele objektu (vyžádáno)</h2>
+<ul>
+<li>Revizní zpráva elektroinstalace objektu a hlavního rozvaděče, ze kterého je kotelna napájena.</li>
+<li>Hlavní jistič, rezervovaný příkon, schéma hlavní rozvodny, údaje o uzemnění a hromosvodu.</li>
+<li>Dokumentace napájení a řízení vzduchotechniky a čerpadel větví (výkony, způsob spouštění, dostupné signály).</li>
+<li>Termíny odstávek pro zkoušky výkonu a měření.</li>
+<li>Informace o proběhlém výpadku: kdy, jak dlouho, co vypnulo.</li>
+</ul>
+
+<h2>9 · Prosíme o odpověď</h2>
+<ol>
+<li>Je v rozvaděči osazena ochrana proudovým chráničem pro TČ? Jaký typ a citlivost?</li>
+<li>Jak jsou jištěny a napájeny elektrokotle, topné jednotky a oběhová čerpadla? Prosíme o schéma, i ručně kreslené.</li>
+<li>Jaké jištění je v rozvodně objektu na přívodu 3×240+120?</li>
+<li>Víte o příčině proběhlého výpadku?</li>
+<li>Kdy můžete provést prozatímní kontrolu (kap. 1, bod 2) a kdo zajistí výchozí revizi?</li>
+<li>Kopie oprávnění TIČR a osvědčení o odborné způsobilosti.</li>
+<li>Návrh řešení omezovače příkonu, alarmu výpadku a záložního napájení čerpadel, s odhadem materiálu a termínu.</li>
+</ol>
+</body></html>

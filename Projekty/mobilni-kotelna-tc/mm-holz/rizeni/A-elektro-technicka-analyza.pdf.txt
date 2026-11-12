@@ -1,0 +1,141 @@
+[Text vytažený z A-elektro-technicka-analyza.pdf]
+
+--- strana 1 ---
+Elektroinstalace kotelny s tepelnými čerpadly
+Objekt Alignum CZ s.r.o., Staříč / Paskov · technická analýza a požadavky na dokončení
+Riva Trade, s.r.o.
+stav k 12. 11. 2026
+pracovní podklad
+Podklad pro elektroinženýra, který provedl elektroinstalaci kotelny. Shrnuje stav, požadavky na revizi a dokumentaci a dokončovací
+práce. Značení: F zjištěný stav, T náš předpoklad, O nutno ověřit. Priority: P1 do 3 dnů, P2 do 14 dnů, P3 průběžně.
+1 · Okamžité kroky (elektro a bezpečnost)
+# Krok Co konkrétně Priorita
+1 Výchozí revize 2 Prozatímní kontrola do revize 3 Ochrana proudovým chráničem 4 Souběh elektrokotlů a TČ 5 Výpadek napájení Revize celé nové instalace:
+přívod z rozvodny objektu,
+rozvaděč kotelny,
+napájení TČ, elektrokotlů, topných jednotek a čerpadel.
+Termín dohodnout s revizním technikem, cíl do 7 dnů.
+Kontrola dotažení svorek, termovize při zatížení.
+Měření impedance smyčky, funkce proudových chráničů.
+Uzavřené kryty rozvaděče a elektrokotlů.
+Zápis o kontrole.
+Návod RH X50 předepisuje pro každou jednotku jistič 40 A s
+proudovým chráničem. Na fotografii rozvaděče z montáže chránič
+není vidět. Ověřit, případně doplnit.
+Elektrokotle jsou provozně nutné (kap. 4), vypnout je nelze.
+Do revize omezit současný příkon: postupné spínání, blokace
+topných jednotek 2× 9 kW při běhu obou EK.
+Ověřit, že přívod a jištění soudobý odběr unesou.
+Zjistit příčinu proběhlého výpadku: náš obvod, hlavní jistič
+objektu, nebo distribuční síť.
+Navrhnout alarm výpadku napájení (SMS / aplikace).
+Navrhnout záložní napájení oběhových čerpadel. Okruh TČ je
+plněn vodou bez glykolu a venkovní potrubí hrozí zamrznutím.
+P1
+P1
+P1
+P1
+P1–P2
+2 · Popis technologie
+Část Provedení
+Zdroje Bivalence Hydraulika Rozvaděč kotelny 2× tepelné čerpadlo REO HEATING RH X50 (chladivo R290), venkovní monobloky u fasády,
+kaskáda. Max. příkon ≈ 20 kW / 32 A na jednotku podle návodu. F
+2× elektrokotel TRINNITY/COSMOTHERM E 24 kW (vlastní regulace, čerpadlo, ekvitermní
+čidlo) + 2× topná jednotka TJ 9 kW v akumulačních nádržích. Celkem 66 kW. F
+2× AKU 1 200 l. Oběhová čerpadla Grundfos MAGNA3 32-120 F (1× 230 V, 15–333 W) a
+TRINNITY 25/6/180. F
+Schneider S3D 1000×600×300, odpínač 250 A, 4× jistič B40 3P, rozbočovací bloky, svorky.
+F
+Přívod a rozvody Soudobý příkon 1-AYKY-J 3×240+120 (≈ 8 m) z rozvodny objektu. CYKY-J 5×10, 5×16, CYA 70 (pospojení),
+CYSY 5G1,5. Kabelové žlaby a kanály. F
+TČ ≈ 2× 20 kW + EK 2× 24 kW + TJ 2× 9 kW + čerpadla: teoreticky až ≈ 110 kW (≈ 160 A).
+Bez omezení souběhu je to nad rámec běžného přívodu. T
+--- strana 2 ---
+3 · Stav díla
+F Kotelna je v provozu a vytápí objekt. Řízení, regulace a monitoring topení však nejsou hotové ani
+předané. Provozovatel objektu nedodal žádnou elektro dokumentaci, tj. rozvody, napájení a řízení
+vzduchotechniky a čerpadel větví, jištění, hlavní jistič. Údaje potřebné pro řízení technologie proto zjišťujeme za
+provozu a zkouškami výkonu v době odstávek.
+Zbývá dokončit:
+nadřazená regulace, dálkový dohled a hlášení poruch, omezovač příkonu (řízení souběhu EK a TČ),
+podružný elektroměr kotelny, kalorimetr (měření dodaného tepla),
+komunikační kabel kaskády TČ: stíněný kroucený pár ≈ 1 mm²
+, RS485, stínění uzemněné jednostranně; ověřit,
+zda je osazen definitivně,
+napojení oběhových čerpadel na reléové výstupy jednotek (stíněný kabel). Zrušit případné přímé zapojení, aby
+jednotka čerpadla řídila i kvůli protimrazové ochraně,
+případné posílení napájecích kabelů podle výsledku měření zatížení a revize,
+alarm výpadku napájení, záložní napájení čerpadel, případně topné kabely na venkovním potrubí,
+dokumentace skutečného provedení.
+4 · Charakter odběru a role elektrokotlů
+F Vzduchotechnika haly odebírá v krátkém čase velmi vysoký výkon, a to bez předchozí signalizace.
+Akumulovaná voda se rychle ochladí o velký rozdíl teplot.
+F Při rozdílu výstup/vstup ≈ 15 K jdou tepelná čerpadla do ochranné chyby (204 Unitwaterdif) a vypnou se.
+F Aby k tomu nedošlo, krátkodobě pomáhají oba elektrokotle. Pomáhají i při odtávání (defrostu) venkovních
+jednotek.
+Elektrokotle jsou proto provozně nutná součást kotelny, ne jen záložní zdroj. Elektroinstalace i řízení musí
+počítat s jejich častým krátkodobým spínáním.
+Pro řízení navrhujeme (podle možností objektu):
+signál o spuštění vzduchotechniky do regulace kotelny (beznapěťový kontakt), aby se dohřev spustil s
+předstihem,
+postupné spínání EK po stupních s časovým zpožděním, aby nevznikaly proudové špičky,
+blokace topných jednotek v AKU při současném běhu obou EK.
+5 · Revize a dokumentace
+5.1 Výchozí revize
+Výchozí revize podle ČSN 33 2000-6 a ČSN 33 1500 (zákon č. 250/2021 Sb., NV č. 190/2022 Sb.).
+Kotelna už běží, proto revizi provést bez odkladu.
+Měření vyžadující odpojení (izolační odpor) naplánovat do krátké odstávky. Akumulace drží teplo zhruba 1–2
+hodiny.
+Prosíme o kopii oprávnění TIČR k montáži vyhrazených elektrických zařízení a osvědčení o odborné
+způsobilosti (NV č. 194/2022 Sb.). Revizní technik a pojišťovna je budou vyžadovat.
+Každá další úprava (posílení kabelů, MaR, elektroměr, záložní napájení) znamená doplňkovou revizi dotčené
+části. Úpravy proto sdružit a revidovat najednou.
+Závady, které ohrožují bezpečnost (chybějící ochrana před nebezpečným dotykem, přehřívání spojů),
+znamenají okamžité vypnutí dotčeného obvodu do odstranění.
+5.2 Dokumentace k rozvaděči (ČSN EN IEC 61439-1/-2)
+1. Jednopólové schéma a výkresy skutečného provedení.
+2. Protokol o kusovém ověření: izolační stav, ochranný obvod, funkce, dotažení spojů.
+3. Doklad o návrhovém ověření (oteplení, zkratová odolnost); obvykle od výrobce systému skříní.
+--- strana 3 ---
+4. Typový štítek rozvaděče: výrobce sestavy, jmenovitý proud, Icc, IP, norma.
+5. EU prohlášení o shodě (NV č. 117/2016 Sb., NV č. 118/2016 Sb.).
+Prosíme o potvrzení, kdo bude uveden jako výrobce sestavy rozvaděče, a o termín dodání bodů 1–5.
+5.3 Kontrola přívodu
+Průřez a jištění kabelu 1-AYKY-J 3×240+120 v rozvodně objektu, selektivita jištění, impedance smyčky.
+Soudobý příkon kotelny proti hlavnímu jističi a rezervovanému příkonu objektu. Údaje od provozovatele objektu
+zatím nemáme.
+Měření zatížení fází v provozu se špičkou vzduchotechniky a při běhu elektrokotlů. Podle výsledku rozhodnout
+o posílení kabelů.
+6 · Chladivo R290 a požární bezpečnost (vazba na elektro)
+Chladivo R290 (propan, A3) je jen ve venkovních hermetických jednotkách. Uvnitř objektu je voda.
+Jednotky stojí ≈ 0,3–0,6 m od fasády. U země je hned vedle větrací mřížka do objektu a dveře kotelny. V
+ochranné zóně podle návodu výrobce a ČSN EN 378 nesmějí být zdroje zapálení. Zkontrolovat umístění
+elektrických prvků u jednotek: svorkovnice, rozbočovací krabice, vypínače, osvětlení.
+Prostupy kabelů stěnou: pokud jde o hranici požárního úseku, je nutná certifikovaná ucpávka. Zařazení ověří
+provozovatel objektu.
+Ve stavu jednotky se zobrazuje údaj „R290 CONC 2,80 %“
+. Ověřujeme s výrobcem, o jakou veličinu jde. Do
+vyjasnění nezasahovat do elektroinstalace jednotek bez konzultace.
+7 · Postřehy z fotodokumentace z průběhu realizace
+Rozvaděč: hlavní odpínač a 4× jistič 3P. Proudový chránič na snímku není vidět. Přední kryt chybí (snímek je z
+montáže).
+Elektrokotle mají na snímcích sejmuté kryty. Ověřit, že jsou nasazené.
+Kabelová trasa po stěně a prostup do kotelny: ověřit upevnění a utěsnění prostupu.
+V kotelně zůstal montážní materiál a sprej. Před revizí uklidit.
+8 · Podklady od provozovatele objektu (vyžádáno)
+Revizní zpráva elektroinstalace objektu a hlavního rozvaděče, ze kterého je kotelna napájena.
+Hlavní jistič, rezervovaný příkon, schéma hlavní rozvodny, údaje o uzemnění a hromosvodu.
+Dokumentace napájení a řízení vzduchotechniky a čerpadel větví (výkony, způsob spouštění, dostupné
+signály).
+Termíny odstávek pro zkoušky výkonu a měření.
+Informace o proběhlém výpadku: kdy, jak dlouho, co vypnulo.
+9 · Prosíme o odpověď
+1. Je v rozvaděči osazena ochrana proudovým chráničem pro TČ? Jaký typ a citlivost?
+2. Jak jsou jištěny a napájeny elektrokotle, topné jednotky a oběhová čerpadla? Prosíme o schéma, i ručně
+kreslené.
+3. Jaké jištění je v rozvodně objektu na přívodu 3×240+120?
+4. Víte o příčině proběhlého výpadku?
+5. Kdy můžete provést prozatímní kontrolu (kap. 1, bod 2) a kdo zajistí výchozí revizi?
+6. Kopie oprávnění TIČR a osvědčení o odborné způsobilosti.
+7. Návrh řešení omezovače příkonu, alarmu výpadku a záložního napájení čerpadel, s odhadem materiálu a
+termínu.
