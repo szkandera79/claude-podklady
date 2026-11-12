@@ -1,0 +1,476 @@
+[Text vytažený z A-analyza-situace.pdf]
+
+--- strana 1 ---
+INTERNÍ – pracovní podklad Riva Trade, s.r.o. Právní části jsou pracovní návrh k odborné kontrole (advokát, revizní technik, OZO
+PO). Nepředávat třetím stranám.
+A · Analýza aktuální situace
+Kotelna s tepelnými čerpadly v areálu Alignum CZ, Staříč / Paskov · objednatel Mayr-Melnhof Holz
+Paskov s.r.o.
+Riva Trade,
+s.r.o.
+stav k 12. 11.
+2026
+verze 1
+Značení: F potvrzený fakt z dokumentu, T naše tvrzení / pracovní předpoklad, O nutno ověřit. Priority: P1 okamžitě (do 3 dnů),
+P2 do 14 dnů, P3 průběžně.
+1 · Pět okamžitých kroků
+# Krok Co konkrétně Kdo / kdy
+1 Elektro: výchozí revize a do té
+doby prozatímní bezpečnostní
+opatření
+2 Ochrana proti zamrznutí a postup
+při výpadku proudu
+3 Platby: písemně potvrdit
+podmínky s MM Holz
+Objednat výchozí revizi celé nové instalace, tj. přívodu z
+rozvodny Alignum, rozvaděče, napájení TČ, elektrokotlů a
+čerpadel.
+Do revize zajistit:
+uzavřené kryty rozvaděče a elektrokotlů,
+kontrolu dotažení svorek a termovizi při zatížení,
+ověření, že je osazená ochrana proudovým chráničem.
+Návod RH X50 ji vyžaduje a na fotografii rozvaděče není
+vidět.
+Omezit souběh elektrokotlů. Prověřit, zda příčinou výpadku
+nebylo přetížení přívodu.
+Ověřit oprávnění TIČR elektrikáře.
+Okruh TČ je bez glykolu a potrubí vede venku. Výpadek
+proudu už jednou nastal.
+Do mrazů musí fungovat:
+alarm výpadku napájení (SMS / aplikace),
+písemný postup pro obsluhu Alignum (kdy a jak vypustit
+venkovní část),
+ochrany navržené v rev1 (protimrazové ventily, záložní
+napájení čerpadel, topné kabely). Ověřit, co z nich je
+skutečně osazeno.
+Prověřit hodnotu „R290 CONC 2,80 %“ s výrobcem.
+Získat a založit objednávku 4500090045.
+Navázat na náš e‑mail s fakturačními údaji (5 měsíců do 31. 3.
+2027, první platba 320 000 Kč) a požádat p. Dorňáka o
+potvrzení:
+3 měsíce nájmu + doprava + instalace = 320 000 Kč bez
+DPH, fakturováno 5. 11.,
+splatnost podle objednávky 30 dní, tj. 5. 12. 2026 (sobota
+→ 7. 12.),
+únor a březen budou fakturovány zvlášť.
+Požádat o potvrzení doručení faktury.
+Faktura není po splatnosti. Její vlastní datum splatnosti 12.
+11. se rozchází s objednávkou.
+Riva Trade +
+revizní technik
+· P1, revize do
+7 dnů
+Riva Trade ·
+P1
+Riva Trade ·
+P1
+--- strana 2 ---
+# Krok Co konkrétně Kdo / kdy
+4 Vlastnictví a předání k
+dočasnému užívání
+5 Vyjasnit odpovědnosti a sepsat
+odchylky od nabídky
+Podepsat s Alignum (a na vědomí MM Holz) předávací protokol
+se soupisem majetku. Protokol bude výslovně uvádět, že:
+technologie je ve vlastnictví Riva Trade,
+není součástí stavby,
+není dokončena a chybí revize.
+Riva Trade,
+Alignum · P1–
+P2
+Polepit štítky RT-ALG.
+Oznámit instalaci naší pojišťovně, a to majetek i odpovědnost.
+Písemně informovat MM Holz i Alignum, v čem se provedení
+liší od nabídky:
+bez glykolu,
+bivalence 66 kW místo 72 kW,
+napojení na primár výměníku,
+měření tepla a dálkový dohled dosud chybí.
+Riva Trade ·
+P2 (dopisy E,
+F)
+Vyžádat od Alignum:
+dokumentaci a revize jeho elektroinstalace,
+hodnotu hlavního jističe a rezervovaný příkon,
+požárně bezpečnostní podklady objektu,
+kontakt na jeho OZO PO a BOZP.
+Navrhnout třístrannou smlouvu.
+2 · Smluvní strany (ověřeno v ARES 12. 11. 2026)
+Role Subjekt Poznámka
+Dodavatel,
+pronajímatel,
+vlastník technologie
+Objednatel a plátce Uživatel technologie,
+poskytovatel prostor
+Riva Trade, s.r.o., Korunní 2569/108, 101 00 Praha, IČO
+08864811, DIČ CZ08864811 F
+Obchodní značky REO HEATING /
+ThermaVera nejsou samostatné
+právnické osoby.
+Mayr-Melnhof Holz Paskov s.r.o., č. p. 544, 739 43
+Staříč, IČO 26729407, DIČ CZ26729407 F
+Jedná Ing. Alan Dorňák. O Rozsah jeho
+zmocnění: podpis smluv, kdo podepisuje
+za společnost.
+Alignum CZ s.r.o., č. p. 542, 739 43 Staříč, IČO 27137406
+F
+Opravit název ve stávajícím předávacím
+protokolu a v návrhu smlouvy (uvádějí
+„Alignum s.r.o.“). O Je Alignum CZ
+vlastníkem budovy, nebo nájemcem? To
+ovlivní, kdo má dát souhlas s umístěním
+a kdo odpovídá za stavbu.
+3 · Smluvní dokumenty a jejich vztah
+Dokument Obsah Stav
+Cenová nabídka
+(e‑mail p. Dorňákovi,
+říjen 2026)
+Ceny bez DPH:
+nájem 80 000 Kč/měs., minimálně 6 měsíců (480 000 Kč),
+instalace 50 000 Kč,
+doprava 30 000 Kč,
+elektřinu hradí nájemce,
+výkon „orientačně“ podle naměřené spotřeby,
+slíbeno: glykol ve venkovním okruhu, podružné měření elektřiny i tepla, dálkový
+dohled.
+F
+Objednávka MM Holz
+č. 4500090045
+Vystavena na základě nabídky, splatnost 30 dní netto, uváděná hodnota 490 000 Kč.
+PDF zatím nemám (macOS blokuje přílohy aplikace Mail). Hodnota 490 000 Kč
+neodpovídá nabídce (6 × 80 000 + 80 000 = 560 000 Kč) ani 5 měsícům (480 000 Kč).
+O
+--- strana 3 ---
+Dokument Obsah Stav
+Náš e‑mail p.
+Dorňákovi s
+fakturačními údaji (před
+instalací)
+pronájem do 31. 3. 2027 (5 měsíců),
+technika zůstává v našem vlastnictví a musí nám být umožněn přístup (provoz,
+údržba, opravy),
+kotelnu stavíme novou „podle specifikací Alignum“,
+první platba předem: 3 × 80 000 + 30 000 + 50 000 = 320 000 Kč,
+únor a březen se vyfakturují později po 80 000 Kč (ústně).
+F
+O Odpověděl p. Dorňák? Dorazila objednávka až po tomto e‑mailu? Doplnit datum
+odeslání.
+Faktura 202600006 Vystavena 5. 11. 2026, DUZP 5. 11. 2026, splatnost na faktuře 12. 11. 2026. Částky:
+320 000 Kč + DPH 21 % 67 200 Kč = 387 200 Kč. Odkazuje na objednávku
+4500090045. Chyby: období „1/2026“ místo 1/2027, „kotelna 150 kW“.
+F
+Nabídka odkupu pro
+Alignum CZ (TV-
+ALIGNUM-2026-01)
+Zůstatková cena 1 250 000 Kč (se 3. jednotkou 1 500 000 Kč), rozvaděč +70 000 Kč.
+Výhrada: cena předpokládala 6 měsíců nájmu placeného MM Holz.
+F
+Vyhodnocení
+Smlouva s MM Holz vznikla. Objednávka vystavená na základě naší nabídky je přijetím nabídky.
+Pokud se od nabídky odchyluje (5 místo 6 měsíců, 490 000 Kč, splatnost 30 dní), jde podle § 1740 odst. 2 a
+3 OZ o nový návrh.
+Ten jsme přijali konkludentně tím, že jsme začali plnit. Obsah smlouvy proto pravděpodobně určuje text
+objednávky, včetně případných obchodních podmínek, na které odkazuje. T
+Splatnost. Splatnost uvedená na faktuře (7 dní) je jednostranný údaj a nepřepisuje sjednaných 30 dní netto.
+Faktura vystavená 5. 11. je proto splatná nejdříve 5. 12. 2026. Připadá na sobotu, prakticky tedy 7. 12. (§
+607 OZ).
+Pokud objednávka počítá lhůtu od doručení faktury, splatnost se posune.
+Dnes není nic po splatnosti. O Odkud se 30 dní počítá, záleží na textu objednávky.
+Platba 3 měsíců předem je písemně oznámena naším e‑mailem s fakturačními údaji. Pokud objednávka
+přišla až po něm a odkazuje na naši nabídku a komunikaci, máme dobrý argument, že MM Holz tyto podmínky
+znal a přijal.
+Platba předem ale sama o sobě neruší objednávkovou splatnost 30 dní.
+Řešení: krátký potvrzující e‑mail s žádostí o odpověď „souhlasím“
+. Mlčení samo o sobě není souhlas.
+Předmět plnění je nájem technologie, ne prodej tepla. Tuto konstrukci držet ve všech dokumentech
+(nefakturovat GJ ani „dodávku tepla“).
+Při prodeji tepla třetí osobě hrozí povinnosti podle energetického zákona (licence ERÚ na výrobu nebo
+rozvod tepelné energie). O Potvrdit s advokátem.
+Doba 5 vs. 6 měsíců. 5 měsíců (do 31. 3. 2027) jsme sami písemně potvrdili. Vůči MM Holz proto 6. měsíc
+nárokovat nelze. Rozdíl řeší jen podmínka v nabídce odkupu pro Alignum (sleva, nebo navýšení o 1 měsíc
+nájmu).
+4 · Technický stav
+Oblast Stav
+Zdroje 2× RH X50 (R290) venku u fasády na betonových patkách, kaskáda, obě
+jednotky v provozu.
+F
+Bivalence 2× elektrokotel 24 kW + 2× topná jednotka 9 kW v AKU, celkem 66 kW. Nabídka
+F
+uváděla 72 kW.
+Akumulace, hydraulika 2× AKU 1 200 l. Čerpadla Grundfos MAGNA3 32-120 F 220 (P/N 97924259, 230
+V, 15–333 W) a TRINNITY 25/6/180. Potrubí SteelPres 54/35, expanze 2× 50 l,
+pojistné ventily 2,5 bar.
+F
+--- strana 4 ---
+Oblast Stav
+Glykol Okruh TČ je bez glykolu (rozhodnutí rev1 Z17). Venkovní potrubí je izolované,
+na venkovním potrubí je automatický odvzdušňovač.
+F
+Spouštění 3.–5. 11.: chyby 204 a Airflowerr způsobené nedostatečným průtokem,
+odstraněno výměnou čerpadla. Řešeno s výrobcem.
+F
+Nedokončeno MaR: nadřazená regulace, dálkový dohled, omezovač příkonu,
+kalorimetr a podružný elektroměr,
+komunikační kabel kaskády (ověřit, zda je osazen definitivně),
+čerpadla řízená z jednotek,
+nastavení bivalence a ekvitermy,
+případné posílení napájecích kabelů,
+provozní zkoušky,
+dokumentace skutečného provedení.
+T
+Údaj „R290 CONC 2,80 %“ Ve statusu jednotky 5. 11. Nevíme, zda jde o měřenou koncentraci (detektor
+úniku), nebo o jiný parametr. Ověřit s výrobcem.
+O
+Postřehy z fotodokumentace z průběhu realizace
+Venkovní jednotky stojí cca 0,3–0,6 m od fasády. Hned vedle je u země větrací mřížka do objektu a dveře
+kotelny.
+R290 je těžší než vzduch a hořlavé (A3).
+Podle návodu výrobce a ČSN EN 378 ověřit ochrannou zónu (otvory do budovy, kanálové vpusti, zdroje
+zapálení) a minimální odstupy pro sání a výfuk vzduchu. O
+Rozvaděč: hlavní odpínač a 4× jistič 3P. Proudový chránič na snímku není vidět. Snímek je z montáže,
+přední kryt chybí. O
+Elektrokotle mají na snímcích sejmuté kryty. Před dalším provozem ověřit, že jsou nasazené.
+Prostupy potrubí a kabelů stěnou: ověřit, zda jde o hranici požárního úseku. Pokud ano, je nutná certifikovaná
+ucpávka. O
+V kotelně zůstal montážní materiál a sprej. Před předáním uklidit, hořlaviny odstranit.
+Rezavá stopa na podlaze u čerpadla: zkontrolovat těsnost spojů.
+5 · Elektroinstalace a revize
+5.1 Co zajistit okamžitě
+Výchozí revize nové elektroinstalace podle ČSN 33 2000-6 a ČSN 33 1500.
+Elektrické zařízení se nemá uvádět do provozu bez výchozí revize (zákon č. 250/2021 Sb., NV č. 190/2022
+Sb.).
+Kotelna už běží, proto revizi zajistit bez odkladu, ideálně do 7 dnů.
+Do té doby zavést dokumentovaná prozatímní opatření podle bodu 5.4.
+Oprávnění montážní firmy. Montáž vyhrazených elektrických zařízení smí provádět jen osoba s oprávněním
+TIČR a s odbornou způsobilostí podle NV č. 194/2022 Sb.
+Vyžádat kopii oprávnění a osvědčení elektrikáře. O
+Bez nich revizní technik nemusí instalaci převzít a vzniká riziko u pojišťovny.
+Kontrola přívodu. Ověřit:
+kabel 1-AYKY-J 3×240+120 a jeho jištění v rozvodně Alignum,
+selektivitu jištění,
+impedanci smyčky,
+soudobý příkon TČ + EK + topné jednotky (až ≈ 40 + 66 kW) proti hlavnímu jističi a rezervovanému příkonu
+objektu.
+T Možná příčina výpadku: přetížení hlavního jističe Alignum.
+--- strana 5 ---
+5.2 Dokumentace k individuálně sestavenému rozvaděči
+Výrobcem sestavy je ten, kdo rozvaděč sestavil a uvedl do provozu. Smluvně za něj vůči klientovi odpovídá
+Riva Trade. Podle ČSN EN IEC 61439-1/-2 potřebujeme:
+výkresovou dokumentaci (jednopólové schéma, skutečné provedení),
+protokol o kusovém ověření (izolace, ochranný obvod, funkce, dotažení),
+doklad o návrhovém ověření (oteplení, zkratová odolnost); obvykle od výrobce systému skříní,
+typový štítek (výrobce sestavy, In, Icc, IP, norma),
+EU prohlášení o shodě (NV č. 117/2016 Sb., NV č. 118/2016 Sb.).
+Elektrikář by měl dodat podklady 1–4. Prohlášení o shodě vystaví výrobce sestavy. elektrikář, nebo Riva Trade?
+O Kdo bude výrobcem:
+5.3 Revize při současném provozu a následné úpravy
+Výchozí revize se dělá na provozované instalaci. Měření, která vyžadují odpojení (izolační odpor), se naplánují
+do krátké odstávky. AKU drží teplo zhruba 1–2 hodiny.
+Každá další úprava (posílení kabelů, MaR, kalorimetr, záložní napájení čerpadel) znamená novou nebo
+doplňkovou výchozí revizi dotčené části a aktualizaci schémat.
+Úpravy proto sdružit a revidovat najednou.
+Závady zjištěné revizí, které ohrožují bezpečnost, znamenají okamžité odpojení dotčeného obvodu do
+odstranění. Formální vady: termín odstranění podle zprávy.
+5.4 Je nutné omezit provoz do provedení kontrol?
+T Úplné odstavení dnes nedoporučuji. V listopadu by hrozilo vychladnutí objektu a zamrznutí technologie, což
+je samo o sobě riziko škody. Provoz je však vhodné omezit takto:
+elektrokotle a topné jednotky do výchozí revize jen jako nouzový zdroj (vysoký proud, neověřené
+dimenzování přívodu),
+uzavřené rozvaděče a kryty, přístup jen pro poučené osoby, označení „Pod napětím“
+,
+prozatímní kontrola elektrikářem: dotažení, termovize při zatížení, funkce chráničů a měření smyčky. Zapsat
+do záznamu o prozatímní kontrole.
+Pokud prozatímní kontrola zjistí nebezpečný stav (chybějící ochrana před nebezpečným dotykem, přehřívání
+spojů), dotčenou část vypnout ihned, bez ohledu na rozpracovanost a platby.
+5.5 Co musí dodat Alignum CZ
+Poslední revizní zprávu elektroinstalace objektu a hlavního rozvaděče (ze kterého je vyveden náš přívod).
+Hodnotu hlavního jističe, rezervovaný příkon a průběh odběru (faktury za elektřinu nebo data distributora),
+schéma rozvodny.
+Údaje o uzemnění a hromosvodu.
+Kontakt na osobu odpovědnou za elektro zařízení a provozní řád objektu.
+Informaci o výpadku: kdy, jak dlouho, příčina, co vypnulo.
+6 · Požární bezpečnost, stavebně-právní zařazení, R290
+6.1 Dočasná stavba, technologie, nebo změna stavby?
+T Jde o technologické zařízení instalované do stávající technické místnosti a o venkovní jednotky na
+patkách. Ne o novou ani dočasnou stavbu.
+Stavební úpravy jsou minimální (prostupy, patky).
+Instalace tepelných čerpadel a technických zařízení zpravidla nevyžaduje povolení podle stavebního zákona
+(zákon č. 283/2021 Sb.).
+Napojení na otopnou soustavu a nový elektrický přívod však může být posouzeno jako změna dokončené
+stavby (stavební úprava).
+--- strana 6 ---
+O Ověřit u projektanta nebo stavebního úřadu, zejména kvůli umístění venkovních jednotek u fasády a
+hluku (NV č. 272/2011 Sb.).
+Vlastnicky jde o movitou věc Riva Trade, která není součástí stavby.
+Lze ji odpojit a odvézt bez znehodnocení stavby.
+Posilují to štítky, soupis a smluvní prohlášení všech stran (§ 505, 506 a 508 OZ).
+6.2 Požární požadavky
+Za požární ochranu objektu odpovídá jeho provozovatel, tj. Alignum CZ (zákon č. 133/1985 Sb., vyhláška č.
+246/2001 Sb.). My odpovídáme za to, že naše technologie neohrožuje objekt a splňuje požadavky výrobce.
+Vyžádat od Alignum požárně bezpečnostní řešení objektu nebo posouzení požárního nebezpečí a vyjádření
+jeho osoby odborně způsobilé v PO (OZO PO). Zjistit:
+zda je technická místnost samostatný požární úsek,
+zda prostupy vyžadují ucpávky,
+zda je třeba doplnit hasicí přístroj (vhodný na elektrická zařízení),
+zda se mění požární dokumentace (provozní řád, poplachové směrnice).
+Elektrokotle 2× 24 kW a topné jednotky: odstupy od hořlavých hmot podle návodu, pojistky proti přehřátí, nic
+hořlavého v okolí.
+6.3 Chladivo R290
+RH X50 jsou hermetické monobloky s chladivem R290 (propan, A3) umístěné venku. Chladivo zůstává ve
+venkovní jednotce, uvnitř objektu je jen voda.
+Rizika a opatření (ČSN EN 378 a návod výrobce):
+ochranná zóna kolem jednotek: žádné otvory do budovy pod úrovní jednotky v zóně, žádné vpusti ani
+sklepní okna, žádné zdroje zapálení. Dotýká se to větrací mřížky u jednotky. O
+únik chladiva do vody při netěsnosti výměníku: automatické odvzdušňovače a pojistné ventily okruhu TČ
+mají odfukovat venku nebo do větraného prostoru,
+servis jen proškolenými osobami pro hořlavá chladiva. R290 není F‑plyn, certifikát pro F‑plyny se
+nevyžaduje, výrobce ale vyžaduje odbornost.
+Nyní: ověřit zónu a polohu odvzdušňovačů, označit jednotky výstrahou „hořlavé chladivo“ a prověřit údaj R290
+CONC.
+Při dokončení: zapracovat do dokumentace skutečného provedení a provozního řádu.
+6.4 Tlaková část a otopná soustava
+Tlaková zkouška a proplach soustavy s protokolem (ČSN EN 14336). Zabezpečovací zařízení (pojistné ventily
+2,5 bar, expanze) podle ČSN 06 0830.
+O Ověřit s revizním technikem tlakových zařízení, zda AKU 1 200 l / max. 3 bar nebo expanzní nádoby
+nespadají mezi vyhrazená tlaková zařízení (NV č. 192/2022 Sb.).
+7 · Výkon: co jsme slíbili a kde končí naše odpovědnost
+F Nabídka uvádí výkon „orientačně“
+, vychází z naměřené dodávky tepla 2021–2025 a výslovně upozorňuje,
+že se výpočty mohou změnit při změně provozu.
+TČ samy pokryjí potřebu orientačně do −10 °C, pod touto teplotou se připíná bivalence.
+Bezpodmínečná garance výkonu do soustavy neexistuje.
+F V nabídce ale jsou konkrétní technické závazky, které dnes neplníme a které by mohly být vykládány jako
+vada plnění:
+glykolový venkovní okruh,
+bivalence 72 kW,
+podružné měření elektřiny a tepla,
+nadřazená regulace s dálkovým dohledem,
+napojení na sekundár výměníku.
+--- strana 7 ---
+F Náš e‑mail uvádí, že kotelnu stavíme „podle specifikací Alignum“
+. To je argument, že konkrétní provedení
+určily požadavky Alignum, ne původní nabídka. O Máme specifikace Alignum písemně (e‑mail, WhatsApp,
+zápis z obhlídky)? Byla změna (provedení bez glykolu, napojení na primár) s MM Holz nebo Alignum
+odsouhlasena? Pokud ne, oznámit ji a nechat odsouhlasit, včetně vysvětlení důvodů a souvisejících opatření.
+Navržené rozdělení odpovědnosti:
+Riva Trade odpovídá, že technologie dodá výkon podle výkonové mapy výrobce. To prokáže kalorimetr a
+záznam provozních dat.
+Alignum CZ odpovídá za otopnou soustavu, výměníkovou stanici, čerpadla větví, otopná tělesa a elektrický
+přívod.
+Bez kalorimetru to dnes nedokážeme rozlišit. Instalace měření je proto i ochrana naší pozice.
+8 · Výpadky elektrické energie: návrh rozdělení odpovědnosti
+Příčina Odpovídá Povinnost / důsledek
+Výpadek distribuční sítě
+(ČEZ Distribuce)
+Nikdo ze stran (vyšší moc). Každá strana nese
+svou škodu, pokud nezanedbala sjednaná
+opatření.
+Riva Trade: alarm a protimrazová opatření.
+Alignum: oznámení a umožnění zásahu.
+Porucha nebo přetížení
+vnitřní instalace Alignum
+(hlavní jistič, rozvodna, jiné
+spotřebiče)
+Alignum CZ Zajistit sjednaný příkon a jištění, neprodleně
+oznámit a obnovit napájení.
+Porucha naší instalace
+(rozvaděč, přívod od
+odbočení, technologie)
+Riva Trade Servisní zásah do sjednané doby, náhrada
+škody podle obecných pravidel.
+Zásah nebo manipulace třetí
+osoby či personálu bez
+pokynu
+Ten, kdo zasáhl / strana, za kterou jedná Zákaz manipulace s technologií mimo
+provozní pokyny.
+Zamrznutí technologie po
+výpadku
+Podle příčiny výpadku a podle toho, kdo nesplnil
+svou část postupu
+Postup musí být písemný a předaný: alarm
+→ oznámení → vypuštění nebo záložní
+napájení.
+Odpovědnost za škodu omezit výší ročního nájemného (kromě úmyslu a hrubé nedbalosti) a vyloučit ušlý zisk a nepřímé škody
+(výpadek výroby). Návrh, který musí posoudit advokát.
+9 · Majetek, platby, cash-flow
+Položka Částka Stav
+Náklady zakázky (kalkulace 11. 11.) 550 449 Kč bez DPH chybí: kabel kaskády, doprava a jeřáb, revize, MaR, kalorimetr
+Pohledávka MM Holz, fa 202600006 387 200 Kč s DPH neuhrazeno, podle objednávky splatná ≈ 5.–7. 12. 2026
+Fakturace 02 a 03/2027 2 × 80 000 Kč bez DPH k vystavení
+Závazky GIENGER (5 faktur) 206 862 Kč s DPH splatné 14. 11. (128 340 Kč) a 23. 11. (78 522 Kč)
+Cash-flow: dodavatele platíme 3–4 týdny před příjmem od MM Holz. Zvážit dohodu s GIENGER o posunu
+splatnosti.
+Postup vymáhání (až po splatnosti):
+1. den +1: přátelská připomínka,
+2. den +7: upomínka s úrokem z prodlení (repo sazba ČNB + 8 p. b., NV č. 351/2013 Sb.) a paušálem 1 200
+Kč,
+3. den +21: předžalobní výzva (§ 142a o. s. ř.),
+4. poté elektronický platební rozkaz.
+Topení kvůli dluhu nevypínat bez právní konzultace. V zimě hrozí škoda na objektu a protinároky. Smluvně
+lze sjednat právo přerušit plnění po předchozí výzvě a přiměřené lhůtě.
+--- strana 8 ---
+Vlastnictví:
+soupis RT-ALG-01 až 15 se štítky,
+doplnit výrobní čísla (MAGNA3: P/N 97924259, výrobní číslo opsat ze štítku),
+fotodokumentace uložená v projektu,
+písemné uznání vlastnictví od Alignum CZ.
+10 · Hlavní rizika
+Riziko Závažnost Opatření
+Provoz bez výchozí elektrorevize Zamrznutí okruhu bez glykolu při
+výpadku
+R290: ochranná zóna u otvorů do
+budovy
+Spor o rozsah plnění (odchylky od
+nabídky)
+Prokazování ústní dohody a
+splatnosti
+Pojištění nekryje škodu (chybí
+revize, oprávnění)
+Nejasné vlastnictví při sporu nebo
+insolvenci Alignum
+Licence na teplo (prodej tepla) vysoká vysoká střední střední střední střední nízká až
+střední
+nízká Revize do 7 dnů, prozatímní kontrola, omezení EK (kap. 5).
+Alarm, postup, protimrazové prvky, záložní napájení čerpadel.
+Ověřit podle návodu, případně přesunout nebo uzavřít otvor.
+Oznámit odchylky, dokončit měření, třístranná smlouva.
+Potvrzující e‑mail, objednávka v podkladech.
+Oznámit pojišťovně, doplnit revize a oprávnění.
+Štítky, protokol, uznání vlastnictví.
+Držet konstrukci nájmu, ověřit s advokátem.
+11 · Co potřebuji doplnit
+1. Objednávku 4500090045 uloženou do Stažených (celková hodnota 490 000 Kč, doba, počátek lhůty splatnosti,
+obchodní podmínky, doložka o písemné formě).
+2. „Specifikace Alignum“: v čem spočívaly (bez glykolu, instalace do kotelny, napojení na primár, AKU 2 × 1 200
+l)? Kdo je zadal a máme je písemně? Odpověděl p. Dorňák na e‑mail s fakturačními údaji?
+3. Co z ochrany proti zamrznutí je osazeno: protimrazové ventily, záložní napájení čerpadel, topné kabely, alarm?
+4. Výpadek proudu: kdy, jak dlouho, příčina, vznikla škoda?
+5. Elektrikář: jméno nebo firma, má oprávnění TIČR? Je v rozvaděči proudový chránič? Kdo zajistí revizi?
+6. Poslalo Alignum písemné požadavky na revize a bezpečnostní dokumentaci? (Pro dopis E potřebuji jejich
+text.)
+7. Kdo platí elektřinu kotelny a je osazen podružný elektroměr?
+8. Je Alignum CZ vlastníkem budovy?
+9. Pojištění Riva Trade: odpovědnost i majetek mimo provozovnu, pojistitel a limity.
+12 · Navržený další postup
+Dokument Obsah Navazuje na
+F Dopis MM Holz: potvrzení platebních podmínek a splatnosti, stav služby, oznámení
+odchylek, návrh třístranné smlouvy.
+objednávka (bod 11.1)
+B Akční plán na 14 dní: úkoly, odpovědnost, termíny; průběžně vedený seznam úkolů a
+odpovědi na kap. 11
+rizik.
+E Dopis Alignum CZ: stav technologie, plán revizí, dokončovací práce, požadované
+podklady (kap. 5.5, 6.2).
+požadavky Alignum
+(bod 11.6)
+C Revize předávacího protokolu: dočasné užívání, výrobní čísla, předané a chybějící
+dokumenty, nedodělky, plánované zkoušky. Bez potvrzení dokončení a bezpečnostní
+způsobilosti.
+stávající protokol a
+příloha 1
+--- strana 9 ---
+Dokument Obsah Navazuje na
+D Třístranná smlouva v3 (z návrhu v2): navazuje na objednávku, nenahrazuje ji;
+součinnost, elektro parametry, výpadky, pojištění, demontáž, odkup samostatnou
+dohodou.
+F, odpověď MM Holz
