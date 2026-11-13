@@ -14,12 +14,12 @@ Artefakt: https://claude.ai/artifact/PdPNnYNXA75YnWvP8Vox5T (soukromý; aktualiz
 - Jen světlý vzhled (záměrně bez tmavého režimu).
 
 ## Sekce
-hero se 4 snímky (průmysl · bytové domy · mobilní kotelny · rodinné domy, mění se i nadpis) → `#reseni` 4 segmenty →
+hero střídá 2 verze (13. 11. rev.): **domácí** (schéma RH060 + Watertank 210/70 = hero z eko4home.cz, `hero-dum.webp`) a **průmyslová** (zelená kontejnerová kotelna na biomasu z galerie thermavera.cz `reference/lodni-1.jpg` → `hero-biomasa.jpg`, štítek „Realizace partnera“); mění se i nadpis a popisek → `#reseni` 4 segmenty →
 `#zelene-kotelny` (5 kroků) → `#produkty` záložky RH030–RH060 / Smart / RHX Pro / RH X50 → `#mobilni-kotelny` →
 `#realizace` (filtr) → `#vypocet` formulář → `#proc` → patička.
 
 ## Fotky (`assets/img`, zmenšené kopie)
-- `hero-prumysl/bd/mobilni`, `mob-*` = **AI vizualizace** z `mobilni-kotelny-web/assets/img` → vždy štítek „Vizualizace“.
+- `hero-prumysl/bd/mobilni` (už jen v sekcích), `mob-*` = **AI vizualizace** z `mobilni-kotelny-web/assets/img` → vždy štítek „Vizualizace“.
 - `hero-rd`, `rd-*` = realizace REO HEATING (z `REO/reoheating-web/assets/images/realizace`).
 - `ref-*` = `Reference zelena kotelna/` (Bytové jednotky mobilní vytápění, La Coruna) — **realizace partnera Smart Heating
   Technology**, kontejnerové kotelny (zdroj tepla na fotkách není TČ REO). Popisky „realizace partnera“.

@@ -85,7 +85,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rg
 /* HERO */
 .hero{position:relative;padding:0;overflow:hidden;background:var(--bg)}
 .hero-top{position:relative}
-.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);min-height:600px}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);min-height:560px}
 .hero-copy{position:relative;z-index:3;padding-block:64px 56px;padding-right:24px;display:flex;flex-direction:column;gap:22px;justify-content:center}
 .hero h1{font-size:clamp(2.2rem,1.4rem + 3.2vw,3.9rem);font-weight:700;line-height:1.06}
 .hero .lead{font-size:1.12rem;color:var(--muted);max-width:30em}
@@ -100,10 +100,12 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rg
 .hero-media figure{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .9s ease}
 .hero-media figure.on{opacity:1}
 .hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-media .fig-dum img{object-position:31% 100%}
+@media (min-width:901px){.hero-media::before{transition:background .6s}.hero-media.dum::before{background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.5) 2%,rgba(255,255,255,0) 5%)}}
 .hero-media::before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.85) 9%,rgba(255,255,255,0) 30%)}
 .arc{position:absolute;z-index:2;top:-10%;bottom:-10%;left:calc(max(46%, calc(50% - 600px + 480px)) - 125px);width:260px;pointer-events:none}
 .tag-viz{position:absolute;z-index:3;right:calc(16px + env(safe-area-inset-right,0px));top:16px;background:rgba(36,39,42,.72);color:#fff;font:600 .72rem var(--body);letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:6px}
-.hero-cap{position:absolute;z-index:3;right:calc(16px + env(safe-area-inset-right,0px));bottom:18px;max-width:380px;background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:14px 16px;display:flex;gap:12px;align-items:center}
+.hero-cap{position:absolute;z-index:3;right:calc(16px + env(safe-area-inset-right,0px));top:56px;max-width:380px;background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:14px 16px;display:flex;gap:12px;align-items:center}
 .hero-cap .ic{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--green-600);color:#fff;flex:0 0 42px}
 .hero-cap b{display:block;font:600 .95rem var(--display);color:var(--ink)}
 .hero-cap span{font-size:.84rem;color:var(--muted)}
@@ -315,28 +317,24 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow">Český výrobce tepelných čerpadel</span>
-      <h1 id="h-title">Teplo pro <span class="g">průmysl a&nbsp;firmy</span> bez kotle na palivo</h1>
-      <p class="lead" id="h-lead">Výkonné jednotky <b>REO RH X50</b> a&nbsp;kaskády do stovek kW pro haly, provozy a&nbsp;ubytování. Navrhneme, dodáme, zapojíme a&nbsp;postaráme se o&nbsp;servis.</p>
+      <h1 id="h-title">Tepelné čerpadlo pro <span class="g">váš dům</span>, topení i teplá voda</h1>
+      <p class="lead" id="h-lead">Tepelná čerpadla <b>REO R290</b> s&nbsp;přírodním chladivem, zásobníky a fotovoltaika. Navrhneme, dodáme, namontujeme vlastními lidmi a&nbsp;pomůžeme s&nbsp;dotací.</p>
       <div class="hero-ctas">
         <a class="btn btn-y" href="#vypocet">Nechat si spočítat <svg class="i"><use href="#i-arrow"/></svg></a>
         <a class="btn btn-ghost" href="#reseni" id="h-more">Prohlédnout řešení</a>
       </div>
-      <div class="slides-nav" role="tablist" aria-label="Oblasti použití">
-        <button role="tab" aria-selected="true" data-s="0"><svg class="i"><use href="#i-factory"/></svg>Průmysl a firmy</button>
-        <button role="tab" aria-selected="false" data-s="1"><svg class="i"><use href="#i-bd"/></svg>Bytové domy</button>
-        <button role="tab" aria-selected="false" data-s="2"><svg class="i"><use href="#i-truck"/></svg>Mobilní kotelny</button>
-        <button role="tab" aria-selected="false" data-s="3"><svg class="i"><use href="#i-house"/></svg>Rodinné domy</button>
+      <div class="slides-nav" role="tablist" aria-label="Verze úvodu">
+        <button role="tab" aria-selected="true" data-s="0"><svg class="i"><use href="#i-house"/></svg>Domácnosti</button>
+        <button role="tab" aria-selected="false" data-s="1"><svg class="i"><use href="#i-factory"/></svg>Průmysl a firmy</button>
       </div>
     </div>
 
   </div>
-    <div class="hero-media" id="hero-media">
-    <figure class="on"><img src="assets/img/hero-prumysl.jpg" alt="Kontejnerová kotelna se dvěma tepelnými čerpadly REO RH X50 u moderní výrobní haly"></figure>
-    <figure><img src="assets/img/hero-bd.jpg" alt="Kotelna s tepelnými čerpadly REO RH X50 u panelového bytového domu" loading="lazy"></figure>
-    <figure><img src="assets/img/hero-mobilni.jpg" alt="Mobilní kotelna v kontejneru s tepelnými čerpadly u logistického skladu" loading="lazy"></figure>
-    <figure><img src="assets/img/hero-rd.jpg" alt="Penzion Dolní Morava vytápěný tepelným čerpadlem REO HEATING" loading="lazy"></figure>
-    <span class="tag-viz" id="h-tag">Vizualizace</span>
-    <div class="hero-cap"><span class="ic"><svg class="i"><use href="#i-factory" id="h-cap-ic"/></svg></span><div><b id="h-cap-t">2× REO RH X50 v kaskádě</b><span id="h-cap-s">Kontejnerová kotelna u výrobní haly · 2 × 49,3 kW (A7/W35)</span></div></div>
+    <div class="hero-media dum" id="hero-media">
+    <figure class="on fig-dum"><img src="assets/img/hero-dum.webp" alt="Tepelné čerpadlo REO RH060 napojené na kombinovaný zásobník REO Watertank 210/70"></figure>
+    <figure><img src="assets/img/hero-biomasa.jpg" alt="Zelená kontejnerová kotelna na biomasu s komíny u průmyslového areálu" loading="lazy"></figure>
+    <span class="tag-viz" id="h-tag">Ilustrační schéma</span>
+    <div class="hero-cap"><span class="ic"><svg class="i"><use href="#i-house" id="h-cap-ic"/></svg></span><div><b id="h-cap-t">REO RH060 + Watertank 210/70</b><span id="h-cap-s">Teplá voda nahoře, topná voda dole · jedna kompaktní sestava</span></div></div>
   </div>
   <svg class="arc" viewBox="0 0 260 1000" preserveAspectRatio="none" aria-hidden="true"><path d="M120 0 C 260 260, 260 740, 120 1000" fill="none" stroke="#3E9B3A" stroke-width="14"/><path d="M140 0 C 280 260, 280 740, 140 1000" fill="none" stroke="#F2C230" stroke-width="4"/></svg>
  </div>
@@ -632,19 +630,17 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 
   // hero slider
   const S = [
-    {t:'Teplo pro <span class="g">průmysl a&nbsp;firmy</span> bez kotle na palivo', l:'Výkonné jednotky <b>REO RH X50</b> a&nbsp;kaskády do stovek kW pro haly, provozy a&nbsp;ubytování. Navrhneme, dodáme, zapojíme a&nbsp;postaráme se o&nbsp;servis.', viz:1, ic:'i-factory', ct:'2× REO RH X50 v kaskádě', cs:'Kontejnerová kotelna u výrobní haly · 2 × 49,3 kW (A7/W35)', more:'#produkty'},
-    {t:'Zelená kotelna pro <span class="g">bytový dům</span> na klíč', l:'Náhrada plynové kotelny nebo dálkového tepla kaskádou tepelných čerpadel. Připravíme <b>podklady pro výbor SVJ</b>, projekt, montáž i dotaci.', viz:1, ic:'i-bd', ct:'Kaskáda pro bytový dům', cs:'RHX30 Pro nebo RH X50 · akumulace a ohřev TUV', more:'#zelene-kotelny'},
-    {t:'Mobilní kotelna <span class="g">k pronájmu</span>, když teplo chybí', l:'Kontejner s tepelnými čerpadly přivezeme a&nbsp;zapojíme při <b>rekonstrukci, havárii zdroje</b> nebo na stavbě. Bez paliva a bez obsluhy.', viz:1, ic:'i-truck', ct:'Mobilní kotelna 50 / 100 kW', cs:'Kontejner 20′ · 1 nebo 2× RH X50', more:'#mobilni-kotelny'},
-    {t:'Tiché tepelné čerpadlo pro <span class="g">váš dům</span>', l:'Řady <b>RH030–RH060</b> a <b>Smart</b> s přírodním chladivem R290. Topí do −15 °C bez elektrodohřevu, Smart umí brát proud přímo z panelů.', viz:0, ic:'i-house', ct:'Penzion Dolní Morava', cs:'Realizace REO HEATING · venkovní jednotka u objektu', more:'#produkty'}
+    {t:'Tepelné čerpadlo pro <span class="g">váš dům</span>, topení i teplá voda', l:'Tepelná čerpadla <b>REO R290</b> s&nbsp;přírodním chladivem, zásobníky a fotovoltaika. Navrhneme, dodáme, namontujeme vlastními lidmi a&nbsp;pomůžeme s&nbsp;dotací.', tag:'Ilustrační schéma', ic:'i-house', ct:'REO RH060 + Watertank 210/70', cs:'Teplá voda nahoře, topná voda dole · jedna kompaktní sestava', more:'#produkty', go:'rh'},
+    {t:'Zelené kotelny pro <span class="g">průmysl a&nbsp;firmy</span>', l:'Kotelny na <b>biomasu</b> i s&nbsp;tepelnými čerpadly <b>REO RH X50</b>, v&nbsp;budově nebo v&nbsp;kontejneru. Navrhneme, dodáme, zapojíme a&nbsp;postaráme se o&nbsp;servis.', tag:'Realizace partnera', ic:'i-factory', ct:'Kontejnerová kotelna na biomasu', cs:'Lodní kontejner s komíny · u průmyslového areálu', more:'#zelene-kotelny', go:''}
   ];
   const figs = [...document.querySelectorAll('#hero-media figure')], btns = [...document.querySelectorAll('.slides-nav button')];
   const $ = id => document.getElementById(id);
   let cur = 0, timer;
   function show(i){
     cur = i; const s = S[i];
-    figs.forEach((f,k)=>f.classList.toggle('on',k===i));
+    figs.forEach((f,k)=>f.classList.toggle('on',k===i)); $('hero-media').classList.toggle('dum', i===0);
     btns.forEach((b,k)=>b.setAttribute('aria-selected',k===i));
-    $('h-title').innerHTML = s.t; $('h-lead').innerHTML = s.l; $('h-tag').hidden = !s.viz;
+    $('h-title').innerHTML = s.t; $('h-lead').innerHTML = s.l; $('h-tag').textContent = s.tag;
     $('h-cap-ic').setAttribute('href','#'+s.ic); $('h-cap-t').textContent = s.ct; $('h-cap-s').textContent = s.cs; $('h-more').href = s.more;
   }
   function auto(){ clearInterval(timer); if(!reduce) timer = setInterval(()=>show((cur+1)%S.length), 7000); }
