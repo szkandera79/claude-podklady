@@ -1,0 +1,670 @@
+<title>REO HEATING — nový web</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="REO HEATING — český výrobce tepelných čerpadel R290 pro domácnosti, bytové domy, firmy i průmysl. Zelené kotelny na klíč a mobilní kotelny k pronájmu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: světlý web podle bannerů — bílý text vlevo, fotka vpravo za zeleným obloukem,
+   tmavé antracitové pruhy s ikonami, žluté CTA. Jednotný světlý vzhled (záměrně bez tmavého režimu). */
+:root{
+  --green:#3E9B3A;        /* hlavní zelená z bannerů (zvýraznění v nadpisech, ikony) */
+  --green-600:#2F7F2D;    /* tlačítka, odkazy, hover */
+  --green-800:#1F5A23;    /* tmavé zelené pruhy */
+  --green-50:#EEF6EC;     /* tint ikon a karet */
+  --yellow:#F2C230;       /* CTA (jako okno a slunce v logu) */
+  --yellow-600:#E0AE16;
+  --ink:#24272A;          /* antracit — nadpisy, tmavé sekce */
+  --ink-2:#33373B;
+  --text:#2E3236;
+  --muted:#5F676D;
+  --line:#E3E7E3;
+  --bg:#FFFFFF;
+  --bg-soft:#F5F7F4;
+  --on-dark:#F3F5F2;
+  --on-dark-muted:#B8C0BA;
+  --display:"Poppins",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --r:14px;
+  --shadow:0 18px 40px -22px rgba(20,30,20,.35);
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+h1,h2,h3,h4{font-family:var(--display);color:var(--ink);line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,1.2rem + 2vw,2.6rem);font-weight:700}
+h3{font-size:1.2rem;font-weight:600}
+p{margin:0}
+a{color:var(--green-600)}
+img{max-width:100%;display:block}
+.g{color:var(--green)}
+.wrap{max-width:1200px;margin:0 auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+section{padding-block:clamp(56px,7vw,96px)}
+.eyebrow{font:600 .78rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--green-600);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:3px;border-radius:2px;background:var(--yellow)}
+.head{display:grid;gap:14px;max-width:720px;margin-bottom:40px}
+.head p{color:var(--muted);font-size:1.06rem}
+.bar{width:84px;height:4px;border-radius:2px;background:var(--yellow)}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:6px}
+svg.i{width:24px;height:24px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* tlačítka */
+.btn{display:inline-flex;align-items:center;gap:12px;font:700 1.02rem/1 var(--display);padding:16px 24px;border-radius:12px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s}
+.btn svg{width:20px;height:20px;stroke-width:2.4}
+.btn-y{background:var(--yellow);color:var(--ink);box-shadow:0 10px 22px -12px rgba(224,174,22,.9)}
+.btn-y:hover{background:var(--yellow-600);transform:translateY(-1px)}
+.btn-g{background:var(--green-600);color:#fff}
+.btn-g:hover{background:var(--green-800)}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 2px var(--green)}
+.btn .dot{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#fff;color:var(--green-600);margin-left:-8px}
+
+/* hlavička */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:24px;height:76px}
+.logo img{height:54px;width:auto}
+.menu{display:flex;gap:4px;margin-left:auto}
+.menu a{color:var(--ink);text-decoration:none;font:500 .95rem var(--body);padding:8px 11px;border-radius:8px;white-space:nowrap}
+.menu a:hover{background:var(--green-50);color:var(--green-600)}
+.tel{font:600 .95rem var(--body);color:var(--ink);white-space:nowrap;display:flex;align-items:center;gap:8px}
+.tel svg{color:var(--green)}
+.nav .btn{padding:12px 18px;font-size:.95rem}
+.burger{display:none;margin-left:auto;background:none;border:0;padding:8px;color:var(--ink);cursor:pointer}
+@media (max-width:1240px){.tel{display:none}}
+.nav>.btn{white-space:nowrap}
+@media (max-width:900px){
+  .menu{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:#fff;border-bottom:1px solid var(--line);padding:8px var(--gutter-r) 16px var(--gutter-l)}
+  .menu.open{display:flex}.burger{display:block}.nav>.btn{display:none}
+}
+
+/* HERO */
+.hero{position:relative;padding:0;overflow:hidden;background:var(--bg)}
+.hero-top{position:relative}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);min-height:600px}
+.hero-copy{position:relative;z-index:3;padding-block:64px 56px;padding-right:24px;display:flex;flex-direction:column;gap:22px;justify-content:center}
+.hero h1{font-size:clamp(2.2rem,1.4rem + 3.2vw,3.9rem);font-weight:700;line-height:1.06}
+.hero .lead{font-size:1.12rem;color:var(--muted);max-width:30em}
+.hero .lead b{color:var(--ink)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.slides-nav{display:flex;flex-wrap:wrap;gap:8px}
+.slides-nav button{display:inline-flex;align-items:center;gap:8px;font:600 .86rem var(--body);color:var(--ink-2);background:var(--bg-soft);border:1px solid var(--line);border-radius:999px;padding:8px 14px 8px 10px;cursor:pointer}
+.slides-nav button svg{width:18px;height:18px;color:var(--green)}
+.slides-nav button[aria-selected="true"]{background:var(--green-600);border-color:var(--green-600);color:#fff}
+.slides-nav button[aria-selected="true"] svg{color:#fff}
+.hero-media{position:absolute;inset:0 0 0 max(46%, calc(50% - 600px + 480px));z-index:1}
+.hero-media figure{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .9s ease}
+.hero-media figure.on{opacity:1}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-media::before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.85) 9%,rgba(255,255,255,0) 30%)}
+.arc{position:absolute;z-index:2;top:-10%;bottom:-10%;left:calc(max(46%, calc(50% - 600px + 480px)) - 125px);width:260px;pointer-events:none}
+.tag-viz{position:absolute;z-index:3;right:calc(16px + env(safe-area-inset-right,0px));top:16px;background:rgba(36,39,42,.72);color:#fff;font:600 .72rem var(--body);letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:6px}
+.hero-cap{position:absolute;z-index:3;right:calc(16px + env(safe-area-inset-right,0px));bottom:18px;max-width:380px;background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:14px 16px;display:flex;gap:12px;align-items:center}
+.hero-cap .ic{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--green-600);color:#fff;flex:0 0 42px}
+.hero-cap b{display:block;font:600 .95rem var(--display);color:var(--ink)}
+.hero-cap span{font-size:.84rem;color:var(--muted)}
+.strip{background:var(--ink);color:var(--on-dark)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-block:22px}
+.strip a{display:flex;align-items:center;gap:14px;color:var(--on-dark);text-decoration:none;padding:6px 18px;border-left:1px solid rgba(255,255,255,.14)}
+.strip a:first-child{border-left:0;padding-left:0}
+.strip svg.i{width:38px;height:38px;color:#7CC66F;stroke-width:1.5}
+.strip b{display:block;font:600 1rem var(--display)}
+.strip span{font-size:.82rem;color:var(--on-dark-muted)}
+.strip a:hover b{color:var(--yellow)}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;min-height:0}
+  .hero-media{position:relative;inset:auto;height:300px}
+  .hero-media::before{background:linear-gradient(0deg,#fff 0%,rgba(255,255,255,0) 35%)}
+  .arc{display:none}.hero-copy{padding-block:8px 40px;padding-right:0}
+  .hero-top{display:flex;flex-direction:column-reverse}
+  .hero-cap{display:none}
+  .strip .wrap{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 0}
+  .strip a:nth-child(3){border-left:0;padding-left:0}
+}
+@media (max-width:480px){.strip .wrap{grid-template-columns:1fr}.strip a{border-left:0;padding-left:0}.logo img{height:44px}}
+
+/* segmenty */
+.seg-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.seg{position:relative;display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line);text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+.seg:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.seg .ph{aspect-ratio:4/3;max-width:100%;overflow:hidden;background:var(--bg-soft)}
+.seg .ph img{width:100%;height:100%;object-fit:cover}
+.seg .body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.seg .k{display:flex;align-items:center;gap:10px;color:var(--green-600);font:600 .78rem var(--body);letter-spacing:.08em;text-transform:uppercase}
+.seg .k svg{width:20px;height:20px}
+.seg p{color:var(--muted);font-size:.95rem}
+.seg .fit{margin-top:auto;font:600 .82rem var(--body);color:var(--ink);background:var(--green-50);border-radius:8px;padding:8px 10px}
+.seg .more{font:600 .92rem var(--display);color:var(--green-600)}
+@media (max-width:1000px){.seg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.seg-grid{grid-template-columns:1fr}}
+
+/* zelené kotelny – tmavá sekce jako banner 1 */
+.dark{background:var(--ink);color:var(--on-dark);position:relative;overflow:hidden}
+.dark h2,.dark h3{color:#fff}
+.dark .eyebrow{color:#8FD07F}
+.zk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.zk-copy{display:grid;gap:20px}
+.zk-copy>p{color:var(--on-dark-muted);font-size:1.06rem}
+.zk-copy>p b{color:var(--yellow)}
+.steps{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:4px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:12px 0;border-top:1px solid rgba(255,255,255,.1)}
+.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;font:700 .95rem var(--display)}
+.steps b{display:block;color:#fff;font:600 1rem var(--display)}
+.steps span{font-size:.92rem;color:var(--on-dark-muted)}
+.zk-media{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.zk-media figure{margin:0;border-radius:12px;overflow:hidden;position:relative}
+.zk-media figure:first-child{grid-column:1/-1;aspect-ratio:16/10}
+.zk-media figure:not(:first-child){aspect-ratio:4/3}
+.zk-media img{width:100%;height:100%;object-fit:cover}
+.zk-media figcaption{position:absolute;left:10px;bottom:10px;background:rgba(36,39,42,.8);color:#fff;font-size:.76rem;padding:5px 9px;border-radius:6px}
+.zk-units{display:flex;flex-wrap:wrap;gap:8px}
+.zk-units span{font:600 .82rem var(--body);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:6px 12px}
+@media (max-width:900px){.zk{grid-template-columns:1fr;gap:36px}}
+
+/* produkty */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.tabs button{font:600 .95rem var(--display);color:var(--ink);background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:12px 18px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.panel{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:40px;align-items:start}
+.panel .pimg{background:radial-gradient(circle at 50% 60%,var(--green-50),#fff 70%);border-radius:var(--r);padding:28px;display:grid;place-items:center;min-height:340px;border:1px solid var(--line)}
+.panel .pimg img{max-height:360px;width:auto}
+.pinfo{display:grid;gap:16px;min-width:0}
+.pinfo .tagline{color:var(--muted);font-size:1.02rem}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{display:inline-flex;align-items:center;gap:6px;font:600 .8rem var(--body);color:var(--green-800);background:var(--green-50);border-radius:999px;padding:6px 12px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:.92rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font:600 .74rem var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--bg-soft)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700;color:var(--ink)}
+td.price{font-weight:700;color:var(--green-800)}
+.note{font-size:.8rem;color:var(--muted)}
+@media (max-width:900px){.panel{grid-template-columns:1fr}.panel .pimg{min-height:240px}.panel .pimg img{max-height:240px}}
+
+/* mobilní kotelny */
+.mk{background:var(--bg-soft)}
+.mk-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center}
+.mk-gal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.mk-gal figure{margin:0;position:relative;border-radius:12px;overflow:hidden;aspect-ratio:16/10}
+.mk-gal figure:first-child{grid-column:1/-1}
+.mk-gal img{width:100%;height:100%;object-fit:cover}
+.mk-gal .tag-viz{top:10px;right:10px}
+.uses{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:6px 0 4px}
+.use{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.use svg{color:var(--green-600)}
+.use b{display:block;font:600 .95rem var(--display);color:var(--ink)}
+.use span{font-size:.85rem;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.facts div{background:#fff;padding:14px}
+.facts b{display:block;font:700 1.35rem var(--display);color:var(--green-800);font-variant-numeric:tabular-nums}
+.facts span{font-size:.8rem;color:var(--muted)}
+@media (max-width:900px){.mk-grid{grid-template-columns:1fr}.uses{grid-template-columns:1fr}}
+@media (max-width:480px){.facts{grid-template-columns:1fr}}
+
+/* výpočet – zelený pruh jako banner 3 */
+.calc{background:var(--green-800);color:#fff;position:relative;overflow:hidden}
+.calc::after{content:"";position:absolute;right:-120px;top:-160px;width:520px;height:520px;border-radius:50%;border:40px solid rgba(255,255,255,.05)}
+.calc-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}
+.calc h2{color:#fff}
+.calc .eyebrow{color:#CDE9C6}
+.calc-copy{display:grid;gap:18px}
+.calc-copy p{color:#D7E9D2}
+.ticks{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.ticks svg{color:var(--yellow);margin-top:2px}
+form{background:#fff;color:var(--text);border-radius:var(--r);padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+form h3{grid-column:1/-1}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+label{font:600 .8rem var(--body);color:var(--ink)}
+input,select,textarea{font:inherit;font-size:.95rem;color:var(--text);background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:12px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--green);outline-offset:0;background:#fff}
+.chk{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font-size:.82rem;color:var(--muted)}
+.chk input{width:auto;margin-top:3px}
+form .btn{grid-column:1/-1;justify-content:center}
+.ok{grid-column:1/-1;background:var(--green-50);color:var(--green-800);border-radius:10px;padding:12px 14px;font-size:.9rem}
+@media (max-width:900px){.calc-grid{grid-template-columns:1fr}}
+@media (max-width:520px){form{grid-template-columns:1fr;padding:20px}}
+
+/* realizace */
+.ref-tabs{margin-bottom:20px}
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gal figure{margin:0;position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:var(--bg-soft)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;inset:auto 0 0 0;padding:28px 14px 12px;background:linear-gradient(0deg,rgba(20,22,24,.82),rgba(20,22,24,0));color:#fff;font-size:.86rem}
+.gal figcaption b{display:block;font:600 .98rem var(--display)}
+.gal .tag-viz{top:10px;right:10px}
+@media (max-width:900px){.gal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.gal{grid-template-columns:1fr}}
+
+/* proč REO */
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 36px}
+.why div{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
+.why .ic{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--green-50);color:var(--green-600)}
+.why .ic svg{width:28px;height:28px}
+.why b{display:block;font:600 1.05rem var(--display);color:var(--ink);margin-bottom:4px}
+.why span{color:var(--muted);font-size:.94rem}
+@media (max-width:900px){.why{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.why{grid-template-columns:1fr}}
+
+/* patička */
+footer{background:var(--ink);color:var(--on-dark-muted);font-size:.92rem}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-block:56px 32px}
+footer h4{color:#fff;font-size:.95rem;margin-bottom:12px}
+footer a{color:var(--on-dark);text-decoration:none}
+footer a:hover{color:var(--yellow)}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.foot img{height:54px;width:auto;margin-bottom:14px}
+.legal{border-top:1px solid rgba(255,255,255,.1);padding-block:18px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:.8rem}
+.claim{display:flex;align-items:center;gap:10px;color:var(--on-dark)}
+.claim svg{color:#7CC66F}
+@media (max-width:900px){.foot{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.foot{grid-template-columns:1fr}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></symbol>
+  <symbol id="i-bd" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2M11 21v-3h2v3"/></symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21V10l5 3V10l5 3V10l5 3V4h3v17z"/><path d="M7 17h2M12 17h2M17 17h2"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><rect x="2" y="6" width="12" height="10" rx="1"/><path d="M14 9h4l3 3v4h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><circle cx="5" cy="10" r="2.2"/><circle cx="19" cy="10" r="2.2"/><path d="M6.5 20a5.5 5.5 0 0 1 11 0M1.5 19a3.6 3.6 0 0 1 5-3.3M22.5 19a3.6 3.6 0 0 0-5-3.3"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2"/><rect x="8" y="5.5" width="8" height="4" rx=".5"/><path d="M8.5 13h.01M12 13h.01M15.5 13h.01M8.5 16.5h.01M12 16.5h.01M15.5 16.5h.01"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19 14 10"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7"/><path d="m9 4 3 2 3-2M9 20l3-2 3 2"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-4-4 8-8-1.3-1.3a4 4 0 0 0-5-5L13 5z"/><path d="m3 21 6-6"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r=".8"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#uvod" aria-label="REO HEATING — úvod"><img src="assets/img/logo-reo-heating.svg" alt="REO HEATING"></a>
+    <nav class="menu" id="menu" aria-label="Hlavní menu">
+      <a href="#reseni">Řešení</a>
+      <a href="#zelene-kotelny">Zelené kotelny</a>
+      <a href="#mobilni-kotelny">Mobilní kotelny</a>
+      <a href="#produkty">Tepelná čerpadla</a>
+      <a href="#realizace">Realizace</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <span class="tel"><svg class="i"><use href="#i-phone"/></svg>+420 774 872 467</span>
+    <a class="btn btn-y" href="#vypocet">Chci výpočet <svg class="i"><use href="#i-arrow"/></svg></a>
+    <button class="burger" id="burger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="menu"><svg class="i"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="uvod">
+ <div class="hero-top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Český výrobce tepelných čerpadel</span>
+      <h1 id="h-title">Teplo pro <span class="g">průmysl a&nbsp;firmy</span> bez kotle na palivo</h1>
+      <p class="lead" id="h-lead">Výkonné jednotky <b>REO RH X50</b> a&nbsp;kaskády do stovek kW pro haly, provozy a&nbsp;ubytování. Navrhneme, dodáme, zapojíme a&nbsp;postaráme se o&nbsp;servis.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-y" href="#vypocet">Nechat si spočítat <svg class="i"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="#reseni" id="h-more">Prohlédnout řešení</a>
+      </div>
+      <div class="slides-nav" role="tablist" aria-label="Oblasti použití">
+        <button role="tab" aria-selected="true" data-s="0"><svg class="i"><use href="#i-factory"/></svg>Průmysl a firmy</button>
+        <button role="tab" aria-selected="false" data-s="1"><svg class="i"><use href="#i-bd"/></svg>Bytové domy</button>
+        <button role="tab" aria-selected="false" data-s="2"><svg class="i"><use href="#i-truck"/></svg>Mobilní kotelny</button>
+        <button role="tab" aria-selected="false" data-s="3"><svg class="i"><use href="#i-house"/></svg>Rodinné domy</button>
+      </div>
+    </div>
+
+  </div>
+    <div class="hero-media" id="hero-media">
+    <figure class="on"><img src="assets/img/hero-prumysl.jpg" alt="Kontejnerová kotelna se dvěma tepelnými čerpadly REO RH X50 u moderní výrobní haly"></figure>
+    <figure><img src="assets/img/hero-bd.jpg" alt="Kotelna s tepelnými čerpadly REO RH X50 u panelového bytového domu" loading="lazy"></figure>
+    <figure><img src="assets/img/hero-mobilni.jpg" alt="Mobilní kotelna v kontejneru s tepelnými čerpadly u logistického skladu" loading="lazy"></figure>
+    <figure><img src="assets/img/hero-rd.jpg" alt="Penzion Dolní Morava vytápěný tepelným čerpadlem REO HEATING" loading="lazy"></figure>
+    <span class="tag-viz" id="h-tag">Vizualizace</span>
+    <div class="hero-cap"><span class="ic"><svg class="i"><use href="#i-factory" id="h-cap-ic"/></svg></span><div><b id="h-cap-t">2× REO RH X50 v kaskádě</b><span id="h-cap-s">Kontejnerová kotelna u výrobní haly · 2 × 49,3 kW (A7/W35)</span></div></div>
+  </div>
+  <svg class="arc" viewBox="0 0 260 1000" preserveAspectRatio="none" aria-hidden="true"><path d="M120 0 C 260 260, 260 740, 120 1000" fill="none" stroke="#3E9B3A" stroke-width="14"/><path d="M140 0 C 280 260, 280 740, 140 1000" fill="none" stroke="#F2C230" stroke-width="4"/></svg>
+ </div>
+  <div class="strip">
+    <div class="wrap">
+      <a href="#produkty" data-go="rh"><svg class="i"><use href="#i-house"/></svg><div><b>Rodinné domy</b><span>6–22 kW, R290</span></div></a>
+      <a href="#zelene-kotelny"><svg class="i"><use href="#i-people"/></svg><div><b>Bytové domy a SVJ</b><span>zelené kotelny na klíč</span></div></a>
+      <a href="#produkty" data-go="x50"><svg class="i"><use href="#i-factory"/></svg><div><b>Firmy a průmysl</b><span>kaskády do stovek kW</span></div></a>
+      <a href="#mobilni-kotelny"><svg class="i"><use href="#i-truck"/></svg><div><b>Mobilní kotelny</b><span>pronájem na měsíce</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- SEGMENTY -->
+<section id="reseni">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Řešení podle objektu</span>
+      <h2>Od rodinného domu po <span class="g">výrobní halu</span></h2>
+      <p>Vyvíjíme, dodáváme a servisujeme tepelná čerpadla vzduch–voda s přírodním chladivem R290. Pro každý typ objektu máme ověřenou sestavu.</p>
+    </div>
+    <div class="seg-grid">
+      <a class="seg" href="#produkty" data-go="rh">
+        <div class="ph"><img src="assets/img/rd-kuncice.jpg" alt="Tepelné čerpadlo REO HEATING u opěrné zdi rodinného domu" loading="lazy"></div>
+        <div class="body"><span class="k"><svg class="i"><use href="#i-house"/></svg>Domácnosti</span><h3>Rodinné domy</h3><p>Novostavby i rekonstrukce. Jedno čerpadlo, zásobník teplé vody nebo kombinovaný Watertank, volitelně fotovoltaika.</p><span class="fit">RH030–RH060 · Smart RH06–RH16</span><span class="more">Vybrat čerpadlo →</span></div>
+      </a>
+      <a class="seg" href="#zelene-kotelny">
+        <div class="ph"><img src="assets/img/hero-bd.jpg" alt="Kotelna s tepelnými čerpadly u bytového domu" loading="lazy"></div>
+        <div class="body"><span class="k"><svg class="i"><use href="#i-people"/></svg>SVJ a družstva</span><h3>Zelené kotelny na klíč</h3><p>Náhrada plynové kotelny nebo CZT. Kaskáda s akumulací a ohřevem teplé vody, podklady pro výbor a pomoc s dotací.</p><span class="fit">RHX30 Pro · RH X50 · kaskády</span><span class="more">Jak to probíhá →</span></div>
+      </a>
+      <a class="seg" href="#produkty" data-go="x50">
+        <div class="ph"><img src="assets/img/mob-potraviny.jpg" alt="Tepelná čerpadla REO RH X50 u potravinářského závodu" loading="lazy"></div>
+        <div class="body"><span class="k"><svg class="i"><use href="#i-factory"/></svg>Komerce a průmysl</span><h3>Firmy, haly, hotely</h3><p>Kanceláře, výroba, ubytování i sklady. Topná voda až 75 °C, kaskádové řízení, kombinace s fotovoltaikou na střeše.</p><span class="fit">RH X50 · kaskády na míru</span><span class="more">Parametry jednotek →</span></div>
+      </a>
+      <a class="seg" href="#mobilni-kotelny">
+        <div class="ph"><img src="assets/img/hero-mobilni.jpg" alt="Mobilní kotelna v kontejneru u skladu" loading="lazy"></div>
+        <div class="body"><span class="k"><svg class="i"><use href="#i-truck"/></svg>Pronájem</span><h3>Mobilní kotelny</h3><p>Teplo na dobu rekonstrukce, při havárii zdroje nebo na stavbě. Kontejner s tepelnými čerpadly přivezeme a zapojíme.</p><span class="fit">kontejner 20′ · 1–2× RH X50</span><span class="more">Jak pronájem funguje →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ZELENÉ KOTELNY -->
+<section class="dark" id="zelene-kotelny">
+  <div class="wrap zk">
+    <div class="zk-copy">
+      <span class="eyebrow">Zelené kotelny na klíč</span>
+      <h2>Máte bytový dům a&nbsp;<span style="color:#7CC66F">už dost starostí</span> s&nbsp;kotelnou?</h2>
+      <div class="bar"></div>
+      <p>Plyn, uhlí, dřevo nebo drahé dálkové teplo. Kotelnu s tepelnými čerpadly navrhneme podle skutečné spotřeby domu a dovedeme ji až do provozu. <b>U vhodných domů jsou náklady na teplo orientačně výrazně nižší</b> — kolik přesně, spočítáme pro váš dům.</p>
+      <ol class="steps">
+        <li><div><b>Prohlídka a podklady</b><span>Spotřeba z vyúčtování, otopná soustava, teplá voda, místo pro venkovní jednotky.</span></div></li>
+        <li><div><b>Návrh kaskády a orientační ekonomika</b><span>Počet jednotek, akumulace, bivalence. Srovnání celkových nákladů se současným zdrojem.</span></div></li>
+        <li><div><b>Podklady pro výbor a shromáždění</b><span>Srozumitelná prezentace, varianty a harmonogram. Pomůžeme s dotací.</span></div></li>
+        <li><div><b>Projekt, montáž a uvedení do provozu</b><span>Dodávka jednotek, hydraulika, elektro, regulace, revize.</span></div></li>
+        <li><div><b>Servis a dálkový dohled</b><span>Provoz sledujeme online a o servis se staráme z Třince.</span></div></li>
+      </ol>
+      <div class="zk-units"><span>RHX30 Pro · 40 kW</span><span>RH X50 · 49,3 kW</span><span>akumulace a TUV</span><span>FV přímo do TČ</span></div>
+      <div><a class="btn btn-y" href="#vypocet">Zjistit možnosti pro náš dům <svg class="i"><use href="#i-chev"/></svg></a></div>
+    </div>
+    <div class="zk-media">
+      <figure><img src="assets/img/ref-kontejner.jpg" alt="Kontejnerová kotelna u bytového komplexu" loading="lazy"><figcaption>Kontejnerová kotelna u bytového komplexu · realizace partnera</figcaption></figure>
+      <figure><img src="assets/img/ref-nadrze.jpg" alt="Akumulační nádrže s izolovanými rozvody v kotelně" loading="lazy"><figcaption>Akumulace a rozvody</figcaption></figure>
+      <figure><img src="assets/img/ref-montaz.jpg" alt="Osazování modulu kotelny jeřábem" loading="lazy"><figcaption>Osazení modulu kotelny</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUKTY -->
+<section id="produkty">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Tepelná čerpadla REO R290</span>
+      <h2>Jednotky pro <span class="g">každý výkon</span></h2>
+      <p>Všechny řady pracují s přírodním chladivem R290 (propan). Ceny jsou za jednotku bez montáže a bez DPH.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Produktové řady">
+      <button role="tab" aria-selected="true" data-p="rh" id="t-rh">RH030–RH060 · domy</button>
+      <button role="tab" aria-selected="false" data-p="smart" id="t-smart">Smart RH06–RH16 · domy</button>
+      <button role="tab" aria-selected="false" data-p="rhx" id="t-rhx">RHX20 / RHX30 Pro · bytové domy</button>
+      <button role="tab" aria-selected="false" data-p="x50" id="t-x50">RH X50 · komerce a průmysl</button>
+    </div>
+
+    <div class="panel" data-panel="rh" role="tabpanel" aria-labelledby="t-rh">
+      <div class="pimg"><img src="assets/img/p-rh-rada.webp" alt="Tepelná čerpadla REO R290 RH060 a RH030–RH050"></div>
+      <div class="pinfo">
+        <h3>REO R290 · RH030–RH060</h3>
+        <p class="tagline">Osvědčená řada pro rodinné domy, 8–22 kW. Topí do −15 °C bez elektrodohřevu, provoz do −25 °C.</p>
+        <div class="pills"><span class="pill">R290</span><span class="pill">A+++</span><span class="pill">topná voda až 70 °C</span><span class="pill">topení · chlazení · TUV</span></div>
+        <div class="tbl"><table>
+          <thead><tr><th>Model</th><th>Výkon A7/W35</th><th>COP</th><th>Hluk ve 3 m</th><th>Cena bez DPH</th></tr></thead>
+          <tbody>
+            <tr><td>RH030</td><td>8,9 kW</td><td>5,17</td><td>40 dB(A)</td><td class="price">95 000 Kč</td></tr>
+            <tr><td>RH040</td><td>11,4 kW</td><td>5,29</td><td>43 dB(A)</td><td class="price">105 000 Kč</td></tr>
+            <tr><td>RH050</td><td>14,8 kW</td><td>5,22</td><td>41 dB(A)</td><td class="price">125 000 Kč</td></tr>
+            <tr><td>RH060</td><td>22,0 kW</td><td>5,22</td><td>od 34 dB(A)</td><td class="price">169 000 Kč</td></tr>
+          </tbody>
+        </table></div>
+        <p class="note">Akustický tlak ve 3 m přepočten z akustického výkonu L<sub>WA</sub> 58–62 dB(A) dle protokolů TÜV SÜD (EN 12102-1). SCOP RH060 4,80 (35 °C) / 3,89 (55 °C) dle KEYMARK.</p>
+      </div>
+    </div>
+
+    <div class="panel" data-panel="smart" role="tabpanel" aria-labelledby="t-smart" hidden>
+      <div class="pimg"><img src="assets/img/p-smart.webp" alt="Tepelné čerpadlo REO R290 Smart" loading="lazy"></div>
+      <div class="pinfo">
+        <h3>REO R290 Smart · RH06–RH16</h3>
+        <p class="tagline">Topí přímo ze sluníčka: panely připojíte k jednotce bez střídače. Kompresor Mitsubishi Electric, integrovaný dohřev 3 kW.</p>
+        <div class="pills"><span class="pill">topná voda až 75 °C</span><span class="pill">SCOP až 5,29 (35 °C)</span><span class="pill">od 32 dB(A) ve 3 m</span><span class="pill">FV přímo do TČ</span></div>
+        <div class="tbl"><table>
+          <thead><tr><th>Model</th><th>Max. A7/W35</th><th>SCOP 35 / 55 °C</th><th>Hluk ve 3 m</th><th>Cena bez DPH</th></tr></thead>
+          <tbody>
+            <tr><td>RH06 1F</td><td>8,5 kW</td><td>5,00 / 3,84</td><td>35 dB(A)</td><td class="price">129 000 Kč</td></tr>
+            <tr><td>RH08</td><td>11,0 kW</td><td>5,15 / 3,90</td><td>od 32 dB(A)</td><td class="price">139 000 Kč</td></tr>
+            <tr><td>RH10</td><td>12,9 kW</td><td>5,20 / 3,90</td><td>od 36 dB(A)</td><td class="price">149 000 Kč</td></tr>
+            <tr><td>RH12</td><td>17,0 kW</td><td>5,11 / 3,94</td><td>od 37 dB(A)</td><td class="price">159 000 Kč</td></tr>
+            <tr><td>RH14</td><td>19,3 kW</td><td>5,29 / 3,91</td><td>od 38 dB(A)</td><td class="price">169 000 Kč</td></tr>
+            <tr><td>RH16</td><td>22,0 kW</td><td>5,09 / 3,88</td><td>od 37 dB(A)</td><td class="price">189 000 Kč</td></tr>
+          </tbody>
+        </table></div>
+        <p class="note">Číslo v názvu odpovídá orientačně tepelné ztrátě domu v kW. SCOP dle EN 14825, průměrné klima, podklady výrobce.</p>
+      </div>
+    </div>
+
+    <div class="panel" data-panel="rhx" role="tabpanel" aria-labelledby="t-rhx" hidden>
+      <div class="pimg"><img src="assets/img/p-rhx.webp" alt="Tepelné čerpadlo REO RHX30 Pro" loading="lazy"></div>
+      <div class="pinfo">
+        <h3>REO R290 Smart · RHX20 Pro / RHX30 Pro</h3>
+        <p class="tagline">Tichá a výkonná jednotka pro kaskády v bytových domech a menších provozech. Fotovoltaiku lze připojit přímo do čerpadla.</p>
+        <div class="pills"><span class="pill">topná voda až 75 °C</span><span class="pill">kaskádové řízení</span><span class="pill">R290</span></div>
+        <div class="tbl"><table>
+          <thead><tr><th>Model</th><th>Max. A7/W35</th><th>Modulace</th><th>Hluk ve 3 m</th><th>Cena bez DPH</th></tr></thead>
+          <tbody>
+            <tr><td>RHX20 Pro</td><td>28,0 kW</td><td>10,2–28,0 kW</td><td>od 32 dB(A)</td><td class="price">300 000 Kč</td></tr>
+            <tr><td>RHX30 Pro</td><td>40,0 kW</td><td>12,7–40,0 kW</td><td>od 37 dB(A)</td><td class="price">350 000 Kč</td></tr>
+          </tbody>
+        </table></div>
+        <p class="note">Počet jednotek v kaskádě navrhujeme podle tepelné ztráty a potřeby teplé vody konkrétního domu.</p>
+      </div>
+    </div>
+
+    <div class="panel" data-panel="x50" role="tabpanel" aria-labelledby="t-x50" hidden>
+      <div class="pimg"><img src="assets/img/p-x50.webp" alt="Komerční tepelné čerpadlo REO RH X50" loading="lazy"></div>
+      <div class="pinfo">
+        <h3>REO RH X50 · komerce a průmysl</h3>
+        <p class="tagline">Komerční jednotka pro haly, hotely, bytové domy a mobilní kotelny. Kaskáda více jednotek pokryje stovky kW.</p>
+        <div class="pills"><span class="pill">topná voda až 75 °C</span><span class="pill">kaskády</span><span class="pill">R290</span><span class="pill">základ mobilních kotelen</span></div>
+        <div class="tbl"><table>
+          <thead><tr><th>Parametr</th><th>RH X50</th></tr></thead>
+          <tbody>
+            <tr><td>Topný výkon A7/W35</td><td>49,3 kW · COP 3,80</td></tr>
+            <tr><td>Topný výkon −15 °C / W55</td><td>24,8 kW</td></tr>
+            <tr><td>Hluk ve 3 m</td><td>48 dB(A)</td></tr>
+            <tr><td>Cena bez DPH</td><td class="price">430 000 Kč</td></tr>
+          </tbody>
+        </table></div>
+        <p class="note">Parametry dle podkladů výrobce a výkonových křivek; podmínky měření dle EN 14511.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOBILNÍ KOTELNY -->
+<section class="mk" id="mobilni-kotelny">
+  <div class="wrap mk-grid">
+    <div class="mk-gal">
+      <figure><img src="assets/img/mob-tovarna.jpg" alt="Mobilní kotelna v kontejneru se dvěma tepelnými čerpadly u historické továrny" loading="lazy"><span class="tag-viz">Vizualizace</span></figure>
+      <figure><img src="assets/img/mob-hotel.jpg" alt="Mobilní kotelna u hotelu" loading="lazy"><span class="tag-viz">Vizualizace</span></figure>
+      <figure><img src="assets/img/ref-doprava.jpg" alt="Přeprava kontejnerové kotelny kamionem" loading="lazy"></figure>
+    </div>
+    <div style="display:grid;gap:18px;min-width:0">
+      <span class="eyebrow">Mobilní kotelny k pronájmu</span>
+      <h2>Teplo tam, kde <span class="g">zrovna chybí</span></h2>
+      <p style="color:var(--muted)">Kontejnerová kotelna s tepelnými čerpadly REO RH X50. Přivezeme ji, napojíme na vaši soustavu a zprovozníme. Platíte měsíční nájem a elektřinu, žádné palivo ani obsluhu.</p>
+      <div class="facts">
+        <div><b>50 / 100 kW</b><span>nominálně, 1 nebo 2× RH X50</span></div>
+        <div><b>20′</b><span>standardní kontejner</span></div>
+        <div><b>bez paliva</b><span>jen elektrická přípojka</span></div>
+      </div>
+      <div class="uses">
+        <div class="use"><svg class="i"><use href="#i-wrench"/></svg><div><b>Rekonstrukce kotelny</b><span>dům nebo provoz topí i během přestavby</span></div></div>
+        <div class="use"><svg class="i"><use href="#i-snow"/></svg><div><b>Havárie zdroje</b><span>rychlá náhrada nefunkčního kotle</span></div></div>
+        <div class="use"><svg class="i"><use href="#i-factory"/></svg><div><b>Stavby a výroba</b><span>vysoušení, temperování, technologie</span></div></div>
+        <div class="use"><svg class="i"><use href="#i-clock"/></svg><div><b>Zkušební provoz</b><span>vyzkoušejte TČ před investicí</span></div></div>
+      </div>
+      <p class="note">Při srovnání vždy počítáme celkovou cenu tepla: nájem, dopravu, montáž i energii, ne jen samotný nájem.</p>
+      <div><a class="btn btn-y" href="#vypocet" data-pick="Mobilní kotelna – pronájem">Poptat mobilní kotelnu <svg class="i"><use href="#i-arrow"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- REALIZACE -->
+<section id="realizace">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Realizace</span>
+      <h2>Kotelny, které <span class="g">už topí</span></h2>
+      <p>Výběr z domácích instalací REO HEATING a kontejnerových kotelen. Vizualizace jsou označené.</p>
+    </div>
+    <div class="tabs ref-tabs" role="tablist" aria-label="Filtr realizací">
+      <button role="tab" aria-selected="true" data-f="all">Vše</button>
+      <button role="tab" aria-selected="false" data-f="kom">Komerce a bytové domy</button>
+      <button role="tab" aria-selected="false" data-f="rd">Rodinné domy</button>
+    </div>
+    <div class="gal" id="gal">
+      <figure data-c="kom"><img src="assets/img/ref-kotelna2.jpg" alt="Modulová kotelna s technologickými dveřmi" loading="lazy"><figcaption><b>Modulová kotelna</b>bytový komplex · realizace partnera</figcaption></figure>
+      <figure data-c="rd"><img src="assets/img/hero-rd.jpg" alt="Penzion Dolní Morava" loading="lazy"><figcaption><b>Penzion Dolní Morava</b>ubytování · REO HEATING</figcaption></figure>
+      <figure data-c="kom"><img src="assets/img/ref-bd.jpg" alt="Bytový dům napojený na kontejnerovou kotelnu" loading="lazy"><figcaption><b>Bytový dům</b>kontejnerová kotelna · realizace partnera</figcaption></figure>
+      <figure data-c="rd"><img src="assets/img/rd-vendryne.jpg" alt="Tepelné čerpadlo u terasy rodinného domu ve Vendryni" loading="lazy"><figcaption><b>Vendryně</b>rodinný dům · akumulace a TUV</figcaption></figure>
+      <figure data-c="kom"><img src="assets/img/ref-kontejner.jpg" alt="Kontejnerová kotelna u bytového komplexu" loading="lazy"><figcaption><b>Kontejnerová kotelna</b>bytový komplex · realizace partnera</figcaption></figure>
+      <figure data-c="rd"><img src="assets/img/rd-benesov.jpg" alt="Tepelné čerpadlo v Dolním Benešově" loading="lazy"><figcaption><b>Dolní Benešov</b>bivalence s plynovým kotlem</figcaption></figure>
+      <figure data-c="kom"><img src="assets/img/hero-prumysl.jpg" alt="Kaskáda RH X50 u výrobní haly" loading="lazy"><span class="tag-viz">Vizualizace</span><figcaption><b>Výrobní hala</b>2× RH X50 v kontejneru</figcaption></figure>
+      <figure data-c="rd"><img src="assets/img/rd-odry.jpg" alt="Tepelné čerpadlo v Odrách" loading="lazy"><figcaption><b>Odry</b>rodinný dům · strojovna s akumulací</figcaption></figure>
+      <figure data-c="rd"><img src="assets/img/rd-lucan.jpg" alt="Tepelné čerpadlo v Lučanech" loading="lazy"><figcaption><b>Lučany</b>rodinný dům · regulace a čerpadlová sestava</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- VÝPOČET / KONTAKT -->
+<section class="calc" id="vypocet">
+  <div class="wrap calc-grid">
+    <div class="calc-copy">
+      <span class="eyebrow">Nezávazný výpočet</span>
+      <h2>Kolik vás stojí <span style="color:var(--yellow)">staré topení?</span></h2>
+      <p>Pošlete nám pár údajů. Naši energetičtí specialisté se ozvou a orientačně spočítají možnosti, náklady i návratnost pro váš objekt.</p>
+      <ul class="ticks">
+        <li><svg class="i"><use href="#i-check"/></svg><span><b>Přehledně</b> — srovnání se současným zdrojem v korunách za rok</span></li>
+        <li><svg class="i"><use href="#i-check"/></svg><span><b>Srozumitelně</b> — podklad, který obstojí i před výborem SVJ</span></li>
+        <li><svg class="i"><use href="#i-check"/></svg><span><b>Nezávazně</b> — výpočet i první konzultace zdarma</span></li>
+      </ul>
+      <p style="font-size:.85rem;opacity:.85">Výsledky jsou orientační a závisí na stavu objektu, otopné soustavě a cenách energií.</p>
+    </div>
+    <form id="lead" novalidate>
+      <h3>Chci výpočet</h3>
+      <div class="f"><label for="typ">Typ objektu</label>
+        <select id="typ" name="typ"><option>Rodinný dům</option><option>Bytový dům / SVJ / družstvo</option><option>Firma, hala, provoz</option><option>Hotel, penzion, ubytování</option><option>Mobilní kotelna – pronájem</option></select></div>
+      <div class="f"><label for="zdroj">Současné vytápění</label>
+        <select id="zdroj" name="zdroj"><option>Plyn</option><option>Dálkové teplo (CZT)</option><option>Uhlí / dřevo</option><option>Elektřina</option><option>Olej / LPG / nafta</option><option>Jiné</option></select></div>
+      <div class="f"><label for="naklady">Roční náklady na teplo (Kč)</label><input id="naklady" name="naklady" inputmode="numeric" placeholder="např. 480 000"></div>
+      <div class="f"><label for="psc">PSČ objektu</label><input id="psc" name="psc" inputmode="numeric" maxlength="6" placeholder="739 61"></div>
+      <div class="f"><label for="jmeno">Jméno</label><input id="jmeno" name="jmeno" autocomplete="name"></div>
+      <div class="f"><label for="tel">Telefon</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="+420"></div>
+      <div class="f full"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email"></div>
+      <div class="f full"><label for="zprava">Poznámka (počet bytů, plocha, spotřeba…)</label><textarea id="zprava" name="zprava" rows="3"></textarea></div>
+      <label class="chk"><input type="checkbox" id="souhlas" required> Souhlasím se zpracováním údajů za účelem vyřízení poptávky.</label>
+      <button class="btn btn-y" type="submit">Odeslat poptávku <svg class="i"><use href="#i-arrow"/></svg></button>
+      <p class="ok" id="ok" hidden>Děkujeme, poptávku jsme přijali. Ozveme se do dvou pracovních dnů. (V návrhu je formulář jen maketa.)</p>
+    </form>
+  </div>
+</section>
+
+<!-- PROČ REO -->
+<section id="proc">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Proč REO HEATING</span>
+      <h2>Jedna firma od <span class="g">návrhu po servis</span></h2>
+    </div>
+    <div class="why">
+      <div><span class="ic"><svg class="i"><use href="#i-flag"/></svg></span><p><b>Česká značka</b><span>Vývoj, dodávky a technická podpora v češtině. Sídlo a sklad v Třinci, působíme v celé ČR a na Slovensku.</span></p></div>
+      <div><span class="ic"><svg class="i"><use href="#i-leaf"/></svg></span><p><b>Přírodní chladivo R290</b><span>Nízký dopad na klima a vysoká teplota topné vody až 70–75 °C, vhodné i pro radiátory.</span></p></div>
+      <div><span class="ic"><svg class="i"><use href="#i-sun"/></svg></span><p><b>Fotovoltaika přímo do TČ</b><span>Řada Smart a RHX Pro umí využít panely bez střídače. Sluneční energie jde rovnou do topení.</span></p></div>
+      <div><span class="ic"><svg class="i"><use href="#i-chart"/></svg></span><p><b>Poctivé výpočty</b><span>Srovnáváme celkové náklady na teplo včetně energie. Žádné slibované úspory bez podkladů.</span></p></div>
+      <div><span class="ic"><svg class="i"><use href="#i-wifi"/></svg></span><p><b>Dálkový dohled</b><span>Provoz jednotek sledujeme online. Poruchu často vyřešíme dřív, než ji zaznamenáte.</span></p></div>
+      <div><span class="ic"><svg class="i"><use href="#i-shield"/></svg></span><p><b>Záruka a servis</b><span>Náhradní díly skladem, servisní technici a prodloužená záruka u vybraných řad.</span></p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="kontakt">
+  <div class="wrap foot">
+    <div>
+      <img src="assets/img/logo-reo-heating-white.svg" alt="REO HEATING">
+      <p>Tepelná čerpadla R290 pro domácnosti, bytové domy, firmy i průmysl. Zelené kotelny na klíč a mobilní kotelny k pronájmu.</p>
+    </div>
+    <div><h4>Řešení</h4><ul><li><a href="#produkty">Rodinné domy</a></li><li><a href="#zelene-kotelny">Bytové domy a SVJ</a></li><li><a href="#produkty">Firmy a průmysl</a></li><li><a href="#mobilni-kotelny">Mobilní kotelny</a></li></ul></div>
+    <div><h4>Produkty</h4><ul><li><a href="#produkty">RH030–RH060</a></li><li><a href="#produkty">Smart RH06–RH16</a></li><li><a href="#produkty">RHX20 / RHX30 Pro</a></li><li><a href="#produkty">RH X50</a></li></ul></div>
+    <div><h4>Kontakt</h4><ul><li>Riva Trade s.r.o., IČ 08864811</li><li>Smetanova 555, 739 61 Třinec</li><li>info@reoheating.cz</li><li>+420 774 872 467</li></ul></div>
+  </div>
+  <div class="wrap legal">
+    <span class="claim"><svg class="i"><use href="#i-shield"/></svg>Česká značka kvalitních tepelných čerpadel</span>
+    <span>© 2026 REO HEATING · Riva Trade s.r.o.</span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // menu
+  const burger = document.getElementById('burger'), menu = document.getElementById('menu');
+  burger.addEventListener('click', () => { const o = menu.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
+  menu.addEventListener('click', e => { if (e.target.tagName === 'A') { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); } });
+
+  // hero slider
+  const S = [
+    {t:'Teplo pro <span class="g">průmysl a&nbsp;firmy</span> bez kotle na palivo', l:'Výkonné jednotky <b>REO RH X50</b> a&nbsp;kaskády do stovek kW pro haly, provozy a&nbsp;ubytování. Navrhneme, dodáme, zapojíme a&nbsp;postaráme se o&nbsp;servis.', viz:1, ic:'i-factory', ct:'2× REO RH X50 v kaskádě', cs:'Kontejnerová kotelna u výrobní haly · 2 × 49,3 kW (A7/W35)', more:'#produkty'},
+    {t:'Zelená kotelna pro <span class="g">bytový dům</span> na klíč', l:'Náhrada plynové kotelny nebo dálkového tepla kaskádou tepelných čerpadel. Připravíme <b>podklady pro výbor SVJ</b>, projekt, montáž i dotaci.', viz:1, ic:'i-bd', ct:'Kaskáda pro bytový dům', cs:'RHX30 Pro nebo RH X50 · akumulace a ohřev TUV', more:'#zelene-kotelny'},
+    {t:'Mobilní kotelna <span class="g">k pronájmu</span>, když teplo chybí', l:'Kontejner s tepelnými čerpadly přivezeme a&nbsp;zapojíme při <b>rekonstrukci, havárii zdroje</b> nebo na stavbě. Bez paliva a bez obsluhy.', viz:1, ic:'i-truck', ct:'Mobilní kotelna 50 / 100 kW', cs:'Kontejner 20′ · 1 nebo 2× RH X50', more:'#mobilni-kotelny'},
+    {t:'Tiché tepelné čerpadlo pro <span class="g">váš dům</span>', l:'Řady <b>RH030–RH060</b> a <b>Smart</b> s přírodním chladivem R290. Topí do −15 °C bez elektrodohřevu, Smart umí brát proud přímo z panelů.', viz:0, ic:'i-house', ct:'Penzion Dolní Morava', cs:'Realizace REO HEATING · venkovní jednotka u objektu', more:'#produkty'}
+  ];
+  const figs = [...document.querySelectorAll('#hero-media figure')], btns = [...document.querySelectorAll('.slides-nav button')];
+  const $ = id => document.getElementById(id);
+  let cur = 0, timer;
+  function show(i){
+    cur = i; const s = S[i];
+    figs.forEach((f,k)=>f.classList.toggle('on',k===i));
+    btns.forEach((b,k)=>b.setAttribute('aria-selected',k===i));
+    $('h-title').innerHTML = s.t; $('h-lead').innerHTML = s.l; $('h-tag').hidden = !s.viz;
+    $('h-cap-ic').setAttribute('href','#'+s.ic); $('h-cap-t').textContent = s.ct; $('h-cap-s').textContent = s.cs; $('h-more').href = s.more;
+  }
+  function auto(){ clearInterval(timer); if(!reduce) timer = setInterval(()=>show((cur+1)%S.length), 7000); }
+  btns.forEach((b,k)=>b.addEventListener('click',()=>{ show(k); auto(); }));
+  auto();
+
+  // produktové záložky
+  const pt = [...document.querySelectorAll('[data-p]')], panels = [...document.querySelectorAll('[data-panel]')];
+  function prod(id){ pt.forEach(b=>b.setAttribute('aria-selected', b.dataset.p===id)); panels.forEach(p=>p.hidden = p.dataset.panel!==id); }
+  pt.forEach(b=>b.addEventListener('click',()=>prod(b.dataset.p)));
+  document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',()=>prod(a.dataset.go)));
+
+  // filtr realizací
+  const ft = [...document.querySelectorAll('[data-f]')], items = [...document.querySelectorAll('#gal figure')];
+  ft.forEach(b=>b.addEventListener('click',()=>{ ft.forEach(x=>x.setAttribute('aria-selected',x===b)); items.forEach(f=>f.hidden = b.dataset.f!=='all' && f.dataset.c!==b.dataset.f); }));
+
+  // předvolba typu objektu
+  document.querySelectorAll('[data-pick]').forEach(a=>a.addEventListener('click',()=>{ const sel=$('typ'); [...sel.options].forEach(o=>{ if(o.text===a.dataset.pick) sel.value=o.value; }); }));
+
+  // formulář (maketa)
+  $('lead').addEventListener('submit', e => { e.preventDefault(); if(!$('souhlas').checked){ $('souhlas').focus(); return; } $('ok').hidden = false; });
+})();
+</script>

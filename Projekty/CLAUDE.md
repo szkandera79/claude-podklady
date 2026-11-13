@@ -41,6 +41,7 @@ CLAUDE.md** a drž se pravidel tam uvedených.
 | `reo-schemata-zapojeni/` | jednoduchá schémata zapojení TČ REO HEATING pro kutily (číslované popisky); varianta 1 = jen topení s AKU + sekundární čerpadlo na bezdrátový termostat |
 | `reo-iot-cz/` | rozšíření Chrome nad IOT Power World (CZ překlad, encyklopedie parametrů, chyby, diagnostika); vlastní **CLAUDE.md** (read-only, `podklady/` mimo git) |
 | `eko4home-web/` | návrh redesignu eko4home.cz (Riva Trade): design dle klimatizacekasparek.vercel.app, produkty REO RH030–RH060, Smart, RHX Pro, nádrže s cenami |
+| `reoheating-redesign/` | **návrh nového webu REO HEATING** (13. 11. 2026) v barvách bannerů: domácnosti, zelené kotelny, průmysl, mobilní kotelny; artefakt PdPNnYNXA75YnWvP8Vox5T |
 | `ai-marketing-manager/` | vlastní aplikace AI marketingového manažera (REO Heating, ThermaVera, Super Heating CZ, Eko4home): Meta API, dashboard, AI asistent, generátor bannerů; první verze hotová, kód v `~/Developer/ai-marketing-manager` (launch „ai-marketing“, port 3100) |
 | `podklady-partneri/` | **podklady ke stažení pro projektanty a partnery** (ceník, katalogy, datové listy, štítky, nádrže, pokyny k instalaci); artefakt DdPrC4GgfPpeQUaSN36QUA, build.py |
 | `marketing/` | oslovení SVJ (e‑maily, leady CZT, tracker), Google Ads / PPC, grafika |
