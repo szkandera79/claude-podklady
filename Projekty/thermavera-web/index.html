@@ -1917,6 +1917,9 @@
     return cc?'en':null;
   }
   var saved=null; try{saved=localStorage.getItem('tv_lang');}catch(e){}
+  // ?lang=cs|en|de|pl v adrese vynutí jazyk a uloží ho (pro odkazy, reklamy i jako záchrana, když se přepínač nedá použít)
+  var qlang=null; try{qlang=new URLSearchParams(location.search).get('lang');}catch(e){}
+  if(qlang&&LANGS.indexOf(qlang)>=0){saved=qlang;try{localStorage.setItem('tv_lang',qlang);}catch(e){}}
   var btns=[].slice.call(document.querySelectorAll('#langmenu [data-lang]'));
   var curEl=document.getElementById('langcur');
   var menu=document.getElementById('langmenu'), lbtn=document.getElementById('langbtn');

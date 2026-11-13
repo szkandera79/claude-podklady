@@ -36,7 +36,8 @@ ve **druhém `<script>` bloku na konci `index.html`**:
   je podle **českého originálu** přes slovník `TR` (klíč = český text po `trim()`,
   hodnota = `[EN, DE, PL]`). Překládá i atributy `alt`, `placeholder`, `aria-label`
   a dále `<title>`, meta `description`, `og:title`, `og:description` (objekt `META`)
-  a nastavuje `<html lang>`. Volba se ukládá do `localStorage` (`tv_lang`).
+  a nastavuje `<html lang>`. Volba se ukládá do `localStorage` (`tv_lang`); parametr `?lang=cs|en|de|pl` jazyk vynutí a uloží.
+  Když se menu v delším jazyce nevejde, JS přidá headeru `.compact` (menu pod ☰), aby přepínač jazyka nezmizel za okraj.
 
 **PRAVIDLO (automaticky dodržuj): Když přidáš nebo změníš jakýkoli český text**
 (nadpis, odstavec, položku, tlačítko, `alt`, `placeholder`, popisek v galerii, FAQ,
@@ -121,6 +122,7 @@ Meta description a klíčová slova jsou v `<head>` — při změnách textů je
     rm -rf dist && mkdir dist
     sed -e 's#assets/images/reference/##g' -e 's#assets/images/##g' index.html > dist/index.html
     cp odeslat.php favicon.svg ochrana-udaju.html robots.txt sitemap.xml kalkulacka.html kurz.php dist/
+    cp .htaccess dist/   # přesměrování www → thermavera.cz (jedna adresa = jedna paměť jazyka)
     cp google*.html dist/   # ověřovací soubor Google Search Console
     cp assets/images/*.jpg dist/ ; cp assets/images/reference/*.jpg dist/
     cp -R mobilni-kotelny dist/   # služba Mobilní kotelny — podsložka se strukturou, nahrát jako složku přes FTP
