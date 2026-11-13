@@ -1,27 +1,112 @@
 <?php
 /**
- * Eko4Home – nová úvodní stránka (statické HTML místo šablony Divi) + odeslání formuláře.
+ * Eko4Home – nová úvodní stránka (statické HTML místo šablony Divi) + odeslání formuláře s antispamem.
  * Code Snippets → Přidat nový → PHP → vložit celý tento soubor → „Spustit všude“ → Uložit a aktivovat.
  * Vypnutí = deaktivovat snippet (vrátí původní WordPress úvod).
  */
+/* Antispam a kontrola poptávky z webu eko4home.cz – sdílí statická verze (odeslat.php)
+   i verze pro WordPress (snippet). Vrací ['ok'=>bool, 'error'=>string, 'spam'=>bool, 'pole'=>[...] ]. */
+
+// Cloudflare Turnstile – tajný klíč (prázdný = ověření vypnuto). Veřejný klíč patří do E4H_TS v index.html.
+if (!defined('E4H_TURNSTILE_SECRET')) define('E4H_TURNSTILE_SECRET', '');
+if (!defined('E4H_RATE_LIMIT'))       define('E4H_RATE_LIMIT', 3);      // max. poptávek z jedné IP za hodinu
+if (!defined('E4H_MIN_SECONDS'))      define('E4H_MIN_SECONDS', 4);     // formulář vyplněný rychleji = robot
+
+function e4h_clean($v) { return trim(str_replace(["\r", "\n", "%0a", "%0d"], ' ', (string)$v)); }
+
+function e4h_check(array $p, string $ip): array {
+  $bad = function ($m) { return ['ok' => false, 'error' => $m, 'spam' => false, 'pole' => []]; };
+  $spam = ['ok' => true, 'error' => '', 'spam' => true, 'pole' => []];   // tváříme se OK, nic neposíláme
+
+  // 1) honeypot + časová past
+  if (!empty($p['web'])) return $spam;
+  $t = (int)($p['t'] ?? 0);
+  if ($t <= 0 || time() - $t < E4H_MIN_SECONDS || time() - $t > 86400) return $spam;
+
+  // 2) omezení počtu odeslání z jedné IP
+  $rl = sys_get_temp_dir() . '/e4h_rl_' . sha1($ip);
+  $hist = array_filter(json_decode(@file_get_contents($rl) ?: '[]', true) ?: [], function ($x) { return $x > time() - 3600; });
+  if (count($hist) >= E4H_RATE_LIMIT) return $bad('Z tohoto připojení už přišlo několik poptávek. Zkuste to prosím později nebo nám zavolejte.');
+
+  // 3) Cloudflare Turnstile
+  if (E4H_TURNSTILE_SECRET !== '') {
+    $resp = (string)($p['cf-turnstile-response'] ?? '');
+    if ($resp === '') return $bad('Potvrďte prosím ověření, že nejste robot.');
+    $ctx = stream_context_create(['http' => ['method' => 'POST', 'timeout' => 8,
+      'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
+      'content' => http_build_query(['secret' => E4H_TURNSTILE_SECRET, 'response' => $resp, 'remoteip' => $ip])]]);
+    $r = json_decode(@file_get_contents('https://challenges.cloudflare.com/turnstile/v0/siteverify', false, $ctx) ?: '{}', true);
+    if (empty($r['success'])) return $bad('Ověření se nezdařilo, obnovte prosím stránku a zkuste to znovu.');
+  }
+
+  // 4) povinná pole a jejich formát
+  $jmeno = e4h_clean($p['jmeno'] ?? '');
+  $tel   = preg_replace('/[\s().\/-]/', '', (string)($p['telefon'] ?? ''));
+  $email = e4h_clean($p['email'] ?? '');
+  $psc   = preg_replace('/\s/', '', (string)($p['psc'] ?? ''));
+  $objekt = e4h_clean($p['objekt'] ?? ''); $vyt = e4h_clean($p['vytapeni'] ?? '');
+  $plocha = preg_replace('/\D/', '', (string)($p['plocha'] ?? ''));
+  $zprava = trim((string)($p['zprava'] ?? '')); $adresa = e4h_clean($p['adresa'] ?? '');
+
+  if (mb_strlen($jmeno) < 2 || mb_strlen($jmeno) > 80) return $bad('Vyplňte prosím jméno a příjmení.');
+  // ČR/SK: +420/+421/00420/00421, nebo 9 číslic (ČR), nebo 0 + 9 číslic (SK zápis 0905 …)
+  if (preg_match('/^(?:(?:00|\+)?(420|421))?(0?)([1-9]\d{8})$/', $tel, $m) !== 1) return $bad('Zadejte prosím platné telefonní číslo (ČR nebo SK).');
+  $pred = $m[1] !== '' ? $m[1] : ($m[2] === '0' ? '421' : '420');
+  $tel = '+' . $pred . ' ' . implode(' ', str_split($m[3], 3));
+  if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) return $bad('Zadejte prosím platný e-mail, nebo pole nechte prázdné.');
+  if (preg_match('/^\d{5}$/', $psc) !== 1) return $bad('Zadejte prosím PSČ místa realizace (5 číslic).');
+  if ($objekt === '') return $bad('Vyberte prosím typ objektu.');
+  if ($vyt === '') return $bad('Vyberte prosím současné vytápění.');
+  if (empty($p['souhlas'])) return $bad('Je potřeba souhlas se zpracováním osobních údajů.');
+  if (mb_strlen($zprava) > 2000) return $bad('Zpráva je příliš dlouhá.');
+
+  // 5) typické znaky spamu – odkazy, azbuka, jednorázové e-maily
+  $vse = $jmeno . ' ' . $zprava . ' ' . $adresa;
+  if (preg_match('~(https?://|www\.|\[url|<a\s|\.(ru|xyz|top|click|info)\b)~i', $vse)) return $spam;
+  if (preg_match('/\p{Cyrillic}/u', $vse)) return $spam;
+  $jednoraz = ['mailinator.com','guerrillamail.com','10minutemail.com','temp-mail.org','yopmail.com','trashmail.com','sharklasers.com','getnada.com','dispostable.com','maildrop.cc'];
+  if ($email !== '' && in_array(strtolower(substr(strrchr($email, '@'), 1)), $jednoraz, true)) return $bad('Použijte prosím běžnou e-mailovou adresu.');
+
+  $hist[] = time(); @file_put_contents($rl, json_encode(array_values($hist)));
+
+  // PSČ: ČR 1xxxx–7xxxx, SK 0xxxx / 8xxxx / 9xxxx
+  $zeme = in_array($psc[0], ['0', '8', '9'], true) ? 'SK' : 'CZ';
+  return ['ok' => true, 'error' => '', 'spam' => false, 'pole' => [
+    'Jméno a příjmení' => $jmeno, 'Telefon' => $tel, 'E-mail' => $email,
+    'PSČ' => substr($psc, 0, 3) . ' ' . substr($psc, 3) . " ($zeme)", 'Adresa realizace' => $adresa,
+    'Typ objektu' => $objekt, 'Současné vytápění' => $vyt, 'Vytápěná plocha' => $plocha !== '' ? "$plocha m²" : '',
+    'Zájem' => e4h_clean($p['zajem'] ?? ''), 'Zpráva' => $zprava,
+  ]];
+}
+
+function e4h_predmet(array $pole): string {
+  return 'Poptávka eko4home.cz – ' . $pole['Typ objektu'] . ', PSČ ' . $pole['PSČ'] . ' – ' . $pole['Jméno a příjmení'];
+}
+
+function e4h_telo(array $pole): string {
+  $t = "Nová poptávka z webu eko4home.cz\n" . str_repeat('-', 40) . "\n\n";
+  foreach ($pole as $k => $v) { if ($k !== 'Zpráva') $t .= $k . ': ' . ($v !== '' ? $v : '—') . "\n"; }
+  return $t . "\nZpráva:\n" . ($pole['Zpráva'] !== '' ? $pole['Zpráva'] : '—') . "\n";
+}
 add_action('template_redirect', function () {
     if (is_admin() || !is_front_page()) return;
 
     // Složka, kam se v Médiích nahrály obrázky (rok/měsíc nahrání). Při jiném měsíci upravit.
-    $img = '/wp-content/uploads/2026/10/';
+    $img = '/wp-content/uploads/2026/11/';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['e4h_form'])) {
-        if (empty($_POST['web'])) {                        // honeypot proti spamu
-            $t = function ($k) { return sanitize_text_field(wp_unslash($_POST[$k] ?? '')); };
-            $email = sanitize_email(wp_unslash($_POST['email'] ?? ''));
-            $body  = "Jméno: " . $t('jmeno') . "\nTelefon: " . $t('telefon') . "\nE-mail: " . $email
-                   . "\nAdresa realizace: " . $t('adresa') . "\nZájem: " . $t('zajem')
-                   . "\n\nZpráva:\n" . sanitize_textarea_field(wp_unslash($_POST['zprava'] ?? ''));
-            $headers = $email ? ['Reply-To: ' . $email] : [];
-            wp_mail('info@reoheating.cz', 'Poptávka z webu eko4home.cz – ' . $t('jmeno'), $body, $headers);
+        nocache_headers();
+        $r = e4h_check(wp_unslash($_POST), $_SERVER['REMOTE_ADDR'] ?? '');
+        if (!$r['ok']) wp_send_json(['ok' => false, 'error' => $r['error']], 400);
+        if (!$r['spam']) {
+            $pole = $r['pole'];
+            $headers = $pole['E-mail'] !== '' ? ['Reply-To: ' . $pole['Jméno a příjmení'] . ' <' . $pole['E-mail'] . '>'] : [];
+            if (!wp_mail('info@reoheating.cz', e4h_predmet($pole), e4h_telo($pole), $headers))
+                wp_send_json(['ok' => false, 'error' => 'E-mail se nepodařilo odeslat, zavolejte nám prosím +420 774 872 467.'], 500);
+            if ($pole['E-mail'] !== '')
+                wp_mail($pole['E-mail'], 'Děkujeme za poptávku – REO HEATING', "Dobrý den,\n\nděkujeme za vaši poptávku, co nejdříve se vám ozveme.\n\nS pozdravem\nREO HEATING\ninfo@reoheating.cz | +420 774 872 467\n", ['Reply-To: info@reoheating.cz']);
         }
-        wp_safe_redirect(home_url('/?odeslano=1#kontakt'));
-        exit;
+        wp_send_json(['ok' => true]);
     }
 
     nocache_headers();
@@ -301,6 +386,10 @@ mark.hl{background:linear-gradient(transparent 45%,rgba(245,184,0,.55) 45%);colo
 form{background:#fff;border-radius:24px;padding:32px;box-shadow:var(--shadow);display:grid;gap:14px;grid-template-columns:1fr 1fr}
 form .full{grid-column:1/-1}
 label{font-size:.85rem;font-weight:600;display:grid;gap:6px}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+label.souhlas{display:flex;align-items:flex-start;gap:10px;font-weight:500}
+label.souhlas input{width:auto;margin-top:3px}
+.f-err{grid-column:1/-1;background:#fdecea;color:#8a1c12;border-radius:12px;padding:10px 14px;font-size:.9rem}
 input,select,textarea{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg-soft);width:100%}
 input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);border-color:transparent}
 form small{color:var(--muted)}
@@ -657,17 +746,29 @@ footer .logo img,footer .logo-svg{height:63px}
         <a class="ci" href="mailto:info@reoheating.cz"><span class="ic">✉️</span><div><small>Napište e-mail</small><b>info@reoheating.cz</b></div></a>
         <div class="ci"><span class="ic">📍</span><div><small>Sídlíme v Třinci</small><b>Schůzku si domluvte předem</b><br><small>Jsme často v terénu, ať s vámi počítáme.</small></div></div>
       </div>
-      <form method="post" action="/#kontakt"><input type="hidden" name="e4h_form" value="1"><input type="text" name="web" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-        <label>Jméno a příjmení<input name="jmeno" required></label>
-        <label>Telefon<input type="tel" name="telefon" required></label>
-        <label class="full">E-mail<input type="email" name="email"></label>
-        <label class="full">Adresa realizace<input name="adresa"></label>
-        <label class="full">Mám zájem o
+      <form id="poptavka" method="post" action="/" novalidate><input type="hidden" name="e4h_form" value="1">
+        <input type="text" name="web" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <input type="hidden" name="t" value="">
+        <label>Jméno a příjmení *<input name="jmeno" required minlength="2" maxlength="80" autocomplete="name"></label>
+        <label>Telefon *<input type="tel" name="telefon" required placeholder="+420 777 123 456" autocomplete="tel" pattern="[+0-9 ()-]{9,20}"></label>
+        <label>E-mail<input type="email" name="email" autocomplete="email"></label>
+        <label>PSČ místa realizace *<input name="psc" required inputmode="numeric" placeholder="739 61" pattern="[0-9 ]{5,6}" maxlength="6"></label>
+        <label>Typ objektu *
+          <select name="objekt" required><option value="">– vyberte –</option><option>Rodinný dům</option><option>Bytový dům / SVJ</option><option>Firma / komerční objekt</option><option>Jiné</option></select>
+        </label>
+        <label>Současné vytápění *
+          <select name="vytapeni" required><option value="">– vyberte –</option><option>Plyn</option><option>Elektřina</option><option>Tuhá paliva (uhlí, dřevo)</option><option>Dálkové teplo (CZT)</option><option>Tepelné čerpadlo</option><option>Novostavba – zatím nic</option><option>Jiné</option></select>
+        </label>
+        <label>Vytápěná plocha (m²)<input name="plocha" inputmode="numeric" placeholder="např. 150" maxlength="6"></label>
+        <label>Mám zájem o
           <select name="zajem"><option>Tepelné čerpadlo RH030–RH060</option><option>REO R290 Smart (topí ze sluníčka)</option><option>Bytový dům / SVJ</option><option>Komerční objekt</option><option>RHX30 Pro / RH X50</option><option>Nerezová nádrž / bojler TUV</option><option>Fotovoltaika</option><option>Fotovoltaika + tepelné čerpadlo</option></select>
         </label>
-        <label class="full">Zpráva<textarea name="zprava" rows="4"></textarea></label>
+        <label class="full">Adresa realizace<input name="adresa" maxlength="160" autocomplete="street-address"></label>
+        <label class="full">Zpráva<textarea name="zprava" rows="4" maxlength="2000"></textarea></label>
+        <div class="full" id="ts-box"></div>
+        <label class="full souhlas"><input type="checkbox" name="souhlas" value="1" required> Souhlasím se zpracováním osobních údajů pro vyřízení poptávky. *</label>
         <div class="full"><button class="btn btn-primary" type="submit">Odeslat poptávku</button></div>
-        <small class="full">Osobní údaje použijeme jen pro vyřízení poptávky.</small>
+        <small class="full">* povinné údaje. Ozýváme se zákazníkům z ČR a Slovenska.</small>
       </form>
     </div>
   </div>
@@ -701,10 +802,25 @@ function showTab(id){
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>showTab(t.dataset.tab)));
 document.querySelectorAll('.menu a[data-tab]').forEach(a=>a.addEventListener('click',()=>showTab(a.dataset.tab)));
 document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',()=>showTab(a.dataset.go)));
-document.querySelectorAll('[data-pick]').forEach(a=>a.addEventListener('click',()=>{const s=document.querySelector('form select');s.value=a.dataset.pick;}));
+document.querySelectorAll('[data-pick]').forEach(a=>a.addEventListener('click',()=>{const s=document.querySelector('select[name=zajem]');s.value=a.dataset.pick;}));
 document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
 </script>
-<script>if(location.search.indexOf("odeslano=1")>-1){var b=document.querySelector("form button");if(b){b.textContent="Děkujeme, ozveme se ✓";b.disabled=true;}}</script>
+<script>
+/* Antispam: časová past + Cloudflare Turnstile (klíč doplnit do E4H_TS, prázdný = vypnuto) */
+var E4H_TS='';
+(function(){var f=document.getElementById('poptavka');if(!f)return;f.t.value=String(Math.floor(Date.now()/1000));
+if(E4H_TS){var d=document.createElement('div');d.className='cf-turnstile';d.setAttribute('data-sitekey',E4H_TS);d.setAttribute('data-language','cs');document.getElementById('ts-box').appendChild(d);
+var s=document.createElement('script');s.src='https://challenges.cloudflare.com/turnstile/v0/api.js';s.async=true;s.defer=true;document.head.appendChild(s);}})();
+</script>
+<!--FORM-JS-->
+<script>
+(function(){var f=document.getElementById('poptavka');if(!f)return;
+function msg(m){var e=f.querySelector('.f-err');if(!m){if(e)e.remove();return;}if(!e){e=document.createElement('div');e.className='f-err';f.insertBefore(e,f.querySelector('#ts-box'));}e.textContent=m;}
+f.addEventListener('submit',function(e){e.preventDefault();msg('');if(!f.checkValidity()){f.reportValidity();return;}var b=f.querySelector('button');b.disabled=true;b.textContent='Odesílám…';
+fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(r){return r.json()}).then(function(d){if(d.ok){b.textContent='Děkujeme, ozveme se ✓';f.reset();}else{b.disabled=false;b.textContent='Odeslat poptávku';msg(d.error||'Odeslání se nepodařilo, zavolejte nám prosím +420 774 872 467.');if(window.turnstile)turnstile.reset();}})
+.catch(function(){b.disabled=false;b.textContent='Odeslat poptávku';msg('Odeslání se nepodařilo, zavolejte nám prosím +420 774 872 467.');});});})();
+</script>
+<!--/FORM-JS-->
 </body>
 </html>
 

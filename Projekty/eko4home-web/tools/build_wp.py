@@ -23,8 +23,9 @@ html = html.replace('  .logo img{height:52px}', '  .logo img,.logo .logo-svg{hei
 assert 'logo-reoheating' not in html, 'logo nenahrazeno'
 
 # 2) formulář → POST na úvodní stránku (zpracuje snippet přes wp_mail)
-html = html.replace('<form id="poptavka" method="post" action="odeslat.php">', '<form method="post" action="/#kontakt"><input type="hidden" name="e4h_form" value="1">')
-html = re.sub(r'<!--FORM-JS-->.*?<!--/FORM-JS-->\n', '', html, flags=re.S)
+old_form = '<form id="poptavka" method="post" action="odeslat.php" novalidate>'
+assert old_form in html, 'formulář nenalezen'
+html = html.replace(old_form, '<form id="poptavka" method="post" action="/" novalidate><input type="hidden" name="e4h_form" value="1">')
 for old, new in []:  # pole už mají name v index.html
     pass
 for old, new in [('<label>Jméno a příjmení<input required>', '<label>Jméno a příjmení<input name="jmeno" required>'),
@@ -34,7 +35,6 @@ for old, new in [('<label>Jméno a příjmení<input required>', '<label>Jméno 
                  ('<select>', '<select name="zajem">'),
                  ('<textarea rows="4">', '<textarea name="zprava" rows="4">')]:
     pass
-html = html.replace('</body>', '<script>if(location.search.indexOf("odeslano=1")>-1){var b=document.querySelector("form button");if(b){b.textContent="Děkujeme, ozveme se ✓";b.disabled=true;}}</script>\n</body>')
 
 # 3) obrázky → složka pro nahrání do Médií
 OUT.mkdir(exist_ok=True)
@@ -46,10 +46,11 @@ assert "\nE4H" not in html
 
 php = r"""<?php
 /**
- * Eko4Home – nová úvodní stránka (statické HTML místo šablony Divi) + odeslání formuláře.
+ * Eko4Home – nová úvodní stránka (statické HTML místo šablony Divi) + odeslání formuláře s antispamem.
  * Code Snippets → Přidat nový → PHP → vložit celý tento soubor → „Spustit všude“ → Uložit a aktivovat.
  * Vypnutí = deaktivovat snippet (vrátí původní WordPress úvod).
  */
+__LIB__
 add_action('template_redirect', function () {
     if (is_admin() || !is_front_page()) return;
 
@@ -57,17 +58,18 @@ add_action('template_redirect', function () {
     $img = '/wp-content/uploads/__ROK__/__MESIC__/';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['e4h_form'])) {
-        if (empty($_POST['web'])) {                        // honeypot proti spamu
-            $t = function ($k) { return sanitize_text_field(wp_unslash($_POST[$k] ?? '')); };
-            $email = sanitize_email(wp_unslash($_POST['email'] ?? ''));
-            $body  = "Jméno: " . $t('jmeno') . "\nTelefon: " . $t('telefon') . "\nE-mail: " . $email
-                   . "\nAdresa realizace: " . $t('adresa') . "\nZájem: " . $t('zajem')
-                   . "\n\nZpráva:\n" . sanitize_textarea_field(wp_unslash($_POST['zprava'] ?? ''));
-            $headers = $email ? ['Reply-To: ' . $email] : [];
-            wp_mail('info@reoheating.cz', 'Poptávka z webu eko4home.cz – ' . $t('jmeno'), $body, $headers);
+        nocache_headers();
+        $r = e4h_check(wp_unslash($_POST), $_SERVER['REMOTE_ADDR'] ?? '');
+        if (!$r['ok']) wp_send_json(['ok' => false, 'error' => $r['error']], 400);
+        if (!$r['spam']) {
+            $pole = $r['pole'];
+            $headers = $pole['E-mail'] !== '' ? ['Reply-To: ' . $pole['Jméno a příjmení'] . ' <' . $pole['E-mail'] . '>'] : [];
+            if (!wp_mail('info@reoheating.cz', e4h_predmet($pole), e4h_telo($pole), $headers))
+                wp_send_json(['ok' => false, 'error' => 'E-mail se nepodařilo odeslat, zavolejte nám prosím +420 774 872 467.'], 500);
+            if ($pole['E-mail'] !== '')
+                wp_mail($pole['E-mail'], 'Děkujeme za poptávku – REO HEATING', "Dobrý den,\n\nděkujeme za vaši poptávku, co nejdříve se vám ozveme.\n\nS pozdravem\nREO HEATING\ninfo@reoheating.cz | +420 774 872 467\n", ['Reply-To: info@reoheating.cz']);
         }
-        wp_safe_redirect(home_url('/?odeslano=1#kontakt'));
-        exit;
+        wp_send_json(['ok' => true]);
     }
 
     nocache_headers();
@@ -81,6 +83,7 @@ E4H;
 """
 from datetime import date
 d = date.today()
-php = php.replace('__ROK__', f'{d.year}').replace('__MESIC__', f'{d.month:02d}').replace('__HTML__', html)
+lib = (ROOT / 'antispam-lib.php').read_text(encoding='utf-8').replace('<?php', '', 1).strip()
+php = php.replace('__LIB__', lib).replace('__ROK__', f'{d.year}').replace('__MESIC__', f'{d.month:02d}').replace('__HTML__', html)
 (OUT / 'eko4home-snippet.php').write_text(php, encoding='utf-8')
 print('obrázků:', len(used), '| snippet:', round(len(php.encode())/1024), 'kB |', OUT)

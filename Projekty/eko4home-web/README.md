@@ -41,3 +41,10 @@ přes Pillow; originály v `assets/src-orig/`. Obrázek „Jak funguje“ = sch�
 - Postup: záloha WP → FTP (FileZilla) do kořene webu → WordPress přesunout do podsložky (jinak má index.php přednost a .htaccess přepisuje URL) → nahrát obsah `dist/`.
 - **Varianta WordPress (jen přístup do WP admin):** `python3 eko4home-web/tools/build_wp.py` → `dist-wp/obrazky/` (nahrát do Médií) + `dist-wp/eko4home-snippet.php` (Code Snippets, „Spustit všude“). Snippet na úvodní stránce vypíše toto HTML místo Divi a formulář odesílá přes `wp_mail` na info@reoheating.cz. Vypnutí = deaktivovat snippet. Cesta k obrázkům `/wp-content/uploads/RRRR/MM/` je v proměnné `$img`.
 - Logo (22. 10. 2026): závazné logo REO HEATING z `~/Claude/REO/logo/` (`logo-reo-heating.svg` → `assets/img/logo-reoheating.svg`, bílá varianta → `logo-reoheating-light.svg`). Úvod: popisky Watertanku (TUV nahoře / topná voda dole) jako HTML přes obrázek (`.hero-media`).
+
+## Antispam formuláře (13. 11. 2026)
+- `antispam-lib.php` (sdílí `odeslat.php` i WP snippet): honeypot `web`, časová past (`t`, min. 4 s), max. 3 poptávky/IP/hod,
+  CZ/SK telefon (+420/+421, SK i s nulou 0905…), PSČ 5 číslic, povinný typ objektu + současné vytápění + souhlas,
+  tichý zahoz zpráv s odkazy/azbukou, odmítnutí jednorázových e-mailů. Předmět e-mailu: typ objektu + PSČ (CZ/SK) + jméno.
+- Cloudflare Turnstile: připraveno, vypnuto. Zapnout = site key do `var E4H_TS=''` v index.html + secret do `E4H_TURNSTILE_SECRET` v antispam-lib.php.
+- Na FTP nahrát: `index.html`, `odeslat.php`, `antispam-lib.php`.

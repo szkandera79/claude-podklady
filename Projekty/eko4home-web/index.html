@@ -272,6 +272,10 @@ mark.hl{background:linear-gradient(transparent 45%,rgba(245,184,0,.55) 45%);colo
 form{background:#fff;border-radius:24px;padding:32px;box-shadow:var(--shadow);display:grid;gap:14px;grid-template-columns:1fr 1fr}
 form .full{grid-column:1/-1}
 label{font-size:.85rem;font-weight:600;display:grid;gap:6px}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+label.souhlas{display:flex;align-items:flex-start;gap:10px;font-weight:500}
+label.souhlas input{width:auto;margin-top:3px}
+.f-err{grid-column:1/-1;background:#fdecea;color:#8a1c12;border-radius:12px;padding:10px 14px;font-size:.9rem}
 input,select,textarea{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg-soft);width:100%}
 input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);border-color:transparent}
 form small{color:var(--muted)}
@@ -620,17 +624,29 @@ footer .logo img{height:63px}
         <a class="ci" href="mailto:info@reoheating.cz"><span class="ic">✉️</span><div><small>Napište e-mail</small><b>info@reoheating.cz</b></div></a>
         <div class="ci"><span class="ic">📍</span><div><small>Sídlíme v Třinci</small><b>Schůzku si domluvte předem</b><br><small>Jsme často v terénu, ať s vámi počítáme.</small></div></div>
       </div>
-      <form id="poptavka" method="post" action="odeslat.php"><input type="text" name="web" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-        <label>Jméno a příjmení<input name="jmeno" required></label>
-        <label>Telefon<input type="tel" name="telefon" required></label>
-        <label class="full">E-mail<input type="email" name="email"></label>
-        <label class="full">Adresa realizace<input name="adresa"></label>
-        <label class="full">Mám zájem o
+      <form id="poptavka" method="post" action="odeslat.php" novalidate>
+        <input type="text" name="web" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <input type="hidden" name="t" value="">
+        <label>Jméno a příjmení *<input name="jmeno" required minlength="2" maxlength="80" autocomplete="name"></label>
+        <label>Telefon *<input type="tel" name="telefon" required placeholder="+420 777 123 456" autocomplete="tel" pattern="[+0-9 ()-]{9,20}"></label>
+        <label>E-mail<input type="email" name="email" autocomplete="email"></label>
+        <label>PSČ místa realizace *<input name="psc" required inputmode="numeric" placeholder="739 61" pattern="[0-9 ]{5,6}" maxlength="6"></label>
+        <label>Typ objektu *
+          <select name="objekt" required><option value="">– vyberte –</option><option>Rodinný dům</option><option>Bytový dům / SVJ</option><option>Firma / komerční objekt</option><option>Jiné</option></select>
+        </label>
+        <label>Současné vytápění *
+          <select name="vytapeni" required><option value="">– vyberte –</option><option>Plyn</option><option>Elektřina</option><option>Tuhá paliva (uhlí, dřevo)</option><option>Dálkové teplo (CZT)</option><option>Tepelné čerpadlo</option><option>Novostavba – zatím nic</option><option>Jiné</option></select>
+        </label>
+        <label>Vytápěná plocha (m²)<input name="plocha" inputmode="numeric" placeholder="např. 150" maxlength="6"></label>
+        <label>Mám zájem o
           <select name="zajem"><option>Tepelné čerpadlo RH030–RH060</option><option>REO R290 Smart (topí ze sluníčka)</option><option>Bytový dům / SVJ</option><option>Komerční objekt</option><option>RHX30 Pro / RH X50</option><option>Nerezová nádrž / bojler TUV</option><option>Fotovoltaika</option><option>Fotovoltaika + tepelné čerpadlo</option></select>
         </label>
-        <label class="full">Zpráva<textarea name="zprava" rows="4"></textarea></label>
+        <label class="full">Adresa realizace<input name="adresa" maxlength="160" autocomplete="street-address"></label>
+        <label class="full">Zpráva<textarea name="zprava" rows="4" maxlength="2000"></textarea></label>
+        <div class="full" id="ts-box"></div>
+        <label class="full souhlas"><input type="checkbox" name="souhlas" value="1" required> Souhlasím se zpracováním osobních údajů pro vyřízení poptávky. *</label>
         <div class="full"><button class="btn btn-primary" type="submit">Odeslat poptávku</button></div>
-        <small class="full">Osobní údaje použijeme jen pro vyřízení poptávky.</small>
+        <small class="full">* povinné údaje. Ozýváme se zákazníkům z ČR a Slovenska.</small>
       </form>
     </div>
   </div>
@@ -656,14 +672,23 @@ function showTab(id){
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>showTab(t.dataset.tab)));
 document.querySelectorAll('.menu a[data-tab]').forEach(a=>a.addEventListener('click',()=>showTab(a.dataset.tab)));
 document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',()=>showTab(a.dataset.go)));
-document.querySelectorAll('[data-pick]').forEach(a=>a.addEventListener('click',()=>{const s=document.querySelector('form select');s.value=a.dataset.pick;}));
+document.querySelectorAll('[data-pick]').forEach(a=>a.addEventListener('click',()=>{const s=document.querySelector('select[name=zajem]');s.value=a.dataset.pick;}));
 document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+</script>
+<script>
+/* Antispam: časová past + Cloudflare Turnstile (klíč doplnit do E4H_TS, prázdný = vypnuto) */
+var E4H_TS='';
+(function(){var f=document.getElementById('poptavka');if(!f)return;f.t.value=String(Math.floor(Date.now()/1000));
+if(E4H_TS){var d=document.createElement('div');d.className='cf-turnstile';d.setAttribute('data-sitekey',E4H_TS);d.setAttribute('data-language','cs');document.getElementById('ts-box').appendChild(d);
+var s=document.createElement('script');s.src='https://challenges.cloudflare.com/turnstile/v0/api.js';s.async=true;s.defer=true;document.head.appendChild(s);}})();
 </script>
 <!--FORM-JS-->
 <script>
-(function(){var f=document.getElementById('poptavka');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button');b.disabled=true;b.textContent='Odesílám…';
-fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(r){return r.json()}).then(function(d){if(d.ok){b.textContent='Děkujeme, ozveme se ✓';f.reset();}else{b.disabled=false;b.textContent='Odeslat poptávku';alert(d.error||'Odeslání se nepodařilo, zavolejte nám prosím.');}})
-.catch(function(){b.disabled=false;b.textContent='Odeslat poptávku';alert('Odeslání se nepodařilo, zavolejte nám prosím +420 774 872 467.');});});})();
+(function(){var f=document.getElementById('poptavka');if(!f)return;
+function msg(m){var e=f.querySelector('.f-err');if(!m){if(e)e.remove();return;}if(!e){e=document.createElement('div');e.className='f-err';f.insertBefore(e,f.querySelector('#ts-box'));}e.textContent=m;}
+f.addEventListener('submit',function(e){e.preventDefault();msg('');if(!f.checkValidity()){f.reportValidity();return;}var b=f.querySelector('button');b.disabled=true;b.textContent='Odesílám…';
+fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(r){return r.json()}).then(function(d){if(d.ok){b.textContent='Děkujeme, ozveme se ✓';f.reset();}else{b.disabled=false;b.textContent='Odeslat poptávku';msg(d.error||'Odeslání se nepodařilo, zavolejte nám prosím +420 774 872 467.');if(window.turnstile)turnstile.reset();}})
+.catch(function(){b.disabled=false;b.textContent='Odeslat poptávku';msg('Odeslání se nepodařilo, zavolejte nám prosím +420 774 872 467.');});});})();
 </script>
 <!--/FORM-JS-->
 </body>
