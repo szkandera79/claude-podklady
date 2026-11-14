@@ -52,6 +52,8 @@ při TUV P_O stojí; výstupy 230 V max. 0,2 A; čidla T9 AI6B, T8 AI3, T7 AI2, 
 AKU 60–400 l; průtok 1,46–5,2 m³/h, ztráta 30–60 kPa, výtlak 9–15 m; křivka vypnutá a HEAT_TEMP_SET 45 °C z výroby.
 
 ## Otevřené (dotaz výrobci, kap. 15 standardu)
+Dotaz EN připraven v `dotaz-vyrobce-EN.md` (14. 11. 2026, zatím neodeslán).
+
 Bez AKU a min. objem; řízení a křivka vestavěného čerpadla; SV1 při odmrazování a polarita; teplota vody v 1ZONE.TA;
 glykol (rozpor 4.1 × 4.10); min. průtok; kabel ovladače; napětí L1/L2, rozsah ROOM_TEMP_dT; signál TMV1, aktivace T8/T7;
 AKU pro RHX, spirála RH16. Výsledky z uvedení do provozu (SV1 při ručním odmrazování, křivka v TA) zapisovat sem.
