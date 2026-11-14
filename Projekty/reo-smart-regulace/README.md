@@ -35,8 +35,10 @@ Soukromý – partnerům sdílet přes menu Share.
 python3 reo-smart-regulace/src/gen_sm.py
 zsh reo-smart-regulace/src/render.sh
 python3 reo-smart-regulace/src/build_metodika.py
+zsh reo-smart-regulace/src/pdf.sh             # REO-R290-Smart_instalacni-standard_v1.0.pdf (A4, 26 str.)
 ```
-Publikace: Artifact `index.html` + `files` = všechna schema-*.svg (stejná URL).
+Publikace: Artifact `index.html` + `files` = všechna schema-*.svg + PDF (stejná URL). Stránka má tlačítko
+„Otevřít PDF k tisku“ a tiskový styl A4 (Cmd/Ctrl + P).
 
 ## Změny v1.0 proti rev. 0
 - Zpětný ventil na výstupu TČ (prvek 26) – návod 2.8.2 bod 6; v rev. 0 chyběl.

@@ -63,3 +63,28 @@ Best regards,
 8. Napětí na svorkách termostatu.
 9. Signál směšovacího ventilu, aktivace čidel AKU.
 10. AKU pro PW20/PW30 (= RHX20/30 Pro), spirála TUV pro PW16 (= RH16).
+
+---
+
+## Český překlad dotazu (pro kontrolu obsahu)
+
+**Předmět:** Monoblok R290 řady H8 (PW06–PW16, PW20, PW30) – dotazy k hydraulice a regulaci pro náš instalační standard
+
+Dobrý den, Sophie,
+
+připravujeme pro naše montážní firmy instalační standard, který pokrývá hydraulická zapojení a regulaci vnitřní teploty u vašich tepelných čerpadel R290 v provedení monoblok (PW06–PW16 jednofázová i třífázová, PW20, PW30). Při práci s návodem k obsluze a instalaci a s technickou instalační příručkou (řada H8) jsme narazili na několik bodů, které v podkladech nejsou popsány nebo se v jednotlivých dokumentech liší. Mohli byste nám prosím potvrdit následující?
+
+1. **Akumulační nádrž a přímé zapojení.** Technická instalační příručka v kapitole 4.4 uvádí, že akumulační nádrž musí být instalována. Je někdy přípustné přímé zapojení bez akumulační nádrže, např. u podlahového vytápění s trvale otevřenými smyčkami? Pokud ano, jaký je minimální objem vody v otopném okruhu (litry na kW nebo podle modelu)? Je přípustná akumulační nádrž zapojená sériově ve vratce jako alternativa k paralelní nádrži z vašich aplikačních schémat?
+2. **Vestavěné oběhové čerpadlo.** Jak je vestavěné čerpadlo řízeno: běží trvale, jen společně s kompresorem, nebo s doběhem po zastavení kompresoru? Běží v pohotovostním stavu, když není požadavek na vytápění (např. rozepnutý pokojový termostat)? Lze nastavit otáčky nebo provozní režim čerpadla? Pošlete nám prosím křivku čerpadla (výtlak v závislosti na průtoku) pro každý model, abychom mohli spočítat dostupný externí výtlak při jmenovitém průtoku.
+3. **Trojcestný ventil SV1 – odmrazování a polarita.** Technická instalační příručka v kapitole 6.2.6 uvádí, že SV1 je ve stavu ON v režimu ohřevu TUV, odmrazování a ochrany proti zamrznutí. Potvrďte prosím, že při odmrazování jednotka odebírá teplo ze zásobníku TUV přes SV1. Jak probíhá odmrazování u instalací bez zásobníku TUV a bez SV1? Jaký minimální objem vody nebo průtok je v takovém případě potřeba? Návod k obsluze (kapitola 2.7, Aplikace 1) uvádí, že v režimu TUV „S3V1 zůstává VYP“ a v režimu vytápění „S3V1 zůstává ZAP“, což je opak kapitoly 6.2.6. Která svorka (ON, nebo OFF) se má připojit k vývodu ventilu vedoucímu do spirály zásobníku TUV?
+4. **Regulace podle prostorové teploty (PANEL_CTRL 1ZONE.TA).** Jakou teplotu výstupní vody jednotka vyrábí při PANEL_CTRL = 1ZONE.TA: podle zvolené ekvitermní křivky (např. Curve #9), nebo podle pevné žádané hodnoty HEAT_TEMP_SET? Má PANEL_CTRL vůbec vliv, pokud je použit pokojový termostat (RT_CTRL = ZONE.A.SWITCH nebo 2 ZONE.SWITCH)? Jakou hodnotu PANEL_CTRL v takovém případě doporučujete? Jaký je rozsah nastavení parametrů ROOM_TEMP_dT, HEAT_LOAD_dT a HEAT_UNLOAD_dT?
+5. **Nemrznoucí směs (glykol).** Technická instalační příručka v kapitole 4.1 uvádí, že sekundární okruh se smí plnit pouze vodou podle VDI 2035, nikoli médiem s nemrznoucí přísadou. Kapitola 4.10 a návod k obsluze naopak nemrznoucí směs kvůli výpadkům proudu doporučují. Je glykol v okruhu jednotky přípustný? Pokud ano, jaký typ a jaká maximální koncentrace, a jak je třeba jednotku nastavit (např. výkon nebo ochrany)? Akceptujete jako alternativu protizámrazový (vypouštěcí) ventil na venkovním potrubí?
+6. **Minimální průtok vody.** Jaký je minimální průtok vody (m³/h) pro jednotlivé modely a při jakém průtoku vypne průtokový spínač?
+7. **Kabelový ovladač.** Jak je kabelový ovladač dodáván (namontovaný na jednotce, nebo volně)? Jak dlouhý je dodávaný kabel a jaká je maximální délka a doporučený typ kabelu pro prodloužení? Ovladač potřebujeme instalovat uvnitř, abychom mohli využít jeho čidlo prostorové teploty.
+8. **Svorky pokojového termostatu.** Je na svorkách L1/L2 (H1, C1, H2) nějaké napětí, nebo jde o bezpotenciálové vstupy? Jaké zatížitelnosti musí být kontakt termostatu?
+9. **Směšovací ventil a čidla akumulační nádrže.** Jaký řídicí signál se používá pro směšovací ventil zóny B (svorky AIV1/AOV1/GND) – 0–10 V, nebo jiný – a jaký signál zpětné vazby jednotka očekává? Doporučte nám prosím kompatibilní pohon ventilu. Kterým parametrem se aktivují čidla horní a dolní části akumulační nádrže (T8/AI3, T7/AI2) a jak je jednotka využívá při regulaci?
+10. **Údaje pro dimenzování.** Jaký objem akumulační nádrže doporučujete pro PW20 a PW30? Jaká plocha spirály zásobníku TUV je potřeba pro PW16 (tabulka v kapitole 4.2.3 technické instalační příručky ho neuvádí)?
+
+Velmi děkujeme za pomoc. Jasné odpovědi na tyto body nám umožní předat standard našim montážním firmám.
+
+S pozdravem

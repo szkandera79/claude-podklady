@@ -114,6 +114,43 @@ details{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin
 details summary{cursor:pointer;font-weight:600}
 .matrix td,.matrix th{text-align:center}
 .matrix td:first-child,.matrix th:first-child{text-align:left}
+.pdfbar{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-top:12px}
+.pdfbtn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;font-weight:600;font-size:14px;padding:8px 14px;border-radius:8px;text-decoration:none}
+.pdfbtn:hover{filter:brightness(1.08)}
+.pdfbar small{color:var(--muted);font-size:12.5px}
+.printonly{display:none}
+/* Tisk / PDF: A4, světlé barvy, bez navigace, schémata celá na stránce */
+@page{size:A4;margin:14mm 12mm 16mm}
+@media print{
+  :root,:root:not([data-theme="light"]),:root[data-theme="dark"]{
+    --bg:#FFFFFF;--surface:#F4F8F5;--surface2:#EEF3F0;--fg:#1F2A24;--muted:#5C6B63;--line:#D7E2DB;
+    --brand:#34A263;--brand-ink:#1E6A3D;--brand-tint:#E9F6EE;--warn:#B7791F;--warn-tint:#FFF4DA;--code-bg:#EEF3F0;color-scheme:light}
+  html{scroll-behavior:auto}
+  body{font-size:10pt;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .wrap{max-width:none;padding:0}
+  .layout{display:block}
+  nav.toc,.pdfbar,.btnrow{display:none!important}
+  .printonly{display:block}
+  header.top{margin-bottom:14px}
+  section{margin-bottom:18px;break-before:page}
+  section#platnost{break-before:auto}
+  h2{font-size:17pt;break-after:avoid}
+  h3{break-after:avoid}
+  p,li{max-width:none}
+  .tbl{overflow:visible;border-color:#C9D6CE}
+  table{font-size:8.6pt}
+  th,td{padding:5px 7px}
+  tr,figure,.sm .grid,.card,.warn,.note,.tip,.chart{break-inside:avoid}
+  .sm{break-before:page;border:none;padding:0;margin:0 0 10px}
+  #sm-p1{break-before:auto}
+  figure .fig,.chart{overflow:visible;border:none;padding:0}
+  figure img,.chart svg{min-width:0!important;width:100%}
+  details{border:none;padding:0}
+  details>summary{list-style:none;font-family:var(--f-head);font-size:13pt;margin:8px 0}
+  .check input{width:12px;height:12px}
+  a{color:inherit;text-decoration:none}
+  footer{margin-top:10px}
+}
 </style>
 
 <div class="wrap">
@@ -130,6 +167,10 @@ details summary{cursor:pointer;font-weight:600}
     <h1>Instalační standard REO R290 Smart</h1>
     <p class="sub">Hydraulická zapojení, regulace komfortní teploty, elektrické zapojení a uvedení do provozu · metodika pro projektanty a montážní party</p>
     <p class="meta">RH06–RH16 (1F/3F), RHX20 Pro, RHX30 Pro · <strong>verze 1.0 · 14. 11. 2026</strong> · koncepce schválena 14. 11. 2026 · nahrazuje návod rev. 0 (viz Historie)</p>
+    <div class="pdfbar">
+      <a class="pdfbtn" href="REO-R290-Smart_instalacni-standard_v1.0.pdf" target="_blank" rel="noopener">⤓ Otevřít PDF k tisku (A4)</a>
+      <small>PDF obsahuje celý standard včetně schémat a referenčních podkladů rev. 0. Z prohlížeče lze tisknout i přímo (Cmd/Ctrl + P).</small>
+    </div>
   </div>
 </header>
 
@@ -625,6 +666,7 @@ details summary{cursor:pointer;font-weight:600}
 </main>
 </div>
 </div>
+<script>window.addEventListener("beforeprint",()=>document.querySelectorAll("details").forEach(d=>d.open=true));</script>
 <script>
 (function(){
   // graf ekvitermních křivek #9

@@ -1,0 +1,4112 @@
+[Text vytažený z REO-R290-Smart_instalacni-standard_v1.0.pdf]
+
+--- strana 1 ---
+Instalační standard REO R290 Smart
+Hydraulická zapojen
+í, reg
+ulace k
+omfort
+t
+n
+epl
+t
+o
+y, elektrické zapojen
+í a
+uveden
+í do provozu · me
+t
+odika pro projektan
+t
+y a mon
+táž
+n
+í part
+y
+RH06–RH16 (1F/3F), RHX2
+0 Pro, RHX30 Pro · verze 1.0 · 14. 11. 2
+26 · k
+oncepce
+schválena 14. 11. 2
+26 · nahrazu
+je návod rev. 0 (viz Hist
+orie)
+í
+0
+0
+01 Platnost, značení a katalog zapojení
+S
+tandard vych
+ází z návod
+u k
+instalačn
+í příručky výrobce. Po
+kaž
+dého
+ú
+daje je
+uveden zdroj:
+instalaci a obsluze RE
+O
+R290 Smart (CZ, 99 stran) a
+žadavky výrobce a bezpečnost
+jso
+u
+nepřekroči
+t
+el
+né. U
+V po
+př
+i
+uveden
+tvrzeno výrobcem (kapi
+t
+o
+í do provozu
+la do
+kumen
+tu
+) · O odborný záv
+r RE
+ě
+O
+HEATING · ? k
+ov
+ěřen
+í
+u výrobce nebo
+Označení Stav Otopná soustava Akumulace Čerpadla Regulace standard / alternativa
+SM-P1
+v1.0
+standard podlaha, smyčky
+trvale o
+t
+evřené
+sériová ve
+vrat
+ce
+jen
+vestav
+ě
+né
+čidl
+o ovladače + k
+ř
+ivka / t
+ermostat +
+k
+ř
+ivka
+SM-P2
+v1.0
+standard podlaha se zónovými
+ven
+t
+i
+ly, ví
+ce o
+kru
+hů,
+v
+tší
+odpor
+ě
+paralel
+n
+í vestav
+ě
+né
++ P_
+O
+t
+ermostat + k
+ř
+ivka / t
+ermostat +
+k
+onstan
+t
+t
+n
+epl
+o
+ta
+í
+SM-R1
+v1.0
+standard radiát
+ory s
+t
+ermostat
+ickými
+h
+lavicemi
+paralel
+n
+í vestav
+ě
+né
++ P_
+O
+t
+ermostat + k
+ř
+ivka / t
+ermostat +
+k
+onstan
+t
+t
+n
+epl
+o
+ta
+í
+SM-R2
+v1.0
+alt
+ernat
+iva radiát
+ory, jeden o
+kru
+h,
+malý odpor, v
+ě
+tšina
+t
+ě
+les o
+t
+evřená
+sériová ve
+vrat
+ce
+jen
+vestav
+ě
+né
+čidl
+o ovladače + k
+ř
+ivka / t
+ermostat +
+k
+ř
+ivka
+SM-K1
+v1.0
+doplňk
+ová radiát
+ory + podlaha paralel
+n
+í vestav
+ě
+né
++ P_
++
+O
+P_M1
+2
+t
+ermostat
+y (2 Z
+O
+NE.SWITCH)
+SM-X1
+v0.9
+podmí
+n
+ě
+k
+né rizi
+o zamrzn
+ut
+znečišt
+ě
+ná stará
+so
+ustava
+í,
+sériová v
+seku
+ndáru
+vestav
+ě
+né
++ P_
+O
+t
+ermostat + k
+ř
+ivka
+SM-P0 (S1
+rev. 0)
+nepřípust
+né podlaha bez AKUžádná
+jen
+vestav
+jen s písemným so
+u
+h
+lasem výrobce
+ě
+né
+Zapojen
+í bez akumulačn
+nádrž
+e se nepo
+už
+ívá. Výrobce akumulačn
+nádrž po
+žad
+u
+je: „users must
+install
+a b
+u
+ffer wat
+er tan
+k“ kvůl
+i častému vypí
+nán
+í př
+i n
+ízkém zat
+ž
+í
+en
+í
+V příručka 4.4 . Všechny jeho apl
+i
+kace v
+návod
+u
+ji obsah
+u
+j
+V návod 2.7 . Přímé zapojen
+í (SM-P0) zůstává
+jen jak
+o referenčn
+í podklad do doby
+písemného vyj
+ádřen
+í výrobce.
+í
+í
+í
+--- strana 2 ---
+02 Výběr zapojení
+Otázka Odpověď → zapojení
+Jen podlaha, smyčky
+trvale o
+t
+evřené, malý odpor so
+ustavy?
+SM-P1 (sériová
+účinnost
+)
+AKU, nejvyšší
+Podlaha se zónovými h
+lavicemi, ví
+čerpadl
+o nepo
+kryje?
+ce rozd
+ě
+l
+ovačů nebo
+tlak
+ová ztráta, kt
+ero
+u vestav
+ě
+né
+SM-P2 (paralel
+n
+í AKU + P_
+O
+)
+Radiát
+ory s t
+ermostat
+ickými h
+lavicemi (prom
+ě
+nný průt
+o
+k)
+?
+SM-R1 (paralel
+n
+í AKU + P_
+O
+)
+Radiát
+ory, jeden
+krátký o
+kru
+h, h
+lavice převáž
+n
+o
+ě
+t
+evřené?
+SM-R2 (sériová
+AKU)
+Radiát
+ory i podlaha v jednom dom
+ě
+?
+SM-K1
+Hrozí dl
+o
+u
+hý výpadek pro
+u
+d
+u v mrazu, nebo je stará so
+ustava znečišt
+ě
+ná?
+SM-X1 (podmí
+n
+ě
+né ov
+ěřen
+ím)
+Proč se l
+iší akumulace podle so
+ustavy O : podlaha s o
+t
+evřenými smyčkami má stálý průt
+o
+k, pro
+t
+o sériová
+AKU
+př
+idá objem bez mí
+ch
+án
+t
+epl
+o
+t. Radiát
+ory s h
+lavicemi maj
+í prom
+ě
+nný průt
+o
+k, pro
+t
+o paralel
+n
+í AKU odd
+l
+ě
+í průt
+k
+o
+TČ od průt
+o
+ku so
+ustavy a nevyžad
+u
+je přepo
+ušt
+n
+í výstupu
+ě
+do vratky. Paralel
+n
+í AKU s čerpadlem P_
+odpovídá
+O
+referenčn
+ím apl
+i
+kac
+ím výrobce V návod 2.7, obr. 3–9 .
+í
+--- strana 3 ---
+03 Ověřená fakta výro
+b
+ce – čerpadla, průtok, odmrazování
+Téma Zjištění Zdroj
+Vestav
+ě
+né čerpadl
+o Jedno
+tka má vestav
+ě
+né h
+lavn
+ob
+ě
+hové čerpadl
+o; max.
+výtlak 9 m (RH06–RH10 1F, RH08–RH10
+3F), 12 m
+(RH12–RH16), 13 m (RHX2
+0 Pro), 15 m (RHX3
+0 Pro).
+í
+V návod 2.6.3, 2.1
+PUMPo / P_
+O
+Ext
+ern
+í čerpadl
+o zóny
+A („
+O
+utside circ
+ulat
+ion pump / Zone
+A pump, field supply“), vo
+l
+t
+i
+el
+né, dodávka stavby. Ve
+všech apl
+i
+kac
+í
+ch výrobce je za paralel
+n
+í AKU.
+V návod 2.7, 2.10; příručka 6.2.9
+P_
+O a t
+ermostat
+Sepne kt
+erýk
+o
+všechny rozepn
+l
+k
+i
+on
+takt C1–L1 → systém i P_
+O
+uté → systém i P_
+st
+oj
+í.
+O
+ž
+b
+í;
+ě
+V návod 2.7, apl. 2
+P_
+O a TUV Př
+i oh
+řevu
+TUV P_
+st
+oj
+O
+í. Po
+lari
+ta SV1 se v podkladech
+liší: návod
+uvádí TUV = VYP, t
+open
+í = ZAP; příručka uvádí
+TUV =
+O
+N. Kt
+erý vývod ven
+t
+i
+lu vede do spirály, ov
+t
+i
+ěř
+t
+est
+em k
+omponen
+t.
+V návod 2.7 apl. 1; příručka 6.2.6
+?
+SV1 př
+i
+odmrazován
+„In ho
+t wat
+er mode, defrost mode, an
+t
+ifreeze mode
+t
+SV1 t
+hree-way valve is turned on.“
+O
+dmrazován
+odebírá t
+epl
+o ze zásobn
+ku
+TUV. CZ návod
+t
+t
+ú
+en
+o
+he
+t
+edy
+daj
+neobsah
+u
+je.
+í
+V příručka 6.2.6
+? ověřit při uvedení
+í
+Zp
+ě
+t
+ný ven
+t
+i
+l Na výstup vody osadi
+t zp
+t
+ě
+ný ven
+t
+i
+l, aby po zastaven
+čerpadla nedoch
+ázel
+o
+ke zp
+t
+ě
+nému sán
+í.
+V návod 2.8.2 bod 6
+Fi
+ltr Na vstupu vody do TČ je n
+ut
+ný fi
+ltr. V návod 2.5
+Průt
+o
+k Jmenovi
+tý průt
+o
+k 1,46–5,2 m³/h, tlak
+ová ztráta jedno
+3
+0–60 kPa. A
+larm, nen
+í-l
+i 3
+0 s po spušt
+n
+ě
+í čerpadla
+dostat
+ečný průt
+o
+k.
+tky
+V návod 2.1,
+kap. 5 (chybové kódy)
+Čerpadl
+o za AKU Průt
+o
+k ≥
+jmenovi
+tý průt
+o
+(výška + ztráta nejhorší
+k TČ × 1,2–1,3; výtlak H = K ·
+ho o
+kru
+u
+h
+), K = 1,1–1,2.
+V příručka 4.3
+AKU Povinná; objem 60–150 l (RH06), 60–2
+3
+00 l (RH10–14), 2
+00–4
+00 l (RH16).
+00 l (RH08), 100–
+V příručka 4.4
+Nezdo
+kumen
+t
+ováno Řízen
+jeho
+k
+í vestav
+ě
+ného čerpadla (dob
+ě
+h, poho
+ř
+ivka, minimál
+n
+í průt
+o
+k, minimál
+n
+í
+t
+ovost, o
+objem vody.
+táčky),
+? dotaz výrob
+ci
+í
+í
+--- strana 4 ---
+04 Regulace komfortní teploty
+Reg
+ulace má dv
+ě
+nezávislé část
+i: co zapí
+ná a vypí
+ná t
+open
+í a jak
+o
+u t
+epl
+o
+tu vody TČ vyrábí.
+Spínání topení Nastavení + křivka #9 + konstantní teplota
+R-A prost
+orové čidl
+o
+ovladače
+PA
+N
+EL_CTRL = 1ZON
+E
+.TA ,
+RT_CTRL = OFF
+standard SM-P1, SM-R2
+? křivka v režimu TA
+přípust
+né
+R-B ext
+ern
+t
+ermostat
+í po
+k
+ojový
+RT_CTRL = ZON
+.
+E
+C1)
+A
+.SWITCH (L1–
+standard SM-P2, SM-R1, SM-X1 přípust
+né
+R-C t
+epl
+o
+ta vody (bez
+prost
+orové vazby)
+PA
+N
+EL_CTRL = 1ZON
+E
+.TW ,
+RT_CTRL = OFF
+srovnávac
+í varian
+ta nedoporučeno
+Pravidl
+o výrobce: rež
+imy PA
+t
+ermostatů V návod 4.2.5 . S
+vypí
+ná; TČ př
+t
+i
+om reg
+ulu
+je po
+nepo
+už
+ívá.
+N
+EL_CTRL 1Z
+NE.TW / 1Z
+NE.TA
+jso
+O
+O
+u určeny pro instalace bez po
+k
+ojových
+t
+ermostat
+em se nastavu
+je RT_CTRL V návod 4.2.6 . Termostat
+jen zapí
+ná a
+uze
+t
+epl
+o
+tu vody V návod 3.3.1 . Kombinace
+t
+ermostatu s 1ZON
+E
+.TA se
+R-A · Prostorové čidlo kab
+elového ovladače
+TČ t
+opí př
+i TS − TR ≥ ROOM_TEMP_dT , přestane př
+i TR ≥ TS V návod 4.2.3 . Ž
+ádaná t
+epl
+o
+ta
+HEAT_ROOM_TEMP_SET 16–30 °C, výchozí
+2
+0 °C V 3.3.20 .
+O
+vladač musí být uvni
+t
+ř
+V 3.3.1 : referenčn
+í míst
+nost, 1,5 m nad podlaho
+Návod (2.6.3) zmiňu
+je, ž
+e ovladač má být „dobře či
+t
+el
+ný“ u
+u, mimo slu
+jedno
+tky – před mon
+táž
+nce a zdroje
+t
+epla O .
+ov
+i
+ěř
+t, kde je ovladač
+dodán a jak dl
+u
+o
+hý je jeho
+kabel ? .
+Zda se v rež
+imu
+TA po
+už
+ije k
+ř
+ivka, návod ne
+uvádí
+? .
+v
+i
+O
+ěř
+t př
+i
+uveden
+í do provozu (kap. 12, kro
+k 7). Po
+ku
+t
+ne → přej
+í
+na R-B.
+í
+d
+R-B · Externí pokojový termostat
+Bezpo
+t
+enciál
+ový k
+on
+takt
+na L1–C1 (zóna A), L1–H1 (zóna B1), L2–H2 (zóna B
+„kt
+erýk
+l
+o
+i sepne → t
+opí“ V 2.7, 4.2.6 .
+V zapojen
+í s P_
+t
+O
+ermostat zastaví
+i seku
+ndárn
+í čerpadl
+o – so
+Termostat
+on/off s hyst
+erezí 0,3–0,5 K, ne PWM/TPI s krátkými cykly př
+ij
+ímačem s bezpo
+t
+enciál
+ovým k
+on
+takt
+em.
+2); ví
+t
+c
+ermostatů paralel
+n
+ustava se nepře
+tápí z AKU V 2.7 .
+O . Bezdrát
+ový t
+ermostat
+jen s
+=
+ě
+Konstantní teplota vody
+Kř
+ivka vypn
+utá (A_ZON
+E_HEAT_CURVE = OFF , výchozí stav) a HEAT_TEMP_SET (výchozí 45 °C) V 3.3.20 .
+Jednod
+u
+ché a spo
+leh
+l
+ivé, ale cel
+o
+u sezón
+u vyrábí vod
+u pro nejch
+ladn
+ě
+jší den – ni
+žší C
+OP O . Po
+už
+t
+jen
+kde k
+ř
+ivku
+nelze nastavi
+t, nebo jak
+o přechodné nastaven
+í. Výchozí
+hodno
+ta: podlaha 30–35 °C, radiát
+ory
+podle návrh
+u so
+ustavy.
+í
+tam,
+Ekvitermní křivka (srovnávací i doporučená)
+Tepl
+o
+je k
+ta vody podle ven
+k
+ovn
+ř
+ivka #9 standardem u R-A
+í
+t
+epl
+t
+o
+y.
+i R-B.
+O
+rien
+tačn
+ě
+kaž
+dý 1 K ni
+žší
+t
+epl
+o
+t
+y vody zlepší
+účinnost
+o
+2–3 % O . Pro
+t
+o
+--- strana 5 ---
+Další funkce
+Týdenn
+le
+t
+n
+í vypn
+í program s t
+epl
+t
+o
+o
+u pro
+kaž
+dý úsek (útlum), t
+ichý rež
+im, dovo
+lená ( HOLID
+AY_AWAY_Ths 2
+ut
+í (AUTO_HT_TA_M
+AX ), Smart Grid k
+onfig. 7 V 3.3.9–3.3.10, 4.2.4, 4.2.8, 4.2.13 .
+Ú
+tlum: podlaha bez útlumu
+nebo max. 1 K, radiát
+ory max. 2 K O .
+0–25 °C),
+--- strana 6 ---
+Env.Temp1 53
+Env.Temp2
+05 Ekvitermní křivka #9
+Přednastavené k
+ivky jso
+u schodovi
+ř
+té a pl
+oché (1.L–8.L cca 24–38 °C, 1.H–8.H cca 36–56 °C)
+V 3.3.21, obr. 3-17.1/2 . Po
+už
+ívá se
+už
+ivat
+elská k
+ř
+ivka #9 zadaná dv
+ě
+ma body Env.Temp1/Out.Temp1 a
+Env.Temp2/Out.Temp2 V 3.3.22 . Hodno
+t
+y n
+ž
+e jso
+u výchozí
+nastaven
+í RE
+HEATING O .
+O
+í
+í vody (°C)
+ta výstupn
+o
+epl
+t
+60
+55
+50
+45
+40
+35
+30
+45
+39
+34
+25
+2
+0
+25
+26
+28
+30
+-2
+0 -15 -10 -5 0 5 10 15 2
+ven
+k
+ovn
+t
+epl
+o
+ta (°C)
+onstrukce (40/35) radiát
+ory n
+ízk
+t
+o
+epl
+t
+o
+n
+í (45/40)
+í
+podlaha, novostavba (35/30) podlaha, rek
+radiát
+ory 55/45
+0
+Soustava Env.Temp1 Out.Temp1
+Env.Temp2 Out.Temp2
+Podlaha, novostavba (35/3
+0) −12 °C33–35 °C +15 °C 24–25 °C
+Podlaha, rek
+onstrukce (4
+0/35) −12 °C38–4
+0 °C +15 °C 26 °C
+Radiát
+ory n
+ízk
+o
+t
+epl
+o
+t
+n
+í (45/4
+0) −12 °C45 °C +15 °C 28 °C
+Radiát
+ory 55/45 −12 °C 52–55 °C +15 °C3
+0 °C
+SM-X1 (vým
+n
+í
+k) hodno
+ě
+t
+y so
+ustavy + 2–3 K na ztrátu vým
+n
+ě
+ku O
+í
+Env.Temp1 = návrhová ven
+k
+ovn
+t
+epl
+o
+ta l
+o
+kal
+t
+i
+y (v ČR t
+ypicky −12 až −18 °C). Lad
+ě
+n
+í viz kap. 13.
+í
+--- strana 7 ---
+06 Standardní schémata SM
+Zjednod
+ušená orien
+výpoče
+t pro
+k
+on
+krét
+n
+tačn
+í schémata. Dimenze, objem expanzn
+nádoby a nastaven
+í pojist
+ných prvků urču
+je
+í dům. Čísl
+ován
+í prvků je spo
+lečné (kap. 7). Prvky 1–12 a 26 jso
+u ve všech schémat
+ech.
+í
+SM-P1 v1.0 Podlahové vytápění – sériová akumulace standard
+Podlahové vytápění – sériová akumulace
+AKU ve vratce, trvale otevřené smyčky · prostorové čidlo ovladače + ekvitermní křivka · TUV
+S M - P 1 · R E O R 2 9 0 S m a rt
+v1.0 · 11/2026
+V E N K U T E C H N I C KÁ M Í ST N O ST O B Y T N É P R O STO RY
+chránička se signálními kabely (ovladač, termostat, výstupy)
+4
+1
+REO R290 Smart
+2
+26
+M
+21 °C
+14
+alternativa · C1–L1
+21,5 °C
+OVLADAČ
+13
+standard: čidlo ovladače
+venkovní čidlo T4 je v jednotce
+výstup – topná voda
+vratka – ochlazená voda
+signální / ovládací kabel
+teplá užitková voda
+studená voda
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním a pojistný
+ventil patří VENKU hned za jednotku.
+Ochranná zóna dle návodu: 0,5 m kolem,
+2 m nad výfukem, 3 m od oken.
+3 5 6
+17
+AKU
+dle modelu
+16
+8
+9
+TUV
+zásobník
+se spirálou
+!
+7
+T T9
+15
+rozdělovač podlahy
+TV do domu
+podlaha – topné smyčky
+smyčky trvale otevřené
+(hlavice jen výjimečně, např. ložnice)
+12
+10
+obvodová zeď
+KDY
+Samostat
+né podlahové vy
+táp
+trvale o
+t
+evřenými a mal
+o
+u tlak
+po
+kryje vestav
+ě
+né čerpadl
+o.
+ě
+n
+ovo
+í se smyčkami
+u ztrát
+o
+u, kt
+ero
+NEZBYTNÉ KOMPONENTY
+prvky 1–12, 26
+AKU (17) ve vrat
+ce, objem dle modelu
+přepo
+ušt
+c
+ě
+í ven
+t
+i
+l (16) na k
+onci rozd
+ovladač (13) v referenčn
+í míst
+nost
+i
+ě
+l
+ovače
+u
+A
+SV z vodovodu
+11
+REGULACE
+R-A: 1ZON
+E
+.TA + k
+ř
+ivka #9 n
+ízk
+o
+t
+epl
+o
+lt
+ernat
+iva R-B: t
+ermostat (14) L1–C1,
+RT_CTRL = ZON
+.
+E
+.SWITCH .
+t
+n
+í.
+A
+B
+EZPEČNÝ PROVOZ
+hydraul
+ický výpoče
+t: ztráta so
+jmenovi
+tém průt
+o
+ku musí po
+čerpadl
+o ? křivka čerpadla
+voda do podlahy max. 40 °C (u
+°C)
+ustavy + AKU př
+i
+krýt vestav
+ě
+né
+novostavby 35
+OMEZENÍ
+zónové h
+lavice jen výjimečn
+ě
+nepo
+kryje-l
+i čerpadl
+o ztrátu → SM-P2
+--- strana 8 ---
+SM-P2 v1.0 Podlahové vytápění – paralelní akumulace standard
+Podlahové vytápění – paralelní akumulace
+AKU jako hydraulický oddělovač, čerpadlo P
+_
+O spíná pokojový termostat · zónové ventily · TUV
+S M - P 2 · R E O R 2 9 0 S m a rt
+v1.0 · 11/2026
+V E N K U T E C H N I C KÁ M Í ST N O ST O B Y T N É P R O STO RY
+chránička se signálními kabely (ovladač, termostat, výstupy)
+13
+4
+nastavení
+1
+REO R290 Smart
+OVLADAČ
+2
+26
+M
+17
+T T8
+AKU
+T T7
+RELÉ K1
+výstup P
+_
+20
+O
+19
+15
+14
+21 °C
+ref. místnost · C1–L1
+16
+venkovní čidlo T4 je v jednotce
+výstup – topná voda
+vratka – ochlazená voda
+signální / ovládací kabel
+teplá užitková voda
+studená voda
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním a pojistný
+ventil patří VENKU hned za jednotku.
+Ochranná zóna dle návodu: 0,5 m kolem,
+2 m nad výfukem, 3 m od oken.
+3 5 6
+8
+9
+TUV
+zásobník
+se spirálou
+!
+7
+T T9
+18
+TV do domu
+rozdělovač podlahy
+podlaha – topné smyčky
+zónové (termoelektrické) hlavice přípustné
+12
+obvodová zeď
+KDY
+Podlaha se zónovými h
+lavicemi, ví
+ce rozd
+ě
+dl
+o
+u
+hé smyčky nebo velká tlak
+ová ztráta.
+O
+dpovídá apl
+i
+kaci 1 výrobce.
+l
+ovačů,
+NEZBYTNÉ KOMPONENTY
+prvky 1–12, 26
+AKU (17) paralel
+n
+ě
+čerpadl
+o P_
+O
+(19) se zp
+ě
+(2
+0)
+t
+ermostat (14)
+, čidla T8/T7 (18)
+t
+no
+u klapk
+o
+u, relé K1
+10
+SV z vodovodu
+11
+REGULACE
+R-B: RT_CTRL = ZON
+.
+E
+TČ i P_
+O
+. Tepl
+o
+ta vody: k
+k
+onstan
+t
+n
+í.
+A
+.SWITCH , t
+ermostat spí
+ř
+ivka #9, alt
+ernat
+iva
+ná
+B
+EZPEČNÝ PROVOZ
+průt
+o
+k P_
+O
+≤ průt
+o
+k TČ, jinak se v AKU
+př
+imí
+ch
+ává vratka O
+P_
+vž
+O
+dy přes relé (výstup max. 0,2
+A) V 2.10
+OMEZENÍ
+o 1–2 K vyšší
+t
+epl
+o
+nevyváž
+eném průt
+o
+ta vody pro
+ku
+t
+i SM-P1 př
+i
+O
+--- strana 9 ---
+SM-R1 v1.0 Radiátory – paralelní akumulace standard
+Radiátory – paralelní akumulace
+AKU jako hydraulický oddělovač, čerpadlo P
+_
+O spíná pokojový termostat · křivka nebo konstantní teplota · TUV
+S M - R 1 · R E O R 2 9 0 S m a rt
+v1.0 · 11/2026
+V E N K U T E C H N I C KÁ M Í ST N O ST O B Y T N É P R O STO RY
+chránička se signálními kabely (ovladač, termostat, výstupy)
+13
+4
+nastavení
+1
+REO R290 Smart
+OVLADAČ
+2
+26
+M
+17
+T T8
+AKU
+T T7
+RELÉ K1
+výstup P
+_
+20
+O
+18
+19
+TV do domu
+14
+21 °C
+ref. místnost · C1–L1
+venkovní čidlo T4 je v jednotce
+výstup – topná voda
+vratka – ochlazená voda
+signální / ovládací kabel
+teplá užitková voda
+studená voda
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním a pojistný
+ventil patří VENKU hned za jednotku.
+Ochranná zóna dle návodu: 0,5 m kolem,
+2 m nad výfukem, 3 m od oken.
+3 5 6
+15
+s TRV (21) referenční místnost
+bez TRV, plně otevřené
+16
+8
+9
+TUV
+zásobník
+se spirálou
+!
+7
+T T9
+12
+10
+SV z vodovodu
+obvodová zeď
+KDY
+Radiát
+orová so
+starší rozvod, ví
+ven
+t
+i
+l.
+ustava s t
+ermostat
+ickými h
+lavicemi,
+c v
+tví. Vzni
+ě
+k: S3 rev. 0 + zp
+t
+ný
+ě
+NEZBYTNÉ KOMPONENTY
+prvky 1–12, 26
+AKU (17) paralel
+n
+ě
+, T8/T7 (18)
+P_
+O
+(19), relé K1 (2
+0)
+t
+ermostat (14) v referenčn
+přepo
+ušt
+c
+ě
+í ven
+t
+i
+l (16)
+í míst
+nost
+i bez h
+lavice
+11
+REGULACE
+R-B: RT_CTRL = ZON
+.
+E
+alt
+ernat
+iva k
+onstan
+t
+n
+í
+.SWITCH + k
+t
+epl
+o
+ta.
+A
+ř
+ivka #9;
+B
+EZPEČNÝ PROVOZ
+hydraul
+ické vyváž
+průt
+o
+k P_
+O
+≤ průt
+o
+t
+en
+í
+les
+ě
+k TČ
+OMEZENÍ
+vyšší
+náklady než
+SM-R2 (čerpadl
+o, relé, čidla)
+--- strana 10 ---
+SM-R2 v1.0 Radiátory – sériová akumulace alternativa
+Radiátory – sériová akumulace
+Jednoduchý okruh, AKU ve vratce, bez sekundárního čerpadla · čidlo ovladače + křivka · TUV
+S M - R 2 · R E O R 2 9 0 S m a rt
+v1.0 · 11/2026
+V E N K U T E C H N I C KÁ M Í ST N O ST O B Y T N É P R O STO RY
+chránička se signálními kabely (ovladač, termostat, výstupy)
+4
+1
+REO R290 Smart
+2
+26
+M
+21,0 °C
+OVLADAČ
+13
+ref. místnost bez TRV
+venkovní čidlo T4 je v jednotce
+výstup – topná voda
+vratka – ochlazená voda
+signální / ovládací kabel
+teplá užitková voda
+studená voda
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním a pojistný
+ventil patří VENKU hned za jednotku.
+Ochranná zóna dle návodu: 0,5 m kolem,
+2 m nad výfukem, 3 m od oken.
+3 5 6
+17
+AKU
+dle modelu
+15
+s TRV (21) referenční místnost
+bez TRV, plně otevřené
+16
+8
+!
+7
+9
+TUV
+zásobník
+se spirálou
+T T9
+TV do domu
+12
+obvodová zeď
+KDY
+Jeden
+krátký radiát
+orový o
+kru
+h, h
+lavice převáž
+n
+t
+o
+zp
+evřené, malá tlak
+ová ztráta. Vzni
+k: S2 rev. 0 +
+t
+ě
+ný ven
+t
+i
+l.
+NEZBYTNÉ KOMPONENTY
+prvky 1–12, 26
+AKU (17) ve vrat
+ce
+přepo
+ušt
+c
+ě
+í ven
+t
+i
+l (16)
+ovladač (13) v referenčn
+í míst
+nost
+i
+ě
+10
+SV z vodovodu
+11
+REGULACE
+R-A: 1ZON
+E
+.TA + k
+ř
+ivka #9; alt
+ernat
+iva R-B
+t
+ermostat.
+B
+EZPEČNÝ PROVOZ
+přepo
+ušt
+c
+ě
+í ven
+t
+l
+i
+nastavi
+t tak, aby př
+i
+zavřených h
+lavic
+í
+ch nevzni
+kla chyba průt
+ku
+o
+ztráta so
+ustavy v dosah
+u vestav
+ě
+ného čerpadla
+?
+OMEZENÍ
+přepo
+ušt
+n
+í výstupu
+ě
+h
+lavic zvedá t
+epl
+o
+do vratky př
+i zavírán
+tu vratky
+í
+--- strana 11 ---
+SM-K1 v1.0 Radiátory a směšovaná podlaha doplňková
+Kombinace – radiátory a směšovaná podlaha
+Doplňková varianta · 2 zóny, RT
+_
+CTRL = 2 ZONE.SWITCH · zóna B přes směšovací ventil TMV1 + P
+_
+S M - K 1 · R E O R 2 9 0 S m a rt
+v1.0 · 11/2026
+M1 · TUV
+V E N K U T E C H N I C KÁ M Í ST N O ST O B Y T N É P R O STO RY
+chránička se signálními kabely (ovladač, termostat, výstupy)
+13
+4
+nastavení
+1
+REO R290 Smart
+OVLADAČ
+2
+26
+M
+17
+T T8
+AKU
+T T7
+14
+RELÉ K1
+výstup P
+_
+20
+21 °C
+O
+18
+19
+zóna A · C1–L1
+15
+radiátory s TRV (21)
+zóna A
+T T10
+TV do domu
+3 5 6
+8
+7
+T T9
+20
+14
+21 °C
+zóna B · H1–L1
+P
+RELÉ K2
+M1 · TMV1
+_
+zóna B – podlaha
+16
+venkovní čidlo T4 je v jednotce
+výstup – topná voda
+vratka – ochlazená voda
+signální / ovládací kabel
+teplá užitková voda
+studená voda
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním a pojistný
+ventil patří VENKU hned za jednotku.
+Ochranná zóna dle návodu: 0,5 m kolem,
+2 m nad výfukem, 3 m od oken.
+9
+TUV
+zásobník
+se spirálou
+22 23
+24
+ϑ
+25
+!
+12
+obvodová zeď
+KDY
+Dům s radiát
+ory i podlaho
+u.
+O
+výrobce. Vzni
+k: S4 rev. 0 + zp
+reg
+ulace.
+dpovídá apl
+i
+kaci 4
+t
+ě
+ný ven
+t
+i
+l + zm
+ě
+na
+NEZBYTNÉ KOMPONENTY
+prvky 1–12, 26, 17–2
+sm
+ě
+šovac
+í ven
+t
+i
+l TMV1 (22), P_M1 (23), čidl
+o
+T10 (24)
+pojist
+ný t
+ermostat podlahy (25) O
+t
+ermostat
+y zóny
+A a B (14)
+0
+10
+SV z vodovodu
+11
+podlaha – topné smyčky
+REGULACE
+RT_CTRL = 2 ZON
+E
+.SWITCH : zóna A L1–C1, zóna B
+L1–H1 V 2.7 apl. 4 . Zóna A
+k
+ř
+ivka #9 (radiát
+ory),
+zóna B HEAT_TEMP_SET_B nebo
+B_ZON
+E_HEAT_CURVE .
+B
+EZPEČNÝ PROVOZ
+TČ vyrábí vod
+u pro radiát
+ory, podlah
+u
+sm
+ě
+šovač mí
+ch
+á do
+lů
+pojist
+ný t
+ermostat rozpí
+ná P_M1 př
+i 45–50 °C
+OMEZENÍ
+zóna B jen
+t
+open
+signál TMV1 ov
+ěř
+V 2.7
+í
+t
+i
+?
+--- strana 12 ---
+SM-X1 v0.9 Hydraulické oddělení deskovým výměníkem podmíněné
+Hydraulické oddělení deskovým výměníkem
+Primár TČ s nemrznoucí směsí, sekundár voda · AKU ve vratce sekundáru · P
+_
+O spíná termostat · TUV
+S M -X 1 · R E O R 2 9 0 S m a rt
+v0.9 · podmíněné ověřením · 11/2026
+V E N K U T E C H N I C KÁ M Í ST N O ST O B Y T N É P R O STO RY
+chránička se signálními kabely (ovladač, termostat, výstupy)
+4
+1
+REO R290 Smart
+2
+26
+M
+20
+RELÉ K1
+výstup P
+_
+O
+primár sekundár
+27
+28
+14
+21 °C
+ref. místnost · C1–L1
+19
+15
+s TRV (21) referenční místnost
+bez TRV, plně otevřené
+16
+venkovní čidlo T4 je v jednotce
+výstup – topná voda
+vratka – ochlazená voda
+signální / ovládací kabel
+teplá užitková voda
+studená voda
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním a pojistný
+ventil patří VENKU hned za jednotku.
+Ochranná zóna dle návodu: 0,5 m kolem,
+2 m nad výfukem, 3 m od oken.
+3 5 6
+8
+7
+9
+TUV
+zásobník
+se spirálou
+T T9
+17
+AKU
+TV do domu
+!
+12
+obvodová zeď
+KDY
+Kde hrozí zamrzn
+ut
+í př
+i dl
+u
+o
+hém výpadku pro
+u
+d
+u,
+nebo
+kde je stará so
+ustava znečišt
+ě
+ná. Řeší rozpor
+výrobce: sm
+ě
+s jen v o
+kru
+u
+h
+TČ, so
+ustava pl
+n
+ná
+ě
+vodo
+u
+dle VDI 2
+035 V příručka 4.1, 4.10 .
+NEZBYTNÉ KOMPONENTY
+prvky 1–12, 26 (primár)
+desk
+ový vým
+n
+ě
+k (27) na výk
+P_
+O
+(19) + relé K1, pojist
+ný ven
+nádoba seku
+ndáru (28)
+AKU (17) ve vrat
+ce seku
+ndáru
+í
+on TČ
+t
+i
+l a expanzn
+í
+10
+SV z vodovodu
+11
+REGULACE
+R-B
+t
+ermostat L1–C1; k
+ř
+ivka +2–3 K.
+B
+EZPEČNÝ PROVOZ
+k
+oncen
+trace sm
+ě
+si podle mat
+eriálů (trojcest
+ný
+ven
+t
+i
+l max. 30 % glyk
+lu
+o
+) V příručka 4.6
+odmrazován
+í z primáru a TUV ?
+OMEZENÍ
+ni
+žší
+účinnost (orien
+tačn
+ě
+−5 %), vyšší
+náklady
+O
+po
+už
+průt
+o
+í
+t až po vyj
+ádřen
+í výrobce k
+odmrazován
+í a
+ku
+--- strana 13 ---
+07 Legenda prvků
+Č. Prvek Pokyn pro montáž
+1 TČ RE
+O
+R290 Smart Výbava: ob
+ě
+hové čerpadl
+o, expanzn
+doh
+řev 3
+kW, průt
+k
+o
+ový spí
+nač, ven
+doplňu
+je projekt.
+k
+nádoba 6 l, pojist
+ný ven
+t
+l
+i
+ovn
+í čidl
+o T4 V 2.1 . Vni
+t
+n
+ř
+3 bar, zál
+ž
+o
+n
+hydraul
+ku
+i
+í
+2 Uzavírac
+í ven
+t
+i
+ly se šro
+u
+ben
+ím Na výstupu
+i vstupu
+jedno
+tky V 2.8.2 .
+3 Pro
+t
+izámrazový ven
+t
+i
+l Na vrat
+ce ven
+ku, standard RE
+O
+podle návod
+u výrobce ven
+t
+lu
+i
+O . Fu
+? .
+n
+kci spo
+lu se zp
+t
+ě
+ným ven
+t
+i
+lem (26) ov
+ěř
+t
+i
+4 Separát
+or s aut
+omat
+ickým
+odvzd
+ušn
+n
+ě
+ím a pojist
+ným
+ven
+t
+i
+lem
+Ven
+ku
+hned za jedno
+tk
+o
+u
+– vzd
+u
+ch i případn
+u
+ni
+ě
+klé R290 do vo
+l
+ného prost
+oru O .
+5 Magne
+t
+ický fi
+ltr mezi
+uzáv
+ě
+ry Povinný fi
+ltr na vstupu V 2.5 .
+6 Doplňk
+ová expanzn
+í
+nádoba Dimenzovat výpočt
+em (vestav
+ě
+ná 6 l).
+7 Pl
+nic
+í / vypo
+ušt
+k
+c
+oho
+í
+ě
+ut V nejni
+žším míst
+ě
+V 2.8.2 .
+8 Trojcest
+ný ven
+t
+i
+l TUV (SV1) 2
+3
+0 V, 3vodič
+N/
+O
+O
+FF/N, dimenze podle po
+tru
+bí TČ V příručka 6.2.6 .
+9 Zásobn
+í
+k TUV se spirál
+o
+u Výk
+on spirály ≥
+jmenovi
+tý výk
+on TČ V 2.6.3 .
+10 Čidl
+o T9 So
+učást
+dodávky, kabel cca 10 m V příručka 6.2.11 .
+11,
+12
+Pojist
+ná skupina a expanzn
+nádoba TUV
+Pojist
+ný ven
+t
+i
+l bez uzáv
+ě
+ru; nádoba pro pi
+t
+no
+u vod
+u.
+13 Kabel
+ový ovladač Uvni
+t
+ř; v referenčn
+í míst
+nost
+i jen
+u R-A.
+k
+14 Po
+ojový t
+ermostat
+Bezpo
+t
+enciál
+ový k
+on
+takt L1–C1 / L1–H1 / L2–H2 V 2.10 .
+15
+t
+O
+opná t
+ě
+lesa / rozd
+ě
+podlahy
+l
+ovač
+Hydraul
+icky vyváž
+i
+t.
+16 Přepo
+ušt
+c
+ě
+í (diferenčn
+í) ven
+t
+i
+l Na k
+onci rozvod
+u, zajist
+í průt
+o
+k TČ O .
+17A
+kumulačn
+í
+nádrž
+O
+bjem viz kap. 8; sériová: vstup naho
+ře, výstup do
+le O .
+18 Čidla AKU T8 / T7 Příslušenství, vstupy
+AI3 / AI2 V 2.10 ; akt
+ivace ? .
+19 Čerpadl
+o P_
+O Ext
+ern
+í, dodávka stavby V příručka 6.2.9 .
+2
+0 Relé K1 / K2 Výstupy max. 0,2 A
+V 2.10 .
+21 Termostat
+ické h
+lavice Ne v referenčn
+í míst
+nost
+i.
+22 Sm
+ě
+šovac
+í ven
+t
+i
+l TMV1 Řízen
+í AIV1 + zp
+t
+ě
+ná vazba A
+O
+V1, napá
+jen
+í 2
+3
+0 V zvlášť V 2.10 ; t
+yp signálu
+? .
+2
+3 Čerpadl
+o zóny B (P_M1) Přes relé K2.
+24 Čidl
+o T10 Za sm
+ě
+šovačem, AI6C, TFLin_SE
+NSOR = enab
+le V 4.2.11 .
+25 Pojist
+ný t
+ermostat podlahy Pří
+l
+ž
+o
+ný
+45–50 °C, rozpí
+ná P_M1 O .
+26 Zp
+t
+ě
+ný ven
+t
+il na výstupu
+TČ Nový ve v1.0, po
+za prostupem zdí.
+žadavek výrobce V 2.8.2 bod 6 .
+O
+sadi
+t v t
+echnické míst
+nost
+i
+27 Desk
+ový vým
+n
+í
+ě
+k SM-X1; výk
+on
+≥ výk
+on TČ.
+28 Pojist
+ný ven
+t
+i
+l a expanzn
+seku
+ndáru
+í
+nádoba
+SM-X1; seku
+ndár je samostat
+ný uzavřený o
+kru
+h.
+í
+í
+í
+--- strana 14 ---
+08 Dimenzování
+Model Jmenovitý průtok Ztráta jednotky Max. výtlak Přípojka AKU Spirála TUV
+RH06 1,46 m³/h3
+0 kPa 9 m DN25 60–150 l 1,6 m²
+RH08 1,89 m³/h35 kPa 9 m DN25 60–2
+00 l
+2,1–2,2 m²
+RH10
+2,24 m³/h
+4
+0 kPa 9 m DN25 100–3
+00 l
+3,5 m²
+RH12 2,92 m³/h
+3
+4
+kPa 12 m DN25 100–3
+00 l
+3,5 m²
+RH14
+3,3
+2 m³/h 58 kPa 12 m DN3
+2 100–3
+00 l
+4,2 m²
+RH16 3,78 m³/h 60 kPa 12 m DN3
+2 2
+00–4
+00 l ≥
+4,2 m² ?
+RHX2
+0 Pro 3,5 m³/h 55 kPa 13 m DN4
+0
+3
+00–500 l O ≥ výk
+on TČ
+RHX3
+0 Pro 5,2 m³/h 60 kPa 15 m DN4
+0
+450–750 l O ≥ výk
+on TČ
+Zdroj: návod 2.1 (průt
+o
+k, ztráta, výtlak, přípoj
+ka) V ; příručka 4.4 (AKU) a 4.2.3 (spirála) V . Výtlak
+dostupný výtlak př
+i jmenovi
+tém průt
+o
+ku vyžad
+u
+je k
+ř
+ivku čerpadla ? .
+je maximál
+n
+Sériová
+AKU (SM-P1, SM-R2): vestav
+ě
+né čerpadl
+o po
+krývá
+jedno
+tku, po
+tru
+so
+ustavy př
+i jmenovi
+tém průt
+ku
+o
+nen
+í zjevn
+malá, vo
+l
+i
+t paralel
+n
+í zapojen
+bí, AKU i so
+O .
+ustavu. Po
+ku
+ě
+Paraleln
+í AKU: P_
+O
+dimenzovat podle příručky 4.3 V ; průt
+o
+k P_
+O
+nepřekračovat průt
+o
+k TČ O .
+Instalace bez TUV: SV1 se neosazu
+je, odmrazován
+odebírá t
+epl
+o z o
+kru
+h
+u t
+open
+í – AKU je o
+t
+o důlež
+.
+d ztráta
+t
+i
+jší
+ě
+í;
+í
+O
+í
+--- strana 15 ---
+09 Elektrické zapojení
+Schéma elektrického zapojení regulace
+Svorky řídicí desky TČ, pokojové termostaty, výstupy, čidla a Smart Grid
+S M - E 1 · R E O R 2 9 0 S m a rt
+v1.0 · 11/2026
+1F: L/N/PE
+ROZVADĚČ DOMU
+jistič + proudový chránič dle tabulky
+3F: L1–L3/N/PE
+J13/J14 · konfig. 7
+FV STŘÍDAČ / HDO / ELEKTROMĚR
+bezpotenciálové kontakty
+kabel ovladače
+21,5 °C
+OVLADAČ
+kabelový ovladač – referenční místnost
+1,5 m nad podlahou, mimo slunce a zdroje tepla
+Termostat: RT
+_
+CTRL (PANEL
+_
+CTRL jen bez RT)
+ZONE.A.SWITCH
+L1–C1: sepnuto = topí zóna A
+21 °C
+ZONE.A.MODE.SW
+L1–H1 topení · L1–C1 chlazení
+RT zóna A
+(L1–C1)
+2 ZONE.SWITCH
+A: L1–C1 · B1: L1–H1
+3 ZONE.SWITCH
+A: L1–C1 · B1: L1–H1 · B2: L2–H2
+ŘÍDICÍ DESKA TČ
+elektrorozvaděč ve venkovní jednotce
+(svorkovnice J22/J23, konektory čidel)
+rozvodnice regulace v domě (doporučeno)
+P
+O N RELÉ K1 → ČERPADLO ZÓNY A
+_
+P
+_
+O: běží při topení, v TUV stojí (SM-P2/R1/K1/X1)
+L N PE
+P
+M1 N RELÉ K2 → ČERPADLO ZÓNY B
+_
+podlahová zóna za směšovačem
+SG EVU GND
+ON OFF N TROJCESTNÝ VENTIL TUV (SV1)
+230 V, 3vodičový, polaritu ověřit testem
+OVLADAČ
+TBH N STYKAČ KM1 → VLOŽKA TUV
+topná vložka v zásobníku TUV
+AHS1 AHS2 EXTERNÍ ZDROJ (kotel)
+bezpotenciálový kontakt
+POKOJOVÉ TERMOSTATY (bezpot. kontakt)
+H1 L1 C1 L2 H2
+AOV1 AIV1 GND SMĚŠOVACÍ VENTIL TMV1
+řízení 0–10 V + zpětná vazba, napájení 230 V zvlášť
+DFR ERR SIGNALIZACE
+odmrazování / porucha (kontakty)
+A B RS485 – BMS / KASKÁDA
+nadřazený systém, Modbus (dle dodavatele)
+Výstupy 230 V: max. 0,2 A na výstup –
+čerpadla, vložku a ventily nad 0,2 A spínat přes relé / stykač.
+AI6B
+AI3
+AI2
+AI6C
+AI0
+AI6A
+T T9
+T T7
+T T5
+čidla NTC (příslušenství);
+T9 je součástí dodávky (kabel cca 10 m)
+zásobník TUV
+AKU dole
+podlaha zóna B2
+T T8
+T T10
+T T20
+AKU nahoře
+podlaha zóna B1
+TWout3 (AHS)
+Zjednodušené orientační schéma – závazné je schéma zapojení v návodu (kap. 2.10) pro konkrétní model a revizi desky. Před zapojením termostatu změřte, že na svorkách L1/L2 není cizí napětí.
+SM-E1 v1.0. Řídic
+í deska je v elektrorozvad
+ě
+či ven
+k
+ovn
+í
+jedno
+tky.
+Výstupy 230 V (P_
+O
+jso
+u
+jen spí
+nac
+í
+k
+on
+, P_M1, SV1, TBH) max. 0,2
+A – zát
+ě
+ž přes relé nebo st
+ykač V 2.10 . AHS a DFR/ERR
+takt
+y. Před př
+ipojen
+ím t
+ermostatu zm
+i
+t, ž
+ěř
+e na L1/L2 nen
+cizí
+nap
+t
+? .
+ě
+í
+í
+Trasa Kab
+el Poznámka
+Napá
+jen
+í TČ dle
+tab
+ulky návod
+u
+2.9.1 (jist
+ič, průřez) samostat
+ný o
+V 5.5
+kru
+h, jist
+ič + chránič; ne no
+ž
+ový vypí
+nač
+O
+vladačkabel z dodávky délka a prodl
+o
+V 2.9.3
+už
+en
+í
+? ; kabely v instalaci 3–3
+0 m
+Termostat, čidla,
+SG/EVU
+st
+í
+n
+ný
+ě
+2–3 × 0,75 mm²odd
+ě
+len
+l
+ě
+od si
+ových O
+SV1 3 × 1,0 mm²hn
+dý
+ě
+O
+N, modrý
+O
+FF, žlutý N V příručka 6.2.6
+P_
+O
+, P_M1, TBH CYKY 3 × 1,5 mm² do rozvodnice
+reg
+ulace
+relé K1/K2, st
+ykač KM1 v dom
+ě
+O
+l
+Prostupem zdí vést si
+ové a signál
+n
+í
+kabely ve dvo
+u samostat
+ných chráničkách s rezervo
+u
+O .
+--- strana 16 ---
+10 Montážní postup
+A · Příprava
+1
+Zapojen
+í podle kap. 2
+a hydraul
+ický výpoče
+t (ztráta so
+ustavy př
+i jmenovi
+tém průt
+o
+ku, objem AKU a expanzn
+2
+O
+vladač:
+zjist
+i
+t, kde je dodán a jak dl
+o
+u
+hý je kabel – u R-A musí být v referenčn
+í míst
+nost
+i.
+3
+Mat
+eriál
+podle legendy; zp
+t
+ě
+ný ven
+t
+i
+l (26) nezapomeno
+ut.
+í
+nádoby).
+B · Venkovní jednotka
+1
+2
+3
+Umíst
+n
+ě
+ven
+ku, dobře v
+ě
+trané, spodn
+V 2.6.1 ; an
+t
+ivibračn
+í podl
+o
+í
+hrana ≥ 30
+žky V 2.6.3 .
+cm, ≥
+0,5 m vo
+l
+no
+k
+o
+Venk
+ovn
+je v jedno
+í čidl
+o
+t
+ce – ne na přímém slu
+nci ani v pro
+u
+d
+u t
+eplého vzd
+u
+Armatury venku:
+uzáv
+ě
+ry (2), separát
+or (4), pro
+t
+izámrazový ven
+t
+i
+l (3); izo
+lace pro
+í
+lem, ≥ 2 m nad výf
+ukem, ≥ 3 m od o
+ken
+u
+ch
+O .
+t
+i UV a mrazu.
+C · Hydraulika uvnitř
+1
+2
+Zp
+t
+ě
+ný ven
+t
+il (26)
+na výstupu za prostupem zdí, fi
+ltr (5) na vrat
+ce mezi
+uzáv
+ě
+ry, SV1 (8) na výstupu před AKU.
+AKU
+podle schématu; u paralel
+n
+í čidla T8/T7, P_
+O
+se zp
+ě
+t
+no
+u klapk
+o
+u a uzáv
+ry.
+ě
+3
+Expanzn
+í
+nádoba (6), pln
+n
+í/vypo
+ušt
+n
+ě
+ě
+í (7), přepo
+ušt
+c
+ě
+í ven
+t
+il (16).
+4
+Zásobn
+k TUV
+, j
+ímka T9 v úrovni spirály, pojist
+ná skupina TUV.
+í
+5
+Zk
+o
+uška t
+ě
+V 2.8.2 , izo
+snost
+i a tlak
+ová zk
+o
+lace po
+tru
+bí.
+uška
+D · Elektro
+1
+Napá
+dle
+jen
+tab
+ulky, k
+on
+tro
+la L/N a uzemn
+n
+í.
+ě
+2
+Termostat
+í
+--- strana 17 ---
+3
+4
+na L1–C1 (+ L1–H1 u
+SM-K1); ovladač podle varian
+t
+y reg
+ulace.
+Výstupy
+P_
+O
+→ K1, P_M1 → K2, TBH → KM1; SV1 na O
+N/
+FF/N.
+O
+Čidla
+T9, T8/T7, T10.
+5
+DIP:
+SW1 zál
+o
+V 4.1 .
+ž
+n
+í doh
+řev (výchozí 01 = IBH1) V příručka 6.2.5 , SW5 t
+yp jedno
+tky, SW4.2 =
+O
+N jen s MPPT
+E · Plnění
+1
+2
+3
+Jedno
+– akt
+ivu
+tku př
+ipoji
+t k napá
+jen
+í před pln
+je ochran
+u pro
+t
+i zamrzn
+ut
+í
+n
+ím
+ě
+V příručka 4.1 .
+Proplach
+, pl
+u
+n
+n
+ven
+t
+í vodo
+ě
+i
+lem na jedno
+dle VDI 2
+t
+ce V příručka ).
+Před prvn
+ím start
+em
+jedno
+tka pod nap
+t
+ě
+ím (předeh
+řev; před sezóno
+u min. 12
+035 V příručka 4.1 , tlak 1,5–2 bar za stu
+dena O , odvzd
+ušn
+n
+ě
+í (ručn
+i
+ě
+h) V 5.5 .
+--- strana 18 ---
+11 Nastavení parametrů
+Cest
+y podle návod
+u; čísl
+ován
+nastaven
+je chrán
+ě
+no servisn
+í
+í po
+l
+ž
+o
+ek se můž
+e l
+iši
+t podle verze ovladače – rozhod
+u
+ím heslem V 3.3.18 .
+je název. Po
+kroči
+lé
+Parametr Cesta SM-P1 / SM-R2 SM-P2 / SM-R1 / SM-X1 SM-K
+1
+RT_CTRL Syst
+em Parame
+t
+ers II ›
+01
+PA
+N
+EL_CTRL Syst
+em Parame
+t
+ers II ›
+0
+Kř
+2
+ivka #9 User parame
+t
+ers › Heat
+Curve#9
+Vo
+lba k
+ř
+ivky
+A_ZON
+B_ZON
+E_HEAT_CURVE /
+E_HEAT_CURVE
+OFF (R-A) /
+ZON
+.
+E
+.SWITCH
+(R-B)
+ZON
+.
+E
+A
+.SWITCH 2 ZON
+E
+A
+1ZON
+E
+.TA (R-A) ne
+uplat
+n
+ponechat
+í se př
+i RT ? ;
+1ZON
+E
+.TW
+podle kap. 5 podle kap. 5 (X1 +2–3 K) A = CURVE#9A = CURVE#9 (k
+onstan
+t
+O
+FF + HEAT_TEMP_SET )
+n
+í:
+.SWITCH
+ponechat
+?
+2ZON
+E
+.TW
+radiát
+ory (zóna A)
+A = CURVE#9; B =
+O
+FF +
+HEAT_TEMP_SET_B
+nebo 1.L–8.L
+HEAT_ROOM_TEMP_SET User parame
+t
+ers › 06 21 °C – –
+ROOM_TEMP_dT Energy Con
+tro
+l › 10 co nejmenší z
+rozsah
+u
+ovladače
+? rozsah
+– –
+HEAT_LOA
+UNLOA
+D_dT /
+Energy Con
+tro
+l › 7 / 8t
+ovárn
+í; zv
+ě
+tši
+t
+jen př
+i
+takt
+ován
+D_dT
+AUTO_HT_TA_M
+AX Pro
+t
+t
+ec
+ion se
+tt
+ings I ›
+16–17 °C O
+44
+IBH_ON_TA /
+IBH_ON_DLY /
+IBH_ON_dT
+l
+uxi
+iary Heat
+› 10 / 09 / 11
+tt
+Se
+ings
+bod bivalence z návrh
+u; zpo
+ž
+d
+n
+3
+ě
+0–60 min; rozdí
+l ≥ 5 K O
+HOT_WATER Syst
+em Parame
+t
+ers II ›
+10
+YES se zásobn
+týdn
+kem; HOT_WATER_TEMP_SET 48–50 °C O ; st
+l
+eri
+izace 1×
+ě
+TFLin_SE
+NSOR Input & Sensors › 11 enable, je-l
+i čidl
+o
+podlahy
+– enable (T10)
+SM
+ART_GRID Engineering Se
+tt
+ings I ›
+2
+3 / 22 = 7; Syst
+em
+se
+tt
+ing I › 38
+jen se signálem SG/EVU
+í
+A
+í
+í
+--- strana 19 ---
+12 Uvedení do provozu
+1
+2
+Kon
+tro
+la
+hydraul
+i
+ky, elektro, DIP přepí
+načů, tlaku a odvzd
+ušn
+ě
+n
+í.
+Test k
+omponen
+t
+(Advanced setting › Mnl test menu , TČ vypn
+uté): čerpadla, SV1, TMV1, IBH V 4.2.10 .
+3
+Parame
+try
+podle kap. 11; zapsat
+do pro
+t
+k
+o
+o
+lu.
+4
+Topen
+k
+on
+tro
+í:
+la průt
+o
+ku (bez alarmu
+), ΔT na jedno
+t
+ce (TWin1/TWo
+ut1 ve stavovém men
+u
+) cca 5 K O .
+5
+TUV:
+SV1 musí poslat vod
+u
+do spirály (jinak prohodi
+t
+N/
+O
+O
+FF), P_
+O
+st
+oj
+í
+V 2.7 .
+6
+O
+dmrazován
+í:
+spust
+i
+t ručn
+odmrazován
+í ( SET › Manual defrosting ) V 3.3.11 a zapsat, zda SV1 přepne na TUV
+? ověření údaje příručky 6.2.6 .
+í
+7
+Rež
+im R-A:
+ve stavovém men
+u
+ov
+i
+t, ž
+ěř
+ku
+Po
+d ne → nastavi
+t R-B.
+e po
+žadovaná t
+epl
+o
+ta vody sled
+u
+je k
+k
+ivku (i
+ř
+ona k
+ivky sví
+t
+ř
+í
+V 3.3.22 ).
+8
+Termostat (R-B):
+rozepno
+ut a sepno
+ut L1–C1, ov
+ěř
+i
+t vypn
+ut
+í a zapn
+ut
+í TČ a P_
+O
+(stav výstupů „D
+O
+“ V 3.3.17 ).
+9
+Předán
+už
+ivat
+el
+i, spárován
+í apl
+i
+kace, t
+ermí
+k
+n
+on
+tro
+ly k
+ř
+ivky za 2–3 týdny.
+í
+Zápis do protokolu Hodnota
+Zapojen
+í (SM-…, verze), model TČ, verze ovladače
+Tlak so
+ustavy za stu
+dena / před
+tlak expanzn
+í
+nádoby
+TWin1 / TWo
+ut
+1 / ven
+k
+ovn
+í
+t
+epl
+o
+ta př
+i zk
+o
+ušce
+RT_CTRL, PANEL_CTRL, k
+ř
+ivka (Env/
+O
+ut
+1 a 2) nebo HEAT_TEMP_SET
+SV1 př
+i odmrazován
+í: TUV / t
+open
+Kř
+ivka v rež
+imu
+TA: ano / ne
+Výsledky kro
+ků 6 a 7 posí
+t
+lej
+e do RE
+O
+HEATING – dopl
+n
+o
+í
+t
+evřené body standard
+u.
+í
+--- strana 20 ---
+13 Ladění a závady
+Projev Příčina Řešení
+Př
+i mrazu
+t
+epl
+o
+ch
+ladno, v přechod
+u
+k
+ř
+ivka mál
+o strmá
+O
+ut.Temp1 +1–2 K
+Ch
+ladno v přechodném období
+k
+ř
+ivka n
+ízk
+o
+O
+ut.Temp2 +1–2 K
+Pře
+tápí se k
+ř
+ivka vyso
+k
+o sn
+ž
+t
+i
+í
+O
+ut.Temp1/2
+Takt
+ován
+k
+ompresoru malý objem, zavřené h
+lavice,
+hyst
+ereze
+t
+o
+evří
+t
+o
+kru
+hyst
+ereze
+hy, přepo
+larm nedostat
+ečného průt
+o
+ku vzd
+u
+ch, fi
+ltr, zavřený ven
+ztráta
+t
+i
+l, velká
+odvzd
+ušni
+t, vyčist
+t
+i
+t
+fi
+ltr, přej
+í
+Po odmrazován
+í stu
+dená TUV SV1 př
+i odmrazován
+na TUV vyšší
+t
+epl
+o
+ta TUV, v
+ě
+tší zásobn
+Čast
+o zál
+ž
+o
+n
+í doh
+řev h
+lu
+bo
+ký útlum, krátké zpo
+ž
+d
+n
+ě
+omezi
+t útlum, prodl
+už
+o
+i
+t IBH_
+O
+í
+ušt
+ě
+c
+í ven
+t
+i
+l, v
+ě
+tší AKU, v
+ě
+tší
+A
+na paralel
+n
+í AKU
+í
+í
+k
+N_DLY
+í
+Kř
+ivku m
+t
+ni
+ě
+o 1–2 K a čekat 2 dny (podlaha 3–4 dny).
+--- strana 21 ---
+14 Kontrolní seznam pro předání
+Zaškrt
+n
+ut
+í se
+ukládá
+jen ve vašem proh
+l
+ž
+í
+eči.
+Zapojen
+í SM-… zvo
+leno podle kap. 2, AKU osazena
+O
+chranná zóna R290, separát
+or s pojist
+ným ven
+t
+i
+lem ven
+ku
+Uzáv
+ry, fi
+ě
+ltr na vrat
+ce, zp
+t
+ě
+ný ven
+t
+l
+i
+na výstupu, pro
+t
+izámrazová ochrana
+Expanzn
+í
+nádoba dimenzovaná, před
+tlak
+nastaven
+Proplach, pl
+n
+n
+ě
+í vodo
+u
+dle VDI 2
+035, odvzd
+ušn
+n
+ě
+í, tlak
+ová zk
+o
+uška
+Napá
+jen
+í, jist
+ič, chránič, uzemn
+n
+ě
+í; DIP přepí
+nače
+Zát
+ž
+ě
+e přes relé / st
+ykač; t
+ermostat
+jak
+o bezpo
+t
+enciál
+ový k
+on
+takt
+Čidla zapojená a akt
+ivovaná, hodno
+t
+y odpovídaj
+í
+RT_CTRL / PANEL_CTRL / k
+ř
+ivka / TUV / IBH nastaveny a zapsány
+Test k
+omponen
+t, t
+open
+í, TUV, ručn
+í
+odmrazován
+í provedeny
+Pro
+t
+o
+k
+o
+l vypl
+n
+ě
+n vče
+t
+n
+ě
+SV1 př
+i odmrazován
+í a k
+ř
+ivky v TA
+Hydraul
+ické vyváž
+en
+í provedeno
+Už
+ivat
+el zašk
+o
+len, apl
+i
+kace spárována, k
+on
+tro
+la k
+ř
+ivky domluvena
+--- strana 22 ---
+15 Otevřené b
+ody (dotaz výro
+b
+ci)
+# Otázka Dopad
+1 Je přípust
+né zapojen
+í bez AKU a př
+i jakém minimál
+n
+ím objemu vody?
+SM-P0
+2 Řízen
+í vestav
+ě
+ného čerpadla (dob
+ě
+h, poho
+t
+ovost, o
+táčky) a jeho
+k
+ř
+ivka SM-P1, SM-R2
+3 SV1 př
+i odmrazován
+í, po
+lari
+ta SV1 (TUV =
+O
+N, nebo VYP) a chován
+í bez zásobn
+ku
+TUV všechna, SM-X1
+4 Tepl
+o
+ta vody v rež
+imu
+1Z
+O
+NE.TA; vl
+iv PANEL_CTRL př
+i RT_CTRL R-A, parame
+try
+5 Glyk
+o
+l v o
+kru
+u
+h
+TČ (rozpor příručky 4.1 a 4.10) SM-X1, mrazová ochrana
+6 Minimál
+n
+í průt
+o
+k všechna
+7 Kabel
+ovladače (umíst
+ě
+n
+í př
+i dodán
+í, délka, prodl
+o
+už
+en
+í) R-A
+8 Nap
+t
+í
+ě
+na L1/L2, rozsah R
+OO
+M_TEMP_dT
+t
+ermostat, R-A
+9 Signál TMV1 (AIV/A
+O
+V), akt
+ivace čidel
+AKU T8/T7 SM-K1, paralel
+n
+í AKU
+10 Doporučená
+AKU pro RHX2
+0 Pro / RHX3
+0 Pro; spirála RH16 dimenzován
+í
+í
+--- strana 23 ---
+16 Historie revizí a referenční podklady
+Verze Datum Změna
+rev. 0 14. 11.
+0
+26
+Návod „Reg
+ulace k
+omfort
+n
+í
+t
+epl
+o
+t
+y“, schémata S1–S4, E1 (pracovn
+í
+návrh).
+v1.0 14. 11.
+2
+2
+0
+26
+Zp
+t
+ě
+ný ven
+t
+i
+l (26) na výstupu
+TČ ve všech schémat
+ech – v rev. 0 chyb
+ě
+l (návod 2.8.2).
+Zapojen
+í bez AKU (S1) přeřazeno na nepřípust
+né bez so
+u
+h
+lasu výrobce (příručka 4.4).
+O
+praveno zdůvodn
+n
+ě
+í sériové AKU – př
+i odmrazován
+í SV1 přepí
+ná na TUV (příručka 6.2.6).
+O
+praveny parame
+try: PANEL_CTRL jen bez t
+ermostatu, RT_CTRL s t
+ermostat
+em (návod 4.2.5–4.2.6);
+S4 → SM-K1 s 2 Z
+NE.SWITCH.
+O
+Radiát
+ory s h
+lavicemi: standardem paralel
+n
+í AKU (SM-R1), sériová (SM-R2) jak
+o alt
+ernat
+iva.
+Nov
+ě
+SM-P1 (podlaha + sériová
+AKU), SM-P2 (podlaha + paralel
+n
+í AKU), SM-X1 v0.9 (vým
+n
+k),
+ě
+k
+onstan
+t
+t
+n
+epl
+o
+ta vody jak
+o varian
+ta reg
+ulace, zdroje
+ú
+dajů V/
+/
+?.
+O
+í
+í
+Referenční schémata rev. 0 (neplatná jako standard)
+Zachována beze zm
+ny pro doh
+ě
+ledat
+el
+nost. Př
+i
+řazen
+→ SM-K1, E1 → SM-E1.
+í: S1 → SM-P0 (nepřípust
+né), S2 → SM-R2, S3 → SM-R1, S4
+Bez akumulační nádrže – podlahové vytápění
+Přímé napojení, ekvitermní křivka + prostorová teplota z ovladače · ohřev TUV
+R E O -S C H -S 1 · R E O R 2 9 0 S m a rt
+rev. 0 · 11/2026
+V E N K U T E C H N I C KÁ M Í ST N O ST O B Y T N É P R O STO RY
+chránička se signálními kabely (ovladač, termostat, výstupy)
+4
+1
+REO R290 Smart
+2
+M
+14
+21 °C
+volitelně C1–L1
+rozdělovač
+13
+21,5 °C
+OVLADAČ
+16
+venkovní čidlo T4 je v jednotce
+výstup – topná voda
+vratka – ochlazená voda
+signální / ovládací kabel
+teplá užitková voda
+studená voda
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním a pojistný
+ventil patří VENKU hned za jednotku.
+Ochranná zóna dle návodu: 0,5 m kolem,
+2 m nad výfukem, 3 m od oken.
+3 5 6
+8
+9
+TUV
+zásobník
+se spirálou
+!
+7
+T T9
+10
+TV do domu
+15
+podlaha – topné smyčky
+všechny smyčky trvale otevřené
+(bez zónových ventilů v referenční místnosti)
+12
+SV z vodovodu
+11
+obvodová zeď
+S1 rev. 0
+--- strana 24 ---
+Sériová akumulační nádrž ve vratce – radiátory
+Objem pro odmrazování a stabilní chod bez sekundárního čerpadla · ekviterm + referenční místnost
+R E O -S C H -S 2 · R E O R 2 9 0 S m a rt
+rev. 0 · 11/2026
+V E N K U T E C H N I C KÁ M Í ST N O ST O B Y T N É P R O STO RY
+chránička se signálními kabely (ovladač, termostat, výstupy)
+4
+1
+REO R290 Smart
+2
+M
+13
+21,0 °C
+OVLADAČ
+venkovní čidlo T4 je v jednotce
+výstup – topná voda
+vratka – ochlazená voda
+signální / ovládací kabel
+teplá užitková voda
+studená voda
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním a pojistný
+ventil patří VENKU hned za jednotku.
+Ochranná zóna dle návodu: 0,5 m kolem,
+2 m nad výfukem, 3 m od oken.
+3 5 6
+TV do domu
+!
+S2 rev. 0
+8
+obvodová zeď
+17
+7 AKU
+100–300 l
+9
+TUV
+zásobník
+se spirálou
+T T9
+10
+Paralelní akumulační nádrž – radiátory
+AKU jako hydraulický oddělovač, sekundární čerpadlo P
+_
+O řízené pokojovým termostatem · TUV
+15
+s TRV (21) referenční místnost
+bez TRV, plně otevřené
+16
+12
+SV z vodovodu
+11
+R E O -S C H -S 3 · R E O R 2 9 0 S m a rt
+rev. 0 · 11/2026
+V E N K U T E C H N I C KÁ M Í ST N O ST O B Y T N É P R O STO RY
+chránička se signálními kabely (ovladač, termostat, výstupy)
+4
+1
+REO R290 Smart
+2
+M
+14
+RELÉ K1
+výstup P
+_
+20 21 °C
+O
+21,0 °C
+18
+19
+TV do domu
+OVLADAČ
+C1–L1
+15
+s TRV (21) referenční místnost
+bez TRV, plně otevřené
+13
+venkovní čidlo T4 je v jednotce
+výstup – topná voda
+vratka – ochlazená voda
+signální / ovládací kabel
+teplá užitková voda
+studená voda
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním a pojistný
+ventil patří VENKU hned za jednotku.
+Ochranná zóna dle návodu: 0,5 m kolem,
+2 m nad výfukem, 3 m od oken.
+3 5 6
+8
+17
+T T8
+7 AKU
+T T7
+9
+TUV
+zásobník
+se spirálou
+T T9
+10
+16
+!
+S3 rev. 0
+12
+SV z vodovodu
+11
+obvodová zeď
+--- strana 25 ---
+Dvě zóny – radiátory a směšovaná podlaha
+Zóna A radiátory (P
+_
+O), zóna B podlaha přes směšovací ventil TMV1 + P
+M1 · AKU · TUV
+_
+R E O -S C H -S 4 · R E O R 2 9 0 S m a rt
+rev. 0 · 11/2026
+V E N K U T E C H N I C KÁ M Í ST N O ST O B Y T N É P R O STO RY
+1
+REO R290 Smart
+chránička se signálními kabely (ovladač, termostat, výstupy)
+2
+4
+M
+RELÉ K1
+výstup P
+_
+O
+19
+14
+21 °C
+zóna A · C1–L1
+13
+B 21,5 °C
+OVLADAČ
+zóna B · prostorová teplota
+venkovní čidlo T4 je v jednotce
+výstup – topná voda
+vratka – ochlazená voda
+signální / ovládací kabel
+teplá užitková voda
+studená voda
+R290 je hořlavý plyn
+Separátor (4) s odvzdušněním a pojistný
+ventil patří VENKU hned za jednotku.
+Ochranná zóna dle návodu: 0,5 m kolem,
+2 m nad výfukem, 3 m od oken.
+3 5 6
+17
+T T8
+7 AKU
+T T7
+15
+radiátory s TRV (21)
+zóna A
+16
+8
+9
+TUV
+zásobník
+se spirálou
+18
+TV do domu
+20
+P
+RELÉ K2
+M1 · TMV1
+_
+zóna B – podlaha
+22 23
+T T10
+ϑ
+24
+25
+!
+S4 rev. 0
+T T9
+12
+10
+SV z vodovodu
+11
+podlaha – topné smyčky
+obvodová zeď
+--- strana 26 ---
+Schéma elektrického zapojení regulace
+Svorky řídicí desky TČ, pokojové termostaty, výstupy, čidla a Smart Grid
+R E O -S C H - E 1 · R E O R 2 9 0 S m a rt
+rev. 0 · 11/2026
+1F: L/N/PE
+ROZVADĚČ DOMU
+jistič + proudový chránič dle tabulky
+3F: L1–L3/N/PE
+J13/J14 · konfig. 7
+FV STŘÍDAČ / HDO / ELEKTROMĚR
+bezpotenciálové kontakty
+kabel ovladače
+21,5 °C
+OVLADAČ
+kabelový ovladač – referenční místnost
+1,5 m nad podlahou, mimo slunce a zdroje tepla
+Způsob připojení (RT
+_
+CTRL)
+ZONE.A.SWITCH
+L1–C1: sepnuto = topí zóna A
+21 °C
+ZONE.A.MODE.SW
+L1–H1 topení · L1–C1 chlazení
+2 ZONE.SWITCH
+RT zóna A
+(L1–C1)
+A: L1–C1 · B1: L1–H1
+3 ZONE.SWITCH
+A: L1–C1 · B1: L1–H1 · B2: L2–H2
+ŘÍDICÍ DESKA TČ
+elektrorozvaděč ve venkovní jednotce
+(svorkovnice J22/J23, konektory čidel)
+rozvodnice regulace v domě (doporučeno)
+P
+O N RELÉ K1 → ČERPADLO ZÓNY A
+_
+sekundární čerpadlo za AKU (P
+_
+O)
+L N PE
+P
+M1 N RELÉ K2 → ČERPADLO ZÓNY B
+_
+podlahová zóna za směšovačem
+SG EVU GND
+ON OFF N TROJCESTNÝ VENTIL TUV (SV1)
+230 V, 3vodičový, ON = TUV
+OVLADAČ
+TBH N STYKAČ KM1 → VLOŽKA TUV
+topná vložka v zásobníku TUV
+AHS1 AHS2 EXTERNÍ ZDROJ (kotel)
+bezpotenciálový kontakt
+POKOJOVÉ TERMOSTATY (bezpot. kontakt)
+H1 L1 C1 L2 H2
+AOV1 AIV1 GND SMĚŠOVACÍ VENTIL TMV1
+řízení 0–10 V + zpětná vazba, napájení 230 V zvlášť
+DFR ERR SIGNALIZACE
+odmrazování / porucha (kontakty)
+A B RS485 – BMS / KASKÁDA
+nadřazený systém, Modbus (dle dodavatele)
+Výstupy 230 V: max. 0,2 A na výstup –
+čerpadla, vložku a ventily nad 0,2 A spínat přes relé / stykač.
+AI6B
+AI3
+AI2
+AI6C
+AI0
+AI6A
+T T9
+T T7
+T T5
+čidla NTC (příslušenství);
+T9 je součástí dodávky (kabel cca 10 m)
+zásobník TUV
+AKU dole
+podlaha zóna B2
+T T8
+T T10
+T T20
+AKU nahoře
+podlaha zóna B1
+TWout3 (AHS)
+Zjednodušené orientační schéma – závazné je schéma zapojení v návodu (kap. 2.10) pro konkrétní model a revizi desky. Před zapojením termostatu změřte, že na svorkách L1/L2 není cizí napětí.
+E1 rev. 0
+RE
+O
+HEATING · Instalačn
+í standard v1.0. Zjednod
+ušené orien
+tačn
+í podklady pro projektan
+t
+y a mon
+táž
+n
+závazný je návod k
+instalaci a obsluze k
+on
+krét
+n
+ho modelu a projekt pro
+k
+on
+krét
+n
+í dům. Úspory a účinnost
+í firmy;
+jso
+orien
+tačn
+í.
+u
+í
