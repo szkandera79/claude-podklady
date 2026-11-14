@@ -88,6 +88,8 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rg
 .hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);min-height:560px}
 .hero-copy{position:relative;z-index:3;padding-block:64px 56px;padding-right:24px;display:flex;flex-direction:column;gap:22px;justify-content:center}
 .hero h1{font-size:clamp(2.2rem,1.4rem + 3.2vw,3.9rem);font-weight:700;line-height:1.06}
+.h1-sub{display:block;margin-top:14px;font:600 clamp(1.05rem,.9rem + .7vw,1.4rem)/1.3 var(--display);color:var(--ink-2);letter-spacing:0}
+.h1-sub::before{content:"";display:block;width:84px;height:4px;border-radius:2px;background:var(--yellow);margin-bottom:14px}
 .hero .lead{font-size:1.12rem;color:var(--muted);max-width:30em}
 .hero .lead b{color:var(--ink)}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
@@ -105,10 +107,10 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rg
 .hero-media::before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.85) 9%,rgba(255,255,255,0) 30%)}
 .arc{position:absolute;z-index:2;top:-10%;bottom:-10%;left:calc(max(46%, calc(50% - 600px + 480px)) - 125px);width:260px;pointer-events:none}
 .tag-viz{position:absolute;z-index:3;right:calc(16px + env(safe-area-inset-right,0px));top:16px;background:rgba(36,39,42,.72);color:#fff;font:600 .72rem var(--body);letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border-radius:6px}
-.hero-cap{position:absolute;z-index:3;right:calc(16px + env(safe-area-inset-right,0px));top:56px;max-width:380px;background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:14px 16px;display:flex;gap:12px;align-items:center}
+.hero-cap{position:absolute;z-index:3;right:calc(16px + env(safe-area-inset-right,0px));top:56px;max-width:380px;background:rgba(255,255,255,.25);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);border:1px solid rgba(255,255,255,.6);text-shadow:0 0 6px rgba(255,255,255,.95),0 0 2px #fff;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.18);padding:12px 14px;display:flex;gap:12px;align-items:center}
 .hero-cap .ic{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--green-600);color:#fff;flex:0 0 42px}
 .hero-cap b{display:block;font:600 .95rem var(--display);color:var(--ink)}
-.hero-cap span{font-size:.84rem;color:var(--muted)}
+.hero-cap span{font-size:.84rem;color:var(--ink-2);font-weight:500}
 .strip{background:var(--ink);color:var(--on-dark)}
 .strip .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-block:22px}
 .strip a{display:flex;align-items:center;gap:14px;color:var(--on-dark);text-decoration:none;padding:6px 18px;border-left:1px solid rgba(255,255,255,.14)}
@@ -316,9 +318,9 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
  <div class="hero-top">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow">Český výrobce tepelných čerpadel</span>
-      <h1 id="h-title">Tepelné čerpadlo pro <span class="g">váš dům</span>, topení i teplá voda</h1>
-      <p class="lead" id="h-lead">Tepelná čerpadla <b>REO R290</b> s&nbsp;přírodním chladivem, zásobníky a fotovoltaika. Navrhneme, dodáme, namontujeme vlastními lidmi a&nbsp;pomůžeme s&nbsp;dotací.</p>
+      <span class="eyebrow">Česká značka, český servis</span>
+      <h1 id="h-title">Dostupná tepelná čerpadla pro <span class="g">váš dům</span><span class="h1-sub">Parametry, které překonají většinu prémiových značek</span></h1>
+      <p class="lead" id="h-lead"><b>SCOP až 5,29</b>, topná voda až 75&nbsp;°C a&nbsp;tichý chod od 32&nbsp;dB(A) ve 3&nbsp;m. Čerpadla REO R290 navrhneme, dodáme, namontujeme vlastními lidmi a&nbsp;pomůžeme s&nbsp;dotací.</p>
       <div class="hero-ctas">
         <a class="btn btn-y" href="#vypocet">Nechat si spočítat <svg class="i"><use href="#i-arrow"/></svg></a>
         <a class="btn btn-ghost" href="#reseni" id="h-more">Prohlédnout řešení</a>
@@ -336,7 +338,6 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
     <span class="tag-viz" id="h-tag">Ilustrační schéma</span>
     <div class="hero-cap"><span class="ic"><svg class="i"><use href="#i-house" id="h-cap-ic"/></svg></span><div><b id="h-cap-t">REO RH060 + Watertank 210/70</b><span id="h-cap-s">Teplá voda nahoře, topná voda dole · jedna kompaktní sestava</span></div></div>
   </div>
-  <svg class="arc" viewBox="0 0 260 1000" preserveAspectRatio="none" aria-hidden="true"><path d="M120 0 C 260 260, 260 740, 120 1000" fill="none" stroke="#3E9B3A" stroke-width="14"/><path d="M140 0 C 280 260, 280 740, 140 1000" fill="none" stroke="#F2C230" stroke-width="4"/></svg>
  </div>
   <div class="strip">
     <div class="wrap">
@@ -630,7 +631,7 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 
   // hero slider
   const S = [
-    {t:'Tepelné čerpadlo pro <span class="g">váš dům</span>, topení i teplá voda', l:'Tepelná čerpadla <b>REO R290</b> s&nbsp;přírodním chladivem, zásobníky a fotovoltaika. Navrhneme, dodáme, namontujeme vlastními lidmi a&nbsp;pomůžeme s&nbsp;dotací.', tag:'Ilustrační schéma', ic:'i-house', ct:'REO RH060 + Watertank 210/70', cs:'Teplá voda nahoře, topná voda dole · jedna kompaktní sestava', more:'#produkty', go:'rh'},
+    {t:'Dostupná tepelná čerpadla pro <span class="g">váš dům</span><span class="h1-sub">Parametry, které překonají většinu prémiových značek</span>', l:'<b>SCOP až 5,29</b>, topná voda až 75&nbsp;°C a&nbsp;tichý chod od 32&nbsp;dB(A) ve 3&nbsp;m. Čerpadla REO R290 navrhneme, dodáme, namontujeme vlastními lidmi a&nbsp;pomůžeme s&nbsp;dotací.', tag:'Ilustrační schéma', ic:'i-house', ct:'REO RH060 + Watertank 210/70', cs:'Teplá voda nahoře, topná voda dole · jedna kompaktní sestava', more:'#produkty', go:'rh'},
     {t:'Zelené kotelny pro <span class="g">průmysl a&nbsp;firmy</span>', l:'Kotelny na <b>biomasu</b> i s&nbsp;tepelnými čerpadly <b>REO RH X50</b>, v&nbsp;budově nebo v&nbsp;kontejneru. Navrhneme, dodáme, zapojíme a&nbsp;postaráme se o&nbsp;servis.', tag:'Realizace partnera', ic:'i-factory', ct:'Kontejnerová kotelna na biomasu', cs:'Lodní kontejner s komíny · u průmyslového areálu', more:'#zelene-kotelny', go:''}
   ];
   const figs = [...document.querySelectorAll('#hero-media figure')], btns = [...document.querySelectorAll('.slides-nav button')];

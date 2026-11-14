@@ -1,0 +1,530 @@
+<title>Regulace komfortní teploty REO R290 Smart</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: technický návod — úzký textový sloupec, široká schémata, boční obsah na desktopu */
+:root{
+  --bg:#FFFFFF; --surface:#F4F8F5; --surface2:#EEF3F0; --fg:#1F2A24; --muted:#5C6B63; --line:#D7E2DB;
+  --brand:#34A263; --brand-ink:#1E6A3D; --brand-tint:#E9F6EE; --warn:#B7791F; --warn-tint:#FFF4DA;
+  --red:#D9342B; --blue:#2468B3; --code-bg:#EEF3F0;
+  --f-head:"Manrope","Avenir Next",system-ui,sans-serif; --f-body:"Inter",system-ui,-apple-system,sans-serif;
+  --f-mono:"JetBrains Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121815; --surface:#18211C; --surface2:#1E2923; --fg:#E4ECE7; --muted:#9DB0A5; --line:#2C3A32;
+  --brand:#4CC07D; --brand-ink:#8FDDB0; --brand-tint:#1B3326; --warn:#E8B04B; --warn-tint:#33290F;
+  --red:#F06A5F; --blue:#6EA8F0; --code-bg:#1E2923; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121815; --surface:#18211C; --surface2:#1E2923; --fg:#E4ECE7; --muted:#9DB0A5; --line:#2C3A32;
+  --brand:#4CC07D; --brand-ink:#8FDDB0; --brand-tint:#1B3326; --warn:#E8B04B; --warn-tint:#33290F;
+  --red:#F06A5F; --blue:#6EA8F0; --code-bg:#1E2923; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15.5px;line-height:1.6;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;border-bottom:3px solid var(--brand);padding-bottom:18px;margin-bottom:28px}
+.logo{width:170px;flex:none;background:#fff;border-radius:10px;padding:8px 10px}
+.logo svg{display:block;width:100%;height:auto}
+header.top h1{font-family:var(--f-head);font-size:clamp(26px,4vw,38px);line-height:1.12;margin:0 0 6px;text-wrap:balance;letter-spacing:-.01em}
+header.top .sub{color:var(--brand-ink);font-weight:600;margin:0}
+header.top .meta{color:var(--muted);font-size:13px;margin-top:6px}
+.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:40px}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);align-self:start;font-size:13.5px}
+nav.toc p{font-family:var(--f-head);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;color:var(--muted);margin:0 0 8px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:t}
+nav.toc a{display:block;padding:5px 10px;border-radius:6px;color:var(--fg);text-decoration:none;border-left:2px solid transparent}
+nav.toc a:hover,nav.toc a:focus-visible{background:var(--surface);border-left-color:var(--brand);outline:none}
+main{min-width:0}
+section{margin-bottom:56px;scroll-margin-top:16px}
+h2{font-family:var(--f-head);font-size:26px;line-height:1.2;margin:0 0 14px;text-wrap:balance;display:flex;gap:12px;align-items:baseline}
+h2 .n{font-family:var(--f-mono);font-size:14px;color:var(--brand);font-weight:600}
+h3{font-family:var(--f-head);font-size:18.5px;margin:28px 0 8px}
+p,li{max-width:72ch}
+ul,ol{padding-left:1.25em}
+li{margin:4px 0}
+a{color:var(--brand-ink)}
+code,.mono{font-family:var(--f-mono);font-size:.86em;background:var(--code-bg);padding:1px 5px;border-radius:4px;white-space:nowrap}
+.lead{font-size:17px;color:var(--fg)}
+.muted{color:var(--muted)}
+.note{background:var(--surface);border-radius:10px;padding:14px 18px;margin:16px 0}
+.warn{background:var(--warn-tint);border-left:4px solid var(--warn);border-radius:6px;padding:12px 16px;margin:16px 0}
+.warn strong{color:var(--warn)}
+.tip{background:var(--brand-tint);border-left:4px solid var(--brand);border-radius:6px;padding:12px 16px;margin:16px 0}
+.tbl{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--surface2);font-family:var(--f-head);font-weight:700;font-size:13px;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td.c{white-space:nowrap}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:1px 9px;border-radius:999px;background:var(--brand-tint);color:var(--brand-ink);white-space:nowrap}
+.pill.alt{background:var(--surface2);color:var(--muted)}
+.pill.warnp{background:var(--warn-tint);color:var(--warn)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:16px 0}
+.card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--bg)}
+.card.best{border:2px solid var(--brand)}
+.card h4{font-family:var(--f-head);margin:0 0 6px;font-size:16px}
+.card p{margin:6px 0;font-size:14px}
+.card ul{margin:6px 0;font-size:14px}
+figure{margin:18px 0 8px}
+figure .fig{background:#fff;border:1px solid var(--line);border-radius:12px;overflow-x:auto;padding:8px}
+figure img{display:block;width:100%;min-width:760px;height:auto}
+figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:12px 0}
+.steps>li{counter-increment:s;position:relative;padding:4px 0 10px 46px;max-width:none}
+.steps>li::before{content:counter(s);position:absolute;left:0;top:2px;width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;font-size:14px;display:grid;place-items:center}
+.steps>li strong{display:block}
+.check{list-style:none;padding:0;display:grid;gap:4px;margin:8px 0}
+.check li{max-width:none}
+.check label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;padding:6px 8px;border-radius:6px}
+.check label:hover{background:var(--surface)}
+.check input{margin-top:4px;accent-color:var(--brand);width:17px;height:17px;flex:none}
+.chart{background:var(--surface);border-radius:12px;padding:12px;overflow-x:auto}
+.chart svg{display:block;width:100%;min-width:560px;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;margin-top:6px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:20px;height:4px;border-radius:2px;display:inline-block}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--bg);color:var(--fg);padding:6px 12px;border-radius:8px;cursor:pointer}
+button:hover{border-color:var(--brand)}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:13px}
+@media (max-width:900px){.layout{grid-template-columns:1fr}nav.toc{position:static;background:var(--surface);padding:12px;border-radius:10px}nav.toc ol{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="logo" aria-label="REO HEATING">{{LOGO}}</div>
+  <div style="min-width:0;flex:1 1 420px">
+    <h1>Regulace komfortní teploty – REO R290 Smart</h1>
+    <p class="sub">Jak ovládat vnitřní teplotu domu, ne jen teplotu vody · schémata s AKU a bez AKU · návod pro projektanty a montážní party</p>
+    <p class="meta">RH06–RH16 (1F/3F), RHX20 Pro, RHX30 Pro · rev. 0 · 14. 11. 2026 · zpracováno z návodu k instalaci a obsluze REO R290 Smart (kap. 2.7, 2.10, 3.3, 4.2) a instalační příručky</p>
+  </div>
+</header>
+
+<div class="layout">
+<nav class="toc" aria-label="Obsah">
+  <p>Obsah</p>
+  <ol>
+    <li><a href="#vkostce">Doporučení v kostce</a></li>
+    <li><a href="#moznosti">Co umí regulace TČ</a></li>
+    <li><a href="#strategie">Volba strategie</a></li>
+    <li><a href="#krivka">Ekvitermní křivka</a></li>
+    <li><a href="#radiatory">Radiátory</a></li>
+    <li><a href="#podlaha">Podlahové vytápění</a></li>
+    <li><a href="#schemata">Hydraulická schémata</a></li>
+    <li><a href="#elektro">Elektrické zapojení</a></li>
+    <li><a href="#montaz">Montážní postup</a></li>
+    <li><a href="#parametry">Nastavení parametrů</a></li>
+    <li><a href="#ladeni">Ladění a závady</a></li>
+    <li><a href="#predani">Kontrolní seznam</a></li>
+    <li><a href="#overit">Ověřit u výrobce</a></li>
+  </ol>
+</nav>
+
+<main>
+<!-- ============================================================ 1 -->
+<section id="vkostce">
+  <h2><span class="n">01</span>Doporučení v kostce</h2>
+  <p class="lead">Nejúspornější a zároveň nejkomfortnější je kombinace <strong>ekvitermní křivky</strong> (teplota vody podle venkovní teploty) a <strong>prostorové zpětné vazby</strong> z jedné referenční místnosti. Křivka dělá hlavní práci, prostorové čidlo nebo pokojový termostat jen dolaďuje a hlídá přetopení. Čím nižší teplota vody, tím vyšší účinnost tepelného čerpadla.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Otopná soustava</th><th>Hydraulika</th><th>Regulace komfortu</th><th>Schéma</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Podlahové vytápění</strong>, novostavba, smyčky trvale otevřené</td><td>bez AKU (jen při dostatečném objemu vody), jinak sériová AKU ve vratce</td><td>křivka #9 nízkoteplotní + prostorová teplota z ovladače (<code>1ZONE.TA</code>)</td><td><span class="pill">S1</span> <span class="pill alt">S2</span></td></tr>
+      <tr><td><strong>Radiátory</strong> s termostatickými hlavicemi, jeden okruh</td><td>sériová AKU 100–300 l ve vratce + přepouštěcí ventil</td><td>křivka #9 + ovladač v referenční místnosti bez hlavice</td><td><span class="pill">S2</span></td></tr>
+      <tr><td><strong>Radiátory</strong>, starší rozvod, víc odběrů nebo další zdroj</td><td>paralelní AKU (hydraulický oddělovač) + sekundární čerpadlo P_O</td><td>křivka #9 + pokojový termostat L1–C1 spíná zónu A</td><td><span class="pill">S3</span></td></tr>
+      <tr><td><strong>Radiátory + podlaha</strong> v jednom domě</td><td>paralelní AKU, zóna A přímo, zóna B přes směšovací ventil TMV1</td><td>zóna A voda (křivka), zóna B prostorová teplota (<code>2ZONE.TW&amp;TA</code>)</td><td><span class="pill">S4</span></td></tr>
+    </tbody>
+  </table></div>
+  <div class="warn"><strong>Výrobce akumulační nádrž doporučuje vždy</strong> (instalační příručka, kap. 4.4: proti častému vypínání při nízkém zatížení). Zapojení bez AKU (S1) navrhujeme jen u podlahového vytápění s velkým objemem vody a trvale otevřenými smyčkami. Při pochybnosti volte S2 – stojí málo a odstraní riziko taktování a studených radiátorů při odmrazování.</div>
+</section>
+
+<!-- ============================================================ 2 -->
+<section id="moznosti">
+  <h2><span class="n">02</span>Co umí regulace TČ – přehled z návodu</h2>
+  <p>Tepelné čerpadlo REO R290 Smart má regulaci v řídicí desce venkovní jednotky a kabelový ovladač s dotykovým displejem. Ovladač má <strong>vestavěné čidlo prostorové teploty</strong> – pokud ho namontujete do obytné místnosti, může TČ řídit přímo podle vnitřní teploty. Venkovní čidlo (T4) je součástí jednotky.</p>
+
+  <div class="tbl"><table>
+    <thead><tr><th>Funkce</th><th>Co dělá</th><th>Kde se nastavuje</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Ekvitermní křivky</strong></td><td>Požadovaná teplota výstupní vody T1s se počítá z venkovní teploty. 8 nízkoteplotních (1.L–8.L), 8 vysokoteplotních (1.H–8.H) a uživatelská křivka #9 zadaná dvěma body.</td><td><code>User parameters › Heat Curve#9</code>, volba křivky zóny <code>A_ZONE_HEAT_CURVE</code> / <code>B_ZONE_HEAT_CURVE</code></td></tr>
+      <tr><td><strong>Řízení podle teploty vody</strong></td><td>TČ zapíná a vypíná podle výstupní vody (hystereze <code>HEAT_LOAD_dT</code>, <code>HEAT_UNLOAD_dT</code>). Bez zpětné vazby z místnosti.</td><td><code>PANEL_CTRL = 1ZONE.TW</code></td></tr>
+      <tr><td><strong>Řízení podle prostorové teploty</strong></td><td>TČ topí, dokud prostorová teplota TR nedosáhne žádané TS. Start při <code>TS − TR ≥ ROOM_TEMP_dT</code>, stop při <code>TR ≥ TS</code>. Čidlo je v ovladači – ovladač musí být uvnitř.</td><td><code>PANEL_CTRL = 1ZONE.TA</code>, <code>HEAT_ROOM_TEMP_SET</code> (16–30 °C)</td></tr>
+      <tr><td><strong>Pokojový termostat</strong> (bezpotenciálový kontakt)</td><td>Termostat zapíná/vypíná zónu. TČ přitom reguluje jen teplotu vody (křivka nebo pevná hodnota). Více termostatů paralelně = „kterýkoli sepne → topí“.</td><td><code>RT_CTRL</code>: <code>ZONE.A.SWITCH</code>, <code>ZONE.A.MODE.SW</code>, <code>2 ZONE.SWITCH</code>, <code>3 ZONE.SWITCH</code></td></tr>
+      <tr><td><strong>Zóny</strong></td><td>Až 3 zóny: A (topení i chlazení), B/B1 a B2 (jen topení, směšovací ventil TMV + vlastní čerpadlo). Kombinace teploty vody a prostorové teploty.</td><td><code>PANEL_CTRL = 2ZONE.TW</code>, <code>2ZONE.TW&amp;TA</code>, <code>3ZONE.TW</code>, <code>3ZONE.TW&amp;TA</code></td></tr>
+      <tr><td><strong>Týdenní časový program</strong></td><td>Pro každý den časové úseky se zapnutím/vypnutím, režimem a <strong>požadovanou teplotou</strong> – tím se dělá útlum.</td><td><code>Timer Settings › Timer On/Off</code></td></tr>
+      <tr><td><strong>Tichý režim</strong></td><td>Úroveň 1 a 2 omezí max. otáčky kompresoru a ventilátoru (časovačem nebo ručně). Snižuje i výkon.</td><td><code>Timed Settings › Silent Timer</code></td></tr>
+      <tr><td><strong>Dovolená</strong></td><td>Udržuje nízkou teplotu vody (20–25 °C) proti zamrznutí; lze zapnout TUV i sterilizaci.</td><td><code>Holi.Mode set</code>, <code>HOLIDAY_AWAY_Ths</code></td></tr>
+      <tr><td><strong>Letní vypnutí topení</strong></td><td>Nad nastavenou venkovní teplotou v režimu Auto netopí.</td><td><code>Protection settings I › 44 AUTO_HT_TA_MAX</code></td></tr>
+      <tr><td><strong>Záložní dohřev 3 kW (IBH)</strong></td><td>Zapne se při velkém rozdílu mezi žádanou a skutečnou vodou, se zpožděním, jen pod nastavenou venkovní teplotou.</td><td><code>20 Auxiliary Heat Settings</code>: <code>IBH_ON_dT</code>, <code>IBH_ON_DLY</code>, <code>IBH_ON_TA</code></td></tr>
+      <tr><td><strong>Smart Grid (SG / EVU)</strong></td><td>Signál ze střídače FV, HDO nebo elektroměru: omezení výkonu, normál, přebytek (režim „powerful“, přednost TUV).</td><td><code>Engineering Settings I › 23 SMART_GRID</code>, <code>22 SMART GRID CFG = 7</code></td></tr>
+      <tr><td><strong>Mobilní aplikace</strong></td><td>Dálkové ovládání přes Wi-Fi 2,4 GHz (žádaná teplota, režimy, časové programy).</td><td>návod kap. 6</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><strong>Důležité z návodu:</strong> při řízení pokojovým termostatem jednotka reguluje jen teplotu vody – termostat jí neříká „o kolik“, jen „ano/ne“. Proto musí být i při termostatu správně nastavená ekvitermní křivka. U podlahového vytápění nikdy nenastavujte příliš vysokou teplotu vody.</div>
+</section>
+
+<!-- ============================================================ 3 -->
+<section id="strategie">
+  <h2><span class="n">03</span>Volba regulační strategie</h2>
+  <div class="cards">
+    <div class="card best">
+      <span class="pill">doporučeno</span>
+      <h4>B · Křivka + prostorová teplota z ovladače</h4>
+      <p><code>PANEL_CTRL = 1ZONE.TA</code> + křivka #9</p>
+      <ul><li>teplota vody podle počasí, zpětná vazba z referenční místnosti</li><li>žádný další termostat ani kabel navíc</li><li>uživatel nastavuje přímo „21 °C“</li></ul>
+      <p class="muted">Podmínka: ovladač v referenční místnosti, 1,5 m nad podlahou, mimo slunce, krb a zdroje tepla.</p>
+    </div>
+    <div class="card">
+      <span class="pill alt">univerzální</span>
+      <h4>C · Křivka + pokojový termostat</h4>
+      <p><code>RT_CTRL = ZONE.A.SWITCH</code> (L1–C1) + křivka #9</p>
+      <ul><li>ovladač může zůstat v technické místnosti</li><li>lze bezdrátový termostat s přijímačem (bezpot. kontakt)</li><li>u S3/S4 termostat zároveň vypíná sekundární čerpadlo</li></ul>
+      <p class="muted">Termostat s hysterezí 0,3–0,5 K, bez PWM/TPI s krátkými cykly.</p>
+    </div>
+    <div class="card">
+      <span class="pill alt">jednoduché</span>
+      <h4>A · Jen křivka + termostatické hlavice</h4>
+      <p><code>PANEL_CTRL = 1ZONE.TW</code> + křivka #9</p>
+      <ul><li>bez prostorové zpětné vazby</li><li>vnitřní teplotu doladí hlavice místnost po místnosti</li><li>vhodné pro byty a dobře izolované domy</li></ul>
+      <p class="muted">Bez vnitřních zisků (slunce) neumí ubrat; nutný přepouštěcí ventil.</p>
+    </div>
+    <div class="card">
+      <span class="pill alt">dvě soustavy</span>
+      <h4>D · Zóny</h4>
+      <p><code>PANEL_CTRL = 2ZONE.TW&amp;TA</code> nebo <code>RT_CTRL = 2 ZONE.SWITCH</code></p>
+      <ul><li>radiátory a podlaha s různými teplotami vody</li><li>zóna B přes směšovací ventil řízený TČ</li><li>každá zóna vlastní termostat / prostorová teplota</li></ul>
+      <p class="muted">TČ vyrábí vodu pro teplejší zónu – podlahu míchá dolů.</p>
+    </div>
+  </div>
+  <h3>Proč ne jen pokojový termostat bez křivky</h3>
+  <p>S pevnou teplotou vody (např. 45 °C) topí TČ celou zimu na „nejhorší den“: nízký COP, krátké cykly a přetápění. Křivka sníží teplotu vody v přechodném období o 10–20 K. Orientačně každý 1 K nižší teploty vody zlepší účinnost o 2–3 %.</p>
+</section>
+
+<!-- ============================================================ 4 -->
+<section id="krivka">
+  <h2><span class="n">04</span>Ekvitermní křivka – použijte uživatelskou #9</h2>
+  <p>Přednastavené křivky výrobce jsou schodovité a velmi ploché: nízkoteplotní 1.L–8.L mají rozsah jen cca 24–38 °C, vysokoteplotní 1.H–8.H cca 36–56 °C a mezi −25 °C a +15 °C se mění jen o 5–6 K. Pro české domy proto nastavujte <strong>uživatelskou křivku #9</strong> dvěma body: <code>Env.Temp1 / Out.Temp1</code> (návrhová venkovní teplota) a <code>Env.Temp2 / Out.Temp2</code> (konec topné sezóny).</p>
+  <div class="chart" role="img" aria-label="Doporučené ekvitermní křivky #9 pro podlahu a radiátory">
+  <svg viewBox="0 0 650 330" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif" font-size="12">
+    <g id="grid"></g>
+  </svg>
+  </div>
+  <div class="legend">
+    <span><i style="background:#2468B3"></i>podlaha, novostavba (35/30)</span>
+    <span><i style="background:#34A263"></i>podlaha, rekonstrukce (40/35)</span>
+    <span><i style="background:#E07B39"></i>radiátory nízkoteplotní (45/40)</span>
+    <span><i style="background:#D9342B"></i>radiátory 55/45</span>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Soustava (návrhové teploty)</th><th>Env.Temp1</th><th>Out.Temp1</th><th>Env.Temp2</th><th>Out.Temp2</th><th>Max. voda</th></tr></thead>
+    <tbody>
+      <tr><td>Podlaha, novostavba (35/30)</td><td class="c">−12 °C</td><td class="c">33–35 °C</td><td class="c">+15 °C</td><td class="c">24–25 °C</td><td class="c">≤ 40 °C</td></tr>
+      <tr><td>Podlaha, rekonstrukce (40/35)</td><td class="c">−12 °C</td><td class="c">38–40 °C</td><td class="c">+15 °C</td><td class="c">26 °C</td><td class="c">≤ 45 °C</td></tr>
+      <tr><td>Radiátory nízkoteplotní / předimenzované (45/40)</td><td class="c">−12 °C</td><td class="c">45 °C</td><td class="c">+15 °C</td><td class="c">28 °C</td><td class="c">50 °C</td></tr>
+      <tr><td>Radiátory 55/45 (starší dům)</td><td class="c">−12 °C</td><td class="c">52–55 °C</td><td class="c">+15 °C</td><td class="c">30 °C</td><td class="c">55–60 °C</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Env.Temp1 nahraďte návrhovou venkovní teplotou lokality (v ČR typicky −12 až −18 °C). Hodnoty jsou výchozí nastavení pro uvedení do provozu; dolaďují se 2–3 týdny podle kapitoly <a href="#ladeni">Ladění</a>. Tepelné čerpadlo dodá vodu až 75 °C, ale nad 55 °C výrazně klesá účinnost.</p>
+  <div class="tip"><strong>Pravidlo pro ladění:</strong> je-li chladno při mrazech a v přechodném období je teplo → zvyšte jen Out.Temp1. Je-li chladno v přechodném období → zvyšte Out.Temp2. Měňte vždy o 1–2 K a počkejte 2 dny (podlaha 3–4 dny).</div>
+</section>
+
+<!-- ============================================================ 5 -->
+<section id="radiatory">
+  <h2><span class="n">05</span>Optimální řešení pro radiátory</h2>
+  <ol class="steps">
+    <li><strong>Ověřte teploty vody.</strong> Spočítejte potřebnou teplotu pro nejhorší místnost při návrhové teplotě. Poddimenzované těleso vyměňte nebo doplňte – jedno slabé těleso zvedne teplotu vody celému domu.</li>
+    <li><strong>Hydraulické vyvážení.</strong> Přednastavitelné ventily (nebo regulační šroubení) nastavte podle výkonu těles; spád 5–7 K. Bez vyvážení se ekviterm nedá dobře nastavit.</li>
+    <li><strong>Referenční místnost bez hlavice.</strong> Obývací pokoj: hlavice sundat nebo nastavit na max., zde je ovladač (strategie B) nebo pokojový termostat (C). V ostatních místnostech hlavice jako omezovač (např. ložnice nižší teplota).</li>
+    <li><strong>Hydraulika S2</strong> (sériová AKU 100–300 l ve vratce + přepouštěcí ventil na konci rozvodu). S3 použijte, pokud rozvod má velký odpor, víc větví nebo se připojuje další zdroj tepla.</li>
+    <li><strong>Křivka #9</strong> podle tabulky; <code>PANEL_CTRL = 1ZONE.TA</code>, <code>ROOM_TEMP_dT</code> 0,5–1 K.</li>
+    <li><strong>Útlum</strong> max. 2 K v noci, konec útlumu 1–2 hodiny před ranním vstáváním. Hlubší útlum vede k rannímu zátopu s nízkým COP a sepnutí záložního dohřevu.</li>
+  </ol>
+</section>
+
+<!-- ============================================================ 6 -->
+<section id="podlaha">
+  <h2><span class="n">06</span>Optimální řešení pro podlahové vytápění</h2>
+  <ol class="steps">
+    <li><strong>Nejnižší možná teplota vody.</strong> Podlaha je velká plocha – stačí 28–35 °C. Dům s podlahou je ideální pro TČ; neposílejte do podlahy vodu nad 40 °C (u zóny B osaďte pojistný termostat podlahy, který vypne čerpadlo P_M1).</li>
+    <li><strong>Smyčky trvale otevřené.</strong> Termoelektrické hlavice na rozdělovači jen tam, kde je to opravdu potřeba (ložnice). Podlaha se z velké části reguluje sama: když místnost dosáhne teploty, klesne rozdíl podlaha–vzduch a podlaha přestane předávat teplo.</li>
+    <li><strong>Hydraulika S1</strong> (bez AKU) jen když: objem vody v trvale otevřených smyčkách je velký (orientačně ≥ 10 l na kW jmenovitého výkonu), průtok TČ je zaručen přepouštěcím ventilem a doplněná je expanzní nádoba. Jinak <strong>S2</strong> se sériovou AKU 50–150 l ve vratce.</li>
+    <li><strong>Křivka #9</strong> nízkoteplotní (např. −12 °C → 34 °C, +15 °C → 25 °C), <code>PANEL_CTRL = 1ZONE.TA</code>, <code>ROOM_TEMP_dT</code> 0,3–0,5 K. Ovladač v obývacím pokoji.</li>
+    <li><strong>Bez nočního útlumu</strong> nebo max. 1 K. Podlaha reaguje v hodinách; útlum ušetří málo a ráno se nestihne zatopit.</li>
+    <li><strong>FV přebytky</strong> lze ukládat do podlahy: časovým programem zvyšte přes poledne (cca 11–15 h) žádanou prostorovou teplotu o 0,5–1 K. Úspora je orientační a závisí na FV a domě.</li>
+    <li><strong>Nová podlaha:</strong> nejdřív program vysoušení / předehřevu podlahy (<code>Floor Heat Dry</code>, <code>Floor Heat Preheat</code>); vyžaduje čidlo podlahové vody T10 a <code>TFLin_SENSOR = enable</code>. Postup sladit s dodavatelem potěru.</li>
+  </ol>
+</section>
+
+<!-- ============================================================ 7 -->
+<section id="schemata">
+  <h2><span class="n">07</span>Hydraulická schémata</h2>
+  <p>Schémata jsou zjednodušená a orientační. Čísla prvků odpovídají společné legendě pod schématy. Dimenze potrubí, objem expanzní nádoby a nastavení pojistných prvků určete výpočtem pro konkrétní dům.</p>
+
+  <figure id="s1"><div class="fig"><img src="schema-S1.svg" alt="Schéma S1: tepelné čerpadlo bez akumulační nádrže, přímo napojené podlahové vytápění, trojcestný ventil a zásobník TUV, kabelový ovladač v obytné místnosti" loading="lazy"></div>
+  <figcaption><strong>S1 – bez AKU, podlahové vytápění.</strong> Jen při velkém objemu vody a trvale otevřených smyčkách. Regulace: křivka #9 + prostorová teplota z ovladače (13), případně pokojový termostat (14).</figcaption></figure>
+
+  <figure id="s2"><div class="fig"><img src="schema-S2.svg" alt="Schéma S2: sériová akumulační nádrž ve vratce, radiátory s termostatickými hlavicemi a referenční místnost bez hlavice" loading="lazy"></div>
+  <figcaption><strong>S2 – sériová AKU ve vratce, radiátory.</strong> AKU zvětší objem pro odmrazování a prodlouží cykly, bez dalšího čerpadla a bez míchání teplot. Doporučené řešení pro většinu rodinných domů s radiátory.</figcaption></figure>
+
+  <figure id="s3"><div class="fig"><img src="schema-S3.svg" alt="Schéma S3: paralelní akumulační nádrž jako hydraulický oddělovač, sekundární čerpadlo spínané relé z výstupu P_O, pokojový termostat" loading="lazy"></div>
+  <figcaption><strong>S3 – paralelní AKU + sekundární čerpadlo P_O.</strong> Pro rozvody s velkým odporem, víc větví nebo další zdroj. Termostat (14) na L1–C1 zapíná zónu A: sepne P_O přes relé K1 (20). Průtok sekundáru držte ≤ průtoku TČ, jinak se v AKU míchá a klesá teplota do topení.</figcaption></figure>
+
+  <figure id="s4"><div class="fig"><img src="schema-S4.svg" alt="Schéma S4: dvě zóny, radiátory přímo, podlaha přes směšovací ventil TMV1 s čerpadlem P_M1 a čidlem T10" loading="lazy"></div>
+  <figcaption><strong>S4 – dvě zóny: radiátory + směšovaná podlaha.</strong> Zóna A (radiátory) podle křivky a termostatu, zóna B (podlaha) přes směšovací ventil TMV1 (22) řízený TČ podle čidla T10 (24), čerpadlo P_M1 (23), pojistný termostat podlahy (25).</figcaption></figure>
+
+  <h3>Legenda prvků</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Č.</th><th>Prvek</th><th>Poznámka pro montáž</th><th>Schéma</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>TČ REO R290 Smart (venkovní jednotka)</td><td>Ve výbavě: oběhové čerpadlo, expanzní nádoba 6 l, pojistný ventil 3 bar, integrovaný záložní dohřev 3 kW, průtokový spínač, venkovní čidlo T4. Vnitřní hydrauliku doplňuje projekt.</td><td>vše</td></tr>
+      <tr><td>2</td><td>Uzavírací kulové ventily</td><td>Na výstupu i vratce u jednotky, rozebíratelné spoje (šroubení) – požadavek návodu.</td><td>vše</td></tr>
+      <tr><td>3</td><td>Protizámrazový ventil</td><td>Na vratce venku; alternativa je nemrznoucí směs (výrobce ji doporučuje kvůli výpadku proudu, max. 30 % glykolu, sníží výkon).</td><td>vše</td></tr>
+      <tr><td>4</td><td>Separátor vzduchu a nečistot s automatickým odvzdušněním a pojistným ventilem</td><td>VENKU hned za jednotkou – vzduch i případně uniklé R290 musí odejít do volného prostoru.</td><td>vše</td></tr>
+      <tr><td>5</td><td>Magnetický filtr mezi dvěma uzávěry</td><td>Filtr na vstupu vody do TČ je povinný. Šipka ve směru proudění, výpust dolů.</td><td>vše</td></tr>
+      <tr><td>6</td><td>Doplňková expanzní nádoba</td><td>Vestavěná 6 l nestačí pro větší objem soustavy a AKU – dimenzovat výpočtem.</td><td>vše</td></tr>
+      <tr><td>7</td><td>Plnicí / vypouštěcí kohout</td><td>V nejnižším místě; plnit upravenou vodou.</td><td>vše</td></tr>
+      <tr><td>8</td><td>Trojcestný přepínací ventil TUV (SV1)</td><td>230 V, 3vodičový (ON/OFF/N), mosaz/nerez; ON = TUV.</td><td>vše</td></tr>
+      <tr><td>9</td><td>Zásobník TUV se spirálou</td><td>Výkon spirály ≥ jmenovitý výkon TČ (orientačně plocha 1,6 m² RH06 … 4,2 m² RH14/16).</td><td>vše</td></tr>
+      <tr><td>10</td><td>Čidlo TUV T9</td><td>Součást dodávky, kabel cca 10 m, do jímky zásobníku v úrovni spirály.</td><td>vše</td></tr>
+      <tr><td>11, 12</td><td>Pojistná skupina a expanzní nádoba TUV</td><td>Pojistný ventil bez uzávěru, výfuk do odpadu; nádoba pro pitnou vodu.</td><td>vše</td></tr>
+      <tr><td>13</td><td>Kabelový ovladač</td><td>V referenční místnosti, pokud se řídí podle prostorové teploty (vestavěné čidlo).</td><td>vše</td></tr>
+      <tr><td>14</td><td>Pokojový termostat</td><td>Bezpotenciálový kontakt na L1–C1 (zóna A) / L1–H1 (zóna B1) / L2–H2 (zóna B2).</td><td>S1, S3, S4</td></tr>
+      <tr><td>15</td><td>Otopná tělesa / rozdělovač podlahy</td><td>Hydraulicky vyvážit.</td><td>vše</td></tr>
+      <tr><td>16</td><td>Přepouštěcí (diferenční) ventil</td><td>Na konci rozvodu; zajistí min. průtok TČ při zavřených hlavicích.</td><td>S1–S4</td></tr>
+      <tr><td>17</td><td>Akumulační nádrž (AKU)</td><td>Objem viz tabulka níže.</td><td>S2–S4</td></tr>
+      <tr><td>18</td><td>Čidla AKU T8 (nahoře) a T7 (dole)</td><td>Příslušenství; vstupy AI3 / AI2.</td><td>S3, S4</td></tr>
+      <tr><td>19</td><td>Sekundární čerpadlo zóny A (P_O)</td><td>Spíná TČ výstupem P_O přes relé K1.</td><td>S3, S4</td></tr>
+      <tr><td>20</td><td>Relé / stykač</td><td>Výstupy TČ max. 0,2 A – zátěž vždy přes relé (cívka 230 V).</td><td>S3, S4</td></tr>
+      <tr><td>21</td><td>Termostatické hlavice (TRV)</td><td>Ne v referenční místnosti.</td><td>S2–S4</td></tr>
+      <tr><td>22</td><td>Směšovací ventil zóny B (TMV1)</td><td>Proporcionální, řízení AIV1 + zpětná vazba AOV1, napájení 230 V zvlášť.</td><td>S4</td></tr>
+      <tr><td>23</td><td>Čerpadlo zóny B (P_M1)</td><td>Přes relé K2.</td><td>S4</td></tr>
+      <tr><td>24</td><td>Čidlo vody podlahy T10</td><td>Za směšovacím ventilem; vstup AI6C, aktivovat <code>TFLin_SENSOR</code>.</td><td>S4</td></tr>
+      <tr><td>25</td><td>Pojistný termostat podlahy</td><td>Příložný, 45–50 °C, rozpíná napájení P_M1. Doporučení REO HEATING.</td><td>S4</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Průtok, potrubí a objem AKU podle modelu</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Model</th><th>Jmenovitý průtok</th><th>Přípojka</th><th>Max. výtlak čerpadla</th><th>AKU (výrobce)</th></tr></thead>
+    <tbody>
+      <tr><td>RH06</td><td class="c">1,46 m³/h</td><td>DN25</td><td>9 m</td><td>60–150 l</td></tr>
+      <tr><td>RH08</td><td class="c">1,89 m³/h</td><td>DN25</td><td>9 m</td><td>60–200 l</td></tr>
+      <tr><td>RH10</td><td class="c">2,24 m³/h</td><td>DN25</td><td>9 m (1F) / 12 m (3F)</td><td>100–300 l</td></tr>
+      <tr><td>RH12</td><td class="c">2,92 m³/h</td><td>DN25</td><td>12 m</td><td>100–300 l</td></tr>
+      <tr><td>RH14</td><td class="c">3,32 m³/h</td><td>DN32</td><td>12 m</td><td>100–300 l</td></tr>
+      <tr><td>RH16</td><td class="c">3,78 m³/h</td><td>DN32</td><td>12 m</td><td>200–400 l</td></tr>
+      <tr><td>RHX20 Pro</td><td class="c">3,5 m³/h</td><td>DN40</td><td>13 m</td><td>neuvádí – projekčně 300–500 l</td></tr>
+      <tr><td>RHX30 Pro</td><td class="c">5,2 m³/h</td><td>DN40</td><td>15 m</td><td>neuvádí – projekčně 450–750 l</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Průtoky a přípojky z technických údajů návodu (kap. 2.1), objemy AKU z instalační příručky (kap. 4.4). Pro RHX20/30 Pro jde o projekční doporučení REO HEATING (≈ 15–25 l/kW). Vnitřní čerpadlo TČ musí pokrýt tlakovou ztrátu jednotky, potrubí a výškový rozdíl (H = K · (Δp jednotky + Δp potrubí + výška), K = 1,1–1,2); u S3/S4 pokrývá jen primár k AKU.</p>
+</section>
+
+<!-- ============================================================ 8 -->
+<section id="elektro">
+  <h2><span class="n">08</span>Elektrické zapojení regulace</h2>
+  <figure><div class="fig"><img src="schema-E1.svg" alt="Schéma E1: svorky řídicí desky tepelného čerpadla, napájení, Smart Grid, ovladač, pokojové termostaty, výstupy přes relé, čidla NTC a RS485" loading="lazy"></div>
+  <figcaption><strong>E1 – svorky řídicí desky.</strong> Řídicí deska je v elektrorozvaděči venkovní jednotky – všechny signální kabely vedou z domu ven k jednotce.</figcaption></figure>
+  <div class="warn"><strong>Výstupy 230 V (P_O, P_M1, SV1, TBH) mají max. 0,2 A.</strong> Čerpadla, topnou vložku a ventily s vyšším odběrem spínejte vždy přes relé nebo stykač. Svorky AHS1/AHS2 a DFR/ERR jsou jen spínací kontakty. Termostat připojujte jako bezpotenciálový kontakt – před zapojením změřte, že na L1/L2 není cizí napětí.</div>
+
+  <h3>Kabelové trasy mezi domem a venkovní jednotkou</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Trasa</th><th>Doporučený kabel</th><th>Poznámka</th></tr></thead>
+    <tbody>
+      <tr><td>Napájení TČ</td><td>CYKY-J 3× (1F) / 5× (3F), průřez a jistič podle tabulky návodu (kap. 2.9.1)</td><td>Samostatný okruh, jistič + proudový chránič; typ chrániče vhodný pro měnič. Jistič ne nožový vypínač.</td></tr>
+      <tr><td>Kabelový ovladač</td><td>kabel z dodávky</td><td>Prodlužovat jen stíněným kabelem; délky kabelů dle návodu 3–30 m. Vést odděleně od silových.</td></tr>
+      <tr><td>Pokojový termostat</td><td>stíněný 2× 0,75 mm² (JYTY / SYKFY)</td><td>Bezpotenciálový kontakt; u bezdrátového termostatu jen přijímač u rozvodnice.</td></tr>
+      <tr><td>Čidla NTC (T9, T8/T7, T10)</td><td>stíněný 2× 0,75 mm², max. 30 m</td><td>T9 má vlastní kabel cca 10 m – zásobník TUV umístit v dosahu nebo prodloužit.</td></tr>
+      <tr><td>Výstupy P_O, P_M1, SV1, TBH</td><td>CYKY 3× / 4× 1,5 mm² do rozvodnice regulace</td><td>Relé K1, K2, stykač KM1 v rozvodnici v domě; SV1 3vodičově + PE.</td></tr>
+      <tr><td>Směšovací ventil TMV1</td><td>stíněný 3× 0,75 mm² (AIV1, AOV1, GND) + napájení 230 V</td><td>Typ řídicího signálu ověřit při objednávce ventilu.</td></tr>
+      <tr><td>SG / EVU</td><td>stíněný 3× 0,75 mm²</td><td>Bezpotenciálové kontakty ze střídače FV, HDO relé nebo smart meteru.</td></tr>
+      <tr><td>FV string (MPPT)</td><td>solární kabel dle návrhu FV</td><td>Samostatný podklad pro přímé připojení FV; DIP SW4.2 = ON při osazené MPPT.</td></tr>
+    </tbody>
+  </table></div>
+  <p>Do chráničky skrz obvodovou zeď uložte samostatně silové a samostatně signální kabely (dvě chráničky), prostupy utěsnit. Rezerva: jedna volná chránička nebo volný pár pro pozdější termostat / čidlo.</p>
+</section>
+
+<!-- ============================================================ 9 -->
+<section id="montaz">
+  <h2><span class="n">09</span>Montážní postup pro instalační partu</h2>
+  <h3>A · Příprava (před výjezdem)</h3>
+  <ol class="steps">
+    <li><strong>Projekt a varianta.</strong> Mít schválené schéma (S1–S4), model TČ, objem AKU, expanzní nádobu, typ termostatu a umístění ovladače.</li>
+    <li><strong>Materiál.</strong> Uzávěry, separátor, magnetický filtr, protizámrazový ventil (nebo glykol), trojcestný ventil 230 V 3vodič, přepouštěcí ventil, AKU, expanzní nádoba, relé/stykače, kabely dle tabulky, čidla (příslušenství), silentbloky a patka.</li>
+    <li><strong>Elektro.</strong> Domluvit s elektrikářem samostatný přívod, jistič a chránič, rozvodnici regulace v technické místnosti.</li>
+  </ol>
+  <h3>B · Venkovní jednotka</h3>
+  <ol class="steps">
+    <li><strong>Umístění.</strong> Venku, dobře větrané, spodní hrana ≥ 30 cm nad terénem, ≥ 0,5 m volno kolem, ≥ 2 m nad výfukem, ≥ 3 m od oken obytných místností. Ne u zdrojů jisker, pod okapem bez žlabu, v rohu bez proudění.</li>
+    <li><strong>Venkovní čidlo.</strong> Je v jednotce – nedávat jednotku na přímé slunce na jižní fasádě ani do proudu teplého vzduchu (zkresluje křivku).</li>
+    <li><strong>Patka a kondenzát.</strong> Rovný, mírně spádovaný základ, silentbloky, odvod kondenzátu nezamrzající (štěrkový zásyp / temperovaný odvod).</li>
+    <li><strong>Venkovní armatury.</strong> Uzávěry (2), separátor s odvzdušněním a pojistným ventilem (4), protizámrazový ventil (3); potrubí izolovat proti UV a mrazu.</li>
+  </ol>
+  <h3>C · Hydraulika v domě</h3>
+  <ol class="steps">
+    <li><strong>Filtr</strong> (5) na vratce do TČ mezi uzávěry, trojcestný ventil (8) na výstupu, AKU (17) podle schématu.</li>
+    <li><strong>Expanzní nádoba</strong> (6) na vratce, předtlak podle výšky soustavy; plnicí a vypouštěcí kohout v nejnižším místě.</li>
+    <li><strong>Přepouštěcí ventil</strong> (16) na konci rozvodu; u S3/S4 sekundární čerpadlo (19) se zpětnou klapkou a uzávěry.</li>
+    <li><strong>Zásobník TUV</strong> (9) se spirálou ≥ výkon TČ, jímka pro čidlo T9 v úrovni spirály, pojistná skupina TUV.</li>
+    <li><strong>Zkouška těsnosti</strong> a tlaková zkouška; izolace veškerého potrubí.</li>
+  </ol>
+  <h3>D · Elektro a regulace</h3>
+  <ol class="steps">
+    <li><strong>Napájení</strong> podle tabulky; kontrola L/N, uzemnění, utažení svorek.</li>
+    <li><strong>Ovladač</strong> do referenční místnosti (strategie B) nebo do technické místnosti (A, C).</li>
+    <li><strong>Termostat</strong> na L1–C1 (zóna A), u dvou zón L1–H1 (B1), u tří L2–H2 (B2).</li>
+    <li><strong>Výstupy</strong> přes relé: P_O → K1, P_M1 → K2, TBH → KM1; SV1 na ON/OFF/N.</li>
+    <li><strong>Čidla</strong> T9, T8/T7, T10 na svoje vstupy, stíněný kabel odděleně od silových.</li>
+    <li><strong>DIP přepínače</strong> zkontrolovat: SW1 záložní dohřev (IBH1), SW5 typ jednotky dle štítku, SW4.2 = ON jen s MPPT.</li>
+  </ol>
+  <h3>E · Plnění a uvedení do provozu</h3>
+  <ol class="steps">
+    <li><strong>Proplach</strong> soustavy (zejména staré radiátory), plnění upravenou vodou, tlak 1,5–2 bar za studena, důkladné odvzdušnění.</li>
+    <li><strong>Před prvním startem</strong> nechat jednotku pod napětím (předehřev kompresoru – návod: min. 12 h před sezónou).</li>
+    <li><strong>Test komponent</strong> v menu <code>Advanced setting › Mnl test menu</code> (při vypnutém TČ): čerpadla, SV1, TMV, IBH.</li>
+    <li><strong>Nastavit parametry</strong> podle kapitoly 10 a zapsat do protokolu.</li>
+    <li><strong>Zkušební provoz</strong>: topení, přepnutí na TUV, odmrazování; kontrola průtoku (bez chyby průtoku), ΔT na jednotce 5–7 K.</li>
+    <li><strong>Předání</strong>: ukázat uživateli žádanou teplotu, časový program, dovolenou, TUV; aplikaci Wi-Fi spárovat s jeho telefonem.</li>
+  </ol>
+</section>
+
+<!-- ============================================================ 10 -->
+<section id="parametry">
+  <h2><span class="n">10</span>Nastavení parametrů při uvedení do provozu</h2>
+  <p>Cesty menu odpovídají návodu; číslování položek se může lišit podle verze ovladače – řiďte se názvem parametru. Pokročilé nastavení je chráněno servisním heslem (návod kap. 3.3.18), po nastavení se odhlaste.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Parametr</th><th>Cesta</th><th>S1 / S2</th><th>S3</th><th>S4</th></tr></thead>
+    <tbody>
+      <tr><td><code>PANEL_CTRL</code></td><td>Advanced › Parameters config › System Parameters II › 02</td><td><code>1ZONE.TA</code></td><td><code>1ZONE.TW</code></td><td><code>2ZONE.TW&amp;TA</code></td></tr>
+      <tr><td><code>RT_CTRL</code></td><td>System Parameters II › 01</td><td><code>OFF</code> (nebo <code>ZONE.A.SWITCH</code> u strategie C)</td><td><code>ZONE.A.SWITCH</code></td><td><code>ZONE.A.SWITCH</code> pro zónu A*</td></tr>
+      <tr><td>Křivka #9 topení</td><td>User parameters › Heat Curve#9 (Env.Temp1/2, Out.Temp1/2)</td><td>podle tabulky kap. 4</td><td>podle tabulky</td><td>pro radiátory (zóna A)</td></tr>
+      <tr><td>Zapnutí křivky</td><td><code>A_ZONE_HEAT_CURVE</code> / <code>B_ZONE_HEAT_CURVE</code></td><td>A = CURVE#9</td><td>A = CURVE#9</td><td>A = CURVE#9, B = 1.L–3.L nebo pevná <code>HEAT_TEMP_SET_B</code></td></tr>
+      <tr><td><code>HEAT_ROOM_TEMP_SET</code></td><td>User parameters › 06</td><td>21 °C</td><td>–</td><td><code>HEAT_ROOM_TEMP_SET_B</code> 21 °C</td></tr>
+      <tr><td><code>ROOM_TEMP_dT</code></td><td>Parameters config › Energy Control › 10</td><td>podlaha 0,3–0,5 K · radiátory 0,5–1 K</td><td>–</td><td>0,5 K</td></tr>
+      <tr><td><code>HEAT_LOAD_dT</code> / <code>HEAT_UNLOAD_dT</code></td><td>Energy Control › 7 / 8</td><td colspan="3">ponechat tovární; při taktování zvětšit hysterezi</td></tr>
+      <tr><td><code>AUTO_HT_TA_MAX</code></td><td>Protection settings I › 44</td><td colspan="3">16–17 °C (letní vypnutí topení v režimu Auto)</td></tr>
+      <tr><td><code>IBH_ON_TA</code></td><td>20 Auxiliary Heat Settings › 10</td><td colspan="3">bod bivalence z návrhu, typicky −7 až −10 °C</td></tr>
+      <tr><td><code>IBH_ON_DLY</code> / <code>IBH_ON_dT</code></td><td>20 Auxiliary Heat Settings › 09 / 11</td><td colspan="3">zpoždění 30–60 min, rozdíl ≥ 5 K – dohřev jen když TČ opravdu nestačí</td></tr>
+      <tr><td><code>HOT_WATER</code></td><td>System Parameters II › 10</td><td colspan="3">YES (se zásobníkem TUV); <code>HOT_WATER_TEMP_SET</code> 48–50 °C, sterilizace 1× týdně</td></tr>
+      <tr><td><code>TFLin_SENSOR</code></td><td>15 Input &amp; Sensors › 11</td><td>enable, je-li osazeno čidlo podlahy</td><td>–</td><td>enable (T10)</td></tr>
+      <tr><td>Čidla AKU T8/T7</td><td>15 Input &amp; Sensors</td><td>–</td><td colspan="2">aktivovat, jsou-li osazena (název položky ověřit na ovladači)</td></tr>
+      <tr><td><code>POWER_MODE</code></td><td>User parameters › 13</td><td colspan="3">standard</td></tr>
+      <tr><td>Časový program</td><td>Timer Settings › Timer On/Off</td><td colspan="3">podlaha bez útlumu / max. 1 K; radiátory útlum 2 K 22–5 h</td></tr>
+      <tr><td><code>SMART_GRID</code></td><td>Engineering Settings I › 23, 22 = 7, System setting I › 38</td><td colspan="3">enabled, je-li připojen SG/EVU signál; <code>Unit Power Limit</code> dle požadavku</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">* Při <code>2ZONE.TW&amp;TA</code> se zóna B zapíná podle prostorové teploty z ovladače (ovladač v místnosti zóny B). Pokud chcete pro zónu B samostatný termostat, použijte <code>PANEL_CTRL = 2ZONE.TW</code> a <code>RT_CTRL = 2 ZONE.SWITCH</code> (zóna A na L1–C1, zóna B na L1–H1).</p>
+
+  <h3>Smart Grid – logika (konfigurace 7)</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Stav</th><th>EVU</th><th>SG</th><th>Chování TČ</th></tr></thead>
+    <tbody>
+      <tr><td>1 · špička / omezení</td><td>sepnuto</td><td>libovolně</td><td>Omezený výkon na <code>Unit Power Limit</code></td></tr>
+      <tr><td>2 · normální provoz</td><td>rozepnuto</td><td>rozepnuto</td><td>Běžná regulace</td></tr>
+      <tr><td>3 · přebytek (FV)</td><td>rozepnuto</td><td>sepnuto</td><td>Režim „powerful“, přednost TUV, zvýšení teploty TUV</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Stav 3 zvyšuje jen TUV, ne vytápění. Pro ukládání přebytků do podlahy použijte časový program (kap. 6).</p>
+</section>
+
+<!-- ============================================================ 11 -->
+<section id="ladeni">
+  <h2><span class="n">11</span>Ladění v prvních týdnech a časté závady</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Projev</th><th>Pravděpodobná příčina</th><th>Řešení</th></tr></thead>
+    <tbody>
+      <tr><td>Při mrazu chladno, v přechodu teplo</td><td>Křivka málo strmá</td><td>Zvýšit Out.Temp1 o 1–2 K</td></tr>
+      <tr><td>Chladno i v přechodném období</td><td>Křivka nízko</td><td>Zvýšit Out.Temp2 o 1–2 K</td></tr>
+      <tr><td>Přetápí se, TČ se často vypíná na prostorovou teplotu</td><td>Křivka vysoko</td><td>Snížit Out.Temp1/2; cíl: TČ běží dlouho a prostorová teplota jen jemně dorovnává</td></tr>
+      <tr><td>TČ taktuje (starty po pár minutách)</td><td>Malý objem vody, zavřené hlavice, hystereze</td><td>Otevřít smyčky, přepouštěcí ventil, doplnit AKU (S2), zvětšit hysterezi</td></tr>
+      <tr><td>Chyba průtoku</td><td>Vzduch, zanesený filtr, zavřený ventil, malé čerpadlo</td><td>Odvzdušnit, vyčistit filtr, ověřit výtlak čerpadla</td></tr>
+      <tr><td>Při odmrazování studené radiátory</td><td>Malý objem soustavy</td><td>Sériová AKU (S2)</td></tr>
+      <tr><td>Často spíná záložní dohřev</td><td>Hluboký útlum, nízké IBH_ON_DLY, vysoké IBH_ON_TA</td><td>Omezit útlum, zvýšit zpoždění, snížit IBH_ON_TA</td></tr>
+      <tr><td>V místnosti ovladače jiná teplota než jinde</td><td>Ovladač na slunci, u krbu nebo u vnější stěny</td><td>Přemístit, nebo přejít na termostat ve vhodné místnosti (strategie C)</td></tr>
+      <tr><td>Podlaha (zóna B) přetápí</td><td>Směšovač bez zpětné vazby, chybí T10</td><td>Zkontrolovat TMV1, čidlo T10, pojistný termostat</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ============================================================ 12 -->
+<section id="predani">
+  <h2><span class="n">12</span>Kontrolní seznam pro předání</h2>
+  <p class="muted">Zaškrtnutí se ukládá jen ve vašem prohlížeči.</p>
+  <ul class="check" id="checklist">
+    <li><label><input type="checkbox" id="c1"> Jednotka venku, ochranná zóna R290 dodržena, separátor s pojistným ventilem venku</label></li>
+    <li><label><input type="checkbox" id="c2"> Uzávěry, šroubení, filtr na vratce, protizámrazová ochrana</label></li>
+    <li><label><input type="checkbox" id="c3"> Expanzní nádoba dimenzovaná, předtlak nastaven</label></li>
+    <li><label><input type="checkbox" id="c4"> Přepouštěcí ventil nastaven, minimální průtok TČ ověřen</label></li>
+    <li><label><input type="checkbox" id="c5"> Soustava propláchnutá, naplněná upravenou vodou, odvzdušněná</label></li>
+    <li><label><input type="checkbox" id="c6"> Tlaková zkouška, izolace potrubí</label></li>
+    <li><label><input type="checkbox" id="c7"> Napájení, jistič, chránič a uzemnění dle tabulky; DIP přepínače zkontrolovány</label></li>
+    <li><label><input type="checkbox" id="c8"> Zátěže nad 0,2 A přes relé / stykač; termostat jako bezpot. kontakt</label></li>
+    <li><label><input type="checkbox" id="c9"> Čidla T9 / T8 / T7 / T10 zapojená a aktivovaná, hodnoty na ovladači odpovídají</label></li>
+    <li><label><input type="checkbox" id="c10"> Ovladač v referenční místnosti (strategie B) nebo termostat na L1–C1</label></li>
+    <li><label><input type="checkbox" id="c11"> PANEL_CTRL, RT_CTRL, křivka #9, ROOM_TEMP_dT, IBH a TUV nastaveny a zapsány</label></li>
+    <li><label><input type="checkbox" id="c12"> Test komponent proběhl; topení, TUV a odmrazování vyzkoušeny</label></li>
+    <li><label><input type="checkbox" id="c13"> Hydraulické vyvážení těles / smyček provedeno</label></li>
+    <li><label><input type="checkbox" id="c14"> Uživatel zaškolen, aplikace spárována, termín kontroly křivky za 2–3 týdny domluven</label></li>
+  </ul>
+  <div class="btnrow"><button type="button" id="clear">Zrušit zaškrtnutí</button></div>
+</section>
+
+<!-- ============================================================ 13 -->
+<section id="overit">
+  <h2><span class="n">13</span>K ověření u výrobce</h2>
+  <ul>
+    <li>Číslování uživatelských parametrů křivek se v návodu liší (20/21 v tabulce vs. 26/27 v textu) – rozhoduje název na ovladači.</li>
+    <li>Název položky pro aktivaci čidel AKU (T8/T7) a jejich vliv na řízení (spínání podle AKU vs. podle výstupní vody).</li>
+    <li>Zda se při <code>1ZONE.TA</code> současně uplatní ekvitermní křivka (ověřit při uvedení do provozu: ikona křivky na hlavní obrazovce a žádaná teplota vody ve stavu).</li>
+    <li>Napětí na svorkách L1/L2 termostatu (návod uvádí „Dry Contact“).</li>
+    <li>Maximální délka kabelu ovladače a typ prodlužovacího kabelu.</li>
+    <li>Typ řídicího signálu směšovacího ventilu TMV (AIV/AOV) a doporučený ventil.</li>
+    <li>Rozsah <code>ROOM_TEMP_dT</code> a hystereze vody.</li>
+    <li>Doporučený objem AKU pro RHX20 Pro / RHX30 Pro.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>REO HEATING · Zjednodušené orientační podklady pro projektanty a montážní firmy. Závazný je návod k instalaci a obsluze konkrétního modelu a projekt pro konkrétní dům. Úspory a účinnost jsou orientační a závisí na domě, soustavě a provozu.</p>
+</footer>
+</main>
+</div>
+</div>
+
+<script>
+(function(){
+  // graf ekvitermních křivek #9
+  const svg=document.querySelector('.chart svg'); if(!svg) return;
+  const css=getComputedStyle(document.documentElement);
+  const fg=css.getPropertyValue('--muted').trim()||'#5C6B63', ln=css.getPropertyValue('--line').trim()||'#D7E2DB';
+  const X0=60,X1=610,Y0=290,Y1=20, tmin=-20,tmax=20, wmin=20,wmax=60;
+  const x=t=>X0+(t-tmin)/(tmax-tmin)*(X1-X0), y=w=>Y0-(w-wmin)/(wmax-wmin)*(Y0-Y1);
+  let h='';
+  for(let t=tmin;t<=tmax;t+=5){h+=`<line x1="${x(t)}" y1="${Y1}" x2="${x(t)}" y2="${Y0}" stroke="${ln}"/><text x="${x(t)}" y="${Y0+18}" text-anchor="middle" fill="${fg}">${t}</text>`}
+  for(let w=wmin;w<=wmax;w+=5){h+=`<line x1="${X0}" y1="${y(w)}" x2="${X1}" y2="${y(w)}" stroke="${ln}"/><text x="${X0-8}" y="${y(w)+4}" text-anchor="end" fill="${fg}">${w}</text>`}
+  h+=`<text x="${(X0+X1)/2}" y="${Y0+36}" text-anchor="middle" fill="${fg}">venkovní teplota (°C)</text>`;
+  h+=`<text x="16" y="${(Y0+Y1)/2}" text-anchor="middle" fill="${fg}" transform="rotate(-90 16 ${(Y0+Y1)/2})">teplota výstupní vody (°C)</text>`;
+  const curves=[['#2468B3',34,25],['#34A263',39,26],['#E07B39',45,28],['#D9342B',53,30]];
+  let lastY=-99;
+  curves.forEach(([c,o1,o2])=>{
+    const pts=[[tmin,o1],[-12,o1],[15,o2],[tmax,o2]].map(([t,w])=>`${x(t)},${y(w)}`).join(' ');
+    h+=`<polyline points="${pts}" fill="none" stroke="${c}" stroke-width="3" stroke-linejoin="round"/>`;
+    h+=`<circle cx="${x(-12)}" cy="${y(o1)}" r="4.5" fill="${c}"/><text x="${x(-12)-8}" y="${y(o1)-8}" text-anchor="end" fill="${c}" font-weight="600">${o1}</text>`;
+    h+=`<circle cx="${x(15)}" cy="${y(o2)}" r="4.5" fill="${c}"/>`;
+    const ly=Math.max(y(o2)+4,lastY+13); lastY=ly;
+    h+=`<text x="${X1+6}" y="${ly}" fill="${c}" font-weight="600">${o2}</text>`;
+  });
+  h+=`<text x="${x(-12)}" y="${Y1+12}" text-anchor="middle" fill="${fg}">Env.Temp1</text><text x="${x(15)}" y="${Y1+12}" text-anchor="middle" fill="${fg}">Env.Temp2</text>`;
+  svg.innerHTML=h;
+})();
+(function(){
+  // kontrolní seznam – jen pohodlí v prohlížeči
+  const K='reo-smart-regulace-check';
+  let st={}; try{st=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+  const boxes=document.querySelectorAll('#checklist input');
+  boxes.forEach(b=>{b.checked=!!st[b.id];b.addEventListener('change',()=>{st[b.id]=b.checked;try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}})});
+  document.getElementById('clear').addEventListener('click',()=>{st={};boxes.forEach(b=>b.checked=false);try{localStorage.removeItem(K)}catch(e){}});
+})();
+</script>
