@@ -39,7 +39,7 @@ CLAUDE.md** a drž se pravidel tam uvedených.
 | `nakupni-ceny/` | interní přehled nákupních cen: fakturované ceny PW, ceníky Smart / RHX Pro / Cleanlife / komerční, nádrže, sklad Frankfurt; artefakt |
 | `reo-nahradni-dily/` | interní nákupní ceník náhradních dílů RH030–RH060 (USD + Kč), JSON z `REO/PW R290/Spare Part List - revised.pdf`, artefakt |
 | `reo-schemata-zapojeni/` | jednoduchá schémata zapojení TČ REO HEATING pro kutily (číslované popisky); varianta 1 = jen topení s AKU + sekundární čerpadlo na bezdrátový termostat |
-| `reo-smart-regulace/` | **regulace komfortní teploty REO R290 Smart** – návod pro projektanty a montážní party: křivka #9 + prostorová teplota / termostat / zóny, schémata S1–S4 (bez AKU, sériová, paralelní AKU, 2 zóny) + elektro E1; artefakt 4Fbg3QirxjmtSv7dCop8oH |
+| `reo-smart-regulace/` | **Instalační standard REO R290 Smart v1.0** (schváleno 14. 11. 2026): schémata SM-P1/P2 (podlaha sériová/paralelní AKU), SM-R1/R2 (radiátory), SM-K1, SM-X1 v0.9, SM-E1; regulace termostat / čidlo ovladače / křivka / konstantní teplota; rev. 0 (S1–S4) jen reference; artefakt 4Fbg3QirxjmtSv7dCop8oH |
 | `reo-iot-cz/` | rozšíření Chrome nad IOT Power World (CZ překlad, encyklopedie parametrů, chyby, diagnostika); vlastní **CLAUDE.md** (read-only, `podklady/` mimo git) |
 | `eko4home-web/` | návrh redesignu eko4home.cz (Riva Trade): design dle klimatizacekasparek.vercel.app, produkty REO RH030–RH060, Smart, RHX Pro, nádrže s cenami |
 | `reoheating-redesign/` | **návrh nového webu REO HEATING** (13. 11. 2026) v barvách bannerů: domácnosti, zelené kotelny, průmysl, mobilní kotelny; artefakt PdPNnYNXA75YnWvP8Vox5T |

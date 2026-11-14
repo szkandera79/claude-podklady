@@ -1,0 +1,532 @@
+<title>Instalační standard REO R290 Smart</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
+{{CSS}}
+<style>
+.src{display:inline-block;font-family:var(--f-mono);font-size:10.5px;font-weight:600;padding:0 6px;border-radius:4px;vertical-align:1px;white-space:nowrap}
+.src.v{background:var(--brand-tint);color:var(--brand-ink)}
+.src.o{background:var(--surface2);color:var(--muted)}
+.src.q{background:var(--warn-tint);color:var(--warn)}
+.st{display:inline-block;font-size:12px;font-weight:700;padding:1px 9px;border-radius:999px;white-space:nowrap}
+.st.ok{background:var(--brand);color:#fff}
+.st.add{background:var(--brand-tint);color:var(--brand-ink)}
+.st.cond{background:var(--warn-tint);color:var(--warn)}
+.st.no{background:var(--surface2);color:var(--muted);text-decoration:line-through}
+.sm{border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:22px 0}
+.sm h3{margin:0 0 4px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.sm h3 .id{font-family:var(--f-mono);font-size:15px;color:var(--brand-ink)}
+.sm .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:4px 28px;margin-top:10px}
+.sm .grid div{min-width:0}
+.sm .grid h4{font-family:var(--f-head);font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:12px 0 4px}
+.sm .grid ul{margin:0;font-size:14px}
+.sm .grid p{margin:0;font-size:14px}
+details{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:10px 0}
+details summary{cursor:pointer;font-weight:600}
+.matrix td,.matrix th{text-align:center}
+.matrix td:first-child,.matrix th:first-child{text-align:left}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="logo" aria-label="REO HEATING">{{LOGO}}</div>
+  <div style="min-width:0;flex:1 1 420px">
+    <h1>Instalační standard REO R290 Smart</h1>
+    <p class="sub">Hydraulická zapojení, regulace komfortní teploty, elektrické zapojení a uvedení do provozu · metodika pro projektanty a montážní party</p>
+    <p class="meta">RH06–RH16 (1F/3F), RHX20 Pro, RHX30 Pro · <strong>verze 1.0 · 14. 11. 2026</strong> · koncepce schválena 14. 11. 2026 · nahrazuje návod rev. 0 (viz Historie)</p>
+  </div>
+</header>
+
+<div class="layout">
+<nav class="toc" aria-label="Obsah">
+  <p>Obsah</p>
+  <ol>
+    <li><a href="#platnost">Platnost a katalog</a></li>
+    <li><a href="#vyber">Výběr zapojení</a></li>
+    <li><a href="#fakta">Ověřená fakta výrobce</a></li>
+    <li><a href="#regulace">Regulace</a></li>
+    <li><a href="#krivka">Ekvitermní křivka</a></li>
+    <li><a href="#schemata">Schémata SM</a></li>
+    <li><a href="#legenda">Legenda prvků</a></li>
+    <li><a href="#dimenze">Dimenzování</a></li>
+    <li><a href="#elektro">Elektrické zapojení</a></li>
+    <li><a href="#montaz">Montážní postup</a></li>
+    <li><a href="#parametry">Nastavení parametrů</a></li>
+    <li><a href="#uvedeni">Uvedení do provozu</a></li>
+    <li><a href="#ladeni">Ladění a závady</a></li>
+    <li><a href="#predani">Kontrolní seznam</a></li>
+    <li><a href="#overit">Otevřené body</a></li>
+    <li><a href="#historie">Historie a reference</a></li>
+  </ol>
+</nav>
+
+<main>
+<!-- ================================================= 1 -->
+<section id="platnost">
+  <h2><span class="n">01</span>Platnost, značení a katalog zapojení</h2>
+  <p class="lead">Standard vychází z návodu k instalaci a obsluze REO R290 Smart (CZ, 99 stran) a instalační příručky výrobce. Požadavky výrobce a bezpečnost jsou nepřekročitelné. U každého údaje je uveden zdroj:</p>
+  <p><span class="src v">V</span> potvrzeno výrobcem (kapitola dokumentu) · <span class="src o">O</span> odborný závěr REO HEATING · <span class="src q">?</span> k ověření u výrobce nebo při uvedení do provozu</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Označení</th><th>Stav</th><th>Otopná soustava</th><th>Akumulace</th><th>Čerpadla</th><th>Regulace standard / alternativa</th></tr></thead>
+    <tbody>
+      <tr><td><a href="#sm-p1"><strong>SM-P1</strong></a> v1.0</td><td><span class="st ok">standard</span></td><td>podlaha, smyčky trvale otevřené</td><td>sériová ve vratce</td><td>jen vestavěné</td><td>čidlo ovladače + křivka / termostat + křivka</td></tr>
+      <tr><td><a href="#sm-p2"><strong>SM-P2</strong></a> v1.0</td><td><span class="st ok">standard</span></td><td>podlaha se zónovými ventily, více okruhů, větší odpor</td><td>paralelní</td><td>vestavěné + P_O</td><td>termostat + křivka / termostat + konstantní teplota</td></tr>
+      <tr><td><a href="#sm-r1"><strong>SM-R1</strong></a> v1.0</td><td><span class="st ok">standard</span></td><td>radiátory s termostatickými hlavicemi</td><td>paralelní</td><td>vestavěné + P_O</td><td>termostat + křivka / termostat + konstantní teplota</td></tr>
+      <tr><td><a href="#sm-r2"><strong>SM-R2</strong></a> v1.0</td><td><span class="st add">alternativa</span></td><td>radiátory, jeden okruh, malý odpor, většina těles otevřená</td><td>sériová ve vratce</td><td>jen vestavěné</td><td>čidlo ovladače + křivka / termostat + křivka</td></tr>
+      <tr><td><a href="#sm-k1"><strong>SM-K1</strong></a> v1.0</td><td><span class="st add">doplňková</span></td><td>radiátory + podlaha</td><td>paralelní</td><td>vestavěné + P_O + P_M1</td><td>2 termostaty (2 ZONE.SWITCH)</td></tr>
+      <tr><td><a href="#sm-x1"><strong>SM-X1</strong></a> v0.9</td><td><span class="st cond">podmíněné</span></td><td>riziko zamrznutí, znečištěná stará soustava</td><td>sériová v sekundáru</td><td>vestavěné + P_O</td><td>termostat + křivka</td></tr>
+      <tr><td><strong>SM-P0</strong> (S1 rev. 0)</td><td><span class="st no">nepřípustné</span></td><td>podlaha bez AKU</td><td>žádná</td><td>jen vestavěné</td><td>jen s písemným souhlasem výrobce</td></tr>
+    </tbody>
+  </table></div>
+  <div class="warn"><strong>Zapojení bez akumulační nádrže se nepoužívá.</strong> Výrobce akumulační nádrž požaduje: „users must install a buffer water tank“ kvůli častému vypínání při nízkém zatížení <span class="src v">V příručka 4.4</span>. Všechny jeho aplikace v návodu ji obsahují <span class="src v">V návod 2.7</span>. Přímé zapojení (SM-P0) zůstává jen jako referenční podklad do doby písemného vyjádření výrobce.</div>
+</section>
+
+<!-- ================================================= 2 -->
+<section id="vyber">
+  <h2><span class="n">02</span>Výběr zapojení</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Otázka</th><th>Odpověď → zapojení</th></tr></thead>
+    <tbody>
+      <tr><td>Jen podlaha, smyčky trvale otevřené, malý odpor soustavy?</td><td><strong>SM-P1</strong> (sériová AKU, nejvyšší účinnost)</td></tr>
+      <tr><td>Podlaha se zónovými hlavicemi, více rozdělovačů nebo tlaková ztráta, kterou vestavěné čerpadlo nepokryje?</td><td><strong>SM-P2</strong> (paralelní AKU + P_O)</td></tr>
+      <tr><td>Radiátory s termostatickými hlavicemi (proměnný průtok)?</td><td><strong>SM-R1</strong> (paralelní AKU + P_O)</td></tr>
+      <tr><td>Radiátory, jeden krátký okruh, hlavice převážně otevřené?</td><td><strong>SM-R2</strong> (sériová AKU)</td></tr>
+      <tr><td>Radiátory i podlaha v jednom domě?</td><td><strong>SM-K1</strong></td></tr>
+      <tr><td>Hrozí dlouhý výpadek proudu v mrazu, nebo je stará soustava znečištěná?</td><td><strong>SM-X1</strong> (podmíněné ověřením)</td></tr>
+    </tbody>
+  </table></div>
+  <p>Proč se liší akumulace podle soustavy <span class="src o">O</span>: podlaha s otevřenými smyčkami má stálý průtok, proto sériová AKU přidá objem bez míchání teplot. Radiátory s hlavicemi mají proměnný průtok, proto paralelní AKU oddělí průtok TČ od průtoku soustavy a nevyžaduje přepouštění výstupu do vratky. Paralelní AKU s čerpadlem P_O odpovídá referenčním aplikacím výrobce <span class="src v">V návod 2.7, obr. 3–9</span>.</p>
+</section>
+
+<!-- ================================================= 3 -->
+<section id="fakta">
+  <h2><span class="n">03</span>Ověřená fakta výrobce – čerpadla, průtok, odmrazování</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Téma</th><th>Zjištění</th><th>Zdroj</th></tr></thead>
+    <tbody>
+      <tr><td>Vestavěné čerpadlo</td><td>Jednotka má vestavěné hlavní oběhové čerpadlo; max. výtlak 9 m (RH06–RH10 1F, RH08–RH10 3F), 12 m (RH12–RH16), 13 m (RHX20 Pro), 15 m (RHX30 Pro).</td><td><span class="src v">V návod 2.6.3, 2.1</span></td></tr>
+      <tr><td>PUMPo / P_O</td><td><strong>Externí</strong> čerpadlo zóny A („Outside circulation pump / Zone A pump, field supply“), volitelné, dodávka stavby. Ve všech aplikacích výrobce je za paralelní AKU.</td><td><span class="src v">V návod 2.7, 2.10; příručka 6.2.9</span></td></tr>
+      <tr><td>P_O a termostat</td><td>Sepne kterýkoli kontakt C1–L1 → systém i P_O běží; všechny rozepnuté → systém i P_O stojí.</td><td><span class="src v">V návod 2.7, apl. 2</span></td></tr>
+      <tr><td>P_O a TUV</td><td>Při ohřevu TUV P_O stojí. <strong>Polarita SV1 se v podkladech liší:</strong> návod uvádí TUV = VYP, topení = ZAP; příručka uvádí TUV = ON. Který vývod ventilu vede do spirály, ověřit testem komponent.</td><td><span class="src v">V návod 2.7 apl. 1; příručka 6.2.6</span> <span class="src q">?</span></td></tr>
+      <tr><td>SV1 při odmrazování</td><td>„In hot water mode, defrost mode, antifreeze mode the SV1 three-way valve is turned on.“ Odmrazování tedy odebírá teplo ze zásobníku TUV. CZ návod tento údaj neobsahuje.</td><td><span class="src v">V příručka 6.2.6</span> <span class="src q">? ověřit při uvedení</span></td></tr>
+      <tr><td>Zpětný ventil</td><td>Na výstup vody osadit zpětný ventil, aby po zastavení čerpadla nedocházelo ke zpětnému sání.</td><td><span class="src v">V návod 2.8.2 bod 6</span></td></tr>
+      <tr><td>Filtr</td><td>Na vstupu vody do TČ je nutný filtr.</td><td><span class="src v">V návod 2.5</span></td></tr>
+      <tr><td>Průtok</td><td>Jmenovitý průtok 1,46–5,2 m³/h, tlaková ztráta jednotky 30–60 kPa. Alarm, není-li 30 s po spuštění čerpadla dostatečný průtok.</td><td><span class="src v">V návod 2.1, kap. 5 (chybové kódy)</span></td></tr>
+      <tr><td>Čerpadlo za AKU</td><td>Průtok ≥ jmenovitý průtok TČ × 1,2–1,3; výtlak H = K · (výška + ztráta nejhoršího okruhu), K = 1,1–1,2.</td><td><span class="src v">V příručka 4.3</span></td></tr>
+      <tr><td>AKU</td><td>Povinná; objem 60–150 l (RH06), 60–200 l (RH08), 100–300 l (RH10–14), 200–400 l (RH16).</td><td><span class="src v">V příručka 4.4</span></td></tr>
+      <tr><td>Nezdokumentováno</td><td>Řízení vestavěného čerpadla (doběh, pohotovost, otáčky), jeho křivka, minimální průtok, minimální objem vody.</td><td><span class="src q">? dotaz výrobci</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ================================================= 4 -->
+<section id="regulace">
+  <h2><span class="n">04</span>Regulace komfortní teploty</h2>
+  <p>Regulace má dvě nezávislé části: <strong>co zapíná a vypíná topení</strong> a <strong>jakou teplotu vody TČ vyrábí</strong>.</p>
+  <div class="tbl"><table class="matrix">
+    <thead><tr><th>Spínání topení</th><th>Nastavení</th><th>+ křivka #9</th><th>+ konstantní teplota</th></tr></thead>
+    <tbody>
+      <tr><td><strong>R-A</strong> prostorové čidlo ovladače</td><td><code>PANEL_CTRL = 1ZONE.TA</code>, <code>RT_CTRL = OFF</code></td><td>standard SM-P1, SM-R2 <span class="src q">? křivka v režimu TA</span></td><td>přípustné</td></tr>
+      <tr><td><strong>R-B</strong> externí pokojový termostat</td><td><code>RT_CTRL = ZONE.A.SWITCH</code> (L1–C1)</td><td>standard SM-P2, SM-R1, SM-X1</td><td>přípustné</td></tr>
+      <tr><td><strong>R-C</strong> teplota vody (bez prostorové vazby)</td><td><code>PANEL_CTRL = 1ZONE.TW</code>, <code>RT_CTRL = OFF</code></td><td>srovnávací varianta</td><td>nedoporučeno</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><strong>Pravidlo výrobce:</strong> režimy <code>PANEL_CTRL</code> 1ZONE.TW / 1ZONE.TA jsou určeny pro instalace <strong>bez pokojových termostatů</strong> <span class="src v">V návod 4.2.5</span>. S termostatem se nastavuje <code>RT_CTRL</code> <span class="src v">V návod 4.2.6</span>. Termostat jen zapíná a vypíná; TČ přitom reguluje pouze teplotu vody <span class="src v">V návod 3.3.1</span>. Kombinace termostatu s <code>1ZONE.TA</code> se nepoužívá.</div>
+
+  <h3>R-A · Prostorové čidlo kabelového ovladače</h3>
+  <ul>
+    <li>TČ topí při <code>TS − TR ≥ ROOM_TEMP_dT</code>, přestane při <code>TR ≥ TS</code> <span class="src v">V návod 4.2.3</span>. Žádaná teplota <code>HEAT_ROOM_TEMP_SET</code> 16–30 °C, výchozí 20 °C <span class="src v">V 3.3.20</span>.</li>
+    <li>Ovladač musí být uvnitř <span class="src v">V 3.3.1</span>: referenční místnost, 1,5 m nad podlahou, mimo slunce a zdroje tepla <span class="src o">O</span>.</li>
+    <li>Návod (2.6.3) zmiňuje, že ovladač má být „dobře čitelný“ u jednotky – před montáží ověřit, kde je ovladač dodán a jak dlouhý je jeho kabel <span class="src q">?</span>.</li>
+    <li>Zda se v režimu TA použije křivka, návod neuvádí <span class="src q">?</span>. Ověřit při uvedení do provozu (kap. 12, krok 7). Pokud ne → přejít na R-B.</li>
+  </ul>
+  <h3>R-B · Externí pokojový termostat</h3>
+  <ul>
+    <li>Bezpotenciálový kontakt na L1–C1 (zóna A), L1–H1 (zóna B1), L2–H2 (zóna B2); víc termostatů paralelně = „kterýkoli sepne → topí“ <span class="src v">V 2.7, 4.2.6</span>.</li>
+    <li>V zapojení s P_O termostat zastaví i sekundární čerpadlo – soustava se nepřetápí z AKU <span class="src v">V 2.7</span>.</li>
+    <li>Termostat on/off s hysterezí 0,3–0,5 K, ne PWM/TPI s krátkými cykly <span class="src o">O</span>. Bezdrátový termostat jen s přijímačem s bezpotenciálovým kontaktem.</li>
+  </ul>
+  <h3>Konstantní teplota vody</h3>
+  <ul>
+    <li>Křivka vypnutá (<code>A_ZONE_HEAT_CURVE = OFF</code>, výchozí stav) a <code>HEAT_TEMP_SET</code> (výchozí 45 °C) <span class="src v">V 3.3.20</span>.</li>
+    <li>Jednoduché a spolehlivé, ale celou sezónu vyrábí vodu pro nejchladnější den – nižší COP <span class="src o">O</span>. Použít jen tam, kde křivku nelze nastavit, nebo jako přechodné nastavení. Výchozí hodnota: podlaha 30–35 °C, radiátory podle návrhu soustavy.</li>
+  </ul>
+  <h3>Ekvitermní křivka (srovnávací i doporučená)</h3>
+  <p>Teplota vody podle venkovní teploty. Orientačně každý 1 K nižší teploty vody zlepší účinnost o 2–3 % <span class="src o">O</span>. Proto je křivka #9 standardem u R-A i R-B.</p>
+  <h3>Další funkce</h3>
+  <ul>
+    <li>Týdenní program s teplotou pro každý úsek (útlum), tichý režim, dovolená (<code>HOLIDAY_AWAY_Ths</code> 20–25 °C), letní vypnutí (<code>AUTO_HT_TA_MAX</code>), Smart Grid konfig. 7 <span class="src v">V 3.3.9–3.3.10, 4.2.4, 4.2.8, 4.2.13</span>.</li>
+    <li>Útlum: podlaha bez útlumu nebo max. 1 K, radiátory max. 2 K <span class="src o">O</span>.</li>
+  </ul>
+</section>
+
+<!-- ================================================= 5 -->
+<section id="krivka">
+  <h2><span class="n">05</span>Ekvitermní křivka #9</h2>
+  <p>Přednastavené křivky jsou schodovité a ploché (1.L–8.L cca 24–38 °C, 1.H–8.H cca 36–56 °C) <span class="src v">V 3.3.21, obr. 3-17.1/2</span>. Používá se uživatelská křivka #9 zadaná dvěma body <code>Env.Temp1/Out.Temp1</code> a <code>Env.Temp2/Out.Temp2</code> <span class="src v">V 3.3.22</span>. Hodnoty níže jsou výchozí nastavení REO HEATING <span class="src o">O</span>.</p>
+  <div class="chart" role="img" aria-label="Doporučené ekvitermní křivky #9">
+  <svg viewBox="0 0 650 330" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif" font-size="12"></svg>
+  </div>
+  <div class="legend">
+    <span><i style="background:#2468B3"></i>podlaha, novostavba (35/30)</span>
+    <span><i style="background:#34A263"></i>podlaha, rekonstrukce (40/35)</span>
+    <span><i style="background:#E07B39"></i>radiátory nízkoteplotní (45/40)</span>
+    <span><i style="background:#D9342B"></i>radiátory 55/45</span>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Soustava</th><th>Env.Temp1</th><th>Out.Temp1</th><th>Env.Temp2</th><th>Out.Temp2</th></tr></thead>
+    <tbody>
+      <tr><td>Podlaha, novostavba (35/30)</td><td class="c">−12 °C</td><td class="c">33–35 °C</td><td class="c">+15 °C</td><td class="c">24–25 °C</td></tr>
+      <tr><td>Podlaha, rekonstrukce (40/35)</td><td class="c">−12 °C</td><td class="c">38–40 °C</td><td class="c">+15 °C</td><td class="c">26 °C</td></tr>
+      <tr><td>Radiátory nízkoteplotní (45/40)</td><td class="c">−12 °C</td><td class="c">45 °C</td><td class="c">+15 °C</td><td class="c">28 °C</td></tr>
+      <tr><td>Radiátory 55/45</td><td class="c">−12 °C</td><td class="c">52–55 °C</td><td class="c">+15 °C</td><td class="c">30 °C</td></tr>
+      <tr><td>SM-X1 (výměník)</td><td colspan="4">hodnoty soustavy + 2–3 K na ztrátu výměníku <span class="src o">O</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Env.Temp1 = návrhová venkovní teplota lokality (v ČR typicky −12 až −18 °C). Ladění viz kap. 13.</p>
+</section>
+
+<!-- ================================================= 6 -->
+<section id="schemata">
+  <h2><span class="n">06</span>Standardní schémata SM</h2>
+  <p>Zjednodušená orientační schémata. Dimenze, objem expanzní nádoby a nastavení pojistných prvků určuje výpočet pro konkrétní dům. Číslování prvků je společné (kap. 7). Prvky 1–12 a 26 jsou ve všech schématech.</p>
+
+  <article class="sm" id="sm-p1">
+    <h3><span class="id">SM-P1 v1.0</span> Podlahové vytápění – sériová akumulace <span class="st ok">standard</span></h3>
+    <figure><div class="fig"><img src="schema-SM-P1.svg" alt="SM-P1: tepelné čerpadlo, sériová akumulační nádrž ve vratce, podlahový rozdělovač s trvale otevřenými smyčkami, přepouštěcí ventil, trojcestný ventil a zásobník TUV, ovladač v obytné místnosti" loading="lazy"></div></figure>
+    <div class="grid">
+      <div><h4>Kdy</h4><p>Samostatné podlahové vytápění se smyčkami trvale otevřenými a malou tlakovou ztrátou, kterou pokryje vestavěné čerpadlo.</p>
+        <h4>Nezbytné komponenty</h4><ul><li>prvky 1–12, 26</li><li>AKU (17) ve vratce, objem dle modelu</li><li>přepouštěcí ventil (16) na konci rozdělovače</li><li>ovladač (13) v referenční místnosti</li></ul></div>
+      <div><h4>Regulace</h4><p>R-A: <code>1ZONE.TA</code> + křivka #9 nízkoteplotní. Alternativa R-B: termostat (14) L1–C1, <code>RT_CTRL = ZONE.A.SWITCH</code>.</p>
+        <h4>Bezpečný provoz</h4><ul><li>hydraulický výpočet: ztráta soustavy + AKU při jmenovitém průtoku musí pokrýt vestavěné čerpadlo <span class="src q">? křivka čerpadla</span></li><li>voda do podlahy max. 40 °C (u novostavby 35 °C)</li></ul>
+        <h4>Omezení</h4><ul><li>zónové hlavice jen výjimečně</li><li>nepokryje-li čerpadlo ztrátu → SM-P2</li></ul></div>
+    </div>
+  </article>
+
+  <article class="sm" id="sm-p2">
+    <h3><span class="id">SM-P2 v1.0</span> Podlahové vytápění – paralelní akumulace <span class="st ok">standard</span></h3>
+    <figure><div class="fig"><img src="schema-SM-P2.svg" alt="SM-P2: paralelní akumulační nádrž s čidly T8 a T7, sekundární čerpadlo P_O přes relé K1, podlahový rozdělovač, pokojový termostat, ovladač v technické místnosti" loading="lazy"></div></figure>
+    <div class="grid">
+      <div><h4>Kdy</h4><p>Podlaha se zónovými hlavicemi, více rozdělovačů, dlouhé smyčky nebo velká tlaková ztráta. Odpovídá aplikaci 1 výrobce.</p>
+        <h4>Nezbytné komponenty</h4><ul><li>prvky 1–12, 26</li><li>AKU (17) paralelně, čidla T8/T7 (18)</li><li>čerpadlo P_O (19) se zpětnou klapkou, relé K1 (20)</li><li>termostat (14)</li></ul></div>
+      <div><h4>Regulace</h4><p>R-B: <code>RT_CTRL = ZONE.A.SWITCH</code>, termostat spíná TČ i P_O. Teplota vody: křivka #9, alternativa konstantní.</p>
+        <h4>Bezpečný provoz</h4><ul><li>průtok P_O ≤ průtok TČ, jinak se v AKU přimíchává vratka <span class="src o">O</span></li><li>P_O vždy přes relé (výstup max. 0,2 A) <span class="src v">V 2.10</span></li></ul>
+        <h4>Omezení</h4><ul><li>o 1–2 K vyšší teplota vody proti SM-P1 při nevyváženém průtoku <span class="src o">O</span></li></ul></div>
+    </div>
+  </article>
+
+  <article class="sm" id="sm-r1">
+    <h3><span class="id">SM-R1 v1.0</span> Radiátory – paralelní akumulace <span class="st ok">standard</span></h3>
+    <figure><div class="fig"><img src="schema-SM-R1.svg" alt="SM-R1: paralelní akumulační nádrž, čerpadlo P_O přes relé K1, radiátory s termostatickými hlavicemi, referenční místnost s termostatem" loading="lazy"></div></figure>
+    <div class="grid">
+      <div><h4>Kdy</h4><p>Radiátorová soustava s termostatickými hlavicemi, starší rozvod, víc větví. Vznik: S3 rev. 0 + zpětný ventil.</p>
+        <h4>Nezbytné komponenty</h4><ul><li>prvky 1–12, 26</li><li>AKU (17) paralelně, T8/T7 (18)</li><li>P_O (19), relé K1 (20)</li><li>termostat (14) v referenční místnosti bez hlavice</li><li>přepouštěcí ventil (16)</li></ul></div>
+      <div><h4>Regulace</h4><p>R-B: <code>RT_CTRL = ZONE.A.SWITCH</code> + křivka #9; alternativa konstantní teplota.</p>
+        <h4>Bezpečný provoz</h4><ul><li>hydraulické vyvážení těles</li><li>průtok P_O ≤ průtok TČ</li></ul>
+        <h4>Omezení</h4><ul><li>vyšší náklady než SM-R2 (čerpadlo, relé, čidla)</li></ul></div>
+    </div>
+  </article>
+
+  <article class="sm" id="sm-r2">
+    <h3><span class="id">SM-R2 v1.0</span> Radiátory – sériová akumulace <span class="st add">alternativa</span></h3>
+    <figure><div class="fig"><img src="schema-SM-R2.svg" alt="SM-R2: sériová akumulační nádrž ve vratce, radiátory, referenční místnost bez hlavice s ovladačem" loading="lazy"></div></figure>
+    <div class="grid">
+      <div><h4>Kdy</h4><p>Jeden krátký radiátorový okruh, hlavice převážně otevřené, malá tlaková ztráta. Vznik: S2 rev. 0 + zpětný ventil.</p>
+        <h4>Nezbytné komponenty</h4><ul><li>prvky 1–12, 26</li><li>AKU (17) ve vratce</li><li>přepouštěcí ventil (16)</li><li>ovladač (13) v referenční místnosti</li></ul></div>
+      <div><h4>Regulace</h4><p>R-A: <code>1ZONE.TA</code> + křivka #9; alternativa R-B termostat.</p>
+        <h4>Bezpečný provoz</h4><ul><li>přepouštěcí ventil nastavit tak, aby při zavřených hlavicích nevznikla chyba průtoku</li><li>ztráta soustavy v dosahu vestavěného čerpadla <span class="src q">?</span></li></ul>
+        <h4>Omezení</h4><ul><li>přepouštění výstupu do vratky při zavírání hlavic zvedá teplotu vratky</li></ul></div>
+    </div>
+  </article>
+
+  <article class="sm" id="sm-k1">
+    <h3><span class="id">SM-K1 v1.0</span> Radiátory a směšovaná podlaha <span class="st add">doplňková</span></h3>
+    <figure><div class="fig"><img src="schema-SM-K1.svg" alt="SM-K1: paralelní akumulace, zóna A radiátory s čerpadlem P_O, zóna B podlaha přes směšovací ventil TMV1, čerpadlo P_M1, čidlo T10 a pojistný termostat, dva pokojové termostaty" loading="lazy"></div></figure>
+    <div class="grid">
+      <div><h4>Kdy</h4><p>Dům s radiátory i podlahou. Odpovídá aplikaci 4 výrobce. Vznik: S4 rev. 0 + zpětný ventil + změna regulace.</p>
+        <h4>Nezbytné komponenty</h4><ul><li>prvky 1–12, 26, 17–20</li><li>směšovací ventil TMV1 (22), P_M1 (23), čidlo T10 (24)</li><li>pojistný termostat podlahy (25) <span class="src o">O</span></li><li>termostaty zóny A a B (14)</li></ul></div>
+      <div><h4>Regulace</h4><p><code>RT_CTRL = 2 ZONE.SWITCH</code>: zóna A L1–C1, zóna B L1–H1 <span class="src v">V 2.7 apl. 4</span>. Zóna A křivka #9 (radiátory), zóna B <code>HEAT_TEMP_SET_B</code> nebo <code>B_ZONE_HEAT_CURVE</code>.</p>
+        <h4>Bezpečný provoz</h4><ul><li>TČ vyrábí vodu pro radiátory, podlahu směšovač míchá dolů</li><li>pojistný termostat rozpíná P_M1 při 45–50 °C</li></ul>
+        <h4>Omezení</h4><ul><li>zóna B jen topení <span class="src v">V 2.7</span></li><li>signál TMV1 ověřit <span class="src q">?</span></li></ul></div>
+    </div>
+  </article>
+
+  <article class="sm" id="sm-x1">
+    <h3><span class="id">SM-X1 v0.9</span> Hydraulické oddělení deskovým výměníkem <span class="st cond">podmíněné</span></h3>
+    <figure><div class="fig"><img src="schema-SM-X1.svg" alt="SM-X1: primární okruh tepelného čerpadla s nemrznoucí směsí přes deskový výměník, sekundární okruh s čerpadlem P_O, pojistným ventilem, expanzní nádobou a sériovou akumulací" loading="lazy"></div></figure>
+    <div class="grid">
+      <div><h4>Kdy</h4><p>Kde hrozí zamrznutí při dlouhém výpadku proudu, nebo kde je stará soustava znečištěná. Řeší rozpor výrobce: směs jen v okruhu TČ, soustava plněná vodou dle VDI 2035 <span class="src v">V příručka 4.1, 4.10</span>.</p>
+        <h4>Nezbytné komponenty</h4><ul><li>prvky 1–12, 26 (primár)</li><li>deskový výměník (27) na výkon TČ</li><li>P_O (19) + relé K1, pojistný ventil a expanzní nádoba sekundáru (28)</li><li>AKU (17) ve vratce sekundáru</li></ul></div>
+      <div><h4>Regulace</h4><p>R-B termostat L1–C1; křivka +2–3 K.</p>
+        <h4>Bezpečný provoz</h4><ul><li>koncentrace směsi podle materiálů (trojcestný ventil max. 30 % glykolu) <span class="src v">V příručka 4.6</span></li><li>odmrazování z primáru a TUV <span class="src q">?</span></li></ul>
+        <h4>Omezení</h4><ul><li>nižší účinnost (orientačně −5 %), vyšší náklady <span class="src o">O</span></li><li>použít až po vyjádření výrobce k odmrazování a průtoku</li></ul></div>
+    </div>
+  </article>
+</section>
+
+<!-- ================================================= 7 -->
+<section id="legenda">
+  <h2><span class="n">07</span>Legenda prvků</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Č.</th><th>Prvek</th><th>Pokyn pro montáž</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>TČ REO R290 Smart</td><td>Výbava: oběhové čerpadlo, expanzní nádoba 6 l, pojistný ventil 3 bar, záložní dohřev 3 kW, průtokový spínač, venkovní čidlo T4 <span class="src v">V 2.1</span>. Vnitřní hydrauliku doplňuje projekt.</td></tr>
+      <tr><td>2</td><td>Uzavírací ventily se šroubením</td><td>Na výstupu i vstupu jednotky <span class="src v">V 2.8.2</span>.</td></tr>
+      <tr><td>3</td><td>Protizámrazový ventil</td><td>Na vratce venku, standard REO <span class="src o">O</span>. Funkci spolu se zpětným ventilem (26) ověřit podle návodu výrobce ventilu <span class="src q">?</span>.</td></tr>
+      <tr><td>4</td><td>Separátor s automatickým odvzdušněním a pojistným ventilem</td><td>Venku hned za jednotkou – vzduch i případně uniklé R290 do volného prostoru <span class="src o">O</span>.</td></tr>
+      <tr><td>5</td><td>Magnetický filtr mezi uzávěry</td><td>Povinný filtr na vstupu <span class="src v">V 2.5</span>.</td></tr>
+      <tr><td>6</td><td>Doplňková expanzní nádoba</td><td>Dimenzovat výpočtem (vestavěná 6 l).</td></tr>
+      <tr><td>7</td><td>Plnicí / vypouštěcí kohout</td><td>V nejnižším místě <span class="src v">V 2.8.2</span>.</td></tr>
+      <tr><td>8</td><td>Trojcestný ventil TUV (SV1)</td><td>230 V, 3vodič ON/OFF/N, dimenze podle potrubí TČ <span class="src v">V příručka 6.2.6</span>.</td></tr>
+      <tr><td>9</td><td>Zásobník TUV se spirálou</td><td>Výkon spirály ≥ jmenovitý výkon TČ <span class="src v">V 2.6.3</span>.</td></tr>
+      <tr><td>10</td><td>Čidlo T9</td><td>Součást dodávky, kabel cca 10 m <span class="src v">V příručka 6.2.11</span>.</td></tr>
+      <tr><td>11, 12</td><td>Pojistná skupina a expanzní nádoba TUV</td><td>Pojistný ventil bez uzávěru; nádoba pro pitnou vodu.</td></tr>
+      <tr><td>13</td><td>Kabelový ovladač</td><td>Uvnitř; v referenční místnosti jen u R-A.</td></tr>
+      <tr><td>14</td><td>Pokojový termostat</td><td>Bezpotenciálový kontakt L1–C1 / L1–H1 / L2–H2 <span class="src v">V 2.10</span>.</td></tr>
+      <tr><td>15</td><td>Otopná tělesa / rozdělovač podlahy</td><td>Hydraulicky vyvážit.</td></tr>
+      <tr><td>16</td><td>Přepouštěcí (diferenční) ventil</td><td>Na konci rozvodu, zajistí průtok TČ <span class="src o">O</span>.</td></tr>
+      <tr><td>17</td><td>Akumulační nádrž</td><td>Objem viz kap. 8; sériová: vstup nahoře, výstup dole <span class="src o">O</span>.</td></tr>
+      <tr><td>18</td><td>Čidla AKU T8 / T7</td><td>Příslušenství, vstupy AI3 / AI2 <span class="src v">V 2.10</span>; aktivace <span class="src q">?</span>.</td></tr>
+      <tr><td>19</td><td>Čerpadlo P_O</td><td>Externí, dodávka stavby <span class="src v">V příručka 6.2.9</span>.</td></tr>
+      <tr><td>20</td><td>Relé K1 / K2</td><td>Výstupy max. 0,2 A <span class="src v">V 2.10</span>.</td></tr>
+      <tr><td>21</td><td>Termostatické hlavice</td><td>Ne v referenční místnosti.</td></tr>
+      <tr><td>22</td><td>Směšovací ventil TMV1</td><td>Řízení AIV1 + zpětná vazba AOV1, napájení 230 V zvlášť <span class="src v">V 2.10</span>; typ signálu <span class="src q">?</span>.</td></tr>
+      <tr><td>23</td><td>Čerpadlo zóny B (P_M1)</td><td>Přes relé K2.</td></tr>
+      <tr><td>24</td><td>Čidlo T10</td><td>Za směšovačem, AI6C, <code>TFLin_SENSOR = enable</code> <span class="src v">V 4.2.11</span>.</td></tr>
+      <tr><td>25</td><td>Pojistný termostat podlahy</td><td>Příložný 45–50 °C, rozpíná P_M1 <span class="src o">O</span>.</td></tr>
+      <tr><td><strong>26</strong></td><td><strong>Zpětný ventil na výstupu TČ</strong></td><td><strong>Nový ve v1.0</strong>, požadavek výrobce <span class="src v">V 2.8.2 bod 6</span>. Osadit v technické místnosti za prostupem zdí.</td></tr>
+      <tr><td>27</td><td>Deskový výměník</td><td>SM-X1; výkon ≥ výkon TČ.</td></tr>
+      <tr><td>28</td><td>Pojistný ventil a expanzní nádoba sekundáru</td><td>SM-X1; sekundár je samostatný uzavřený okruh.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ================================================= 8 -->
+<section id="dimenze">
+  <h2><span class="n">08</span>Dimenzování</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Model</th><th>Jmenovitý průtok</th><th>Ztráta jednotky</th><th>Max. výtlak</th><th>Přípojka</th><th>AKU</th><th>Spirála TUV</th></tr></thead>
+    <tbody>
+      <tr><td>RH06</td><td class="c">1,46 m³/h</td><td>30 kPa</td><td>9 m</td><td>DN25</td><td>60–150 l</td><td>1,6 m²</td></tr>
+      <tr><td>RH08</td><td class="c">1,89 m³/h</td><td>35 kPa</td><td>9 m</td><td>DN25</td><td>60–200 l</td><td>2,1–2,2 m²</td></tr>
+      <tr><td>RH10</td><td class="c">2,24 m³/h</td><td>40 kPa</td><td>9 m</td><td>DN25</td><td>100–300 l</td><td>3,5 m²</td></tr>
+      <tr><td>RH12</td><td class="c">2,92 m³/h</td><td>43 kPa</td><td>12 m</td><td>DN25</td><td>100–300 l</td><td>3,5 m²</td></tr>
+      <tr><td>RH14</td><td class="c">3,32 m³/h</td><td>58 kPa</td><td>12 m</td><td>DN32</td><td>100–300 l</td><td>4,2 m²</td></tr>
+      <tr><td>RH16</td><td class="c">3,78 m³/h</td><td>60 kPa</td><td>12 m</td><td>DN32</td><td>200–400 l</td><td>≥ 4,2 m² <span class="src q">?</span></td></tr>
+      <tr><td>RHX20 Pro</td><td class="c">3,5 m³/h</td><td>55 kPa</td><td>13 m</td><td>DN40</td><td>300–500 l <span class="src o">O</span></td><td>≥ výkon TČ</td></tr>
+      <tr><td>RHX30 Pro</td><td class="c">5,2 m³/h</td><td>60 kPa</td><td>15 m</td><td>DN40</td><td>450–750 l <span class="src o">O</span></td><td>≥ výkon TČ</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Zdroj: návod 2.1 (průtok, ztráta, výtlak, přípojka) <span class="src v">V</span>; příručka 4.4 (AKU) a 4.2.3 (spirála) <span class="src v">V</span>. Výtlak je maximální; dostupný výtlak při jmenovitém průtoku vyžaduje křivku čerpadla <span class="src q">?</span>.</p>
+  <ul>
+    <li><strong>Sériová AKU (SM-P1, SM-R2):</strong> vestavěné čerpadlo pokrývá jednotku, potrubí, AKU i soustavu. Pokud ztráta soustavy při jmenovitém průtoku není zjevně malá, volit paralelní zapojení <span class="src o">O</span>.</li>
+    <li><strong>Paralelní AKU:</strong> P_O dimenzovat podle příručky 4.3 <span class="src v">V</span>; průtok P_O nepřekračovat průtok TČ <span class="src o">O</span>.</li>
+    <li><strong>Instalace bez TUV:</strong> SV1 se neosazuje, odmrazování odebírá teplo z okruhu topení – AKU je o to důležitější <span class="src o">O</span>.</li>
+  </ul>
+</section>
+
+<!-- ================================================= 9 -->
+<section id="elektro">
+  <h2><span class="n">09</span>Elektrické zapojení</h2>
+  <figure><div class="fig"><img src="schema-SM-E1.svg" alt="SM-E1: svorky řídicí desky tepelného čerpadla, napájení, Smart Grid, ovladač, pokojové termostaty, výstupy přes relé, čidla a RS485" loading="lazy"></div>
+  <figcaption><strong>SM-E1 v1.0.</strong> Řídicí deska je v elektrorozvaděči venkovní jednotky.</figcaption></figure>
+  <div class="warn"><strong>Výstupy 230 V (P_O, P_M1, SV1, TBH) max. 0,2 A</strong> – zátěž přes relé nebo stykač <span class="src v">V 2.10</span>. AHS a DFR/ERR jsou jen spínací kontakty. Před připojením termostatu změřit, že na L1/L2 není cizí napětí <span class="src q">?</span>.</div>
+  <div class="tbl"><table>
+    <thead><tr><th>Trasa</th><th>Kabel</th><th>Poznámka</th></tr></thead>
+    <tbody>
+      <tr><td>Napájení TČ</td><td>dle tabulky návodu 2.9.1 (jistič, průřez)</td><td>samostatný okruh, jistič + chránič; ne nožový vypínač <span class="src v">V 5.5</span></td></tr>
+      <tr><td>Ovladač</td><td>kabel z dodávky</td><td>délka a prodloužení <span class="src q">?</span>; kabely v instalaci 3–30 m <span class="src v">V 2.9.3</span></td></tr>
+      <tr><td>Termostat, čidla, SG/EVU</td><td>stíněný 2–3 × 0,75 mm²</td><td>odděleně od silových <span class="src o">O</span></td></tr>
+      <tr><td>SV1</td><td>3 × 1,0 mm²</td><td>hnědý ON, modrý OFF, žlutý N <span class="src v">V příručka 6.2.6</span></td></tr>
+      <tr><td>P_O, P_M1, TBH</td><td>CYKY 3 × 1,5 mm² do rozvodnice regulace</td><td>relé K1/K2, stykač KM1 v domě <span class="src o">O</span></td></tr>
+    </tbody>
+  </table></div>
+  <p>Prostupem zdí vést silové a signální kabely ve dvou samostatných chráničkách s rezervou <span class="src o">O</span>.</p>
+</section>
+
+<!-- ================================================= 10 -->
+<section id="montaz">
+  <h2><span class="n">10</span>Montážní postup</h2>
+  <h3>A · Příprava</h3>
+  <ol class="steps">
+    <li><strong>Zapojení podle kap. 2</strong> a hydraulický výpočet (ztráta soustavy při jmenovitém průtoku, objem AKU a expanzní nádoby).</li>
+    <li><strong>Ovladač:</strong> zjistit, kde je dodán a jak dlouhý je kabel – u R-A musí být v referenční místnosti.</li>
+    <li><strong>Materiál</strong> podle legendy; zpětný ventil (26) nezapomenout.</li>
+  </ol>
+  <h3>B · Venkovní jednotka</h3>
+  <ol class="steps">
+    <li><strong>Umístění</strong> venku, dobře větrané, spodní hrana ≥ 30 cm, ≥ 0,5 m volno kolem, ≥ 2 m nad výfukem, ≥ 3 m od oken <span class="src v">V 2.6.1</span>; antivibrační podložky <span class="src v">V 2.6.3</span>.</li>
+    <li><strong>Venkovní čidlo</strong> je v jednotce – ne na přímém slunci ani v proudu teplého vzduchu <span class="src o">O</span>.</li>
+    <li><strong>Armatury venku:</strong> uzávěry (2), separátor (4), protizámrazový ventil (3); izolace proti UV a mrazu.</li>
+  </ol>
+  <h3>C · Hydraulika uvnitř</h3>
+  <ol class="steps">
+    <li><strong>Zpětný ventil (26)</strong> na výstupu za prostupem zdí, filtr (5) na vratce mezi uzávěry, SV1 (8) na výstupu před AKU.</li>
+    <li><strong>AKU</strong> podle schématu; u paralelní čidla T8/T7, P_O se zpětnou klapkou a uzávěry.</li>
+    <li><strong>Expanzní nádoba (6), plnění/vypouštění (7), přepouštěcí ventil (16).</strong></li>
+    <li><strong>Zásobník TUV</strong>, jímka T9 v úrovni spirály, pojistná skupina TUV.</li>
+    <li><strong>Zkouška těsnosti a tlaková zkouška</strong> <span class="src v">V 2.8.2</span>, izolace potrubí.</li>
+  </ol>
+  <h3>D · Elektro</h3>
+  <ol class="steps">
+    <li><strong>Napájení</strong> dle tabulky, kontrola L/N a uzemnění.</li>
+    <li><strong>Termostat</strong> na L1–C1 (+ L1–H1 u SM-K1); ovladač podle varianty regulace.</li>
+    <li><strong>Výstupy</strong> P_O → K1, P_M1 → K2, TBH → KM1; SV1 na ON/OFF/N.</li>
+    <li><strong>Čidla</strong> T9, T8/T7, T10.</li>
+    <li><strong>DIP:</strong> SW1 záložní dohřev (výchozí 01 = IBH1) <span class="src v">V příručka 6.2.5</span>, SW5 typ jednotky, SW4.2 = ON jen s MPPT <span class="src v">V 4.1</span>.</li>
+  </ol>
+  <h3>E · Plnění</h3>
+  <ol class="steps">
+    <li><strong>Jednotku připojit k napájení před plněním</strong> – aktivuje ochranu proti zamrznutí <span class="src v">V příručka 4.1</span>.</li>
+    <li><strong>Proplach</strong>, plnění vodou dle VDI 2035 <span class="src v">V příručka 4.1</span>, tlak 1,5–2 bar za studena <span class="src o">O</span>, odvzdušnění (ručně i ventilem na jednotce <span class="src v">V příručka</span>).</li>
+    <li><strong>Před prvním startem</strong> jednotka pod napětím (předehřev; před sezónou min. 12 h) <span class="src v">V 5.5</span>.</li>
+  </ol>
+</section>
+
+<!-- ================================================= 11 -->
+<section id="parametry">
+  <h2><span class="n">11</span>Nastavení parametrů</h2>
+  <p>Cesty podle návodu; číslování položek se může lišit podle verze ovladače – rozhoduje název. Pokročilé nastavení je chráněno servisním heslem <span class="src v">V 3.3.18</span>.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Parametr</th><th>Cesta</th><th>SM-P1 / SM-R2</th><th>SM-P2 / SM-R1 / SM-X1</th><th>SM-K1</th></tr></thead>
+    <tbody>
+      <tr><td><code>RT_CTRL</code></td><td>System Parameters II › 01</td><td><code>OFF</code> (R-A) / <code>ZONE.A.SWITCH</code> (R-B)</td><td><code>ZONE.A.SWITCH</code></td><td><code>2 ZONE.SWITCH</code></td></tr>
+      <tr><td><code>PANEL_CTRL</code></td><td>System Parameters II › 02</td><td><code>1ZONE.TA</code> (R-A)</td><td>neuplatní se při RT <span class="src q">?</span>; ponechat <code>1ZONE.TW</code></td><td>ponechat <code>2ZONE.TW</code> <span class="src q">?</span></td></tr>
+      <tr><td>Křivka #9</td><td>User parameters › Heat Curve#9</td><td>podle kap. 5</td><td>podle kap. 5 (X1 +2–3 K)</td><td>radiátory (zóna A)</td></tr>
+      <tr><td>Volba křivky</td><td><code>A_ZONE_HEAT_CURVE</code> / <code>B_ZONE_HEAT_CURVE</code></td><td>A = CURVE#9</td><td>A = CURVE#9 (konstantní: OFF + <code>HEAT_TEMP_SET</code>)</td><td>A = CURVE#9; B = OFF + <code>HEAT_TEMP_SET_B</code> nebo 1.L–8.L</td></tr>
+      <tr><td><code>HEAT_ROOM_TEMP_SET</code></td><td>User parameters › 06</td><td>21 °C</td><td>–</td><td>–</td></tr>
+      <tr><td><code>ROOM_TEMP_dT</code></td><td>Energy Control › 10</td><td>co nejmenší z rozsahu ovladače <span class="src q">? rozsah</span></td><td>–</td><td>–</td></tr>
+      <tr><td><code>HEAT_LOAD_dT</code> / <code>UNLOAD_dT</code></td><td>Energy Control › 7 / 8</td><td colspan="3">tovární; zvětšit jen při taktování</td></tr>
+      <tr><td><code>AUTO_HT_TA_MAX</code></td><td>Protection settings I › 44</td><td colspan="3">16–17 °C <span class="src o">O</span></td></tr>
+      <tr><td><code>IBH_ON_TA</code> / <code>IBH_ON_DLY</code> / <code>IBH_ON_dT</code></td><td>Auxiliary Heat Settings › 10 / 09 / 11</td><td colspan="3">bod bivalence z návrhu; zpoždění 30–60 min; rozdíl ≥ 5 K <span class="src o">O</span></td></tr>
+      <tr><td><code>HOT_WATER</code></td><td>System Parameters II › 10</td><td colspan="3">YES se zásobníkem; <code>HOT_WATER_TEMP_SET</code> 48–50 °C <span class="src o">O</span>; sterilizace 1× týdně</td></tr>
+      <tr><td><code>TFLin_SENSOR</code></td><td>Input &amp; Sensors › 11</td><td>enable, je-li čidlo podlahy</td><td>–</td><td>enable (T10)</td></tr>
+      <tr><td><code>SMART_GRID</code></td><td>Engineering Settings I › 23 / 22 = 7; System setting I › 38</td><td colspan="3">jen se signálem SG/EVU</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ================================================= 12 -->
+<section id="uvedeni">
+  <h2><span class="n">12</span>Uvedení do provozu</h2>
+  <ol class="steps">
+    <li><strong>Kontrola</strong> hydrauliky, elektro, DIP přepínačů, tlaku a odvzdušnění.</li>
+    <li><strong>Test komponent</strong> (<code>Advanced setting › Mnl test menu</code>, TČ vypnuté): čerpadla, SV1, TMV1, IBH <span class="src v">V 4.2.10</span>.</li>
+    <li><strong>Parametry</strong> podle kap. 11; zapsat do protokolu.</li>
+    <li><strong>Topení:</strong> kontrola průtoku (bez alarmu), ΔT na jednotce (TWin1/TWout1 ve stavovém menu) cca 5 K <span class="src o">O</span>.</li>
+    <li><strong>TUV:</strong> SV1 musí poslat vodu do spirály (jinak prohodit ON/OFF), P_O stojí <span class="src v">V 2.7</span>.</li>
+    <li><strong>Odmrazování:</strong> spustit ruční odmrazování (<code>SET › Manual defrosting</code>) <span class="src v">V 3.3.11</span> a zapsat, zda SV1 přepne na TUV <span class="src q">? ověření údaje příručky 6.2.6</span>.</li>
+    <li><strong>Režim R-A:</strong> ve stavovém menu ověřit, že požadovaná teplota vody sleduje křivku (ikona křivky svítí <span class="src v">V 3.3.22</span>). Pokud ne → nastavit R-B.</li>
+    <li><strong>Termostat (R-B):</strong> rozepnout a sepnout L1–C1, ověřit vypnutí a zapnutí TČ a P_O (stav výstupů „DO“ <span class="src v">V 3.3.17</span>).</li>
+    <li><strong>Předání</strong> uživateli, spárování aplikace, termín kontroly křivky za 2–3 týdny.</li>
+  </ol>
+  <div class="tbl"><table>
+    <thead><tr><th>Zápis do protokolu</th><th>Hodnota</th></tr></thead>
+    <tbody>
+      <tr><td>Zapojení (SM-…, verze), model TČ, verze ovladače</td><td></td></tr>
+      <tr><td>Tlak soustavy za studena / předtlak expanzní nádoby</td><td></td></tr>
+      <tr><td>TWin1 / TWout1 / venkovní teplota při zkoušce</td><td></td></tr>
+      <tr><td>RT_CTRL, PANEL_CTRL, křivka (Env/Out 1 a 2) nebo HEAT_TEMP_SET</td><td></td></tr>
+      <tr><td>SV1 při odmrazování: TUV / topení</td><td></td></tr>
+      <tr><td>Křivka v režimu TA: ano / ne</td><td></td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Výsledky kroků 6 a 7 posílejte do REO HEATING – doplní otevřené body standardu.</p>
+</section>
+
+<!-- ================================================= 13 -->
+<section id="ladeni">
+  <h2><span class="n">13</span>Ladění a závady</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Projev</th><th>Příčina</th><th>Řešení</th></tr></thead>
+    <tbody>
+      <tr><td>Při mrazu chladno, v přechodu teplo</td><td>křivka málo strmá</td><td>Out.Temp1 +1–2 K</td></tr>
+      <tr><td>Chladno v přechodném období</td><td>křivka nízko</td><td>Out.Temp2 +1–2 K</td></tr>
+      <tr><td>Přetápí se</td><td>křivka vysoko</td><td>snížit Out.Temp1/2</td></tr>
+      <tr><td>Taktování kompresoru</td><td>malý objem, zavřené hlavice, hystereze</td><td>otevřít okruhy, přepouštěcí ventil, větší AKU, větší hystereze</td></tr>
+      <tr><td>Alarm nedostatečného průtoku</td><td>vzduch, filtr, zavřený ventil, velká ztráta</td><td>odvzdušnit, vyčistit filtr, přejít na paralelní AKU</td></tr>
+      <tr><td>Po odmrazování studená TUV</td><td>SV1 při odmrazování na TUV</td><td>vyšší teplota TUV, větší zásobník</td></tr>
+      <tr><td>Často záložní dohřev</td><td>hluboký útlum, krátké zpoždění</td><td>omezit útlum, prodloužit IBH_ON_DLY</td></tr>
+    </tbody>
+  </table></div>
+  <p class="tip">Křivku měnit o 1–2 K a čekat 2 dny (podlaha 3–4 dny).</p>
+</section>
+
+<!-- ================================================= 14 -->
+<section id="predani">
+  <h2><span class="n">14</span>Kontrolní seznam pro předání</h2>
+  <p class="muted">Zaškrtnutí se ukládá jen ve vašem prohlížeči.</p>
+  <ul class="check" id="checklist">
+    <li><label><input type="checkbox" id="c1"> Zapojení SM-… zvoleno podle kap. 2, AKU osazena</label></li>
+    <li><label><input type="checkbox" id="c2"> Ochranná zóna R290, separátor s pojistným ventilem venku</label></li>
+    <li><label><input type="checkbox" id="c3"> Uzávěry, filtr na vratce, zpětný ventil na výstupu, protizámrazová ochrana</label></li>
+    <li><label><input type="checkbox" id="c4"> Expanzní nádoba dimenzovaná, předtlak nastaven</label></li>
+    <li><label><input type="checkbox" id="c5"> Proplach, plnění vodou dle VDI 2035, odvzdušnění, tlaková zkouška</label></li>
+    <li><label><input type="checkbox" id="c6"> Napájení, jistič, chránič, uzemnění; DIP přepínače</label></li>
+    <li><label><input type="checkbox" id="c7"> Zátěže přes relé / stykač; termostat jako bezpotenciálový kontakt</label></li>
+    <li><label><input type="checkbox" id="c8"> Čidla zapojená a aktivovaná, hodnoty odpovídají</label></li>
+    <li><label><input type="checkbox" id="c9"> RT_CTRL / PANEL_CTRL / křivka / TUV / IBH nastaveny a zapsány</label></li>
+    <li><label><input type="checkbox" id="c10"> Test komponent, topení, TUV, ruční odmrazování provedeny</label></li>
+    <li><label><input type="checkbox" id="c11"> Protokol vyplněn včetně SV1 při odmrazování a křivky v TA</label></li>
+    <li><label><input type="checkbox" id="c12"> Hydraulické vyvážení provedeno</label></li>
+    <li><label><input type="checkbox" id="c13"> Uživatel zaškolen, aplikace spárována, kontrola křivky domluvena</label></li>
+  </ul>
+  <div class="btnrow"><button type="button" id="clear">Zrušit zaškrtnutí</button></div>
+</section>
+
+<!-- ================================================= 15 -->
+<section id="overit">
+  <h2><span class="n">15</span>Otevřené body (dotaz výrobci)</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>#</th><th>Otázka</th><th>Dopad</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Je přípustné zapojení bez AKU a při jakém minimálním objemu vody?</td><td>SM-P0</td></tr>
+      <tr><td>2</td><td>Řízení vestavěného čerpadla (doběh, pohotovost, otáčky) a jeho křivka</td><td>SM-P1, SM-R2</td></tr>
+      <tr><td>3</td><td>SV1 při odmrazování, polarita SV1 (TUV = ON, nebo VYP) a chování bez zásobníku TUV</td><td>všechna, SM-X1</td></tr>
+      <tr><td>4</td><td>Teplota vody v režimu 1ZONE.TA; vliv PANEL_CTRL při RT_CTRL</td><td>R-A, parametry</td></tr>
+      <tr><td>5</td><td>Glykol v okruhu TČ (rozpor příručky 4.1 a 4.10)</td><td>SM-X1, mrazová ochrana</td></tr>
+      <tr><td>6</td><td>Minimální průtok</td><td>všechna</td></tr>
+      <tr><td>7</td><td>Kabel ovladače (umístění při dodání, délka, prodloužení)</td><td>R-A</td></tr>
+      <tr><td>8</td><td>Napětí na L1/L2, rozsah ROOM_TEMP_dT</td><td>termostat, R-A</td></tr>
+      <tr><td>9</td><td>Signál TMV1 (AIV/AOV), aktivace čidel AKU T8/T7</td><td>SM-K1, paralelní AKU</td></tr>
+      <tr><td>10</td><td>Doporučená AKU pro RHX20 Pro / RHX30 Pro; spirála RH16</td><td>dimenzování</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ================================================= 16 -->
+<section id="historie">
+  <h2><span class="n">16</span>Historie revizí a referenční podklady</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Verze</th><th>Datum</th><th>Změna</th></tr></thead>
+    <tbody>
+      <tr><td>rev. 0</td><td>14. 11. 2026</td><td>Návod „Regulace komfortní teploty“, schémata S1–S4, E1 (pracovní návrh).</td></tr>
+      <tr><td><strong>v1.0</strong></td><td>14. 11. 2026</td><td>
+        <ul>
+          <li>Zpětný ventil (26) na výstupu TČ ve všech schématech – v rev. 0 chyběl (návod 2.8.2).</li>
+          <li>Zapojení bez AKU (S1) přeřazeno na nepřípustné bez souhlasu výrobce (příručka 4.4).</li>
+          <li>Opraveno zdůvodnění sériové AKU – při odmrazování SV1 přepíná na TUV (příručka 6.2.6).</li>
+          <li>Opraveny parametry: PANEL_CTRL jen bez termostatu, RT_CTRL s termostatem (návod 4.2.5–4.2.6); S4 → SM-K1 s 2 ZONE.SWITCH.</li>
+          <li>Radiátory s hlavicemi: standardem paralelní AKU (SM-R1), sériová (SM-R2) jako alternativa.</li>
+          <li>Nově SM-P1 (podlaha + sériová AKU), SM-P2 (podlaha + paralelní AKU), SM-X1 v0.9 (výměník), konstantní teplota vody jako varianta regulace, zdroje údajů V/O/?.</li>
+        </ul></td></tr>
+    </tbody>
+  </table></div>
+  <details>
+    <summary>Referenční schémata rev. 0 (neplatná jako standard)</summary>
+    <p class="muted">Zachována beze změny pro dohledatelnost. Přiřazení: S1 → SM-P0 (nepřípustné), S2 → SM-R2, S3 → SM-R1, S4 → SM-K1, E1 → SM-E1.</p>
+    <figure><div class="fig"><img src="schema-S1.svg" alt="Referenční schéma S1 rev. 0, bez akumulace" loading="lazy"></div><figcaption>S1 rev. 0</figcaption></figure>
+    <figure><div class="fig"><img src="schema-S2.svg" alt="Referenční schéma S2 rev. 0, sériová akumulace, radiátory" loading="lazy"></div><figcaption>S2 rev. 0</figcaption></figure>
+    <figure><div class="fig"><img src="schema-S3.svg" alt="Referenční schéma S3 rev. 0, paralelní akumulace" loading="lazy"></div><figcaption>S3 rev. 0</figcaption></figure>
+    <figure><div class="fig"><img src="schema-S4.svg" alt="Referenční schéma S4 rev. 0, dvě zóny" loading="lazy"></div><figcaption>S4 rev. 0</figcaption></figure>
+    <figure><div class="fig"><img src="schema-E1.svg" alt="Referenční elektrické schéma E1 rev. 0" loading="lazy"></div><figcaption>E1 rev. 0</figcaption></figure>
+  </details>
+</section>
+
+<footer>
+  <p>REO HEATING · Instalační standard v1.0. Zjednodušené orientační podklady pro projektanty a montážní firmy; závazný je návod k instalaci a obsluze konkrétního modelu a projekt pro konkrétní dům. Úspory a účinnost jsou orientační.</p>
+</footer>
+</main>
+</div>
+</div>
+{{SCRIPT}}
